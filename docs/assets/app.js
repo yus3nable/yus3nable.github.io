@@ -9,7 +9,7 @@
   function setFontSize(value) {
     fontSize = Math.max(14, Math.min(22, value));
     document.documentElement.style.fontSize = `${fontSize}px`;
-    fontReset.textContent = String(fontSize);
+    fontReset.disabled = fontSize === 16;
     fontDown.disabled = fontSize === 14;
     fontUp.disabled = fontSize === 22;
     localStorage.setItem(fontKey, String(fontSize));
@@ -18,6 +18,22 @@
   fontDown.addEventListener('click', () => setFontSize(fontSize - 1));
   fontUp.addEventListener('click', () => setFontSize(fontSize + 1));
   fontReset.addEventListener('click', () => setFontSize(16));
+  const fontSettings = document.querySelector('.font-settings');
+  const fontToggle = document.getElementById('font-menu-toggle');
+  const fontMenu = document.getElementById('font-menu');
+  function closeFontMenu() {
+    fontMenu.hidden = true;
+    fontToggle.setAttribute('aria-expanded', 'false');
+  }
+  fontToggle.addEventListener('click', event => {
+    fontMenu.hidden = !fontMenu.hidden;
+    fontToggle.setAttribute('aria-expanded', String(!fontMenu.hidden));
+    if (!fontMenu.hidden && event.detail === 0) fontMenu.querySelector('button:not(:disabled)').focus();
+  });
+  document.addEventListener('click', event => {
+    if (!fontSettings.contains(event.target)) closeFontMenu();
+  });
+
 
   const library = JSON.parse(document.getElementById('library-data').textContent);
   const search = document.getElementById('search');
@@ -59,6 +75,11 @@
     document.getElementById('continue-reading').hidden = true;
   });
   document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !fontMenu.hidden) {
+      closeFontMenu();
+      fontToggle.focus();
+      return;
+    }
     if (event.key === '/' && !event.ctrlKey && !event.metaKey && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
       event.preventDefault();
       search.focus();

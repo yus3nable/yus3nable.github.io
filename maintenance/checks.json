@@ -37,5 +37,26 @@
     "真实浏览器交互测试",
     "视口截图"
   ],
-  "article_empty_state": "还没有文章。"
+  "article_empty_state": "还没有文章。",
+  "font_controls": {
+    "buttons": [
+      "font-down",
+      "font-reset",
+      "font-up"
+    ],
+    "default_px": 16,
+    "minimum_px": 14,
+    "maximum_px": 22,
+    "storage_key": "reading-room:font-size",
+    "validation": "静态结构及JavaScript语法检查；未执行浏览器交互验收",
+    "toggle": "font-menu-toggle",
+    "presentation": "Aa disclosure with 缩小 / 默认 / 放大; no numerical size"
+  },
+  "filter_types": [
+    "全部",
+    "课程",
+    "书籍",
+    "文章"
+  ],
+  "intro": "紧凑标题和介绍并列，删除重复的翻开一本链接"
 }
