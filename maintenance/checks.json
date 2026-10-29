@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "collections": 3,
+  "indexed_pages": 1525,
+  "local_links": "passed",
+  "catalog_counts": {
+    "全部": 3,
+    "课程": 1,
+    "书籍": 2
+  },
+  "query_checks": {
+    "条件变量": {
+      "results": 64,
+      "sources": [
+        "南京大学操作系统",
+        "操作系统导论",
+        "程序员的自我修养"
+      ]
+    },
+    "ELF": {
+      "results": 100,
+      "sources": [
+        "南京大学操作系统",
+        "操作系统导论",
+        "程序员的自我修养"
+      ]
+    },
+    "不存在的关键词xyz123": {
+      "results": 0,
+      "sources": []
+    }
+  },
+  "browser_verification": "blocked: Terra没有可用的Computer Use控制和截图工具；没有以其他模型替代。",
+  "checks_not_claimed": [
+    "真实浏览器视觉验收",
+    "真实浏览器交互测试",
+    "视口截图"
+  ]
+}

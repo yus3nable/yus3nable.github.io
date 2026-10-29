@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#faf9f5"> <!-- taste-skill-ignore: 用户明确指定 Claude 暖色系。 -->
+  <meta name="description" content="yus3nable 的个人阅读室。汇集课程、书籍与图文笔记，在线阅读、全文搜索，随时接着读。">
+  <title>我的阅读室 · yus3nable</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#library">跳到资料库</a>
+  <div class="page-shell">
+    <header class="site-header" id="top">
+      <a class="wordmark" href="./" aria-label="yus3nable 阅读室首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9C12 5 6 5 3 6v19c5-1 9 0 13 3 4-3 8-4 13-3V6c-3-1-9-1-13 3Z"/><path d="M16 9v19"/></svg><span>yus3nable</span></a>
+      <nav aria-label="主导航"><a href="#library">资料库</a><a href="https://github.com/yus3nable" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">我的阅读室</h1>
+        <div class="intro-bottom"><p>课程、书籍与图文笔记，<br class="mobile-break">随时接着读。</p><a class="intro-link" href="#library">翻开一本 <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <aside id="continue-reading" class="continue-reading" hidden><div><span class="continue-caption">上次打开</span><a id="continue-link" href="#library"></a></div><button id="dismiss-continue" type="button" aria-label="隐藏继续阅读">×</button></aside>
+      <section id="library" class="library" aria-labelledby="library-title">
+        <div class="library-heading"><h2 id="library-title">全部内容 <span class="collection-total">3</span></h2><div class="filters" role="group" aria-label="内容类型"><button type="button" data-filter="全部" aria-pressed="true">全部</button><button type="button" data-filter="课程" aria-pressed="false">课程</button><button type="button" data-filter="书籍" aria-pressed="false">书籍</button></div></div>
+        <div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><label class="sr-only" for="search">搜索课程、书籍与正文</label><input id="search" type="search" placeholder="搜索课程、书籍与正文" autocomplete="off"><span class="search-shortcut" aria-hidden="true">/</span></div>
+        <p class="search-status" id="search-status" role="status" hidden></p>
+        <div class="collection-list" id="collection-list"><article class="collection" data-id="nju-os-reading" style="--order:0"><a class="cover-link" href="https://yus3nable.github.io/nju-os-reading/" aria-label="阅读南京大学操作系统"><img src="assets/nju.svg" width="146" height="190" alt="" decoding="async"></a><div class="collection-content"><p class="collection-meta">课程 · 蒋炎岩 · 2026 · 30 课</p><h3><a href="https://yus3nable.github.io/nju-os-reading/">南京大学操作系统</a></h3><p class="collection-description">从进程与系统调用出发，走过并发、存储与安全，理解软件怎样在硬件上运行。</p></div><a class="read-link" href="https://yus3nable.github.io/nju-os-reading/" aria-label="开始阅读南京大学操作系统">开始阅读<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></article>
+<article class="collection" data-id="ostep-zh-markdown" style="--order:1"><a class="cover-link" href="https://yus3nable.github.io/ostep-zh-markdown/" aria-label="阅读操作系统导论"><img src="assets/ostep.svg" width="146" height="190" alt="" decoding="async"></a><div class="collection-content"><p class="collection-meta">书籍 · OSTEP · 50 章 · 7 个附录</p><h3><a href="https://yus3nable.github.io/ostep-zh-markdown/">操作系统导论</a></h3><p class="collection-description">围绕虚拟化、并发与持久性，用问题、代码与实验，逐步理解操作系统的设计。</p></div><a class="read-link" href="https://yus3nable.github.io/ostep-zh-markdown/" aria-label="开始阅读操作系统导论">开始阅读<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></article>
+<article class="collection" data-id="programmer-self-cultivation-reading" style="--order:2"><a class="cover-link" href="https://yus3nable.github.io/programmer-self-cultivation-reading/" aria-label="阅读程序员的自我修养"><img src="assets/programmer.svg" width="146" height="190" alt="" decoding="async"></a><div class="collection-content"><p class="collection-meta">书籍 · 13 章 · Linux 与 Windows</p><h3><a href="https://yus3nable.github.io/programmer-self-cultivation-reading/">程序员的自我修养</a></h3><p class="collection-description">沿着一个 C/C++ 程序的生成与执行，读懂目标文件、链接器、装载器和运行库。</p></div><a class="read-link" href="https://yus3nable.github.io/programmer-self-cultivation-reading/" aria-label="开始阅读程序员的自我修养">开始阅读<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></article></div>
+        <p class="empty-state" id="empty-state" hidden>没有找到相关内容，试试其他关键词。</p>
+        <section class="document-results" id="document-results" aria-labelledby="results-title" hidden><h3 id="results-title">正文中找到</h3><div id="results-list"></div><button id="more-results" class="more-results" type="button" hidden>查看更多结果</button></section>
+        <button id="retry-search" class="more-results" type="button" hidden>重新加载正文搜索</button>
+      </section>
+    </main>
+    <footer><p>yus3nable 的阅读室</p><a href="#top">回到顶部 <span aria-hidden="true">↑</span></a></footer>
+  </div>
+  <script id="library-data" type="application/json">[{"id": "nju-os-reading", "title": "南京大学操作系统", "subtitle": "Agentic AI 时代的操作系统原理", "kind": "课程", "detail": "蒋炎岩 · 2026 · 30 课", "description": "从进程与系统调用出发，走过并发、存储与安全，理解软件怎样在硬件上运行。", "topics": ["操作系统", "并发", "AI", "系统调用"], "url": "https://yus3nable.github.io/nju-os-reading/", "searchPath": "assets/search.json", "updated": "2026-10-27", "cover": "nju.svg"}, {"id": "ostep-zh-markdown", "title": "操作系统导论", "subtitle": "Operating Systems: Three Easy Pieces", "kind": "书籍", "detail": "OSTEP · 50 章 · 7 个附录", "description": "围绕虚拟化、并发与持久性，用问题、代码与实验，逐步理解操作系统的设计。", "topics": ["操作系统", "虚拟化", "并发", "文件系统"], "url": "https://yus3nable.github.io/ostep-zh-markdown/", "searchPath": "search/search_index.json", "updated": "2026-10-12", "cover": "ostep.svg"}, {"id": "programmer-self-cultivation-reading", "title": "程序员的自我修养", "subtitle": "链接、装载与库", "kind": "书籍", "detail": "13 章 · Linux 与 Windows", "description": "沿着一个 C/C++ 程序的生成与执行，读懂目标文件、链接器、装载器和运行库。", "topics": ["系统编程", "C++", "链接", "ELF", "运行库"], "url": "https://yus3nable.github.io/programmer-self-cultivation-reading/", "searchPath": "search/search_index.json", "updated": "2026-10-12", "cover": "programmer.svg"}]</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "collections": 3,
+  "search_documents": 1525,
+  "documents_by_collection": {
+    "nju-os-reading": 942,
+    "ostep-zh-markdown": 486,
+    "programmer-self-cultivation-reading": 97
+  }
+}

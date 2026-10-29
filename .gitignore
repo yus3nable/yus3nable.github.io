@@ -1,0 +1,7 @@
+.DS_Store
+.taste-skill/
+.preview/
+maintenance/screenshots/
+__pycache__/
+
+maintenance/*-search-source.json

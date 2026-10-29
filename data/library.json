@@ -1,0 +1,41 @@
+[
+  {
+    "id": "nju-os-reading",
+    "title": "南京大学操作系统",
+    "subtitle": "Agentic AI 时代的操作系统原理",
+    "kind": "课程",
+    "detail": "蒋炎岩 · 2026 · 30 课",
+    "description": "从进程与系统调用出发，走过并发、存储与安全，理解软件怎样在硬件上运行。",
+    "topics": ["操作系统", "并发", "AI", "系统调用"],
+    "url": "https://yus3nable.github.io/nju-os-reading/",
+    "searchPath": "assets/search.json",
+    "updated": "2026-10-27",
+    "cover": "nju.svg"
+  },
+  {
+    "id": "ostep-zh-markdown",
+    "title": "操作系统导论",
+    "subtitle": "Operating Systems: Three Easy Pieces",
+    "kind": "书籍",
+    "detail": "OSTEP · 50 章 · 7 个附录",
+    "description": "围绕虚拟化、并发与持久性，用问题、代码与实验，逐步理解操作系统的设计。",
+    "topics": ["操作系统", "虚拟化", "并发", "文件系统"],
+    "url": "https://yus3nable.github.io/ostep-zh-markdown/",
+    "searchPath": "search/search_index.json",
+    "updated": "2026-10-12",
+    "cover": "ostep.svg"
+  },
+  {
+    "id": "programmer-self-cultivation-reading",
+    "title": "程序员的自我修养",
+    "subtitle": "链接、装载与库",
+    "kind": "书籍",
+    "detail": "13 章 · Linux 与 Windows",
+    "description": "沿着一个 C/C++ 程序的生成与执行，读懂目标文件、链接器、装载器和运行库。",
+    "topics": ["系统编程", "C++", "链接", "ELF", "运行库"],
+    "url": "https://yus3nable.github.io/programmer-self-cultivation-reading/",
+    "searchPath": "search/search_index.json",
+    "updated": "2026-10-12",
+    "cover": "programmer.svg"
+  }
+]
