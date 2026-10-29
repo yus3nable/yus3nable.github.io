@@ -658,3 +658,8 @@ footer a {
     transition:none!important
   }
 }
+
+@media(max-width:400px) {
+  .library-heading { gap:8px; }
+  .filters button { padding-inline:9px; }
+}

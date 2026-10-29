@@ -107,7 +107,12 @@
     }
     empty.hidden = visible > 0;
     status.hidden = !tokens.length;
-    if (!tokens.length) { empty.hidden = visible > 0; return; }
+    if (!tokens.length) {
+      empty.textContent = filter === '文章' ? '还没有文章。' : '没有找到相关内容。';
+      empty.hidden = visible > 0;
+      return;
+    }
+    empty.textContent = '没有找到相关内容，试试其他关键词。';
     empty.hidden = true;
     status.textContent = '正在查找正文…';
     try {

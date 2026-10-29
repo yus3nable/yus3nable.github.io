@@ -34,7 +34,7 @@ def cover_svg(item):
         'ostep-zh-markdown': ('#e8e2d5', '#474b3e', ['操作系统', '导论'], 'OSTEP', 'THREE EASY PIECES'),
         'programmer-self-cultivation-reading': ('#343b34', '#f0eadc', ['程序员的', '自我修养'], 'C / C++', 'LINKING & LOADING'),
     }
-    bg, ink, title, small, bottom = settings[item['id']]
+    bg, ink, title, small, bottom = settings.get(item['id'], ('#e8e2d5', '#474b3e', [item['kind'], '图文阅读'], '', ''))
     motif = '<path d="M50 130h46m0 0v25m0-25h46m-46 25h46"/><rect x="35" y="120" width="15" height="20" rx="2"/><rect x="142" y="120" width="15" height="20" rx="2"/><rect x="142" y="145" width="15" height="20" rx="2"/>'
     if item['id'] == 'ostep-zh-markdown':
         motif = '<circle cx="73" cy="142" r="25"/><circle cx="119" cy="142" r="25"/><path d="M49 177h94"/>'
