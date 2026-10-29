@@ -81,7 +81,8 @@ def build(sync):
                 grouped[canonical]['text'] += ' ' + title + ' ' + text
         documents.extend(grouped.values())
         source_counts[item['id']] = len(grouped)
-    page = (ROOT/'src/page.html').read_text().replace('{{TOTAL}}', str(len(catalog))).replace('{{COLLECTIONS}}', '\n'.join(rows)).replace('{{DATA}}', json.dumps(catalog, ensure_ascii=False).replace('<', '\\u003c'))
+    asset_version = str(max((ROOT/'src'/name).stat().st_mtime_ns for name in ['style.css', 'app.js']))
+    page = (ROOT/'src/page.html').read_text().replace('{{ASSET_VERSION}}', asset_version).replace('{{TOTAL}}', str(len(catalog))).replace('{{COLLECTIONS}}', '\n'.join(rows)).replace('{{DATA}}', json.dumps(catalog, ensure_ascii=False).replace('<', '\\u003c'))
     (output/'index.html').write_text(page)
     (output/'404.html').write_text('''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>没有找到这页 · 阅读室</title><link rel="stylesheet" href="/assets/style.css"><main class="page-shell intro"><h1 style="font-size:48px">这页暂时不在书架上</h1><p><a href="/">回到阅读室</a></p></main></html>''')
     (output/'.nojekyll').write_text('')
