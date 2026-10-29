@@ -1,0 +1,93 @@
+{
+  "url": "https://yus3nable.github.io/",
+  "checked_at": "2026-10-29T06:50:08.543243+00:00",
+  "content_commit": "49e21dda43f0e3d14cf415aec3da22bdcb9736fc",
+  "status": "passed",
+  "results": [
+    {
+      "path": "index.html",
+      "matches_build": true,
+      "bytes": 8478,
+      "attempts": [
+        {
+          "exit_code": 0,
+          "matches_build": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "path": "assets/style.css",
+      "matches_build": true,
+      "bytes": 12403,
+      "attempts": [
+        {
+          "exit_code": 35,
+          "matches_build": false,
+          "error": "curl: (35) Recv failure: Connection reset by peer\n"
+        },
+        {
+          "exit_code": 0,
+          "matches_build": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "path": "assets/app.js",
+      "matches_build": true,
+      "bytes": 7661,
+      "attempts": [
+        {
+          "exit_code": 0,
+          "matches_build": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "path": "assets/mark.svg",
+      "matches_build": true,
+      "bytes": 250,
+      "attempts": [
+        {
+          "exit_code": 56,
+          "matches_build": false,
+          "error": "curl: (56) Recv failure: Connection reset by peer\n"
+        },
+        {
+          "exit_code": 56,
+          "matches_build": false,
+          "error": "curl: (56) Recv failure: Connection reset by peer\n"
+        }
+      ],
+      "verified_url": "https://yus3nable.github.io/assets/mark.svg?v=49e21dd",
+      "retry_note": "初次连接被重置；普通URL的HEAD返回200，带版本参数的GET与发布文件一致。"
+    },
+    {
+      "path": "404.html",
+      "matches_build": true,
+      "bytes": 359,
+      "attempts": [
+        {
+          "exit_code": 0,
+          "matches_build": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "path": "assets/search-index.json",
+      "matches_build": true,
+      "bytes": 3732231,
+      "attempts": [
+        {
+          "exit_code": 0,
+          "matches_build": true,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "browser_check": "未执行：Terra缺少Computer Use工具；最新修改依据用户提供的首屏截图。"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "published",
+  "url": "https://yus3nable.github.io/",
+  "content_commit": "49e21dda43f0e3d14cf415aec3da22bdcb9736fc",
+  "checked_at": "2026-10-29T06:50:08.543243+00:00",
+  "pages_source": {
+    "branch": "main",
+    "path": "/docs"
+  },
+  "collections": [
+    "南京大学操作系统",
+    "操作系统导论",
+    "程序员的自我修养"
+  ],
+  "categories": [
+    "全部",
+    "课程",
+    "书籍",
+    "文章"
+  ],
+  "indexed_pages": 1525,
+  "font_ui": "Aa 菜单：缩小、默认、放大；不显示字号数值",
+  "intro": "紧凑的标题与介绍双列布局，移除重复入口",
+  "checks": "语法、静态资源、目录结构、索引内容、线上首页及核心资源均通过；网络重试记录见 online-check.json。",
+  "browser_visual_check": "未完成：Terra缺少Computer Use控制与截图工具；首屏修改依据用户提供的截图。"
+}
