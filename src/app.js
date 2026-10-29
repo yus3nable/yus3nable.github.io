@@ -1,5 +1,24 @@
 (() => {
   'use strict';
+
+  const fontKey = 'reading-room:font-size';
+  const fontDown = document.getElementById('font-down');
+  const fontUp = document.getElementById('font-up');
+  const fontReset = document.getElementById('font-reset');
+  let fontSize = Number(localStorage.getItem(fontKey)) || 16;
+  function setFontSize(value) {
+    fontSize = Math.max(14, Math.min(22, value));
+    document.documentElement.style.fontSize = `${fontSize}px`;
+    fontReset.textContent = String(fontSize);
+    fontDown.disabled = fontSize === 14;
+    fontUp.disabled = fontSize === 22;
+    localStorage.setItem(fontKey, String(fontSize));
+  }
+  setFontSize(fontSize);
+  fontDown.addEventListener('click', () => setFontSize(fontSize - 1));
+  fontUp.addEventListener('click', () => setFontSize(fontSize + 1));
+  fontReset.addEventListener('click', () => setFontSize(16));
+
   const library = JSON.parse(document.getElementById('library-data').textContent);
   const search = document.getElementById('search');
   const status = document.getElementById('search-status');

@@ -21,7 +21,7 @@ body {
   background:var(--paper);
   color:var(--ink);
   font-family:var(--sans);
-  font-size:16px;
+  font-size:1rem;
   line-height:1.7;
   -webkit-font-smoothing:antialiased
 }
@@ -66,7 +66,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   align-items:center;
   gap:12px;
   font-family:Georgia,serif;
-  font-size:25px;
+  font-size:1.5625rem;
   letter-spacing:-.7px
 }
 .wordmark svg {
@@ -81,7 +81,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
 .site-header nav {
   display:flex;
   gap:34px;
-  font-size:15px
+  font-size:0.9375rem
 }
 .site-header nav a {
   padding:10px 0
@@ -94,7 +94,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
 }
 .intro h1 {
   font-family:var(--serif);
-  font-size:clamp(58px,7.3vw,104px);
+  font-size:clamp(3.625rem,7.3vw,6.5rem);
   font-weight:500;
   line-height:1.3;
   letter-spacing:.035em;
@@ -108,7 +108,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   gap:24px
 }
 .intro-bottom p {
-  font-size:19px;
+  font-size:1.1875rem;
   color:var(--muted);
   margin:0;
   letter-spacing:.04em
@@ -117,14 +117,14 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   display:none
 }
 .intro-link {
-  font-size:16px;
+  font-size:1rem;
   display:flex;
   align-items:center;
   gap:26px;
   padding:12px 0
 }
 .intro-link span {
-  font-size:23px;
+  font-size:1.4375rem;
   transition:transform .2s
 }
 .intro-link:hover span {
@@ -141,18 +141,18 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   gap:20px
 }
 .continue-caption {
-  font-size:13px;
+  font-size:0.8125rem;
   color:var(--muted);
   margin-right:20px
 }
 .continue-reading a {
-  font-size:16px
+  font-size:1rem
 }
 .continue-reading a:hover {
   color:var(--accent)
 }
 .continue-reading button {
-  font-size:24px;
+  font-size:1.5rem;
   line-height:1;
   border:0;
   background:none;
@@ -172,14 +172,14 @@ button:focus-visible,a:focus-visible,input:focus-visible {
 }
 .library-heading h2 {
   font-family:var(--serif);
-  font-size:28px;
+  font-size:1.75rem;
   font-weight:500;
   letter-spacing:.04em;
   margin:0
 }
 .collection-total {
   font-family:var(--sans);
-  font-size:14px;
+  font-size:0.875rem;
   color:var(--muted);
   vertical-align:middle;
   letter-spacing:0;
@@ -196,7 +196,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   min-height:44px;
   border-radius:5px;
   color:var(--muted);
-  font-size:14px;
+  font-size:0.875rem;
   transition:background .18s,color .18s
 }
 .filters button[aria-pressed=true] {
@@ -234,7 +234,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   width:100%;
   min-width:0;
   color:var(--ink);
-  font-size:15px;
+  font-size:0.9375rem;
   height:100%;
   padding:0
 }
@@ -249,7 +249,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   color:var(--muted)
 }
 .search-shortcut {
-  font-size:16px;
+  font-size:1rem;
   color:var(--muted)
 }
 .collection {
@@ -279,14 +279,14 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   border-radius:2px
 }
 .collection-meta {
-  font-size:13px;
+  font-size:0.8125rem;
   color:var(--muted);
   margin:0 0 13px;
   line-height:1.6
 }
 .collection h3 {
   font-family:var(--serif);
-  font-size:30px;
+  font-size:1.875rem;
   font-weight:500;
   letter-spacing:.025em;
   line-height:1.45;
@@ -298,7 +298,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
 }
 .collection-description {
   color:var(--muted);
-  font-size:15px;
+  font-size:0.9375rem;
   margin:0;
   max-width:34em;
   line-height:1.9
@@ -306,7 +306,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
 .read-link {
   align-self:center;
   white-space:nowrap;
-  font-size:14px;
+  font-size:0.875rem;
   display:inline-flex;
   gap:14px;
   align-items:center;
@@ -326,12 +326,12 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   transform:translateX(4px)
 }
 .search-status {
-  font-size:14px;
+  font-size:0.875rem;
   color:var(--muted);
   margin:-12px 0 16px
 }
 .empty-state {
-  font-size:16px;
+  font-size:1rem;
   color:var(--muted);
   padding:52px 0;
   text-align:center
@@ -340,7 +340,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   margin:32px 0 0
 }
 .document-results>h3 {
-  font-size:18px;
+  font-size:1.125rem;
   font-weight:500;
   margin:0 0 22px
 }
@@ -356,12 +356,12 @@ button:focus-visible,a:focus-visible,input:focus-visible {
 }
 .document-result small {
   display:block;
-  font-size:13px;
+  font-size:0.8125rem;
   color:var(--muted);
   margin-bottom:6px
 }
 .document-result h4 {
-  font-size:18px;
+  font-size:1.125rem;
   font-weight:500;
   line-height:1.6;
   margin:0 0 8px
@@ -369,7 +369,7 @@ button:focus-visible,a:focus-visible,input:focus-visible {
 .document-result p {
   margin:0;
   color:var(--muted);
-  font-size:14px;
+  font-size:0.875rem;
   line-height:1.8
 }
 .more-results {
@@ -396,7 +396,7 @@ footer {
   align-items:center;
   padding:76px 0 42px;
   color:var(--muted);
-  font-size:13px
+  font-size:0.8125rem
 }
 footer p {
   margin:0
@@ -469,7 +469,7 @@ footer a {
     padding:48px 0 64px
   }
   .intro h1 {
-    font-size:78px
+    font-size:4.875rem
   }
   .collection {
     grid-template-columns:122px minmax(0,1fr);
@@ -483,7 +483,7 @@ footer a {
     height:159px
   }
   .collection h3 {
-    font-size:26px
+    font-size:1.625rem
   }
   .read-link {
     grid-column:2;
@@ -507,7 +507,7 @@ footer a {
     height:84px
   }
   .wordmark {
-    font-size:22px;
+    font-size:1.375rem;
     gap:9px
   }
   .wordmark svg {
@@ -516,13 +516,13 @@ footer a {
   }
   .site-header nav {
     gap:22px;
-    font-size:14px
+    font-size:0.875rem
   }
   .intro {
     padding:30px 0 46px
   }
   .intro h1 {
-    font-size:clamp(45px,12.7vw,68px);
+    font-size:clamp(2.8125rem,12.7vw,4.25rem);
     letter-spacing:.02em;
     margin-bottom:26px;
     line-height:1.3
@@ -532,7 +532,7 @@ footer a {
     gap:14px
   }
   .intro-bottom p {
-    font-size:16px;
+    font-size:1rem;
     letter-spacing:.015em;
     line-height:1.9
   }
@@ -540,13 +540,13 @@ footer a {
     display:block
   }
   .intro-link {
-    font-size:14px;
+    font-size:0.875rem;
     gap:10px;
     padding:6px 0;
     white-space:nowrap
   }
   .intro-link span {
-    font-size:20px
+    font-size:1.25rem
   }
   .library {
     padding-top:8px
@@ -556,10 +556,10 @@ footer a {
     gap:12px
   }
   .library-heading h2 {
-    font-size:23px
+    font-size:1.4375rem
   }
   .collection-total {
-    font-size:13px;
+    font-size:0.8125rem;
     margin-left:5px
   }
   .filters {
@@ -567,7 +567,7 @@ footer a {
   }
   .filters button {
     padding:8px 12px;
-    font-size:13px
+    font-size:0.8125rem
   }
   .search-wrap {
     height:54px;
@@ -576,7 +576,7 @@ footer a {
     margin-bottom:20px
   }
   .search-wrap input {
-    font-size:14px
+    font-size:0.875rem
   }
   .search-shortcut {
     display:none
@@ -597,23 +597,23 @@ footer a {
     height:117px
   }
   .collection-meta {
-    font-size:13px;
+    font-size:0.8125rem;
     margin-bottom:7px;
     line-height:1.7
   }
   .collection h3 {
-    font-size:21px;
+    font-size:1.3125rem;
     margin-bottom:9px;
     letter-spacing:0;
     line-height:1.5
   }
   .collection-description {
-    font-size:13px;
+    font-size:0.8125rem;
     line-height:1.85
   }
   .read-link {
     margin-top:-7px;
-    font-size:13px;
+    font-size:0.8125rem;
     min-height:44px;
     gap:10px
   }
@@ -626,23 +626,23 @@ footer a {
   }
   .continue-caption {
     display:block;
-    font-size:13px;
+    font-size:0.8125rem;
     margin:0 0 4px
   }
   .continue-reading a {
-    font-size:14px
+    font-size:0.875rem
   }
   .document-result {
     padding:18px 8px
   }
   .document-result h4 {
-    font-size:17px
+    font-size:1.0625rem
   }
   .document-result p {
-    font-size:13px
+    font-size:0.8125rem
   }
   footer {
-    font-size:13px;
+    font-size:0.8125rem;
     padding:50px 0 30px
   }
   .document-results {
@@ -662,4 +662,50 @@ footer a {
 @media(max-width:400px) {
   .library-heading { gap:8px; }
   .filters button { padding-inline:9px; }
+}
+
+.font-controls {
+  display:flex;
+  align-items:center;
+  gap:0;
+}
+.font-controls button {
+  width:44px;
+  min-height:44px;
+  padding:0;
+  border:0;
+  border-radius:5px;
+  background:transparent;
+  font-size:.875rem;
+  line-height:1;
+}
+.font-controls button:hover {
+  background:var(--surface);
+}
+.font-controls button:disabled {
+  opacity:.35;
+  cursor:default;
+}
+#font-reset {
+  font-size:.8125rem;
+  color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
+.site-header nav {
+  align-items:center;
+  gap:24px;
+}
+@media(max-width:560px) {
+  .site-header nav { gap:0; }
+  .header-link { display:none; }
+  footer { flex-wrap:wrap; gap:10px 20px; }
+  footer p { flex-basis:100%; }
+}
+@media(max-width:560px) {
+  .library-heading { flex-wrap:wrap; row-gap:14px; }
+  .filters { flex-wrap:wrap; }
+  .intro h1 { font-size:clamp(2.25rem,12.7vw,4.25rem); }
+}
+@media(max-width:360px) {
+  .wordmark svg { display:none; }
 }
