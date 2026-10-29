@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>{{TITLE}} · 阅读室</title>
+  <link rel="canonical" href="{{CANONICAL}}">
+  <link rel="icon" href="{{ASSETS}}mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ASSETS}}reader.css?v={{ASSET_VERSION}}">
+  <script defer src="{{ASSETS}}reader.js?v={{ASSET_VERSION}}"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="{{HOME}}">yus3nable · 阅读室</a>
+    <div class="tools">
+      <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
+      <div class="font-menu" id="font-menu" hidden>
+        <button data-font="-1">缩小</button>
+        <button data-font="reset">默认</button>
+        <button data-font="1">放大</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <input type="search" class="search" aria-label="搜索正文" placeholder="搜索正文" data-index="{{ROOT_PREFIX}}search.json?v={{CONTENT_VERSION}}" data-prefix="{{ROOT_PREFIX}}">
+        <ul class="search-results" aria-live="polite"></ul>
+        <details class="outline" open>
+          <summary>目录</summary>
+          {{NAVIGATION}}
+        </details>
+      </nav>
+    </aside>
+    <main>
+      <p class="meta">{{KIND}}</p>
+      <article class="prose" data-material-id="{{MATERIAL_ID}}" data-page-id="{{PAGE_ID}}">{{BODY}}</article>
+      <nav class="page-nav">{{PREV}}{{NEXT}}</nav>
+    </main>
+  </div>
+</body>
+</html>

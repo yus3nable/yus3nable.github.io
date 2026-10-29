@@ -1,0 +1,54 @@
+{
+  "article": "https://yus3nable.github.io/read/bv1lsht6feaq/",
+  "source_md_matches_approved": true,
+  "kind": "文章",
+  "theme_sections": 8,
+  "reading_paragraphs": 111,
+  "images": 0,
+  "global_search_documents": 1526,
+  "keywords_checked": [
+    "2500",
+    "单向门",
+    "Bend",
+    "recall",
+    "7×24",
+    "10 个验证 agent",
+    "1 个"
+  ],
+  "http_checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 10015
+    },
+    {
+      "path": "/read/bv1lsht6feaq/",
+      "status": 200,
+      "bytes": 56425
+    },
+    {
+      "path": "/read/bv1lsht6feaq/search.json",
+      "status": 200,
+      "bytes": 48484
+    },
+    {
+      "path": "/assets/reader.css",
+      "status": 200,
+      "bytes": 3242
+    },
+    {
+      "path": "/assets/reader.js",
+      "status": 200,
+      "bytes": 1987
+    },
+    {
+      "path": "/assets/lauren-tan.svg",
+      "status": 200,
+      "bytes": 668
+    }
+  ],
+  "static_links": "passed",
+  "reader_builder_tests": 2,
+  "browser_gui": "unverified: Computer Use tools unavailable",
+  "private_notes_sync": "not-configured"
+}

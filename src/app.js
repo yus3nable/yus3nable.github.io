@@ -35,7 +35,8 @@
   });
 
 
-  const library = JSON.parse(document.getElementById('library-data').textContent);
+  const libraryData = document.getElementById('library-data');
+  const library = JSON.parse(libraryData.textContent);
   const search = document.getElementById('search');
   const status = document.getElementById('search-status');
   const cards = [...document.querySelectorAll('.collection')];
@@ -102,7 +103,7 @@
   async function loadDocuments() {
     if (documents) return documents;
     if (!loading) {
-      loading = fetch('assets/search-index.json').then(response => {
+      loading = fetch(libraryData.dataset.searchIndex).then(response => {
         if (!response.ok) throw new Error(`正文索引请求失败：${response.status}`);
         return response.json();
       }).then(data => { documents = data; return data; });

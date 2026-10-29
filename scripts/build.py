@@ -9,6 +9,7 @@ import re
 import shutil
 import subprocess
 from urllib.parse import urljoin
+from readings import build_readings
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -33,6 +34,7 @@ def cover_svg(item):
         'nju-os-reading': ('#b16449', '#faf3e7', ['南京大学', '操作系统'], '2026', 'OPERATING SYSTEMS'),
         'ostep-zh-markdown': ('#e8e2d5', '#474b3e', ['操作系统', '导论'], 'OSTEP', 'THREE EASY PIECES'),
         'programmer-self-cultivation-reading': ('#343b34', '#f0eadc', ['程序员的', '自我修养'], 'C / C++', 'LINKING & LOADING'),
+        'bv1lsht6feaq': ('#e1d0bd', '#534638', ['Lauren Tan', 'AI 工作流'], '64 MIN', 'AGENTS & WORKFLOWS'),
     }
     bg, ink, title, small, bottom = settings.get(item['id'], ('#e8e2d5', '#474b3e', [item['kind'], '图文阅读'], '', ''))
     motif = '<path d="M50 130h46m0 0v25m0-25h46m-46 25h46"/><rect x="35" y="120" width="15" height="20" rx="2"/><rect x="142" y="120" width="15" height="20" rx="2"/><rect x="142" y="145" width="15" height="20" rx="2"/>'
@@ -40,6 +42,8 @@ def cover_svg(item):
         motif = '<circle cx="73" cy="142" r="25"/><circle cx="119" cy="142" r="25"/><path d="M49 177h94"/>'
     elif item['id'] == 'programmer-self-cultivation-reading':
         motif = '<rect x="42" y="125" width="108" height="47" rx="2"/><path d="M78 125v47m36-47v47M42 149h108"/>'
+    elif item['kind'] == '文章':
+        motif = '<path d="M40 126h108m-108 15h82m-82 15h100m-100 15h67"/>'
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="192" height="250" viewBox="0 0 192 250"><rect width="192" height="250" fill="{bg}"/><path d="M10 0v250" stroke="{ink}" opacity=".14"/><g fill="{ink}" font-family="Songti SC,STSong,serif"><text x="29" y="55" font-size="23">{title[0]}</text><text x="29" y="88" font-size="23">{title[1]}</text></g><g stroke="{ink}" fill="none" stroke-width="1.2" opacity=".65">{motif}</g><g fill="{ink}" font-family="Arial,sans-serif"><text x="29" y="206" font-size="11">{html.escape(small)}</text><text x="29" y="226" font-size="8" letter-spacing=".7">{html.escape(bottom)}</text></g></svg>'''
 
 def build(sync):
@@ -50,6 +54,7 @@ def build(sync):
     assets.mkdir(parents=True, exist_ok=True)
     for name in ['style.css', 'app.js']:
         shutil.copy2(ROOT/'src'/name, assets/name)
+    local_indexes = build_readings(ROOT, catalog)
     rows = []
     documents = []
     source_counts = {}
@@ -58,7 +63,9 @@ def build(sync):
         (assets/item['cover']).write_text(cover_svg(item))
         rows.append(f'''<article class="collection" data-id="{e('id')}" style="--order:{order}"><a class="cover-link" href="{e('url')}" aria-label="阅读{e('title')}"><img src="assets/{e('cover')}" width="146" height="190" alt="" decoding="async"></a><div class="collection-content"><p class="collection-meta">{e('kind')} · {e('detail')}</p><h3><a href="{e('url')}">{e('title')}</a></h3><p class="collection-description">{e('description')}</p></div><a class="read-link" href="{e('url')}" aria-label="开始阅读{e('title')}">开始阅读<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></article>''')
         cache = ROOT/'maintenance'/f"{item['id']}-search-source.json"
-        if sync or not cache.exists():
+        if item['id'] in local_indexes:
+            data = local_indexes[item['id']]
+        elif sync or not cache.exists():
             data = fetch_index(item)
             cache.write_text(json.dumps(data, ensure_ascii=False))
         else:
@@ -82,7 +89,9 @@ def build(sync):
         documents.extend(grouped.values())
         source_counts[item['id']] = len(grouped)
     asset_version = str(max((ROOT/'src'/name).stat().st_mtime_ns for name in ['style.css', 'app.js']))
-    page = (ROOT/'src/page.html').read_text().replace('{{ASSET_VERSION}}', asset_version).replace('{{TOTAL}}', str(len(catalog))).replace('{{COLLECTIONS}}', '\n'.join(rows)).replace('{{DATA}}', json.dumps(catalog, ensure_ascii=False).replace('<', '\\u003c'))
+    content_inputs = [ROOT/'data/library.json', *list((ROOT/'content').rglob('*.md')), *list((ROOT/'content').rglob('*.json'))]
+    content_version = str(max(path.stat().st_mtime_ns for path in content_inputs))
+    page = (ROOT/'src/page.html').read_text().replace('{{ASSET_VERSION}}', asset_version).replace('{{CONTENT_VERSION}}', content_version).replace('{{TOTAL}}', str(len(catalog))).replace('{{COLLECTIONS}}', '\n'.join(rows)).replace('{{DATA}}', json.dumps(catalog, ensure_ascii=False).replace('<', '\\u003c'))
     (output/'index.html').write_text(page)
     (output/'404.html').write_text('''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>没有找到这页 · 阅读室</title><link rel="stylesheet" href="/assets/style.css"><main class="page-shell intro"><h1 style="font-size:48px">这页暂时不在书架上</h1><p><a href="/">回到阅读室</a></p></main></html>''')
     (output/'.nojekyll').write_text('')

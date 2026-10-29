@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "bv1lsht6feaq",
+  "title": "Lauren Tan 访谈：一个月 2500 个 PR 的 AI 工作流",
+  "description": "Lauren Tan 与 Matt 讨论 AI 编程的信任、验证、工程环境、内外循环、多 agent 协作和代码审查。",
+  "kind": "文章",
+  "format": "interview",
+  "language": "en",
+  "source": {
+    "canonical_url": "https://www.bilibili.com/video/BV1LSHt6FEAq/",
+    "identity": "bilibili:video:BV1LSHt6FEAq:p1",
+    "duration_seconds": 3846
+  },
+  "pages": [
+    {
+      "id": "001",
+      "unit_id": "interview",
+      "title": "Lauren Tan 访谈：一个月 2500 个 PR 的 AI 工作流",
+      "markdown": "content/001.md"
+    }
+  ]
+}

@@ -37,5 +37,19 @@
     "searchPath": "search/search_index.json",
     "updated": "2026-10-12",
     "cover": "programmer.svg"
+  },
+  {
+    "id": "bv1lsht6feaq",
+    "title": "一个月 2500 个 PR 的 AI 工作流",
+    "subtitle": "Lauren Tan 访谈",
+    "kind": "文章",
+    "detail": "Lauren Tan · 64 分钟",
+    "description": "从信任阶梯与验证循环，到工程环境、内外循环和多 agent 协作，理解如何扩大 AI 编程的产出。",
+    "topics": ["AI", "Agent", "编程", "pstack", "工程效率"],
+    "url": "https://yus3nable.github.io/read/bv1lsht6feaq/",
+    "searchPath": "search.json",
+    "updated": "2026-10-29",
+    "cover": "lauren-tan.svg",
+    "source_keys": ["bilibili:video:BV1LSHt6FEAq:p1"]
   }
 ]
