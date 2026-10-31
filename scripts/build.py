@@ -52,7 +52,7 @@ def build(sync):
     output = ROOT/'docs'
     assets = output/'assets'
     assets.mkdir(parents=True, exist_ok=True)
-    for name in ['style.css', 'app.js']:
+    for name in ['style.css', 'app.js', 'theme.css', 'theme.js']:
         shutil.copy2(ROOT/'src'/name, assets/name)
     local_indexes = build_readings(ROOT, catalog)
     rows = []
@@ -88,7 +88,7 @@ def build(sync):
                 grouped[canonical]['text'] += ' ' + title + ' ' + text
         documents.extend(grouped.values())
         source_counts[item['id']] = len(grouped)
-    asset_version = str(max((ROOT/'src'/name).stat().st_mtime_ns for name in ['style.css', 'app.js']))
+    asset_version = str(max((ROOT/'src'/name).stat().st_mtime_ns for name in ['style.css', 'app.js', 'theme.css', 'theme.js']))
     content_inputs = [ROOT/'data/library.json', *list((ROOT/'content').rglob('*.md')), *list((ROOT/'content').rglob('*.json'))]
     content_version = str(max(path.stat().st_mtime_ns for path in content_inputs))
     page = (ROOT/'src/page.html').read_text().replace('{{ASSET_VERSION}}', asset_version).replace('{{CONTENT_VERSION}}', content_version).replace('{{TOTAL}}', str(len(catalog))).replace('{{COLLECTIONS}}', '\n'.join(rows)).replace('{{DATA}}', json.dumps(catalog, ensure_ascii=False).replace('<', '\\u003c'))

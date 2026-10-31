@@ -7,20 +7,23 @@
   <title>{{TITLE}} · 阅读室</title>
   <link rel="canonical" href="{{CANONICAL}}">
   <link rel="icon" href="{{ASSETS}}mark.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#faf9f5">
+  <script src="{{ASSETS}}theme.js?v={{ASSET_VERSION}}"></script>
   <link rel="stylesheet" href="{{ASSETS}}reader.css?v={{ASSET_VERSION}}">
+  <link rel="stylesheet" href="{{ASSETS}}theme.css?v={{ASSET_VERSION}}">
   <script defer src="{{ASSETS}}reader.js?v={{ASSET_VERSION}}"></script>
 </head>
 <body>
   <header class="top">
     <a class="brand" href="{{HOME}}">yus3nable · 阅读室</a>
-    <div class="tools">
+    <div class="reading-controls"><div class="tools">
       <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
       <div class="font-menu" id="font-menu" hidden>
         <button data-font="-1">缩小</button>
         <button data-font="reset">默认</button>
         <button data-font="1">放大</button>
       </div>
-    </div>
+    </div><button class="theme-toggle" type="button" aria-label="切换到夜间模式" aria-pressed="false" title="切换到夜间模式"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5a8.8 8.8 0 1 0 9.9 9.9Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
   </header>
   <div class="layout">
     <aside>

@@ -35,7 +35,7 @@ def build_readings(root, catalog):
     root = Path(root).resolve()
     indexes = {}
     asset_version = str(max((root / 'src' / name).stat().st_mtime_ns
-                            for name in ['reader.css', 'reader.js']))
+                            for name in ['reader.css', 'reader.js', 'theme.css', 'theme.js']))
     template = (root / 'src/reader.html').read_text(encoding='utf-8')
     for item in catalog:
         material = root / 'content' / item['id']
@@ -125,6 +125,6 @@ def build_readings(root, catalog):
                               'text': ' '.join(text.parts)})
         (output / 'search.json').write_text(json.dumps(documents, ensure_ascii=False), encoding='utf-8')
         indexes[item['id']] = documents
-    for name in ['reader.css', 'reader.js']:
+    for name in ['reader.css', 'reader.js', 'theme.css', 'theme.js']:
         shutil.copy2(root / 'src' / name, root / 'docs/assets' / name)
     return indexes

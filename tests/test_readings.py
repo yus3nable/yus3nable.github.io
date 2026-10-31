@@ -19,7 +19,7 @@ class ReadingBuildTests(unittest.TestCase):
         (self.root / 'docs/assets').mkdir(parents=True)
         (self.root / 'src').mkdir()
         source = Path(__file__).resolve().parents[1] / 'src'
-        for name in ['reader.html', 'reader.css', 'reader.js']:
+        for name in ['reader.html', 'reader.css', 'reader.js', 'theme.css', 'theme.js']:
             shutil.copy2(source / name, self.root / 'src' / name)
         self.catalog = [{'id': 'example', 'url': 'https://example.com/read/example/'}]
 
@@ -38,6 +38,8 @@ class ReadingBuildTests(unittest.TestCase):
         self.assertEqual(indexes['example'][0]['route'], './')
         self.assertIn('data-index="search.json?v=', page.read_text())
         self.assertIn('../../assets/reader.css?', page.read_text())
+        self.assertIn('../../assets/theme.js?', page.read_text())
+        self.assertIn('class="theme-toggle"', page.read_text())
 
     def test_multiple_pages_rewrite_markdown_links_images_and_prev_next(self):
         self.manifest([{'id': '001', 'title': '第一节', 'markdown': 'content/001.md'},
