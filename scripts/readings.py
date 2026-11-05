@@ -96,11 +96,11 @@ def build_readings(root, catalog):
                 body = f'<h1>{html.escape(page["title"])}</h1>' + body
             navigation = converter.toc
             if len(pages) > 1:
-                navigation = '<ol>' + ''.join(
+                navigation = '<details class="course-outline"><summary>全部章节</summary><ol>' + ''.join(
                     f'<li><a href="{html.escape(relative_url(route, target), quote=True)}"'
                     + (' aria-current="page"' if index == number else '')
                     + f'>{html.escape(row["title"])}</a></li>'
-                    for index, (row, target) in enumerate(zip(pages, routes))) + '</ol>'
+                    for index, (row, target) in enumerate(zip(pages, routes))) + '</ol></details>' + converter.toc
             prev = (f'<a rel="prev" href="{relative_url(route, routes[number-1])}">'
                     f'← {html.escape(pages[number-1]["title"])}</a>') if number else '<span></span>'
             nxt = (f'<a rel="next" href="{relative_url(route, routes[number+1])}">'

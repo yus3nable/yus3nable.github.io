@@ -17,7 +17,7 @@
     "title": "南京大学生成式软件工程",
     "subtitle": "2026 南京大学 · 蒋炎岩",
     "kind": "课程",
-    "detail": "蒋炎岩 · 2026 · 已上线 1 / 11 课",
+    "detail": "蒋炎岩 · 2026 · 已上线 11 课",
     "description": "从 Agent 的日常用法出发，学习需求、架构、软件演化与质量保障。",
     "topics": [
       "软件工程",
@@ -28,11 +28,21 @@
     ],
     "url": "https://yus3nable.github.io/read/nju-gense-2026/",
     "searchPath": "search.json",
-    "updated": "2026-11-05",
+    "updated": "2026-11-06",
     "cover": "gense.svg",
     "source_keys": [
       "bilibili:collection:202224425:lists:8942017",
-      "bilibili:video:BV1pb8o6yE8f:p1"
+      "bilibili:video:BV1pb8o6yE8f:p1",
+      "bilibili:video:BV1CQt365EzW:p1",
+      "bilibili:video:BV1kybV6DE47:p1",
+      "bilibili:video:BV1Q6en6NEUo:p1",
+      "bilibili:video:BV1Nyeq6qEt8:p1",
+      "bilibili:video:BV1Rch76WEfQ:p1",
+      "bilibili:video:BV1JGap6LE74:p1",
+      "bilibili:video:BV11LWw6VEHW:p1",
+      "bilibili:video:BV144nc6KEA4:p1",
+      "bilibili:video:BV1Guxu6EERa:p1",
+      "bilibili:video:BV1ej4g6xESc:p1"
     ]
   },
   {

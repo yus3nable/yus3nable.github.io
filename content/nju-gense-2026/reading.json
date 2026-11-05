@@ -17,6 +17,66 @@
       "unit_id": "01",
       "title": "01 · 欢迎来到未来",
       "markdown": "content/01.md"
+    },
+    {
+      "id": "02",
+      "unit_id": "02",
+      "title": "02 · 提示词工程",
+      "markdown": "content/02.md"
+    },
+    {
+      "id": "03",
+      "unit_id": "03",
+      "title": "03 · 软件仓库管理",
+      "markdown": "content/03.md"
+    },
+    {
+      "id": "04",
+      "unit_id": "04",
+      "title": "04 · 软件仓库管理 (2)",
+      "markdown": "content/04.md"
+    },
+    {
+      "id": "05",
+      "unit_id": "05",
+      "title": "05 · 软件工程的来龙去脉",
+      "markdown": "content/05.md"
+    },
+    {
+      "id": "06",
+      "unit_id": "06",
+      "title": "06 · 需求和架构 (1)",
+      "markdown": "content/06.md"
+    },
+    {
+      "id": "07",
+      "unit_id": "07",
+      "title": "07 · 需求和架构 (2)",
+      "markdown": "content/07.md"
+    },
+    {
+      "id": "08",
+      "unit_id": "08",
+      "title": "08 · Agent-native 开发",
+      "markdown": "content/08.md"
+    },
+    {
+      "id": "09",
+      "unit_id": "09",
+      "title": "09 · DeepSeek Harness (1)",
+      "markdown": "content/09.md"
+    },
+    {
+      "id": "10",
+      "unit_id": "10",
+      "title": "10 · 软件的演化 (航母是怎么造出来的)",
+      "markdown": "content/10.md"
+    },
+    {
+      "id": "11",
+      "unit_id": "11",
+      "title": "11 · 软件质量保障 (1)",
+      "markdown": "content/11.md"
     }
   ]
 }

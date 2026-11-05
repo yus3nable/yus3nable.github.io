@@ -47,7 +47,7 @@ class ReadingBuildTests(unittest.TestCase):
         (self.material / 'assets').mkdir()
         (self.material / 'assets/chart.svg').write_text('<svg/>')
         (self.material / 'content/001.md').write_text('# 第一节\n\n[![图](../assets/chart.svg)](../assets/chart.svg)\n\n[下一节](002.md#second)')
-        (self.material / 'content/002.md').write_text('# 第二节\n\n<a id="second"></a>\n\n[返回](001.md)')
+        (self.material / 'content/002.md').write_text('# 第二节\n\n## 本课重点 {#second}\n\n[返回](001.md)')
         build_readings(self.root, self.catalog)
         output = self.root / 'docs/read/example'
         first = (output / 'index.html').read_text()
@@ -59,6 +59,9 @@ class ReadingBuildTests(unittest.TestCase):
         self.assertIn('rel="next" href="pages/002.html"', first)
         self.assertIn('rel="prev" href="../index.html"', second)
         self.assertIn('../../../assets/reader.css?', second)
+        self.assertIn('href="#second">本课重点</a>', second)
+        self.assertIn('class="course-outline"', second)
+        self.assertIn('aria-current="page"', second)
 
 
 if __name__ == '__main__':
