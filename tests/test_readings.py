@@ -46,7 +46,7 @@ class ReadingBuildTests(unittest.TestCase):
                        {'id': '002', 'title': '第二节', 'markdown': 'content/002.md'}], 'book')
         (self.material / 'assets').mkdir()
         (self.material / 'assets/chart.svg').write_text('<svg/>')
-        (self.material / 'content/001.md').write_text('# 第一节\n\n![图](../assets/chart.svg)\n\n[下一节](002.md#second)')
+        (self.material / 'content/001.md').write_text('# 第一节\n\n[![图](../assets/chart.svg)](../assets/chart.svg)\n\n[下一节](002.md#second)')
         (self.material / 'content/002.md').write_text('# 第二节\n\n<a id="second"></a>\n\n[返回](001.md)')
         build_readings(self.root, self.catalog)
         output = self.root / 'docs/read/example'
@@ -54,6 +54,7 @@ class ReadingBuildTests(unittest.TestCase):
         second = (output / 'pages/002.html').read_text()
         self.assertTrue((output / 'assets/chart.svg').is_file())
         self.assertIn('src="assets/chart.svg"', first)
+        self.assertIn('href="assets/chart.svg"', first)
         self.assertIn('href="pages/002.html#second"', first)
         self.assertIn('rel="next" href="pages/002.html"', first)
         self.assertIn('rel="prev" href="../index.html"', second)

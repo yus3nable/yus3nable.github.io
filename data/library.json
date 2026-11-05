@@ -13,6 +13,29 @@
     "cover": "nju.svg"
   },
   {
+    "id": "nju-gense-2026",
+    "title": "南京大学生成式软件工程",
+    "subtitle": "2026 南京大学 · 蒋炎岩",
+    "kind": "课程",
+    "detail": "蒋炎岩 · 2026 · 已上线 1 / 11 课",
+    "description": "从 Agent 的日常用法出发，学习需求、架构、软件演化与质量保障。",
+    "topics": [
+      "软件工程",
+      "AI",
+      "Agent",
+      "架构",
+      "需求"
+    ],
+    "url": "https://yus3nable.github.io/read/nju-gense-2026/",
+    "searchPath": "search.json",
+    "updated": "2026-11-05",
+    "cover": "gense.svg",
+    "source_keys": [
+      "bilibili:collection:202224425:lists:8942017",
+      "bilibili:video:BV1pb8o6yE8f:p1"
+    ]
+  },
+  {
     "id": "ostep-zh-markdown",
     "title": "操作系统导论",
     "subtitle": "Operating Systems: Three Easy Pieces",

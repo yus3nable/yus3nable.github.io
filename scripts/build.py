@@ -31,6 +31,7 @@ def fetch_index(item):
 
 def cover_svg(item):
     settings = {
+        'nju-gense-2026': ('#756f5c', '#faf3e7', ['生成式', '软件工程'], 'NJU / 2026', 'GENERATIVE SOFTWARE'),
         'nju-os-reading': ('#b16449', '#faf3e7', ['南京大学', '操作系统'], '2026', 'OPERATING SYSTEMS'),
         'ostep-zh-markdown': ('#e8e2d5', '#474b3e', ['操作系统', '导论'], 'OSTEP', 'THREE EASY PIECES'),
         'programmer-self-cultivation-reading': ('#343b34', '#f0eadc', ['程序员的', '自我修养'], 'C / C++', 'LINKING & LOADING'),

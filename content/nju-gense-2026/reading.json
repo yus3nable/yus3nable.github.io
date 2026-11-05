@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "nju-gense-2026",
+  "title": "南京大学生成式软件工程",
+  "description": "从 Agent 的日常用法出发，学习需求、架构、软件演化与质量保障。",
+  "kind": "课程",
+  "format": "course",
+  "language": "zh",
+  "source": {
+    "type": "video",
+    "identity": "bilibili:collection:202224425:lists:8942017",
+    "canonical_url": "https://space.bilibili.com/202224425/lists/8942017"
+  },
+  "pages": [
+    {
+      "id": "01",
+      "unit_id": "01",
+      "title": "01 · 欢迎来到未来",
+      "markdown": "content/01.md"
+    }
+  ]
+}

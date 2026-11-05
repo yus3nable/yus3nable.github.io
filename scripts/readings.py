@@ -72,7 +72,8 @@ def build_readings(root, catalog):
                 target = local_file(material, str(source.parent / unquote(parsed.path)))
                 if target in source_routes:
                     destination = source_routes[target]
-                elif attribute.strip().startswith('src='):
+                elif (attribute.strip().startswith('src=')
+                      or target.is_relative_to(material / 'assets') and target.is_file()):
                     if data.get('format') == 'interview':
                         raise ValueError('访谈正文保持纯文字')
                     destination = target.relative_to(material).as_posix()
