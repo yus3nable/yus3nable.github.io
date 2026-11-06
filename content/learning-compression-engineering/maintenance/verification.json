@@ -24,8 +24,20 @@
   },
   "private_notes_sync": "not-connected",
   "publication": {
-    "status": "pending",
-    "url": "https://yus3nable.github.io/read/learning-compression-engineering/"
+    "status": "published",
+    "url": "https://yus3nable.github.io/read/learning-compression-engineering/",
+    "verified_at": "2026-11-06T14:44:41+08:00",
+    "content_commit": "5522184207967570cc3f412e585354a057f46be5",
+    "deployment_run": "https://github.com/yus3nable/yus3nable.github.io/actions/runs/42175704983",
+    "http_checks": "正文、首页、两份搜索索引、阅读器 CSS/JS、封面共 7 项 HTTP 200，与发布文件一致",
+    "browser_checks": "线上标题、首末段、目录跳转、搜索、首页入口和 390x844 手机首屏通过"
   },
-  "tool_scope": "输入为已成稿文本，视频/PDF 专用时间范围检查不适用；使用站点构建、全文比对和浏览器验证。"
+  "tool_scope": "输入为已成稿文本，视频/PDF 专用时间范围检查不适用；使用站点构建、全文比对和浏览器验证。",
+  "cleanup": {
+    "temporary_files_removed": 3,
+    "temporary_directory_removed": true,
+    "cloud_page": "trashed",
+    "formal_website_source": "retained",
+    "user_original_attachment": "retained"
+  }
 }
