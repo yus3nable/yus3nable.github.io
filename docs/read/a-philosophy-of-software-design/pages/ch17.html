@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>第17章 一致性 · 阅读室</title>
+  <link rel="canonical" href="https://yus3nable.github.io/read/a-philosophy-of-software-design/pages/ch17.html">
+  <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#faf9f5">
+  <script src="../../../assets/theme.js?v=1793896190985616540"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1793896190985616540">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1793896190985616540">
+  <script defer src="../../../assets/reader.js?v=1793896190985616540"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="../../../">yus3nable · 阅读室</a>
+    <div class="reading-controls"><div class="tools">
+      <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
+      <div class="font-menu" id="font-menu" hidden>
+        <button data-font="-1">缩小</button>
+        <button data-font="reset">默认</button>
+        <button data-font="1">放大</button>
+      </div>
+    </div><button class="theme-toggle" type="button" aria-label="切换到夜间模式" aria-pressed="false" title="切换到夜间模式"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5a8.8 8.8 0 1 0 9.9 9.9Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <input type="search" class="search" aria-label="搜索正文" placeholder="搜索正文" data-index="../search.json?v=1793974323933409155" data-prefix="../">
+        <ul class="search-results" aria-live="polite"></ul>
+        <details class="outline" open>
+          <summary>目录</summary>
+          <details class="course-outline"><summary>全部章节</summary><ol><li><a href="../index.html">软件设计的哲学</a></li><li><a href="copyright.html">版权与版本</a></li><li><a href="toc.html">全书目录</a></li><li><a href="preface.html">前言</a></li><li><a href="ch01.html">第1章 引言</a></li><li><a href="ch02.html">第2章 复杂性的性质</a></li><li><a href="ch03.html">第3章 代码能运行还不够</a></li><li><a href="ch04.html">第4章 模块应该有深度</a></li><li><a href="ch05.html">第5章 信息隐藏与信息泄漏</a></li><li><a href="ch06.html">第6章 通用模块更深</a></li><li><a href="ch07.html">第7章 不同层次，不同抽象</a></li><li><a href="ch08.html">第8章 将复杂性下沉</a></li><li><a href="ch09.html">第9章 合在一起更好，还是分开更好？</a></li><li><a href="ch10.html">第10章 通过设计消除错误</a></li><li><a href="ch11.html">第11章 设计两次</a></li><li><a href="ch12.html">第12章 为什么写注释？四种借口</a></li><li><a href="ch13.html">第13章 注释应说明代码中看不出的信息</a></li><li><a href="ch14.html">第14章 选择名称</a></li><li><a href="ch15.html">第15章 先写注释</a></li><li><a href="ch16.html">第16章 修改现有代码</a></li><li><a href="ch17.html" aria-current="page">第17章 一致性</a></li><li><a href="ch18.html">第18章 代码应当一目了然</a></li><li><a href="ch19.html">第19章 软件开发趋势</a></li><li><a href="ch20.html">第20章 为性能而设计</a></li><li><a href="ch21.html">第21章 结语</a></li><li><a href="index.html">索引</a></li><li><a href="principles.html">设计原则汇总</a></li><li><a href="red-flags.html">危险信号汇总</a></li><li><a href="author.html">关于作者</a></li></ol></details><div class="toc">
+<ul>
+<li><a href="#ch17-section-01">17.1 一致性的例子</a></li>
+<li><a href="#ch17-section-02">17.2 确保一致性</a></li>
+<li><a href="#ch17-section-03">17.3 过犹不及</a></li>
+<li><a href="#ch17-section-04">17.4 小结</a></li>
+</ul>
+</div>
+
+        </details>
+      </nav>
+    </aside>
+    <main>
+      <p class="meta">书籍</p>
+      <article class="prose" data-material-id="a-philosophy-of-software-design" data-page-id="ch17"><!-- SOURCE pdf-148-b000 -->
+<div id="pdf-148-b000" hidden></div>
+<!-- SOURCE pdf-148-b001 -->
+<div id="pdf-148-b001" hidden></div>
+<h1 id="chapter-17">第17章 一致性</h1>
+<!-- SOURCE pdf-148-b002 -->
+<div id="pdf-148-b002" hidden></div>
+<p>一致性是降低系统复杂性、让系统行为更清楚的有力工具。系统具有一致性，意味着类似的事情采用类似的做法，不同的事情采用不同做法。一致性让已有认知可以复用：一旦了解某处的做法，就能利用这些知识立即理解其他采用同样方式的地方。如果系统实现缺乏一致性，开发者就必须分别学习每种情况，耗费更多时间。</p>
+<!-- SOURCE pdf-148-b003 -->
+<div id="pdf-148-b003" hidden></div>
+<p>一致性还能减少错误。缺乏一致性时，两种不同的情况可能看起来一样。开发者看到熟悉的模式，就可能根据过去的经验作出错误判断。如果系统一致，基于熟悉情况作出的判断就可靠。一致性能让开发者更快地工作，同时少犯错误。</p>
+<!-- SOURCE pdf-148-b004 -->
+<div id="pdf-148-b004" hidden></div>
+<h2 id="ch17-section-01">17.1 一致性的例子</h2>
+<!-- SOURCE pdf-148-b005 -->
+<div id="pdf-148-b005" hidden></div>
+<p>一致性适用于系统的多个层次，以下是几个例子。</p>
+<!-- SOURCE pdf-148-b006 -->
+<div id="pdf-148-b006" hidden></div>
+<p><strong>名称。</strong> 第14章已经讨论了一致命名的好处。</p>
+<!-- SOURCE pdf-148-b007 -->
+<div id="pdf-148-b007" hidden></div>
+<p><strong>编码风格。</strong> 如今，开发组织通常都有风格指南，在编译器强制执行的规则之外，对程序结构作进一步约束。现代风格指南涉及缩进、花括号位置、声明顺序、命名、注释，以及限制使用被认为危险的语言特性等。风格规范让代码更易读，也能减少某些错误。</p>
+<!-- SOURCE pdf-149-b000 -->
+<div id="pdf-149-b000" hidden></div>
+<p><strong>接口。</strong> 一个接口对应多种实现，也是一个一致性的例子。理解其中一种实现后，理解其他实现就更容易，因为已经知道它们必须提供哪些功能。</p>
+<!-- SOURCE pdf-149-b001 -->
+<div id="pdf-149-b001" hidden></div>
+<p><strong>设计模式。</strong> 设计模式是针对某些常见问题、获得普遍认可的解决方案，例如用户界面设计中的模型—视图—控制器方式。能够用已有设计模式解决问题，通常会让实现更快、更可能正确运行，读者也更容易看懂代码。19.5节会进一步讨论设计模式。</p>
+<!-- SOURCE pdf-149-b002 -->
+<div id="pdf-149-b002" hidden></div>
+<p><strong>不变式。</strong> 不变式是变量或结构始终满足的性质。例如，存储文本行的数据结构可以规定：每一行都以换行符结束。不变式减少了代码必须考虑的特殊情况，让人更容易推理代码行为。</p>
+<!-- SOURCE pdf-149-b003 -->
+<div id="pdf-149-b003" hidden></div>
+<h2 id="ch17-section-02">17.2 确保一致性</h2>
+<!-- SOURCE pdf-149-b004 -->
+<div id="pdf-149-b004" hidden></div>
+<p>一致性很难维持，多人长期协作时更是如此。一个团队可能不知道另一个团队确立的约定。新人不了解规则，会无意中违反约定，建立与已有约定冲突的新约定。以下建议有助于建立和维护一致性。</p>
+<!-- SOURCE pdf-149-b005 -->
+<div id="pdf-149-b005" hidden></div>
+<p><strong>记录。</strong> 建立一份文档，列出最重要的整体约定，例如编码风格规范。把文档放在开发者容易看到的地方，例如项目 Wiki 的醒目位置。鼓励新人阅读，也鼓励老成员隔一段时间重温。许多组织已经在网上发布风格指南，可以考虑以其中一份为起点。</p>
+<!-- SOURCE pdf-149-b006 -->
+<div id="pdf-149-b006" hidden></div>
+<p>对于不变式等适用范围较小的约定，在代码中找合适的位置记录。如果不把约定写下来，就很难指望别人遵循。</p>
+<!-- SOURCE pdf-149-b007 -->
+<div id="pdf-149-b007" hidden></div>
+<!-- SOURCE pdf-150-b000 -->
+<div id="pdf-150-b000" hidden></div>
+<p><strong>执行。</strong> 即使文档完善，开发者也很难记住所有约定。最好的办法是编写工具检查违规情况，并确保只有通过检查的代码才能提交到仓库。自动检查工具对底层语法约定很有效。</p>
+<!-- SOURCE pdf-150-b001 -->
+<div id="pdf-150-b001" hidden></div>
+<p>我最近一个项目曾遭遇行结束符问题。一些开发者使用 Unix，以换行符结束一行；另一些使用 Windows，通常以回车符加换行符结束。如果一种系统上的开发者，对此前在另一种系统上编辑过的文件做一点小修改，编辑器有时会把所有行结束符都转换成本系统的格式。结果看起来文件的每一行都改过，很难追踪有意义的改动。我们规定文件只能使用换行符，但很难确保每个开发者使用的每种工具都遵守约定。每当新人加入，在他适应约定的过程中，总会集中出现一批行结束符问题。</p>
+<!-- SOURCE pdf-150-b002 -->
+<div id="pdf-150-b002" hidden></div>
+<p>最后，我们写了一个短脚本，在提交代码仓库前自动执行。它检查所有修改过的文件，只要其中有回车符就中止提交。脚本也可以手动运行，把回车加换行的序列替换成换行符，修复有问题的文件。问题随即消失，脚本还帮助新人熟悉了约定。</p>
+<!-- SOURCE pdf-150-b003 -->
+<div id="pdf-150-b003" hidden></div>
+<p>代码审查也是执行约定、帮助新人学习约定的机会。审查者对细节要求越严格，团队成员就越快掌握约定，代码也越整洁。</p>
+<!-- SOURCE pdf-150-b004 -->
+<div id="pdf-150-b004" hidden></div>
+<p><strong>入乡随俗。</strong> 最重要的一条约定，就是每位开发者都应遵循“入乡随俗”的老话。开始修改陌生文件时，先看看已有代码如何组织：公有变量和方法是否全部声明在私有成员之前？方法是否按字母顺序排列？变量使用 <code>firstServerName</code> 这样的驼峰命名，还是 <code>first_server_name</code> 这样的下划线命名？只要看到某种做法可能是一项约定，就遵循它。作设计决策时，问问项目其他地方是否可能已有类似决策；如果有，找到实例，在新代码中沿用相同做法。</p>
+<!-- SOURCE pdf-151-b000 -->
+<div id="pdf-151-b000" hidden></div>
+<p><strong>不要随意改变现有约定。</strong> 克制“改进”已有约定的冲动。“有更好的主意”不足以成为引入不一致的理由。新想法可能确实更好，但保持一致的价值，几乎总是大于两种做法本身的优劣差异。引入不一致行为前，先问两个问题：第一，是否获得了制定旧约定时尚不知道的重要新信息，足以支持新做法？第二，新做法的优势是否大到值得花时间更新所有旧用法？如果组织认同两个答案都是“是”，就进行升级；完成后，应看不到旧约定的痕迹。但仍有风险：其他开发者可能不知道新约定，将来又引入旧做法。总体而言，重新讨论已经确立的约定，往往并非开发者时间的良好用途。</p>
+<!-- SOURCE pdf-151-b001 -->
+<div id="pdf-151-b001" hidden></div>
+<h2 id="ch17-section-03">17.3 过犹不及</h2>
+<!-- SOURCE pdf-151-b002 -->
+<div id="pdf-151-b002" hidden></div>
+<p>一致性要求相似的事情采用相似做法，也要求不同的事情采用不同做法。如果过度追求一致，硬把不同事物塞进同一种方式，例如给实际不同的东西使用相同变量名，或给不适用的任务强套已有设计模式，就会制造复杂性和困惑。只有当开发者能够确信“看起来像 x 的东西确实就是 x”时，一致性才有价值。</p>
+<!-- SOURCE pdf-151-b003 -->
+<div id="pdf-151-b003" hidden></div>
+<h2 id="ch17-section-04">17.4 小结</h2>
+<!-- SOURCE pdf-151-b004 -->
+<div id="pdf-151-b004" hidden></div>
+<p>一致性也是投资心态的体现。确保一致性需要额外工作：商定约定，创建自动检查工具，寻找新代码可以参照的类似场景，在代码审查中帮助团队学习。这些投入的回报，是代码更清楚。开发者能更快、更准确地理解代码行为，从而提高工作速度，减少 bug。</p></article>
+      <nav class="page-nav"><a rel="prev" href="ch16.html">← 第16章 修改现有代码</a><a rel="next" href="ch18.html">第18章 代码应当一目了然 →</a></nav>
+    </main>
+  </div>
+</body>
+</html>

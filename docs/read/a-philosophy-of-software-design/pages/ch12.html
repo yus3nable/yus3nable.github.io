@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>第12章 为什么写注释？四种借口 · 阅读室</title>
+  <link rel="canonical" href="https://yus3nable.github.io/read/a-philosophy-of-software-design/pages/ch12.html">
+  <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#faf9f5">
+  <script src="../../../assets/theme.js?v=1793896190985616540"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1793896190985616540">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1793896190985616540">
+  <script defer src="../../../assets/reader.js?v=1793896190985616540"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="../../../">yus3nable · 阅读室</a>
+    <div class="reading-controls"><div class="tools">
+      <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
+      <div class="font-menu" id="font-menu" hidden>
+        <button data-font="-1">缩小</button>
+        <button data-font="reset">默认</button>
+        <button data-font="1">放大</button>
+      </div>
+    </div><button class="theme-toggle" type="button" aria-label="切换到夜间模式" aria-pressed="false" title="切换到夜间模式"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5a8.8 8.8 0 1 0 9.9 9.9Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <input type="search" class="search" aria-label="搜索正文" placeholder="搜索正文" data-index="../search.json?v=1793974323933409155" data-prefix="../">
+        <ul class="search-results" aria-live="polite"></ul>
+        <details class="outline" open>
+          <summary>目录</summary>
+          <details class="course-outline"><summary>全部章节</summary><ol><li><a href="../index.html">软件设计的哲学</a></li><li><a href="copyright.html">版权与版本</a></li><li><a href="toc.html">全书目录</a></li><li><a href="preface.html">前言</a></li><li><a href="ch01.html">第1章 引言</a></li><li><a href="ch02.html">第2章 复杂性的性质</a></li><li><a href="ch03.html">第3章 代码能运行还不够</a></li><li><a href="ch04.html">第4章 模块应该有深度</a></li><li><a href="ch05.html">第5章 信息隐藏与信息泄漏</a></li><li><a href="ch06.html">第6章 通用模块更深</a></li><li><a href="ch07.html">第7章 不同层次，不同抽象</a></li><li><a href="ch08.html">第8章 将复杂性下沉</a></li><li><a href="ch09.html">第9章 合在一起更好，还是分开更好？</a></li><li><a href="ch10.html">第10章 通过设计消除错误</a></li><li><a href="ch11.html">第11章 设计两次</a></li><li><a href="ch12.html" aria-current="page">第12章 为什么写注释？四种借口</a></li><li><a href="ch13.html">第13章 注释应说明代码中看不出的信息</a></li><li><a href="ch14.html">第14章 选择名称</a></li><li><a href="ch15.html">第15章 先写注释</a></li><li><a href="ch16.html">第16章 修改现有代码</a></li><li><a href="ch17.html">第17章 一致性</a></li><li><a href="ch18.html">第18章 代码应当一目了然</a></li><li><a href="ch19.html">第19章 软件开发趋势</a></li><li><a href="ch20.html">第20章 为性能而设计</a></li><li><a href="ch21.html">第21章 结语</a></li><li><a href="index.html">索引</a></li><li><a href="principles.html">设计原则汇总</a></li><li><a href="red-flags.html">危险信号汇总</a></li><li><a href="author.html">关于作者</a></li></ol></details><div class="toc">
+<ul>
+<li><a href="#ch12-section-01">12.1 好代码能自我说明</a></li>
+<li><a href="#ch12-section-02">12.2 没时间写注释</a></li>
+<li><a href="#ch12-section-03">12.3 注释会过时，误导读者</a></li>
+<li><a href="#ch12-section-04">12.4 见过的注释都没用</a></li>
+<li><a href="#ch12-section-05">12.5 好注释的好处</a></li>
+</ul>
+</div>
+
+        </details>
+      </nav>
+    </aside>
+    <main>
+      <p class="meta">书籍</p>
+      <article class="prose" data-material-id="a-philosophy-of-software-design" data-page-id="ch12"><!-- SOURCE pdf-102-b000 -->
+<div id="pdf-102-b000" hidden></div>
+<!-- SOURCE pdf-102-b001 -->
+<div id="pdf-102-b001" hidden></div>
+<h1 id="chapter-12">第12章 为什么写注释？四种借口</h1>
+<!-- SOURCE pdf-102-b002 -->
+<div id="pdf-102-b002" hidden></div>
+<p>代码中的文档在软件设计中起着重要作用。注释帮助开发者理解系统、高效工作，但作用还不止这些。文档也是抽象的重要组成部分：没有注释，就无法隐藏复杂性。最后，正确地编写注释，实际上能改进系统设计。相应地，好的软件设计如果缺少文档，价值也会大打折扣。</p>
+<!-- SOURCE pdf-102-b003 -->
+<div id="pdf-102-b003" hidden></div>
+<p>遗憾的是，这个观点尚未得到普遍认同。相当一部分生产代码几乎没有注释。许多开发者认为写注释浪费时间；还有些人认可其价值，却总没有真正动笔。好在许多团队认识到了文档的价值，这样的团队似乎正逐渐增多。但即使团队鼓励文档，注释也常被当作苦差事，许多开发者不知道该怎么写，最终文档往往平庸。文档不足给软件开发带来巨大且没有必要的阻力。</p>
+<!-- SOURCE pdf-102-b004 -->
+<div id="pdf-102-b004" hidden></div>
+<p>本章讨论开发者回避注释的借口，以及注释为什么重要。第13章介绍如何写好注释；之后几章讨论变量命名、如何用文档改进系统设计等相关问题。希望这些章节能让读者相信三点：好注释能显著改善软件整体质量；好注释并不难写；而且——这可能难以相信——写注释也能有乐趣。</p>
+<!-- SOURCE pdf-102-b005 -->
+<div id="pdf-102-b005" hidden></div>
+<!-- SOURCE pdf-102-b006 -->
+<div id="pdf-102-b006" hidden></div>
+<!-- SOURCE pdf-103-b000 -->
+<div id="pdf-103-b000" hidden></div>
+<p>开发者不写注释，通常会拿以下一个或多个理由解释：</p>
+<ul>
+<li>“好代码能自我说明。”</li>
+<li>“没时间写注释。”</li>
+<li>“注释会过时，误导读者。”</li>
+<li>“见过的注释都没用，何必写？”</li>
+</ul>
+<p>下面逐一讨论。</p>
+<!-- SOURCE pdf-103-b001 -->
+<div id="pdf-103-b001" hidden></div>
+<h2 id="ch12-section-01">12.1 好代码能自我说明</h2>
+<!-- SOURCE pdf-103-b002 -->
+<div id="pdf-103-b002" hidden></div>
+<p>有人相信，代码写得好就一目了然，无须注释。这是个诱人的神话，就像“冰激凌有益健康”的传闻，让人巴不得它是真的。遗憾的是，事实并非如此。写代码时，确实可以通过好的变量命名等方式减少注释需求，参见第14章。但仍有大量设计信息无法用代码表达。例如，类接口中只有很小一部分能在代码中正式声明，如方法签名。接口的非形式化部分，如每个方法做什么的高层描述、返回结果的含义，只能用注释表达。还有许多信息也无法通过代码说明，例如某项设计决定的理由，以及什么情况下适合调用某个方法。</p>
+<!-- SOURCE pdf-103-b003 -->
+<div id="pdf-103-b003" hidden></div>
+<p>一些开发者认为，想知道方法做什么，直接读实现就行，比任何注释都准确。读者或许能从代码推导出抽象接口，但这既耗时又费力。另外，若预期使用者会阅读方法实现，就会尽可能让方法短小，以便阅读。一旦方法做的事情稍复杂，就会拆成几个小方法，产生大量浅方法。代码也不会因此更易读：为了理解顶层方法，读者可能仍须了解嵌套调用的方法的行为。对于大系统，靠阅读代码学习行为并不现实。</p>
+<!-- SOURCE pdf-103-b004 -->
+<div id="pdf-103-b004" hidden></div>
+<!-- SOURCE pdf-104-b000 -->
+<div id="pdf-104-b000" hidden></div>
+<p>注释还是抽象的基础。回顾第4章，抽象的目标是隐藏复杂性：用简化视图保留必要信息，省去可以安全忽略的细节。如果使用方法之前必须读其代码，就没有抽象可言，方法的全部复杂性都暴露出来了。没有注释，方法唯一的抽象就是声明，只说明名称、参数与结果的名称和类型，缺少太多必要信息，独自无法形成有用的抽象。例如，提取子串的方法有 <code>start</code>、<code>end</code> 两个参数，表示提取的字符范围。仅凭声明，无法知道子串是否包含 <code>end</code> 指向的字符，或 <code>start &gt; end</code> 时会发生什么。注释补足调用者所需的信息，完善简化视图，同时隐藏实现细节。注释使用英语等自然语言也很重要：虽然没有代码精确，却更有表达力，可以给出简单、直观的描述。想通过抽象隐藏复杂性，注释必不可少。</p>
+<!-- SOURCE pdf-104-b001 -->
+<div id="pdf-104-b001" hidden></div>
+<h2 id="ch12-section-02">12.2 没时间写注释</h2>
+<!-- SOURCE pdf-104-b002 -->
+<div id="pdf-104-b002" hidden></div>
+<p>注释很容易被排在其他开发任务之后。添加新功能与为现有功能写文档二选一时，选择新功能似乎合理。但软件项目几乎总有时间压力，总有看起来比写注释更紧急的事。允许文档不断降低优先级，最终就不会有文档。</p>
+<!-- SOURCE pdf-104-b003 -->
+<div id="pdf-104-b003" hidden></div>
+<p>对此的回应，是第15页讨论的投资心态。想拥有清晰的软件结构、长期高效工作，就必须前期多花些时间建立这种结构。好注释对可维护性帮助很大，投入很快就会回报。写注释也无须耗费很多时间。先不算注释，想想开发时间里实际敲代码占多少，与设计、编译、测试等时间相比，我怀疑不会超过10%。再假设敲注释花的时间与敲代码相同，这应该是个足够宽松的上限。如此算来，写好注释增加的开发时间不会超过约10%，良好文档的收益很快就能抵偿成本。</p>
+<!-- SOURCE pdf-104-b004 -->
+<div id="pdf-104-b004" hidden></div>
+<!-- SOURCE pdf-105-b000 -->
+<div id="pdf-105-b000" hidden></div>
+<p>许多最重要的注释与抽象有关，例如类和方法的顶层文档。第15章会说明，应该把它们作为设计过程的一部分来写；编写文档本身就是重要的设计工具，可以改进整体设计。这些注释能立即带来回报。</p>
+<!-- SOURCE pdf-105-b001 -->
+<div id="pdf-105-b001" hidden></div>
+<h2 id="ch12-section-03">12.3 注释会过时，误导读者</h2>
+<!-- SOURCE pdf-105-b002 -->
+<div id="pdf-105-b002" hidden></div>
+<p>注释有时确实过时，但实践中无须让它成为大问题。保持文档更新不需要巨大投入。只有代码大改，文档才需要大改，而改代码花的时间会更多。第16章讨论如何组织文档，让修改代码后尽可能容易更新文档，主要思路是避免重复文档，并让文档靠近相应代码。代码审查是发现、修正过时注释的好办法。</p>
+<!-- SOURCE pdf-105-b003 -->
+<div id="pdf-105-b003" hidden></div>
+<h2 id="ch12-section-04">12.4 见过的注释都没用</h2>
+<!-- SOURCE pdf-105-b004 -->
+<div id="pdf-105-b004" hidden></div>
+<p>四种借口中，这个可能最有道理。每个开发者都见过没有提供有用信息的注释，现有文档多数最多只能说一般。好在这个问题可以解决：掌握方法之后，写好文档并不难。接下来几章会提供一套写好文档并持续维护它的思路。</p>
+<!-- SOURCE pdf-105-b005 -->
+<div id="pdf-105-b005" hidden></div>
+<h2 id="ch12-section-05">12.5 好注释的好处</h2>
+<!-- SOURCE pdf-105-b006 -->
+<div id="pdf-105-b006" hidden></div>
+<!-- SOURCE pdf-106-b000 -->
+<div id="pdf-106-b000" hidden></div>
+<p>反对写注释的理由已经讨论过了，希望这些解释也已驳倒它们。接下来看看好注释的收益。注释的总体目的，是记录设计者脑中那些无法用代码表达的信息。小到促使某段代码采用特殊写法的硬件怪癖，大到为什么需要某个类，都在此列。后来其他开发者修改系统时，注释能让工作更快、更准确。没有文档，他们必须重新推导或猜测原作者掌握的知识，既耗费时间，也可能误解原设计意图，引入 bug。即使修改者就是原作者，注释也有价值：几周没有接触某段代码，许多设计细节就已经忘了。</p>
+<!-- SOURCE pdf-106-b001 -->
+<div id="pdf-106-b001" hidden></div>
+<!-- SOURCE pdf-106-b002 -->
+<div id="pdf-106-b002" hidden></div>
+<p>第2章介绍了软件系统中复杂性的三种表现：</p>
+<ul>
+<li>变更放大：看似简单的修改，需要改动许多位置。</li>
+<li>认知负担：完成修改前，开发者必须掌握大量信息。</li>
+<li>未知的未知：不清楚需要修改哪些代码，也不清楚修改时应考虑哪些信息。</li>
+</ul>
+<p>良好文档有助于解决后两种问题。文档提供修改所需的信息，也方便开发者忽略无关信息，从而降低认知负担。文档不足时，开发者可能要阅读大量代码，重建设计者的思路。文档也能说明系统结构，让人清楚某项修改涉及哪些信息和代码，减少未知的未知。</p>
+<!-- SOURCE pdf-106-b003 -->
+<div id="pdf-106-b003" hidden></div>
+<p>第2章指出，复杂性的主要原因是依赖与晦涩性。好文档能澄清依赖，并填补信息空缺，消除晦涩性。</p>
+<!-- SOURCE pdf-106-b004 -->
+<div id="pdf-106-b004" hidden></div>
+<p>接下来几章介绍如何写好文档，以及如何把文档编写融入设计过程，改进软件设计。</p></article>
+      <nav class="page-nav"><a rel="prev" href="ch11.html">← 第11章 设计两次</a><a rel="next" href="ch13.html">第13章 注释应说明代码中看不出的信息 →</a></nav>
+    </main>
+  </div>
+</body>
+</html>

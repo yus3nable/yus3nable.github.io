@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>第8章 将复杂性下沉 · 阅读室</title>
+  <link rel="canonical" href="https://yus3nable.github.io/read/a-philosophy-of-software-design/pages/ch08.html">
+  <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#faf9f5">
+  <script src="../../../assets/theme.js?v=1793896190985616540"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1793896190985616540">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1793896190985616540">
+  <script defer src="../../../assets/reader.js?v=1793896190985616540"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="../../../">yus3nable · 阅读室</a>
+    <div class="reading-controls"><div class="tools">
+      <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
+      <div class="font-menu" id="font-menu" hidden>
+        <button data-font="-1">缩小</button>
+        <button data-font="reset">默认</button>
+        <button data-font="1">放大</button>
+      </div>
+    </div><button class="theme-toggle" type="button" aria-label="切换到夜间模式" aria-pressed="false" title="切换到夜间模式"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5a8.8 8.8 0 1 0 9.9 9.9Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <input type="search" class="search" aria-label="搜索正文" placeholder="搜索正文" data-index="../search.json?v=1793974323933409155" data-prefix="../">
+        <ul class="search-results" aria-live="polite"></ul>
+        <details class="outline" open>
+          <summary>目录</summary>
+          <details class="course-outline"><summary>全部章节</summary><ol><li><a href="../index.html">软件设计的哲学</a></li><li><a href="copyright.html">版权与版本</a></li><li><a href="toc.html">全书目录</a></li><li><a href="preface.html">前言</a></li><li><a href="ch01.html">第1章 引言</a></li><li><a href="ch02.html">第2章 复杂性的性质</a></li><li><a href="ch03.html">第3章 代码能运行还不够</a></li><li><a href="ch04.html">第4章 模块应该有深度</a></li><li><a href="ch05.html">第5章 信息隐藏与信息泄漏</a></li><li><a href="ch06.html">第6章 通用模块更深</a></li><li><a href="ch07.html">第7章 不同层次，不同抽象</a></li><li><a href="ch08.html" aria-current="page">第8章 将复杂性下沉</a></li><li><a href="ch09.html">第9章 合在一起更好，还是分开更好？</a></li><li><a href="ch10.html">第10章 通过设计消除错误</a></li><li><a href="ch11.html">第11章 设计两次</a></li><li><a href="ch12.html">第12章 为什么写注释？四种借口</a></li><li><a href="ch13.html">第13章 注释应说明代码中看不出的信息</a></li><li><a href="ch14.html">第14章 选择名称</a></li><li><a href="ch15.html">第15章 先写注释</a></li><li><a href="ch16.html">第16章 修改现有代码</a></li><li><a href="ch17.html">第17章 一致性</a></li><li><a href="ch18.html">第18章 代码应当一目了然</a></li><li><a href="ch19.html">第19章 软件开发趋势</a></li><li><a href="ch20.html">第20章 为性能而设计</a></li><li><a href="ch21.html">第21章 结语</a></li><li><a href="index.html">索引</a></li><li><a href="principles.html">设计原则汇总</a></li><li><a href="red-flags.html">危险信号汇总</a></li><li><a href="author.html">关于作者</a></li></ol></details><div class="toc">
+<ul>
+<li><a href="#ch08-section-01">8.1 示例：编辑器的文本类</a></li>
+<li><a href="#ch08-section-02">8.2 示例：配置参数</a></li>
+<li><a href="#ch08-section-03">8.3 过犹不及</a></li>
+<li><a href="#ch08-section-04">8.4 结论</a></li>
+</ul>
+</div>
+
+        </details>
+      </nav>
+    </aside>
+    <main>
+      <p class="meta">书籍</p>
+      <article class="prose" data-material-id="a-philosophy-of-software-design" data-page-id="ch08"><!-- SOURCE pdf-065-b000 -->
+<div id="pdf-065-b000" hidden></div>
+<!-- SOURCE pdf-065-b001 -->
+<div id="pdf-065-b001" hidden></div>
+<h1 id="chapter-08">第8章 将复杂性下沉</h1>
+<!-- SOURCE pdf-065-b002 -->
+<div id="pdf-065-b002" hidden></div>
+<p>本章介绍创建深类的另一种思路。假设正在开发一个新模块，发现有些复杂性无法避免。让模块使用者处理这些复杂性，还是在模块内部处理，哪种做法更好？如果复杂性与模块提供的功能有关，通常应该选择后者。大多数模块的使用者比开发者多，让开发者多费些心，总好过让使用者都受累。作为模块开发者，应尽量方便模块的使用者，即使这意味着自己要多做一些工作。换句话说，对模块而言，接口简单比实现简单更重要。</p>
+<!-- SOURCE pdf-065-b003 -->
+<div id="pdf-065-b003" hidden></div>
+<p>开发者很容易采取相反的做法：自己解决简单问题，把难题推给别人。遇到不确定该如何处理的情况，最省事的做法是抛出异常，让调用者处理。不确定该采用什么策略，就定义几个配置参数来控制策略，让系统管理员自行摸索最佳参数值。</p>
+<!-- SOURCE pdf-065-b004 -->
+<div id="pdf-065-b004" hidden></div>
+<p>这些做法短期内能让自己省事，却会放大复杂性，让原本只需一个人处理的问题变成许多人的负担。例如，类抛出异常，每个调用者就都得处理；类暴露配置参数，每个部署环境的系统管理员就都得学习如何设置。</p>
+<!-- SOURCE pdf-065-b005 -->
+<div id="pdf-065-b005" hidden></div>
+<h2 id="ch08-section-01">8.1 示例：编辑器的文本类</h2>
+<!-- SOURCE pdf-065-b006 -->
+<div id="pdf-065-b006" hidden></div>
+<!-- SOURCE pdf-066-b000 -->
+<div id="pdf-066-b000" hidden></div>
+<p>来看第6章和第7章讨论过的类：它负责在图形界面文本编辑器中管理文件的文本。这个类提供的方法可以把磁盘文件读入内存，查询、修改内存中的文件副本，再把修改后的版本写回磁盘。学生实现这个类时，许多人选择了面向行的接口，提供读取、插入和删除整行文本的方法。这样做让类的实现简单了，却给上层软件带来了复杂性。在用户界面层面，操作很少以整行为单位。例如，按键会在已有行内插入单个字符；复制或删除选中的文本，可能涉及几个不同行中的部分内容。采用面向行的文本接口，上层软件就必须自行拆分、合并行，才能实现用户界面。</p>
+<!-- SOURCE pdf-066-b001 -->
+<div id="pdf-066-b001" hidden></div>
+<p>第6.3节介绍的面向字符的接口，可以将复杂性下沉。用户界面软件可以插入、删除任意范围的文本，无须拆分、合并行，实现也就更简单了。文本类的实现可能会变得复杂：如果内部用一组行来表示文本，就必须通过拆分、合并行来实现面向字符的操作。这种方案更好，因为它把拆分、合并的复杂性封装在文本类内部，降低了系统的总体复杂性。</p>
+<!-- SOURCE pdf-066-b002 -->
+<div id="pdf-066-b002" hidden></div>
+<h2 id="ch08-section-02">8.2 示例：配置参数</h2>
+<!-- SOURCE pdf-066-b003 -->
+<div id="pdf-066-b003" hidden></div>
+<p>配置参数是将复杂性向上转移的例子。类可以在内部确定某种行为，也可以向外暴露几个控制行为的参数，例如缓存大小，或放弃请求前的重试次数。采用后者，使用者就必须为这些参数指定合适的值。如今系统普遍使用配置参数，有的系统甚至有数百个。</p>
+<!-- SOURCE pdf-066-b004 -->
+<div id="pdf-066-b004" hidden></div>
+<p>支持者认为，配置参数让使用者能根据自身需求和工作负载调优系统，这是它的好处。有些情况下，底层基础设施代码很难知道应采用什么策略，而使用者对自己的领域了解得多。例如，使用者可能知道某些请求比其他请求更紧迫，让使用者为这些请求指定更高的优先级就很合理。这类情况下，配置参数能让系统在更多不同领域中获得更好的性能。</p>
+<!-- SOURCE pdf-066-b005 -->
+<div id="pdf-066-b005" hidden></div>
+<!-- SOURCE pdf-067-b000 -->
+<div id="pdf-067-b000" hidden></div>
+<p>不过，配置参数也很容易成为逃避重要问题、把问题推给别人的借口。许多情况下，使用者或管理员很难确定参数的合适取值，有时根本无法确定。还有些情况下，只要在系统实现上多花一点工夫，就能自动确定合适的值。考虑一个必须处理丢包的网络协议：发送请求后，如果一定时间内收不到响应，就重新发送请求。确定重试间隔的一种办法，是引入配置参数。不过，传输协议也可以测量成功请求的响应时间，取它的某个倍数作为重试间隔，自行算出合理的值。这种做法将复杂性下沉，免去了使用者摸索合适重试间隔的负担。它还有一个好处：重试间隔动态计算，运行条件变化时会自动调整。配置参数则很容易过时。</p>
+<!-- SOURCE pdf-067-b001 -->
+<div id="pdf-067-b001" hidden></div>
+<p>应尽量避免使用配置参数。在向外暴露配置参数之前，先问自己：“使用者或上层模块能确定一个比我们在这里算出的值更好的值吗？”确实需要配置参数时，看看能否自动计算合理的默认值，让使用者只在特殊情况下才需要提供取值。理想情况下，每个模块都应完整解决一个问题；配置参数会让解决方案留下缺口，增加系统复杂性。</p>
+<!-- SOURCE pdf-067-b002 -->
+<div id="pdf-067-b002" hidden></div>
+<h2 id="ch08-section-03">8.3 过犹不及</h2>
+<!-- SOURCE pdf-067-b003 -->
+<div id="pdf-067-b003" hidden></div>
+<p>将复杂性下沉需要把握分寸，这个思路很容易用过头。极端做法是把整个应用的全部功能都下沉到一个类里，显然不合理。以下情况最适合将复杂性下沉：（a）下沉的复杂性与类的已有功能密切相关；（b）下沉后，应用的许多其他部分都能得到简化；（c）下沉能简化类的接口。记住，目标是尽量降低系统的总体复杂性。</p>
+<!-- SOURCE pdf-067-b004 -->
+<div id="pdf-067-b004" hidden></div>
+<!-- SOURCE pdf-068-b000 -->
+<div id="pdf-068-b000" hidden></div>
+<p>第6章提到，有些学生在文本类中定义了反映用户界面的方法，例如实现退格键功能的方法。这样看似不错，因为复杂性下沉了。不过，把用户界面的知识加入文本类，并不能明显简化上层代码，而且这些知识与文本类的主要功能无关。在这个例子里，复杂性下沉只带来了信息泄漏。</p>
+<!-- SOURCE pdf-068-b001 -->
+<div id="pdf-068-b001" hidden></div>
+<h2 id="ch08-section-04">8.4 结论</h2>
+<!-- SOURCE pdf-068-b002 -->
+<div id="pdf-068-b002" hidden></div>
+<p>开发模块时，寻找这样的机会：自己多费一点心，让使用者少受一些累。</p></article>
+      <nav class="page-nav"><a rel="prev" href="ch07.html">← 第7章 不同层次，不同抽象</a><a rel="next" href="ch09.html">第9章 合在一起更好，还是分开更好？ →</a></nav>
+    </main>
+  </div>
+</body>
+</html>

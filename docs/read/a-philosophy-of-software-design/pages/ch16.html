@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>第16章 修改现有代码 · 阅读室</title>
+  <link rel="canonical" href="https://yus3nable.github.io/read/a-philosophy-of-software-design/pages/ch16.html">
+  <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#faf9f5">
+  <script src="../../../assets/theme.js?v=1793896190985616540"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1793896190985616540">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1793896190985616540">
+  <script defer src="../../../assets/reader.js?v=1793896190985616540"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="../../../">yus3nable · 阅读室</a>
+    <div class="reading-controls"><div class="tools">
+      <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
+      <div class="font-menu" id="font-menu" hidden>
+        <button data-font="-1">缩小</button>
+        <button data-font="reset">默认</button>
+        <button data-font="1">放大</button>
+      </div>
+    </div><button class="theme-toggle" type="button" aria-label="切换到夜间模式" aria-pressed="false" title="切换到夜间模式"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5a8.8 8.8 0 1 0 9.9 9.9Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <input type="search" class="search" aria-label="搜索正文" placeholder="搜索正文" data-index="../search.json?v=1793974323933409155" data-prefix="../">
+        <ul class="search-results" aria-live="polite"></ul>
+        <details class="outline" open>
+          <summary>目录</summary>
+          <details class="course-outline"><summary>全部章节</summary><ol><li><a href="../index.html">软件设计的哲学</a></li><li><a href="copyright.html">版权与版本</a></li><li><a href="toc.html">全书目录</a></li><li><a href="preface.html">前言</a></li><li><a href="ch01.html">第1章 引言</a></li><li><a href="ch02.html">第2章 复杂性的性质</a></li><li><a href="ch03.html">第3章 代码能运行还不够</a></li><li><a href="ch04.html">第4章 模块应该有深度</a></li><li><a href="ch05.html">第5章 信息隐藏与信息泄漏</a></li><li><a href="ch06.html">第6章 通用模块更深</a></li><li><a href="ch07.html">第7章 不同层次，不同抽象</a></li><li><a href="ch08.html">第8章 将复杂性下沉</a></li><li><a href="ch09.html">第9章 合在一起更好，还是分开更好？</a></li><li><a href="ch10.html">第10章 通过设计消除错误</a></li><li><a href="ch11.html">第11章 设计两次</a></li><li><a href="ch12.html">第12章 为什么写注释？四种借口</a></li><li><a href="ch13.html">第13章 注释应说明代码中看不出的信息</a></li><li><a href="ch14.html">第14章 选择名称</a></li><li><a href="ch15.html">第15章 先写注释</a></li><li><a href="ch16.html" aria-current="page">第16章 修改现有代码</a></li><li><a href="ch17.html">第17章 一致性</a></li><li><a href="ch18.html">第18章 代码应当一目了然</a></li><li><a href="ch19.html">第19章 软件开发趋势</a></li><li><a href="ch20.html">第20章 为性能而设计</a></li><li><a href="ch21.html">第21章 结语</a></li><li><a href="index.html">索引</a></li><li><a href="principles.html">设计原则汇总</a></li><li><a href="red-flags.html">危险信号汇总</a></li><li><a href="author.html">关于作者</a></li></ol></details><div class="toc">
+<ul>
+<li><a href="#ch16-section-01">16.1 坚持战略式思考</a></li>
+<li><a href="#ch16-section-02">16.2 维护注释：让注释靠近代码</a></li>
+<li><a href="#ch16-section-03">16.3 将说明写进代码，别只留在提交日志里</a></li>
+<li><a href="#ch16-section-04">16.4 维护注释：避免重复</a></li>
+<li><a href="#ch16-section-05">16.5 维护注释：检查 diff</a></li>
+<li><a href="#ch16-section-06">16.6 高层次的注释更容易维护</a></li>
+</ul>
+</div>
+
+        </details>
+      </nav>
+    </aside>
+    <main>
+      <p class="meta">书籍</p>
+      <article class="prose" data-material-id="a-philosophy-of-software-design" data-page-id="ch16"><!-- SOURCE pdf-142-b000 -->
+<div id="pdf-142-b000" hidden></div>
+<!-- SOURCE pdf-142-b001 -->
+<div id="pdf-142-b001" hidden></div>
+<h1 id="chapter-16">第16章 修改现有代码</h1>
+<!-- SOURCE pdf-142-b002 -->
+<div id="pdf-142-b002" hidden></div>
+<p>第1章介绍了软件开发的迭代性和渐进性。大型软件系统经历一系列演化阶段，每个阶段都会增加新能力，修改已有模块。系统设计也就一直在演变。开发之初无法构想出正确的系统设计；成熟系统的设计，更多取决于演化期间的修改，初始构想的影响相对较小。前面几章讨论如何在最初设计和实现时减少复杂性，本章讨论如何防止复杂性在系统演化中悄然积累。</p>
+<!-- SOURCE pdf-142-b003 -->
+<div id="pdf-142-b003" hidden></div>
+<h2 id="ch16-section-01">16.1 坚持战略式思考</h2>
+<!-- SOURCE pdf-142-b004 -->
+<div id="pdf-142-b004" hidden></div>
+<p>第3章区分了战术式编程与战略式编程。战术式编程的首要目标是尽快让东西运行，即使增加复杂性也在所不惜；战略式编程最重要的目标则是产出优秀的系统设计。战术式做法很快就会让设计杂乱无章。要得到易于维护和扩展的系统，“能运行”这个标准还不够高；必须优先考虑设计，进行战略式思考。修改已有代码时也一样。</p>
+<!-- SOURCE pdf-142-b005 -->
+<div id="pdf-142-b005" hidden></div>
+<p>遗憾的是，开发者修改已有代码、修 bug 或添加功能时，通常不会从战略角度思考。典型心态是：“能满足需求的最小改动是什么？”有时他们以不熟悉代码为由，担心改动越大，引入新 bug 的风险越高。但这会导致战术式编程。每次最小改动都会引入一些特殊情况、依赖或其他形式的复杂性，系统设计随之差一点。系统每演化一步，问题便多积累一点。</p>
+<!-- SOURCE pdf-143-b000 -->
+<div id="pdf-143-b000" hidden></div>
+<p>如果希望系统设计保持清晰，修改已有代码时就必须采用战略式做法。理想情况下，每次修改完成后，系统结构都应如同从一开始设计时就考虑了这项变化。为此，必须克制快速修补的冲动，思考在新的需求下，当前设计是否仍是最佳选择。如果不再合适，就重构系统，得到尽可能好的设计。这样，每次修改都会改善系统设计。</p>
+<!-- SOURCE pdf-143-b001 -->
+<div id="pdf-143-b001" hidden></div>
+<p>这也是原书第15页介绍的投资心态：多花一点时间重构和改进设计，就能得到更清晰的系统，进而提高开发速度，收回重构投入。即使当前改动不要求重构，在阅读和修改代码时，也应留意可以修复的设计缺陷。每次修改代码，都尽量顺便让系统设计改善一点。若没有让设计变好，很可能就在让它变差。</p>
+<!-- SOURCE pdf-143-b002 -->
+<div id="pdf-143-b002" hidden></div>
+<p>第3章也谈到，投资心态有时会与商业软件开发的现实冲突。如果按“正确方式”重构需要三个月，而粗糙的快速修补只需两小时，可能就不得不采用后者，截止日期紧迫时更是如此。如果重构会产生兼容性问题，影响许多其他人和团队，这种重构也可能不现实。</p>
+<!-- SOURCE pdf-143-b003 -->
+<div id="pdf-143-b003" hidden></div>
+<p>尽管如此，仍应尽量避免这些妥协。问自己：“在当前约束下，为了得到清晰的系统设计，我是否已尽最大努力？”也许存在另一种做法，只需几天，设计质量却接近三个月的重构？或者，眼下无法做大规模重构，就请主管在当前截止日期之后安排时间回来处理。每个开发组织都应计划拿出一小部分总投入，用于清理和重构；长期来看，这项工作能够收回成本。</p>
+<!-- SOURCE pdf-143-b004 -->
+<div id="pdf-143-b004" hidden></div>
+<!-- SOURCE pdf-143-b005 -->
+<div id="pdf-143-b005" hidden></div>
+<h2 id="ch16-section-02">16.2 维护注释：让注释靠近代码</h2>
+<!-- SOURCE pdf-144-b000 -->
+<div id="pdf-144-b000" hidden></div>
+<p>修改已有代码时，很可能会让部分现有注释失效。改代码时容易忘记更新注释，导致注释不再准确。这会让读者烦恼；错误注释一多，读者就会开始怀疑所有注释。好在只需一点自律，再遵循几条原则，就能以不大的投入保持注释更新。本节及后续几节给出一些具体方法。</p>
+<!-- SOURCE pdf-144-b001 -->
+<div id="pdf-144-b001" hidden></div>
+<p><strong>确保注释得到更新的最好方法，是把它放在所描述代码的附近，让开发者改代码时能看到。</strong> 注释离相关代码越远，越不容易得到恰当更新。例如，方法接口注释的最佳位置在代码文件中，紧挨着方法体。修改方法一定会接触这段代码，开发者很可能看到接口注释，并按需要更新。</p>
+<!-- SOURCE pdf-144-b002 -->
+<div id="pdf-144-b002" hidden></div>
+<p>对于 C、C++ 这样将代码和头文件分开的语言，也可以把接口注释放在 <code>.h</code> 文件中方法声明旁边。但这离实现很远：修改方法体时看不到这些注释，还要额外打开另一个文件，找到对应注释再更新。有人主张接口注释应放在头文件中，让使用者无需查看代码文件就能学会使用抽象。但使用者应从 Doxygen 或 Javadoc 等工具生成的文档获取信息，无需阅读代码文件或头文件。很多 IDE 也会提取并展示文档，例如输入方法名时显示方法说明。有了这些工具，就应把文档放在最方便代码开发者的位置。</p>
+<!-- SOURCE pdf-144-b003 -->
+<div id="pdf-144-b003" hidden></div>
+<!-- SOURCE pdf-145-b000 -->
+<div id="pdf-145-b000" hidden></div>
+<p>编写实现注释时，不要把整个方法的注释全堆在方法开头。应把它们分散开，让每条注释尽量靠下，处于能够涵盖所有相关代码的最小范围内。例如，一个方法分为三个主要阶段，就不要在顶部用一条注释详述所有阶段。分别为各阶段写注释，放在该阶段第一行代码之前。同时，在方法实现开头用一条注释描述整体策略也有帮助，例如：</p>
+<!-- SOURCE pdf-145-b001 -->
+<div id="pdf-145-b001" hidden></div>
+<!-- SOURCE pdf-145-b002 -->
+<div id="pdf-145-b002" hidden></div>
+<!-- SOURCE pdf-145-b003 -->
+<div id="pdf-145-b003" hidden></div>
+
+<pre><code class="language-cpp">//  We proceed in three phases:
+//  Phase 1: Find feasible candidates
+//  Phase 2: Assign each candidate a score
+//  Phase 3: Choose the best, and remove it
+</code></pre>
+<p>注释译文：分三个阶段进行：第一阶段找出可行的候选项；第二阶段为每个候选项评分；第三阶段选出最佳候选项并将其移除。</p>
+<!-- SOURCE pdf-145-b004 -->
+<div id="pdf-145-b004" hidden></div>
+<p>更详细的内容可以记录在各阶段代码正上方。</p>
+<!-- SOURCE pdf-145-b005 -->
+<div id="pdf-145-b005" hidden></div>
+<p>一般而言，注释离它描述的代码越远，就应越抽象，这样能降低代码变化导致注释失效的可能性。</p>
+<!-- SOURCE pdf-145-b006 -->
+<div id="pdf-145-b006" hidden></div>
+<h2 id="ch16-section-03">16.3 将说明写进代码，别只留在提交日志里</h2>
+<!-- SOURCE pdf-145-b007 -->
+<div id="pdf-145-b007" hidden></div>
+<p>修改代码时，一个常见错误是把变更的详细信息写进代码仓库的 commit message，却没有在代码中记录。日后虽然能浏览仓库日志查看提交说明，但需要这些信息的开发者未必想得到去翻日志。即使想到了，找出正确的记录也很费事。</p>
+<!-- SOURCE pdf-145-b008 -->
+<div id="pdf-145-b008" hidden></div>
+<p>编写 commit message 时，问问自己：开发者今后是否还需要这些信息？如果需要，就把它记录在代码中。例如，某个微妙问题促成了一次代码修改，提交说明解释了这个问题。若代码中没有记录，后来的人可能会撤销这次修改，却不知道自己重新引入了 bug。提交说明里也留一份当然可以，但最重要的是让代码中有这项说明。这体现了一条原则：把文档放在开发者最容易看到的地方；提交日志很少是这样的位置。</p>
+<!-- SOURCE pdf-145-b009 -->
+<div id="pdf-145-b009" hidden></div>
+<h2 id="ch16-section-04">16.4 维护注释：避免重复</h2>
+<!-- SOURCE pdf-145-b010 -->
+<div id="pdf-145-b010" hidden></div>
+<!-- SOURCE pdf-146-b000 -->
+<div id="pdf-146-b000" hidden></div>
+<p>保持注释更新的第二个方法是避免重复。文档有多个副本，开发者就更难找到并更新所有相关版本。每项设计决策应尽量只记录一次。如果一项决策影响代码中的多处，就找一个最容易想到的位置集中记录，无须到处重复。例如，一个变量存在容易误解的行为，影响多个使用位置，可以把它记录在变量声明旁的注释中。开发者看不懂使用这个变量的代码时，自然会到这里查找。</p>
+<!-- SOURCE pdf-146-b001 -->
+<div id="pdf-146-b001" hidden></div>
+<p>如果某份说明没有一个开发者容易找到的明显位置，可以按13.7节所述创建 <code>designNotes</code> 文件，也可以从已有位置中选出最合适的一处。在其他位置添加简短注释，指向集中说明：“下面代码的解释请参见 xyz 中的注释。”如果主注释被移动或删除，引用就会失效，但这种不一致很容易显露：开发者在指定位置找不到注释，可以借助版本控制历史查明原因，再更新引用。相反，重复文档中的某些副本没有更新时，开发者不会收到任何提示，不知道自己读到的是过时信息。</p>
+<!-- SOURCE pdf-146-b002 -->
+<div id="pdf-146-b002" hidden></div>
+<p>不要在另一个模块里重复记录某个模块的设计决策。例如，不要在方法调用前用注释解释被调用方法的内部行为。读者需要了解时，应查看该方法的接口注释。良好的开发工具通常会自动提供这些信息，例如选中方法名或把鼠标悬停在其上，就显示接口注释。应让开发者容易找到合适的文档，避免靠重复文档实现这一点。</p>
+<!-- SOURCE pdf-146-b003 -->
+<div id="pdf-146-b003" hidden></div>
+<p><strong>如果程序外部已有某项信息的文档，就引用它，无需在程序内部再写一遍。</strong> 例如，编写实现 HTTP 协议的类，无需在代码里描述 HTTP 协议。网上已有大量资料，只要加一条简短注释，附上其中一个来源的 URL 即可。用户手册已经说明的功能也是如此。假设程序提供一组命令，每个方法负责实现一条命令；如果用户手册已说明这些命令，就不用在代码中重复。在各个命令方法的接口注释里加一句即可：</p>
+<!-- SOURCE pdf-147-b000 -->
+<div id="pdf-147-b000" hidden></div>
+
+<pre><code class="language-cpp">// Implements the Foo command; see the user manual for details.
+</code></pre>
+<p>注释译文：实现 Foo 命令；详情参见用户手册。</p>
+<p>读者需要能方便地找到理解代码所需的全部文档，但这些文档无须全部由你亲自编写。</p>
+<!-- SOURCE pdf-147-b001 -->
+<div id="pdf-147-b001" hidden></div>
+<h2 id="ch16-section-05">16.5 维护注释：检查 diff</h2>
+<!-- SOURCE pdf-147-b002 -->
+<div id="pdf-147-b002" hidden></div>
+<p>确保文档及时更新的一个好办法，是在向版本控制系统提交修改之前，花几分钟查看此次提交的全部改动，确认每项改动都已恰当地体现在文档中。提交前的检查也能发现其他一些问题，例如意外遗留的调试代码，或尚未处理的 TODO。</p>
+<!-- SOURCE pdf-147-b003 -->
+<div id="pdf-147-b003" hidden></div>
+<h2 id="ch16-section-06">16.6 高层次的注释更容易维护</h2>
+<!-- SOURCE pdf-147-b004 -->
+<div id="pdf-147-b004" hidden></div>
+<p>关于维护文档，最后再说一点：<strong>比代码层次更高、更抽象的注释，更容易维护。</strong> 这类注释不反映代码细节，细小代码变更不会影响它们，只有整体行为改变才会影响。当然，第13章也说过，有些注释确实必须详细、精确。但一般而言，最有用的注释——那些没有简单复述代码的注释——也最容易维护。</p></article>
+      <nav class="page-nav"><a rel="prev" href="ch15.html">← 第15章 先写注释</a><a rel="next" href="ch17.html">第17章 一致性 →</a></nav>
+    </main>
+  </div>
+</body>
+</html>

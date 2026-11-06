@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "id": "a-philosophy-of-software-design",
+  "title": "软件设计的哲学",
+  "description": "John Ousterhout 从复杂性、模块与接口出发，讨论注释、命名、代码演化和性能。2018 年第一版完整中文译文。",
+  "kind": "书籍",
+  "format": "book",
+  "language": "en",
+  "source": {
+    "type": "pdf",
+    "title": "A Philosophy of Software Design",
+    "author": "John Ousterhout",
+    "edition": "First Edition v1.01, November 2018",
+    "isbn": "978-1-7321022-0-0",
+    "pdf_page_count": 188
+  },
+  "pages": [
+    {
+      "id": "title",
+      "unit_id": "title",
+      "title": "软件设计的哲学",
+      "markdown": "content/title.md"
+    },
+    {
+      "id": "copyright",
+      "unit_id": "copyright",
+      "title": "版权与版本",
+      "markdown": "content/copyright.md"
+    },
+    {
+      "id": "toc",
+      "unit_id": "toc",
+      "title": "全书目录",
+      "markdown": "content/toc.md"
+    },
+    {
+      "id": "preface",
+      "unit_id": "preface",
+      "title": "前言",
+      "markdown": "content/preface.md"
+    },
+    {
+      "id": "ch01",
+      "unit_id": "ch01",
+      "title": "第1章 引言",
+      "markdown": "content/ch01.md"
+    },
+    {
+      "id": "ch02",
+      "unit_id": "ch02",
+      "title": "第2章 复杂性的性质",
+      "markdown": "content/ch02.md"
+    },
+    {
+      "id": "ch03",
+      "unit_id": "ch03",
+      "title": "第3章 代码能运行还不够",
+      "markdown": "content/ch03.md"
+    },
+    {
+      "id": "ch04",
+      "unit_id": "ch04",
+      "title": "第4章 模块应该有深度",
+      "markdown": "content/ch04.md"
+    },
+    {
+      "id": "ch05",
+      "unit_id": "ch05",
+      "title": "第5章 信息隐藏与信息泄漏",
+      "markdown": "content/ch05.md"
+    },
+    {
+      "id": "ch06",
+      "unit_id": "ch06",
+      "title": "第6章 通用模块更深",
+      "markdown": "content/ch06.md"
+    },
+    {
+      "id": "ch07",
+      "unit_id": "ch07",
+      "title": "第7章 不同层次，不同抽象",
+      "markdown": "content/ch07.md"
+    },
+    {
+      "id": "ch08",
+      "unit_id": "ch08",
+      "title": "第8章 将复杂性下沉",
+      "markdown": "content/ch08.md"
+    },
+    {
+      "id": "ch09",
+      "unit_id": "ch09",
+      "title": "第9章 合在一起更好，还是分开更好？",
+      "markdown": "content/ch09.md"
+    },
+    {
+      "id": "ch10",
+      "unit_id": "ch10",
+      "title": "第10章 通过设计消除错误",
+      "markdown": "content/ch10.md"
+    },
+    {
+      "id": "ch11",
+      "unit_id": "ch11",
+      "title": "第11章 设计两次",
+      "markdown": "content/ch11.md"
+    },
+    {
+      "id": "ch12",
+      "unit_id": "ch12",
+      "title": "第12章 为什么写注释？四种借口",
+      "markdown": "content/ch12.md"
+    },
+    {
+      "id": "ch13",
+      "unit_id": "ch13",
+      "title": "第13章 注释应说明代码中看不出的信息",
+      "markdown": "content/ch13.md"
+    },
+    {
+      "id": "ch14",
+      "unit_id": "ch14",
+      "title": "第14章 选择名称",
+      "markdown": "content/ch14.md"
+    },
+    {
+      "id": "ch15",
+      "unit_id": "ch15",
+      "title": "第15章 先写注释",
+      "markdown": "content/ch15.md"
+    },
+    {
+      "id": "ch16",
+      "unit_id": "ch16",
+      "title": "第16章 修改现有代码",
+      "markdown": "content/ch16.md"
+    },
+    {
+      "id": "ch17",
+      "unit_id": "ch17",
+      "title": "第17章 一致性",
+      "markdown": "content/ch17.md"
+    },
+    {
+      "id": "ch18",
+      "unit_id": "ch18",
+      "title": "第18章 代码应当一目了然",
+      "markdown": "content/ch18.md"
+    },
+    {
+      "id": "ch19",
+      "unit_id": "ch19",
+      "title": "第19章 软件开发趋势",
+      "markdown": "content/ch19.md"
+    },
+    {
+      "id": "ch20",
+      "unit_id": "ch20",
+      "title": "第20章 为性能而设计",
+      "markdown": "content/ch20.md"
+    },
+    {
+      "id": "ch21",
+      "unit_id": "ch21",
+      "title": "第21章 结语",
+      "markdown": "content/ch21.md"
+    },
+    {
+      "id": "index",
+      "unit_id": "index",
+      "title": "索引",
+      "markdown": "content/index.md"
+    },
+    {
+      "id": "principles",
+      "unit_id": "principles",
+      "title": "设计原则汇总",
+      "markdown": "content/principles.md"
+    },
+    {
+      "id": "red-flags",
+      "unit_id": "red-flags",
+      "title": "危险信号汇总",
+      "markdown": "content/red-flags.md"
+    },
+    {
+      "id": "author",
+      "unit_id": "author",
+      "title": "关于作者",
+      "markdown": "content/author.md"
+    }
+  ]
+}

@@ -126,5 +126,27 @@
     "source_keys": [
       "gemini-chat:learning-compression-20261106"
     ]
+  },
+  {
+    "id": "a-philosophy-of-software-design",
+    "title": "软件设计的哲学",
+    "subtitle": "A Philosophy of Software Design",
+    "kind": "书籍",
+    "detail": "John Ousterhout · 第一版 · 21 章",
+    "description": "从管理复杂性出发，理解深模块、信息隐藏、接口、注释与命名，在持续演化中改善软件设计。",
+    "topics": [
+      "软件设计",
+      "软件工程",
+      "复杂性",
+      "架构",
+      "代码质量"
+    ],
+    "url": "https://yus3nable.github.io/read/a-philosophy-of-software-design/",
+    "searchPath": "search.json",
+    "updated": "2026-11-06",
+    "cover": "software-design.svg",
+    "source_keys": [
+      "isbn:978-1-7321022-0-0:edition:1.01"
+    ]
   }
 ]
