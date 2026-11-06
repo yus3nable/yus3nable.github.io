@@ -35,6 +35,7 @@ def cover_svg(item):
         'nju-os-reading': ('#b16449', '#faf3e7', ['南京大学', '操作系统'], '2026', 'OPERATING SYSTEMS'),
         'ostep-zh-markdown': ('#e8e2d5', '#474b3e', ['操作系统', '导论'], 'OSTEP', 'THREE EASY PIECES'),
         'programmer-self-cultivation-reading': ('#343b34', '#f0eadc', ['程序员的', '自我修养'], 'C / C++', 'LINKING & LOADING'),
+        'bv1a5sf6neqv': ('#d9d5c5', '#454a3e', ['数据治理', 'AI 落地'], '94 MIN', 'DATA & BUSINESS'),
         'bv1lsht6feaq': ('#e1d0bd', '#534638', ['Lauren Tan', 'AI 工作流'], '64 MIN', 'AGENTS & WORKFLOWS'),
     }
     bg, ink, title, small, bottom = settings.get(item['id'], ('#e8e2d5', '#474b3e', [item['kind'], '图文阅读'], '', ''))

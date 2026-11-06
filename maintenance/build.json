@@ -1,11 +1,12 @@
 {
-  "collections": 5,
-  "search_documents": 1537,
+  "collections": 6,
+  "search_documents": 1538,
   "documents_by_collection": {
     "nju-os-reading": 942,
     "nju-gense-2026": 11,
     "ostep-zh-markdown": 486,
     "programmer-self-cultivation-reading": 97,
-    "bv1lsht6feaq": 1
+    "bv1lsht6feaq": 1,
+    "bv1a5sf6neqv": 1
   }
 }

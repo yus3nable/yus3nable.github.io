@@ -84,5 +84,26 @@
     "updated": "2026-10-29",
     "cover": "lauren-tan.svg",
     "source_keys": ["bilibili:video:BV1LSHt6FEAq:p1"]
+  },
+  {
+    "id": "bv1a5sf6neqv",
+    "title": "王自如对话帆软：企业数字化、数据治理与 AI 落地",
+    "subtitle": "王自如 × 陈炎 × 沈涛",
+    "kind": "文章",
+    "detail": "王自如 × 陈炎 × 沈涛 · 94 分钟",
+    "description": "从企业数字化现状、数据治理和业务协同，谈到 AI 投入回报、场景选择与 FDE 的能力要求。",
+    "topics": [
+      "AI",
+      "数据治理",
+      "企业数字化",
+      "FDE"
+    ],
+    "url": "https://yus3nable.github.io/read/bv1a5sf6neqv/",
+    "searchPath": "search.json",
+    "updated": "2026-11-06",
+    "cover": "fanruan.svg",
+    "source_keys": [
+      "bilibili:video:BV1A5sf6NEqV:p1"
+    ]
   }
 ]

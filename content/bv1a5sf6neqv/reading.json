@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "bv1a5sf6neqv",
+  "title": "王自如对话帆软：企业数字化、数据治理与 AI 落地",
+  "description": "从企业数字化现状、数据治理和业务协同，谈到 AI 投入回报、场景选择与 FDE 的能力要求。",
+  "kind": "文章",
+  "format": "interview",
+  "language": "zh",
+  "source": {
+    "type": "video",
+    "identity": "bilibili:video:BV1A5sf6NEqV:p1",
+    "canonical_url": "https://www.bilibili.com/video/BV1A5sf6NEqV/",
+    "duration_seconds": 5621.209
+  },
+  "pages": [
+    {
+      "id": "001",
+      "unit_id": "interview",
+      "title": "王自如对话帆软：企业数字化、数据治理与 AI 落地",
+      "markdown": "content/001.md"
+    }
+  ]
+}
