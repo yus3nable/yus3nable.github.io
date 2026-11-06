@@ -1,0 +1,390 @@
+{
+  "material_id": "learning-compression-engineering",
+  "source": "用户提供的 Gemini 对话摘录及当前文章文档",
+  "source_blocks": 95,
+  "transformation": "保留全文与段落顺序，仅增加总标题、调整章节标题层级",
+  "source_fidelity": "已逐块核对当前文档",
+  "factual_review": "未执行；保留用户要求沿用的原文观点",
+  "mapping": [
+    {
+      "source_block": 1,
+      "markdown_start_line": 3
+    },
+    {
+      "source_block": 2,
+      "markdown_start_line": 5
+    },
+    {
+      "source_block": 3,
+      "markdown_start_line": 7
+    },
+    {
+      "source_block": 4,
+      "markdown_start_line": 9
+    },
+    {
+      "source_block": 5,
+      "markdown_start_line": 11
+    },
+    {
+      "source_block": 6,
+      "markdown_start_line": 13
+    },
+    {
+      "source_block": 7,
+      "markdown_start_line": 15
+    },
+    {
+      "source_block": 8,
+      "markdown_start_line": 17
+    },
+    {
+      "source_block": 9,
+      "markdown_start_line": 19
+    },
+    {
+      "source_block": 10,
+      "markdown_start_line": 21
+    },
+    {
+      "source_block": 11,
+      "markdown_start_line": 23
+    },
+    {
+      "source_block": 12,
+      "markdown_start_line": 25
+    },
+    {
+      "source_block": 13,
+      "markdown_start_line": 27
+    },
+    {
+      "source_block": 14,
+      "markdown_start_line": 29
+    },
+    {
+      "source_block": 15,
+      "markdown_start_line": 31
+    },
+    {
+      "source_block": 16,
+      "markdown_start_line": 33
+    },
+    {
+      "source_block": 17,
+      "markdown_start_line": 35
+    },
+    {
+      "source_block": 18,
+      "markdown_start_line": 37
+    },
+    {
+      "source_block": 19,
+      "markdown_start_line": 39
+    },
+    {
+      "source_block": 20,
+      "markdown_start_line": 41
+    },
+    {
+      "source_block": 21,
+      "markdown_start_line": 43
+    },
+    {
+      "source_block": 22,
+      "markdown_start_line": 45
+    },
+    {
+      "source_block": 23,
+      "markdown_start_line": 47
+    },
+    {
+      "source_block": 24,
+      "markdown_start_line": 49
+    },
+    {
+      "source_block": 25,
+      "markdown_start_line": 51
+    },
+    {
+      "source_block": 26,
+      "markdown_start_line": 53
+    },
+    {
+      "source_block": 27,
+      "markdown_start_line": 55
+    },
+    {
+      "source_block": 28,
+      "markdown_start_line": 57
+    },
+    {
+      "source_block": 29,
+      "markdown_start_line": 59
+    },
+    {
+      "source_block": 30,
+      "markdown_start_line": 61
+    },
+    {
+      "source_block": 31,
+      "markdown_start_line": 63
+    },
+    {
+      "source_block": 32,
+      "markdown_start_line": 65
+    },
+    {
+      "source_block": 33,
+      "markdown_start_line": 67
+    },
+    {
+      "source_block": 34,
+      "markdown_start_line": 69
+    },
+    {
+      "source_block": 35,
+      "markdown_start_line": 71
+    },
+    {
+      "source_block": 36,
+      "markdown_start_line": 73
+    },
+    {
+      "source_block": 37,
+      "markdown_start_line": 75
+    },
+    {
+      "source_block": 38,
+      "markdown_start_line": 77
+    },
+    {
+      "source_block": 39,
+      "markdown_start_line": 79
+    },
+    {
+      "source_block": 40,
+      "markdown_start_line": 81
+    },
+    {
+      "source_block": 41,
+      "markdown_start_line": 83
+    },
+    {
+      "source_block": 42,
+      "markdown_start_line": 85
+    },
+    {
+      "source_block": 43,
+      "markdown_start_line": 87
+    },
+    {
+      "source_block": 44,
+      "markdown_start_line": 89
+    },
+    {
+      "source_block": 45,
+      "markdown_start_line": 91
+    },
+    {
+      "source_block": 46,
+      "markdown_start_line": 93
+    },
+    {
+      "source_block": 47,
+      "markdown_start_line": 95
+    },
+    {
+      "source_block": 48,
+      "markdown_start_line": 97
+    },
+    {
+      "source_block": 49,
+      "markdown_start_line": 99
+    },
+    {
+      "source_block": 50,
+      "markdown_start_line": 101
+    },
+    {
+      "source_block": 51,
+      "markdown_start_line": 103
+    },
+    {
+      "source_block": 52,
+      "markdown_start_line": 105
+    },
+    {
+      "source_block": 53,
+      "markdown_start_line": 107
+    },
+    {
+      "source_block": 54,
+      "markdown_start_line": 109
+    },
+    {
+      "source_block": 55,
+      "markdown_start_line": 111
+    },
+    {
+      "source_block": 56,
+      "markdown_start_line": 113
+    },
+    {
+      "source_block": 57,
+      "markdown_start_line": 115
+    },
+    {
+      "source_block": 58,
+      "markdown_start_line": 117
+    },
+    {
+      "source_block": 59,
+      "markdown_start_line": 119
+    },
+    {
+      "source_block": 60,
+      "markdown_start_line": 121
+    },
+    {
+      "source_block": 61,
+      "markdown_start_line": 123
+    },
+    {
+      "source_block": 62,
+      "markdown_start_line": 125
+    },
+    {
+      "source_block": 63,
+      "markdown_start_line": 127
+    },
+    {
+      "source_block": 64,
+      "markdown_start_line": 129
+    },
+    {
+      "source_block": 65,
+      "markdown_start_line": 131
+    },
+    {
+      "source_block": 66,
+      "markdown_start_line": 133
+    },
+    {
+      "source_block": 67,
+      "markdown_start_line": 135
+    },
+    {
+      "source_block": 68,
+      "markdown_start_line": 137
+    },
+    {
+      "source_block": 69,
+      "markdown_start_line": 139
+    },
+    {
+      "source_block": 70,
+      "markdown_start_line": 141
+    },
+    {
+      "source_block": 71,
+      "markdown_start_line": 143
+    },
+    {
+      "source_block": 72,
+      "markdown_start_line": 145
+    },
+    {
+      "source_block": 73,
+      "markdown_start_line": 147
+    },
+    {
+      "source_block": 74,
+      "markdown_start_line": 149
+    },
+    {
+      "source_block": 75,
+      "markdown_start_line": 151
+    },
+    {
+      "source_block": 76,
+      "markdown_start_line": 153
+    },
+    {
+      "source_block": 77,
+      "markdown_start_line": 155
+    },
+    {
+      "source_block": 78,
+      "markdown_start_line": 157
+    },
+    {
+      "source_block": 79,
+      "markdown_start_line": 159
+    },
+    {
+      "source_block": 80,
+      "markdown_start_line": 161
+    },
+    {
+      "source_block": 81,
+      "markdown_start_line": 163
+    },
+    {
+      "source_block": 82,
+      "markdown_start_line": 165
+    },
+    {
+      "source_block": 83,
+      "markdown_start_line": 167
+    },
+    {
+      "source_block": 84,
+      "markdown_start_line": 169
+    },
+    {
+      "source_block": 85,
+      "markdown_start_line": 171
+    },
+    {
+      "source_block": 86,
+      "markdown_start_line": 173
+    },
+    {
+      "source_block": 87,
+      "markdown_start_line": 175
+    },
+    {
+      "source_block": 88,
+      "markdown_start_line": 177
+    },
+    {
+      "source_block": 89,
+      "markdown_start_line": 179
+    },
+    {
+      "source_block": 90,
+      "markdown_start_line": 181
+    },
+    {
+      "source_block": 91,
+      "markdown_start_line": 183
+    },
+    {
+      "source_block": 92,
+      "markdown_start_line": 185
+    },
+    {
+      "source_block": 93,
+      "markdown_start_line": 187
+    },
+    {
+      "source_block": 94,
+      "markdown_start_line": 189
+    },
+    {
+      "source_block": 95,
+      "markdown_start_line": 191
+    }
+  ]
+}

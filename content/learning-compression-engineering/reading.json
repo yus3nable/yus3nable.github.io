@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "learning-compression-engineering",
+  "title": "学习中的信息压缩与工程判断",
+  "description": "从概念与规律的信息压缩，谈到预测与反馈、技术学习、工程经验，以及 AI 编程中的系统边界。",
+  "kind": "文章",
+  "format": "transcript",
+  "language": "zh",
+  "source": {
+    "type": "text",
+    "identity": "gemini-chat:learning-compression-20261106"
+  },
+  "pages": [
+    {
+      "id": "001",
+      "unit_id": "article",
+      "title": "学习中的信息压缩与工程判断",
+      "markdown": "content/001.md"
+    }
+  ]
+}

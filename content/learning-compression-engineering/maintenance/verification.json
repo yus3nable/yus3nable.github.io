@@ -1,0 +1,31 @@
+{
+  "material_id": "learning-compression-engineering",
+  "checked_at": "2026-11-06T14:35:16+08:00",
+  "source_blocks": 95,
+  "source_comparison": "完整正文一致；仅调整标题层级及末尾换行",
+  "local_checks": {
+    "build": "passed",
+    "existing_reader_tests": "2 passed",
+    "toc_anchors": 19,
+    "search_records": 1,
+    "three_and_two_actions": "passed",
+    "homepage_entry": "passed",
+    "diff_check": "passed"
+  },
+  "browser_checks": {
+    "title_and_first_last_paragraph": "passed",
+    "toc_sample": "通过 Diff 观察代码的逐步重构",
+    "article_search": "Diff",
+    "homepage_category": "文章",
+    "homepage_search": "信息压缩",
+    "font_size": "passed",
+    "dark_mode": "passed",
+    "mobile_viewport": "390x844，首页及阅读页首屏正常"
+  },
+  "private_notes_sync": "not-connected",
+  "publication": {
+    "status": "pending",
+    "url": "https://yus3nable.github.io/read/learning-compression-engineering/"
+  },
+  "tool_scope": "输入为已成稿文本，视频/PDF 专用时间范围检查不适用；使用站点构建、全文比对和浏览器验证。"
+}

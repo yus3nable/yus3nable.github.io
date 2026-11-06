@@ -105,5 +105,26 @@
     "source_keys": [
       "bilibili:video:BV1A5sf6NEqV:p1"
     ]
+  },
+  {
+    "id": "learning-compression-engineering",
+    "title": "学习中的信息压缩与工程判断",
+    "subtitle": "学习与 AI 编程",
+    "kind": "文章",
+    "detail": "概念 · 预测 · 工程经验",
+    "description": "从概念与规律的信息压缩，谈到预测与反馈、技术学习、工程经验，以及 AI 编程中的系统边界。",
+    "topics": [
+      "学习",
+      "信息压缩",
+      "AI",
+      "软件工程"
+    ],
+    "url": "https://yus3nable.github.io/read/learning-compression-engineering/",
+    "searchPath": "search.json",
+    "updated": "2026-11-06",
+    "cover": "learning-compression.svg",
+    "source_keys": [
+      "gemini-chat:learning-compression-20261106"
+    ]
   }
 ]
