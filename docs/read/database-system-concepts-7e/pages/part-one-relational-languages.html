@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>第一部分 关系语言 · 阅读室</title>
+  <link rel="canonical" href="https://yus3nable.github.io/read/database-system-concepts-7e/pages/part-one-relational-languages.html">
+  <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#faf9f5">
+  <script src="../../../assets/theme.js?v=1793896190985616540"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1793896190985616540">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1793896190985616540">
+  <script defer src="../../../assets/reader.js?v=1793896190985616540"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="../../../">yus3nable · 阅读室</a>
+    <div class="reading-controls"><div class="tools">
+      <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
+      <div class="font-menu" id="font-menu" hidden>
+        <button data-font="-1">缩小</button>
+        <button data-font="reset">默认</button>
+        <button data-font="1">放大</button>
+      </div>
+    </div><button class="theme-toggle" type="button" aria-label="切换到夜间模式" aria-pressed="false" title="切换到夜间模式"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5a8.8 8.8 0 1 0 9.9 9.9Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <input type="search" class="search" aria-label="搜索正文" placeholder="搜索正文" data-index="../search.json?v=1794019171268901745" data-prefix="../">
+        <ul class="search-results" aria-live="polite"></ul>
+        <details class="outline" open>
+          <summary>目录</summary>
+          <details class="course-outline"><summary>全部章节</summary><ol><li><a href="../index.html">数据库系统概念</a></li><li><a href="title-page.html">扉页</a></li><li><a href="copyright-page.html">版权页</a></li><li><a href="dedication.html">献词</a></li><li><a href="about-the-authors.html">作者简介</a></li><li><a href="contents.html">目录</a></li><li><a href="preface.html">前言</a></li><li><a href="acknowledgments.html">教学资源、联系作者与致谢</a></li><li><a href="ch01.html">第1章 引言</a></li><li><a href="part-one-relational-languages.html" aria-current="page">第一部分 关系语言</a></li><li><a href="ch02.html">第2章 关系模型导论</a></li><li><a href="ch03.html">第3章 SQL导论</a></li><li><a href="ch04.html">第4章 中级 SQL</a></li><li><a href="ch05.html">第5章 高级 SQL</a></li><li><a href="part-two-database-design.html">第二部分 数据库设计</a></li><li><a href="ch06.html">第6章 使用 E-R 模型设计数据库</a></li><li><a href="ch07.html">第7章 关系数据库设计</a></li><li><a href="part-three-application-design-and-development.html">第三部分 应用设计与开发</a></li><li><a href="ch08.html">第 8 章 复杂数据类型</a></li><li><a href="ch09.html">第9章 应用开发</a></li><li><a href="part-four-big-data-analytics.html">第四部分 大数据分析</a></li><li><a href="ch10.html">第10章 大数据</a></li><li><a href="ch11.html">第11章 数据分析</a></li><li><a href="part-five-storage-management-and-indexing.html">第五部分 存储管理与索引</a></li><li><a href="ch12.html">第12章 物理存储系统</a></li><li><a href="ch13.html">第13章 数据存储结构</a></li><li><a href="ch14.html">第14章 索引</a></li><li><a href="part-six-query-processing-and-optimization.html">第六部分 查询处理与优化</a></li><li><a href="ch15.html">第15章 查询处理</a></li><li><a href="ch16.html">第16章 查询优化</a></li><li><a href="part-seven-transaction-management.html">第七部分 事务管理</a></li><li><a href="ch17.html">第17章 事务</a></li><li><a href="ch18.html">第 18 章 并发控制</a></li><li><a href="ch19.html">第19章 恢复系统</a></li><li><a href="part-eight-parallel-and-distributed-databases.html">第八部分 并行与分布式数据库</a></li><li><a href="ch20.html">第20章 数据库系统体系结构</a></li><li><a href="ch21.html">第21章 并行与分布式存储</a></li><li><a href="ch22.html">第22章 并行与分布式查询处理</a></li><li><a href="ch23.html">第 23 章 并行与分布式事务处理</a></li><li><a href="part-nine-advanced-topics.html">第九部分 高级专题</a></li><li><a href="ch24.html">第 24 章 高级索引技术</a></li><li><a href="ch25.html">第 25 章 高级应用开发</a></li><li><a href="ch26.html">第 26 章 区块链数据库</a></li><li><a href="part-ten-appendix-a.html">第十部分 附录 A</a></li><li><a href="appendix-a-detailed-university-schema.html">附录 A 大学数据库的完整模式</a></li><li><a href="index.html">索引</a></li></ol></details><div class="toc">
+<ul></ul>
+</div>
+
+        </details>
+      </nav>
+    </aside>
+    <main>
+      <p class="meta">书籍</p>
+      <article class="prose" data-material-id="database-system-concepts-7e" data-page-id="part-one-relational-languages"><!-- SOURCE pdf-0064-b001 -->
+<h1 id="part-one-relational-languages">第一部分 关系语言</h1>
+<!-- SOURCE pdf-0064-b006 -->
+<p>数据模型是一组描述数据、数据之间的关系、数据语义及一致性约束的概念工具。关系模型用一组表表示数据及其联系。由于概念简单，它得到广泛采用，本书写作时绝大多数数据库产品都基于这一模型。它在逻辑层和视图层描述数据，屏蔽底层存储细节。</p>
+<!-- SOURCE pdf-0064-b007 -->
+<p>要让用户使用关系数据库中的数据，就需要解决如何表达检索与更新请求的问题。本部分介绍为此开发的多种查询语言。</p>
+<!-- SOURCE pdf-0064-b008 -->
+<p>第2章介绍关系数据库的基本概念，以及关系代数这一形式化查询语言。关系代数构成 SQL 的基础，而 SQL 是最广泛使用的关系查询语言，本部分将详细介绍。</p>
+<!-- SOURCE pdf-0064-b009 -->
+<p>第3章概述 SQL，包括数据定义、查询基本结构、集合操作、聚合函数、嵌套子查询及数据库修改。</p>
+<!-- SOURCE pdf-0064-b010 -->
+<p>第4章进一步介绍连接表达式、视图、事务、数据库强制执行的完整性约束，以及控制用户访问和更新权限的授权机制。</p>
+<!-- SOURCE pdf-0064-b011 -->
+<p>第5章介绍高级 SQL，包括从程序设计语言访问 SQL、函数、过程、触发器、递归查询和高级聚合。</p>
+<!-- SOURCE pdf-0064-b005 --></article>
+      <nav class="page-nav"><a rel="prev" href="ch01.html">← 第1章 引言</a><a rel="next" href="ch02.html">第2章 关系模型导论 →</a></nav>
+    </main>
+  </div>
+</body>
+</html>

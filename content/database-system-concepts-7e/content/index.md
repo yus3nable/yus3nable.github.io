@@ -1,0 +1,4991 @@
+<!-- SOURCE pdf-1328-b001 -->
+# 索引 {#book-index}
+
+索引沿用原书的英文字母顺序，中文词后保留英文检索词及原书页码。缩进条目隶属于其上方的主条目；页码后的 `n` 表示该页的脚注。
+
+原索引把区块链的“挖矿”列在 data mining（数据挖掘）下，相关英文词及交叉引用仍予保留；中文按正文语境区分。
+
+
+## A {#index-a}
+
+- **已中止事务** · aborted transactions, 805–807, 819–820 <!-- SOURCE pdf-1328-b002 --><!-- SOURCE pdf-1328-b003 -->
+- **抽象** · abstraction, 2, 9–12, 15 
+- **接受者** · acceptors, 1148, 1152 
+- **数据访问；另见“安全性”** · accessing data. See also security 
+    - 从应用程序访问 · from application programs, 16–17 <!-- SOURCE pdf-1328-b004 --><!-- SOURCE pdf-1328-b005 -->
+    - 并发访问异常 · concurrent-access anomalies, 7 <!-- SOURCE pdf-1328-b006 -->
+    - 访问困难 · difficulties in, 6 
+    - 用于访问的索引 · indices for, 19 
+    - 与恢复系统的关系 · recovery systems and, 910–912 <!-- SOURCE pdf-1328-b007 -->
+    - 访问类型 · types of access, 15 
+- **访问路径** · access paths, 695 
+- **访问时间** · access time 
+    - 与索引的关系 · indices and, 624, 627–628 <!-- SOURCE pdf-1328-b008 -->
+    - 与查询处理的关系 · query processing and, 692 
+    - 与存储的关系 · storage and, 561, 566, 567, 578 <!-- SOURCE pdf-1328-b009 -->
+- **访问类型** · access types, 624 
+- **账户 nonce（交易序号）** · account nonces, 1271 
+- **ACID 特性；见“原子性”“一致性”“持久性”“隔离性”** · ACID properties. See atomicity; consistency; durability; isolation <!-- SOURCE pdf-1328-b010 -->
+- **ASP 动态服务器页面** · Active Server Page (ASP), 405 
+- **活动事务** · active transactions, 806 
+- **ActiveX 数据对象（ADO）** · ActiveX DataObjects (ADO), 1239 <!-- SOURCE pdf-1328-b011 -->
+- **自适应锁粒度** · adaptive lock granularity, 969–970 <!-- SOURCE pdf-1328-b012 -->
+- **add constraint：添加约束** · add constraint, 146 
+- **ADO（ActiveX 数据对象）** · ADO (ActiveX DataObjects), 1239 <!-- SOURCE pdf-1328-b013 -->
+- **ADO.NET** · ADO.NET, 184, 1239 
+- **高级加密标准（AES）** · Advanced Encryption Standard (AES), 448, 449 <!-- SOURCE pdf-1328-b014 --><!-- SOURCE pdf-1328-b015 -->
+- **高级 SQL** · advanced SQL, 183–231 
+    - 从程序设计语言访问 · accessing from programming languages, 183–198 <!-- SOURCE pdf-1328-b016 -->
+    - 聚集功能 · aggregate features, 219–231 
+    - 嵌入式 SQL · embedded, 197–198 
+    - 函数与过程 · functions and procedures, 198–206 <!-- SOURCE pdf-1328-b017 -->
+    - 与 JDBC 的关系 · JDBC and, 184–193 
+    - 与 ODBC 的关系 · ODBC and, 194–197 
+    - 与 Python 的关系 · Python and, 193–194 
+    - 与触发器的关系 · triggers and, 206–213 
+- **广告数据** · advertisement data, 469 
+- **AES（高级加密标准）** · AES (Advanced Encryption Standard), 448, 449 <!-- SOURCE pdf-1328-b018 -->
+- **after 触发器** · after triggers, 210 
+- **聚集函数** · aggregate functions, 91–96 
+    - 基本聚集函数 · basic, 91–92 <!-- SOURCE pdf-1328-b019 -->
+    - 处理布尔值 · with Boolean values, 96 
+    - 定义 · defined, 91 
+    - 与分组结合 · with grouping, 92–95 
+    - having 子句 · having clause, 95–96 
+    - 处理空值 · with null values, 96 
+- **聚集** · aggregation 
+    - 定义 · defined, 277 <!-- SOURCE pdf-1328-b020 -->
+    - 与实体—联系（E-R）模型的关系 · entity-relationship (E-R) model and, 276–277 <!-- SOURCE pdf-1328-b021 -->
+    - 与操作内并行的关系 · intraoperation parallelism and, 1049 <!-- SOURCE pdf-1328-b022 -->
+    - 多维数据上的聚集 · on multidimensional data, 527–532 <!-- SOURCE pdf-1328-b023 -->
+    - 局部聚集 · partial, 1049 
+    - 与透视的关系 · pivoting and, 226–227, 530 
+    - 与查询优化的关系 · query optimization and, 764 
+    - 与查询处理的关系 · query processing and, 723 <!-- SOURCE pdf-1328-b024 -->
+    - 与排名的关系 · ranking and, 219–223 
+    - 表示方法 · representation of, 279 
+    - rollup 与 cube · rollup and cube, 227–231 
+    - 与倾斜的关系 · skew and, 1049–1050 
+    - 事务聚集 · of transactions, 1278 
+    - 与视图维护的关系 · view maintenance and, 781–782 <!-- SOURCE pdf-1328-b025 -->
+    - 与窗口计算的关系 · windowing and, 223–226 
+- **聚集运算** · aggregation operation, 57 
+- **汇聚交换机** · aggregation switch, 977 
+- **航空公司的数据库应用** · airlines, database applications for, 3 <!-- SOURCE pdf-1328-b026 -->
+- **Ajax** · Ajax, 423–426, 1015 
+- **代数运算；见“关系代数”** · algebraic operations. See relational algebra <!-- SOURCE pdf-1328-b027 -->
+- **别名** · aliases, 81, 336, 1242 
+- **all 结构** · all construct, 100 
+- **alter table：修改表** · alter table, 71, 146 
+- **alter trigger：修改触发器** · alter trigger, 210 
+- **alter type：修改类型** · alter type, 159 
+- **阿姆达尔定律** · Amdahl’s law, 974 
+- **美国国家标准学会（ANSI）** · American National Standards Institute (ANSI), 65, 1237 <!-- SOURCE pdf-1328-b028 -->
+- **分析遍** · analysis pass, 944 
+- **分析；见“数据分析”** · analytics. See data analytics 
+- **and 连接词** · and connective, 74 
+- **and 运算** · and operation, 89–90 
+- **匿名性** · anonymity, 1252, 1253, 1258, 1259 <!-- SOURCE pdf-1328-b029 -->
+- **ANSI（美国国家标准学会）** · ANSI (American National Standards Institute), 65, 1237 <!-- SOURCE pdf-1328-b030 -->
+- **预先制定的标准** · anticipatory standards, 1237 
+- **反连接运算** · anti-join operation, 108, 776 
+- **反半连接运算** · anti-semijoin operation, 776–777 <!-- SOURCE pdf-1329-b001 -->
+- **Apache** · Apache 
+    - AsterixDB · AsterixDB, 668 <!-- SOURCE pdf-1329-b002 -->
+    - Cassandra · Cassandra, 477, 489, 668, 1024, 1028 <!-- SOURCE pdf-1329-b003 -->
+    - Flink 项目 · Flink project, 504, 508 
+    - Giraph 系统 · Giraph system, 511 
+    - HBase · HBase, 477, 480, 489, 668, 971, 1024, 1028–1031 <!-- SOURCE pdf-1329-b004 -->
+    - Hive · Hive, 494, 495, 500 
+    - Jakarta 项目 · Jakarta Project, 416 
+    - Kafka 系统 · Kafka system, 506, 507, 1072–1073, 1075, 1137 <!-- SOURCE pdf-1329-b005 -->
+    - Spark · Spark, 495–500, 508, 511, 1061 <!-- SOURCE pdf-1329-b006 -->
+    - Storm 流处理系统 · Storm stream-processing system, 506–508 <!-- SOURCE pdf-1329-b007 -->
+    - Tez · Tez, 495 
+- **API；见“应用程序接口”** · APIs. See application program interfaces <!-- SOURCE pdf-1329-b008 -->
+- **应用设计** · application design, 403–453 
+    - 与应用架构的关系 · application architectures and, 429–434 <!-- SOURCE pdf-1329-b009 --><!-- SOURCE pdf-1329-b010 -->
+    - 与身份认证的关系 · authentication and, 441–443 
+    - 与业务逻辑的关系 · business logic and, 23, 404, 411–412, 430, 431, 445 <!-- SOURCE pdf-1329-b011 -->
+    - 与客户—服务器架构的关系 · client-server architecture and, 404 <!-- SOURCE pdf-1329-b012 -->
+    - 客户端代码与 Web 服务 · client-side code and web services, 421–429 <!-- SOURCE pdf-1329-b013 -->
+    - 与通用网关接口标准的关系 · common gateway interface standard and, 409 <!-- SOURCE pdf-1329-b014 -->
+    - 与 Cookie 的关系 · cookies and, 410–415, 411n2 
+    - 与数据访问层的关系 · data access layer and, 430–434 <!-- SOURCE pdf-1329-b015 -->
+    - 与离线运行的关系 · disconnected operation and, 427–428 <!-- SOURCE pdf-1329-b016 -->
+    - 与加密的关系 · encryption and, 447–453 
+    - 与 HTML 的关系 · HTML and, 404, 406–408, 426 <!-- SOURCE pdf-1329-b017 -->
+    - 与 HTTP 的关系 · HTTP and, 405–413 
+    - 与 JavaScript 的关系 · JavaScript and, 404–405, 421–426 <!-- SOURCE pdf-1329-b018 -->
+    - 与 Java Server Pages 的关系 · Java Server Pages and, 405, 417–418 <!-- SOURCE pdf-1329-b019 -->
+    - 移动应用平台 · mobile application platforms, 428–429 <!-- SOURCE pdf-1329-b020 -->
+    - 与性能的关系 · performance and, 434–437 
+    - 与安全性的关系 · security and, 437–446 
+    - 与 Servlet 的关系 · servlets and, 411–421 
+    - 与标准化的关系 · standardization and, 1237–1240 <!-- SOURCE pdf-1329-b021 --><!-- SOURCE pdf-1329-b022 -->
+    - 测试 · testing, 1234–1235 
+    - 调优；见“性能调优” · tuning and (see performance tuning) <!-- SOURCE pdf-1329-b023 -->
+    - 与 URL 的关系 · URLs and, 405–406 
+    - 与用户界面的关系 · user interfaces and, 403–405 
+    - 与 Web 的关系 · web and, 405–411 
+- **应用迁移** · application migration, 1035–1036 <!-- SOURCE pdf-1329-b024 -->
+- **应用程序接口（API）** · application program interfaces (APIs) <!-- SOURCE pdf-1329-b025 -->
+    - ADO · ADO, 1239 
+    - ADO.NET · ADO.NET, 184, 1239 
+    - 与应用设计的关系 · application design and, 411, 413, 416 <!-- SOURCE pdf-1329-b026 -->
+    - C++ · C++, 1239 
+    - 通过接口访问数据库 · database access from, 16–17 
+    - Java；见“Java” · Java (see Java) 
+    - LDAP · LDAP, 1243 
+    - 与地图显示的关系 · map displays and, 393 
+    - MongoDB · MongoDB, 477–479, 482, 489, 668, 1024, 1028 <!-- SOURCE pdf-1329-b027 -->
+    - 开放数据库互连；见“ODBC” · Open Database Connectivity (see ODBC) <!-- SOURCE pdf-1329-b028 -->
+    - Python；见“Python” · Python (see Python) 
+    - Spark · Spark, 495–500, 508, 511, 1061 <!-- SOURCE pdf-1329-b029 -->
+    - 接口标准 · standards for, 1238–1240 
+    - 与系统架构的关系 · system architectures and, 962 
+    - Tez · Tez, 495 
+    - 与 Web 服务的关系 · web services and, 427 
+- **应用程序员** · application programmers, 24 
+- **应用服务器** · application servers, 23, 416 
+- **体系结构** · architectures, 961–995 
+    - 与业务逻辑的关系 · business logic and, 23 <!-- SOURCE pdf-1329-b030 -->
+    - 集中式数据库 · centralized databases, 962–963 <!-- SOURCE pdf-1329-b031 -->
+    - 客户—服务器系统 · client-server systems, 23, 971 
+    - 基于云的架构 · cloud-based, 990–995, 1026, 1027 <!-- SOURCE pdf-1329-b032 -->
+    - 数据库存储 · database storage, 587–588 
+    - 数据服务器系统 · data-server systems, 963–964, 968–970 <!-- SOURCE pdf-1329-b033 -->
+    - 数据仓库 · data warehousing, 522–523 
+    - 目标驱动的架构 · destination-driven, 522 
+    - 分布式数据库 · distributed databases, 22, 986–989, 1098–1100 <!-- SOURCE pdf-1329-b034 -->
+    - 分层架构 · hierarchical, 979, 980, 986 
+    - 超立方体 · hypercube, 976–977 
+    - Lambda 架构 · lambda, 504, 1071 <!-- SOURCE pdf-1329-b035 -->
+    - 网格 · mesh, 976 
+    - 微服务 · microservices, 994 
+    - 多用户系统 · multiuser systems, 962 
+    - 非一致内存访问（NUMA） · Non-Uniform Memory Access, 981, 1063 <!-- SOURCE pdf-1329-b036 -->
+    - 概述 · overview, 961–962 
+    - 并行数据库 · parallel databases, 22, 970–986 <!-- SOURCE pdf-1329-b037 -->
+    - 平台即服务模型 · platform-as-a-service model, 992–993 <!-- SOURCE pdf-1329-b038 -->
+    - 恢复系统 · recovery systems, 932 
+    - 服务器系统 · server system, 962–970, 977–978 <!-- SOURCE pdf-1329-b039 -->
+    - 共享磁盘 · shared disk, 979, 980, 984–985 <!-- SOURCE pdf-1329-b040 -->
+    - 共享内存 · shared memory, 21–22, 979–984, 1061–1064 <!-- SOURCE pdf-1329-b041 -->
+    - 无共享 · shared nothing, 979, 980, 985–986, 1040–1041, 1061–1063 <!-- SOURCE pdf-1329-b042 -->
+    - 单用户系统 · single-user systems, 962 
+    - 软件即服务模型 · software-as-a-service model, 993 <!-- SOURCE pdf-1329-b043 -->
+    - 源驱动的架构 · source-driven, 522 
+    - 存储区域网络 · storage area network, 562 
+    - 三层架构 · three-tier, 23 
+    - 事务服务器系统 · transaction-server systems, 963–968 <!-- SOURCE pdf-1329-b044 -->
+    - 两阶段提交协议 · two-phase commit protocol, 989, 1276 <!-- SOURCE pdf-1329-b045 -->
+    - 两层架构 · two-tier, 23 
+    - 广域网 · wide-area networks, 989 
+- **归档数据** · archival data, 561 
+- **归档转储** · archival dump, 931 
+- **ARIES** · ARIES 
+    - 与分析遍的关系 · analysis pass and, 944 <!-- SOURCE pdf-1329-b046 -->
+    - 与补偿日志记录的关系 · compensation log records and, 942, 945 <!-- SOURCE pdf-1329-b047 -->
+    - 与数据结构的关系 · data structures and, 942–944 
+    - 与脏页表的关系 · dirty page table and, 941–947 
+    - 与细粒度加锁的关系 · fine-grained locking and, 947 
+    - 与模糊检查点的关系 · fuzzy checkpoints and, 941 
+    - 与日志序列号的关系 · log sequence number and, 941–946 <!-- SOURCE pdf-1329-b048 -->
+    - 与嵌套顶层动作的关系 · nested top actions and, 946 
+    - 与优化的关系 · optimization and, 947 
+    - 与生理重做的关系 · physiological redo and, 941 
+    - 恢复算法 · recovery algorithm, 944–946, 1276 <!-- SOURCE pdf-1329-b049 -->
+    - 与重做遍的关系 · redo pass and, 944–945 <!-- SOURCE pdf-1330-b001 -->
+    - 与回滚的关系 · rollback and, 945–946 
+    - 与保存点的关系 · savepoints and, 947 
+    - 与撤销遍的关系 · undo pass and, 944–946 
+- **元数** · arity, 54 
+- **阿姆斯特朗公理** · Armstrong’s axioms, 321 
+- **数组数据库** · array databases, 367 
+- **数组类型** · array types, 366, 367, 378 
+- **asc 表达式** · asc expression, 84 
+- **as 子句** · as clause, 79, 81 
+- **as of period for** · as of period for, 157 
+- **ASP（动态服务器页面）** · ASP (Active Server Page), 405 
+- **ASP.NET** · ASP.NET, 417 
+- **断言** · assertions, 152–153 
+- **资产管理** · asset management, 1277 
+- **赋值运算** · assignment operation, 55–56, 201 <!-- SOURCE pdf-1330-b002 -->
+- **关联** · associations 
+    - 与数据挖掘的关系 · data mining and, 541 <!-- SOURCE pdf-1330-b003 -->
+    - 实体集；见“实体集” · entity sets (see entity sets) 
+    - 用于关联的关系模式 · relation schema for, 42 
+    - 联系集；见“联系集” · relationship sets (see relationship sets) <!-- SOURCE pdf-1330-b004 -->
+    - 关联规则 · rules for, 546–547 
+- **结合律** · associative property, 749–750 
+- **AsterixDB** · AsterixDB, 668 
+- **非对称分片复制连接** · asymmetric fragment-and-replicate joins, 1046, 1062 <!-- SOURCE pdf-1330-b005 -->
+- **非对称密钥加密** · asymmetric-key encryption, 448 
+- **异步复制** · asynchronous replication, 1122, 1135–1138 <!-- SOURCE pdf-1330-b006 -->
+- **异步视图维护** · asynchronous view maintenance, 1138–1140 <!-- SOURCE pdf-1330-b007 -->
+- **至少一次语义** · at-least-once semantics, 1074 
+- **至多一次语义** · at-most-once semantics, 1074 
+- **原子提交** · atomic commit, 1029 
+- **原子域** · atomic domains, 40, 342–343 
+- **原子指令** · atomic instructions, 966–967 
+- **原子性** · atomicity 
+    - 与无级联调度的关系 · cascadeless schedules and, 820–821 <!-- SOURCE pdf-1330-b008 --><!-- SOURCE pdf-1330-b009 -->
+    - 与提交协议的关系 · commit protocols and, 1100–1110 <!-- SOURCE pdf-1330-b010 -->
+    - 定义 · defined, 20, 800 
+    - 文件处理系统中的原子性 · in file-processing systems, 6–7 
+    - 与隔离性的关系 · isolation and, 819–821 
+    - 与日志记录的关系 · log records and, 913–919 
+    - 与可恢复调度的关系 · recoverable schedules and, 819–820 <!-- SOURCE pdf-1330-b011 -->
+    - 与恢复系统的关系 · recovery systems and, 803, 912–922 <!-- SOURCE pdf-1330-b012 --><!-- SOURCE pdf-1330-b013 -->
+    - 与存储结构的关系 · storage structure and, 804–805 <!-- SOURCE pdf-1330-b014 -->
+    - 事务的原子性 · of transactions, 20–21, 144, 481, 800–807, 819–821 <!-- SOURCE pdf-1330-b015 -->
+- **属性继承** · attribute inheritance, 274–275 
+- **属性** · attributes 
+    - 与原子域的关系 · atomic domains and, 342–343 <!-- SOURCE pdf-1330-b016 -->
+    - 与位图索引的关系 · bitmap indices and, 670–672 
+    - 与分类器的关系 · classifiers and, 541–543, 545 
+    - 属性集闭包 · closure of attribute sets, 322–324 <!-- SOURCE pdf-1330-b017 -->
+    - 复杂属性 · complex, 249–252, 265–267 
+    - 复合属性 · composite, 250, 252 
+    - 与分解的关系 · decomposition and, 305–313, 330–335, 339–340 <!-- SOURCE pdf-1330-b018 -->
+    - 派生属性 · derived, 251, 252 
+    - 描述性属性 · descriptive, 248 
+    - 与设计问题的关系 · design issues and, 281–282 
+    - 分辨符 · discriminator, 259 
+    - 属性的域 · domain of, 39–40, 249 
+    - 与实体—联系图的关系 · entity-relationship diagrams and, 265–267 <!-- SOURCE pdf-1330-b019 -->
+    - 与实体—联系（E-R）模型的关系 · entity-relationship (E-R) model and, 245, 248–252, 274–275, 281–282, 342–343 <!-- SOURCE pdf-1330-b020 -->
+    - 与实体集的关系 · entity sets and, 245, 265–267, 281–282 <!-- SOURCE pdf-1330-b021 -->
+    - 无关属性 · extraneous, 325 
+    - 与直方图的关系 · histograms and, 758–760 
+    - 与多键访问的关系 · multiple-key access and, 661–663 <!-- SOURCE pdf-1330-b022 -->
+    - 多值属性 · multivalued, 251, 252, 342 
+    - 属性命名 · naming of, 345–346 
+    - 与空值的关系 · null values and, 251–252 
+    - 分区属性 · partitioning, 479 
+    - 与主键的关系 · primary keys and, 310n4 
+    - 主属性 · prime, 356 
+    - 关系模型中的属性 · in relational model, 39 
+    - 与联系集的关系 · relationship sets and, 248 
+    - 与搜索键的关系 · search key and, 624 
+    - 简单属性 · simple, 250, 265 
+    - 单值属性 · single-valued, 251 
+    - 与统一建模语言的关系 · Unified Modeling Language and, 289 <!-- SOURCE pdf-1330-b023 -->
+    - 唯一化标识 · uniquifiers, 649–650 
+    - 属性的值集 · value set of, 249 
+- **属性值倾斜** · attribute-value skew, 1008 
+- **审计踪迹** · audit trails, 445–446 <!-- SOURCE pdf-1330-b024 -->
+- **增广规则** · augmentation rule, 321 
+- **身份认证** · authentication 
+    - 应用层身份认证 · application-level, 441–443 <!-- SOURCE pdf-1330-b025 -->
+    - 与质询—响应系统的关系 · challenge-response system and, 451 <!-- SOURCE pdf-1330-b026 -->
+    - 与数字证书的关系 · digital certificates and, 451–453 <!-- SOURCE pdf-1330-b027 -->
+    - 与数字签名的关系 · digital signatures and, 451 
+    - 与加密的关系 · encryption and, 450–453 
+    - 与单点登录系统的关系 · single sign-on system and, 442–443 <!-- SOURCE pdf-1330-b028 -->
+    - 与智能卡的关系 · smart cards and, 451, 451n9 
+    - 双因素身份认证 · two-factor, 441–442 
+    - 与 Web 会话的关系 · web sessions and, 410 
+- **授权** · authorization 
+    - 与管理员的关系 · administrators and, 166 <!-- SOURCE pdf-1330-b029 -->
+    - 应用层授权 · application-level, 443–445 
+    - 与数据库设计的关系 · database design and, 291 
+    - 与最终用户信息的关系 · end-user information and, 443 
+    - 授予权限 · granting privileges, 25, 166–167, 170–171 <!-- SOURCE pdf-1330-b030 -->
+    - 缺少细粒度授权 · lack of fine-grained, 443–445 
+    - 与许可型区块链的关系 · permissioned blockchains and, 1253 <!-- SOURCE pdf-1330-b031 -->
+    - 撤销权限 · revoking privileges, 166–167, 171–173 <!-- SOURCE pdf-1330-b032 -->
+    - 与角色的关系 · roles and, 167–169 
+    - 行级授权 · row-level, 173 
+    - 模式上的授权 · on schema, 170 
+    - 与安全断言标记语言的关系 · Security Assertion Markup Language and, 442–443 <!-- SOURCE pdf-1330-b033 -->
+    - 与 SQL DDL 的关系 · SQL DDL and, 66 
+    - sql security invoker · sql security invoker, 170 
+    - 与存储管理器的关系 · storage manager and, 19 
+    - 权限转授 · transfer of privileges, 170–171 
+    - 授权类型 · types of, 14, 165 
+    - 与更新的关系 · updates and, 14, 170, 171 
+    - 视图上的授权 · on views, 169–170 
+- **授权图** · authorization graph, 171 
+- **自动提交** · automatic commit, 144, 144n6, 822 <!-- SOURCE pdf-1330-b034 -->
+- **自主智能合约** · autonomous smart contracts, 1272–1273 <!-- SOURCE pdf-1330-b035 -->
+- **自治性** · autonomy, 988 
+- **可用性** · availability 
+    - 与 CAP 定理的关系 · CAP theorem and, 1134 <!-- SOURCE pdf-1330-b036 -->
+    - 与分布式数据库的关系 · distributed databases and, 987 <!-- SOURCE pdf-1330-b037 -->
+    - 高可用性 · high availability, 907, 931–933, 987, 1121 <!-- SOURCE pdf-1331-b001 --><!-- SOURCE pdf-1331-b002 -->
+    - 与网络分区的关系 · network partitions and, 481, 989 <!-- SOURCE pdf-1331-b003 -->
+    - 与稳健性的关系 · robustness and, 1121 
+    - 在一致性与可用性之间取舍 · trading offconsistency for, 1134–1135 <!-- SOURCE pdf-1331-b004 -->
+- **平均旋转延迟** · average latency time, 566 
+- **平均响应时间** · average response time, 809 
+- **平均寻道时间** · average seek time, 566 
+- **avg 表达式** · avg expression, 91–96, 723, 781–782 <!-- SOURCE pdf-1331-b005 -->
+- **Avro** · Avro, 490, 499 
+- **公理** · axioms, 321 
+- **Azure Stream Analytics** · Azure Stream Analytics, 505 
+
+## B {#index-b}
+
+- **反向传播算法** · backpropagation algorithm, 545 <!-- SOURCE pdf-1331-b006 -->
+- **备份；另见“恢复系统”** · backup. See also recovery systems 
+    - 与应用设计的关系 · application design and, 450 <!-- SOURCE pdf-1331-b007 -->
+    - 远程备份系统 · remote systems for, 909, 931–935 <!-- SOURCE pdf-1331-b008 -->
+    - 副本系统 · replica systems, 212–213 
+    - 与事务的关系 · transactions and, 805 
+- **后备协调者** · backup coordinators, 1146–1147 
+- **均衡的范围分区向量** · balanced range-partitioning vector, 1008–1009 <!-- SOURCE pdf-1331-b009 -->
+- **平衡树** · balanced trees, 634 
+- **银行业务** · banking 
+    - 银行业务分析 · analytics for, 520–521 <!-- SOURCE pdf-1331-b010 -->
+    - 银行数据库应用 · database applications for, 3, 4, 7, 144 <!-- SOURCE pdf-1331-b011 -->
+- **BASE 特性** · BASE properties, 1135 
+- **基查询** · base query, 217 
+- **批处理扩展比** · batch scaleup, 973 
+- **批量更新** · batch update, 1221 
+- **贝叶斯分类器** · Bayesian classifiers, 543–544 
+- **贝叶斯定理** · Bayes’ theorem, 543 
+- **BCNF；见“Boyce–Codd 范式”** · BCNF. See Boyce–Codd normal form <!-- SOURCE pdf-1331-b012 -->
+- **BCNF 分解算法** · BCNF decomposition algorithm, 331–333, 336 <!-- SOURCE pdf-1331-b013 -->
+- **before 触发器** · before triggers, 210 
+- **begin atomic...end** · begin atomic...end, 145, 201, 208, 209, 211 <!-- SOURCE pdf-1331-b014 -->
+- **begin transaction 操作** · begin transaction operation, 799 
+- **基准测试；见“性能基准测试”** · benchmarks. See performance benchmarks <!-- SOURCE pdf-1331-b015 -->
+- **bestplan 数组** · bestplan array, 768–770 
+- **偏向协议** · biased protocol, 1124 
+- **BI（商业智能）** · BI (business intelligence), 521 
+- **一次性切换方法** · big-bang approach, 1236 <!-- SOURCE pdf-1331-b016 -->
+- **BigchainDB** · BigchainDB, 1269 
+- **大数据** · Big Data, 467–511 
+    - 与代数运算的关系 · algebraic operations and, 494–500 <!-- SOURCE pdf-1331-b017 --><!-- SOURCE pdf-1331-b018 -->
+    - 与传统数据库的比较 · comparison with traditional databases, 468 <!-- SOURCE pdf-1331-b019 -->
+    - 定义 · defined, 467 
+    - 用于大数据的分布式文件系统 · distributed file systems for, 472–475, 489 <!-- SOURCE pdf-1331-b020 -->
+    - 与图数据库的关系 · graph databases and, 508–511 
+    - 与键值系统的关系 · key-value systems and, 471, 473, 476–480 <!-- SOURCE pdf-1331-b021 -->
+    - 与 MapReduce 范式的关系 · MapReduce paradigm and, 481, 483–494 <!-- SOURCE pdf-1331-b022 -->
+    - 采用大数据的动机 · motivations for, 467–472 
+    - 用于大数据的并行和分布式数据库 · parallel and distributed databases for, 473, 480–481 <!-- SOURCE pdf-1331-b023 -->
+    - 与查询处理的关系 · query processing and, 470–472 <!-- SOURCE pdf-1331-b024 -->
+    - 大数据中的复制与一致性 · replication and consistency in, 481–482 <!-- SOURCE pdf-1331-b025 -->
+    - 与分片的关系 · sharding and, 473, 475–476 
+    - 来源与用途 · sources and uses of, 468–470 
+    - 存储系统 · storage systems, 472–482, 668 
+    - 流式数据 · streaming data, 468, 500–508 
+- **Bigtable** · Bigtable, 477, 479–480, 668, 1024–1025, 1028–1030 <!-- SOURCE pdf-1331-b026 -->
+- **二元运算** · binary operations, 48 
+- **二元联系集** · binary relationship sets, 249, 283–285 <!-- SOURCE pdf-1331-b027 -->
+- **必应地图** · Bing Maps, 393 
+- **比特币** · Bitcoin 
+    - 与匿名性的关系 · anonymity and, 1253, 1258 <!-- SOURCE pdf-1331-b028 -->
+    - 与挖矿的关系 · data mining and, 1265 
+    - 与分叉的关系 · forking and, 1258 
+    - 增长与发展 · growth and development of, 1251–1253 <!-- SOURCE pdf-1331-b029 -->
+    - 与语言的关系 · language and, 1269–1270 
+    - 处理速度 · processing speed, 1274 
+    - 作为公有区块链 · as public blockchain, 1253, 1255, 1263 <!-- SOURCE pdf-1331-b030 -->
+    - 与事务的关系 · transactions and, 1261–1263, 1268–1271 <!-- SOURCE pdf-1331-b031 -->
+- **位级条带化** · bit-level striping, 571–572 
+- **位图索引** · bitmap indices 
+    - 与属性的关系 · attributes and, 670–672 <!-- SOURCE pdf-1331-b032 -->
+    - 与 B+ 树的关系 · B+-trees and, 1185–1186 
+    - 高效实现 · efficient implementation of, 1184–1185 <!-- SOURCE pdf-1331-b033 --><!-- SOURCE pdf-1331-b034 -->
+    - 存在位图 · existence, 1184 
+    - 与交集的关系 · intersection and, 671, 1183 
+    - 与处理速度的关系 · processing speed and, 662, 663 <!-- SOURCE pdf-1331-b035 -->
+    - 位图索引扫描 · scans of, 698–699 
+    - 与顺序记录的关系 · sequential records and, 1182 
+    - 结构 · structure of, 1182–1184 
+    - 用途 · usefulness of, 671–672 
+- **位腐化** · bit rot, 575 
+- **盲写** · blind writes, 868 
+- **B-link 树** · B-link trees, 886 
+- **二进制大对象（BLOB）** · blobs, 156, 193, 594, 652 
+- **区块链数据库** · blockchain databases, 1251–1279 <!-- SOURCE pdf-1331-b036 -->
+    - 与匿名性的关系 · anonymity and, 1252, 1253, 1258, 1259 <!-- SOURCE pdf-1331-b037 -->
+    - 应用场景 · applications for use, 1251–1252, 1276–1279 <!-- SOURCE pdf-1331-b038 -->
+    - 与并发控制的关系 · concurrency control and, 1262–1263 <!-- SOURCE pdf-1331-b039 -->
+    - 共识机制 · consensus mechanisms for, 1254, 1256–1257, 1263–1267 <!-- SOURCE pdf-1331-b040 -->
+    - 与加密货币的关系 · cryptocurrencies and, 1251–1253, 1257 <!-- SOURCE pdf-1331-b041 -->
+    - 与密码散列函数的关系 · cryptographic hash functions and, 1253, 1259–1263, 1265 <!-- SOURCE pdf-1331-b042 -->
+    - 与挖矿的关系 · data mining and, 1256, 1258, 1264–1266 <!-- SOURCE pdf-1331-b043 -->
+    - 与去中心化的关系 · decentralization and, 1251, 1252, 1259, 1270 <!-- SOURCE pdf-1331-b044 -->
+    - 与数字账本的关系 · digital ledgers and, 1251, 1252 
+    - 与数字签名的关系 · digital signatures and, 1257, 1261 <!-- SOURCE pdf-1331-b045 -->
+    - 与加密的关系 · encryption and, 1260–1261 
+    - 与外部输入的关系 · external input and, 1271–1272 
+    - 容错性 · fault-tolerance of, 1276 
+    - 与分叉的关系 · forking and, 1257, 1258, 1263 
+    - 与创世区块的关系 · genesis blocks and, 1254–1255 <!-- SOURCE pdf-1331-b046 -->
+    - 与不可抵赖性的关系 · irrefutability and, 1257, 1259 
+    - 与语言的关系 · languages and, 1258, 1269–1271 <!-- SOURCE pdf-1331-b047 -->
+    - 区块链中的查找 · lookup in, 1268 
+    - 区块链中的数据管理 · management of data in, 1267–1269 <!-- SOURCE pdf-1331-b048 -->
+    - 与孤块的关系 · orphaned blocks and, 1257, 1263 <!-- SOURCE pdf-1332-b001 --><!-- SOURCE pdf-1332-b002 -->
+    - 性能提升 · performance enhancement of, 1274–1276 <!-- SOURCE pdf-1332-b003 -->
+    - 许可型区块链 · permissioned, 1253–1254, 1256–1257, 1263, 1266, 1274 <!-- SOURCE pdf-1332-b004 -->
+    - 性质与组成部分 · properties and components of, 1254–1259, 1274 <!-- SOURCE pdf-1332-b005 -->
+    - 公有区块链 · public, 1253, 1255, 1257–1259, 1263, 1264 <!-- SOURCE pdf-1332-b006 -->
+    - 与查询处理的关系 · query processing and, 1254, 1275–1276 <!-- SOURCE pdf-1332-b007 -->
+    - 可伸缩性 · scalability of, 1276 
+    - 与智能合约的关系 · smart contracts and, 1258, 1269–1273 <!-- SOURCE pdf-1332-b008 -->
+    - 基于状态的区块链 · state-based, 1269, 1271 
+    - 抗篡改性 · tamper resistant nature of, 1253–1255, 1259, 1260 <!-- SOURCE pdf-1332-b009 -->
+    - 与事务的关系 · transactions and, 1261–1263, 1268–1271, 1273 <!-- SOURCE pdf-1332-b010 -->
+- **块标识符** · block identifiers, 474–475, 1020 
+- **阻塞边** · blocking edges, 728 
+- **块因子** · blocking factor, 725 
+- **阻塞操作** · blocking operations, 728, 728n7 
+- **阻塞问题** · blocking problem, 1104–1106 
+- **块交错奇偶校验组织** · block-interleaved parity organization, 573 <!-- SOURCE pdf-1332-b011 -->
+- **块级条带化** · block-level striping, 572 
+- **块嵌套循环连接** · block nested-loop join, 705–707 
+- **面向块的接口** · block-oriented interface, 560 
+- **块** · blocks 
+    - 缓冲块 · buffer, 910–912 <!-- SOURCE pdf-1332-b012 -->
+    - 脏块 · dirty, 928–929 
+    - 磁盘块 · disk, 566–567, 577–580 
+    - 被逐出的块 · evicted, 605 
+    - 与文件组织的关系 · file organization and, 588 
+    - 创世区块 · genesis, 1254–1255 
+    - 孤块 · orphaned, 1257, 1263 
+    - 溢出块 · overflow, 598 
+    - 物理块 · physical, 910 
+    - 固定块 · pinned, 605 
+- **布隆过滤器** · Bloom filters, 667, 1083, 1175–1176, 1181 <!-- SOURCE pdf-1332-b013 -->
+- **布尔运算；另见各具体运算** · Boolean operations, 89, 96, 103, 188, 201, 1242. See also specific operations <!-- SOURCE pdf-1332-b014 -->
+- **瓶颈** · bottlenecks 
+    - 与应用设计的关系 · application design and, 437 <!-- SOURCE pdf-1332-b015 -->
+    - 与 I/O 并行的关系 · I/O parallelism and, 1007 
+    - 与性能调优的关系 · performance tuning and, 1211–1213, 1215, 1227 <!-- SOURCE pdf-1332-b016 --><!-- SOURCE pdf-1332-b017 -->
+    - 与单一锁管理器的关系 · single lock-manager and, 1111 
+    - 与系统架构的关系 · system architectures and, 981, 985 <!-- SOURCE pdf-1332-b018 -->
+- **自底向上的 B+ 树构建** · bottom-up B+-tree construction, 654–655 <!-- SOURCE pdf-1332-b019 -->
+- **自底向上设计** · bottom-up design, 273 
+- **包围盒** · bounding boxes, 674–675, 1187 
+- **Boyce–Codd 范式（BCNF）** · Boyce–Codd normal form (BCNF) <!-- SOURCE pdf-1332-b020 -->
+    - 与第三范式的比较 · comparison with third normal form, 318–319 <!-- SOURCE pdf-1332-b021 -->
+    - 与分解算法的关系 · decomposition algorithm and, 331–333, 336 <!-- SOURCE pdf-1332-b022 -->
+    - 定义 · defined, 313–315 
+    - 与保持依赖的关系 · dependency preservation and, 315–316 <!-- SOURCE pdf-1332-b023 -->
+    - 与关系数据库设计的关系 · relational database design and, 313–316 <!-- SOURCE pdf-1332-b024 -->
+    - BCNF 检验 · testing for, 330–331 
+- **广播** · broadcasting, 1055–1056 
+- **广播连接** · broadcast join, 1046 
+- **BSP（批量同步处理）** · BSP (bulk synchronous processing), 510–511 <!-- SOURCE pdf-1332-b025 -->
+- **B 树与 B+ 树的比较** · B-trees, comparison with B+-trees, 655–656 <!-- SOURCE pdf-1332-b026 -->
+- **B+ 树** · B+-trees, 634–658 
+    - 平衡性 · balanced, 634 <!-- SOURCE pdf-1332-b027 -->
+    - 与位图索引的关系 · bitmap indices and, 1185–1186 <!-- SOURCE pdf-1332-b028 -->
+    - 自底向上构建 · bottom-up construction of, 654–655 <!-- SOURCE pdf-1332-b029 -->
+    - 批量加载 · bulk loading of, 653–655 
+    - 与 B 树的比较 · comparison with B-trees, 655–656 <!-- SOURCE pdf-1332-b030 -->
+    - 与删除的关系 · deletion and, 641, 645–649 
+    - 扩展与变体 · extensions and variations of, 650–658 <!-- SOURCE pdf-1332-b031 -->
+    - 与扇出的关系 · fanout and, 635 
+    - 闪存上的 B+ 树 · on flash storage, 656–657 
+    - 字符串索引 · indexing strings and, 653 
+    - 与插入的关系 · insertion and, 641–645, 647, 649 <!-- SOURCE pdf-1332-b032 -->
+    - 与内部节点的关系 · internal nodes and, 635 
+    - 叶节点 · leaf nodes of, 635–656, 665–669, 673, 674 <!-- SOURCE pdf-1332-b033 -->
+    - 主存中的 B+ 树 · in main memory, 657–658 
+    - 非叶节点 · nonleaf nodes of, 635–636, 642, 645–656, 663 <!-- SOURCE pdf-1332-b034 -->
+    - 与非唯一搜索键的关系 · nonunique search keys and, 649–650 <!-- SOURCE pdf-1332-b035 --><!-- SOURCE pdf-1332-b036 -->
+    - B+ 树组织 · organization of, 595, 650–652, 697, 697n4 <!-- SOURCE pdf-1332-b037 -->
+    - 与并行键值存储的关系 · parallel key-value stores and, 1028 <!-- SOURCE pdf-1332-b038 -->
+    - 与性能的关系 · performance and, 634, 665–666 <!-- SOURCE pdf-1332-b039 -->
+    - B+ 树上的查询 · queries on, 637–641, 690 
+    - 与记录迁移的关系 · record relocation and, 652–653 <!-- SOURCE pdf-1332-b040 -->
+    - 与辅助索引的关系 · secondary indices and, 652–653 <!-- SOURCE pdf-1332-b041 -->
+    - 与空间数据的关系 · spatial data and, 672–673 
+    - 结构 · structure of, 634–637 
+    - 与时态数据的关系 · temporal data and, 676 
+    - 调优 · tuning of, 1215 
+    - B+ 树上的更新 · updates on, 641–649 
+- **桶** · buckets, 659–661, 1194–1195 
+- **缓冲块** · buffer blocks, 910–912 
+- **缓冲区管理器** · buffer manager, 19, 604–607 
+- **缓冲区** · buffers 
+    - 数据库缓冲 · database buffering, 927–929 <!-- SOURCE pdf-1332-b042 -->
+    - 定义 · defined, 604 
+    - 与磁盘块的关系 · disk blocks and, 578, 910 
+    - 双缓冲 · double buffering, 725 
+    - 与强制／不强制写出策略的关系 · force/no-force policy and, 927 
+    - 与强制写出的关系 · force output and, 912 
+    - 日志记录缓冲区 · log-record, 926–927 
+    - 缓冲区管理 · management of, 926–930 
+    - 操作系统的作用 · operating system role in, 929–930 <!-- SOURCE pdf-1332-b043 -->
+    - 与块写出的关系 · output of blocks and, 606–607 <!-- SOURCE pdf-1332-b044 -->
+    - 与恢复系统的关系 · recovery systems and, 926–930 <!-- SOURCE pdf-1332-b045 -->
+    - 写入重排与恢复 · reordering of writes and recovery, 609–610 <!-- SOURCE pdf-1332-b046 -->
+    - 替换策略 · replacement strategies, 605, 607–609 <!-- SOURCE pdf-1332-b047 -->
+    - 缓冲区上的共享锁与排他锁 · shared and exclusive locks on, 605–606 <!-- SOURCE pdf-1332-b048 -->
+    - 与允许／禁止偷取策略的关系 · steal/no-steal policy and, 927 
+    - 与存储的关系 · storage and, 604–610 
+    - 与事务服务器的关系 · transaction servers and, 965 
+    - 与预写日志规则的关系 · write-ahead logging rule and, 926–929 <!-- SOURCE pdf-1332-b049 -->
+- **缓冲树** · buffer trees, 668–670 
+- **程序错误** · bugs 
+    - 与应用设计的关系 · application design and, 440, 1234, 1236 <!-- SOURCE pdf-1333-b001 --><!-- SOURCE pdf-1333-b002 -->
+    - 调试 · debugging, 199n4 
+    - 与故障分类的关系 · failure classification and, 908 
+- **构建输入** · build input, 713 
+- **批量导出工具** · bulk export utility, 1222 
+- **批量插入工具** · bulk insert utility, 1222 
+- **批量加载** · bulk loads, 653–655, 1221–1223 
+- **批量同步处理（BSP）** · bulk synchronous processing (BSP), 510–511 <!-- SOURCE pdf-1333-b003 -->
+- **霸道算法** · bully algorithm, 1148 
+- **商业智能（BI）** · business intelligence (BI), 521 
+- **业务逻辑** · business logic, 23, 198, 404, 411–412, 430–431, 445 <!-- SOURCE pdf-1333-b004 -->
+- **业务逻辑层** · business-logic layer, 430, 431 
+- **业务规则** · business rules, 431 
+- **总线系统** · bus system, 975–976 
+- **拜占庭共识** · Byzantine consensus, 1254, 1256, 1266–1267, 1276 <!-- SOURCE pdf-1333-b005 -->
+- **拜占庭故障** · Byzantine failure, 1266–1267 
+
+## C {#index-c}
+
+- **C 语言** · C <!-- SOURCE pdf-1333-b006 -->
+    - 与高级 SQL 的关系 · advanced SQL and, 183, 197, 199, 205 <!-- SOURCE pdf-1333-b007 --><!-- SOURCE pdf-1333-b008 -->
+    - 与应用设计的关系 · application design and, 16 
+    - 与 ODBC 的关系 · ODBC and, 195–196 
+    - 使用的 struct 声明 · struct declarations used by, 11n1 <!-- SOURCE pdf-1333-b009 -->
+    - 与统一建模语言的关系 · Unified Modeling Language and, 289 <!-- SOURCE pdf-1333-b010 -->
+- **C++** · C++ 
+    - 与高级 SQL 的关系 · advanced SQL and, 197, 199, 205, 206 <!-- SOURCE pdf-1333-b011 --><!-- SOURCE pdf-1333-b012 -->
+    - 与应用设计的关系 · application design and, 16, 417 <!-- SOURCE pdf-1333-b013 -->
+    - 与面向对象程序设计的关系 · object-oriented programming and, 377 <!-- SOURCE pdf-1333-b014 -->
+    - 相关标准 · standards for, 1239 
+    - 使用的 struct 声明 · struct declarations used by, 11n1 <!-- SOURCE pdf-1333-b015 -->
+    - 与统一建模语言的关系 · Unified Modeling Language and, 289 <!-- SOURCE pdf-1333-b016 -->
+- **考虑缓存特性的算法** · cache-conscious algorithms, 732–733 <!-- SOURCE pdf-1333-b017 -->
+- **缓存行** · cache line, 732, 983 
+- **高速缓存** · cache memory, 559 
+- **缓存未命中** · cache misses, 982 
+- **缓存** · caching 
+    - 与应用设计的关系 · application design and, 435–437 <!-- SOURCE pdf-1333-b018 --><!-- SOURCE pdf-1333-b019 -->
+    - 与缓存一致性的关系 · coherency and, 969, 983–984 <!-- SOURCE pdf-1333-b020 -->
+    - 与列式存储的关系 · column-oriented storage and, 612 <!-- SOURCE pdf-1333-b021 -->
+    - 与数据服务器的关系 · data servers and, 968–970 
+    - 与锁的关系 · locks and, 969 
+    - 与查询计划的关系 · query plans and, 774, 965 
+    - 与复制的关系 · replication and, 1014n4 
+    - 与共享内存架构的关系 · shared-memory architecture and, 982–984 <!-- SOURCE pdf-1333-b022 -->
+- **CAD（计算机辅助设计）** · CAD (computer-aided design), 390–391, 968 <!-- SOURCE pdf-1333-b023 -->
+- **可调用语句** · callable statements, 190–191 
+- **召回** · call back, 969 
+- **调用级接口（CLI）标准** · Call Level Interface (CLI) standards, 197, 1238–1239 <!-- SOURCE pdf-1333-b024 -->
+- **call 语句** · call statement, 201 
+- **候选键** · candidate keys, 44 
+- **正则覆盖** · canonical cover, 324–328 
+- **CAP 定理** · CAP theorem, 1134 
+- **笛卡儿积运算** · Cartesian-product operation, 50–52 <!-- SOURCE pdf-1333-b025 -->
+- **笛卡儿积** · Cartesian products 
+    - 与等价性的关系 · equivalence and, 748, 749, 755 <!-- SOURCE pdf-1333-b026 --><!-- SOURCE pdf-1333-b027 -->
+    - 与连接表达式的关系 · join expressions and, 135 
+    - 与查询优化的关系 · query optimization and, 748, 749, 755, 763–764, 775 <!-- SOURCE pdf-1333-b028 -->
+    - 与 SQL 的关系 · SQL and, 76–79, 81, 127n1, 230 <!-- SOURCE pdf-1333-b029 -->
+- **无级联调度** · cascadeless schedules, 820–821 
+- **级联** · cascades, 150, 172, 210 
+- **级联回滚** · cascading rollback, 820–821, 841–842 <!-- SOURCE pdf-1333-b030 -->
+- **层叠样式表（CSS）标准** · cascading stylesheet (CSS) standard, 408 <!-- SOURCE pdf-1333-b031 -->
+- **case 结构** · case construct, 112–113 
+- **Cassandra** · Cassandra, 477, 489, 668, 1024, 1028 <!-- SOURCE pdf-1333-b032 -->
+- **cast：类型转换** · cast, 155, 159 
+- **目录** · catalogs 
+    - 与应用设计的关系 · application design and, 1239 <!-- SOURCE pdf-1333-b033 -->
+    - 索引；见“索引” · indices and (see indices) 
+    - 与查询优化的关系 · query optimization and, 758–760, 762, 764 <!-- SOURCE pdf-1333-b034 -->
+    - 与 SQL 的关系 · SQL and, 162–163, 192, 196–197 <!-- SOURCE pdf-1333-b035 -->
+    - 系统目录 · system, 602–604, 1009 
+- **集中式数据库** · centralized databases, 962–963 
+- **集中式死锁检测** · centralized deadlock detection, 1114 <!-- SOURCE pdf-1333-b036 -->
+- **质心** · centroid, 548, 548n3 <!-- SOURCE pdf-1333-b037 -->
+- **CEP（复杂事件处理）系统** · CEP (complex event processing) systems, 504 <!-- SOURCE pdf-1333-b038 -->
+- **CGI（通用网关接口）标准** · CGI (common gateway interface) standard, 409 <!-- SOURCE pdf-1333-b039 -->
+- **链式复制协议** · chain replication protocol, 1127–1128 <!-- SOURCE pdf-1333-b040 -->
+- **质询—响应系统** · challenge-response system, 451 
+- **修改隔离级别** · change isolation level, 822 
+- **变更关系** · change relation, 211 
+- **char 字符类型** · char, 67 
+- **check 子句** · check clause 
+    - 与断言的关系 · assertions and, 152–153 <!-- SOURCE pdf-1333-b041 -->
+    - 与完整性约束的关系 · integrity constraints and, 147–149, 152–153 <!-- SOURCE pdf-1333-b042 -->
+    - 与用户定义类型的关系 · user-defined types and, 159 
+- **check 约束** · check constraints, 151, 170, 315, 800 <!-- SOURCE pdf-1333-b043 -->
+- **检查点日志记录** · checkpoint log records, 943 
+- **检查点进程** · checkpoint process, 965 
+- **检查点** · checkpoints 
+    - 模糊检查点 · fuzzy, 922, 930, 941 <!-- SOURCE pdf-1333-b044 -->
+    - 与恢复系统的关系 · recovery systems and, 920–922, 930 <!-- SOURCE pdf-1333-b045 -->
+    - 与事务服务器的关系 · transaction servers and, 965 
+- **校验和** · checksums, 565 
+- **逐步切换方法** · chicken-little approach, 1236 
+- **Chubby** · Chubby, 1150 
+- **圆弧** · circular arcs, 388 
+- **分类器** · classifiers 
+    - 与属性的关系 · attributes and, 541–543, 545 <!-- SOURCE pdf-1333-b046 -->
+    - 贝叶斯分类器 · Bayesian, 543–544 
+    - 与数据挖掘的关系 · data mining and, 541–546 
+    - 决策树分类器 · decision-tree, 542 
+    - 神经网络分类器 · neural-net, 545–546 
+    - 与预测的关系 · prediction and, 541–543, 545–546 <!-- SOURCE pdf-1333-b047 -->
+    - 支持向量机 · Support Vector Machine, 544–545 <!-- SOURCE pdf-1333-b048 -->
+    - 与训练实例的关系 · training instances and, 541 
+- **CLI（调用级接口）标准** · CLI (Call Level Interface) standards, 197, 1238–1239 <!-- SOURCE pdf-1333-b049 -->
+- **点击** · click-through, 469 
+- **客户—服务器系统** · client-server systems 
+    - 与应用设计的关系 · application design and, 404, 1221, 1239 <!-- SOURCE pdf-1333-b050 --><!-- SOURCE pdf-1333-b051 -->
+    - 与恢复系统的关系 · recovery systems and, 931 
+    - 与系统架构的关系 · system architecture and, 23, 971 <!-- SOURCE pdf-1333-b052 -->
+- **客户端脚本语言** · client-side scripting languages, 421–429 <!-- SOURCE pdf-1334-b001 --><!-- SOURCE pdf-1334-b002 -->
+- **字符大对象（CLOB）** · clobs, 156, 193, 594, 652 
+- **闭地址法** · closed addressing, 659, 1194 
+- **闭散列** · closed hashing, 659, 1194 
+- **闭合多边形** · closed polygons, 388n3 
+- **闭时间区间** · closed time intervals, 675 
+- **集合的闭包** · closure of a set, 312, 320–324 
+- **基于云的数据存储** · cloud-based data storage, 28, 563, 992–993 <!-- SOURCE pdf-1334-b003 -->
+- **云计算** · cloud computing 
+    - 云计算架构 · architecture for, 990–995, 1026, 1027 <!-- SOURCE pdf-1334-b004 --><!-- SOURCE pdf-1334-b005 -->
+    - 优点与局限 · benefits and limitations of, 995 <!-- SOURCE pdf-1334-b006 -->
+    - 服务模型 · service models, 991–995 
+    - 与存储系统的关系 · storage systems and, 28, 563 
+- **CLR（公共语言运行时）** · CLR (Common Language Runtime), 206 <!-- SOURCE pdf-1334-b007 -->
+- **CLR（补偿日志记录）** · CLRs (compensation log records), 922, 942, 945 <!-- SOURCE pdf-1334-b008 -->
+- **聚集索引** · clustering indices, 625, 632–633, 695, 697–698 <!-- SOURCE pdf-1334-b009 -->
+- **聚集键** · cluster key, 600–601 
+- **集群成员关系** · cluster membership, 1158 
+- **簇与集群** · clusters 
+    - 与数据挖掘的关系 · data mining and, 541, 548–549 <!-- SOURCE pdf-1334-b010 --><!-- SOURCE pdf-1334-b011 -->
+    - 层次聚类 · hierarchical, 548 
+    - 与键值存储系统的关系 · key-value storage systems and, 477 <!-- SOURCE pdf-1334-b012 -->
+    - 多表聚集 · multitable, 595, 598–601 
+    - 与系统架构的关系 · system architecture and, 978 
+- **coalesce 函数** · coalesce function, 114, 155, 230–231 <!-- SOURCE pdf-1334-b013 -->
+- **节点合并** · coalescing nodes, 641, 886 
+- **粗粒度并行** · coarse-grained parallelism, 963, 970 <!-- SOURCE pdf-1334-b014 -->
+- **埃德加·科德** · Codd, Edgar, 26 
+- **密码破解；见“加密”** · code breaking. See encryption 
+- **抗碰撞散列函数** · collision resistant hash functions, 1259–1260 <!-- SOURCE pdf-1334-b015 -->
+- **数据共置** · colocation of data, 1068–1069 
+- **列族** · column family, 1025 
+- **列式存储** · column-oriented storage, 525–526, 588, 611–617, 734, 1182 <!-- SOURCE pdf-1334-b016 -->
+- **列存储系统** · column stores, 612, 615, 1025, 1224 <!-- SOURCE pdf-1334-b017 -->
+- **组合学** · combinatorics, 811 
+- **combine 函数** · combine function, 490 <!-- SOURCE pdf-1334-b018 -->
+- **逗号分隔值** · comma-separated values, 1222 
+- **提交依赖** · commit dependency, 847 
+- **提交协议** · commit protocols, 1100–1110 
+- **已提交事务** · committed transactions 
+    - 定义 · defined, 806 <!-- SOURCE pdf-1334-b019 -->
+    - 与持久性的关系 · durability and, 933–934 
+    - 与日志记录的关系 · log records and, 917 
+    - 与可观察的外部写入的关系 · observable external writes and, 807 <!-- SOURCE pdf-1334-b020 -->
+    - 部分提交状态 · partially committed, 806 
+    - 与调度的关系 · scheduling and, 810, 819–820 
+    - 与更新的关系 · updates and, 874 
+- **提交时间** · commit time, 933–934 
+- **提交等待** · commit wait, 1130–1131 
+- **commit work** · commit work, 143–145 
+- **通用网关接口（CGI）标准** · common gateway interface (CGI) standard, 409 <!-- SOURCE pdf-1334-b021 -->
+- **公共语言运行时（CLR）** · Common Language Runtime (CLR), 206 <!-- SOURCE pdf-1334-b022 -->
+- **公共子表达式消除** · common subexpression elimination, 785 <!-- SOURCE pdf-1334-b023 -->
+- **交换律** · commutative property, 747–750 
+- **可交换操作** · commute, 1143 
+- **比较并交换** · compare-and-swap, 966 
+- **兼容性函数** · compatibility function, 836 
+- **相容关系** · compatible relations, 54 
+- **补偿操作** · compensating operation, 892 
+- **补偿事务** · compensating transactions, 805 
+- **补偿日志记录（CLR）** · compensation log records (CLRs), 922, 942, 945 <!-- SOURCE pdf-1334-b024 -->
+- **完备的公理** · complete axioms, 321 
+- **完全性约束** · completeness constraint, 275 
+- **复杂属性** · complex attributes, 249–252, 265–267 <!-- SOURCE pdf-1334-b025 -->
+- **复杂数据类型** · complex data types, 365–394 
+    - 面向对象 · object orientation, 376–382 <!-- SOURCE pdf-1334-b026 -->
+    - 半结构化数据 · semi-structured, 365–376 
+    - 空间数据 · spatial, 387–394 
+    - 文本数据 · textual, 382–387 
+    - 用户定义类型 · user-defined, 158 
+- **复杂事件处理（CEP）系统** · complex event processing (CEP) systems, 504 <!-- SOURCE pdf-1334-b027 -->
+- **复合属性** · composite attributes, 250, 252 
+- **复合索引** · composite indices, 700 
+- **综合性价比指标** · composite price/performance metric, 1234 <!-- SOURCE pdf-1334-b028 -->
+- **每小时综合查询数指标** · composite query per hour metric, 1234 <!-- SOURCE pdf-1334-b029 -->
+- **压缩** · compression 
+    - 与列式存储的关系 · column-oriented storage and, 611, 612 <!-- SOURCE pdf-1334-b030 --><!-- SOURCE pdf-1334-b031 -->
+    - 与数据仓库的关系 · data warehousing and, 526 
+    - 磁盘块数据压缩 · of disk block data, 615n8 
+    - 前缀压缩 · prefix, 653 
+    - 工作负载压缩 · workload compression, 1217 
+- **计算机辅助设计（CAD）** · computer-aided design (CAD), 390–391, 968 <!-- SOURCE pdf-1334-b032 -->
+- **概念设计阶段** · conceptual-design phase, 17–18, 242 <!-- SOURCE pdf-1334-b033 -->
+- **并发控制** · concurrency control, 835–894 
+    - 与访问异常的关系 · access anomalies and, 7 <!-- SOURCE pdf-1334-b034 -->
+    - 与盲写的关系 · blind writes and, 868 
+    - 与区块链数据库的关系 · blockchain databases and, 1262–1263 <!-- SOURCE pdf-1334-b035 -->
+    - 与提交协议的关系 · commit protocols and, 1105 
+    - 与一致性的关系 · consistency and, 880–885 
+    - 与死锁处理的关系 · deadlock handling and, 849–853 <!-- SOURCE pdf-1334-b036 -->
+    - 与删除的关系 · deletion and, 857–858 
+    - 与分布式数据库的关系 · distributed databases and, 990, 1105, 1111–1120 <!-- SOURCE pdf-1334-b037 -->
+    - 扩展协议 · extended protocols, 1129–1133 <!-- SOURCE pdf-1334-b038 -->
+    - 与假环的关系 · false cycles and, 1114–1115 
+    - 联邦数据库中的并发控制 · in federated databases, 1132–1133 <!-- SOURCE pdf-1334-b039 -->
+    - 与索引的关系 · indices and, 884–887 
+    - 与插入的关系 · insertion and, 857, 858 
+    - 与隔离性的关系 · isolation and, 803–804, 807–812, 823 <!-- SOURCE pdf-1334-b040 -->
+    - 与租约的关系 · leases and, 1115–1116 
+    - 加锁协议；另见“锁” · locking protocols and, 835–848 (see also locks) <!-- SOURCE pdf-1334-b041 -->
+    - 与逻辑撤销操作的关系 · logical undo operations and, 940–941 <!-- SOURCE pdf-1334-b042 -->
+    - 与长事务的关系 · long-duration transactions and, 890–891 <!-- SOURCE pdf-1334-b043 -->
+    - 主存数据库中的并发控制 · in main-memory databases, 887–890 <!-- SOURCE pdf-1334-b044 -->
+    - 与多粒度的关系 · multiple granularity and, 853–857 <!-- SOURCE pdf-1334-b045 -->
+    - 与多版本方案的关系 · multiversion schemes and, 869–872, 1129–1131 <!-- SOURCE pdf-1334-b046 -->
+    - 操作级并发控制 · with operations, 891–894 
+    - 乐观并发控制 · optimistic, 869 
+    - 与并行数据库的关系 · parallel databases and, 990 
+    - 与并行键值存储的关系 · parallel key-value stores and, 1028–1029 <!-- SOURCE pdf-1334-b047 -->
+    - 与幻象现象的关系 · phantom phenomenon and, 827, 858–861, 877–879, 877n5, 885, 887 <!-- SOURCE pdf-1335-b001 --><!-- SOURCE pdf-1335-b002 -->
+    - 与谓词读的关系 · predicate reads and, 858–861 
+    - 与实时事务系统的关系 · real-time transaction systems and, 894 <!-- SOURCE pdf-1335-b003 -->
+    - 与恢复系统的关系 · recovery systems and, 916 
+    - 与复制的关系 · replication and, 1123–1125 
+    - 与回滚的关系 · rollback and, 841–844, 849–850, 853, 868–871 <!-- SOURCE pdf-1335-b004 -->
+    - 与可串行化性的关系 · serializability and, 836, 840–843, 846–848, 856, 861–871, 875–887 <!-- SOURCE pdf-1335-b005 -->
+    - 与快照隔离的关系 · snapshot isolation and, 872–879, 882, 916, 1131–1132 <!-- SOURCE pdf-1335-b006 -->
+    - 与基于时间戳协议的关系 · timestamp-based protocols and, 861–866, 882 <!-- SOURCE pdf-1335-b007 -->
+    - 发展趋势 · trends in, 808 
+    - 与用户交互的关系 · user interactions and, 881–883 <!-- SOURCE pdf-1335-b008 -->
+    - 与验证的关系 · validation and, 866–869, 882, 916 <!-- SOURCE pdf-1335-b009 -->
+- **并发控制管理器** · concurrency-control manager, 21 
+- **并发控制方案** · concurrency-control schemes, 809 <!-- SOURCE pdf-1335-b010 -->
+- **并发事务** · concurrent transactions, 1224–1227 <!-- SOURCE pdf-1335-b011 -->
+- **置信度** · confidence, 540, 547 
+- **冲突等价** · conflict equivalence, 815, 815n2 
+- **冲突可串行化** · conflict serializability, 813–816 
+- **符合性级别** · conformance levels, 196–197 
+- **合取选择** · conjunctive selection, 699–700, 747, 762 <!-- SOURCE pdf-1335-b012 -->
+- **连接池** · connection pooling, 436 
+- **共识协议** · consensus protocols 
+    - 与区块链数据库的关系 · blockchain databases and, 1254, 1256–1257, 1263–1267 <!-- SOURCE pdf-1335-b013 --><!-- SOURCE pdf-1335-b014 -->
+    - 拜占庭共识 · Byzantine, 1254, 1256, 1266–1267, 1276 <!-- SOURCE pdf-1335-b015 -->
+    - 与分布式数据库的关系 · distributed databases and, 1106–1107, 1150–1161, 1266, 1267 <!-- SOURCE pdf-1335-b016 -->
+    - 基于消息的共识 · message-based, 1266 
+    - 多次共识协议 · multiple consensus protocol, 1151 <!-- SOURCE pdf-1335-b017 -->
+    - Paxos · Paxos, 1152–1155, 1160–1161, 1267 <!-- SOURCE pdf-1335-b018 -->
+    - 权益证明 · proof-of-stake, 1256, 1266 
+    - 工作量证明 · proof-of-work, 1256, 1264–1266 <!-- SOURCE pdf-1335-b019 --><!-- SOURCE pdf-1335-b020 -->
+    - Raft · Raft, 1148, 1155–1158, 1267 
+    - 与复制的关系 · replication and, 1016 
+    - Zab · Zab, 1152 
+- **一致性** · consistency 
+    - 与大数据的关系 · Big Data and, 481–482 <!-- SOURCE pdf-1335-b021 -->
+    - 与 CAP 定理的关系 · CAP theorem and, 1134 
+    - 与并发控制的关系 · concurrency control and, 880–885 <!-- SOURCE pdf-1335-b022 -->
+    - 与游标稳定性的关系 · cursor stability and, 881 
+    - 与死锁的关系 · deadlock and, 838–839 
+    - 定义 · defined, 20 
+    - 二级一致性 · degree-two, 880–881 
+    - 最终一致性 · eventual, 1016, 1139 
+    - 外部一致性 · external, 1131 
+    - 文件系统一致性检查 · file system consistency check, 610 <!-- SOURCE pdf-1335-b023 -->
+    - 与散列的关系 · hashing and, 1013 
+    - 与逻辑操作的关系 · logical operations and, 936–937 <!-- SOURCE pdf-1335-b024 -->
+    - 与复制的关系 · replication and, 1015–1016, 1121–1123, 1133–1146 <!-- SOURCE pdf-1335-b025 -->
+    - 一致性要求 · requirement of, 802 
+    - 在一致性与可用性之间取舍 · trading offfor availability, 1134–1135 <!-- SOURCE pdf-1335-b026 -->
+    - 事务的一致性 · of transactions, 20, 800, 802, 807–808, 821–823 <!-- SOURCE pdf-1335-b027 -->
+    - 与用户交互的关系 · user interactions and, 881–883 <!-- SOURCE pdf-1335-b028 -->
+    - 较弱的一致性级别 · weak levels of, 880–883 
+- **约束** · constraints 
+    - check 约束 · check, 151, 170, 315 <!-- SOURCE pdf-1335-b029 -->
+    - 完全性约束 · completeness, 275 
+    - 一致性约束 · consistency, 13–14 
+    - 截止时间约束 · deadlines, 894 
+    - 与分解的关系 · decomposition and, 336 
+    - 与保持依赖的关系 · dependency preservation and, 315–316 <!-- SOURCE pdf-1335-b030 -->
+    - 与实体—联系（E-R）模型的关系 · entity-relationship (E-R) model and, 253–256, 275–276 <!-- SOURCE pdf-1335-b031 -->
+    - 外键约束 · foreign key, 45–46 
+    - 完整性；见“完整性约束” · integrity (see integrity constraints) <!-- SOURCE pdf-1335-b032 -->
+    - 与键的关系 · keys and, 258 
+    - 与映射基数的关系 · mapping cardinalities and, 253–256 <!-- SOURCE pdf-1335-b033 -->
+    - not null 约束 · not null, 69 
+    - 主键约束 · primary key, 44 
+    - 特化上的约束 · on specialization, 275–276 <!-- SOURCE pdf-1335-b034 -->
+    - 与事务的关系 · transactions and, 800 
+    - 与统一建模语言的关系 · Unified Modeling Language and, 289 <!-- SOURCE pdf-1335-b035 -->
+- **容器** · containers, 992–994 
+- **contains 运算** · contains operation, 101 
+- **连续查询** · continuous queries, 503, 731 
+- **连续流数据** · continuous-stream data, 731 
+- **会话** · conversations, 883 
+- **转换** · conversions, 155–156, 469, 843 
+- **Cookie** · cookies, 410–415, 411n2, 439–440 <!-- SOURCE pdf-1335-b036 -->
+- **协调者** · coordinators, 1099, 1104, 1106–1107, 1146–1150 <!-- SOURCE pdf-1335-b037 -->
+- **Corda** · Corda, 1269 
+- **处理器核** · cores, 962–963, 970, 976, 980–983 <!-- SOURCE pdf-1335-b038 -->
+- **核心交换机** · core switch, 977 
+- **相关求值** · correlated evaluation, 775 
+- **相关子查询** · correlated subqueries, 101 
+- **相关名** · correlation name, 81, 101 
+- **相关变量** · correlation variables, 81, 775 
+- **基于代价的优化器** · cost-based optimizers, 766 
+- **Couchbase** · Couchbase, 1024 
+- **count 函数** · count function, 91–92, 94, 96, 723, 766, 781 <!-- SOURCE pdf-1335-b039 -->
+- **计数值** · count values, 220n11 
+- **覆盖索引** · covering indices, 663 
+- **蟹行协议** · crabbing protocol, 885–886 
+- **崩溃；另见“恢复系统”** · crashes. See also recovery systems <!-- SOURCE pdf-1335-b040 -->
+    - 崩溃后的动作 · actions following, 923–925 
+    - 崩溃恢复算法 · algorithms for, 922–925 
+    - 与 ARIES 的关系 · ARIES and, 941–947 
+    - 与检查点的关系 · checkpoints and, 920–922 
+    - 与故障分类的关系 · failure classification and, 908 
+    - 与磁盘的关系 · magnetic disks and, 565 
+    - 与存储的关系 · storage and, 607, 609–610 
+    - 与事务的关系 · transactions and, 800 
+- **网页爬取** · crawling the web, 383 
+- **create assertion：创建断言** · create assertion, 153 
+- **create cluster：创建聚集** · create cluster, 601 
+- **create distinct type：创建独特类型** · create distinct type, 160 
+- **create domain：创建域** · create domain, 159–160 
+- **create function：创建函数** · create function, 200, 203, 204, 215 <!-- SOURCE pdf-1335-b041 -->
+- **create index：创建索引** · create index, 164–165, 664 
+- **create or replace：创建或替换** · create or replace, 199n4 
+- **create procedure：创建过程** · create procedure, 200, 205 
+- **create recursive view：创建递归视图** · create recursive view, 218 
+- **create role：创建角色** · create role, 168 <!-- SOURCE pdf-1336-b001 -->
+- **create schema：创建模式** · create schema, 163 
+- **create sequence：创建序列** · create sequence construct, 161 
+- **create table：创建表** · create table 
+    - with data 子句 · with data clause, 162 <!-- SOURCE pdf-1336-b002 -->
+    - 与默认值的关系 · default values and, 156 
+    - 扩展形式 · extensions for, 162 
+    - 与完整性约束的关系 · integrity constraints and, 146–149 <!-- SOURCE pdf-1336-b003 -->
+    - 与多表聚集的关系 · multitable clustering and, 601 
+    - 与基于对象数据库的关系 · object-based databases and, 378–380 <!-- SOURCE pdf-1336-b004 -->
+    - 与向数据库发送 SQL 语句的关系 · shipping SQL statements to database and, 187 <!-- SOURCE pdf-1336-b005 -->
+    - 与 SQL 模式定义的关系 · SQL schema definition and, 68–71 <!-- SOURCE pdf-1336-b006 -->
+- **create table...as** · create table...as, 162 
+- **create table...like** · create table...like, 162 
+- **create temporary table：创建临时表** · create temporary table, 214 
+- **create type：创建类型** · create type, 158–160, 378–380 
+- **create unique index：创建唯一索引** · create unique index, 165, 664 
+- **create view：创建视图** · create view, 138–143, 162, 169 
+- **征信机构** · credit bureaus, 521, 521n1 
+- **跨链事务** · cross-chain transactions, 1273 
+- **交叉连接** · cross join, 127n1 
+- **跨站请求伪造（XSRF）** · cross-site request forgery (XSRF), 439–440 <!-- SOURCE pdf-1336-b007 -->
+- **跨站脚本（XSS）** · cross-site scripting (XSS), 439–440 <!-- SOURCE pdf-1336-b008 -->
+- **交叉表** · cross-tabulation, 226–227, 528–533 <!-- SOURCE pdf-1336-b009 -->
+- **增删改查（CRUD）Web 接口** · CRUD web interfaces, 419 
+- **加密货币；另见“比特币”** · cryptocurrencies, 1251–1253, 1257. See also Bitcoin <!-- SOURCE pdf-1336-b010 -->
+- **密码散列函数** · cryptographic hash functions, 1253, 1259–1263, 1265 <!-- SOURCE pdf-1336-b011 -->
+- **CSS（层叠样式表）标准** · CSS (cascading stylesheet) standard, 408 <!-- SOURCE pdf-1336-b012 -->
+- **C-Store** · C-Store, 615 
+- **cube 结构** · cube construct, 227–231, 536–538 <!-- SOURCE pdf-1336-b013 -->
+- **当前日期** · current date, 154 
+- **游标稳定性** · cursor stability, 881 
+- **曲线拟合** · curve fitting, 546 
+- **柱面** · cylinders, 565 
+- **Cypher 查询语言** · Cypher query language, 509 
+
+## D {#index-d}
+
+- **DAG（有向无环图）** · DAGs (directed acyclic graphs), 499, 506–507, 1071–1072 <!-- SOURCE pdf-1336-b014 --><!-- SOURCE pdf-1336-b015 -->
+- **DAO（分布式自治组织）** · DAOs (distributed autonomous organizations), 1272, 1272n7 <!-- SOURCE pdf-1336-b016 --><!-- SOURCE pdf-1336-b017 -->
+- **Dart 语言** · Dart language, 428–429 
+- **数据抽象** · data abstraction, 2, 9–12, 15 
+- **数据访问层** · data access layer, 430–434 
+- **数据分析；另见“数据挖掘”** · data analytics, 519–549. See also data mining <!-- SOURCE pdf-1336-b018 -->
+    - 与决策支持系统的关系 · decision-support systems and, 519–522 <!-- SOURCE pdf-1336-b019 -->
+    - 定义 · defined, 4, 519 
+    - OLAP 系统 · OLAP systems, 520, 527–540 
+    - 概述 · overview, 519–521 
+    - 分析中的预测模型 · predictive models in, 4–5 
+    - 统计分析 · statistical analysis, 520, 527 
+    - 与数据仓库的关系 · warehousing and, 519–527 
+- **静态数据** · data-at-rest, 502 
+- **数据库管理员（DBA）** · database administrators (DBAs), 24–25 <!-- SOURCE pdf-1336-b020 -->
+- **数据库即服务平台** · database-as-a-service platform, 993 <!-- SOURCE pdf-1336-b021 -->
+- **数据库设计** · database design 
+    - 可选设计方案 · alternatives in, 243–244, 285–291 <!-- SOURCE pdf-1336-b022 --><!-- SOURCE pdf-1336-b023 -->
+    - 应用；见“应用设计” · applications and (see application design) <!-- SOURCE pdf-1336-b024 -->
+    - 架构；见“体系结构” · architecture of (see architectures) <!-- SOURCE pdf-1336-b025 -->
+    - 与授权需求的关系 · authorization requirements and, 291 <!-- SOURCE pdf-1336-b026 -->
+    - 自底向上设计 · bottom-up, 273 
+    - 与缓冲区的关系 · buffers and, 604–610 
+    - 客户—服务器；见“客户—服务器系统” · client-server (see client-server systems) <!-- SOURCE pdf-1336-b027 -->
+    - 复杂性 · complexity of, 241 
+    - 计算机辅助设计 · computer-aided, 390–391 
+    - 概念设计阶段 · conceptual-design phase of, 17–18, 242 <!-- SOURCE pdf-1336-b028 -->
+    - 直接设计过程 · direct design process, 241 
+    - 与加密的关系 · encryption and, 447–453 
+    - 数据库引擎 · engines, 18–21 
+    - E-R 模型；见“实体—联系模型” · E-R model and (see entity-relationship model) <!-- SOURCE pdf-1336-b029 -->
+    - 功能需求 · functional requirements of, 291 <!-- SOURCE pdf-1336-b030 -->
+    - 设计不完整 · incompleteness in, 243–244 
+    - 逻辑设计阶段 · logical-design phase of, 18, 242 <!-- SOURCE pdf-1336-b031 -->
+    - 设计中的规范化 · normalization in, 17 
+    - 设计过程概述 · overview of process, 241–244 
+    - 设计阶段 · phases of, 17–18, 241–243 <!-- SOURCE pdf-1336-b032 -->
+    - 物理设计阶段 · physical-design phase of, 18, 242–243 <!-- SOURCE pdf-1336-b033 -->
+    - 设计中的冗余 · redundancy in, 243 
+    - 关系数据库；见“关系数据库设计” · relational (see relational database design) <!-- SOURCE pdf-1336-b034 -->
+    - 与模式演化的关系 · schema evolution and, 292 
+    - 功能需求说明 · specification of functional requirements in, 17–18 <!-- SOURCE pdf-1336-b035 -->
+    - 自顶向下设计 · top-down, 273 
+    - 用户需求 · user requirements in, 17–18, 241–242, 274 <!-- SOURCE pdf-1336-b036 -->
+    - 与工作流的关系 · workflow and, 291–292 
+- **数据库图** · database graph, 846–848 
+- **数据库实例** · database instance, 41 
+- **数据库管理系统（DBMS）** · database-management systems (DBMSs) <!-- SOURCE pdf-1336-b037 -->
+    - 定义 · defined, 1 
+    - 目标 · objectives of, 1, 24 
+    - 数据库管理系统出现前的组织数据处理 · organizational data processing prior to, 472 <!-- SOURCE pdf-1336-b038 -->
+    - 所需的产品专用调用 · product-specific calls needed by, 186 <!-- SOURCE pdf-1336-b039 -->
+- **数据库** · databases 
+    - 与抽象的关系 · abstraction and, 2, 9–12, 15 <!-- SOURCE pdf-1336-b040 -->
+    - 数据库管理员 · administrators of, 24–25 
+    - 数据库应用 · applications for, 1–5 
+    - 架构；见“体系结构” · architecture (see architectures) <!-- SOURCE pdf-1336-b041 -->
+    - 数组数据库 · array, 367 
+    - 区块链；见“区块链数据库” · blockchain (see blockchain databases) <!-- SOURCE pdf-1336-b042 -->
+    - 与缓冲的关系 · buffering and, 927–929 
+    - 集中式数据库 · centralized, 962–963 
+    - 并发控制；见“并发控制” · concurrency control and (see concurrency control) <!-- SOURCE pdf-1336-b043 -->
+    - 定义 · defined, 1 
+    - 设计；见“数据库设计” · design of (see database design) <!-- SOURCE pdf-1336-b044 -->
+    - 文档数据库 · document, 3 
+    - 与转储的关系 · dumping and, 930–931 
+    - 效率 · efficiency of, 1, 2, 5, 9 
+    - 嵌入式数据库 · embedded, 198, 962 
+    - 作为文件处理系统 · as file-processing systems, 5–8 
+    - 与强制写出的关系 · force output and, 912 
+    - 图数据库 · graph, 508–511 
+    - 历史 · history of, 25–28 
+    - 索引；见“索引” · indexing and (see indices) 
+    - 数据库语言 · languages for, 13–17 
+    - 锁；见“锁” · locks and (see locks) 
+    - 主存；见“主存数据库” · main memory (see main-memory databases) <!-- SOURCE pdf-1337-b001 --><!-- SOURCE pdf-1337-b002 -->
+    - 数据库维护 · maintenance for, 25 
+    - 数据库修改 · modification of, 108–114, 915–916 <!-- SOURCE pdf-1337-b003 -->
+    - 基于对象；见“基于对象的数据库” · object-based (see object-based databases) <!-- SOURCE pdf-1337-b004 -->
+    - 面向对象数据库 · object-oriented, 9, 26, 377, 431, 1239–1240 <!-- SOURCE pdf-1337-b005 -->
+    - 对象关系数据库 · object-relational, 377–381 
+    - 并行；见“并行数据库” · parallel (see parallel databases) <!-- SOURCE pdf-1337-b006 -->
+    - 数据库的用途 · purpose of, 5–8 
+    - 查询处理器的组成部分 · query processor components of, 18, 20 <!-- SOURCE pdf-1337-b007 -->
+    - 恢复；见“恢复系统” · recovery of (see recovery systems) <!-- SOURCE pdf-1337-b008 -->
+    - 存储；见“存储” · storage for (see storage) 
+    - 数据库中的事务管理器 · transaction manager in, 18–21 
+    - 大学数据库；见“大学数据库” · university (see university databases) <!-- SOURCE pdf-1337-b009 -->
+    - 用户与数据库的交互 · user interaction with, 4–5, 24 
+- **数据库管理员（DBA）** · databases administrator (DBA), 171 <!-- SOURCE pdf-1337-b010 -->
+- **数据库模式；见“模式”** · database schema. See schemas 
+- **数据库写入进程** · database writer process, 965 
+- **数据中心交换网络** · data center fabric, 978 
+- **数据中心** · data centers, 970, 1014–1015 
+- **数据清洗** · data cleansing, 523 
+- **数据立方体** · data cubes, 529–530 
+- **数据定义语言（DDL）** · data-definition language (DDL) 
+    - 与应用程序的关系 · application programs and, 17 <!-- SOURCE pdf-1337-b011 -->
+    - 与授权的关系 · authorization and, 66 
+    - 支持的基本类型 · basic types supported by, 67–68 <!-- SOURCE pdf-1337-b012 -->
+    - 用于说明一致性约束 · in consistency constraint specification, 13–14 <!-- SOURCE pdf-1337-b013 -->
+    - 定义 · defined, 13, 65 
+    - 与转储的关系 · dumping and, 931 
+    - 与权限授予和撤销的关系 · granting and revoking privileges and, 166 <!-- SOURCE pdf-1337-b014 -->
+    - 与索引的关系 · indices and, 67 
+    - 与完整性的关系 · integrity and, 66 
+    - 解释器 · interpreter, 20 
+    - DDL 的输出 · output of, 14 
+    - 与模式定义的关系 · schema definition and, 24, 66, 68–71 <!-- SOURCE pdf-1337-b015 -->
+    - 与安全性的关系 · security and, 67 
+    - DDL 中的关系集合 · set of relations in, 66–67 
+    - 与 SQL 的关系 · SQL and, 14–15, 65–71 
+    - 与存储的关系 · storage and, 67 <!-- SOURCE pdf-1337-b016 -->
+- **数据字典** · data dictionary, 14, 19, 602–604 
+- **数据分布倾斜** · data distribution skew, 1008 
+- **数据加密标准（DES）** · Data Encryption Standard (DES), 448 <!-- SOURCE pdf-1337-b017 -->
+- **数据文件** · data files, 19 
+- **数据不一致** · data inconsistency, 6 
+- **数据隔离；见“隔离”** · data isolation. See isolation 
+- **数据项标识符** · data-item identifiers, 913 
+- **数据项** · data items, 968 
+- **数据湖** · data lakes, 527, 1078 
+- **数据操纵语言（DML）** · data-manipulation language (DML) <!-- SOURCE pdf-1337-b018 -->
+    - 与应用程序的关系 · application programs and, 17 
+    - 编译器 · compiler, 20 
+    - 声明式 DML · declarative, 15 
+    - 定义 · defined, 13, 15, 66 
+    - 过程式 DML · procedural, 15 
+    - 与 SQL 的关系 · SQL and, 16 
+    - 与存储管理器的关系 · storage manager and, 19 
+- **数据挖掘** · data mining, 540–549 
+    - 与关联规则的关系 · association rules and, 546–547 <!-- SOURCE pdf-1337-b019 --><!-- SOURCE pdf-1337-b020 -->
+    - 区块链中的挖矿 · blockchain databases and, 1256, 1258, 1264–1266 <!-- SOURCE pdf-1337-b021 -->
+    - 与分类器的关系 · classifiers and, 541–546 
+    - 与聚类的关系 · clustering and, 541, 548–549 
+    - 定义 · defined, 5, 540 
+    - 与描述性模式的关系 · descriptive patterns and, 541 
+    - 发展 · growth of, 27 
+    - 数据挖掘模型 · models for, 540 
+    - 概述 · overview, 521 
+    - 与预测的关系 · prediction and, 541 
+    - 与回归的关系 · regression and, 546 
+    - 数据挖掘规则 · rules for, 540 
+    - 任务类型 · task types in, 541 
+    - 文本挖掘 · text mining, 549 
+- **数据模型；另见各具体模型** · data models, 8–9. See also specific models <!-- SOURCE pdf-1337-b022 -->
+- **数据节点** · datanodes, 475, 1020 
+- **数据并行** · data parallelism, 1042, 1057 
+- **数据分区** · data partitioning, 989n5 
+- **数据服务器系统** · data-server systems, 963–964, 968–970 <!-- SOURCE pdf-1337-b023 -->
+- **DataSet 类型** · DataSet type, 499 
+- **数据存储与定义语言** · data storage and definition language, 13 <!-- SOURCE pdf-1337-b024 -->
+- **数据存储系统；见“存储”** · data storage systems. See storage 
+- **数据流** · data streams, 731 
+- **数据条带化** · data striping, 571–572 
+- **数据传输故障** · data-transfer failures, 909 <!-- SOURCE pdf-1337-b025 -->
+- **数据传输率** · data-transfer rate, 566, 569 
+- **数据类型；见“类型”** · data types. See types 
+- **数据虚拟化** · data virtualization, 1077 
+- **数据可视化** · data visualization, 538–540 
+- **数据仓库** · data warehousing, 519–527 
+    - 数据仓库架构 · architecture for, 522–523 <!-- SOURCE pdf-1337-b026 -->
+    - 与列式存储的关系 · column-oriented storage and, 525–526 <!-- SOURCE pdf-1337-b027 -->
+    - 组成部分 · components of, 522–524 
+    - 数据库对数据仓库的支持 · database support for, 525–526 <!-- SOURCE pdf-1337-b028 -->
+    - 与数据集成的比较 · data integration vs., 1077–1078 <!-- SOURCE pdf-1337-b029 -->
+    - 与数据湖的关系 · data lakes and, 527, 1078 
+    - 与去重的关系 · deduplication and, 523 
+    - 定义 · defined, 519, 522 
+    - 与 ETL 任务的关系 · ETL tasks and, 520, 524 
+    - 与事实表的关系 · fact tables and, 524 
+    - 与按家庭归并的关系 · householding and, 523 
+    - 与合并清理操作的关系 · merger-purge operation and, 523 <!-- SOURCE pdf-1337-b030 -->
+    - 与多维数据的关系 · multidimensional data and, 524 <!-- SOURCE pdf-1337-b031 -->
+    - 概述 · overview, 519–520 
+    - 使用的模式 · schemas used for, 523–525 
+    - 数据转换与清洗 · transformation and cleansing, 523 <!-- SOURCE pdf-1337-b032 -->
+    - 与更新的关系 · updates and, 523 
+- **datetime 数据类型** · datetime data type, 154, 531 
+- **DBA（数据库管理员）** · DBAs (database administrators), 24–25 <!-- SOURCE pdf-1337-b033 -->
+- **DBMS；见“数据库管理系统”** · DBMSs. See database-management systems <!-- SOURCE pdf-1337-b034 -->
+- **DDL；见“数据定义语言”** · DDL. See data-definition language <!-- SOURCE pdf-1337-b035 -->
+- **DDL 解释器** · DDL interpreter, 20 
+- **截止时间** · deadlines, 894 
+- **死锁** · deadlocks 
+    - 与一致性的关系 · consistency and, 838–839 <!-- SOURCE pdf-1337-b036 -->
+    - 死锁检测 · detection of, 849, 851–852 
+    - 与分布式数据库的关系 · distributed databases and, 1111–1115 <!-- SOURCE pdf-1337-b037 -->
+    - 死锁处理 · handling of, 849–853 
+    - 死锁预防 · prevention of, 849–851 
+    - 与恢复的关系 · recovery and, 849, 851, 853 
+    - 与回滚的关系 · rollback and, 853 
+    - 与饥饿的关系 · starvation and, 853 
+    - 与牺牲者选择的关系 · victim selection and, 853 
+    - 与等待图的关系 · wait-for graphs and, 851–852, 1113–1114 <!-- SOURCE pdf-1338-b001 --><!-- SOURCE pdf-1338-b002 -->
+- **调试** · debugging, 199n4 
+- **去中心化** · decentralization, 1251, 1252, 1259, 1270 <!-- SOURCE pdf-1338-b003 -->
+- **决策支持** · decision support, 521, 1231–1233 <!-- SOURCE pdf-1338-b004 -->
+- **决策支持查询** · decision-support queries, 521, 971 <!-- SOURCE pdf-1338-b005 -->
+- **决策支持系统** · decision-support systems, 519–522 <!-- SOURCE pdf-1338-b006 -->
+- **决策支持任务** · decision-support tasks, 521 
+- **决策树分类器** · decision-tree classifiers, 542 
+- **声明式 DML** · declarative DMLs, 15 
+- **声明式查询** · declarative queries, 47, 1030–1031 <!-- SOURCE pdf-1338-b007 -->
+- **声明语句** · declare statement, 201–203 
+- **decode 函数** · decode, 155–156 
+- **分解** · decomposition 
+    - 分解算法 · algorithms for, 330–335 <!-- SOURCE pdf-1338-b008 -->
+    - 与属性的关系 · attributes and, 305–313, 330–335, 339–340 <!-- SOURCE pdf-1338-b009 -->
+    - 与 Boyce–Codd 范式的关系 · Boyce–Codd normal form and, 313–316, 330–333 <!-- SOURCE pdf-1338-b010 -->
+    - 与保持依赖的关系 · dependency preservation and, 315–316, 329 <!-- SOURCE pdf-1338-b011 -->
+    - 与第四范式的关系 · fourth normal form and, 339–341 <!-- SOURCE pdf-1338-b012 -->
+    - 与函数依赖的关系 · functional dependencies and, 308–313, 330–341 <!-- SOURCE pdf-1338-b013 -->
+    - 与更高范式的关系 · higher normal forms and, 319 
+    - 与键的关系 · keys and, 309–312 
+    - 无损分解 · lossless, 307–308, 307n1, 312–313 <!-- SOURCE pdf-1338-b014 -->
+    - 有损分解 · lossy, 307 
+    - 与多值依赖的关系 · multivalued dependencies and, 336–341 <!-- SOURCE pdf-1338-b015 -->
+    - 与规范化理论的关系 · normalization theory and, 308 <!-- SOURCE pdf-1338-b016 -->
+    - 与记号约定的关系 · notational conventions and, 309 <!-- SOURCE pdf-1338-b017 -->
+    - 与关系数据库设计的关系 · relational database design and, 305–313, 330–341 <!-- SOURCE pdf-1338-b018 -->
+    - 与第三范式的关系 · third normal form and, 317–319, 333–335 <!-- SOURCE pdf-1338-b019 -->
+- **分解规则** · decomposition rule, 321 
+- **解压缩** · decompression, 613, 615n8 
+- **去相关** · decorrelation, 777–778 
+- **DEC Rdb** · DEC Rdb, 26 
+- **去重** · deduplication, 523 
+- **深度学习** · deep learning, 546 <!-- SOURCE pdf-1338-b020 -->
+- **深度神经网络** · deep neural networks, 546 
+- **事实标准** · de facto standards, 1237 
+- **默认值** · default values 
+    - 与分类器的关系 · classifiers and, 545 <!-- SOURCE pdf-1338-b021 -->
+    - 与权限的关系 · privileges and, 167 
+    - 将参照字段设为默认值 · setting reference field to, 150 
+    - 与用户定义类型的关系 · user-defined types and, 159 
+- **延迟完整性约束** · deferred integrity constraints, 151 <!-- SOURCE pdf-1338-b022 -->
+- **延迟修改技术** · deferred-modification technique, 915 <!-- SOURCE pdf-1338-b023 -->
+- **延迟视图维护** · deferred view maintenance, 779, 1215–1216 <!-- SOURCE pdf-1338-b024 -->
+- **联系集的度** · degree of relationship sets, 249 
+- **二级一致性** · degree-two consistency, 880–881 
+- **删除权限** · delete authorization, 14 
+- **删除** · deletion 
+    - 与 B+ 树的关系 · B+-trees and, 641, 645–649 <!-- SOURCE pdf-1338-b025 -->
+    - 与并发控制的关系 · concurrency control and, 857–858 <!-- SOURCE pdf-1338-b026 -->
+    - 与数据库修改的关系 · database modification and, 108–110 <!-- SOURCE pdf-1338-b027 -->
+    - 与散列的关系 · hashing and, 1190, 1194–1195, 1198 <!-- SOURCE pdf-1338-b028 -->
+    - 与完整性约束的关系 · integrity constraints and, 150 
+    - 与 LSM 树的关系 · LSM trees and, 1178–1179 
+    - 消息删除 · of messages, 1110 
+    - 与有序索引的关系 · ordered indices and, 624, 631–632 <!-- SOURCE pdf-1338-b029 -->
+    - 与权限的关系 · privileges and, 166–167 
+    - 与 R 树的关系 · R-trees and, 1189 
+    - 与向数据库发送 SQL 语句的关系 · shipping SQL statements to database and, 187 <!-- SOURCE pdf-1338-b030 -->
+    - 与 SQL 模式定义的关系 · SQL schema definition and, 69, 71 <!-- SOURCE pdf-1338-b031 -->
+    - 与事务的关系 · transactions and, 801, 826 
+    - 与触发器的关系 · triggers and, 208–209 
+    - 与元组的关系 · tuples and, 108–110, 613 
+    - 与视图的关系 · views and, 142 
+- **删除条目** · deletion entries, 668, 1178–1179 
+- **增量关系** · delta relation, 211 
+- **需求驱动的流水线** · demand-driven pipeline, 726–728 
+- **拒绝服务攻击** · denial-of-service attacks, 502 
+- **反规范化** · denormalization, 346 
+- **稠密索引** · dense indices, 626–628, 630–631 
+- **事务依赖** · dependency of transactions, 819 
+- **保持依赖** · dependency preservation, 315–316, 328–330 <!-- SOURCE pdf-1338-b032 -->
+- **派生属性** · derived attributes, 251, 252 
+- **desc 表达式** · desc expression, 84 <!-- SOURCE pdf-1338-b033 -->
+- **描述性属性** · descriptive attributes, 248 
+- **描述性模式** · descriptive patterns, 541 
+- **DES（数据加密标准）** · DES (Data Encryption Standard), 448 <!-- SOURCE pdf-1338-b034 -->
+- **设计；见“数据库设计”** · design. See database design 
+- **目标驱动的架构** · destination-driven architecture, 522 <!-- SOURCE pdf-1338-b035 -->
+- **切块** · dicing, 530 
+- **字典攻击** · dictionary attacks, 449 
+- **差分** · differentials, 780 
+- **数字证书** · digital certificates, 451–453 
+- **数字账本** · digital ledgers, 1251, 1252 
+- **数字签名** · digital signatures, 451, 1257, 1261 <!-- SOURCE pdf-1338-b036 -->
+- **数字视频光盘（DVD）** · digital video disks (DVDs), 560–561 <!-- SOURCE pdf-1338-b037 -->
+- **维属性** · dimension attributes, 524 
+- **维表** · dimension tables, 524 
+- **直接访问存储** · direct-access storage, 561 
+- **有向无环图（DAG）** · directed acyclic graphs (DAGs), 499, 506–507, 1071–1072 <!-- SOURCE pdf-1338-b038 -->
+- **目录访问协议** · directory access protocols, 1084, 1240–1243 <!-- SOURCE pdf-1338-b039 -->
+- **目录信息树（DIT）** · directory information trees (DITs), 1242, 1243 <!-- SOURCE pdf-1338-b040 -->
+- **目录系统** · directory systems, 1020, 1084–1086, 1240–1243 <!-- SOURCE pdf-1338-b041 -->
+- **脏块** · dirty blocks, 928–929 
+- **脏页表** · dirty page table, 941–947 
+- **脏写** · dirty writes, 822 
+- **disable trigger：禁用触发器** · disable trigger, 210 
+- **消歧** · disambiguation, 549 
+- **离线运行** · disconnected operation, 427–428 
+- **离散化流** · discretized streams, 508 
+- **分辨符属性** · discriminator attributes, 259 
+- **不相交概化** · disjoint generalization, 279, 290 
+- **不相交特化** · disjoint specialization, 272, 275 
+- **不相交子树** · disjoint subtrees, 847 
+- **析取选择** · disjunctive selection, 699, 700, 762 <!-- SOURCE pdf-1338-b042 -->
+- **磁盘臂** · disk arms, 565 
+- **磁盘臂调度** · disk-arm–scheduling, 578–579 
+- **磁盘块** · disk blocks, 566–567, 577–580 
+- **磁盘缓冲区** · disk buffer, 578, 910 
+- **磁盘控制器** · disk controllers, 565 
+- **磁盘故障** · disk failure, 908 
+- **独特类型** · distinct types, 90, 92, 98–100, 158–160 <!-- SOURCE pdf-1338-b043 -->
+- **可分辨名（DN）** · distinguished name (DN), 1241–1242 <!-- SOURCE pdf-1339-b001 --><!-- SOURCE pdf-1339-b002 -->
+- **分布式自治组织（DAO）** · distributed autonomous organizations (DAOs), 1272, 1272n7 <!-- SOURCE pdf-1339-b003 -->
+- **分布式共识问题** · distributed consensus problem, 1106–1107, 1151 <!-- SOURCE pdf-1339-b004 -->
+- **分布式数据库** · distributed databases 
+    - 体系结构 · architecture of, 22, 986–989, 1098–1100 <!-- SOURCE pdf-1339-b005 --><!-- SOURCE pdf-1339-b006 -->
+    - 与自治性的关系 · autonomy and, 988 
+    - 与大数据的关系 · Big Data and, 473, 480–481 
+    - 与提交协议的关系 · commit protocols and, 1100–1110 <!-- SOURCE pdf-1339-b007 -->
+    - 与并发控制的关系 · concurrency control and, 990, 1105, 1111–1120 <!-- SOURCE pdf-1339-b008 -->
+    - 分布式数据库中的共识 · consensus in, 1106–1107, 1150–1161, 1266, 1267 <!-- SOURCE pdf-1339-b009 -->
+    - 与目录系统的关系 · directory systems and, 1020, 1084–1086, 1240–1243 <!-- SOURCE pdf-1339-b010 -->
+    - 与故障的关系 · failure and, 1104 
+    - 联邦数据库 · federated, 988, 1076–1077, 1132–1133 <!-- SOURCE pdf-1339-b011 -->
+    - 分布式数据库中的文件系统 · file systems in, 472–475, 489, 1003, 1019–1022 <!-- SOURCE pdf-1339-b012 -->
+    - 与全局事务的关系 · global transactions and, 988, 1098, 1132 <!-- SOURCE pdf-1339-b013 -->
+    - 异构分布式数据库 · heterogeneous, 988, 1132 
+    - 同构分布式数据库 · homogeneous, 988 
+    - 与租约的关系 · leases and, 1115–1116 
+    - 与局部事务的关系 · local transactions and, 988, 1098, 1132 <!-- SOURCE pdf-1339-b014 -->
+    - 与锁的关系 · locks and, 1111–1116 
+    - 与节点的关系 · nodes and, 987 
+    - 与分区的关系 · partitions and, 1104–1105 
+    - 与持久消息传递的关系 · persistent messaging and, 1108–1110, 1137 <!-- SOURCE pdf-1339-b015 -->
+    - 与查询优化的关系 · query optimization and, 1084 
+    - 与查询处理的关系 · query processing and, 1076–1086 <!-- SOURCE pdf-1339-b016 -->
+    - 与恢复的关系 · recovery and, 1105 
+    - 与复制的关系 · replication and, 987, 1121–1128 <!-- SOURCE pdf-1339-b017 -->
+    - 与数据共享的关系 · sharing data and, 988 
+    - 与站点的关系 · sites and, 986 
+    - 与快照隔离的关系 · snapshot isolation and, 1131–1132 <!-- SOURCE pdf-1339-b018 -->
+    - 与时间戳的关系 · timestamps and, 1116–1118 
+    - 分布式数据库中的事务处理 · transaction processing in, 989–990, 1098–1100 <!-- SOURCE pdf-1339-b019 -->
+    - 与验证的关系 · validation and, 1119–1120 <!-- SOURCE pdf-1339-b020 -->
+- **分布式文件系统** · distributed file systems, 472–475, 489, 1003, 1019–1022 <!-- SOURCE pdf-1339-b021 -->
+- **分布式散列表** · distributed hash tables, 1013 
+- **分布式锁管理器** · distributed-lock manager, 1112 
+- **分布式查询处理** · distributed query processing, 1076–1086 <!-- SOURCE pdf-1339-b022 -->
+    - 集成多个来源的数据 · data integration from multiple sources, 1076–1078 <!-- SOURCE pdf-1339-b023 -->
+    - 与目录系统的关系 · directory systems and, 1084–1086 <!-- SOURCE pdf-1339-b024 -->
+    - 连接位置与连接顺序 · join location and join ordering in, 1081–1082 <!-- SOURCE pdf-1339-b025 -->
+    - 跨多个来源的查询处理 · across multiple sources, 1080–1084 <!-- SOURCE pdf-1339-b026 -->
+    - 与优化的关系 · optimization and, 1084 
+    - 模式与数据集成 · schema and data integration in, 1078–1080 <!-- SOURCE pdf-1339-b027 -->
+    - 与半连接策略的关系 · semijoin strategy and, 1082–1084 <!-- SOURCE pdf-1339-b028 -->
+- **DIT（目录信息树）** · DITs (directory information trees), 1242, 1243 <!-- SOURCE pdf-1339-b029 -->
+- **Django 框架** · Django framework, 382, 419–421, 433–435, 1240 <!-- SOURCE pdf-1339-b030 -->
+- **DKNF（域键范式）** · DKNF (domain-key normal form), 341 <!-- SOURCE pdf-1339-b031 -->
+- **DML；见“数据操纵语言”** · DML. See data-manipulation language <!-- SOURCE pdf-1339-b032 -->
+- **DML 编译器** · DML compiler, 20 
+- **DN（可分辨名）** · DN (distinguished name), 1241–1242 <!-- SOURCE pdf-1339-b033 -->
+- **DNS（域名服务）系统** · DNS (Domain Name Service) system, 1084, 1085 <!-- SOURCE pdf-1339-b034 -->
+- **Docker** · Docker, 995 
+- **文档数据库** · document databases, 3 
+- **文档对象模型（DOM）** · Document Object Model (DOM), 423 <!-- SOURCE pdf-1339-b035 -->
+- **文档存储系统** · document stores, 477, 1023 
+- **域约束** · domain constraints, 13–14, 146 
+- **域键范式（DKNF）** · domain-key normal form (DKNF), 341 <!-- SOURCE pdf-1339-b036 -->
+- **域名服务（DNS）系统** · Domain Name Service (DNS) system, 1084, 1085 <!-- SOURCE pdf-1339-b037 -->
+- **属性的域** · domain of attributes, 39–40, 249 
+- **双缓冲** · double buffering, 725 
+- **双流水线散列连接** · double-pipelined hash-join, 731 
+- **双流水线连接技术** · double-pipelined join technique, 730–731 <!-- SOURCE pdf-1339-b038 -->
+- **双重支付事务** · double-spend transactions, 1261–1262, 1264 <!-- SOURCE pdf-1339-b039 -->
+- **锁降级** · downgrade, 843 <!-- SOURCE pdf-1339-b040 -->
+- **下钻** · drill down, 531, 540 
+- **DriverManager 类** · DriverManager class, 186 
+- **drop index：删除索引** · drop index, 165, 664 
+- **drop schema：删除模式** · drop schema, 163 
+- **drop table：删除表** · drop table, 69, 71, 190 
+- **drop trigger：删除触发器** · drop trigger, 210 
+- **drop type：删除类型** · drop type, 159 
+- **转储** · dumping, 930–931 
+- **重复消除** · duplicate elimination, 719–720, 1049 <!-- SOURCE pdf-1339-b041 -->
+- **持久性** · durability 
+    - 定义 · defined, 800 <!-- SOURCE pdf-1339-b042 -->
+    - 单站点安全（one-safe） · one-safe, 933 
+    - 与远程备份系统的关系 · remote backup systems and, 933–934 <!-- SOURCE pdf-1339-b043 -->
+    - 与存储结构的关系 · storage structure and, 804–805 <!-- SOURCE pdf-1339-b044 -->
+    - 事务的持久性 · of transactions, 20–21, 800–807 <!-- SOURCE pdf-1339-b045 -->
+    - 双站点安全（two-safe） · two-safe, 934 
+    - 双站点严格安全（two-very-safe） · two-very-safe, 933 
+- **DVD（数字视频光盘）** · DVDs (digital video disks), 560–561 <!-- SOURCE pdf-1339-b046 -->
+- **连接倾斜的动态处理** · dynamic handling of join skew, 1048 <!-- SOURCE pdf-1339-b047 -->
+- **动态散列** · dynamic hashing, 661, 1195–1203 <!-- SOURCE pdf-1339-b048 -->
+- **动态规划算法** · dynamic-programming algorithm, 767 <!-- SOURCE pdf-1339-b049 -->
+- **动态重新分区** · dynamic repartitioning, 1010–1013 <!-- SOURCE pdf-1339-b050 -->
+- **动态 SQL** · dynamic SQL, 66, 184, 201 
+- **Dynamo** · Dynamo, 477, 489, 1024 
+
+## E {#index-e}
+
+- **Eclipse** · Eclipse, 416 <!-- SOURCE pdf-1339-b051 -->
+- **电子商务与流式数据** · e-commerce, streaming data and, 501 <!-- SOURCE pdf-1339-b052 -->
+- **边缘交换机** · edge switches, 977 
+- **数据库效率** · efficiency of databases, 1, 2, 5, 9 
+- **电子政务** · e-government, 1277 
+- **弹性** · elasticity, 992, 1010, 1024 
+- **选举算法** · election algorithms, 1147 
+- **电梯算法** · elevator algorithm, 578 
+- **嵌入式数据库** · embedded databases, 198, 962 
+- **嵌入式多值依赖** · embedded multivalued dependencies, 341 <!-- SOURCE pdf-1339-b053 -->
+- **嵌入式 SQL** · embedded SQL, 66, 184, 197–198, 965, 1269 <!-- SOURCE pdf-1339-b054 -->
+- **空关系测试** · empty relations test, 101–102 
+- **加密** · encryption <!-- SOURCE pdf-1340-b001 -->
+    - 高级加密标准 · Advanced Encryption Standard, 448, 449 <!-- SOURCE pdf-1340-b002 --><!-- SOURCE pdf-1340-b003 -->
+    - 加密的应用 · applications of, 447–453 
+    - 非对称密钥加密 · asymmetric-key, 448 
+    - 与身份认证的关系 · authentication and, 450–453 
+    - 与区块链数据库的关系 · blockchain databases and, 1260–1261 <!-- SOURCE pdf-1340-b004 -->
+    - 与质询—响应系统的关系 · challenge-response system and, 451 <!-- SOURCE pdf-1340-b005 -->
+    - 与数据库支持的关系 · database support and, 449–450 <!-- SOURCE pdf-1340-b006 -->
+    - 与字典攻击的关系 · dictionary attacks and, 449 
+    - 与数字证书的关系 · digital certificates and, 451–453 <!-- SOURCE pdf-1340-b007 -->
+    - 与数字签名的关系 · digital signatures and, 451 
+    - 与不可否认性的关系 · nonrepudiation and, 451 
+    - 与素数的关系 · prime numbers and, 449 
+    - 私钥加密 · private-key, 1260–1261 
+    - 公钥加密 · public-key, 448–449, 1260–1261 <!-- SOURCE pdf-1340-b008 -->
+    - 与 Rijndael 算法的关系 · Rijndael algorithm and, 448 
+    - 对称密钥加密 · symmetric-key, 448 
+    - 加密技术 · techniques of, 447–449 
+- **end transaction 操作** · end transaction operation, 799 
+- **最终用户信息** · end-user information, 443 
+- **企业信息的数据库应用** · enterprise information, database applications for, 2–4 <!-- SOURCE pdf-1340-b009 -->
+- **实体** · entities, 243, 244, 247–248 
+- **实体组** · entity group, 1031 
+- **实体识别** · entity recognition, 549 
+- **实体—联系（E-R）图** · entity-relationship (E-R) diagrams <!-- SOURCE pdf-1340-b010 -->
+    - 与聚集的关系 · aggregation and, 279 
+    - 数据建模的其他记法 · alternative notations for modeling data, 285–291 <!-- SOURCE pdf-1340-b011 -->
+    - 常见错误 · common mistakes in, 280–281 <!-- SOURCE pdf-1340-b012 -->
+    - 与复杂属性的关系 · complex attributes and, 265–267 <!-- SOURCE pdf-1340-b013 -->
+    - 定义 · defined, 244 
+    - 与实体集的关系 · entity sets and, 245–246, 265–268 <!-- SOURCE pdf-1340-b014 -->
+    - 与概化的关系 · generalization and, 278–279 
+    - 参与约束的图示 · participation illustrated by, 255 <!-- SOURCE pdf-1340-b015 -->
+    - 转换为关系模式 · reduction to relational schema, 264–271, 277–279 <!-- SOURCE pdf-1340-b016 -->
+    - 与联系集的关系 · relationship sets and, 247–250, 268–271 <!-- SOURCE pdf-1340-b017 -->
+    - 与统一建模语言的关系 · Unified Modeling Language and, 289–291 <!-- SOURCE pdf-1340-b018 --><!-- SOURCE pdf-1340-b019 -->
+    - 大学机构的 E-R 图 · for university enterprise, 263–264 <!-- SOURCE pdf-1340-b020 -->
+    - 含弱实体集的 E-R 图 · with weak entity set, 260 
+- **实体—联系（E-R）模型** · entity-relationship (E-R) model, 244–291 <!-- SOURCE pdf-1340-b021 -->
+    - 与聚集的关系 · aggregation and, 276–277 
+    - 数据建模的其他记法 · alternative notations for modeling data, 285–291 <!-- SOURCE pdf-1340-b022 -->
+    - 与原子域的关系 · atomic domains and, 342–343 
+    - 与属性的关系 · attributes and, 245, 248–252, 274–275, 281–282, 342–343 <!-- SOURCE pdf-1340-b023 -->
+    - 与约束的关系 · constraints and, 253–256, 275–276 <!-- SOURCE pdf-1340-b024 -->
+    - 数据库设计；见“数据库设计” · database design and (see database design) <!-- SOURCE pdf-1340-b025 -->
+    - 与设计问题的关系 · design issues and, 279–285 
+    - 发展 · development of, 244 
+    - 图；见“实体—联系图” · diagrams (see entity-relationship diagrams) <!-- SOURCE pdf-1340-b026 -->
+    - 与实体集的关系 · entity sets and, 244–246, 261–264, 281–283 <!-- SOURCE pdf-1340-b027 -->
+    - 扩展特性 · extended features, 271–279 
+    - 与概化的关系 · generalization and, 273–274 
+    - 与映射基数的关系 · mapping cardinalities and, 252–256 <!-- SOURCE pdf-1340-b028 -->
+    - 与规范化的关系 · normalization and, 344–345 
+    - 概述 · overview, 8 
+    - 与主键的关系 · primary keys and, 256–260 
+    - 与冗余的关系 · redundancy and, 261–264 
+    - 与联系集的关系 · relationship sets and, 246–249, 282–285 <!-- SOURCE pdf-1340-b029 -->
+    - 与模式的关系 · schemas and, 244, 246, 269–270, 277–279 <!-- SOURCE pdf-1340-b030 -->
+    - 与特化的关系 · specialization and, 271–273 
+    - 与统一建模语言的关系 · Unified Modeling Language and, 288–291 <!-- SOURCE pdf-1340-b031 -->
+- **实体集** · entity sets 
+    - 其他记法 · alternative notations for, 285–291 <!-- SOURCE pdf-1340-b032 --><!-- SOURCE pdf-1340-b033 -->
+    - 与属性的关系 · attributes and, 245, 265–267, 281–282 <!-- SOURCE pdf-1340-b034 -->
+    - 定义 · defined, 245 
+    - 与设计问题的关系 · design issues and, 281–283 
+    - 与实体—联系图的关系 · entity-relationship diagrams and, 245–246, 265–268 <!-- SOURCE pdf-1340-b035 -->
+    - 与实体—联系（E-R）模型的关系 · entity-relationship (E-R) model and, 244–246, 261–264, 281–283 <!-- SOURCE pdf-1340-b036 --><!-- SOURCE pdf-1340-b037 -->
+    - 实体集的外延 · extension of, 245 
+    - 实体集的层次结构 · hierarchies of, 273, 275 
+    - 标识实体集 · identifying, 259 
+    - 与主键的关系 · primary keys and, 257 
+    - 性质 · properties of, 244–246 
+    - 与联系集的关系 · relationship sets and, 246–249, 282–283 <!-- SOURCE pdf-1340-b038 -->
+    - 消除实体集中的冗余 · removing redundancy in, 261–264 <!-- SOURCE pdf-1340-b039 -->
+    - 表示方法 · representation of, 265–268 
+    - 强实体集 · strong, 259, 265–267 
+    - 子类 · subclass, 274 
+    - 超类 · superclass, 274 
+    - 与统一建模语言的关系 · Unified Modeling Language and, 288–291 <!-- SOURCE pdf-1340-b040 -->
+    - 与值的关系 · value and, 245 
+    - 弱实体集 · weak, 259–260, 267–268 
+- **条目** · entries, 1241 
+- **等式生成依赖** · equality-generating dependencies, 337 <!-- SOURCE pdf-1340-b041 -->
+- **等深直方图** · equi-depth histograms, 759 
+- **等值连接** · equi-joins, 704, 707–713, 718, 722, 730, 1043 <!-- SOURCE pdf-1340-b042 -->
+- **等价性** · equivalence 
+    - 冲突等价 · conflict, 815, 815n2 <!-- SOURCE pdf-1340-b043 -->
+    - 与代价分析的关系 · cost analysis and, 771 
+    - 表达式枚举 · enumeration of expressions, 755–757 <!-- SOURCE pdf-1340-b044 -->
+    - 与连接排序的关系 · join ordering and, 754–755 
+    - 与关系代数的关系 · relational algebra and, 58, 747–757 <!-- SOURCE pdf-1340-b045 -->
+    - 变换示例 · transformation examples for, 752–754 <!-- SOURCE pdf-1340-b046 -->
+    - 视图等价 · view, 818, 818n4 
+- **等价规则** · equivalence rules, 747–752, 754, 771 <!-- SOURCE pdf-1340-b047 -->
+- **等价查询** · equivalent queries, 58 
+- **等宽直方图** · equi-width histograms, 759 
+- **擦除块** · erase block, 568 
+- **E-R 图；见“实体—联系图”** · E-R diagrams. See entity-relationship diagrams <!-- SOURCE pdf-1340-b048 -->
+- **E-R 模型；见“实体—联系（E-R）模型”** · E-R model. See entity-relationship (E-R) model <!-- SOURCE pdf-1340-b049 -->
+- **转义** · escape, 83 
+- **以太坊** · Ethereum, 1258, 1262, 1265, 1267–1272, 1274 <!-- SOURCE pdf-1340-b050 -->
+- **以太网** · Ethernet, 978 
+- **ETL（抽取、转换和加载）任务** · ETL (extract, transform and load) tasks, 520, 524 <!-- SOURCE pdf-1341-b001 --><!-- SOURCE pdf-1341-b002 -->
+- **求值原语** · evaluation primitive, 691 
+- **最终一致性** · eventual consistency, 1016, 1139 
+- **every 函数** · every function, 96 
+- **被逐出的块** · evicted blocks, 605 
+- **恰好一次语义** · exactly-once semantics, 1074 
+- **except all** · except all, 89, 97 
+- **except 子句** · except clause, 216 
+- **except 结构** · except construct, 102 
+- **异常条件** · exception conditions, 202 
+- **异常** · exceptions, 187 
+- **except 运算** · except operation, 88–89 
+- **exchange 算子模型** · exchange-operator model, 1055–1057 <!-- SOURCE pdf-1341-b003 -->
+- **排他锁** · exclusive locks 
+    - 与偏向协议的关系 · biased protocol and, 1124 <!-- SOURCE pdf-1341-b004 -->
+    - 与并发控制的关系 · concurrency control and, 835–843, 888, 892, 893 <!-- SOURCE pdf-1341-b005 -->
+    - 与二级一致性的关系 · degree-two consistency and, 880 <!-- SOURCE pdf-1341-b006 -->
+    - 与基于图协议的关系 · graph-based protocols and, 846–847 <!-- SOURCE pdf-1341-b007 -->
+    - 与多粒度的关系 · multiple granularity and, 854–855 <!-- SOURCE pdf-1341-b008 -->
+    - 多版本排他锁 · multiversion, 871 
+    - 与恢复系统的关系 · recovery systems and, 916 
+    - 与事务的关系 · transactions and, 825, 928 
+- **排他模式锁** · exclusive-mode locks, 835, 842 
+- **EXEC SQL** · EXEC SQL, 197 
+- **执行权限** · execute privilege, 169–170 
+- **执行倾斜** · execution skew, 1007, 1008, 1043 <!-- SOURCE pdf-1341-b009 -->
+- **存在位图** · existence bitmaps, 1184 
+- **存在依赖** · existence dependence, 259 
+- **exists 结构** · exists construct, 101, 102, 108 
+- **租约到期** · expiration of leases, 1115 
+- **explain 命令** · explain command, 746 
+- **显式锁** · explicit locks, 854 
+- **可扩展散列** · extendable hashing, 661, 1195, 1196 <!-- SOURCE pdf-1341-b010 -->
+- **可扩展标记语言；见“XML”** · Extensible Markup Language. See XML <!-- SOURCE pdf-1341-b011 -->
+- **实体集的外延** · extension of entity sets, 245 
+- **区段（块）** · extent (blocks), 579 
+- **外部一致性** · external consistency, 1131 
+- **外部数据** · external data, 1077 
+- **外部语言例程** · external language routines, 203–206 <!-- SOURCE pdf-1341-b012 -->
+- **外部排序** · external sorting, 701 
+- **外部排序—归并算法** · external sort-merge algorithm, 701–704 <!-- SOURCE pdf-1341-b013 --><!-- SOURCE pdf-1341-b014 -->
+- **抽取、转换和加载（ETL）任务** · extract, transform and load (ETL) tasks, 520, 524 <!-- SOURCE pdf-1341-b015 -->
+- **无关属性** · extraneous attributes, 325 
+- **无关函数依赖** · extraneous functional dependencies, 324 <!-- SOURCE pdf-1341-b016 -->
+
+## F {#index-f}
+
+- **阶乘** · factorials, 811 <!-- SOURCE pdf-1341-b017 -->
+- **事实表** · fact tables, 524 
+- **失败事务** · failed transactions, 806, 907, 909 <!-- SOURCE pdf-1341-b018 -->
+- **故障即停假设** · fail-stop assumption, 908, 1267 
+- **故障恢复** · failure recovery, 21 
+- **假环** · false cycles, 1114–1115 
+- **假阳性** · false positives, 1083 
+- **假值** · false values, 96 
+- **扇出** · fanout, 635 
+- **胖树拓扑** · fat-tree topology, 977 
+- **容错** · fault tolerance 
+    - 与区块链数据库的关系 · blockchain databases and, 1276 <!-- SOURCE pdf-1341-b019 --><!-- SOURCE pdf-1341-b020 -->
+    - 与地理分布的关系 · geographic distribution and, 1027 <!-- SOURCE pdf-1341-b021 -->
+    - 与互连网络的关系 · interconnection networks and, 978 <!-- SOURCE pdf-1341-b022 -->
+    - 与 MapReduce 范式的关系 · MapReduce paradigm and, 1060–1061 <!-- SOURCE pdf-1341-b023 -->
+    - 查询求值计划中的容错 · in query-evaluation plans, 1059–1061 <!-- SOURCE pdf-1341-b024 -->
+    - 与复制状态机的关系 · replicated state machines and, 1158–1161 <!-- SOURCE pdf-1341-b025 -->
+    - 与共享磁盘架构的关系 · shared-disk architecture and, 984 <!-- SOURCE pdf-1341-b026 -->
+    - 流式数据的容错 · with streaming data, 1074–1076 <!-- SOURCE pdf-1341-b027 -->
+    - 与更新的关系 · updates and, 1138 
+- **容错键值存储** · fault-tolerant key-value store, 1160 <!-- SOURCE pdf-1341-b028 -->
+- **容错锁管理器** · fault-tolerant lock manager, 1160 
+- **联邦分布式数据库** · federated distributed databases, 988, 1076–1077, 1132–1133 <!-- SOURCE pdf-1341-b029 -->
+- **取回数据；另见“信息检索”** · fetching. See also information retrieval <!-- SOURCE pdf-1341-b030 -->
+    - 与高级 SQL 的关系 · advanced SQL and, 187–188, 193, 195–197, 202, 205, 222 <!-- SOURCE pdf-1341-b031 -->
+    - 与应用设计的关系 · application design and, 421–427, 431, 437, 1218, 1229 <!-- SOURCE pdf-1341-b032 -->
+    - 由缓冲区管理器取回 · by buffer manager, 19 <!-- SOURCE pdf-1341-b033 -->
+    - 与数据仓库的关系 · data warehousing and, 526 
+    - 与大对象类型的关系 · large-object types and, 156, 158 <!-- SOURCE pdf-1341-b034 -->
+    - 预取 · prefetching, 969 
+    - 与存储的关系 · storage and, 567, 572, 587 
+- **法定货币** · fiat currencies, 1252, 1273 
+- **光纤通道（FC）接口** · Fiber Channel FC interface, 563 
+- **光纤通道协议** · Fiber Channel Protocol, 978 
+- **第五范式** · fifth normal form, 341 
+- **文件头** · file headers, 590–591 
+- **文件管理器** · file manager, 19 
+- **文件组织** · file organization, 588–602 
+    - 二进制大对象（BLOB） · blobs, 156, 193, 594, 652 <!-- SOURCE pdf-1341-b035 -->
+    - 与块的关系 · blocks and, 579, 588 
+    - B+ 树文件组织 · B+-tree, 595, 650–652, 697, 697n4 <!-- SOURCE pdf-1341-b036 -->
+    - 字符大对象（CLOB） · clobs, 156, 193, 594, 652 
+    - 分布式文件组织 · distributed, 472–475, 489, 1003, 1019–1022 <!-- SOURCE pdf-1341-b037 -->
+    - 与定长记录的关系 · fixed-length records and, 589–592 <!-- SOURCE pdf-1341-b038 -->
+    - 散列文件组织 · hash, 595, 659 
+    - 堆文件组织 · heap file organization, 595–597 <!-- SOURCE pdf-1341-b039 -->
+    - 索引；见“索引” · indexing and (see indices) 
+    - 日志文件系统 · journaling systems, 610 
+    - 与大对象的关系 · large objects and, 594–595 
+    - 多表聚集 · multitable clustering, 595, 598–601 <!-- SOURCE pdf-1341-b040 -->
+    - 与空值的关系 · null values and, 593 
+    - 与分区的关系 · partitioning and, 601–602 
+    - 与指针的关系 · pointers and, 588, 591, 594–598, 601 <!-- SOURCE pdf-1341-b041 -->
+    - 重组 · reorganization, 598 
+    - 顺序文件组织 · sequential, 595, 597–598 
+    - 与变长记录的关系 · variable-length records and, 592–594 <!-- SOURCE pdf-1341-b042 -->
+- **文件处理系统** · file-processing systems, 5–8 
+- **文件扫描** · file scans, 695–697, 704–707, 727 <!-- SOURCE pdf-1341-b043 -->
+- **文件系统一致性检查** · file system consistency check, 610 
+- **金融业的数据库应用** · financial sector, database applications for, 3, 1279 <!-- SOURCE pdf-1341-b044 -->
+- **细粒度加锁** · fine-grained locking, 947 
+- **细粒度并行** · fine-grained parallelism, 963, 970 
+- **坚实截止时间** · firm deadlines, 894 
+- **先提交者胜出** · first committer wins, 874 
+- **第一范式（1NF）** · first normal form (1NF), 342–343 <!-- SOURCE pdf-1341-b045 -->
+- **先更新者胜出** · first updater wins, 874–875 <!-- SOURCE pdf-1342-b001 -->
+- **五分钟规则** · five minute rule, 1229 
+- **定长记录** · fixed-length records, 589–592 
+- **递归视图定义的不动点** · fixed point of recursive view definition, 217 <!-- SOURCE pdf-1342-b002 -->
+- **将闪存用作缓冲区的方法** · flash-as-buffer approach, 1229 
+- **闪存** · flash memory, 567–570 
+    - 成本 · cost of, 560 <!-- SOURCE pdf-1342-b003 -->
+    - 与擦除块的关系 · erase block and, 568 
+    - 混合闪存 · hybrid, 569–570 
+    - 闪存上的索引 · indexing on, 656–657 
+    - 与 LSM 树的关系 · LSM trees and, 1182 
+    - NAND 闪存 · NAND, 567–568 
+    - NOR 闪存 · NOR, 567 
+    - 与磨损均衡的关系 · wear leveling and, 568 
+- **闪存转换层** · flash translation layer, 568 
+- **flatMap 函数** · flatMap function, 496–498 
+- **灵活模式** · flexible schema, 366 
+- **FlinkCEP** · FlinkCEP, 504 
+- **float 浮点类型** · float, 67 
+- **Flutter 框架** · Flutter framework, 428 
+- **跟随者** · followers, 1155 
+- **强制写出** · forced output, 607, 912 
+- **强制写出策略** · force policy, 927 
+- **for 子句** · for clause, 534 
+- **for each row 子句** · for each row clause, 207–210, 212 <!-- SOURCE pdf-1342-b004 -->
+- **for each statement 子句** · for each statement clause, 76, 209–210 <!-- SOURCE pdf-1342-b005 -->
+- **外汇兑换** · foreign-currency exchange, 1277 
+- **外键** · foreign keys, 45–46, 69–70, 148–150, 267–268, 268n5 <!-- SOURCE pdf-1342-b006 -->
+- **外部表** · foreign tables, 1077 
+- **分叉** · forking, 1257, 1258, 1263 
+- **正式标准** · formal standards, 1237 
+- **第四范式（4NF）** · fourth normal form (4NF), 336, 339–341 <!-- SOURCE pdf-1342-b007 -->
+- **分片复制连接** · fragment-and-replicate joins, 1046–1047, 1062 <!-- SOURCE pdf-1342-b008 -->
+- **碎片化** · fragmentation, 579 
+- **空闲链表** · free lists, 591 
+- **空闲空间映射** · free-space maps, 596–597 
+- **from 子句** · from clause 
+    - 与聚集函数的关系 · aggregate functions and, 91–96 <!-- SOURCE pdf-1342-b009 --><!-- SOURCE pdf-1342-b010 -->
+    - 与基本 SQL 查询的关系 · basic SQL queries and, 71–79 
+    - 用于多个关系 · on multiple relations, 74–79 
+    - 多重集关系代数中的 from 子句 · in multiset relational algebra, 97 <!-- SOURCE pdf-1342-b011 -->
+    - 与空值的关系 · null values and, 90 
+    - 与查询优化的关系 · query optimization and, 775–777 <!-- SOURCE pdf-1342-b012 --><!-- SOURCE pdf-1342-b013 -->
+    - 与更名运算的关系 · rename operation and, 79, 81–82 <!-- SOURCE pdf-1342-b014 -->
+    - 与集合运算的关系 · set operations and, 85–89 
+    - 用于单个关系 · on single relation, 71–74 
+    - 与字符串运算的关系 · string operations and, 82–83 
+    - 与子查询的关系 · subqueries and, 104–105 
+- **全节点** · full nodes, 1256, 1268 
+- **全外连接** · full outer joins, 132–136, 722 
+- **函数依赖** · functional dependencies 
+    - 利用函数依赖进行分解的算法 · algorithms for decomposition using, 330–335 <!-- SOURCE pdf-1342-b015 --><!-- SOURCE pdf-1342-b016 -->
+    - 与属性集闭包的关系 · attribute set closure and, 322–324 <!-- SOURCE pdf-1342-b017 -->
+    - 与增广规则的关系 · augmentation rule and, 321 
+    - 与公理的关系 · axioms and, 321 
+    - 与 Boyce–Codd 范式的关系 · Boyce–Codd normal form and, 313–316, 330–333 <!-- SOURCE pdf-1342-b018 -->
+    - 与正则覆盖的关系 · canonical cover and, 324–328 
+    - 集合的闭包 · closure of a set, 320–324 
+    - 与分解规则的关系 · decomposition rule and, 321 
+    - 与保持依赖的关系 · dependency preservation and, 315–316, 328–330 <!-- SOURCE pdf-1342-b019 -->
+    - 无关函数依赖 · extraneous, 324 
+    - 与更高范式的关系 · higher normal forms and, 319 
+    - 与键的关系 · keys and, 309–312 
+    - 与无损分解的关系 · lossless decomposition and, 312–313 <!-- SOURCE pdf-1342-b020 -->
+    - 多值依赖 · multivalued, 336–341 
+    - 与记号约定的关系 · notational conventions and, 309 <!-- SOURCE pdf-1342-b021 -->
+    - 与伪传递规则的关系 · pseudotransitivity rule and, 321 <!-- SOURCE pdf-1342-b022 -->
+    - 与自反规则的关系 · reflexivity rule and, 321 
+    - 模式设计中的函数依赖 · in schema design, 145 
+    - 函数依赖理论 · theory of, 320–330 
+    - 与第三范式的关系 · third normal form and, 317–319, 333–335 <!-- SOURCE pdf-1342-b023 -->
+    - 与传递规则的关系 · transitivity rule and, 321 
+    - 平凡函数依赖 · trivial, 311 
+    - 与合并规则的关系 · union rule and, 321 
+- **由函数依赖确定的属性** · functionally determined attributes, 322–324 <!-- SOURCE pdf-1342-b024 -->
+- **函数式查询语言** · functional query language, 47 
+- **函数；另见各具体函数** · functions. See also specific functions <!-- SOURCE pdf-1342-b025 -->
+    - 函数声明 · declaring, 199–201 
+    - 与外部语言例程的关系 · external language routines and, 203–206 <!-- SOURCE pdf-1342-b026 -->
+    - 散列；见“散列函数” · hash (see hash functions) <!-- SOURCE pdf-1342-b027 -->
+    - 用于函数的语言结构 · language constructs for, 201–203 <!-- SOURCE pdf-1342-b028 -->
+    - 与语法的关系 · syntax and, 199, 201–205 
+    - 用 SQL 编写函数 · writing in SQL, 198–206 
+- **模糊检查点** · fuzzy checkpoints, 922, 930, 941 
+- **模糊转储** · fuzzy dump, 931 
+- **模糊查找** · fuzzy lookup, 523 
+
+## G {#index-g}
+
+- **事务的 Gas 概念** · gas concept for transactions, 1270–1271 <!-- SOURCE pdf-1342-b029 --><!-- SOURCE pdf-1342-b030 -->
+- **GAV（全局即视图）方法** · GAV (global-as-view) approach, 1078–1079 <!-- SOURCE pdf-1342-b031 -->
+- **概化** · generalization 
+    - 与属性继承的关系 · attribute inheritance and, 274–275 <!-- SOURCE pdf-1342-b032 --><!-- SOURCE pdf-1342-b033 -->
+    - 与自底向上设计的关系 · bottom-up design and, 273 
+    - 不相交概化 · disjoint, 279, 290 
+    - 与实体—联系（E-R）模型的关系 · entity-relationship (E-R) model and, 273–274 <!-- SOURCE pdf-1342-b034 -->
+    - 重叠概化 · overlapping, 279, 290 
+    - 部分概化 · partial, 275 
+    - 表示方法 · representation of, 278–279 
+    - 与子类集合的关系 · subclass set and, 274 
+    - 与超类集合的关系 · superclass set and, 274 
+    - 与自顶向下设计的关系 · top-down design and, 273 
+    - 全部概化 · total, 275 
+- **通用搜索树（GiST）** · Generalized Search Tree (GiST), 670 <!-- SOURCE pdf-1342-b035 -->
+- **创世区块** · genesis blocks, 1254–1255 
+- **跨地域分布式存储** · geographically distributed storage, 1026–1027 <!-- SOURCE pdf-1342-b036 -->
+- **地理数据** · geographic data 
+    - 应用 · applications of, 391–392 <!-- SOURCE pdf-1342-b037 -->
+    - 示例 · examples of, 387 
+    - 与叠加图层的关系 · overlays and, 393 
+    - 栅格数据 · raster data, 392 
+    - 表示方法 · representation of, 392–393 
+    - 子类型 · subtypes of, 390 
+    - 地形数据 · topographical, 393 
+    - 矢量数据 · vector data, 392–393 
+- **地理信息系统** · geographic information systems, 387 <!-- SOURCE pdf-1342-b038 -->
+- **几何数据** · geometric data, 388–390 
+- **getColumnCount 方法** · getColumnCount method, 191–192 <!-- SOURCE pdf-1342-b039 -->
+- **getConnection 方法** · getConnection method, 186, 186n1 <!-- SOURCE pdf-1342-b040 -->
+- **getFloat 方法** · getFloat method, 188 
+- **get 函数** · get function, 477–479 
+- **GET 方法** · GET method, 440 <!-- SOURCE pdf-1343-b001 -->
+- **getString 方法** · getString method, 188 
+- **GFS；见“Google 文件系统”** · GFS. See Google File System 
+- **GiST（通用搜索树）** · GiST (Generalized Search Tree), 670 <!-- SOURCE pdf-1343-b002 -->
+- **Glassfish** · Glassfish, 416 
+- **全局即视图（GAV）方法** · global-as-view (GAV) approach, 1078–1079 <!-- SOURCE pdf-1343-b003 -->
+- **全局索引** · global indices, 1017–1019 
+- **全球定位系统（GPS）** · Global Positioning System (GPS), 1130 <!-- SOURCE pdf-1343-b004 -->
+- **全局模式** · global schema, 1076, 1078–1079 
+- **全局事务** · global transactions, 988, 1098, 1132 <!-- SOURCE pdf-1343-b005 -->
+- **全局等待图** · global wait-for graphs, 1113–1114 <!-- SOURCE pdf-1343-b006 -->
+- **Google** · Google 
+    - 与应用设计的关系 · application design and, 406–408, 410, 428–429 <!-- SOURCE pdf-1343-b007 --><!-- SOURCE pdf-1343-b008 -->
+    - Bigtable · Bigtable, 477, 479–480, 668, 1024 <!-- SOURCE pdf-1343-b009 -->
+    - Google 的 PageRank · PageRank from, 385–386, 493, 510 <!-- SOURCE pdf-1343-b010 -->
+    - Google 开发的 Pregel 系统 · Pregel system developed by, 511 <!-- SOURCE pdf-1343-b011 -->
+    - Spanner · Spanner, 1160–1161 
+- **Google 文件系统（GFS）** · Google File System (GFS), 473, 474, 1020, 1022 <!-- SOURCE pdf-1343-b012 -->
+- **Google 地图** · Google Maps, 393 
+- **GPS（全球定位系统）** · GPS (Global Positioning System), 1130 <!-- SOURCE pdf-1343-b013 -->
+- **GPU（图形处理器）** · GPUs (graphics processing units), 1064 <!-- SOURCE pdf-1343-b014 -->
+- **grant 命令** · grant command, 170 
+- **granted by current role** · granted by current role, 172–173 
+- **授予权限** · grant privileges, 166–167, 170–171 <!-- SOURCE pdf-1343-b015 -->
+- **基于图的协议** · graph-based protocols, 846–848 
+- **图数据库** · graph databases, 508–511 
+- **图形处理器（GPU）** · graphics processing units (GPUs), 1064 <!-- SOURCE pdf-1343-b016 -->
+- **GraphX** · GraphX, 511 
+- **group by 子句** · group by clause, 92–96, 105, 142, 221, 227–230 <!-- SOURCE pdf-1343-b017 -->
+- **group by 结构** · group by construct, 534, 536–537 <!-- SOURCE pdf-1343-b018 -->
+- **group by cube** · group by cube, 536 
+- **group by rollup** · group by rollup, 537 
+- **成组提交技术** · group-commit technique, 925 
+- **grouping 函数** · grouping function, 536–537 
+- **grouping sets 结构** · grouping sets construct, 230, 538 <!-- SOURCE pdf-1343-b019 -->
+- **增长阶段** · growing phase, 841, 843 
+- **古斯塔夫森定律** · Gustafson’s law, 974 
+
+## H {#index-h}
+
+- **黑客；见“安全性”** · hackers. See security <!-- SOURCE pdf-1343-b020 -->
+- **Hadoop 文件系统（HDFS）** · Hadoop File System (HDFS), 473–475, 489–493, 971, 1020–1022 <!-- SOURCE pdf-1343-b021 -->
+- **万圣节问题** · Halloween problem, 785 
+- **异常处理程序** · handlers, 202 
+- **硬截止时间** · hard deadlines, 894 
+- **硬盘驱动器（HDD）；见“磁盘”** · hard disk drives (HDDs). See magnetic disks <!-- SOURCE pdf-1343-b022 -->
+- **硬盘** · hard disks, 26 
+- **硬分叉** · hard forks, 1257, 1258 
+- **硬件 RAID** · hardware RAID, 574–576 
+- **硬件线程** · hardware threads, 982 
+- **硬件调优** · hardware tuning, 1227–1230 
+- **调和平均数** · harmonic mean, 1231 
+- **散列文件组织** · hash file organization, 595, 659 
+- **散列函数** · hash functions 
+    - 与布隆过滤器的关系 · Bloom filters and, 1175–1176 <!-- SOURCE pdf-1343-b023 -->
+    - 闭散列 · closed, 659, 1194 
+    - 抗碰撞散列 · collision resistant, 1259–1260 
+    - 一致性散列 · consistent, 1013 
+    - 密码散列 · cryptographic, 1253, 1259–1263, 1265 <!-- SOURCE pdf-1343-b024 -->
+    - 定义 · defined, 624, 659 
+    - 删除 · deletion, 1190, 1194–1195, 1198 <!-- SOURCE pdf-1343-b025 -->
+    - 动态散列 · dynamic, 661, 1195–1203 
+    - 可扩展散列 · extendable, 661, 1195, 1196 
+    - 插入 · insertion, 1194–1195, 1197–1202 <!-- SOURCE pdf-1343-b026 -->
+    - 不可逆性 · irreversibility of, 1260 
+    - 与连接的关系 · joins and, 1045 
+    - 线性散列 · linear, 661, 1203 
+    - 查找 · lookup, 1197, 1198, 1202–1203 <!-- SOURCE pdf-1343-b027 -->
+    - 开散列 · open, 1194 
+    - 与分区的关系 · partitioning and, 1045 
+    - 与口令的关系 · passwords and, 1260n4 
+    - 与查询的关系 · queries and, 624, 1197–1202 
+    - 静态散列 · static, 661, 1190–1195, 1202–1203 <!-- SOURCE pdf-1343-b028 -->
+    - 与更新的关系 · updates and, 624, 1197–1202 
+- **散列索引** · hash indices 
+    - 与桶溢出的关系 · bucket overflow and, 659–660, 1194–1195 <!-- SOURCE pdf-1343-b029 --><!-- SOURCE pdf-1343-b030 -->
+    - 与有序索引的比较 · comparison with ordered indices, 1203 <!-- SOURCE pdf-1343-b031 -->
+    - 与数据结构的关系 · data structure and, 1195–1196 <!-- SOURCE pdf-1343-b032 -->
+    - 定义 · defined, 624 
+    - 与动态散列的关系 · dynamic hashing and, 661, 1195–1203 <!-- SOURCE pdf-1343-b033 -->
+    - 与可扩展散列的关系 · extendable hashing and, 661 
+    - 与文件组织的关系 · file organization and, 595, 659 <!-- SOURCE pdf-1343-b034 -->
+    - 与桶数量不足的关系 · insufficient buckets and, 1194 
+    - 与线性散列的关系 · linear hashing and, 661, 1203 
+    - 主存中的散列索引 · in main memory, 658–659 
+    - 与溢出链的关系 · overflow chaining and, 659–660 <!-- SOURCE pdf-1343-b035 -->
+    - 与倾斜的关系 · skew and, 660, 1194 
+    - 与静态散列的关系 · static hashing and, 661, 1190–1195, 1202–1203 <!-- SOURCE pdf-1343-b036 -->
+    - 调优 · tuning of, 1215 
+- **散列连接** · hash join 
+    - 基本原理 · basics of, 712–714 <!-- SOURCE pdf-1343-b037 -->
+    - 与构建输入的关系 · build input and, 713 
+    - 代价 · cost of, 715–717 
+    - 混合散列连接 · hybrid, 717–718 
+    - 与溢出的关系 · overflows and, 715 
+    - 与流水线的关系 · pipelining and, 728–731 
+    - 与探测输入的关系 · probe input and, 713 
+    - 与查询优化的关系 · query optimization and, 769, 771 <!-- SOURCE pdf-1343-b038 -->
+    - 与查询处理的关系 · query processing and, 712–718, 786, 1063 <!-- SOURCE pdf-1343-b039 -->
+    - 与递归分区的关系 · recursive partitioning and, 714–715 <!-- SOURCE pdf-1343-b040 -->
+    - 与分区倾斜的关系 · skewed partitioning and, 715 
+- **散列分区** · hash partitioning, 476, 1005–1007 <!-- SOURCE pdf-1343-b041 -->
+- **散列表溢出** · hash-table overflow, 715 
+- **散列树；见“默克尔树”** · hash trees. See Merkle trees 
+- **having 子句** · having clause, 95–96, 104–105, 142 <!-- SOURCE pdf-1343-b042 -->
+- **HBase** · HBase, 477, 480, 489, 668, 971, 1024, 1028–1031 <!-- SOURCE pdf-1343-b043 -->
+- **HDD（硬盘驱动器）；见“磁盘”** · HDDs (hard disk drives). See magnetic disks <!-- SOURCE pdf-1343-b044 -->
+- **HDFS；见“Hadoop 文件系统”** · HDFS. See Hadoop File System 
+- **磁头—磁盘组件** · head-disk assemblies, 565 
+- **医疗保健中的区块链应用** · health care, blockchain applications for, 1277–1278 <!-- SOURCE pdf-1343-b045 -->
+- **堆文件** · heap files, 595–597, 1203 
+- **心跳消息** · heart-beat messages, 1147 
+- **异构分布式数据库** · heterogeneous distributed databases, 988, 1132 <!-- SOURCE pdf-1343-b046 -->
+- **启发式方法** · heuristics, 766, 771–774, 786, 1189 <!-- SOURCE pdf-1344-b001 --><!-- SOURCE pdf-1344-b002 -->
+- **Hibernate 系统** · Hibernate system, 382, 431–433, 1240 <!-- SOURCE pdf-1344-b003 -->
+- **分层架构** · hierarchical architecture, 979, 980, 986 <!-- SOURCE pdf-1344-b004 -->
+- **层次聚类** · hierarchical clustering, 548 
+- **层次数据模型** · hierarchical data models, 26 
+- **层次结构** · hierarchies 
+    - 与交叉表的关系 · cross-tabulation and, 532 <!-- SOURCE pdf-1344-b005 -->
+    - 维上的层次结构 · on dimensions, 531 
+    - 实体集的层次结构 · of entity sets, 273, 275 
+    - 层次结构的关系表示 · relational representation of, 533 <!-- SOURCE pdf-1344-b006 -->
+    - 层次结构上的传递闭包 · transitive closures on, 214 
+- **高可用性** · high availability, 907, 931–933, 987, 1121 <!-- SOURCE pdf-1344-b007 -->
+- **高可用代理** · high availability proxy, 932–933 
+- **较高层级的锁** · higher-level locks, 935–936 
+- **更高范式** · higher normal forms, 319 
+- **直方图** · histograms 
+    - 与属性的关系 · attributes and, 758–760 <!-- SOURCE pdf-1344-b008 -->
+    - 用直方图近似分布 · distribution approximated by, 543 <!-- SOURCE pdf-1344-b009 -->
+    - 等深直方图 · equi-depth, 759 
+    - 等宽直方图 · equi-width, 759 
+    - 示例 · examples of, 758–759, 1009 
+    - 与连接结果大小估计的关系 · join size estimation and, 763–764 <!-- SOURCE pdf-1344-b010 -->
+    - 基于百分位数的直方图 · percentile-based, 223 
+    - 与随机样本的关系 · random samples and, 761 
+    - 与范围分区向量的关系 · range-partitioning vectors and, 1009 <!-- SOURCE pdf-1344-b011 -->
+    - 与选择结果大小估计的关系 · selection size estimation and, 760 <!-- SOURCE pdf-1344-b012 -->
+- **Hive** · Hive, 494, 495, 500 
+- **HOLAP（混合 OLAP）** · HOLAP (hybrid OLAP), 535 
+- **赫尔曼·霍尔瑞斯** · Hollerith, Herman, 25 
+- **同构分布式数据库** · homogeneous distributed databases, 988 <!-- SOURCE pdf-1344-b013 -->
+- **跳跃窗口** · hopping window, 505 
+- **水平分区** · horizontal partitioning, 1004, 1216–1217 <!-- SOURCE pdf-1344-b014 -->
+- **宿主语言** · host language, 16, 197 
+- **热备配置** · hot-spare configuration, 933 
+- **热插拔** · hot swapping, 575 
+- **按家庭归并** · householding, 523 
+- **HTML；见“超文本标记语言”** · HTML. See HyperText Markup Language <!-- SOURCE pdf-1344-b015 -->
+- **HTTP；见“超文本传输协议”** · HTTP. See HyperText Transfer Protocol <!-- SOURCE pdf-1344-b016 --><!-- SOURCE pdf-1344-b017 -->
+- **混合硬盘** · hybrid disk drives, 569–570 
+- **混合散列连接** · hybrid hash join, 717–718 
+- **混合归并连接算法** · hybrid merge-join algorithm, 712 
+- **混合 OLAP（HOLAP）** · hybrid OLAP (HOLAP), 535 
+- **行列混合存储** · hybrid row/column stores, 615 
+- **超立方体** · hypercubes, 976–977 
+- **Hyperledger Fabric** · Hyperledger Fabric, 1269, 1271 
+- **超链接** · hyperlinks, 385–386 
+- **超文本标记语言（HTML）** · HyperText Markup Language (HTML) <!-- SOURCE pdf-1344-b018 -->
+    - 与应用设计的关系 · application design and, 404, 406–408, 426 <!-- SOURCE pdf-1344-b019 -->
+    - 与客户端脚本的关系 · client-side scripting and, 421 
+    - 与 Java Server Pages 的关系 · Java Server Pages and, 417–418 <!-- SOURCE pdf-1344-b020 -->
+    - 与安全性的关系 · security and, 439, 440 
+    - 与服务器端脚本的关系 · server-side scripting and, 416–418 <!-- SOURCE pdf-1344-b021 -->
+    - 与样式表的关系 · stylesheets and, 408 
+    - 与 Web 会话的关系 · web sessions and, 408–411 
+- **超文本传输协议（HTTP）** · HyperText Transfer Protocol (HTTP) <!-- SOURCE pdf-1344-b022 -->
+    - 与应用设计的关系 · application design and, 405–413 <!-- SOURCE pdf-1344-b023 -->
+    - 无连接特性 · connectionless nature of, 409–410 <!-- SOURCE pdf-1344-b024 -->
+    - 与中间人攻击的关系 · man-in-the-middle attacks and, 442 <!-- SOURCE pdf-1344-b025 -->
+    - 与表述性状态转移的关系 · Representation State Transfer and, 426 <!-- SOURCE pdf-1344-b026 -->
+    - 与安全性的关系 · security and, 440, 452 
+- **超线程** · hyper-threading, 982 
+- **虚拟机监控器** · hypervisor, 994 
+
+## I {#index-i}
+
+- **IBM DB2** · IBM DB2 <!-- SOURCE pdf-1344-b027 -->
+    - 与高级 SQL 的关系 · advanced SQL and, 206 <!-- SOURCE pdf-1344-b028 -->
+    - 历史 · history of, 26 
+    - DB2 中的 limit 子句 · limit clause in, 222 
+    - 与查询优化的关系 · query optimization and, 774, 783 <!-- SOURCE pdf-1344-b029 -->
+    - 空间扩展器 · Spatial Extender, 388 
+    - 与统计分析的关系 · statistical analysis and, 761 
+    - 与触发器语法的关系 · trigger syntax and, 212 
+    - 支持的类型与域 · types and domains supported by, 160 <!-- SOURCE pdf-1344-b030 -->
+- **ICO（首次代币发行）** · ICOs (initial coin offerings), 1272 <!-- SOURCE pdf-1344-b031 -->
+- **IDEF1X 标准** · IDEF1X standard, 288 
+- **IDE（集成开发环境）** · IDE (integrated development environment), 416 <!-- SOURCE pdf-1344-b032 --><!-- SOURCE pdf-1344-b033 -->
+- **幂等操作** · idempotent operations, 937 
+- **标识符** · identifiers 
+    - 块标识符 · block, 474–475, 1020 <!-- SOURCE pdf-1344-b034 -->
+    - 数据项标识符 · data-item, 913 
+    - 与索引的关系 · indices and, 700 
+    - 与日志记录的关系 · log records and, 913 
+    - 与查询处理的关系 · query processing and, 700 
+    - 与选择的关系 · selection and, 700 
+    - 事务标识符 · transaction, 913 
+- **标识实体集** · identifying entity sets, 259 
+- **标识联系** · identifying relationship, 259–260 
+- **identity 声明** · identity declaration, 1226 
+- **identity 说明** · identity specification, 161 
+- **身份盗用** · identity theft, 447 
+- **IDF（逆文档频率）** · IDF (inverse document frequency), 384 <!-- SOURCE pdf-1344-b035 -->
+- **IEEE（电气与电子工程师协会）** · IEEE (Institute of Electrical and Electronics Engineers), 1237 <!-- SOURCE pdf-1344-b036 -->
+- **if 子句** · if clauses, 212 
+- **if-then-else 语句** · if-then-else statements, 202 
+- **立即修改技术** · immediate-modification technique, 915 <!-- SOURCE pdf-1344-b037 -->
+- **立即视图维护** · immediate view maintenance, 779, 1215–1216 <!-- SOURCE pdf-1344-b038 -->
+- **命令式查询语言** · imperative query language, 47 
+- **隐式锁** · implicit locks, 854–855 
+- **数据库设计不完整** · incompleteness in database design, 243–244 <!-- SOURCE pdf-1344-b039 -->
+- **不一致的数据** · inconsistent data, 6 
+- **不一致状态** · inconsistent state, 802, 803, 812 
+- **in 结构** · in construct, 99 
+- **增量视图维护** · incremental view maintenance, 779–782 <!-- SOURCE pdf-1344-b040 -->
+- **增量锁** · increment lock, 892–893 
+- **增量操作** · increment operation, 892 
+- **独立并行** · independent parallelism, 1054–1055 <!-- SOURCE pdf-1344-b041 -->
+- **索引嵌套循环连接** · indexed nested-loop join, 707–708, 728 <!-- SOURCE pdf-1344-b042 -->
+- **索引条目** · index entries, 626 
+- **字符串索引** · indexing strings, 653 
+- **索引加锁协议** · index-locking protocol, 860 
+- **索引加锁技术** · index-locking technique, 860 
+- **索引记录** · index records, 626 
+- **索引扫描** · index scans, 696, 698–699, 769, 769n2 <!-- SOURCE pdf-1344-b043 -->
+- **索引顺序文件** · index-sequential files, 625, 634–635 <!-- SOURCE pdf-1345-b001 --><!-- SOURCE pdf-1345-b002 -->
+- **索引** · indices, 623–676, 1175–1203 
+    - 与访问时间的关系 · access time and, 624, 627–628 <!-- SOURCE pdf-1345-b003 --><!-- SOURCE pdf-1345-b004 -->
+    - 与访问类型的关系 · access types and, 624 
+    - 相关基本概念 · basic concepts related to, 623–624 <!-- SOURCE pdf-1345-b005 -->
+    - 位图；见“位图索引” · bitmap (see bitmap indices) 
+    - 与布隆过滤器的关系 · Bloom filters and, 667, 1175–1176, 1181 <!-- SOURCE pdf-1345-b006 -->
+    - B+ 树；见“B+ 树” · B+-tree (see B+-trees) 
+    - 与缓冲树的关系 · buffer trees and, 668–670 
+    - 批量加载 · bulk loading of, 653–655 
+    - 聚集索引 · clustering, 625, 632–633, 695, 697–698 <!-- SOURCE pdf-1345-b007 -->
+    - 与比较的关系 · comparisons and, 698–699 
+    - 复合索引 · composite, 700 
+    - 与并发控制的关系 · concurrency control and, 884–887 <!-- SOURCE pdf-1345-b008 -->
+    - 覆盖索引 · covering, 663 
+    - 索引创建 · creation of, 664–665, 884–885 <!-- SOURCE pdf-1345-b009 -->
+    - 定义 · defined, 19 
+    - SQL 中的索引定义 · definition in SQL, 164–165, 664–665 <!-- SOURCE pdf-1345-b010 -->
+    - 与删除时间的关系 · deletion time and, 624, 631–632, 641, 645–649 <!-- SOURCE pdf-1345-b011 -->
+    - 稠密索引 · dense, 626–628, 630–631 
+    - 闪存上的索引 · on flash storage, 656–657 
+    - 通用搜索树 · Generalized Search Tree, 670 
+    - 全局索引 · global, 1017–1019 
+    - 散列；见“散列索引” · hash (see hash indices) 
+    - 与标识符的关系 · identifiers and, 700 
+    - 与插入时间的关系 · insertion time and, 624, 630–631, 641–645, 647, 649 <!-- SOURCE pdf-1345-b012 -->
+    - 倒排索引 · inverted, 721 
+    - 与键值存储的关系 · key-value stores and, 1028 
+    - 与线性搜索的关系 · linear search and, 695 
+    - 局部索引 · local, 1017 
+    - 与 LSM 树的关系 · LSM trees and, 666–668, 1176–1182, 1215 <!-- SOURCE pdf-1345-b013 -->
+    - 主存中的索引 · in main memory, 657–658 
+    - 与物化视图的关系 · materialized views and, 783 
+    - 多级索引 · multilevel, 628–630 
+    - 与多键访问的关系 · multiple-key access and, 633–634, 661–663 <!-- SOURCE pdf-1345-b014 -->
+    - 非聚集索引 · nonclustering, 625, 695 
+    - 有序；见“有序索引” · ordered (see ordered indices) 
+    - 并行索引 · parallel, 1017–1019 <!-- SOURCE pdf-1345-b015 -->
+    - 与性能调优的关系 · performance tuning and, 1215 
+    - 与指针的关系 · pointers and, 700 
+    - 主索引 · primary, 625, 695, 1017–1018 
+    - 与查询处理的关系 · query processing and, 695–697 <!-- SOURCE pdf-1345-b016 -->
+    - 与记录迁移的关系 · record relocation and, 652–653 <!-- SOURCE pdf-1345-b017 -->
+    - 与搜索键的关系 · search keys and, 624–634 
+    - 辅助索引 · secondary, 625, 632–633, 652–653, 695–698, 1017–1019 <!-- SOURCE pdf-1345-b018 -->
+    - 与选择运算的关系 · selection operation and, 695–697, 783 <!-- SOURCE pdf-1345-b019 -->
+    - 顺序索引 · sequential, 625, 634–635 
+    - 与排序的关系 · sorting and, 701–704 
+    - 与空间开销的关系 · space overhead and, 624, 627–628, 634, 1202 <!-- SOURCE pdf-1345-b020 -->
+    - 稀疏索引 · sparse, 626–632 
+    - 与空间数据的关系 · spatial data and, 672–675, 1186–1190 <!-- SOURCE pdf-1345-b021 -->
+    - 与 SQL DDL 的关系 · SQL DDL and, 67 
+    - 分级合并索引 · stepped-merge, 667, 1179–1181 <!-- SOURCE pdf-1345-b022 -->
+    - 时态数据的索引 · of temporal data, 675–676 
+    - 与更新的关系 · updates and, 630–632 
+    - 写优化结构 · write-optimized structures, 665–670 <!-- SOURCE pdf-1345-b023 -->
+- **悬而未决的事务** · in-doubt transactions, 1105 
+- **不可行性** · infeasibility, 1259–1260 
+- **InfiniBand 标准** · Infiniband standard, 978 
+- **信息抽取** · information extraction, 549 
+- **信息检索；另见“查询”** · information retrieval. See also queries <!-- SOURCE pdf-1345-b024 -->
+    - 定义 · defined, 382 
+    - 与关键词的关系 · keywords and, 383 
+    - 效果衡量 · measuring effectiveness of, 386 <!-- SOURCE pdf-1345-b025 -->
+    - 与 PageRank 的关系 · PageRank and, 385–386 
+    - 与精确率的关系 · precision and, 386 
+    - 与召回率的关系 · recall and, 386 
+    - 与相关性排名的关系 · relevance ranking and, 383–386 <!-- SOURCE pdf-1345-b026 -->
+    - 与停用词的关系 · stop words and, 385 
+    - 与结构化数据查询的关系 · structured data queries and, 386–387 <!-- SOURCE pdf-1345-b027 -->
+    - 与 TF-IDF 方法的关系 · TF-IDF approach and, 384–385 <!-- SOURCE pdf-1345-b028 -->
+- **基础设施即服务模型** · infrastructure-as-a-service model, 991 <!-- SOURCE pdf-1345-b029 -->
+- **Ingres 系统** · Ingres system, 26 <!-- SOURCE pdf-1345-b030 -->
+- **继承** · inheritance 
+    - 属性继承 · attribute, 274–275 <!-- SOURCE pdf-1345-b031 -->
+    - 多重继承 · multiple, 275 
+    - 单继承 · single, 275 
+    - 与表的关系 · tables and, 379–380 
+    - 与类型的关系 · types and, 378–379 
+- **首次代币发行（ICO）** · initial coin offerings (ICOs), 1272 <!-- SOURCE pdf-1345-b032 -->
+- **初始化向量** · initialization vector, 449 
+- **初始延迟的完整性约束** · initially deferred integrity constraints, 151 <!-- SOURCE pdf-1345-b033 -->
+- **内连接** · inner joins, 132–136, 771 
+- **内层关系** · inner relation, 704 
+- **插入权限** · insert authorization, 14 
+- **插入** · insertion 
+    - 插入算法 · algorithm for, 1180–1181 <!-- SOURCE pdf-1345-b034 -->
+    - 与 B+ 树的关系 · B+-trees and, 641–645, 647, 649 <!-- SOURCE pdf-1345-b035 -->
+    - 与并发控制的关系 · concurrency control and, 857, 858 <!-- SOURCE pdf-1345-b036 -->
+    - 与数据库修改的关系 · database modification and, 110–111 <!-- SOURCE pdf-1345-b037 -->
+    - 与默认值的关系 · default values and, 156 
+    - 与散列的关系 · hashing and, 1194–1195, 1197–1202 <!-- SOURCE pdf-1345-b038 -->
+    - 与 LSM 树的关系 · LSM trees and, 1177–1178, 1180–1181 <!-- SOURCE pdf-1345-b039 -->
+    - 与有序索引的关系 · ordered indices and, 624, 630–631 <!-- SOURCE pdf-1345-b040 -->
+    - 与预备语句的关系 · prepared statements and, 188–190 <!-- SOURCE pdf-1345-b041 -->
+    - 与权限的关系 · privileges and, 166–167 
+    - 与 R 树的关系 · R-trees and, 1188–1189 
+    - 与向数据库发送 SQL 语句的关系 · shipping SQL statements to database and, 187 <!-- SOURCE pdf-1345-b042 -->
+    - 与 SQL 模式定义的关系 · SQL schema definition and, 69 <!-- SOURCE pdf-1345-b043 -->
+    - 与事务的关系 · transactions and, 801, 826 
+    - 与视图的关系 · views and, 141–143 
+- **实例；另见“训练实例”** · instances, 12, 309, 547. See also training instances <!-- SOURCE pdf-1345-b044 -->
+- **instead of 功能** · instead of feature, 143 
+- **电气与电子工程师协会（IEEE）** · Institute of Electrical and Electronics Engineers (IEEE), 1237 <!-- SOURCE pdf-1345-b045 -->
+- **保险理赔** · insurance claims, 1278 
+- **集成开发环境（IDE）** · integrated development environment (IDE), 416 <!-- SOURCE pdf-1345-b046 -->
+- **完整性约束** · integrity constraints 
+    - 添加约束 · add, 146 <!-- SOURCE pdf-1346-b001 -->
+    - 与 alter table 的关系 · alter table and, 146 
+    - 与断言的关系 · assertions and, 152–153 
+    - 约束命名 · assigning names to, 151 
+    - 授权 · authorization, 14 
+    - 与 check 子句的关系 · check clause and, 147–149, 152–153 <!-- SOURCE pdf-1346-b002 -->
+    - 与 create table 的关系 · create table and, 146–149 
+    - 延迟约束 · deferred, 151 
+    - 域约束 · domain, 13–14 
+    - 示例 · examples of, 145 
+    - 文件处理系统中的完整性约束 · in file-processing systems, 6 
+    - 与外键的关系 · foreign keys and, 148–150 
+    - 函数依赖；见“函数依赖” · functional dependencies (see functional dependencies) <!-- SOURCE pdf-1346-b003 -->
+    - not null 约束 · not null, 146, 150 
+    - 与主键的关系 · primary keys and, 147, 148 
+    - 参照完整性 · referential, 14, 46, 149–153, 207–208, 800 <!-- SOURCE pdf-1346-b004 -->
+    - 完整性约束的模式图 · schema diagrams of, 46–47 
+    - 单个关系上的约束 · on single relation, 146 
+    - 空间完整性约束 · spatial, 391 
+    - 与 SQL 的关系 · SQL and, 14–15, 66, 145–153 
+    - unique 约束 · unique, 147 
+    - 与用户定义类型的关系 · user-defined types and, 159–160 <!-- SOURCE pdf-1346-b005 -->
+    - 事务执行中违反约束 · violation during transactions, 151–152 <!-- SOURCE pdf-1346-b006 -->
+- **完整性管理器** · integrity manager, 19 
+- **Intel** · Intel, 569, 1064 
+- **意向排他（IX）模式** · intention-exclusive (IX) mode, 855 <!-- SOURCE pdf-1346-b007 -->
+- **意向锁模式** · intention lock modes, 855 
+- **意向共享（IS）模式** · intention-shard (IS) mode, 855 
+- **互连网络** · interconnection networks, 975–979 <!-- SOURCE pdf-1346-b008 -->
+- **有利的排序顺序** · interesting sort order, 770 
+- **相互干扰** · interference, 974, 1232 
+- **中间键** · intermediate keys, 1050 
+- **中级 SQL** · intermediate SQL, 125–173 
+    - 与授权的关系 · authorization and, 165–173 <!-- SOURCE pdf-1346-b009 -->
+    - 与 create table 扩展的关系 · create table extensions and, 162 <!-- SOURCE pdf-1346-b010 -->
+    - 日期／时间类型 · data/time types in, 154 
+    - 与默认值的关系 · default values and, 156 
+    - 与生成唯一键值的关系 · generating unique key values and, 160–161 <!-- SOURCE pdf-1346-b011 -->
+    - 索引定义 · index definition in, 164–165 
+    - 与完整性约束的关系 · integrity constraints and, 145–153 <!-- SOURCE pdf-1346-b012 -->
+    - 与连接表达式的关系 · join expressions and, 125–136 <!-- SOURCE pdf-1346-b013 -->
+    - 与大对象类型的关系 · large-object types and, 156, 158 <!-- SOURCE pdf-1346-b014 -->
+    - 与角色的关系 · roles and, 167–169 
+    - 模式、目录与环境 · schemas, catalogs, and environments, 162–163 <!-- SOURCE pdf-1346-b015 -->
+    - 与事务的关系 · transactions and, 143–145 
+    - 类型转换与格式化函数 · type conversion and formatting functions, 155–156 <!-- SOURCE pdf-1346-b016 -->
+    - 与用户定义类型的关系 · user-defined types and, 158–160 <!-- SOURCE pdf-1346-b017 -->
+    - 与视图的关系 · views and, 137–143 
+- **内部节点** · internal nodes, 635 
+- **国际标准化组织（ISO）** · International Organization for Standardization (ISO), 65, 1237, 1241 <!-- SOURCE pdf-1346-b018 -->
+- **互联网；见“万维网”** · Internet. See World Wide Web 
+- **物联网（IoT）** · Internet of Things (IoT), 470, 1278 <!-- SOURCE pdf-1346-b019 -->
+- **操作间并行** · interoperation parallelism, 1040, 1052–1055 <!-- SOURCE pdf-1346-b020 -->
+- **查询间并行** · interquery parallelism, 1039 
+- **intersect all** · intersect all, 88, 97 
+- **位图求交** · intersection of bitmaps, 671, 1183 <!-- SOURCE pdf-1346-b021 -->
+- **交集运算** · intersection operation, 750, 782 
+- **intersect 运算** · intersect operation, 54–55, 87–88 <!-- SOURCE pdf-1346-b022 -->
+- **interval 数据类型** · interval data type, 154 
+- **节点内分区** · intra-node partitioning, 1004 
+- **操作内并行** · intraoperation parallelism 
+    - 与聚集的关系 · aggregation and, 1049 <!-- SOURCE pdf-1346-b023 -->
+    - 定义 · defined, 1040 
+    - 与重复消除的关系 · duplicate elimination and, 1049 <!-- SOURCE pdf-1346-b024 -->
+    - 与 map 和 reduce 操作的关系 · map and reduce operations and, 1050–1052 <!-- SOURCE pdf-1346-b025 -->
+    - 与并行外部排序—归并的关系 · parallel external sort-merge and, 1042–1043 <!-- SOURCE pdf-1346-b026 -->
+    - 与并行连接的关系 · parallel join and, 1043–1048 
+    - 与并行排序的关系 · parallel sort and, 1041–1043 
+    - 与投影的关系 · projection and, 1049 
+    - 与范围分区排序的关系 · range-partitioning sort and, 1041–1042 <!-- SOURCE pdf-1346-b027 -->
+    - 与选择的关系 · selection and, 1049 
+- **查询内并行** · intraquery parallelism, 1039 
+- **失效通知** · invalidation reports, 1141 
+- **失效时间戳** · invalidation timestamps, 873n3 
+- **逆文档频率（IDF）** · inverse document frequency (IDF), 384 <!-- SOURCE pdf-1346-b028 --><!-- SOURCE pdf-1346-b029 -->
+- **倒排索引** · inverted indices, 721 
+- **每秒 I/O 操作数（IOPS）** · I/O operations per second (IOPS), 567, 577, 578, 693n3 <!-- SOURCE pdf-1346-b030 -->
+- **I/O 并行** · I/O parallelism 
+    - 与散列的关系 · hashing and, 1005–1007 <!-- SOURCE pdf-1346-b031 -->
+    - 与分区技术的关系 · partitioning techniques and, 1004–1007 <!-- SOURCE pdf-1346-b032 -->
+    - 与范围分区方案的关系 · range scheme and, 1005, 1007 
+    - 与轮转分区方案的关系 · round-robin scheme and, 1005, 1006 <!-- SOURCE pdf-1346-b033 -->
+- **IoT（物联网）** · IoT (Internet of Things), 470, 1278 <!-- SOURCE pdf-1346-b034 -->
+- **不可抵赖性** · irrefutability, 1257, 1259 
+- **不可逆性** · irreversibility, 1260 
+- **IS（意向共享）模式** · IS (intention-shard) mode, 855 
+- **is not null** · is not null, 89, 90 
+- **is not unknown** · is not unknown, 90 
+- **is null** · is null, 89 
+- **ISO（国际标准化组织）** · ISO (International Organization for Standardization), 65, 1237, 1241 <!-- SOURCE pdf-1346-b035 -->
+- **隔离性** · isolation 
+    - 与原子性的关系 · atomicity and, 819–821 <!-- SOURCE pdf-1346-b036 -->
+    - 与无级联调度的关系 · cascadeless schedules and, 820–821 <!-- SOURCE pdf-1346-b037 -->
+    - 与并发控制的关系 · concurrency control and, 803–804, 807–812, 823 <!-- SOURCE pdf-1346-b038 -->
+    - 数据隔离 · of data, 6 
+    - 定义 · defined, 800 
+    - 与阶乘的关系 · factorials and, 811 
+    - 与提高吞吐量的关系 · improved throughput and, 808 <!-- SOURCE pdf-1346-b039 -->
+    - 与不一致状态的关系 · inconsistent state and, 803 
+    - 隔离级别 · levels of, 821–826 
+    - 与加锁的关系 · locking and, 823–825 
+    - 与多版本的关系 · multiple versions and, 825–826 <!-- SOURCE pdf-1346-b040 -->
+    - 读已提交 · read committed, 1225 
+    - 与可恢复调度的关系 · recoverable schedules and, 819–820 <!-- SOURCE pdf-1346-b041 -->
+    - 与资源分配的关系 · resource allocation and, 808 
+    - 与可串行化性的关系 · serializability and, 821–826 
+    - 快照；见“快照隔离” · snapshot (see snapshot isolation) <!-- SOURCE pdf-1346-b042 -->
+    - 与时间戳的关系 · timestamps and, 825 
+    - 事务的隔离性 · of transactions, 800–804, 807–812, 819–826 <!-- SOURCE pdf-1347-b001 --><!-- SOURCE pdf-1347-b002 -->
+    - 与利用率的关系 · utilization and, 808 
+    - 与等待时间的关系 · wait time and, 808–809 
+- **is unknown** · is unknown, 90 
+- **迭代** · iteration, 201–202, 214–216 
+- **迭代器** · iterators, 727 
+- **IX（意向排他）模式** · IX (intention-exclusive) mode, 855 <!-- SOURCE pdf-1347-b003 -->
+
+## J {#index-j}
+
+- **Jakarta 项目** · Jakarta Project, 416 <!-- SOURCE pdf-1347-b004 -->
+- **Java；另见“JDBC（Java 数据库连接）”** · Java. See also JDBC (Java Database Connectivity) <!-- SOURCE pdf-1347-b005 -->
+    - 与高级 SQL 的关系 · advanced SQL and, 183, 197, 199, 205 <!-- SOURCE pdf-1347-b006 -->
+    - 与应用设计的关系 · application design and, 16, 417 <!-- SOURCE pdf-1347-b007 -->
+    - 与元数据的关系 · metadata and, 191–193 
+    - 与面向对象程序设计的关系 · object-oriented programming and, 377 <!-- SOURCE pdf-1347-b008 -->
+    - Java 的对象关系映射系统 · object-relational mapping system for, 382 <!-- SOURCE pdf-1347-b009 -->
+    - 与弹性分布式数据集的关系 · Resilient Distributed Dataset and, 496–498 <!-- SOURCE pdf-1347-b010 -->
+    - 与统一建模语言的关系 · Unified Modeling Language and, 289 <!-- SOURCE pdf-1347-b011 -->
+- **Java 数据库连接；见“JDBC”** · Java Database Connectivity. See JDBC <!-- SOURCE pdf-1347-b012 -->
+- **Java 2 企业版（J2EE）** · Java 2 Enterprise Edition (J2EE), 416 <!-- SOURCE pdf-1347-b013 -->
+- **JavaScript** · JavaScript 
+    - 与应用设计的关系 · application design and, 404–405, 421–426 <!-- SOURCE pdf-1347-b014 --><!-- SOURCE pdf-1347-b015 -->
+    - 与输入校验的关系 · input validation and, 422–423 
+    - 与 Web 服务对接 · interfacing with web services, 423–426 <!-- SOURCE pdf-1347-b016 -->
+    - 与表述性状态转移的关系 · Representation State Transfer and, 426, 427 <!-- SOURCE pdf-1347-b017 -->
+    - 与响应及时的用户界面的关系 · responsive user interfaces and, 423 <!-- SOURCE pdf-1347-b018 -->
+    - 与安全性的关系 · security and, 439 
+- **JavaScript 对象表示法（JSON）** · JavaScript Object Notation (JSON) <!-- SOURCE pdf-1347-b019 -->
+    - 应用场景 · applications for use, 368–369 
+    - 定义 · defined, 368 
+    - 出现 · emergence of, 27 
+    - 用 JSON 编码结果 · encoding results with, 426 
+    - 示例 · example of, 368, 369 
+    - 灵活性 · flexibility of, 367–368 
+    - 与键值存储的关系 · key-value stores and, 1024 
+    - 映射到数据模型 · mapping to data models, 480 <!-- SOURCE pdf-1347-b020 -->
+    - 作为半结构化数据模型 · as semi-structured data model, 8, 27 <!-- SOURCE pdf-1347-b021 -->
+    - SQL 对 JSON 的支持 · SQL in support of, 369–370 
+    - 用于数据传输 · for transferring data, 423 
+- **Java Server Pages（JSP）** · Java Server Pages (JSP) 
+    - 与应用设计的关系 · application design and, 405, 417–418 <!-- SOURCE pdf-1347-b022 --><!-- SOURCE pdf-1347-b023 -->
+    - 与安全性的关系 · security and, 440 
+    - 与服务器端脚本的关系 · server-side scripting and, 417–418 <!-- SOURCE pdf-1347-b024 -->
+    - 与 Servlet 的关系 · servlets and, 417–418 
+- **Java Servlet** · Java Servlets, 411–416, 419, 424 
+- **JBoss** · JBoss, 416 
+- **JDBC（Java 数据库连接）** · JDBC (Java Database Connectivity), 184–193 <!-- SOURCE pdf-1347-b025 -->
+    - 与 BLOB 列的关系 · blob column and, 193 
+    - 与缓存的关系 · caching and, 435–436 
+    - 与可调用语句的关系 · callable statements and, 190–191 <!-- SOURCE pdf-1347-b026 -->
+    - 与 CLOB 列的关系 · clob column and, 193 
+    - 连接数据库 · connecting to database, 185–186 <!-- SOURCE pdf-1347-b027 -->
+    - 定义的相应接口 · corresponding interface defined by, 17 <!-- SOURCE pdf-1347-b028 -->
+    - 异常与资源管理 · exception and resource management, 187 <!-- SOURCE pdf-1347-b029 -->
+    - 与元数据功能的关系 · metadata features and, 191–193 <!-- SOURCE pdf-1347-b030 -->
+    - 与预备语句的关系 · prepared statements and, 188–190 <!-- SOURCE pdf-1347-b031 -->
+    - 协议信息 · protocol information, 186 
+    - 取回查询结果 · retrieving query results, 187–188 <!-- SOURCE pdf-1347-b032 -->
+    - 发送 SQL 语句 · shipping SQL statements to, 186–187 <!-- SOURCE pdf-1347-b033 -->
+    - 与可更新结果集的关系 · updatable result sets and, 193 
+    - 与 Web 会话的关系 · web sessions and, 409 
+- **连接条件** · join conditions, 130–131 
+- **连接依赖** · join dependencies, 341 
+- **连接运算** · join operation, 52–53 
+- **连接** · joins 
+    - 反连接运算 · ant-ijoin operation, 108, 776 <!-- SOURCE pdf-1347-b034 -->
+    - 反半连接运算 · anti-semijoin operation, 776–777 <!-- SOURCE pdf-1347-b035 -->
+    - 广播连接 · broadcast, 1046 
+    - 复杂连接 · complex, 718 
+    - 与代价分析的关系 · cost analysis and, 710–712, 767–770 <!-- SOURCE pdf-1347-b036 -->
+    - 等值连接 · equi-joins, 704, 707–713, 718, 722, 730, 1043 <!-- SOURCE pdf-1347-b037 --><!-- SOURCE pdf-1347-b038 -->
+    - 分片复制连接 · fragment-and-replicate, 1046–1047, 1062 <!-- SOURCE pdf-1347-b039 -->
+    - 全外连接 · full outer, 132–136, 722 
+    - 散列；见“散列连接” · hash (see hash join) 
+    - 混合归并连接 · hybrid merge, 712 
+    - 内连接 · inner, 132–136, 771 
+    - 连接的内层关系 · inner relation of, 704 
+    - 左外连接 · left outer, 131–136, 722 
+    - 归并连接 · merge-join, 708–712, 1045 
+    - 与最小化的关系 · minimization and, 784 
+    - 自然；见“自然连接” · natural (see natural joins) 
+    - 嵌套循环；见“嵌套循环连接” · nested loop (see nested-loop join) <!-- SOURCE pdf-1347-b040 -->
+    - 连接排序 · ordering, 754–755 
+    - 外连接 · outer, 57, 131–136, 722–723, 765, 782 <!-- SOURCE pdf-1347-b041 -->
+    - 连接的外层关系 · outer relation of, 704 
+    - 并行连接 · parallel, 1043–1048 
+    - 分区连接 · partitioned, 714–715, 1043–1046 <!-- SOURCE pdf-1347-b042 -->
+    - 与查询处理的关系 · query processing and, 704–719, 722–723, 1081–1082 <!-- SOURCE pdf-1347-b043 -->
+    - 右外连接 · right outer, 132–136, 722 
+    - 半连接运算 · semijoin operation, 108, 776, 1082–1084 <!-- SOURCE pdf-1347-b044 -->
+    - 与结果大小估计的关系 · size estimation and, 762–764 
+    - 连接倾斜 · skew in, 1047–1048 
+    - 排序—归并连接 · sort-merge-join, 708–712 
+    - 空间连接 · spatial, 394 
+    - 与空间数据的关系 · spatial data and, 719 
+    - 与流式数据的关系 · streaming data and, 506 
+    - θ 连接 · theta, 748–749 
+    - 类型与条件 · types and conditions, 130–131, 136 <!-- SOURCE pdf-1347-b045 -->
+    - 与视图维护的关系 · view maintenance and, 780 
+- **连接倾斜规避** · join skew avoidance, 1048 
+- **join using 运算** · join using operation, 129–130 
+- **日志文件系统** · journaling file systems, 610 
+- **JSON；见“JavaScript 对象表示法”** · JSON. See JavaScript Object Notation <!-- SOURCE pdf-1347-b046 -->
+- **JSP；见“Java Server Pages”** · JSP. See Java Server Pages 
+- **J2EE（Java 2 企业版）** · J2EE (Java 2 Enterprise Edition), 416 <!-- SOURCE pdf-1347-b047 -->
+- **自动换盘系统** · jukebox systems, 561 
+
+## K {#index-k}
+
+- **Kafka 系统** · Kafka system, 506, 507, 1072–1073, 1075, 1137 <!-- SOURCE pdf-1347-b048 --><!-- SOURCE pdf-1347-b049 -->
+- **k-d B 树** · k-d B trees, 674 <!-- SOURCE pdf-1348-b001 -->
+- **KDD（数据库中的知识发现）** · KDD (knowledge discovery in databases), 540 <!-- SOURCE pdf-1348-b002 -->
+- **k-d 树** · k-d trees, 673–674 
+- **核函数** · kernel functions, 545 
+- **键** · keys 
+    - 候选键 · candidate, 44 <!-- SOURCE pdf-1348-b003 -->
+    - 聚集键 · cluster key, 600–601 
+    - 与约束的关系 · constraints and, 258 
+    - 与加密的关系 · encryption and, 448–449, 451–453 <!-- SOURCE pdf-1348-b004 -->
+    - 键上的等值条件 · equality on, 697 
+    - 外键 · foreign, 45–46, 69–70, 148–150, 267–268, 268n5 <!-- SOURCE pdf-1348-b005 -->
+    - 与函数依赖的关系 · functional dependencies and, 309–312 <!-- SOURCE pdf-1348-b006 -->
+    - 中间键 · intermediate, 1050 
+    - 多键访问 · multiple access, 633–634, 661–663 <!-- SOURCE pdf-1348-b007 -->
+    - 分区键 · partitioning, 475–476 
+    - 主键；见“主键” · primary (see primary keys) 
+    - reduce 键 · reduce, 485 
+    - 关系模型中的键 · in relational model, 43–46 
+    - 搜索键；见“搜索键” · search (see search keys) 
+    - 与智能卡的关系 · smart cards and, 451 
+    - 超键 · superkeys, 43–44, 257–258, 309–310, 312 <!-- SOURCE pdf-1348-b008 -->
+    - 唯一键值 · unique values, 160–161 
+- **键值加锁** · key-value locking, 887 
+- **键值映射** · key-value maps, 366–367 
+- **键值存储系统** · key-value storage systems 
+    - 与大数据的关系 · Big Data and, 471, 473, 476–480 <!-- SOURCE pdf-1348-b009 --><!-- SOURCE pdf-1348-b010 -->
+    - 与集群的关系 · clusters and, 477 
+    - 文档存储 · document, 477, 1023 
+    - 容错键值存储 · fault tolerant, 1160 
+    - 并行键值存储 · parallel, 1003, 1023–1031 
+    - 与复制的关系 · replication and, 476 
+    - 与社交网站的关系 · social-networking sites and, 471 <!-- SOURCE pdf-1348-b011 -->
+    - 宽列存储 · wide-column, 1023 
+- **关键词查询** · keyword queries, 383, 385–387, 721 <!-- SOURCE pdf-1348-b012 -->
+- **杀死变异体** · killing the mutant, 1234 
+- **数据库中的知识发现（KDD）** · knowledge discovery in databases (KDD), 540 <!-- SOURCE pdf-1348-b013 -->
+- **知识图谱** · knowledge graphs, 374–375, 386–387, 549 <!-- SOURCE pdf-1348-b014 -->
+- **知识表示** · knowledge representation, 368 
+- **Kubernetes** · Kubernetes, 995 
+
+## L {#index-l}
+
+- **Lambda 架构** · lambda architecture, 504, 1071 <!-- SOURCE pdf-1348-b015 -->
+- **语言结构** · language constructs, 201–203 
+- **语言集成查询（LINQ）** · Language Integrated Query (LINQ), 198 <!-- SOURCE pdf-1348-b016 -->
+- **LAN；见“局域网”** · LANs. See local-area networks 
+- **大对象存储** · large object storage, 594–595 
+- **大对象类型** · large-object types, 156, 158 
+- **LastLSN** · LastLSN, 943, 946 
+- **闩锁** · latches, 886, 928 
+- **无闩锁数据结构** · latch-free data structure, 888–890 <!-- SOURCE pdf-1348-b017 -->
+- **延迟** · latency, 989 
+- **潜伏故障** · latent failure, 575 
+- **lateral 子句** · lateral clause, 105 
+- **LAV（局部即视图）方法** · LAV (local-as-view) approach, 1079 <!-- SOURCE pdf-1348-b018 -->
+- **元组的惰性生成** · lazy generation of tuples, 727 
+- **更新的惰性传播** · lazy propagation of updates, 1122, 1136 <!-- SOURCE pdf-1348-b019 -->
+- **LDAP 数据交换格式（LDIF）** · LDAP Data Interchange Format (LDIF), 1242 <!-- SOURCE pdf-1348-b020 -->
+- **LDAP（轻量级目录访问协议）** · LDAP (Lightweight Directory Access Protocol), 442, 1085, 1240–1243 <!-- SOURCE pdf-1348-b021 -->
+- **领导者** · leaders, 1155 
+- **叶节点** · leaf nodes, 635–656, 665–669, 673, 674 <!-- SOURCE pdf-1348-b022 -->
+- **学习者** · learners, 1148, 1153 
+- **租约** · leases, 1115–1116, 1147 
+- **最近最少使用（LRU）策略** · least recently used (LRU) strategy, 605, 607 <!-- SOURCE pdf-1348-b023 -->
+- **数字账本** · ledgers, digital, 1251, 1252 
+- **左深连接顺序** · left-deep join orders, 773 
+- **左外连接** · left outer join, 131–136, 722 
+- **遗留系统** · legacy systems, 1035–1036 
+- **合法实例** · legal instance, 309 
+- **LevelDB** · LevelDB, 668 
+- **闪电网络** · Lightning network, 1275 
+- **轻节点** · light nodes, 1256, 1268 
+- **轻量级目录访问协议（LDAP）** · Lightweight Directory Access Protocol (LDAP), 442, 1085, 1240–1243 <!-- SOURCE pdf-1348-b024 -->
+- **like 运算符** · like operator, 82–83 
+- **limit 子句** · limit clause, 222 
+- **线性散列** · linear hashing, 661, 1203 
+- **线性一致性** · linearizability, 1121 
+- **线性探测** · linear probing, 1194 
+- **线性回归** · linear regression, 546 
+- **线性扩展比** · linear scaleup, 972–973 <!-- SOURCE pdf-1348-b025 -->
+- **线性搜索** · linear search, 695 
+- **线性加速比** · linear speedup, 972 
+- **线段** · line segments, 388–390 
+- **折线** · linestrings, 388, 390 
+- **关联数据项目** · Linked Data project, 376, 1080 
+- **LINQ（语言集成查询）** · LINQ (Language Integrated Query), 198 <!-- SOURCE pdf-1348-b026 -->
+- **负载均衡器** · load balancers, 934–935, 1214 
+- **加载屏障** · load barrier, 983 
+- **局域网（LAN）** · local-area networks (LANs), 977, 978, 985, 989 <!-- SOURCE pdf-1348-b027 -->
+- **局部即视图（LAV）方法** · local-as-view (LAV) approach, 1079 <!-- SOURCE pdf-1348-b028 -->
+- **局部自治** · local autonomy, 988 
+- **局部索引** · local indices, 1017 
+- **局部模式** · local schema, 1076 
+- **localtimestamp** · localtimestamp, 154 
+- **局部事务** · local transactions, 988, 1098, 1132 <!-- SOURCE pdf-1348-b029 -->
+- **局部等待图** · local wait-for graphs, 1113 
+- **锁转换** · lock conversions, 843 
+- **无锁数据结构** · lock-free data structure, 890 
+- **加锁协议** · locking protocols 
+    - B-link 树协议 · B-link tree, 886 <!-- SOURCE pdf-1348-b030 -->
+    - 与并发控制的关系 · concurrency control and, 835–848 <!-- SOURCE pdf-1348-b031 -->
+    - 定义 · defined, 839 
+    - 分布式锁管理器 · distributed lock-manager, 1112 <!-- SOURCE pdf-1348-b032 -->
+    - 基于图的协议 · graph-based, 846–848 
+    - 实现 · implementation of, 844–846 
+    - 索引加锁 · index, 860 
+    - 键值加锁 · key-value, 887 
+    - 多粒度加锁 · multiple granularity, 856–857 
+    - 下一键加锁 · next-key, 887 
+    - 单一锁管理器 · single lock-manager, 1111 
+    - 与事务的关系 · transactions and, 823–825 
+    - 两阶段加锁 · two-phase, 841–844, 871–872, 1129–1131 <!-- SOURCE pdf-1348-b033 -->
+- **锁管理器** · lock managers, 844–845, 965, 1160 <!-- SOURCE pdf-1348-b034 -->
+- **锁点** · lock point, 841 
+- **锁** · locks 
+    - 与自适应粒度的关系 · adaptive granularity and, 969–970 <!-- SOURCE pdf-1348-b035 --><!-- SOURCE pdf-1348-b036 -->
+    - 与缓存的关系 · caching and, 969 
+    - 与召回的关系 · call back and, 969 
+    - 与兼容性函数的关系 · compatibility function and, 836 <!-- SOURCE pdf-1348-b037 -->
+    - 死锁；见“死锁” · deadlocks (see deadlocks) <!-- SOURCE pdf-1349-b001 -->
+    - 与粒度细化的关系 · de-escalation and, 970 
+    - 与分布式数据库的关系 · distributed databases and, 1111–1116 <!-- SOURCE pdf-1349-b002 -->
+    - 与锁升级的关系 · escalation and, 857, 1227 
+    - 排他锁；见“排他锁” · exclusive (see exclusive locks) 
+    - 显式锁 · explicit, 854 
+    - 与假环的关系 · false cycles and, 1114–1115 
+    - 细粒度锁 · fine-grained, 947 
+    - 授予锁 · granting of, 836, 840–841 
+    - 与增长阶段的关系 · growing phase and, 841, 843 
+    - 较高层级的锁 · higher-level, 935–936 
+    - 隐式锁 · implicit, 854–855 
+    - 增量锁 · increment, 892–893 
+    - 与意向模式的关系 · intention modes and, 855 
+    - 租约 · leases, 1115–1116, 1147 
+    - 与逻辑撤销操作的关系 · logical undo operations and, 935–941 <!-- SOURCE pdf-1349-b003 -->
+    - 较低层级的锁 · lower-level, 935–936 
+    - 与多粒度的关系 · multiple granularity and, 853–857 <!-- SOURCE pdf-1349-b004 -->
+    - 与多版本方案的关系 · multiversion schemes and, 871–872, 1129–1131 <!-- SOURCE pdf-1349-b005 -->
+    - 谓词锁 · predicate, 828, 861, 861n1 
+    - 与恢复系统的关系 · recovery systems and, 935–941 <!-- SOURCE pdf-1349-b006 -->
+    - 与请求操作的关系 · request operation and, 835–841, 844–846, 849–853, 886 <!-- SOURCE pdf-1349-b007 -->
+    - 共享锁 · shared, 825, 835, 854, 880, 1124 <!-- SOURCE pdf-1349-b008 -->
+    - 与收缩阶段的关系 · shrinking phase and, 841, 843 
+    - 与饥饿的关系 · starvation and, 853 
+    - 与超时的关系 · timeouts and, 850–851 
+    - 与时间戳的关系 · timestamps and, 861–866 
+    - 与事务服务器的关系 · transaction servers and, 965–968 <!-- SOURCE pdf-1349-b009 -->
+    - 与兼容矩阵真值的关系 · true matrix value and, 836 
+    - 与等待图的关系 · wait-for graph and, 851–852, 1113–1114 <!-- SOURCE pdf-1349-b010 -->
+- **锁表** · lock table, 844, 845, 967 
+- **日志磁盘** · log disks, 610 
+- **日志强制写出** · log force, 927 
+- **逻辑时钟** · logical clock, 1118 
+- **逻辑计数器** · logical counter, 862 
+- **逻辑设计阶段** · logical-design phase, 18, 242 
+- **逻辑错误** · logical error, 907 
+- **逻辑抽象层** · logical level of abstraction, 9–12 
+- **逻辑日志记录** · logical logging, 936 
+- **逻辑蕴含的模式** · logically implied schema, 320 
+- **逻辑操作** · logical operations <!-- SOURCE pdf-1349-b011 -->
+    - 与并发控制的关系 · concurrency control and, 940–941 <!-- SOURCE pdf-1349-b012 --><!-- SOURCE pdf-1349-b013 -->
+    - 与一致性的关系 · consistency and, 936–937 
+    - 定义 · defined, 935 
+    - 与提前释放锁的关系 · early lock release and, 935–941 <!-- SOURCE pdf-1349-b014 -->
+    - 幂等操作 · idempotent, 937 
+    - 与日志记录的关系 · log records and, 936–940 
+    - 与回滚的关系 · rollback and, 937–939 
+- **元组的逻辑路由** · logical routing of tuples, 506–507, 1071–1073 <!-- SOURCE pdf-1349-b015 -->
+- **逻辑模式** · logical schema, 12–13, 1223–1224 <!-- SOURCE pdf-1349-b016 -->
+- **逻辑撤销操作** · logical undo operations, 935–941 
+- **事务日志** · log of transactions, 805 
+- **日志处理** · log processing, 486–488 
+- **日志记录** · log records 
+    - 与 ARIES 的关系 · ARIES and, 941–946 <!-- SOURCE pdf-1349-b017 -->
+    - 与缓冲的关系 · buffering and, 926–927 
+    - 检查点日志记录 · checkpoint, 943 
+    - 补偿日志记录 · compensation, 922, 942, 945 
+    - 与数据库修改的关系 · database modification and, 915–916 <!-- SOURCE pdf-1349-b018 -->
+    - 与强制／不强制写出策略的关系 · force/no-force policy and, 927 
+    - 与标识符的关系 · identifiers and, 913 
+    - 与逻辑撤销操作的关系 · logical undo operations and, 936–940 <!-- SOURCE pdf-1349-b019 -->
+    - 与新旧值的关系 · old/new values and, 913 
+    - 物理日志记录 · physical, 936 
+    - 与恢复系统的关系 · recovery systems and, 913–919, 926–927 <!-- SOURCE pdf-1349-b020 -->
+    - 与重做操作的关系 · redo operation and, 915–919 
+    - 与允许／禁止偷取策略的关系 · steal/no-steal policy and, 927 
+    - 与撤销操作的关系 · undo operation and, 915–919 
+    - 与预写日志规则的关系 · write-ahead logging rule and, 926–929 <!-- SOURCE pdf-1349-b021 -->
+- **日志序列号（LSN）** · log sequence number (LSN), 941–946 <!-- SOURCE pdf-1349-b022 -->
+- **日志结构合并树（LSM 树）** · log-structured merge (LSM) trees, 1176–1182 <!-- SOURCE pdf-1349-b023 -->
+    - 基本 LSM 树 · basic, 1179 
+    - 与布隆过滤器的关系 · Bloom filters and, 1181 
+    - 与删除的关系 · deletion and, 1178–1179 
+    - 用于闪存 · for flash storage, 1182 
+    - LSM 树中的插入 · insertion into, 1177–1178, 1180–1181 <!-- SOURCE pdf-1349-b024 -->
+    - 层级 · levels of, 1176 
+    - 与查找的关系 · lookup and, 1181 
+    - 与并行键值存储的关系 · parallel key-value stores and, 1028 <!-- SOURCE pdf-1349-b025 --><!-- SOURCE pdf-1349-b026 -->
+    - 与性能调优的关系 · performance tuning and, 1215 
+    - 与滚动合并的关系 · rolling merges and, 1178 
+    - 与分级合并索引的关系 · stepped-merge indices and, 1179–1181 <!-- SOURCE pdf-1349-b027 -->
+    - 与更新的关系 · updates and, 1178–1179 
+    - 写优化结构 · write-optimized structure of, 666–668 <!-- SOURCE pdf-1349-b028 -->
+- **日志写入进程** · log writer process, 965 
+- **长事务** · long-duration transactions, 890–891 <!-- SOURCE pdf-1349-b029 -->
+- **查找** · lookup 
+    - 区块链数据库中的查找 · in blockchain databases, 1268 <!-- SOURCE pdf-1349-b030 -->
+    - 与布隆过滤器的关系 · Bloom filters and, 667, 1181 
+    - 与并发控制的关系 · concurrency control and, 884–887 <!-- SOURCE pdf-1349-b031 -->
+    - 与数据存储系统的关系 · data-storage systems and, 480 
+    - 模糊查找 · fuzzy, 523 
+    - 与散列的关系 · hashing and, 1197, 1198, 1202–1203 <!-- SOURCE pdf-1349-b032 -->
+    - 与索引的关系 · indices and, 630, 637, 640–641, 645–651, 656–661, 666–669, 676 <!-- SOURCE pdf-1349-b033 -->
+    - 与 LSM 树的关系 · LSM trees and, 1181 
+    - 与查询优化的关系 · query optimization and, 769 
+    - 与查询处理的关系 · query processing and, 698, 707 <!-- SOURCE pdf-1349-b034 -->
+- **无损分解** · lossless decomposition, 307–308, 307n1, 312–313 <!-- SOURCE pdf-1349-b035 -->
+- **有损分解** · lossy decompositions, 307 
+- **丢失更新问题** · lost update problem, 1016 
+- **丢失更新** · lost updates, 874 
+- **较低层级的锁** · lower-level locks, 935–936 
+- **忠诚度计划** · loyalty programs, 1278 
+- **LRU（最近最少使用）策略** · LRU (least recently used) strategy, 605, 607 <!-- SOURCE pdf-1349-b036 -->
+- **LSM 树；见“日志结构合并树”** · LSM trees. See log-structured merge trees <!-- SOURCE pdf-1349-b037 -->
+- **LSN（日志序列号）** · LSN (log sequence number), 941–946 <!-- SOURCE pdf-1349-b038 -->
+
+## M {#index-m}
+
+- **机器学习算法** · machine-learning algorithms, 495 <!-- SOURCE pdf-1349-b039 -->
+- **磁盘** · magnetic disks, 563–567 
+    - 与访问时间的关系 · access time and, 561, 566, 567 <!-- SOURCE pdf-1349-b040 -->
+    - 与块的关系 · blocks and, 566–567 
+    - 容量 · capacity of, 560 
+    - 与校验和的关系 · checksums and, 565 
+    - 与崩溃的关系 · crashes and, 565 
+    - 与数据传输率的关系 · data-transfer rate and, 566 
+    - 与磁盘控制器的关系 · disk controller and, 565 <!-- SOURCE pdf-1350-b001 -->
+    - 与故障分类的关系 · failure classification and, 908 
+    - 混合硬盘 · hybrid, 569–570 
+    - 与平均故障前时间的关系 · mean time to failure and, 567 
+    - 性能指标 · performance measures of, 565–567 <!-- SOURCE pdf-1350-b002 -->
+    - 物理特性 · physical characteristics of, 563–565 <!-- SOURCE pdf-1350-b003 -->
+    - 与读写磁头的关系 · read-write heads and, 564–565 <!-- SOURCE pdf-1350-b004 -->
+    - 与记录密度的关系 · recording density and, 565 
+    - 与扇区的关系 · sectors and, 564–566 
+    - 与寻道时间的关系 · seek time and, 566, 566n2, 567 <!-- SOURCE pdf-1350-b005 -->
+    - 尺寸 · sizes of, 563 
+- **主存** · main memory, 559–560, 657–658 <!-- SOURCE pdf-1350-b006 -->
+- **主存数据库** · main-memory databases 
+    - 访问数据 · accessing data in, 910 <!-- SOURCE pdf-1350-b007 -->
+    - 并发控制 · concurrency control in, 887–890 <!-- SOURCE pdf-1350-b008 -->
+    - 恢复 · recovery in, 947–948 
+    - 存储 · storage in, 588, 615–617 
+- **多数协议** · majority protocol, 1123–1126 
+- **数据管理；见“数据库管理系统（DBMS）”** · management of data. See database-management systems (DBMSs) <!-- SOURCE pdf-1350-b009 -->
+- **中间人攻击** · man-in-the-middle attacks, 442 
+- **制造业的数据库应用** · manufacturing, database applications for, 3, 5 <!-- SOURCE pdf-1350-b010 -->
+- **多对多映射** · many-to-many mapping, 253–255 
+- **多对一映射** · many-to-one mapping, 252–255 
+- **map 函数；另见“MapReduce 范式”** · map function, 483–494, 510. See also MapReduce paradigm <!-- SOURCE pdf-1350-b011 -->
+- **映射基数** · mapping cardinalities, 252–256 
+- **MapReduce 范式** · MapReduce paradigm, 483–494 
+    - 发展 · development of, 27, 481 <!-- SOURCE pdf-1350-b012 -->
+    - 与容错的关系 · fault tolerance and, 1060–1061 <!-- SOURCE pdf-1350-b013 -->
+    - Hadoop 中的 MapReduce · in Hadoop, 489–493 
+    - 与操作内并行的关系 · intraoperation parallelism and, 1050–1052 <!-- SOURCE pdf-1350-b014 -->
+    - 与日志处理的关系 · log processing and, 486–488 
+    - 任务的并行处理 · parallel processing of tasks, 488–489 <!-- SOURCE pdf-1350-b015 -->
+    - 基于 MapReduce 的 SQL · SQL on, 493–494 
+    - 与词频统计程序的关系 · word count program and, 483–486, 484n2, 490–492 <!-- SOURCE pdf-1350-b016 -->
+- **标记语言；见各具体语言** · markup languages. See specific languages <!-- SOURCE pdf-1350-b017 --><!-- SOURCE pdf-1350-b018 -->
+- **大规模并行系统** · massively parallel systems, 970 
+- **主节点** · master nodes, 1012, 1136 
+- **主副本** · master replica, 1016 
+- **主站点** · master sites, 1026 
+- **主从复制** · master-slave replication, 1137 
+- **主表** · master table, 1222 
+- **match 子句** · match clause, 509 
+- **物化** · materialization, 724–725 
+- **物化边** · materialized edges, 728 
+- **物化视图** · materialized views 
+    - 与聚集的关系 · aggregation and, 781–782 <!-- SOURCE pdf-1350-b019 -->
+    - 定义 · defined, 140, 778 
+    - 与索引选择的关系 · index selection and, 783 
+    - 与连接运算的关系 · join operation and, 780 
+    - 并行维护 · parallel maintenance of, 1069–1070 <!-- SOURCE pdf-1350-b020 -->
+    - 与性能调优的关系 · performance tuning and, 1215–1216 <!-- SOURCE pdf-1350-b021 -->
+    - 与投影的关系 · projection and, 780–781 
+    - 与查询优化的关系 · query optimization and, 778–783 <!-- SOURCE pdf-1350-b022 -->
+    - 与选择的关系 · selection and, 780–781 
+    - 与视图维护的关系 · view maintenance and, 140, 779–782 <!-- SOURCE pdf-1350-b023 -->
+- **max 函数** · max function, 91–92, 105, 723, 766, 782 <!-- SOURCE pdf-1350-b024 -->
+- **最大间隔直线** · maximum margin line, 544 
+- **平均故障间隔时间（MTBF）** · mean time between failures (MTBF), 567n3 <!-- SOURCE pdf-1350-b025 -->
+- **平均数据丢失前时间** · mean time to data loss, 571 
+- **平均故障前时间（MTTF）** · mean time to failure (MTTF), 567, 567n3 <!-- SOURCE pdf-1350-b026 -->
+- **平均修复时间** · mean time to repair, 571 
+- **度量属性** · measure attributes, 524 
+- **中介器** · mediators, 1077 
+- **memcached 系统** · memcached system, 436–437, 482 <!-- SOURCE pdf-1350-b027 -->
+- **记忆化** · memoization, 771 
+- **存储器；另见“存储”** · memory. See also storage 
+    - 与索引批量加载的关系 · bulk loading of indices and, 653–655 <!-- SOURCE pdf-1350-b028 --><!-- SOURCE pdf-1350-b029 -->
+    - 高速缓存；另见“缓存” · cache, 559 (see also caching) 
+    - 与数据访问的关系 · data access and, 910–912 
+    - 闪存 · flash, 560, 567–570, 656–657 
+    - 与强制写出的关系 · force output and, 912 
+    - 磁盘存储器 · magnetic-disk, 560, 563–567 
+    - 主存 · main, 559–560, 657–658 
+    - 非易失性随机访问存储器 · non-volatile random-access, 579–580 <!-- SOURCE pdf-1350-b030 --><!-- SOURCE pdf-1350-b031 -->
+    - 光存储器 · optical, 560–561 
+    - 与溢出的关系 · overflows and, 715 
+    - 与查询代价的关系 · query costs and, 697 
+    - 内存中的查询处理 · query processing in, 731–734 
+    - 与恢复系统的关系 · recovery systems and, 910–912 <!-- SOURCE pdf-1350-b032 -->
+    - 存储级内存 · storage class, 569, 588, 948 
+- **内存屏障** · memory barrier, 983–984 
+- **归并连接** · merge-join, 708–712, 1045 
+- **合并清理操作** · merge-purge operation, 523 
+- **归并** · merging 
+    - 与重复消除的关系 · duplicate elimination and, 719–720 <!-- SOURCE pdf-1350-b033 --><!-- SOURCE pdf-1350-b034 -->
+    - 与 exchange 算子模型的关系 · exchange-operator model and, 1055–1057 <!-- SOURCE pdf-1350-b035 -->
+    - 有序归并 · ordered, 1056 
+    - 并行外部排序—归并 · parallel external sort-merge, 1042–1043 <!-- SOURCE pdf-1350-b036 -->
+    - 与性能调优的关系 · performance tuning and, 1222–1223 <!-- SOURCE pdf-1350-b037 -->
+    - 与查询处理的关系 · query processing and, 701–704, 708–712 <!-- SOURCE pdf-1350-b038 -->
+    - 随机归并 · random, 1056 
+    - 滚动合并 · rolling merge, 1178 
+- **默克尔—帕特里夏树** · Merkle-Patricia trees, 1269, 1275 <!-- SOURCE pdf-1350-b039 -->
+- **默克尔树** · Merkle trees, 1143–1146, 1268, 1269 <!-- SOURCE pdf-1350-b040 -->
+- **网格系统** · mesh system, 976 
+- **MESI 协议** · MESI protocol, 984 
+- **基于消息的共识** · message-based consensus, 1266 
+- **消息投递进程** · message delivery process, 1109–1110 <!-- SOURCE pdf-1350-b041 -->
+- **元数据** · metadata, 14, 191–193, 470, 602–604, 1020–1022 <!-- SOURCE pdf-1350-b042 -->
+- **微服务架构** · microservices architecture, 994 
+- **微软** · Microsoft 
+    - 与应用设计的关系 · application design and, 417, 442 <!-- SOURCE pdf-1350-b043 --><!-- SOURCE pdf-1350-b044 -->
+    - 数据库调优助手 · Database Tuning Assistant, 1217 <!-- SOURCE pdf-1350-b045 -->
+    - 微软开发的查询语言 · query languages developed by, 538 <!-- SOURCE pdf-1350-b046 -->
+    - 与查询优化的关系 · query optimization and, 783 
+    - StreamInsight · StreamInsight, 504 
+- **Microsoft SQL Server** · Microsoft SQL Server 
+    - 与高级 SQL 的关系 · advanced SQL and, 206 <!-- SOURCE pdf-1350-b047 -->
+    - implements · implements, 160 
+    - limit 子句 · limit clause in, 222 <!-- SOURCE pdf-1351-b001 -->
+    - 性能监控工具 · performance monitoring tools, 1212 <!-- SOURCE pdf-1351-b002 -->
+    - 性能调优工具 · performance tuning tools, 1218 <!-- SOURCE pdf-1351-b003 -->
+    - 支持的过程语言 · procedural languages supported by, 199 <!-- SOURCE pdf-1351-b004 -->
+    - 快照隔离 · snapshot isolation and, 1225 
+    - 空间数据 · spatial data and, 388, 390 
+    - 字符串操作 · string operations and, 82 
+- **min 函数** · min function, 91–92, 723, 766, 782 <!-- SOURCE pdf-1351-b005 -->
+- **小批量事务** · minibatch transactions, 1227 
+- **最小等价规则集** · minimal equivalence rules, 754 
+- **矿池；另见数据挖掘** · mining pools, 1266. See also data mining <!-- SOURCE pdf-1351-b006 -->
+- **minus 运算符** · minus, 88n7 
+- **镜像** · mirroring, 571–573, 576, 577 
+- **移动应用平台** · mobile application platforms, 428–429 <!-- SOURCE pdf-1351-b007 -->
+- **手机应用** · mobile phone applications, 469 
+- **数据挖掘模型** · models for data mining, 540 
+- **模型—视图—控制器（MVC）架构** · model-view-controller (MVC) architecture, 429–430 <!-- SOURCE pdf-1351-b008 -->
+- **多维 OLAP（MOLAP）** · MOLAP (multidimensional OLAP), 535 <!-- SOURCE pdf-1351-b009 -->
+- **MonetDB** · MonetDB, 367, 615 
+- **MongoDB** · MongoDB, 477–479, 482, 489, 668, 1024, 1028 <!-- SOURCE pdf-1351-b010 -->
+- **单调查询** · monotonic queries, 218 
+- **摩尔定律** · Moore’s law, 980n4 
+- **最近最多使用（MRU）策略** · most recently used (MRU) strategy, 608–609 <!-- SOURCE pdf-1351-b011 -->
+- **MRU（最近最多使用）策略** · MRU (most recently used) strategy, 608–609 <!-- SOURCE pdf-1351-b012 -->
+- **平均故障间隔时间（MTBF）** · MTBF (mean time between failures), 567n3 <!-- SOURCE pdf-1351-b013 -->
+- **平均失效前时间（MTTF）** · MTTF (mean time to failure), 567, 567n3 <!-- SOURCE pdf-1351-b014 -->
+- **多维数据** · multidimensional data, 524, 527–532 <!-- SOURCE pdf-1351-b015 -->
+- **多维 OLAP（MOLAP）** · multidimensional OLAP (MOLAP), 535 <!-- SOURCE pdf-1351-b016 -->
+- **多级索引** · multilevel indices, 628–630 
+- **多主复制** · multimaster replication, 1137 
+- **多次共识协议** · multiple consensus protocol, 1151 
+- **多粒度** · multiple granularity 
+    - 并发控制 · concurrency control and, 853–857 <!-- SOURCE pdf-1351-b017 --><!-- SOURCE pdf-1351-b018 -->
+    - 层次结构 · hierarchy of, 854 
+    - 意向排他模式 · intention-exclusive mode and, 855 <!-- SOURCE pdf-1351-b019 --><!-- SOURCE pdf-1351-b020 -->
+    - 意向共享模式 · intention-shared mode and, 855 <!-- SOURCE pdf-1351-b021 -->
+    - 加锁协议 · locking protocol and, 856–857 <!-- SOURCE pdf-1351-b022 -->
+    - 请求操作 · request operation and, 854, 855 <!-- SOURCE pdf-1351-b023 -->
+    - 共享兼意向排他模式 · shared and intention-exclusive mode and, 855 <!-- SOURCE pdf-1351-b024 -->
+    - 树形结构 · tree architecture and, 853–857 <!-- SOURCE pdf-1351-b025 -->
+- **多重继承** · multiple inheritance, 275 
+- **多搜索键访问** · multiple-key access, 633–634, 661–663 <!-- SOURCE pdf-1351-b026 -->
+- **多道程序设计** · multiprogramming, 809 
+- **多查询优化** · multiquery optimization, 785–786 <!-- SOURCE pdf-1351-b027 -->
+- **multiset except** · multiset except, 88n7 
+- **多重集关系代数** · multiset relational algebra, 80, 97, 108, 136, 747 <!-- SOURCE pdf-1351-b028 -->
+- **多重集类型** · multiset types, 366 
+- **多重签名指令** · multisig instruction, 1269–1270 
+- **多表聚簇文件组织** · multitable clustering file organization, 595, 598–601 <!-- SOURCE pdf-1351-b029 -->
+- **多任务** · multitasking, 961, 963 
+- **多用户系统** · multiuser systems, 962 
+- **多值属性** · multivalued attributes, 251, 252, 342 <!-- SOURCE pdf-1351-b030 -->
+- **多值数据类型** · multivalued data types, 366–367 
+- **多值依赖** · multivalued dependencies, 336–341 <!-- SOURCE pdf-1351-b031 -->
+- **多版本并发控制（MVCC）** · multiversion concurrency control (MVCC), 869–872 <!-- SOURCE pdf-1351-b032 -->
+- **多版本时间戳排序方案** · multiversion timestamp-ordering scheme, 870–871, 1118 <!-- SOURCE pdf-1351-b033 -->
+- **多版本两阶段锁（MV2PL）协议** · multiversion two-phase locking (MV2PL) protocol, 871–872, 1129–1131 <!-- SOURCE pdf-1351-b034 -->
+- **变更操作** · mutations, 1234 
+- **互斥** · mutual exclusion, 965, 967 
+- **MVCC（多版本并发控制）** · MVCC (multiversion concurrency control), 869–872 <!-- SOURCE pdf-1351-b035 -->
+- **MVC（模型—视图—控制器）架构** · MVC (model-view-controller) architecture, 429–430 <!-- SOURCE pdf-1351-b036 -->
+- **MV2PL（多版本两阶段锁）协议** · MV2PL (multiversion two-phase locking) protocol, 871–872, 1129–1131 <!-- SOURCE pdf-1351-b037 -->
+- **MySQL** · MySQL <!-- SOURCE pdf-1351-b038 -->
+    - 属性 · attributes and, 149n8 <!-- SOURCE pdf-1351-b039 -->
+    - 发展 · growth of, 27 
+    - 连接 · joins and, 133n4 
+    - LSM 树 · LSM trees and, 668 
+    - 性能监控工具 · performance monitoring tools, 1212 <!-- SOURCE pdf-1351-b040 -->
+    - 字符串操作 · string operations and, 82 
+    - 唯一键值 · unique key values in, 161 
+
+## N {#index-n}
+
+- **朴素贝叶斯分类器** · naïve Bayesian classifiers, 543 <!-- SOURCE pdf-1351-b041 -->
+- **初级用户** · naïve users, 24 
+- **名称节点** · namenode, 475, 1020 
+- **NAND 闪存** · NAND flash memory, 567–568 
+- **网络附加存储（NAS）** · NAS (network attached storage), 563, 934 <!-- SOURCE pdf-1351-b042 -->
+- **自然连接运算** · natural join operation, 57 
+- **自然连接** · natural joins, 126–136 
+    - on 条件 · on condition and, 130–131 <!-- SOURCE pdf-1351-b043 -->
+    - 条件 · conditions and, 130–131 
+    - 全外连接 · full outer, 132–136, 722 
+    - 内连接 · inner, 132–136, 771 
+    - 左外连接 · left outer, 131–136, 722 
+    - 外连接 · outer, 57, 131–136 
+    - 右外连接 · right outer, 132–136, 722 
+- **导航系统中的数据库应用** · navigation systems, database applications for, 3 <!-- SOURCE pdf-1351-b044 -->
+- **最近邻查询** · nearest-neighbor queries, 394, 672, 674 <!-- SOURCE pdf-1351-b045 -->
+- **邻近查询** · nearness queries, 394 
+- **否定** · negation, 762 
+- **Neo4j 图数据库** · Neo4j graph database, 509, 510 
+- **嵌套数据类型** · nested data types, 367–368 
+- **嵌套循环连接** · nested-loop join 
+    - 块嵌套循环连接 · block, 705–707 <!-- SOURCE pdf-1351-b046 -->
+    - 索引嵌套循环连接 · indexed, 707–708, 728 
+    - 并行嵌套循环连接 · parallel, 1045–1046 
+    - 查询优化 · query optimization and, 768, 769, 771, 773 <!-- SOURCE pdf-1351-b047 -->
+    - 查询处理 · query processing and, 704–708, 713–719, 722, 786 <!-- SOURCE pdf-1351-b048 -->
+- **嵌套子查询** · nested subqueries, 98–107 
+    - from 子句 · from clause and, 104–105 <!-- SOURCE pdf-1351-b049 -->
+    - with 子句 · with clause and, 105–106 
+    - 重复元组 · duplicate tuples and, 103 
+    - 空关系测试 · empty relations test and, 101–102 <!-- SOURCE pdf-1351-b050 -->
+    - 优化 · optimization of, 774–778, 1220 <!-- SOURCE pdf-1351-b051 -->
+    - 标量子查询 · scalar, 106–107 <!-- SOURCE pdf-1352-b001 -->
+    - 集合运算 · set operations and, 98–101 
+- **嵌套** · nesting, 854, 946 
+- **NetBeans** · NetBeans, 416 
+- **网络附加存储（NAS）** · network attached storage (NAS), 563, 934 <!-- SOURCE pdf-1352-b002 -->
+- **网络延迟** · network latency, 969 
+- **网络分区** · network partition, 481, 989, 989n5, 1104–1105 <!-- SOURCE pdf-1352-b003 -->
+- **网络往返时间** · network round-trip time, 969 
+- **网络** · networks 
+    - 深度神经网络 · deep neural, 546 <!-- SOURCE pdf-1352-b004 -->
+    - 互连网络 · interconnection, 975–979 
+    - 局域网 · local area, 977, 978, 985, 989 
+    - 空间网络 · spatial, 390 
+    - 广域网 · wide-area, 989 
+- **神经网络分类器** · neural-net classifiers, 545–546 
+- **新值** · new value, 913 
+- **下一键锁协议** · next-key locking protocols, 887 
+- **next 方法** · next method, 188 
+- **nextval for** · nextval for, 1226 
+- **非第一范式（NFNF）** · NFNF (non first-normal-form), 367 <!-- SOURCE pdf-1352-b005 -->
+- **节点** · nodes 
+    - 区块链数据库 · in blockchain databases, 1255–1257, 1263–1268 <!-- SOURCE pdf-1352-b006 --><!-- SOURCE pdf-1352-b007 -->
+    - 合并 · coalescing, 641, 886 
+    - 数据节点 · datanodes, 475, 1020 
+    - 定义 · defined, 468 
+    - 分布式数据库 · distributed databases and, 987 <!-- SOURCE pdf-1352-b008 -->
+    - 节点失效 · failure of, 1103–1104 
+    - 全节点 · full, 1256, 1268 
+    - Hadoop 文件系统中的节点 · in Hadoop File System, 474, 475 <!-- SOURCE pdf-1352-b009 -->
+    - 内部节点 · internal, 635 
+    - 叶节点 · leaf, 635–656, 665–669, 673, 674 <!-- SOURCE pdf-1352-b010 -->
+    - 租约 · leases and, 1115–1116 
+    - 轻节点 · light, 1256, 1268 
+    - 主节点 · master, 1012, 1136 
+    - 网格结构 · mesh architecture and, 976 
+    - 多粒度 · multiple granularity and, 853–857 <!-- SOURCE pdf-1352-b011 -->
+    - 名称节点 · namenode, 475, 1020 
+    - 非叶节点 · nonleaf, 635–636, 642, 645–656, 663 <!-- SOURCE pdf-1352-b012 -->
+    - 操作节点 · operation, 506–507 
+    - 并行数据库中的节点 · in parallel databases, 970 
+    - 主节点 · primary, 1123 
+    - 环形结构 · ring architecture and, 976 <!-- SOURCE pdf-1352-b013 -->
+    - 分裂 · splitting of, 641–645, 886 
+    - 拖慢进度的节点 · straggler, 1060–1061 
+    - 更新 · updates and, 641–647 
+    - 虚拟节点 · virtual, 1009–1010 
+- **非强制写回策略** · no-force policy, 927 
+- **非二元联系集** · nonbinary relationship sets, 283–285 <!-- SOURCE pdf-1352-b014 -->
+- **非阻塞两阶段提交** · non-blocking two-phase commit, 1161 <!-- SOURCE pdf-1352-b015 -->
+- **nonce 随机数** · nonces, 1265, 1271 
+- **非聚簇索引** · nonclustering indices, 625, 695 
+- **非声明式动作** · nondeclarative actions, 183 
+- **非第一范式（NFNF）** · non first-normal-form (NFNF), 367 <!-- SOURCE pdf-1352-b016 -->
+- **非叶节点** · nonleaf nodes, 635–636, 642, 645–656, 663 <!-- SOURCE pdf-1352-b017 -->
+- **非过程式 DML** · nonprocedural DMLs, 15 
+- **非过程式语言** · nonprocedural languages, 15, 16, 18, 26 <!-- SOURCE pdf-1352-b018 -->
+- **不可否认性** · nonrepudiation, 451 
+- **非一致内存访问（NUMA）** · Non-Uniform Memory Access (NUMA), 981, 1063 <!-- SOURCE pdf-1352-b019 -->
+- **非唯一搜索键** · nonunique search keys, 632, 637, 640, 649–650 <!-- SOURCE pdf-1352-b020 -->
+- **非易失性内存高速接口（NVMe）** · Non-Volatile Memory Express (NVMe) interface, 562 <!-- SOURCE pdf-1352-b021 -->
+- **非易失性随机存取存储器（NVRAM）** · non-volatile random-access memory (NVRAM), 579–580, 948 <!-- SOURCE pdf-1352-b022 -->
+- **非易失性存储** · non-volatile storage, 560, 562, 587–588, 804, 908–910, 930–931 <!-- SOURCE pdf-1352-b023 -->
+- **非易失性写缓冲区** · non-volatile write buffers, 579–580 <!-- SOURCE pdf-1352-b024 -->
+- **NOR 闪存** · NOR flash memory, 567 
+- **范式** · normal forms 
+    - 原子域 · atomic domains and, 342–343 <!-- SOURCE pdf-1352-b025 -->
+    - Boyce–Codd 范式 · Boyce–Codd, 313–316, 330–333, 336 <!-- SOURCE pdf-1352-b026 -->
+    - 域键范式 · domain-key, 341 
+    - 第五范式 · fifth, 341 
+    - 第一范式 · first, 342–343 
+    - 第四范式 · fourth, 336, 339–341 
+    - 更高范式 · higher, 319 
+    - 连接依赖 · join dependencies and, 341 
+    - 投影连接范式 · project-join, 341 
+    - 第二范式 · second, 316n8, 341–342, 356 
+    - 第三范式 · third, 317–319, 333–335 
+- **规范化** · normalization 
+    - 概念设计过程 · in conceptual-design process, 17 <!-- SOURCE pdf-1352-b027 --><!-- SOURCE pdf-1352-b028 -->
+    - 反规范化 · denormalization, 346 
+    - 实体—联系（E-R）模型 · entity-relationship (E-R) model and, 344–345 <!-- SOURCE pdf-1352-b029 -->
+    - 性能 · performance and, 346 
+    - 关系数据库设计 · relational database design and, 308 <!-- SOURCE pdf-1352-b030 -->
+- **NoSQL 系统** · NoSQL systems, 28, 473, 477, 1269, 1276 <!-- SOURCE pdf-1352-b031 -->
+- **不偷取策略** · no-steal policy, 927 
+- **not 连接词** · not connective, 74 
+- **not exists 结构** · not exists construct, 101–102, 108, 218 <!-- SOURCE pdf-1352-b032 -->
+- **通知** · notifications, 436 
+- **not in 结构** · not in construct, 99, 100 
+- **not null** · not null, 69, 89–90, 142, 146, 150, 159 <!-- SOURCE pdf-1352-b033 -->
+- **not 运算** · not operation, 89–90 
+- **not unique 结构** · not unique construct, 103 
+- **空值位图** · null bitmap, 593 
+- **空值拒绝性质** · null rejecting property, 751 
+- **空值** · null values 
+    - 含空值的聚合 · aggregation with, 96 <!-- SOURCE pdf-1352-b034 -->
+    - 属性 · attributes and, 251–252 
+    - 定义 · defined, 40, 67 
+    - 文件组织 · file organization and, 593 
+    - 完整性约束 · integrity constraints and, 145–147, 150 <!-- SOURCE pdf-1352-b035 -->
+    - SQL · SQL and, 89–90 
+    - 时态数据 · temporal data and, 347 
+    - 触发器 · triggers and, 209 
+    - 用户定义类型 · user-defined types and, 159 
+- **NUMA（非一致内存访问）** · NUMA (Non-Uniform Memory Access), 981, 1063 <!-- SOURCE pdf-1352-b036 -->
+- **numeric 类型** · numeric, 67, 70 
+- **nvarchar 类型** · nvarchar, 68 
+- **NVMe（非易失性内存高速）接口** · NVMe (Non-Volatile Memory Express) interface, 562 <!-- SOURCE pdf-1352-b037 -->
+- **NVRAM（非易失性随机存取存储器）** · NVRAM (non-volatile random-access memory), 579–580, 948 <!-- SOURCE pdf-1352-b038 -->
+- **N 路归并** · N-way merge, 702 
+
+## O {#index-o}
+
+- **OAuth 协议** · OAuth protocol, 443 <!-- SOURCE pdf-1352-b039 -->
+- **混淆处理** · obfuscation, 1235 
+- **基于对象的数据库** · object-based databases 
+    - 数组类型 · array types and, 378 <!-- SOURCE pdf-1352-b040 -->
+    - 复杂数据类型 · complex data types and, 376–382 <!-- SOURCE pdf-1352-b041 -->
+    - 继承 · inheritance and, 378–380 <!-- SOURCE pdf-1353-b001 -->
+    - 映射 · mapping and, 377, 381–382 
+    - 概述 · overview, 9 
+    - 引用类型 · reference types and, 380–381 
+- **对象类** · object classes, 1242 
+- **对象数据库管理组（ODMG）** · Object Database Management Group (ODMG), 1239–1240 <!-- SOURCE pdf-1353-b002 -->
+- **对象管理组（OMG）** · Object Management Group (OMG), 288 <!-- SOURCE pdf-1353-b003 -->
+- **三元组的宾语** · object of triples, 372 
+- **面向对象数据库（OODB）** · object-oriented databases (OODB), 9, 26, 377, 431, 1239–1240 <!-- SOURCE pdf-1353-b004 -->
+- **对象关系数据库** · object-relational databases, 377–381 <!-- SOURCE pdf-1353-b005 -->
+    - 定义 · defined, 377 
+    - 引用类型 · reference types and, 380–381 
+    - 表继承 · table inheritance and, 379–380 <!-- SOURCE pdf-1353-b006 -->
+    - 类型继承 · type inheritance and, 378–379 <!-- SOURCE pdf-1353-b007 -->
+    - 用户定义类型 · user-defined types, 378 
+- **对象关系数据模型** · object-relational data models, 27, 376–382 <!-- SOURCE pdf-1353-b008 -->
+- **对象关系映射（ORM）** · object-relational mapping (ORM), 377, 381–382, 431–434, 1239–1240 <!-- SOURCE pdf-1353-b009 -->
+- **可观察的外部写入** · observable external writes, 807 
+- **ODBC（开放数据库连接）** · ODBC (Open Database Connectivity) <!-- SOURCE pdf-1353-b010 -->
+    - 高级 SQL · advanced SQL and, 194–197 
+    - 定义的 API · API defined by, 194–195 
+    - 定义的应用接口 · application interfaces defined by, 17 <!-- SOURCE pdf-1353-b011 -->
+    - 缓存 · caching and, 436 
+    - 符合性级别 · conformance levels and, 196–197 <!-- SOURCE pdf-1353-b012 -->
+    - 标准 · standards for, 1238–1239 
+    - 类型定义 · type definition and, 196 
+    - Web 会话 · web sessions and, 409 
+- **ODMG（对象数据库管理组）** · ODMG (Object Database Management Group), 1239–1240 <!-- SOURCE pdf-1353-b013 -->
+- **链下交易** · off-chain transactions, 1275 
+- **离线存储** · offline storage, 561 
+- **OGC（开放地理空间联盟）** · OGC (Open Geospatial Consortium), 388 <!-- SOURCE pdf-1353-b014 -->
+- **OLAP；见联机分析处理** · OLAP. See online analytical processing <!-- SOURCE pdf-1353-b015 --><!-- SOURCE pdf-1353-b016 -->
+- **旧值** · old value, 913 
+- **OLE-DB** · OLE-DB, 1239 
+- **OLTP（联机事务处理）** · OLTP (online transaction processing), 4, 521, 1231–1232 <!-- SOURCE pdf-1353-b017 -->
+- **OMG（对象管理组）** · OMG (Object Management Group), 288 <!-- SOURCE pdf-1353-b018 -->
+- **on 条件** · on condition, 130–131 
+- **on delete cascade** · on delete cascade, 150, 210, 268n5 <!-- SOURCE pdf-1353-b019 -->
+- **第一范式（1NF）** · 1NF (first normal form), 342–343 <!-- SOURCE pdf-1353-b020 -->
+- **一对多映射** · one-to-many mapping, 252–255 
+- **一对一映射** · one-to-one mapping, 252–254 
+- **联机分析处理（OLAP）** · online analytical processing (OLAP), 527–540 <!-- SOURCE pdf-1353-b021 -->
+    - 多维数据聚合 · aggregation on multidimensional data, 527–532 <!-- SOURCE pdf-1353-b022 -->
+    - 交叉表 · cross-tabulation and, 528–533 
+    - 数据立方体 · data cubes and, 529–530 
+    - 定义 · defined, 520, 530 
+    - 切块 · dicing and, 530 
+    - 下钻 · drill down and, 531, 540 
+    - 混合 OLAP · hybrid, 535 
+    - 实现 · implementation of, 535 
+    - 多维 OLAP · multidimensional, 535 
+    - 性能基准 · performance benchmarks and, 1231–1232 <!-- SOURCE pdf-1353-b023 -->
+    - 关系 OLAP · relational, 535 
+    - 报表与可视化工具 · reporting and visualization tools, 538–540 <!-- SOURCE pdf-1353-b024 -->
+    - 上卷 · rollup and, 530–531, 536–538 
+    - 切片 · slicing and, 530 
+    - SQL 中的实现 · in SQL, 533–534, 536–538 
+- **在线创建索引** · online index creation, 884–885 
+- **在线存储** · online storage, 561 
+- **联机事务处理（OLTP）** · online transaction processing (OLTP), 4, 521, 1231–1232 <!-- SOURCE pdf-1353-b025 -->
+- **on update cascade** · on update cascade, 150 
+- **OODB；见面向对象数据库** · OODB. See object-oriented databases <!-- SOURCE pdf-1353-b026 -->
+- **开放寻址** · open addressing, 1194 
+- **开放数据库连接；见 ODBC** · Open Database Connectivity. See ODBC <!-- SOURCE pdf-1353-b027 -->
+- **开放地理空间联盟（OGC）** · Open Geospatial Consortium (OGC), 388 <!-- SOURCE pdf-1353-b028 -->
+- **开放散列** · open hashing, 1194 <!-- SOURCE pdf-1353-b029 -->
+- **OpenID 协议** · OpenID protocol, 443 
+- **开放多边形** · open polygons, 388n3 
+- **开时间区间** · open time intervals, 675 
+- **操作一致状态** · operation consistent state, 936–937 <!-- SOURCE pdf-1353-b030 -->
+- **操作节点** · operation nodes, 506–507 
+- **操作可串行化性** · operation serializability, 885 
+- **算子树** · operator trees, 724, 1040 
+- **光存储** · optical storage, 560–561 
+- **乐观并发控制** · optimistic concurrency control, 869 <!-- SOURCE pdf-1353-b031 -->
+- **不验证读取的乐观并发控制** · optimistic concurrency control without read validation, 883, 891 <!-- SOURCE pdf-1353-b032 -->
+- **优化成本预算** · optimization cost budget, 774 
+- **Oracle** · Oracle 
+    - 高级 SQL · advanced SQL and, 206 <!-- SOURCE pdf-1353-b033 -->
+    - 应用服务器 · application server, 416 
+    - 数据库设计 · database design and, 443n6, 444–445 <!-- SOURCE pdf-1353-b034 -->
+    - decode 函数 · decode function in, 155 
+    - Event Processing · Event Processing, 504 
+    - GeoRaster 扩展 · GeoRaster extension, 367 
+    - 历史 · history of, 26 
+    - JDBC 接口 · JDBC interface and, 185, 186 
+    - 关键字 · keywords in, 81n3, 88n7 
+    - limit 子句 · limit clause in, 222 
+    - 嵌套子查询 · nested subqueries and, 104 
+    - 性能监控工具 · performance monitoring tools, 1212 <!-- SOURCE pdf-1353-b035 -->
+    - 性能调优工具 · performance tuning tools, 1218 <!-- SOURCE pdf-1353-b036 -->
+    - 支持的过程语言 · procedural languages supported by, 199 <!-- SOURCE pdf-1353-b037 -->
+    - 查询执行计划 · query-evaluation plans and, 746 <!-- SOURCE pdf-1353-b038 -->
+    - 查询优化 · query optimization and, 773, 774, 783 <!-- SOURCE pdf-1353-b039 -->
+    - 引用类型 · reference types and, 380 
+    - 支持的集合和数组类型 · set and array types supported by, 367 <!-- SOURCE pdf-1353-b040 -->
+    - 快照隔离 · snapshot isolation and, 1225 
+    - Spatial and Graph · Spatial and Graph, 388 
+    - 统计分析 · statistical analysis and, 761 
+    - 支持的语法 · syntax supported by, 204, 212, 218, 218n9 <!-- SOURCE pdf-1353-b041 -->
+    - 事务 · transactions and, 822, 826, 872–873, 879 <!-- SOURCE pdf-1353-b042 -->
+    - 支持的类型和域 · types and domains supported by, 160 <!-- SOURCE pdf-1354-b001 --><!-- SOURCE pdf-1354-b002 -->
+    - Virtual Private Database · Virtual Private Database, 173, 444–445 <!-- SOURCE pdf-1354-b003 -->
+- **预言机** · oracles, 1271–1272 
+- **ORC** · ORC, 490, 499, 613–614 
+- **or 连接词** · or connective, 74 
+- **order by 子句** · order by clause, 83–84, 219–222, 534 <!-- SOURCE pdf-1354-b004 -->
+- **有序索引** · ordered indices, 624–634 
+    - 与散列索引的比较 · comparison with hash indices, 1203 <!-- SOURCE pdf-1354-b005 --><!-- SOURCE pdf-1354-b006 -->
+    - 定义 · defined, 624 
+    - 稠密索引 · dense, 626–628, 630–631 
+    - 多级索引 · multilevel, 628–630 
+    - 辅助索引 · secondary, 625, 632–633 
+    - 顺序索引 · sequential, 625, 634–635 
+    - 稀疏索引 · sparse, 626–632 
+    - 技术 · techniques for, 624 
+    - 更新 · updates and, 630–632 
+- **有序归并** · ordered merge, 1056 
+- **ORM；见对象关系映射** · ORM. See object-relational mapping <!-- SOURCE pdf-1354-b007 -->
+- **or 运算** · or operation, 89–90 
+- **孤块** · orphaned blocks, 1257, 1263 
+- **外连接运算** · outer-join operation, 57, 131–136, 722–723, 765, 782 <!-- SOURCE pdf-1354-b008 -->
+- **外层关系** · outer relation, 704 
+- **外并运算** · outer union operations, 229n16 
+- **外包** · outsourcing, 28 
+- **避免溢出** · overflow avoidance, 715 
+- **溢出块** · overflow blocks, 598 
+- **溢出桶** · overflow buckets, 659–660, 1194–1195 <!-- SOURCE pdf-1354-b009 -->
+- **溢出链** · overflow chaining, 659–660 
+- **解决溢出** · overflow resolution, 715 
+- **重叠概化** · overlapping generalization, 279, 290 <!-- SOURCE pdf-1354-b010 -->
+- **重叠特化** · overlapping specialization, 272, 275 <!-- SOURCE pdf-1354-b011 -->
+- **叠加** · overlays, 393 
+
+## P {#index-p}
+
+- **页（块）** · page (blocks), 567 <!-- SOURCE pdf-1354-b012 -->
+- **PageLSN** · PageLSN, 942–945 
+- **PageRank** · PageRank, 385–386 
+- **页传送** · page shipping, 968 
+- **并行数据库** · parallel databases 
+    - 体系结构 · architecture of, 22, 970–986 <!-- SOURCE pdf-1354-b013 -->
+    - 大数据 · Big Data and, 473, 480–481 
+    - 粗粒度并行 · coarse-grain, 963, 970 <!-- SOURCE pdf-1354-b014 -->
+    - 并发控制 · concurrency control and, 990 
+    - 定义 · defined, 480 
+    - 交换算子模型 · exchange-operator model and, 1055–1057 <!-- SOURCE pdf-1354-b015 -->
+    - 细粒度并行 · fine-grain, 963, 970 
+    - 层次结构 · hierarchical, 979, 980, 986 
+    - 索引 · indices in, 1017–1019 
+    - 互连网络 · interconnection networks and, 975–979 <!-- SOURCE pdf-1354-b016 -->
+    - 干扰 · interference and, 974 
+    - 操作间并行 · interoperation parallelism and, 1040, 1052–1055 <!-- SOURCE pdf-1354-b017 -->
+    - 查询间并行 · interquery parallelism and, 1039 <!-- SOURCE pdf-1354-b018 -->
+    - 操作内并行 · intraoperation parallelism and, 1040–1052 <!-- SOURCE pdf-1354-b019 -->
+    - 查询内并行 · intraquery parallelism and, 1039 <!-- SOURCE pdf-1354-b020 -->
+    - I/O 并行 · I/O parallelism and, 1004–1007 <!-- SOURCE pdf-1354-b021 -->
+    - 键值存储 · key-value stores and, 1023–1031 <!-- SOURCE pdf-1354-b022 -->
+    - 大规模并行 · massively parallel, 970 
+    - 采用原因 · motivation for, 970–971 
+    - 算子树 · operator trees and, 1040 
+    - 分区技术 · partitioning techniques and, 1004–1007 <!-- SOURCE pdf-1354-b023 -->
+    - 性能指标 · performance measures for, 971–974 <!-- SOURCE pdf-1354-b024 -->
+    - 流水线 · pipelines and, 1053–1054 
+    - 查询优化 · query optimization and, 1064–1070 <!-- SOURCE pdf-1354-b025 -->
+    - 复制 · replication and, 1013–1016 
+    - 响应时间 · response time and, 971–972 
+    - 扩展比 · scaleup and, 972–974 
+    - 共享磁盘 · shared disk, 979, 980, 984–985 <!-- SOURCE pdf-1354-b026 -->
+    - 共享内存 · shared memory, 979–984, 1061–1064 <!-- SOURCE pdf-1354-b027 -->
+    - 无共享 · shared nothing, 979, 980, 985–986, 1040–1041, 1061–1063 <!-- SOURCE pdf-1354-b028 -->
+    - 数据倾斜 · skew and, 974, 1007–1013, 1043, 1062 <!-- SOURCE pdf-1354-b029 -->
+    - 加速比 · speedup and, 972–974 
+    - 启动开销 · start-up costs and, 974, 1066 
+    - 吞吐量 · throughput and, 971 
+    - 事务处理 · transaction processing in, 989–990 <!-- SOURCE pdf-1354-b030 -->
+- **并行外部排序归并** · parallel external sort-merge, 1042–1043 <!-- SOURCE pdf-1354-b031 --><!-- SOURCE pdf-1354-b032 -->
+- **并行索引** · parallel indices, 1017–1019 
+- **并行性** · parallelism 
+    - 粗粒度 · coarse-grained, 963 <!-- SOURCE pdf-1354-b033 -->
+    - 数据并行 · data, 1042, 1057 
+    - 细粒度 · fine-grained, 963 
+    - 通过并行提高性能 · improvement of performance via, 571–572 <!-- SOURCE pdf-1354-b034 -->
+    - 独立并行 · independent, 1054–1055 
+    - 操作间并行 · interoperation, 1040, 1052–1055 <!-- SOURCE pdf-1354-b035 -->
+    - 查询间并行 · interquery, 1039 
+    - 操作内并行 · intraoperation, 1040–1052 
+    - 查询内并行 · intraquery, 1039 
+    - I/O 并行；见 I/O 并行 · I/O (see I/O parallelism) 
+    - 单指令多数据 · Single Instruction Multiple Data, 1064 <!-- SOURCE pdf-1354-b036 -->
+- **并行连接** · parallel joins, 1043–1048 
+    - 分片复制连接 · fragment-and-replicate, 1046–1047, 1062 <!-- SOURCE pdf-1354-b037 --><!-- SOURCE pdf-1354-b038 -->
+    - 散列连接 · hash, 1045 
+    - 嵌套循环连接 · nested-loop, 1045–1046 
+    - 分区连接 · partitioned, 1043–1046 
+    - 数据倾斜 · skew in, 1047–1048 
+- **并行键值存储** · parallel key-value stores, 1023–1031 <!-- SOURCE pdf-1354-b039 -->
+    - 原子提交 · atomic commit and, 1029 
+    - 并发控制 · concurrency control and, 1028–1029 <!-- SOURCE pdf-1354-b040 -->
+    - 数据表示 · data representation and, 1024–1025 <!-- SOURCE pdf-1354-b041 -->
+    - 定义 · defined, 1003 
+    - 弹性 · elasticity and, 1024 
+    - 故障 · failures and, 1029–1030 
+    - 地理分布 · geographically distributed, 1026–1027 <!-- SOURCE pdf-1354-b042 -->
+    - 索引结构 · index structure and, 1028 
+    - 没有声明式查询时的管理 · managing without declarative queries, 1030–1031 <!-- SOURCE pdf-1354-b043 -->
+    - 概述 · overview, 1023–1024 
+    - 性能优化 · performance optimizations and, 1031 <!-- SOURCE pdf-1354-b044 -->
+    - 数据存取 · storing and retrieving data, 1025–1028 <!-- SOURCE pdf-1354-b045 -->
+    - 事务支持 · support for transactions, 1028–1030 <!-- SOURCE pdf-1354-b046 -->
+- **并行处理** · parallel processing, 437, 488–489 <!-- SOURCE pdf-1354-b047 -->
+- **并行查询计划** · parallel query plans 
+    - 选择 · choosing, 1066–1068 <!-- SOURCE pdf-1355-b001 -->
+    - 数据同置 · colocation of data and, 1068–1069 <!-- SOURCE pdf-1355-b002 -->
+    - 成本 · cost of, 1065–1066 
+    - 执行 · evaluation of, 1052–1061 
+    - 物化视图 · materialized views and, 1069–1070 <!-- SOURCE pdf-1355-b003 -->
+    - 计划空间 · space for, 1064–1065 
+- **并行排序** · parallel sort, 1041–1043 
+- **参数化视图** · parameterized views, 200 
+- **parameter style general** · parameter style general, 205 
+- **参数化查询优化** · parametric query optimization, 786 <!-- SOURCE pdf-1355-b004 -->
+- **奇偶校验位** · parity bits, 572, 574, 577 
+- **Parquet** · Parquet, 490, 499 
+- **解析** · parsing 
+    - 应用设计 · application design and, 418 <!-- SOURCE pdf-1355-b005 -->
+    - 批量加载 · bulk loads and, 1221–1223 
+    - 查询处理 · query processing and, 689–690 <!-- SOURCE pdf-1355-b006 -->
+- **部分聚合** · partial aggregation, 1049 
+- **部分依赖** · partial dependency, 356 
+- **部分故障** · partial failure, 909 
+- **部分概化** · partial generalization, 275 
+- **部分提交的事务** · partially committed transactions, 806 <!-- SOURCE pdf-1355-b007 -->
+- **部分参与** · partial participation, 255 
+- **部分回滚** · partial rollback, 853 
+- **部分调度** · partial schedules, 819 
+- **部分特化** · partial specialization, 275 
+- **联系集中的参与** · participation in relationship sets, 247 <!-- SOURCE pdf-1355-b008 -->
+- **分区属性** · partitioning attribute, 479 
+- **分区键** · partitioning keys, 475–476 
+- **分区向量** · partitioning vector, 1005 
+- **分区** · partitions 
+    - 平衡范围分区 · balanced range, 1008–1009 <!-- SOURCE pdf-1355-b009 -->
+    - 数据分区 · data, 989n5 
+    - 定义 · defined, 1100 
+    - 分布式数据库 · distributed databases and, 1104–1105 <!-- SOURCE pdf-1355-b010 -->
+    - 分布式文件系统 · distributed file systems and, 473 <!-- SOURCE pdf-1355-b011 -->
+    - 动态重新分区 · dynamic repartitioning, 1010–1013 <!-- SOURCE pdf-1355-b012 -->
+    - 交换算子模型 · exchange-operator model and, 1055–1057 <!-- SOURCE pdf-1355-b013 -->
+    - 文件组织 · file organization and, 601–602 <!-- SOURCE pdf-1355-b014 -->
+    - 散列分区 · hash, 476, 1005–1007, 1045 
+    - 水平分区 · horizontal, 1004, 1216–1217 <!-- SOURCE pdf-1355-b015 -->
+    - 节点内分区 · intra-node, 1004 
+    - 连接 · joins and, 714–715, 1043–1046 <!-- SOURCE pdf-1355-b016 -->
+    - 网络分区 · network, 481, 989, 989n5, 1104–1105 <!-- SOURCE pdf-1355-b017 -->
+    - 并行数据库 · parallel databases and, 1004–1007 <!-- SOURCE pdf-1355-b018 -->
+    - 点查询 · point queries and, 1006 
+    - 查询优化 · query optimization and, 1065 
+    - 范围分区 · range, 476, 1005, 1007, 1178 
+    - 递归分区 · recursive, 714–715 
+    - 关系模式分区 · of relation schema, 1216–1217 
+    - 轮转分区 · round-robin, 1005, 1006 
+    - 关系扫描 · scanning a relation and, 1006 
+    - 分片 · sharding and, 473, 475–476, 1275 <!-- SOURCE pdf-1355-b019 -->
+    - 数据倾斜 · skew and, 715, 1007–1013 
+    - 主题分区 · topic-partition, 1073 
+    - 垂直分区 · vertical, 1004 
+    - 虚拟节点分区 · virtual node, 1009–1010 
+- **分区表** · partition tables, 1011–1014 
+- **密码** · passwords 
+    - 应用设计 · application design and, 403, 411, 414, 432, 450–451 <!-- SOURCE pdf-1355-b020 --><!-- SOURCE pdf-1355-b021 -->
+    - 字典攻击 · dictionary attacks and, 449 
+    - 分布式数据库 · distributed databases and, 1240 <!-- SOURCE pdf-1355-b022 -->
+    - 散列函数 · hash functions and, 1260n4 
+    - 密码泄露 · leakage of, 440–441 
+    - 中间人攻击 · man-in-the-middle attacks and, 442 <!-- SOURCE pdf-1355-b023 -->
+    - 一次性密码 · one-time, 441 
+    - 单点登录系统 · single sign-on system and, 442–443 <!-- SOURCE pdf-1355-b024 -->
+    - SQL · SQL and, 163, 186, 196 
+    - 存储 · storage and, 602, 603 
+    - 未加密密码 · unencrypted, 414n4 
+- **路径表达式** · path expressions, 372, 381 
+- **模式匹配** · pattern matching, 504 
+- **Paxos 协议** · Paxos protocol, 1152–1155, 1160–1161, 1267 <!-- SOURCE pdf-1355-b025 -->
+- **PCIe 接口** · PCIe interface, 562 
+- **U 盘** · pen drives, 560 
+- **性能** · performance 
+    - 访问时间 · access time and, 561, 566–567, 578, 624, 627–628, 692 <!-- SOURCE pdf-1355-b026 --><!-- SOURCE pdf-1355-b027 -->
+    - 应用设计 · application design and, 434–437 <!-- SOURCE pdf-1355-b028 -->
+    - 基准；见性能基准 · benchmarks (see performance benchmarks) <!-- SOURCE pdf-1355-b029 --><!-- SOURCE pdf-1355-b030 -->
+    - 区块链数据库的性能 · of blockchain databases, 1274–1276 <!-- SOURCE pdf-1355-b031 -->
+    - B+ 树 · B+-trees and, 634, 665–666 
+    - 缓存 · caching and, 435–437 
+    - 数据传输率 · data-transfer rate and, 566 
+    - 为改善性能而反规范化 · denormalization for, 346 
+    - 通过并行提高性能 · improvement via parallelism, 571–572 <!-- SOURCE pdf-1355-b032 -->
+    - 磁盘存储 · magnetic disk storage and, 565–567 <!-- SOURCE pdf-1355-b033 -->
+    - 平均失效前时间 · mean time to failure and, 567, 567n3 <!-- SOURCE pdf-1355-b034 -->
+    - 监控工具 · monitoring tools, 1212 
+    - 并行数据库 · parallel databases and, 971–974 <!-- SOURCE pdf-1355-b035 -->
+    - 并行键值存储 · parallel key-value stores and, 1031 <!-- SOURCE pdf-1355-b036 -->
+    - 并行处理 · parallel processing and, 437 
+    - 响应时间；见响应时间 · response time (see response time) <!-- SOURCE pdf-1355-b037 -->
+    - 寻道时间 · seek time and, 566, 566n2, 567, 692, 710 <!-- SOURCE pdf-1355-b038 -->
+    - 顺序索引 · sequential indices and, 634–635 <!-- SOURCE pdf-1355-b039 -->
+    - 性能测试 · testing, 1235 
+    - 吞吐量；见吞吐量 · throughput (see throughput) 
+    - 调优；见性能调优 · tuning (see performance tuning) <!-- SOURCE pdf-1355-b040 -->
+    - Web 应用 · web applications and, 405–411 <!-- SOURCE pdf-1355-b041 -->
+- **性能基准** · performance benchmarks, 1230–1234 <!-- SOURCE pdf-1355-b042 -->
+    - 数据库应用类别 · database-application classes and, 1231–1232 <!-- SOURCE pdf-1355-b043 -->
+    - 定义 · defined, 1230 
+    - 任务套件 · suites of tasks and, 1231 
+    - 事务处理性能委员会的基准 · of Transaction Processing Performance Council, 1232–1234 <!-- SOURCE pdf-1355-b044 -->
+- **性能调优** · performance tuning, 1210–1230 
+    - 自动调优 · automated, 1217–1218 <!-- SOURCE pdf-1355-b045 -->
+    - 瓶颈位置 · bottleneck locations and, 1211–1213, 1215, 1227 <!-- SOURCE pdf-1355-b046 -->
+    - 批量加载 · bulk loads and, 1221–1223 
+    - 并发事务调优 · of concurrent transactions, 1224–1227 <!-- SOURCE pdf-1355-b047 -->
+    - 硬件调优 · of hardware, 1227–1230 
+    - 关系模式的水平分区 · horizontal partitioning of relation schema, 1216–1217 <!-- SOURCE pdf-1356-b001 --><!-- SOURCE pdf-1356-b002 -->
+    - 索引 · indices and, 1215 
+    - 调优层级 · levels of, 1213–1214 
+    - 物化视图 · materialized views and, 1215–1216 <!-- SOURCE pdf-1356-b003 -->
+    - 调优原因 · motivation for, 1210–1211 
+    - 参数调整 · parameter adjustment and, 1210, 1213–1215, 1220, 1228, 1230 <!-- SOURCE pdf-1356-b004 -->
+    - 物理设计 · physical design and, 1217–1218 <!-- SOURCE pdf-1356-b005 -->
+    - 查询调优 · of queries, 1219–1223 
+    - RAID · RAID and, 1214, 1229–1230 
+    - 模式调优 · of schema, 1214–1218, 1223–1224 <!-- SOURCE pdf-1356-b006 -->
+    - 面向集合 · set orientation and, 1220–1221 <!-- SOURCE pdf-1356-b007 -->
+    - 仿真 · simulation and, 1230 
+    - 调优工具 · tools for, 1218 
+    - 更新 · updates and, 1221–1223, 1225–1227 <!-- SOURCE pdf-1356-b008 -->
+- **period 声明** · period declaration, 157 
+- **Perl** · Perl, 206 
+- **许可链** · permissioned blockchains, 1253–1254, 1256–1257, 1263, 1266, 1274 <!-- SOURCE pdf-1356-b009 -->
+- **持久消息** · persistent messaging, 990, 1016, 1108–1110, 1137 <!-- SOURCE pdf-1356-b010 -->
+- **持久存储模块（PSM）** · Persistent Storage Module (PSM), 201 <!-- SOURCE pdf-1356-b011 -->
+- **幻象现象** · phantom phenomenon, 827, 858–861, 877–879, 877n5, 885, 887 <!-- SOURCE pdf-1356-b012 -->
+- **PHP** · PHP, 405, 417, 418 
+- **物理块** · physical blocks, 910 
+- **物理数据独立性** · physical data independence, 9–10, 13 <!-- SOURCE pdf-1356-b013 -->
+- **物理设计阶段** · physical-design phase, 18, 242–243 <!-- SOURCE pdf-1356-b014 -->
+- **物理等价规则** · physical equivalence rules, 771 
+- **物理抽象层** · physical level of abstraction, 9, 11, 12, 15 <!-- SOURCE pdf-1356-b015 -->
+- **物理日志** · physical logging, 936 
+- **物理模式** · physical schema, 12, 13 
+- **物理存储系统** · physical storage systems, 559–580 <!-- SOURCE pdf-1356-b016 -->
+    - 高速缓存 · cache memory, 559 
+    - 每字节成本 · cost per byte, 560, 561, 566n2, 569, 576 <!-- SOURCE pdf-1356-b017 --><!-- SOURCE pdf-1356-b018 -->
+    - 磁盘块访问 · disk-block access and, 577–580 <!-- SOURCE pdf-1356-b019 -->
+    - 闪存 · flash memory, 560, 567–570, 656–657 <!-- SOURCE pdf-1356-b020 -->
+    - 存储层次 · hierarchy of, 561, 562 
+    - 索引 · indices and, 630n2 
+    - 接口 · interfaces for, 562–563 
+    - 磁盘 · magnetic disks, 560, 563–567 
+    - 主存 · main memory, 559–560 
+    - 光存储 · optical storage, 560–561 
+    - RAID · RAID, 562, 570–577 
+    - 固态硬盘 · solid-state drives, 18, 560 
+    - 磁带存储 · tape storage, 561 
+    - 易失性 · volatility of, 560, 562 
+- **物理逻辑重做操作** · physiological redo operations, 941 <!-- SOURCE pdf-1356-b021 -->
+- **Pig Latin** · Pig Latin, 494 
+- **固定计数** · pin count, 605 
+- **已固定的块** · pinned blocks, 605 
+- **固定操作** · pin operations, 605 
+- **流水线边** · pipelined edges, 728 
+- **流水线阶段** · pipeline stage, 728 
+- **流水线** · pipelining, 724–731 
+    - 优点 · benefits of, 726 <!-- SOURCE pdf-1356-b022 -->
+    - 连续数据流 · for continuous-stream data, 731 <!-- SOURCE pdf-1356-b023 -->
+    - 需求驱动 · demand-driven, 726–728 
+    - 执行算法 · evaluation algorithms for, 728–731 <!-- SOURCE pdf-1356-b024 -->
+    - 实现 · implementation of, 726–728 
+    - 并行性 · parallelism and, 1053–1054 
+    - 生产者驱动 · producer-driven, 726–728 
+    - 用途 · uses for, 691–692, 724, 725 
+- **透视属性** · pivot attribute, 227 
+- **pivot 子句** · pivot clause, 227, 534 
+- **透视变换** · pivoting, 226–227, 530 
+- **透视表** · pivot-table, 226–227, 528–529 
+- **投影连接范式（PJNF）** · PJNF (project-join normal form), 341 <!-- SOURCE pdf-1356-b025 -->
+- **计划缓存** · plan caching, 774 
+- **平台即服务模型** · platform-as-a-service model, 992–993 <!-- SOURCE pdf-1356-b026 -->
+- **盘片** · platters, 563, 565 
+- **PL/SQL** · PL/SQL, 199, 204 
+- **指针；另见索引** · pointers. See also indices 
+    - 区块链数据库 · blockchain databases and, 1254–1255, 1261, 1269 <!-- SOURCE pdf-1356-b027 --><!-- SOURCE pdf-1356-b028 -->
+    - B+ 树；见 B+ 树 · B+-tree (see B+-trees) 
+    - 并发控制 · concurrency control and, 886, 888, 889 <!-- SOURCE pdf-1356-b029 --><!-- SOURCE pdf-1356-b030 -->
+    - 查询处理 · query processing and, 697, 698, 700, 708 <!-- SOURCE pdf-1356-b031 -->
+    - 恢复系统 · recovery systems and, 914, 945 <!-- SOURCE pdf-1356-b032 -->
+    - 重新分配 · redistribution of, 646 
+    - SQL 基础 · SQL basics and, 193, 205 
+    - 存储 · storage and, 588, 591, 594–598, 601 <!-- SOURCE pdf-1356-b033 -->
+- **点查询** · point queries, 1006, 1190 
+- **多边形** · polygons, 388–390, 388n3, 393 
+- **折线** · polylines, 388–389, 388n3 
+- **总体** · population, 547 
+- **PostgreSQL** · PostgreSQL 
+    - 高级 SQL · advanced SQL and, 206 <!-- SOURCE pdf-1356-b034 -->
+    - 数组类型 · array types on, 378 
+    - 并发控制 · concurrency control and, 873, 879 <!-- SOURCE pdf-1356-b035 -->
+    - 广义搜索树 · Generalized Search Tree and, 670 <!-- SOURCE pdf-1356-b036 -->
+    - 发展 · growth of, 27 
+    - 堆文件组织 · heap file organization and, 596 <!-- SOURCE pdf-1356-b037 -->
+    - JDBC 接口 · JDBC interface and, 185 
+    - JSON · JSON and, 370 
+    - 性能监控工具 · performance monitoring tools, 1212 <!-- SOURCE pdf-1356-b038 -->
+    - PostGIS 扩展 · PostGIS extension, 367, 388, 390 <!-- SOURCE pdf-1356-b039 -->
+    - 支持的过程语言 · procedural languages supported by, 199 <!-- SOURCE pdf-1356-b040 -->
+    - 查询执行计划 · query-evaluation plans and, 746 <!-- SOURCE pdf-1356-b041 -->
+    - 查询处理 · query processing and, 692, 694, 698–699 <!-- SOURCE pdf-1356-b042 -->
+    - 支持的集合和数组类型 · set and array types supported by, 367 <!-- SOURCE pdf-1356-b043 -->
+    - 快照隔离 · snapshot isolation and, 1225 
+    - 统计分析 · statistical analysis and, 761 
+    - 事务管理 · transaction management in, 822, 826 <!-- SOURCE pdf-1356-b044 -->
+    - 支持的类型和域 · types and domains supported by, 160 <!-- SOURCE pdf-1356-b045 -->
+    - 唯一键值 · unique key values in, 161 
+- **P+Q 冗余方案** · P + Q redundancy schema, 573, 574 <!-- SOURCE pdf-1356-b046 -->
+- **实用拜占庭容错** · Practical Byzantine Fault Tolerance, 1267 <!-- SOURCE pdf-1356-b047 -->
+- **优先图** · precedence graph, 816–817 
+- **查准率** · precision, 386 <!-- SOURCE pdf-1357-b001 -->
+- **精确锁** · precision locking, 861n1 
+- **谓词锁** · predicate locking, 828, 861, 861n1 <!-- SOURCE pdf-1357-b002 -->
+- **三元组的谓词** · predicate of triples, 372 
+- **谓词读取** · predicate reads, 858–861 
+- **预测** · prediction, 541–543, 545–546 
+- **预测模型** · predictive models, 4–5 
+- **抢占** · preemption, 850 
+- **预取** · prefetching, 969 
+- **前缀压缩** · prefix compression, 653 
+- **Pregel 系统** · Pregel system, 511 
+- **预备语句** · prepared statements, 188–190 
+- **表示层** · presentation layer, 429 
+- **每 TPS 价格** · price per TPS, 1232 
+- **主副本** · primary copy, 1123 
+- **主索引** · primary indices, 625, 695, 1017–1018 <!-- SOURCE pdf-1357-b003 -->
+- **主键** · primary keys 
+    - 属性 · attributes and, 310n4 <!-- SOURCE pdf-1357-b004 -->
+    - 定义 · defined, 44 
+    - 实体—联系（E-R）模型 · entity-relationship (E-R) model and, 256–260 <!-- SOURCE pdf-1357-b005 -->
+    - 函数依赖 · functional dependencies and, 313 <!-- SOURCE pdf-1357-b006 -->
+    - 完整性约束 · integrity constraints and, 147, 148 <!-- SOURCE pdf-1357-b007 -->
+    - 关系模型中的主键 · in relational model, 44–46 
+    - SQL 模式定义 · SQL schema definition and, 68–70 <!-- SOURCE pdf-1357-b008 -->
+- **主节点** · primary nodes, 1123 
+- **主站点** · primary site, 931 
+- **主存储** · primary storage, 561 
+- **主属性** · prime attributes, 356 
+- **隐私** · privacy, 438, 446, 1252 
+- **私钥加密** · private-key encryption, 1260–1261 <!-- SOURCE pdf-1357-b009 -->
+- **权限** · privileges 
+    - all 权限 · all, 166 <!-- SOURCE pdf-1357-b010 -->
+    - 定义 · defined, 165 
+    - execute 权限 · execute, 169–170 
+    - 授权 · granting, 166–167, 170–171 
+    - public 权限 · public, 167 
+    - references 权限 · references, 170 
+    - 撤销权限 · revoking, 166–167, 171–173 
+    - select 权限 · select, 171, 172 
+    - 权限转授 · transfer of, 170–171 
+    - update 权限 · update, 170 
+- **探测输入** · probe input, 713 
+- **过程式 DML** · procedural DMLs, 15 
+- **过程语言** · procedural languages, 47n3, 184, 199, 204 <!-- SOURCE pdf-1357-b011 --><!-- SOURCE pdf-1357-b012 -->
+- **过程** · procedures 
+    - 声明 · declaring, 199–201 <!-- SOURCE pdf-1357-b013 -->
+    - 外部语言例程 · external language routines and, 203–206 <!-- SOURCE pdf-1357-b014 -->
+    - 语言结构 · language constructs for, 201–203 <!-- SOURCE pdf-1357-b015 -->
+    - 语法 · syntax and, 199, 201–205 
+    - 用 SQL 编写 · writing in SQL, 198–206 
+- **进程监视进程** · process monitor process, 965 
+- **生产者驱动的流水线** · producer-driven pipeline, 726–728 <!-- SOURCE pdf-1357-b016 -->
+- **编程语言；另见各具体语言** · programming languages. See also specific languages <!-- SOURCE pdf-1357-b017 -->
+    - 从编程语言访问 SQL · accessing SQL from, 183–198 
+    - 不匹配问题 · mismatch and, 184 
+    - 面向对象语言 · object-oriented, 377 
+    - 变量操作 · variable operation of, 184 
+- **渐进式 Web 应用（PWA）** · Progressive Web Apps (PWA), 429 <!-- SOURCE pdf-1357-b018 -->
+- **投影** · projection 
+    - 操作内并行 · intraoperation parallelism and, 1049 <!-- SOURCE pdf-1357-b019 --><!-- SOURCE pdf-1357-b020 -->
+    - 查询优化 · query optimization and, 764 
+    - 查询处理 · query processing and, 720 
+    - 视图维护 · view maintenance and, 780–781 <!-- SOURCE pdf-1357-b021 -->
+- **投影连接范式（PJNF）** · project-join normal form (PJNF), 341 <!-- SOURCE pdf-1357-b022 -->
+- **投影运算** · project operation, 49–50 
+- **权益证明共识** · proof-of-stake consensus, 1256, 1266 <!-- SOURCE pdf-1357-b023 -->
+- **工作量证明共识** · proof-of-work consensus, 1256, 1264–1266 <!-- SOURCE pdf-1357-b024 -->
+- **提议者** · proposers, 1148, 1152 
+- **词语邻近度** · proximity of terms, 385 
+- **PR 四叉树** · PR quadtrees, 1187 
+- **伪传递规则** · pseudotransitivity rule, 321 
+- **PSM（持久存储模块）** · PSM (Persistent Storage Module), 201 <!-- SOURCE pdf-1357-b025 -->
+- **公有链** · public blockchains, 1253, 1255, 1257–1259, 1263, 1264 <!-- SOURCE pdf-1357-b026 -->
+- **公钥加密** · public-key encryption, 448–449, 1260–1261 <!-- SOURCE pdf-1357-b027 -->
+- **发布—订阅系统** · publish-subscribe (pub-sub) systems, 507, 1072, 1137–1139 <!-- SOURCE pdf-1357-b028 -->
+- **拉取数据** · pulling data, 727 
+- **标点标记** · punctuations, 503–504 <!-- SOURCE pdf-1357-b029 -->
+- **推送数据** · pushing data, 727 
+- **put 函数** · put function, 477, 478 
+- **谜题友好性** · puzzle friendliness, 1265 
+- **PWA（渐进式 Web 应用）** · PWA (Progressive Web Apps), 429 <!-- SOURCE pdf-1357-b030 -->
+- **Python** · Python 
+    - 高级 SQL · advanced SQL and, 183, 193–194, 206 <!-- SOURCE pdf-1357-b031 --><!-- SOURCE pdf-1357-b032 -->
+    - 应用设计 · application design and, 16, 405, 416, 419 <!-- SOURCE pdf-1357-b033 -->
+    - 面向对象编程 · object-oriented programming and, 377 <!-- SOURCE pdf-1357-b034 -->
+    - 对象关系映射系统 · object-relational mapping system for, 382 <!-- SOURCE pdf-1357-b035 -->
+    - Web 服务 · web services and, 424 
+
+## Q {#index-q}
+
+- **二次分裂启发式** · quadratic split heuristic, 1189 <!-- SOURCE pdf-1357-b036 -->
+- **四元组** · quads, 376 
+- **四叉树** · quadtrees, 392, 674, 1186–1187 
+- **查询；另见信息检索** · queries. See also information retrieval <!-- SOURCE pdf-1357-b037 -->
+    - ADO.NET · ADO.NET and, 184 
+    - SQL 查询的基本结构 · basic structure of SQL queries, 71–79 <!-- SOURCE pdf-1357-b038 -->
+    - B+ 树上的查询 · on B+-trees, 637–641, 690 
+    - 缓存 · caching and, 435–437 
+    - 笛卡尔积 · Cartesian product and, 76–79, 81, 230 <!-- SOURCE pdf-1357-b039 -->
+    - 查询编译 · compilation of, 733 
+    - 连续查询 · continuous, 503, 731 
+    - 相关子查询 · correlated subqueries and, 101 <!-- SOURCE pdf-1357-b040 -->
+    - 成本；见查询成本 · cost of (see query cost) 
+    - 决策支持查询 · decision-support, 521, 971 
+    - 声明式查询 · declarative, 1030–1031 
+    - 定义 · defined, 15 
+    - 删除 · deletion and, 108–110 
+    - 等价查询 · equivalent, 58 
+    - 执行；见查询执行计划 · evaluation of (see query-evaluation plans) <!-- SOURCE pdf-1357-b041 -->
+    - 散列函数 · hash functions and, 624, 1197–1202 <!-- SOURCE pdf-1357-b042 -->
+    - 索引 · indices and, 623, 695–697, 707–708 <!-- SOURCE pdf-1357-b043 -->
+    - 插入 · insertion and, 110–111 
+    - 中级 SQL；见中级 SQL · intermediate SQL and (see intermediate SQL) <!-- SOURCE pdf-1357-b044 -->
+    - JDBC · JDBC and, 184–193 
+    - 连接表达式 · join expressions and, 125–136 
+    - 关键字查询 · keyword, 383, 385–387, 721 <!-- SOURCE pdf-1358-b001 -->
+    - 语言；见查询语言 · languages (see query languages) <!-- SOURCE pdf-1358-b002 -->
+    - 元数据 · metadata and, 191–193 
+    - 单调查询 · monotonic, 218 
+    - 多搜索键访问 · multiple-key access and, 661–663 <!-- SOURCE pdf-1358-b003 -->
+    - 多关系查询 · on multiple relations, 74–79 
+    - 最近邻查询 · nearest-neighbor, 394, 672, 674 <!-- SOURCE pdf-1358-b004 -->
+    - 嵌套子查询 · nested subqueries, 98–107 
+    - 空值 · null values and, 89–90 
+    - ODBC · ODBC and, 194–197 
+    - 优化；见查询优化 · optimization of (see query optimization) <!-- SOURCE pdf-1358-b005 -->
+    - PageRank · PageRank and, 385–386 
+    - 查询性能调优 · performance tuning of, 1219–1223 <!-- SOURCE pdf-1358-b006 -->
+    - 点查询 · point, 1006, 1190 
+    - 处理；见查询处理 · processing (see query processing) <!-- SOURCE pdf-1358-b007 -->
+    - 编程语言访问 · programming language access and, 183–198 <!-- SOURCE pdf-1358-b008 -->
+    - Python · Python and, 193–194 
+    - 范围查询 · range, 638, 672, 674, 1006, 1190 <!-- SOURCE pdf-1358-b009 -->
+    - 只读查询 · read only, 1039 
+    - 递归查询 · recursive, 213–218 
+    - 区域查询 · region, 393–394 
+    - 更名运算 · rename operation and, 79, 81–82 <!-- SOURCE pdf-1358-b010 -->
+    - ResultSet 对象 · ResultSet object and, 185, 187–188, 191–193, 638–639 <!-- SOURCE pdf-1358-b011 -->
+    - 获取查询结果 · retrieving results, 187–188 
+    - 标量子查询 · scalar subqueries, 106–107 
+    - 安全 · security and, 437–446 
+    - servlet · servlets and, 411–421 
+    - 集合运算 · set operations and, 85–89, 98–101 <!-- SOURCE pdf-1358-b012 -->
+    - 单关系查询 · on single relation, 71–74 
+    - 空间查询 · spatial, 393–394 
+    - 空间图查询 · spatial graph, 394 
+    - 流数据 · streaming data and, 502–506, 1070–1071 <!-- SOURCE pdf-1358-b013 -->
+    - 字符串操作 · string operations and, 82–83 
+    - 事务服务器 · transaction servers and, 965 
+    - 通用图灵机 · universal Turing machines and, 16 <!-- SOURCE pdf-1358-b014 -->
+    - 视图 · views and, 137–143 
+- **查询成本** · query cost <!-- SOURCE pdf-1358-b015 -->
+    - 优化 · optimization and, 745–746, 757–766 <!-- SOURCE pdf-1358-b016 --><!-- SOURCE pdf-1358-b017 -->
+    - 处理 · processing and, 692–695, 697, 702–704, 710–712, 715–717 <!-- SOURCE pdf-1358-b018 -->
+- **查询求值引擎** · query-evaluation engine, 20 
+- **查询执行计划** · query-evaluation plans 
+    - 计划选择 · choice of, 766–778 <!-- SOURCE pdf-1358-b019 -->
+    - 成本 · cost of, 1065–1066 
+    - 定义 · defined, 691 
+    - 表达式 · expressions and, 724–731 
+    - 容错 · fault tolerance in, 1059–1061 
+    - 物化 · materialization and, 724–725 
+    - 优化；见查询优化 · optimization and (see query optimization) <!-- SOURCE pdf-1358-b020 -->
+    - 并行；见并行查询计划 · parallel (see parallel query plans) <!-- SOURCE pdf-1358-b021 -->
+    - 性能调优 · performance tuning of, 1219–1220 <!-- SOURCE pdf-1358-b022 -->
+    - 流水线 · pipelining and, 691–692, 724–731 <!-- SOURCE pdf-1358-b023 -->
+    - 关系代数 · relational algebra and, 690–691 <!-- SOURCE pdf-1358-b024 -->
+    - 资源消耗 · resource consumption and, 694–695, 1065–1066 <!-- SOURCE pdf-1358-b025 -->
+    - 响应时间 · response time and, 694–695 
+    - 在查询处理中的作用 · role in query processing, 689, 690 <!-- SOURCE pdf-1358-b026 -->
+    - 查看计划 · viewing, 746 
+- **查询执行引擎** · query-execution engine, 691 
+- **查询执行计划** · query-execution plans, 691 
+- **查询语言；另见各具体语言** · query languages. See also specific languages <!-- SOURCE pdf-1358-b027 -->
+    - 从编程语言访问 · accessing from programming languages, 183–198 <!-- SOURCE pdf-1358-b028 -->
+    - 分类 · categorization of, 47 
+    - Cypher · Cypher, 509 
+    - 定义 · defined, 15, 47 
+    - 关系模型中的查询语言 · in relational model, 47–48 
+    - SPARQL · SPARQL, 375–376 
+    - 流查询语言 · stream, 503–506 
+- **查询优化** · query optimization, 743–787 
+    - 自适应优化 · adaptive, 786–787 <!-- SOURCE pdf-1358-b029 -->
+    - 聚合 · aggregation and, 764 
+    - 笛卡尔积 · Cartesian product and, 748, 749, 755, 763–764, 775 <!-- SOURCE pdf-1358-b030 -->
+    - 成本分析 · cost analysis and, 745–746, 757–766 <!-- SOURCE pdf-1358-b031 -->
+    - 定义 · defined, 20, 691, 743 
+    - 分布式优化 · distributed, 1084 <!-- SOURCE pdf-1358-b032 -->
+    - 等价性 · equivalence and, 747–757 
+    - 估计表达式结果的统计信息 · estimating statistics of expression results, 757–766 <!-- SOURCE pdf-1358-b033 -->
+    - 启发式方法 · heuristics in, 766, 771–774, 786 <!-- SOURCE pdf-1358-b034 -->
+    - 混合散列连接 · hybrid hash join and, 717–718 
+    - 索引嵌套循环连接 · indexed nested-loop join and, 707–708 <!-- SOURCE pdf-1358-b035 -->
+    - 连接最小化 · join minimization and, 784 
+    - 物化视图 · materialized views and, 778–783 <!-- SOURCE pdf-1358-b036 -->
+    - 多查询优化 · multiquery, 785–786 
+    - 嵌套子查询 · nested subqueries and, 774–778, 1220 <!-- SOURCE pdf-1358-b037 -->
+    - 并行数据库 · parallel databases and, 1064–1070 <!-- SOURCE pdf-1358-b038 -->
+    - 参数化优化 · parametric, 786 
+    - 计划选择 · plan choice for, 766–778 
+    - 投影 · projection and, 764 
+    - 关系代数 · relational algebra and, 743–749, 752, 755 <!-- SOURCE pdf-1358-b039 -->
+    - 在查询处理中的作用 · role in query processing, 689, 690 <!-- SOURCE pdf-1358-b040 -->
+    - 集合运算 · set operations and, 764–765 
+    - 共享扫描 · shared scans and, 785–786 
+    - 前 K 项查询 · top-K, 784 
+    - 变换 · transformations and, 747–757 
+    - 更新 · updates and, 784–785 
+- **查询处理** · query processing, 689–734 
+    - 自适应处理 · adaptive, 786–787 <!-- SOURCE pdf-1358-b041 -->
+    - 聚合 · aggregation and, 723 
+    - 基本步骤 · basic steps of, 689, 690 
+    - 大数据 · Big Data and, 470–472 
+    - 区块链数据库 · blockchain databases and, 1254, 1275–1276 <!-- SOURCE pdf-1358-b042 -->
+    - 比较 · comparisons and, 698–699 
+    - 成本分析 · cost analysis of, 692–695, 697, 702–704, 710–712, 715–717 <!-- SOURCE pdf-1358-b043 -->
+    - CPU 速度 · CPU speeds and, 692 
+    - DDL 解释器 · DDL interpreter in, 20 
+    - 定义 · defined, 689 
+    - 分布式数据库 · distributed databases and, 1076–1086 <!-- SOURCE pdf-1358-b044 -->
+    - DML 编译器 · DML compiler in, 20 
+    - 消除重复 · duplicate elimination and, 719–720 <!-- SOURCE pdf-1358-b045 -->
+    - 表达式求值 · evaluation of expressions, 724–731 <!-- SOURCE pdf-1358-b046 -->
+    - 文件扫描 · file scans and, 695–697, 704–707, 727 <!-- SOURCE pdf-1359-b001 --><!-- SOURCE pdf-1359-b002 -->
+    - 散列 · hashing and, 712–718, 1063 
+    - 历史 · history of, 26–27 
+    - 标识符 · identifiers and, 700 
+    - 索引 · indices and, 695–697 
+    - 连接运算 · join operation and, 704–719, 722–723, 1081–1082 <!-- SOURCE pdf-1359-b003 -->
+    - 物化 · materialization and, 724–725 
+    - 内存查询处理 · in memory, 731–734 
+    - 运算求值 · operation evaluation and, 690–691 <!-- SOURCE pdf-1359-b004 -->
+    - 解析与翻译 · parsing and translation in, 689–690 <!-- SOURCE pdf-1359-b005 -->
+    - 流水线 · pipelining and, 691–692, 724–731 <!-- SOURCE pdf-1359-b006 -->
+    - PostgreSQL · PostgreSQL and, 692, 694, 698–699 <!-- SOURCE pdf-1359-b007 -->
+    - 投影 · projection and, 720 
+    - 递归分区 · recursive partitioning and, 714–715 <!-- SOURCE pdf-1359-b008 -->
+    - 关系代数 · relational algebra and, 689–691 <!-- SOURCE pdf-1359-b009 -->
+    - 可扩展性 · scalability of, 471–472 
+    - 选择运算 · selection operation and, 695–700 <!-- SOURCE pdf-1359-b010 -->
+    - 集合运算 · set operations and, 720–722 
+    - 共享内存架构上的处理 · on shared-memory architecture, 1061–1064 <!-- SOURCE pdf-1359-b011 -->
+    - 排序 · sorting and, 701–704 
+    - SQL · SQL and, 689–690, 701, 720 
+    - 语法 · syntax and, 689 
+- **查询处理器** · query processor, 18, 20 
+- **查询服务器系统** · query-server systems, 963 
+- **排队系统** · queueing systems, 1212–1213 
+- **排队论** · queueing theory, 1213 
+- **法定集合共识协议** · quorum consensus protocol, 1124–1125 <!-- SOURCE pdf-1359-b012 -->
+
+## R {#index-r}
+
+- **Raft 协议** · Raft protocol, 1148, 1155–1158, 1267 <!-- SOURCE pdf-1359-b013 --><!-- SOURCE pdf-1359-b014 -->
+- **RAID；见独立磁盘冗余阵列** · RAID. See redundant arrays of independent disks <!-- SOURCE pdf-1359-b015 -->
+- **随机访问** · random access, 567, 578 
+- **随机重试** · randomized retry, 1148 
+- **随机归并** · random merge, 1056 
+- **随机样本** · random samples, 761 
+- **范围分区** · range partitioning, 476, 1005, 1007, 1178 <!-- SOURCE pdf-1359-b016 -->
+- **范围分区排序** · range-partitioning sort, 1041–1042 <!-- SOURCE pdf-1359-b017 -->
+- **范围分区向量** · range-partitioning vector, 1008–1009 <!-- SOURCE pdf-1359-b018 --><!-- SOURCE pdf-1359-b019 -->
+- **范围查询** · range queries, 638, 672, 674, 1006, 1190 <!-- SOURCE pdf-1359-b020 -->
+- **排名** · ranking, 219–223, 383–386 
+- **栅格数据** · raster data, 392 
+- **RDD（弹性分布式数据集）** · RDDs (Resilient Distributed Datasets), 496–499, 1061 <!-- SOURCE pdf-1359-b021 -->
+- **RDF；见资源描述框架** · RDF. See Resource Description Framework <!-- SOURCE pdf-1359-b022 -->
+- **RDMA（远程直接内存访问）** · RDMA (remote direct memory access), 979 <!-- SOURCE pdf-1359-b023 -->
+- **RDN（相对可分辨名称）** · RDNs (relative distinguished names), 1241–1242 <!-- SOURCE pdf-1359-b024 -->
+- **滞后制定的标准** · reactionary standards, 1237 
+- **React Native 框架** · React Native framework, 428 
+- **预读** · read-ahead, 578 
+- **读取授权** · read authorization, 14 
+- **读已提交** · read committed, 821, 880, 1225 
+- **读取成本** · read cost, 1127–1128 
+- **读一个、写全部副本协议** · read one, write all copies protocol, 1125 <!-- SOURCE pdf-1359-b025 -->
+- **读一个、写全部协议** · read one, write all protocol, 1125 
+- **只读查询** · read only queries, 1039 
+- **只读事务** · read-only transactions, 871 
+- **读取阶段** · read phase, 866 
+- **读法定数** · read quorum, 1124 
+- **读未提交** · read uncommitted, 821 
+- **读写争用** · read-write contention, 1224–1225 <!-- SOURCE pdf-1359-b026 -->
+- **就绪状态** · ready state, 989, 1102 
+- **real、double precision 类型** · real, double precision, 67 
+- **实时事务系统** · real-time transaction systems, 894 <!-- SOURCE pdf-1359-b027 -->
+- **重建性能** · rebuild performance, 576 
+- **查全率** · recall, 386 
+- **RecLSN** · RecLSN, 942–945 
+- **更新协调** · reconciliation of updates, 1142–1143 <!-- SOURCE pdf-1359-b028 -->
+- **重新配置** · reconfiguration, 1128 
+- **基于记录的模型** · record-based models, 8 
+- **记录迁移** · record relocation, 652–653 
+- **恢复管理器** · recovery manager, 21 
+- **恢复系统** · recovery systems, 907–948 
+    - 崩溃后的动作 · actions following crashes, 923–925 <!-- SOURCE pdf-1359-b029 --><!-- SOURCE pdf-1359-b030 -->
+    - 恢复算法 · algorithms for, 922–925, 944–946, 1276 <!-- SOURCE pdf-1359-b031 -->
+    - ARIES · ARIES, 941–947, 1276 
+    - 原子性 · atomicity and, 803, 912–922 
+    - 缓冲区管理 · buffer management and, 926–930 <!-- SOURCE pdf-1359-b032 --><!-- SOURCE pdf-1359-b033 -->
+    - 检查点 · checkpoints and, 920–922, 930 <!-- SOURCE pdf-1359-b034 -->
+    - 提交协议 · commit protocols and, 1105 
+    - 并发控制 · concurrency control and, 916 
+    - 数据访问 · data access and, 910–912 
+    - 数据库修改 · database modification and, 915–916 <!-- SOURCE pdf-1359-b035 -->
+    - 分布式数据库 · distributed databases and, 1105 <!-- SOURCE pdf-1359-b036 -->
+    - 提前释放锁 · early lock release and, 935–941 <!-- SOURCE pdf-1359-b037 -->
+    - 故障即停假设 · fail-stop assumption and, 908, 1267 <!-- SOURCE pdf-1359-b038 -->
+    - 故障 · failure and, 907–909, 930–932 <!-- SOURCE pdf-1359-b039 -->
+    - 强制或非强制写回策略 · force/no-force policy and, 927 
+    - 逻辑撤销操作 · logical undo operations and, 935–941 <!-- SOURCE pdf-1359-b040 -->
+    - 日志记录 · log records and, 913–919, 926–927 <!-- SOURCE pdf-1359-b041 -->
+    - 日志序列号 · log sequence number and, 941–946 <!-- SOURCE pdf-1359-b042 -->
+    - 内存数据库 · main-memory databases and, 947–948 <!-- SOURCE pdf-1359-b043 -->
+    - 重做操作 · redo operation and, 915–919, 922–925 <!-- SOURCE pdf-1359-b044 -->
+    - 远程备份 · remote backup, 909, 931–935 
+    - 回滚 · rollback and, 916–919, 922 
+    - 影子副本方案 · shadow-copy scheme and, 914 
+    - 快照隔离 · snapshot isolation and, 916 
+    - 偷取或不偷取策略 · steal/no-steal policy and, 927 
+    - 存储 · storage and, 908–912, 920–922, 930–931 <!-- SOURCE pdf-1359-b045 -->
+    - 成功完成 · successful completion and, 909 <!-- SOURCE pdf-1359-b046 -->
+    - 事务 · transactions and, 21, 803, 805 
+    - 触发器 · triggers and, 212–213 
+    - 撤销操作 · undo operation and, 915–919, 922–925 <!-- SOURCE pdf-1359-b047 -->
+    - 先写日志规则 · write-ahead logging rule and, 926–929 <!-- SOURCE pdf-1359-b048 -->
+- **恢复时间** · recovery time, 933 
+- **递归分区** · recursive partitioning, 714–715 
+- **递归查询** · recursive queries, 213–218 
+    - 迭代 · iteration and, 214–216 <!-- SOURCE pdf-1359-b049 -->
+    - SQL · SQL and, 216–218 
+    - 传递闭包 · transitive closure and, 214–216 <!-- SOURCE pdf-1359-b050 -->
+- **递归联系集** · recursive relationship sets, 247–248 <!-- SOURCE pdf-1360-b001 --><!-- SOURCE pdf-1360-b002 -->
+- **Redis** · Redis, 436–437, 482, 1024 
+- **指针重新分配** · redistribution of pointers, 646 
+- **仅重做日志记录** · redo-only log records, 918 
+- **重做操作** · redo operation, 915–919, 922–925, 941 <!-- SOURCE pdf-1360-b003 -->
+- **重做遍历** · redo pass, 944–945 
+- **重做阶段** · redo phase, 923, 924 
+- **reduceByKey 函数** · reduceByKey function, 498 
+- **reduce 函数；另见 MapReduce 范式** · reduce function, 483–494, 510. See also MapReduce paradigm <!-- SOURCE pdf-1360-b004 -->
+- **reduce 键** · reduce key, 485 
+- **冗余** · redundancy 
+    - 数据库设计中的冗余 · in database design, 243 <!-- SOURCE pdf-1360-b005 -->
+    - 实体—联系（E-R）模型 · entity-relationship (E-R) model and, 261–264 <!-- SOURCE pdf-1360-b006 -->
+    - 文件处理系统中的冗余 · in file-processing systems, 6 
+    - 通过冗余提高可靠性 · reliability improvement via, 570–571 <!-- SOURCE pdf-1360-b007 -->
+    - 模式冗余 · of schemas, 269–270 
+- **独立磁盘冗余阵列（RAID）** · redundant arrays of independent disks (RAID), 570–577 <!-- SOURCE pdf-1360-b008 -->
+    - 位级条带化 · bit-level striping and, 571–572 
+    - 块级条带化 · block-level striping and, 572 
+    - 硬件问题 · hardware issues, 574–576 
+    - 热插拔 · hot swapping and, 575 
+    - 级别 · levels, 572–574, 572n4, 573n6, 576–577 <!-- SOURCE pdf-1360-b009 -->
+    - 镜像 · mirroring and, 571–573, 576, 577 <!-- SOURCE pdf-1360-b010 -->
+    - 奇偶校验位 · parity bits and, 572, 574, 577 
+    - 通过并行提高性能 · performance improvement via parallelism, 571–572 <!-- SOURCE pdf-1360-b011 -->
+    - 性能调优 · performance tuning and, 1214, 1229–1230 <!-- SOURCE pdf-1360-b012 -->
+    - 用途 · purpose of, 562 
+    - 重建性能 · rebuild performance of, 576 
+    - 恢复系统 · recovery systems and, 909 
+    - 通过冗余提高可靠性 · reliability improvement via redundancy, 570–571 <!-- SOURCE pdf-1360-b013 -->
+    - 擦洗检查 · scrubbing and, 575 
+    - 软件 RAID · software RAID, 574, 575 
+    - 数据条带化 · striping data and, 571–572 
+- **再工程** · re-engineering, 1236 
+- **被引用关系** · referenced relation, 45–46 
+- **references** · references, 149–150 
+- **references 权限** · references privilege, 170 
+- **引用类型** · reference types, 380–381 
+- **referencing new row as 子句** · referencing new row as clause, 207, 208 <!-- SOURCE pdf-1360-b014 --><!-- SOURCE pdf-1360-b015 -->
+- **referencing new table as 子句** · referencing new table as clause, 210 <!-- SOURCE pdf-1360-b016 -->
+- **referencing old row as 子句** · referencing old row as clause, 208 <!-- SOURCE pdf-1360-b017 -->
+- **referencing old table as 子句** · referencing old table as clause, 210 <!-- SOURCE pdf-1360-b018 -->
+- **引用关系** · referencing relation, 45–46 
+- **参照完整性** · referential integrity, 14, 46, 149–153, 207–208, 800 <!-- SOURCE pdf-1360-b019 -->
+- **referer** · referer, 440 
+- **转介** · referrals, 1243 
+- **ref from 子句** · ref from clause, 380 
+- **自反规则** · reflexivity rule, 321 
+- **区域四叉树** · region quadtrees, 1187 
+- **区域查询** · region queries, 393–394 
+- **回归** · regression, 546, 1234 
+- **具体化** · reification, 376 
+- **重新加入** · reintegration, 1128 
+- **关系的定义** · relation, defined, 39 
+- **关系代数** · relational algebra, 48–58 
+    - 反连接运算 · antijoin operation, 108 <!-- SOURCE pdf-1360-b020 -->
+    - 赋值运算 · assignment operation, 55–56 
+    - 大数据 · Big Data and, 494–500 
+    - 笛卡尔积运算 · Cartesian-product operation, 50–52 <!-- SOURCE pdf-1360-b021 -->
+    - 等价性 · equivalence and, 58, 747–757 
+    - 表达式变换 · expression transformation and, 747–757 <!-- SOURCE pdf-1360-b022 -->
+    - 连接运算 · join operation, 52–53 
+    - 采用原因 · motivation for, 495–496 
+    - 多重集关系代数 · multiset, 80, 97, 108, 136, 747 
+    - 支持的预定义函数 · predefined functions supported by, 48n4 <!-- SOURCE pdf-1360-b023 -->
+    - 投影运算 · project operation, 49–50 
+    - 查询优化 · query optimization and, 743–749, 752, 755 <!-- SOURCE pdf-1360-b024 -->
+    - 查询处理 · query processing and, 689–691 <!-- SOURCE pdf-1360-b025 -->
+    - 更名运算 · rename operation, 56–57 
+    - 选择运算 · select operation, 49 
+    - 半连接运算 · semijoin operation, 108, 1082–1084 <!-- SOURCE pdf-1360-b026 -->
+    - 集合运算 · set operations, 53–55 
+    - Spark 中的关系代数 · in Spark, 495–500, 508 
+    - SQL 运算 · SQL operations and, 80 
+    - 流上的关系代数 · on streams, 504, 506–508 
+    - 一元与二元运算 · unary vs. binary operations in, 48 <!-- SOURCE pdf-1360-b027 -->
+- **关系代数表达式** · relational-algebra expressions, 50 <!-- SOURCE pdf-1360-b028 -->
+- **关系数据库设计** · relational database design, 303–351 <!-- SOURCE pdf-1360-b029 -->
+    - 原子域 · atomic domains and, 342–343 
+    - Boyce–Codd 范式 · Boyce–Codd normal form and, 313–316 <!-- SOURCE pdf-1360-b030 -->
+    - 集合闭包 · closure of a set and, 312, 320–324 <!-- SOURCE pdf-1360-b031 -->
+    - 分解 · decomposition and, 305–313, 330–341 <!-- SOURCE pdf-1360-b032 -->
+    - 设计过程 · design process, 343–347 
+    - 良好设计的特征 · features of good designs, 303–308 <!-- SOURCE pdf-1360-b033 -->
+    - 第一范式 · first normal form and, 342–343 <!-- SOURCE pdf-1360-b034 -->
+    - 第四范式 · fourth normal form and, 336, 339–341 <!-- SOURCE pdf-1360-b035 -->
+    - 函数依赖 · functional dependencies and, 308–313, 320–330 <!-- SOURCE pdf-1360-b036 -->
+    - 较大模式 · larger schemas and, 330, 346 
+    - 多值依赖 · multivalued dependencies and, 336–341 <!-- SOURCE pdf-1360-b037 -->
+    - 属性与联系命名 · naming of attributes and relationships in, 345–346 <!-- SOURCE pdf-1360-b038 -->
+    - 规范化 · normalization and, 308 
+    - 第二范式 · second normal form and, 316n8, 341–342, 356 <!-- SOURCE pdf-1360-b039 -->
+    - 较小模式 · smaller schemas and, 305, 308, 344 <!-- SOURCE pdf-1360-b040 -->
+    - 时态数据建模 · temporal data modeling and, 347–351 <!-- SOURCE pdf-1360-b041 -->
+    - 第三范式 · third normal form and, 317–319 <!-- SOURCE pdf-1360-b042 -->
+- **关系模型** · relational model, 37–59 
+    - 概念设计过程 · conceptual-design process for, 17 <!-- SOURCE pdf-1360-b043 --><!-- SOURCE pdf-1360-b044 -->
+    - 缺点 · disadvantages of, 26 
+    - 历史 · history of, 26 
+    - 键 · keys for, 43–46 
+    - 对象关系模型 · object-relational, 27, 376–382 
+    - 运算 · operations in, 48–58 
+    - 概述 · overview, 8, 37 
+    - 查询语言 · query languages in, 47–48 
+    - 模式图 · schema diagrams for, 46–47 
+    - 模式；见关系模式 · schema in (see relational schema) <!-- SOURCE pdf-1360-b045 -->
+    - SQL 语言 · SQL language in, 13 
+    - 结构 · structure of, 37–40 
+    - 表 · tables in, 9, 10, 37–40 
+    - 元组 · tuples in, 39, 41, 43–46 
+- **关系 OLAP（ROLAP）** · relational OLAP (ROLAP), 535 <!-- SOURCE pdf-1361-b001 -->
+- **关系模式** · relational schema 
+    - Boyce–Codd 范式 · Boyce–Codd normal form and, 313–316, 330–333 <!-- SOURCE pdf-1361-b002 --><!-- SOURCE pdf-1361-b003 -->
+    - 正则覆盖 · canonical cover and, 324–328 
+    - 数据库设计过程 · database design process and, 343–347 <!-- SOURCE pdf-1361-b004 -->
+    - 分解 · decomposition and, 305–313 
+    - 定义 · defined, 41 
+    - 第一范式 · in first normal form, 342–343 
+    - 第四范式 · fourth normal form and, 339–341 <!-- SOURCE pdf-1361-b005 -->
+    - 函数依赖 · functional dependencies and, 308–313, 320–330 <!-- SOURCE pdf-1361-b006 -->
+    - 水平分区 · horizontal partitioning of, 1216–1217 <!-- SOURCE pdf-1361-b007 -->
+    - 逻辑蕴含 · logically implied, 320 
+    - 多值依赖 · multivalued dependencies and, 336–341 <!-- SOURCE pdf-1361-b008 -->
+    - 将实体—联系图转换为关系模式 · reduction of entity-relationship diagrams to, 264–271, 277–279 <!-- SOURCE pdf-1361-b009 -->
+    - 冗余 · redundancy in, 243 
+    - 时态数据 · temporal data and, 347–351 
+    - 第三范式 · third normal form and, 317–319, 333–335 <!-- SOURCE pdf-1361-b010 -->
+    - 大学数据库的关系模式 · for university databases, 41–43, 303–305 <!-- SOURCE pdf-1361-b011 -->
+- **关系实例** · relation instance, 39, 41 
+- **关系扫描** · relation scans, 769 
+- **联系实例** · relationship instance, 246–247 
+- **联系的定义** · relationships, defined, 246 
+- **联系集** · relationship sets 
+    - 其他表示法 · alternative notations for, 285–291 <!-- SOURCE pdf-1361-b012 --><!-- SOURCE pdf-1361-b013 -->
+    - 原子域 · atomic domains and, 342–343 
+    - 二元联系集 · binary, 249, 283–285 
+    - 模式合并 · combination of schemas and, 270–271 <!-- SOURCE pdf-1361-b014 -->
+    - 元数 · degree of, 249 
+    - 描述性属性 · descriptive attributes and, 248 
+    - 设计问题 · design issues and, 282–285 
+    - 实体—联系图 · entity-relationship diagrams and, 247–250, 268–271 <!-- SOURCE pdf-1361-b015 -->
+    - 实体—联系（E-R）模型 · entity-relationship (E-R) model and, 246–249, 282–285 <!-- SOURCE pdf-1361-b016 -->
+    - 映射基数 · mapping cardinalities and, 252–256 <!-- SOURCE pdf-1361-b017 -->
+    - 命名 · naming of, 345–346 <!-- SOURCE pdf-1361-b018 -->
+    - 非二元联系集 · nonbinary, 283–285 
+    - 参与 · participation in, 247 
+    - 主键 · primary keys and, 257–259 
+    - 递归联系集 · recursive, 247–248 
+    - 冗余 · redundancy and, 269–270 
+    - 表示方法 · representation of, 268–269 
+    - 三元联系集 · ternary, 249, 250, 284 
+    - 统一建模语言 · Unified Modeling Language and, 288–291 <!-- SOURCE pdf-1361-b019 -->
+- **关系（表）** · relations (tables), 8 
+- **相对可分辨名称（RDN）** · relative distinguished names (RDNs), 1241–1242 <!-- SOURCE pdf-1361-b020 -->
+- **相关性** · relevance 
+    - 超链接 · hyperlinks and, 385–386 <!-- SOURCE pdf-1361-b021 -->
+    - PageRank · PageRank and, 385–386 
+    - TF-IDF 方法 · TF-IDF approach and, 384–385 <!-- SOURCE pdf-1361-b022 -->
+- **相关性排名** · relevance ranking, 383–386 
+- **通过冗余提高可靠性** · reliability, improvement via redundancy, 570–571 <!-- SOURCE pdf-1361-b023 -->
+- **坏扇区重映射** · remapping bad sectors, 565 
+- **远程备份系统** · remote backup systems, 909, 931–935 <!-- SOURCE pdf-1361-b024 -->
+- **远程直接内存访问（RDMA）** · remote direct memory access (RDMA), 979 <!-- SOURCE pdf-1361-b025 -->
+- **更名运算** · rename operation, 56–57, 79, 81–82 <!-- SOURCE pdf-1361-b026 -->
+- **租约续期** · renewing leases, 1115 
+- **文件重组** · reorganization of files, 598 
+- **可重复读** · repeatable read, 821 
+- **重演历史** · repeating history, 924 
+- **repeat 循环** · repeat loop, 214–216, 323 
+- **repeat 语句** · repeat statements, 201 
+- **复制** · replication 
+    - 异步复制 · asynchronous, 1122, 1135–1138 <!-- SOURCE pdf-1361-b027 --><!-- SOURCE pdf-1361-b028 -->
+    - 偏向协议 · biased protocol and, 1124 
+    - 大数据 · Big Data and, 481–482 
+    - 缓存 · caching, 1014n4 
+    - 链式复制协议 · chain replication protocol, 1127–1128 <!-- SOURCE pdf-1361-b029 -->
+    - 并发控制 · concurrency control and, 1123–1125 <!-- SOURCE pdf-1361-b030 -->
+    - 一致性 · consistency and, 1015–1016, 1121–1123, 1133–1146 <!-- SOURCE pdf-1361-b031 -->
+    - 数据中心 · data centers and, 1014–1015 
+    - 分布式数据库 · distributed databases and, 987, 1121–1128 <!-- SOURCE pdf-1361-b032 -->
+    - 故障 · failure and, 1125–1128 
+    - 键值存储系统 · key-value storage systems and, 476 <!-- SOURCE pdf-1361-b033 --><!-- SOURCE pdf-1361-b034 -->
+    - 副本位置 · location of, 1014–1015 
+    - 多数协议 · majority protocol and, 1123–1126 <!-- SOURCE pdf-1361-b035 -->
+    - 主副本 · master replica, 1016 
+    - 主从复制 · master-slave, 1137 
+    - 多主复制 · multimaster, 1137 
+    - 并行数据库 · parallel databases and, 1013–1016 <!-- SOURCE pdf-1361-b036 -->
+    - 主副本 · primary copy, 1123 
+    - 法定集合共识协议 · quorum consensus protocol and, 1124–1125 <!-- SOURCE pdf-1361-b037 -->
+    - 重新配置与重新加入 · reconfiguration and reintegration, 1128 <!-- SOURCE pdf-1361-b038 -->
+    - 分片 · sharding and, 476 
+    - 状态机 · state machines and, 1158–1161 <!-- SOURCE pdf-1361-b039 -->
+    - 同步复制 · synchronous, 522–523, 1136 
+    - 两阶段提交协议 · two-phase commit protocol and, 1016 <!-- SOURCE pdf-1361-b040 -->
+    - 任意位置更新复制 · update-anywhere, 1137 
+    - 更新 · updates and, 1015–1016 
+    - 视图维护 · view maintenance and, 1138–1140 <!-- SOURCE pdf-1361-b041 -->
+- **报表生成器** · report generators, 538–540 
+- **表述性状态转移（REST）** · Representation State Transfer (REST), 426–427 <!-- SOURCE pdf-1361-b042 -->
+- **请求伪造** · request forgery, 439–440 
+- **请求操作** · request operation 
+    - 死锁处理 · deadlock handling and, 849–853 <!-- SOURCE pdf-1361-b043 --><!-- SOURCE pdf-1361-b044 -->
+    - 锁 · locks and, 835–841, 844–846, 849–853, 886 <!-- SOURCE pdf-1361-b045 -->
+    - 多粒度 · multiple granularity and, 854, 855 <!-- SOURCE pdf-1361-b046 -->
+    - 多版本方案 · multiversion schemes and, 871 <!-- SOURCE pdf-1361-b047 -->
+    - 快照隔离 · snapshot isolation and, 874 
+    - 时间戳 · timestamps and, 861 
+- **弹性分布式数据集（RDD）** · Resilient Distributed Datasets (RDDs), 496–499, 1061 <!-- SOURCE pdf-1361-b048 -->
+- **冲突更新的解决** · resolution of conflicting updates, 1142–1143 <!-- SOURCE pdf-1361-b049 -->
+- **资源消耗** · resource consumption, 694–695, 1065–1066 <!-- SOURCE pdf-1361-b050 -->
+- **资源描述框架（RDF）** · Resource Description Framework (RDF) <!-- SOURCE pdf-1361-b051 -->
+    - 定义 · defined, 372 
+    - 图表示 · graph representation of, 374–375 <!-- SOURCE pdf-1362-b001 --><!-- SOURCE pdf-1362-b002 -->
+    - 多元联系 · n-ary relationships and, 376 
+    - 概述 · overview, 368 
+    - 具体化 · reification in, 376 
+    - SPARQL · SPARQL and, 375–376 
+    - 三元组表示 · triple representation and, 372–374 <!-- SOURCE pdf-1362-b003 -->
+- **RDF 中的资源** · resources, in RDF, 372 
+- **响应时间** · response time 
+    - 应用设计 · application design and, 434–435, 1229, 1232 <!-- SOURCE pdf-1362-b004 --><!-- SOURCE pdf-1362-b005 -->
+    - 区块链数据库 · blockchain databases and, 1274 <!-- SOURCE pdf-1362-b006 -->
+    - 并行数据库 · parallel databases and, 971–972 <!-- SOURCE pdf-1362-b007 -->
+    - 分区 · partitioning and, 1007 
+    - 查询执行计划 · query-evaluation plans and, 694–695 <!-- SOURCE pdf-1362-b008 -->
+    - 查询处理 · query processing and, 694–695 <!-- SOURCE pdf-1362-b009 -->
+    - 数据倾斜 · skew and, 1066 
+    - 存储 · storage and, 572 
+    - 事务 · transactions and, 808–809 
+- **响应时间成本模型** · response time cost model, 1066 
+- **响应式用户界面** · responsive user interfaces, 423 
+- **REST（表述性状态转移）** · REST (Representation State Transfer), 426–427 <!-- SOURCE pdf-1362-b010 -->
+- **限制** · restriction, 172, 328, 339–340 
+- **ResultSet 对象** · ResultSet object, 185, 187–188, 191–193, 638–639 <!-- SOURCE pdf-1362-b011 -->
+- **重新同步** · resynchronization, 575 
+- **逆向工程** · reverse engineering, 1236 
+- **撤销权限** · revoke privileges, 166–167, 171–173 <!-- SOURCE pdf-1362-b012 -->
+- **右外连接** · right outer join, 132–136, 722 
+- **强严格两阶段锁协议** · rigorous two-phase locking protocol, 842, 843 <!-- SOURCE pdf-1362-b013 -->
+- **Rijndael 算法** · Rijndael algorithm, 448 
+- **环形系统** · ring system, 976 
+- **健壮性** · robustness, 1121, 1125–1126 
+- **ROLAP（关系 OLAP）** · ROLAP (relational OLAP), 535 
+- **角色** · roles 
+    - 授权 · authorization and, 167–169 <!-- SOURCE pdf-1362-b014 -->
+    - 实体角色 · entity, 247–248 
+    - 角色标识 · indicators associated with, 268 <!-- SOURCE pdf-1362-b015 -->
+    - 统一建模语言 · Unified Modeling Language and, 289 <!-- SOURCE pdf-1362-b016 -->
+- **回滚** · rollback 
+    - ARIES · ARIES and, 945–946 <!-- SOURCE pdf-1362-b017 -->
+    - 级联回滚 · cascading, 820–821, 841–842 
+    - 并发控制 · concurrency control and, 841–844, 849–850, 853, 868–871 <!-- SOURCE pdf-1362-b018 -->
+    - 逻辑操作 · logical operations and, 937–939 <!-- SOURCE pdf-1362-b019 -->
+    - 部分回滚 · partial, 853 
+    - 恢复系统 · recovery systems and, 916–919, 922 <!-- SOURCE pdf-1362-b020 -->
+    - 远程备份系统 · remote backup systems and, 933 <!-- SOURCE pdf-1362-b021 -->
+    - 时间戳 · timestamps and, 862–865 
+    - 完全回滚 · total, 853 
+    - 事务 · transactions and, 143–145, 193, 196, 805–806, 922, 937–939, 945–946 <!-- SOURCE pdf-1362-b022 -->
+    - 撤销操作 · undo operation and, 916–919, 937–939 <!-- SOURCE pdf-1362-b023 -->
+- **rollback work** · rollback work, 143–145 
+- **滚动合并** · rolling merge, 1178 
+- **rollup 子句** · rollup clause, 228 
+- **rollup 结构** · rollup construct, 227–231, 530–531, 536–538 <!-- SOURCE pdf-1362-b024 -->
+- **旋转延迟** · rotational latency time, 566 
+- **轮转方案** · round-robin scheme, 1005, 1006 
+- **路由器** · routers, 1012–1013 
+- **行级授权** · row-level authorization, 173 
+- **面向行的存储** · row-oriented storage, 611, 615 
+- **行存储** · row stores, 612, 615 
+- **读时间戳（R-timestamp）** · R-timestamp, 862, 865, 870 
+- **R 树** · R-trees, 663, 670, 674–676, 1187–1190 <!-- SOURCE pdf-1362-b025 -->
+- **Ruby on Rails** · Ruby on Rails, 417, 419 
+- **数据挖掘规则** · rules for data mining, 540 
+- **顺串** · runs, 701–702 
+- **runstats** · runstats, 761 
+
+## S {#index-s}
+
+- **SAML（安全断言标记语言）** · SAML (Security Assertion Markup Language), 442–443 <!-- SOURCE pdf-1362-b026 --><!-- SOURCE pdf-1362-b027 -->
+- **SAN；见存储区域网络** · SAN. See storage area network 
+- **沙箱** · sandbox, 205 
+- **SAP HANA** · SAP HANA, 615, 1132 
+- **SAS（串行连接 SCSI）接口** · SAS (Serial Attached SCSI) interface, 562 <!-- SOURCE pdf-1362-b028 -->
+- **SATA（串行 ATA）接口** · SATA (Serial ATA) interface, 562, 568, 569 <!-- SOURCE pdf-1362-b029 -->
+- **保存点** · savepoints, 947 
+- **可扩展性** · scalability, 471–472, 477, 482, 1276 <!-- SOURCE pdf-1362-b030 -->
+- **标量子查询** · scalar subqueries, 106–107 <!-- SOURCE pdf-1362-b031 -->
+- **扩展比** · scaleup, 972–974 
+- **关系扫描** · scanning a relation, 1006 
+- **调度** · scheduling 
+    - 磁盘臂调度 · disk-arm, 578–579 <!-- SOURCE pdf-1362-b032 -->
+    - 查询优化 · query optimization and, 1065 
+    - 事务调度 · transactions and, 810–811, 811n1 <!-- SOURCE pdf-1362-b033 -->
+- **模式图** · schema diagrams, 46–47 
+- **模式** · schemas 
+    - 数据建模的其他表示法 · alternative notations for modeling data, 285–291 <!-- SOURCE pdf-1362-b034 --><!-- SOURCE pdf-1362-b035 -->
+    - 模式授权 · authorization on, 170 
+    - 基本 SQL 查询结构 · basic SQL query structures and, 71–79 <!-- SOURCE pdf-1362-b036 -->
+    - 模式合并 · combination of, 270–271 
+    - 复合属性 · composite attributes in, 250 
+    - 并发控制；见并发控制 · concurrency control and (see concurrency control) <!-- SOURCE pdf-1362-b037 -->
+    - 创建 · creation of, 24 
+    - 数据挖掘 · data mining, 540–549 
+    - 数据仓库 · data warehousing, 523–525 
+    - 定义 · defined, 12 
+    - 实体—联系图 · entity-relationship diagrams and, 264–271, 277–279 <!-- SOURCE pdf-1362-b038 -->
+    - 实体—联系（E-R）模型 · entity-relationship (E-R) model and, 244, 246, 269–270, 277–279 <!-- SOURCE pdf-1362-b039 -->
+    - 模式演化 · evolution of, 292 
+    - 灵活性 · flexibility of, 366 
+    - 全局模式 · global, 1076, 1078–1079 
+    - 模式集成 · integration of, 1076, 1078–1080 <!-- SOURCE pdf-1362-b040 -->
+    - 中级 SQL · intermediate SQL and, 162–163 <!-- SOURCE pdf-1362-b041 -->
+    - 较大模式 · larger, 330, 346 
+    - 本地模式 · local, 1076 
+    - 锁；见锁 · locks and (see locks) 
+    - 逻辑模式 · logical, 12–13, 1223–1224 
+    - 模式性能调优 · performance tuning of, 1214–1218, 1223–1224 <!-- SOURCE pdf-1362-b042 -->
+    - 物理模式 · physical, 12, 13 
+    - 物理组织修改 · physical-organization modification of, 25 <!-- SOURCE pdf-1362-b043 -->
+    - P+Q 冗余方案 · P + Q redundancy, 573, 574 
+    - 恢复系统；见恢复系统 · recovery systems and (see recovery systems) <!-- SOURCE pdf-1362-b044 -->
+    - 模式冗余 · redundancy of, 269–270 
+    - 关系模式；见关系模式 · relational (see relational schema) <!-- SOURCE pdf-1362-b045 -->
+    - 联系集 · relationship sets and, 268–269 <!-- SOURCE pdf-1363-b001 --><!-- SOURCE pdf-1363-b002 -->
+    - 影子副本方案 · shadow-copy, 914 
+    - 较小模式 · smaller, 305, 308, 344 
+    - 雪花模式 · snowflake, 524 
+    - SQL DDL · SQL DDL and, 24, 66, 68–71 
+    - 星型模式 · star, 524–525 
+    - 强实体集 · strong entity sets and, 265–267 <!-- SOURCE pdf-1363-b003 -->
+    - 子模式 · subschemas, 12 
+    - 时间戳 · timestamps and, 861–866 
+    - 大学数据库模式 · for university databases, 1287–1288 <!-- SOURCE pdf-1363-b004 -->
+    - 版本编号方案 · version-numbering, 1141 
+    - 版本向量方案 · version-vector, 1141–1142 
+    - 弱实体集 · weak entity sets and, 267–268 
+- **SciDB** · SciDB, 367 
+- **SCM（存储级内存）** · SCM (storage class memory), 569, 588, 948 <!-- SOURCE pdf-1363-b005 -->
+- **SCOPE** · SCOPE, 494 
+- **scope 子句** · scope clause, 380 
+- **脚本语言** · scripting languages, 404–405, 416–418, 421, 439 <!-- SOURCE pdf-1363-b006 -->
+- **擦洗检查** · scrubbing, 575 
+- **SCSI（小型计算机系统接口）** · SCSI (small-computer-system interconnect), 562, 563 <!-- SOURCE pdf-1363-b007 -->
+- **搜索键** · search keys 
+    - B+ 树 · B+-trees and, 634–650 <!-- SOURCE pdf-1363-b008 -->
+    - 散列 · hashing and, 1190–1195, 1197–1199 <!-- SOURCE pdf-1363-b009 -->
+    - 索引创建 · index creation and, 664 
+    - 非唯一搜索键 · nonunique, 632, 637, 640, 649–650 <!-- SOURCE pdf-1363-b010 -->
+    - 有序索引 · ordered indices and, 624–634 
+    - 存储 · storage and, 595, 597–598 
+    - 唯一化标识 · uniquifiers and, 649–650 
+- **搜索操作** · search operation, 1188 
+- **辅助索引** · secondary indices, 625, 632–633, 652–653, 695–698, 1017–1019 <!-- SOURCE pdf-1363-b011 -->
+- **备用站点** · secondary site, 931 
+- **辅助存储** · secondary storage, 561 
+- **第二范式（2NF）** · second normal form (2NF), 316n8, 341–342, 356 <!-- SOURCE pdf-1363-b012 -->
+- **扇区** · sectors, 564–566 
+- **安全** · security 
+    - 抽象层次 · abstraction levels and, 12 <!-- SOURCE pdf-1363-b013 -->
+    - 应用设计 · application design and, 437–446 <!-- SOURCE pdf-1363-b014 -->
+    - 审计轨迹 · audit trails and, 445–446 <!-- SOURCE pdf-1363-b015 -->
+    - 身份验证；见身份验证 · authentication (see authentication) <!-- SOURCE pdf-1363-b016 -->
+    - 授权；见授权 · authorization (see authorization) <!-- SOURCE pdf-1363-b017 -->
+    - 区块链数据库安全 · of blockchain databases, 1253–1255, 1259 <!-- SOURCE pdf-1363-b018 -->
+    - 并发控制；见并发控制 · concurrency control and (see concurrency control) <!-- SOURCE pdf-1363-b019 -->
+    - 跨站脚本 · cross-site scripting and, 439–440 <!-- SOURCE pdf-1363-b020 -->
+    - 字典攻击 · dictionary attacks and, 449 
+    - 加密 · encryption and, 447–453 
+    - 最终用户信息 · end-user information and, 443 
+    - 文件处理系统安全 · in file-processing systems, 7 
+    - GET 方法 · GET method and, 440 
+    - 完整性管理器 · integrity manager and, 19 
+    - 锁；见锁 · locks and (see locks) 
+    - 中间人攻击 · man-in-the-middle attacks and, 442 <!-- SOURCE pdf-1363-b021 -->
+    - 密码；见密码 · passwords (see passwords) 
+    - 隐私 · privacy and, 438, 446 
+    - 请求伪造 · request forgery and, 439–440 
+    - 单点登录系统 · single sign-on system and, 442–443 <!-- SOURCE pdf-1363-b022 -->
+    - SQL DDL · SQL DDL and, 67 
+    - SQL 注入 · SQL injection and, 438–439 
+    - 唯一标识 · unique identification and, 446, 446n8 <!-- SOURCE pdf-1363-b023 -->
+- **安全断言标记语言（SAML）** · Security Assertion Markup Language (SAML), 442–443 <!-- SOURCE pdf-1363-b024 -->
+- **寻道时间** · seek time, 566, 566n2, 567, 692, 710 <!-- SOURCE pdf-1363-b025 -->
+- **select all** · select all, 73 
+- **select 授权与权限** · select authorization, privileges and, 166–167 <!-- SOURCE pdf-1363-b026 -->
+- **select 子句** · select clause 
+    - 聚合函数 · aggregate functions and, 91–96 <!-- SOURCE pdf-1363-b027 --><!-- SOURCE pdf-1363-b028 -->
+    - 属性指定 · attribute specification in, 83 
+    - 基本 SQL 查询 · basic SQL queries and, 71–79 
+    - 多关系查询 · on multiple relations, 74–79 
+    - 多重集关系代数 · in multiset relational algebra, 97 <!-- SOURCE pdf-1363-b029 -->
+    - 空值 · null values and, 90 
+    - OLAP · OLAP and, 534, 536–537 
+    - 排名 · ranking and, 220–222 
+    - 更名运算 · rename operation and, 79, 81–82 <!-- SOURCE pdf-1363-b030 -->
+    - 集合成员资格 · set membership and, 98–99 <!-- SOURCE pdf-1363-b031 -->
+    - 集合运算 · set operations and, 85–89 
+    - 单关系查询 · on single relation, 71–74 
+    - 字符串操作 · string operations and, 82–83 
+- **select distinct** · select distinct, 72–73, 90, 99–100, 142 <!-- SOURCE pdf-1363-b032 -->
+- **select-from-where** · select-from-where 
+    - 删除 · deletion and, 108–110 <!-- SOURCE pdf-1363-b033 -->
+    - 函数和过程编写 · function/procedure writing and, 199–206 <!-- SOURCE pdf-1363-b034 -->
+    - 插入 · insertion and, 110–111 
+    - 连接表达式 · join expressions and, 125–136 
+    - 自然连接 · natural joins and, 126–130 
+    - 嵌套子查询 · nested subqueries and, 98–107 <!-- SOURCE pdf-1363-b035 -->
+    - 更新 · updates and, 111–114 
+    - 视图 · views and, 137–143 
+- **选择** · selection 
+    - 比较 · comparisons and, 698–699 <!-- SOURCE pdf-1363-b036 -->
+    - 复杂选择 · complex, 699–700 
+    - 合取选择 · conjunctive, 699–700, 747, 762 <!-- SOURCE pdf-1363-b037 -->
+    - 析取选择 · disjunctive, 699, 700, 762 
+    - 等价性 · equivalence and, 747–757 
+    - 文件扫描 · file scans and, 695–697, 704–707, 727 <!-- SOURCE pdf-1363-b038 -->
+    - 标识符 · identifiers and, 700 
+    - 索引 · indices and, 695–697, 783 
+    - 操作内并行 · intraoperation parallelism and, 1049 <!-- SOURCE pdf-1363-b039 -->
+    - 线性搜索 · linear search and, 695 
+    - 结果大小估计 · size estimation and, 760, 762 
+    - 视图维护 · view maintenance and, 780–781 <!-- SOURCE pdf-1363-b040 -->
+- **选择率** · selectivity, 762 
+- **选择运算** · select operation, 49 
+- **select 权限** · select privilege, 171, 172 
+- **半连接运算** · semijoin operation, 108, 776, 1082–1084 <!-- SOURCE pdf-1363-b041 -->
+- **半结构化数据模型** · semi-structured data models, 365–376 <!-- SOURCE pdf-1363-b042 -->
+    - 灵活模式 · flexible schema and, 366 
+    - 历史 · history of, 8, 27 
+    - JSON · JSON, 8, 27, 367–370 
+    - 知识表示 · knowledge representation and, 368 <!-- SOURCE pdf-1363-b043 -->
+    - 使用原因 · motivations for use of, 365–366 <!-- SOURCE pdf-1363-b044 -->
+    - 多值数据 · multivalued, 366–367 
+    - 嵌套数据 · nested, 367–368 
+    - 概述 · overview, 366–368 <!-- SOURCE pdf-1364-b001 -->
+    - RDF 与知识图谱 · RDF and knowledge graphs, 368, 372–376 <!-- SOURCE pdf-1364-b002 -->
+    - XML · XML, 8, 27, 367–368, 370–372 <!-- SOURCE pdf-1364-b003 -->
+- **传感器数据** · sensor data, 470, 501 
+- **情感分析** · sentiment analysis, 549 
+- **Sequel** · Sequel, 65 
+- **序列计数器** · sequence counters, 1226 
+- **顺序访问存储** · sequential-access storage, 561, 567, 578 <!-- SOURCE pdf-1364-b004 -->
+- **顺序计算** · sequential computation, 974 
+- **顺序文件组织** · sequential file organization, 595, 597–598 <!-- SOURCE pdf-1364-b005 -->
+- **串行 ATA（SATA）接口** · Serial ATA (SATA) interface, 562, 568, 569 <!-- SOURCE pdf-1364-b006 -->
+- **串行连接 SCSI（SAS）接口** · Serial Attached SCSI (SAS) interface, 562 <!-- SOURCE pdf-1364-b007 -->
+- **可串行化性** · serializability 
+    - 盲写 · blind writes and, 868 <!-- SOURCE pdf-1364-b008 -->
+    - 并发控制 · concurrency control and, 836, 840–843, 846–848, 856, 861–871, 875–887 <!-- SOURCE pdf-1364-b009 -->
+    - 冲突可串行化性 · conflict, 813–816 
+    - 隔离性 · isolation and, 821–826 
+    - 操作可串行化性 · operation, 885 
+    - 串行化顺序 · order of, 817 
+    - 性能调优 · performance tuning and, 1225 
+    - 优先图 · precedence graph and, 816–817 <!-- SOURCE pdf-1364-b010 -->
+    - 实际系统中的可串行化性 · in the real world, 824 
+    - 快照隔离 · snapshot isolation and, 875–879 <!-- SOURCE pdf-1364-b011 -->
+    - 拓扑排序 · topological sorting and, 817–818 <!-- SOURCE pdf-1364-b012 -->
+    - 事务 · transactions and, 812–819, 821–826 <!-- SOURCE pdf-1364-b013 -->
+    - 视图可串行化性 · view, 818–819, 867–868 
+- **可串行化调度** · serializable schedules, 811, 812 
+- **可串行化快照隔离（SSI）协议** · serializable snapshot isolation (SSI) protocol, 878 <!-- SOURCE pdf-1364-b014 -->
+- **服务器端脚本** · server-side scripting, 416–418 
+- **服务器系统** · server systems, 962–970 
+    - 分类 · categorization of, 963–964 <!-- SOURCE pdf-1364-b015 -->
+    - 数据服务器 · data-server, 963–964, 968–970 <!-- SOURCE pdf-1364-b016 -->
+    - 定义 · defined, 962 
+    - 事务服务器 · transaction-server, 963–968 
+    - 树形结构 · tree-like, 977–978 
+- **服务** · services, 994 <!-- SOURCE pdf-1364-b017 -->
+- **服务时间** · service time, 1230 
+- **servlet** · servlets, 411–421 
+    - 其他服务器端框架 · alternative server-side frameworks, 416–421 <!-- SOURCE pdf-1364-b018 --><!-- SOURCE pdf-1364-b019 -->
+    - 示例 · example of, 411–413 
+    - 生命周期 · life cycle and, 415–416 
+    - 服务器端脚本 · server-side scripting and, 416–418 <!-- SOURCE pdf-1364-b020 -->
+    - 会话 · sessions and, 413–415 
+    - 支持 · support for, 416 
+    - Web 应用框架 · web application frameworks and, 418–419 <!-- SOURCE pdf-1364-b021 -->
+- **会话窗口** · session window, 505 
+- **set autocommit off** · set autocommit off, 144 
+- **set 子句** · set clause, 113 
+- **set default** · set default, 150 
+- **集合差运算** · set-difference operation, 55, 750 
+- **set null** · set null, 150 
+- **集合运算** · set operations 
+    - except · except, 88–89 <!-- SOURCE pdf-1364-b022 -->
+    - intersect · intersect, 54–55, 87–88, 750 
+    - 嵌套子查询 · nested subqueries and, 98–101 <!-- SOURCE pdf-1364-b023 -->
+    - 查询优化 · query optimization and, 764–765 <!-- SOURCE pdf-1364-b024 -->
+    - 查询处理 · query processing and, 720–722 <!-- SOURCE pdf-1364-b025 -->
+    - 集合比较 · set comparison and, 99–101 
+    - 集合差 · set difference, 55 
+    - union · union, 53–54, 86–87, 750 
+- **面向集合** · set orientation, 1220–1221 
+- **set role** · set role, 172 
+- **set 语句** · set statement, 201, 209 
+- **set transaction isolation level serializable** · set transaction isolation level serializable, 822 <!-- SOURCE pdf-1364-b026 -->
+- **集合类型** · set types, 366, 367 
+- **影子副本方案** · shadow-copy scheme, 914 
+- **镜像** · shadowing, 571 
+- **影子分页** · shadow paging, 914 
+- **SHA-256 散列函数** · SHA-256 hash function, 1260 
+- **分片** · sharding, 473, 475–476, 1275 
+- **分片键** · shard key, 479 
+- **共享兼意向排他（SIX）模式** · shared and intention-exclusive (SIX) mode, 855 <!-- SOURCE pdf-1364-b027 -->
+- **共享磁盘架构** · shared-disk architecture, 979, 980, 984–985 <!-- SOURCE pdf-1364-b028 -->
+- **共享锁** · shared locks, 825, 835, 854, 880, 1124 <!-- SOURCE pdf-1364-b029 -->
+- **共享内存架构** · shared-memory architecture, 21–22, 979–984, 1061–1064 <!-- SOURCE pdf-1364-b030 --><!-- SOURCE pdf-1364-b031 -->
+- **共享模式锁** · shared-mode locks, 835 
+- **无共享架构** · shared-nothing architecture, 979, 980, 985–986, 1040–1041, 1061–1063 <!-- SOURCE pdf-1364-b032 -->
+- **共享扫描** · shared scans, 785–786 
+- **Sherpa/PNUTS** · Sherpa/PNUTS, 477, 1024, 1026, 1028–1030 <!-- SOURCE pdf-1364-b033 -->
+- **show warnings** · show warnings, 746 
+- **收缩阶段** · shrinking phase, 841, 843 
+- **shuffle 阶段** · shuffle step, 486, 1061 
+- **SIMD（单指令多数据）** · SIMD (Single Instruction Multiple Data), 1064 <!-- SOURCE pdf-1364-b034 -->
+- **简单属性** · simple attributes, 250, 265 
+- **仿真模型** · simulation model, 1230 
+- **单继承** · single inheritance, 275 
+- **单指令多数据（SIMD）** · Single Instruction Multiple Data (SIMD), 1064 <!-- SOURCE pdf-1364-b035 -->
+- **单一锁管理器** · single lock-manager, 1111 
+- **单点登录系统** · single sign-on system, 442–443 
+- **单用户系统** · single-user systems, 962 
+- **单值属性** · single-valued attributes, 251 
+- **站点** · sites, 986 
+- **SIX（共享兼意向排他）模式** · SIX (shared and intention-exclusive) mode, 855 <!-- SOURCE pdf-1364-b036 -->
+- **倾斜** · skew 
+    - 聚合 · aggregation and, 1049–1050 <!-- SOURCE pdf-1364-b037 -->
+    - 属性值倾斜 · attribute-value, 1008 
+    - 数据分布倾斜 · data distribution, 1008 
+    - 记录分布倾斜 · in distribution of records, 660 
+    - 执行倾斜 · execution, 1007, 1008, 1043 
+    - 散列索引 · hash indices and, 1194 
+    - 连接中的倾斜 · in joins, 1047–1048 
+    - 并行数据库 · parallel databases and, 974, 1007–1013, 1043, 1062 <!-- SOURCE pdf-1364-b038 -->
+    - 分区 · partitioning and, 715, 1007–1013 <!-- SOURCE pdf-1364-b039 -->
+    - 响应时间 · response time and, 1066 
+    - 写偏斜 · write skew, 876–877 
+- **切片** · slicing, 530 
+- **滑动窗口** · sliding window, 505 
+- **槽页结构** · slotted-page structure, 593 
+- **小型计算机系统接口（SCSI）** · small-computer-system interconnect (SCSI), 562, 563 <!-- SOURCE pdf-1364-b040 -->
+- **智能卡** · smart cards, 451, 451n9 
+- **智能合约** · smart contracts, 1258, 1269–1273 <!-- SOURCE pdf-1365-b001 --><!-- SOURCE pdf-1365-b002 -->
+- **快照隔离** · snapshot isolation 
+    - 并发控制 · concurrency control and, 872–879, 882, 916, 1131–1132 <!-- SOURCE pdf-1365-b003 --><!-- SOURCE pdf-1365-b004 -->
+    - 分布式快照隔离 · distributed, 1131–1132 
+    - 性能调优 · performance tuning and, 1225 
+    - 恢复系统 · recovery systems and, 916 
+    - 可串行化性 · serializability and, 875–879 
+    - 事务 · transactions and, 825–826, 1136 <!-- SOURCE pdf-1365-b005 -->
+    - 验证 · validation and, 874–875 
+- **雪花模式** · snowflake schema, 524 
+- **社交网站** · social-networking sites 
+    - 大数据 · Big Data and, 467, 470 <!-- SOURCE pdf-1365-b006 -->
+    - 数据库应用 · database applications for, 2, 3, 27 <!-- SOURCE pdf-1365-b007 -->
+    - 键值存储 · key-value store and, 471 
+    - 流数据 · streaming data and, 502 
+- **软截止期限** · soft deadlines, 894 
+- **软分叉** · soft forks, 1257, 1258 
+- **软件即服务模型** · software-as-a-service model, 993 
+- **软件 RAID** · software RAID, 574, 575 
+- **固态硬盘（SSD）** · solid-state drives (SSDs), 18, 560, 568–570, 693n3, 1229 <!-- SOURCE pdf-1365-b008 -->
+- **some 结构** · some construct, 100, 100n10 
+- **some 函数** · some function, 96 
+- **熟练用户** · sophisticated users, 24 
+- **排序** · sorting 
+    - 成本分析 · cost analysis of, 702–704 <!-- SOURCE pdf-1365-b009 -->
+    - 消除重复 · duplicate elimination and, 719–720 <!-- SOURCE pdf-1365-b010 -->
+    - 外部排序归并算法 · external sort-merge algorithm, 701–704 <!-- SOURCE pdf-1365-b011 -->
+    - 并行外部排序归并 · parallel external sort-merge, 1042–1043 <!-- SOURCE pdf-1365-b012 -->
+    - 查询处理 · query processing and, 701–704 <!-- SOURCE pdf-1365-b013 -->
+    - 范围分区排序 · range-partitioning, 1041–1042 
+    - 拓扑排序 · topological, 817–818 
+- **排序归并连接算法** · sort-merge-join algorithm, 708–712 <!-- SOURCE pdf-1365-b014 -->
+- **可靠的公理** · sound axioms, 321 
+- **数据源驱动架构** · source-driven architecture, 522 
+- **空间开销** · space overhead, 624, 627–628, 634, 1202 <!-- SOURCE pdf-1365-b015 -->
+- **Spark** · Spark, 495–500, 508, 511, 1061 
+- **SPARQL** · SPARQL, 375–376 
+- **稀疏列数据表示** · sparse column data representation, 366 <!-- SOURCE pdf-1365-b016 --><!-- SOURCE pdf-1365-b017 -->
+- **稀疏索引** · sparse indices, 626–632 
+- **空间数据** · spatial data 
+    - 设计数据库 · design databases, 390–391 <!-- SOURCE pdf-1365-b018 -->
+    - 地理数据 · geographic, 387, 390–393 
+    - 几何数据 · geometric, 388–390 
+    - 索引 · indexing of, 672–675, 1186–1190 <!-- SOURCE pdf-1365-b019 -->
+    - 空间数据连接 · joins over, 719 
+    - 四叉树 · quadtrees, 392, 674, 1186–1187 <!-- SOURCE pdf-1365-b020 -->
+    - 查询 · queries and, 393–394 
+    - R 树 · R-trees, 663, 670, 674–676, 1187–1190 <!-- SOURCE pdf-1365-b021 -->
+    - 三角剖分 · triangulation and, 388, 393 
+- **空间数据索引** · spatial data indices, 672–675 
+- **空间图查询** · spatial graph queries, 394 
+- **空间图** · spatial graphs, 390 
+- **空间完整性约束** · spatial-integrity constraints, 391 
+- **空间连接** · spatial join, 394 
+- **空间网络** · spatial networks, 390 
+- **特化** · specialization 
+    - 属性继承 · attribute inheritance and, 274–275 <!-- SOURCE pdf-1365-b022 --><!-- SOURCE pdf-1365-b023 -->
+    - 约束 · constraints on, 275–276 
+    - 不相交特化 · disjoint, 272, 275 
+    - 实体—联系（E-R）模型 · entity-relationship (E-R) model and, 271–273 <!-- SOURCE pdf-1365-b024 -->
+    - 重叠特化 · overlapping, 272, 275 
+    - 部分特化 · partial, 275 
+    - 单个实体集 · single entity set and, 274 
+    - 超类与子类关系 · superclass-subclass relationship and, 272 <!-- SOURCE pdf-1365-b025 -->
+    - 完全特化 · total, 275 
+- **功能需求规格说明** · specification of functional requirements, 17–18, 242 <!-- SOURCE pdf-1365-b026 -->
+- **加速比** · speedup, 972–974 
+- **节点分裂** · splitting nodes, 641–645, 886 
+- **SQL Access Group** · SQL Access Group, 1238 
+- **SQLAlchemy** · SQLAlchemy, 382 
+- **SQL/DS** · SQL/DS, 26 
+- **SQL 环境** · SQL environment, 163 
+- **SQL 注入** · SQL injection, 189, 438–439 
+- **SQLite** · SQLite, 668 
+- **SQLLoader** · SQLLoader, 1222 
+- **SQL MED** · SQL MED, 1077 
+- **sql security invoker** · sql security invoker, 170 
+- **sqlstate** · sqlstate, 205 
+- **SQL（结构化查询语言）** · SQL (Structured Query Language), 65–114 <!-- SOURCE pdf-1365-b027 --><!-- SOURCE pdf-1365-b028 -->
+    - 高级 SQL；见高级 SQL · advanced (see advanced SQL) 
+    - 聚合函数 · aggregate functions and, 91–96 <!-- SOURCE pdf-1365-b029 -->
+    - 应用层授权 · application-level authorization and, 443–445 <!-- SOURCE pdf-1365-b030 -->
+    - 应用程序 · application programs and, 16–17 <!-- SOURCE pdf-1365-b031 -->
+    - select 子句中的属性指定 · attribute specification in select clause, 83 <!-- SOURCE pdf-1365-b032 -->
+    - 授权 · authorization and, 66 
+    - 支持的基本类型 · basic types supported by, 67–68 <!-- SOURCE pdf-1365-b033 -->
+    - 二进制大对象 · blobs and, 156, 193, 594, 652 
+    - 批量加载 · bulk loads and, 1221–1223 
+    - 字符大对象 · clobs and, 156, 193, 594, 652 
+    - create table · create table and, 68–71 
+    - 数据库修改 · database modification and, 108–114 <!-- SOURCE pdf-1365-b034 -->
+    - 大学数据库的数据定义 · data definition for university databases, 69–71, 1288–1292 <!-- SOURCE pdf-1365-b035 -->
+    - DDL · DDL and, 14–15, 65–71 
+    - 决策支持系统 · decision-support systems and, 521 <!-- SOURCE pdf-1365-b036 -->
+    - 删除 · deletion and, 108–110 
+    - DML · DML and, 16, 66 
+    - 转储 · dumping and, 931 
+    - 动态 SQL · dynamic, 66, 184, 201 
+    - 嵌入式 SQL · embedded, 66, 184, 197–198, 965, 1269 <!-- SOURCE pdf-1365-b037 -->
+    - 索引创建 · index creation and, 164–165, 664–665 <!-- SOURCE pdf-1365-b038 -->
+    - 注入 · injection and, 189, 438–439 
+    - 输入与输出 · inputs and outputs in, 747 
+    - 插入 · insertion and, 110–111 
+    - 完整性约束 · integrity constraints and, 14–15, 66, 145–153 <!-- SOURCE pdf-1365-b039 -->
+    - 中级 SQL；见中级 SQL · intermediate (see intermediate SQL) <!-- SOURCE pdf-1365-b040 -->
+    - 隔离级别 · isolation levels and, 821–826 
+    - JSON · JSON and, 369–370 
+    - 局限 · limitations of, 468, 472 
+    - MapReduce 上的 SQL · on MapReduce, 493–494 
+    - MySQL；见 MySQL · MySQL (see MySQL) 
+    - 嵌套子查询 · nested subqueries and, 98–107 <!-- SOURCE pdf-1365-b041 -->
+    - 非标准语法 · nonstandard syntax and, 204 
+    - NoSQL 系统 · NoSQL systems, 28, 473, 477, 1269, 1276 <!-- SOURCE pdf-1366-b001 --><!-- SOURCE pdf-1366-b002 -->
+    - 空值 · null values and, 89–90 
+    - SQL 中的 OLAP · OLAP in, 533–534, 536–538 
+    - 元组显示排序 · ordering display of tuples and, 83–84 <!-- SOURCE pdf-1366-b003 -->
+    - 概述 · overview, 65–66 
+    - PostgreSQL；见 PostgreSQL · PostgreSQL (see PostgreSQL) <!-- SOURCE pdf-1366-b004 -->
+    - 预备语句 · prepared statements and, 188–190 <!-- SOURCE pdf-1366-b005 -->
+    - 广泛使用 · prevalence of use, 13 
+    - 查询处理 · query processing and, 689–690, 701, 720 <!-- SOURCE pdf-1366-b006 -->
+    - 查询结构 · query structure, 71–79 
+    - 关系代数 · relational algebra and, 80 
+    - 更名运算 · rename operation and, 79, 81–82 <!-- SOURCE pdf-1366-b007 -->
+    - ResultSet 对象 · ResultSet object and, 185, 187–188, 191–193, 638–639 <!-- SOURCE pdf-1366-b008 -->
+    - 模式 · schemas and, 24, 66, 68–71 
+    - 安全 · security and, 438–439 
+    - 集合运算 · set operations and, 85–89 
+    - SQL 标准 · standards for, 65, 1237–1238 
+    - 流扩展 · stream extensions to, 504–506 <!-- SOURCE pdf-1366-b009 -->
+    - 字符串操作 · string operations and, 82–83 
+    - System R · System R and, 26 
+    - System R 项目 · System R project and, 65 
+    - 理论基础 · theoretical basis of, 48 
+    - 事务 · transactions and, 66, 143–145, 965 <!-- SOURCE pdf-1366-b010 -->
+    - 更新 · updates and, 111–114 
+    - 视图 · views and, 66, 137–143, 169–170 <!-- SOURCE pdf-1366-b011 -->
+    - where 子句谓词 · where-clause predicates and, 84–85 <!-- SOURCE pdf-1366-b012 -->
+    - XML · XML and, 372 
+- **SSD；见固态硬盘** · SSDs. See solid-state drives 
+- **SSI（可串行化快照隔离）协议** · SSI (serializable snapshot isolation) protocol, 878 <!-- SOURCE pdf-1366-b013 -->
+- **稳定存储** · stable storage, 804–805, 908–910 <!-- SOURCE pdf-1366-b014 -->
+- **过时消息** · stale messages, 1149 
+- **处理停顿** · stalls in processing, 733 
+- **标准** · standards 
+    - ANSI · ANSI, 65, 1237 <!-- SOURCE pdf-1366-b015 -->
+    - 预先制定的标准 · anticipatory, 1237 
+    - 调用级接口（CLI） · CLI, 197, 1238–1239 
+    - 数据库连接 · database connectivity, 1238–1239 <!-- SOURCE pdf-1366-b016 --><!-- SOURCE pdf-1366-b017 -->
+    - 事实标准 · de facto, 1237 
+    - 定义 · defined, 1237 
+    - 正式标准 · formal, 1237 
+    - ISO · ISO, 65, 1237, 1241 
+    - 面向对象标准 · object-oriented, 1239–1240 
+    - ODBC · ODBC, 1238–1239 
+    - 滞后制定的标准 · reactionary, 1237 
+    - SQL · SQL, 65, 1237–1238 
+    - X/Open XA · X/Open XA, 1239 
+- **星型模式** · star schema, 524–525 
+- **启动开销** · start-up costs, 974, 1066 
+- **start with/connect by prior 语法** · start with/connect by prior syntax, 218 <!-- SOURCE pdf-1366-b018 -->
+- **饥饿事务** · starved transactions, 841, 853 
+- **基于状态的区块链** · state-based blockchains, 1269, 1271 <!-- SOURCE pdf-1366-b019 -->
+- **状态机** · state machines, 1158–1161 
+- **Statement 对象** · Statement object, 186–187, 189 
+- **执行状态** · state of execution, 727 
+- **静态散列** · static hashing, 661, 1190–1195, 1202–1203 <!-- SOURCE pdf-1366-b020 -->
+- **统计分析** · statistical analysis, 520, 527 
+- **统计信息** · statistics, 757–766 
+    - 目录信息 · catalog information and, 758–760 <!-- SOURCE pdf-1366-b021 --><!-- SOURCE pdf-1366-b022 -->
+    - 计算 · computing, 761 
+    - 连接结果大小估计 · join size estimation and, 762–764 <!-- SOURCE pdf-1366-b023 -->
+    - 维护 · maintaining, 761 
+    - 不同值数量 · number of distinct values and, 765–766 <!-- SOURCE pdf-1366-b024 -->
+    - 选择结果大小估计 · selection size estimation and, 760, 762 <!-- SOURCE pdf-1366-b025 -->
+- **偷取策略** · steal policy, 927 
+- **分级合并索引** · stepped-merge indices, 667, 1179–1181 <!-- SOURCE pdf-1366-b026 -->
+- **股票市场中的流数据** · stock market, streaming data and, 501 <!-- SOURCE pdf-1366-b027 -->
+- **停用词** · stop words, 385 
+- **存储** · storage, 587–617 
+    - 访问时间 · access time and, 561, 566, 567, 578 <!-- SOURCE pdf-1366-b028 --><!-- SOURCE pdf-1366-b029 -->
+    - 存储架构 · architecture for, 587–588 
+    - 归档存储 · archival, 561 
+    - 原子性 · atomicity and, 804–805 
+    - 授权 · authorization and, 19 
+    - 备份；见备份 · backup (see backup) 
+    - 大数据 · Big Data and, 472–482, 668 
+    - 位级条带化 · bit-level striping and, 571–572 <!-- SOURCE pdf-1366-b030 -->
+    - 区块链；见区块链数据库 · blockchain (see blockchain databases) <!-- SOURCE pdf-1366-b031 -->
+    - 块级条带化 · block-level striping and, 572 
+    - 缓冲区 · buffers and, 19, 604–610 
+    - 存储字节数 · byte amounts of, 18 
+    - 检查点 · checkpoints and, 920–922, 930 <!-- SOURCE pdf-1366-b032 -->
+    - 云存储 · cloud-based, 28, 563, 992–993 <!-- SOURCE pdf-1366-b033 -->
+    - 列式存储 · column-oriented, 525–526, 588, 611–617, 734, 1182 <!-- SOURCE pdf-1366-b034 -->
+    - 崩溃 · crashes and, 607, 609–610 
+    - 数据访问 · data access and, 910–912 
+    - 数据字典 · data-dictionary, 602–604 
+    - 数据挖掘 · data mining and, 27, 540–549 
+    - 数据传输率 · data-transfer rate and, 566, 569 <!-- SOURCE pdf-1366-b035 -->
+    - 决策支持系统中的存储 · in decision-support systems, 519–520 <!-- SOURCE pdf-1366-b036 -->
+    - 直接访问存储 · direct-access, 561 
+    - 分布式存储；见分布式数据库 · distributed (see distributed databases) <!-- SOURCE pdf-1366-b037 -->
+    - 分布式文件系统 · distributed file systems for, 472–475, 489, 1003, 1019–1022 <!-- SOURCE pdf-1366-b038 -->
+    - 转储 · dumping and, 930–931 
+    - 持久性 · durability and, 804–805 
+    - 弹性 · elasticity of, 1010 
+    - 文件管理器 · file manager for, 19 
+    - 文件组织 · file organization and, 588–602 <!-- SOURCE pdf-1366-b039 -->
+    - 强制输出 · force output and, 912 
+    - 地理分布存储 · geographically distributed, 1026–1027 <!-- SOURCE pdf-1366-b040 -->
+    - 硬盘存储 · hard disks for, 26 
+    - 完整性管理器 · integrity manager and, 19 
+    - 键值存储 · key-value, 471, 473, 476–480, 1003, 1023–1031 <!-- SOURCE pdf-1366-b041 -->
+    - 大对象存储 · of large objects, 594–595 
+    - 日志磁盘 · log disks, 610 
+    - 内存数据库中的存储 · in main-memory databases, 588, 615–617 <!-- SOURCE pdf-1366-b042 -->
+    - 镜像 · mirroring and, 571–573, 576, 577 <!-- SOURCE pdf-1366-b043 -->
+    - 非易失性存储 · non-volatile, 560, 562, 587–588, 804, 908–910, 930–931 <!-- SOURCE pdf-1366-b044 -->
+    - 离线存储 · offline, 561 
+    - 在线存储 · online, 561 
+    - 外包 · outsourcing, 28 <!-- SOURCE pdf-1367-b001 -->
+    - 并行存储；见并行数据库 · parallel (see parallel databases) <!-- SOURCE pdf-1367-b002 -->
+    - 物理存储；见物理存储系统 · physical (see physical storage systems) <!-- SOURCE pdf-1367-b003 -->
+    - 指针 · pointers and, 588, 591, 594–598, 601 <!-- SOURCE pdf-1367-b004 -->
+    - 主存储 · primary, 561 
+    - 穿孔卡片 · punched cards for, 25 
+    - 随机访问 · random access, 567, 578 
+    - 恢复系统 · recovery systems and, 908–912, 920–922, 930–931 <!-- SOURCE pdf-1367-b005 -->
+    - 独立磁盘冗余阵列 · redundant arrays of independent disks, 562 <!-- SOURCE pdf-1367-b006 -->
+    - 响应时间 · response time and, 572 
+    - 行式存储 · row-oriented, 611, 615 
+    - R 树 · R-trees and, 1189–1190 
+    - 擦洗检查 · scrubbing and, 575 
+    - 辅助存储 · secondary, 561 
+    - 寻道时间 · seek time and, 566, 566n2, 567, 692, 710 <!-- SOURCE pdf-1367-b007 -->
+    - 顺序访问 · sequential access, 561, 567, 578 <!-- SOURCE pdf-1367-b008 -->
+    - 分片 · sharding and, 473, 475–476 
+    - SQL DDL · SQL DDL and, 67 
+    - 稳定存储 · stable, 804–805, 908–910 
+    - 数据条带化 · striping data and, 571–572 
+    - 结构与访问方法定义 · structure and access-method definition, 24 <!-- SOURCE pdf-1367-b009 -->
+    - 三级存储 · tertiary, 561 
+    - 事务管理器 · transaction manager for, 19 
+    - 易失性存储 · volatile, 560, 562, 804, 908 
+    - 钱包 · wallets and, 450 
+    - 数据仓库；见数据仓库 · warehousing (see data warehousing) <!-- SOURCE pdf-1367-b010 -->
+- **存储区域网络（SAN）** · storage area network (SAN), 562, 563, 570, 934, 985 <!-- SOURCE pdf-1367-b011 -->
+- **存储级内存（SCM）** · storage class memory (SCM), 569, 588, 948 <!-- SOURCE pdf-1367-b012 -->
+- **存储管理器** · storage manager, 18–20 
+- **存储屏障** · store barrier, 983 
+- **存储函数与过程** · stored functions/procedures, 1031 <!-- SOURCE pdf-1367-b013 -->
+- **拖慢进度的节点** · straggler nodes, 1060–1061 
+- **流数据** · streaming data, 500–508 
+    - 代数运算 · algebraic operations and, 504, 506–508 <!-- SOURCE pdf-1367-b014 --><!-- SOURCE pdf-1367-b015 -->
+    - 应用 · applications of, 500–502 
+    - 连续流数据 · continuous, 731 
+    - 定义 · defined, 500 <!-- SOURCE pdf-1367-b016 -->
+    - 容错 · fault tolerance with, 1074–1076 <!-- SOURCE pdf-1367-b017 -->
+    - 处理 · processing, 468, 1070–1076 
+    - 查询 · querying, 502–506, 1070–1071 <!-- SOURCE pdf-1367-b018 -->
+    - 元组路由 · routing of tuples and, 1071–1073 <!-- SOURCE pdf-1367-b019 -->
+- **流查询语言** · stream query languages, 503–506 <!-- SOURCE pdf-1367-b020 -->
+- **严格两阶段锁协议** · strict two-phase locking protocol, 842, 843 <!-- SOURCE pdf-1367-b021 -->
+- **字符串操作** · string operations 
+    - 聚合 · aggregate, 91 <!-- SOURCE pdf-1367-b022 -->
+    - 转义 · escape, 83 
+    - JDBC · JDBC and, 184–193 
+    - like · like, 82–83 
+    - lower 函数 · lower function, 82 
+    - 查询结果获取 · query result retrieval and, 188 
+    - similar to · similar to, 83 
+    - trim · trim, 82 
+    - upper 函数 · upper function, 82 
+- **条带** · stripe, 613–614 
+- **数据条带化** · striping data, 571–572 
+- **强实体集** · strong entity sets, 259, 265–267 
+- **结构化查询语言；见 SQL** · Structured Query Language. See SQL <!-- SOURCE pdf-1367-b023 -->
+- **结构类型** · structured types, 158–160 
+- **样式表** · stylesheets, 408 
+- **三元组的主语** · subject of triples, 372 
+- **次线性扩展比** · sublinear scaleup, 973 
+- **次线性加速比** · sublinear speedup, 972 
+- **子模式** · subschemas, 12 
+- **后缀** · suffix, 1243 
+- **sum 函数** · sum function, 91, 139, 228, 536, 723, 766, 781 <!-- SOURCE pdf-1367-b024 -->
+- **超类与子类关系** · superclass-subclass relationship, 272, 274 <!-- SOURCE pdf-1367-b025 -->
+- **超键** · superkeys, 43–44, 257–258, 309–310, 312 <!-- SOURCE pdf-1367-b026 -->
+- **超级步** · supersteps, 510 
+- **超级用户** · superusers, 166 
+- **供应链** · supply chains, 1266, 1278 
+- **支持度** · support, 547 
+- **支持向量机（SVM）** · Support Vector Machine (SVM), 544–545 <!-- SOURCE pdf-1367-b027 -->
+- **交换空间** · swap space, 929 
+- **Sybase IQ** · Sybase IQ, 615 
+- **女巫攻击** · Sybil attacks, 1255, 1256, 1264, 1266 <!-- SOURCE pdf-1367-b028 -->
+- **对称分片复制连接** · symmetric fragment-and-replicate joins, 1046 <!-- SOURCE pdf-1367-b029 --><!-- SOURCE pdf-1367-b030 -->
+- **对称密钥加密** · symmetric-key encryption, 448 
+- **同步复制** · synchronous replication, 522–523, 1136 <!-- SOURCE pdf-1367-b031 -->
+- **语法** · syntax, 199, 201–205, 689 
+- **sys** · sys 
+    - context 函数 · context function, 173 <!-- SOURCE pdf-1367-b033 -->
+- **系统架构；见体系结构** · system architecture. See architecture <!-- SOURCE pdf-1367-b034 -->
+- **系统目录** · system catalogs, 602–604, 1009 
+- **系统时钟** · system clock, 862 
+- **系统错误** · system error, 907 
+- **System R** · System R, 26, 65, 772–773, 772n3 <!-- SOURCE pdf-1367-b035 -->
+
+## T {#index-t}
+
+- **表别名** · table alias, 81 <!-- SOURCE pdf-1367-b036 -->
+- **表函数** · table functions, 200 
+- **表继承** · table inheritance, 379–380 
+- **表分区** · table partitioning, 601–602 
+- **表** · tables 
+    - 定义 · defined, 1011 <!-- SOURCE pdf-1367-b037 -->
+    - 维度表 · dimension, 524 
+    - 脏页表 · dirty page, 941–947 
+    - 分布式散列表 · distributed hash, 1013 
+    - 事实表 · fact, 524 
+    - 外部表 · foreign, 1077 
+    - 分区表 · partition, 1011–1014 
+    - 透视表 · pivot-table, 226–227, 528–529 <!-- SOURCE pdf-1367-b038 -->
+    - 关系模型中的表 · in relational model, 9, 10, 37–40 <!-- SOURCE pdf-1367-b039 -->
+    - SQL DDL 中的表 · in SQL DDL, 14–15 
+    - 过渡表 · transition, 210 
+- **tablet 分片** · tablets, 1011, 1025 
+- **tablet 服务器** · tablet server, 1025 
+- **制表符分隔值** · tab-separated values, 1222 
+- **标签库** · tag library, 418 
+- **标签** · tags, 370–372, 406–407, 418, 440 <!-- SOURCE pdf-1367-b040 -->
+- **抗篡改性** · tamper resistance, 1253–1255, 1259, 1260 <!-- SOURCE pdf-1367-b041 -->
+- **缠结** · tangles, 1278 
+- **磁带存储** · tape storage, 561 
+- **Tapestry** · Tapestry, 419 
+- **任务；另见工作流** · tasks, 1051–1052. See also workflow <!-- SOURCE pdf-1367-b042 -->
+- **Tcl** · Tcl, 206 
+- **电信中的数据库应用** · telecommunications, database applications for, 3 <!-- SOURCE pdf-1367-b043 -->
+- **时态数据** · temporal data, 347–351, 347n10 
+- **时态数据索引** · temporal data indices, 675–676 <!-- SOURCE pdf-1368-b001 -->
+- **时态有效性** · temporal validity, 157 
+- **词频（TF）** · term frequency (TF), 384 
+- **事务终止** · termination of transactions, 806 
+- **词项；任期** · terms, 384, 1149 
+- **三元联系集** · ternary relationship sets, 249, 250, 284 <!-- SOURCE pdf-1368-b002 -->
+- **三级存储** · tertiary storage, 561 
+- **测试并设置** · test-and-set, 966 
+- **测试套件** · test suites, 1234–1235 
+- **文本挖掘** · text mining, 549 
+- **文本数据；另见信息检索** · textual data, 382–387. See also information retrieval <!-- SOURCE pdf-1368-b003 -->
+    - 关键字查询 · keyword queries, 383, 386–387 <!-- SOURCE pdf-1368-b004 -->
+    - 概述 · overview, 382 
+    - 相关性排名 · relevance ranking and, 383–386 <!-- SOURCE pdf-1368-b005 -->
+- **Tez** · Tez, 495 
+- **TF-IDF 方法** · TF-IDF approach, 384–385 
+- **TF（词频）** · TF (term frequency), 384 
+- **then 子句** · then clause, 212 
+- **θ 连接运算** · theta-join operations, 748–749 
+- **第三范式（3NF）** · third normal form (3NF), 317–319, 333–335 <!-- SOURCE pdf-1368-b006 -->
+- **Thomas 写规则** · Thomas’ write rule, 864–866 
+- **线程** · threads, 965, 982, 1062 
+- **3D-XPoint 内存技术** · 3D-XPoint memory technology, 569 <!-- SOURCE pdf-1368-b007 -->
+- **3NF 分解算法** · 3NF decomposition algorithm, 334–335 <!-- SOURCE pdf-1368-b008 -->
+- **3NF 综合算法** · 3NF synthesis algorithm, 335 
+- **3NF（第三范式）** · 3NF (third normal form), 317–319, 333–335 <!-- SOURCE pdf-1368-b009 -->
+- **三阶段提交（3PC）协议** · three-phase commit (3PC) protocol, 1107 <!-- SOURCE pdf-1368-b010 -->
+- **三层架构** · three-tier architecture, 23 
+- **吞吐量** · throughput 
+    - 应用设计 · application design and, 1230–1232, 1234 <!-- SOURCE pdf-1368-b011 --><!-- SOURCE pdf-1368-b012 -->
+    - 区块链数据库的吞吐量 · in blockchain databases, 1274 
+    - 吞吐量的调和平均数 · harmonic mean of, 1231 
+    - 提高吞吐量 · improved, 808 
+    - 并行数据库 · parallel databases and, 971 
+    - 范围分区 · range partitioning and, 1007 
+    - 存储 · storage and, 572 
+    - 系统架构 · system architectures and, 963, 971 <!-- SOURCE pdf-1368-b013 -->
+    - 事务 · transactions and, 808 
+- **吞吐量测试** · throughput test, 1234 
+- **票据与票务** · tickets and ticketing, 1133, 1279 <!-- SOURCE pdf-1368-b014 -->
+- **瓦片** · tiles, 392 
+- **时间区间** · time intervals, 675–676 
+- **时间锁交易** · time-lock transactions, 1273 
+- **时间戳** · timestamps 
+    - 并发控制 · concurrency control and, 861–866, 882 <!-- SOURCE pdf-1368-b015 --><!-- SOURCE pdf-1368-b016 -->
+    - 数据存储系统 · for data-storage systems, 480 
+    - 定义 · defined, 154 
+    - 分布式数据库 · distributed databases and, 1116–1118 <!-- SOURCE pdf-1368-b017 -->
+    - 生成 · generation of, 1117–1118 
+    - 失效时间戳 · invalidation, 873n3 
+    - 逻辑时钟 · logical clock, 1118 
+    - 逻辑计数器 · logical counter and, 862 
+    - 多版本方案 · multiversion schemes and, 870–871 <!-- SOURCE pdf-1368-b018 -->
+    - 非确定性时间戳 · nondeterministic, 508n3 
+    - 排序方案 · ordering scheme and, 862–864, 870–871, 1118 <!-- SOURCE pdf-1368-b019 -->
+    - 回滚 · rollback and, 862–865 
+    - 快照隔离 · snapshot isolation and, 873, 873n2 <!-- SOURCE pdf-1368-b020 -->
+    - 系统时钟 · system clock and, 862 
+    - Thomas 写规则 · Thomas’ write rule and, 864–866 <!-- SOURCE pdf-1368-b021 -->
+    - 事务 · transactions and, 825 
+    - 元组 · tuples and, 502, 503, 505 
+- **完成时间** · time to completion, 1231 
+- **时区** · timezone, 154 
+- **TIN（三角不规则网）** · TIN (triangulated irregular network), 393 <!-- SOURCE pdf-1368-b022 -->
+- **代币** · tokens, 1272 
+- **Tomcat 服务器** · Tomcat Server, 416 
+- **自顶向下设计** · top-down design, 273 
+- **主题分区系统** · topic-partition system, 1073 
+- **前 K 项查询优化** · top-K optimization, 784 
+- **地形信息** · topographical information, 393 
+- **拓扑排序** · topological sorting, 817–818 
+- **立即丢弃策略** · toss-immediate strategy, 608 
+- **完全故障** · total failure, 909 
+- **完全概化** · total generalization, 275 
+- **完全回滚** · total rollback, 853 
+- **完全特化** · total specialization, 275 
+- **TPC（事务处理性能委员会）** · TPC (Transaction Processing Performance Council), 1232–1234 <!-- SOURCE pdf-1368-b023 -->
+- **TPS（每秒事务数）** · TPS (transactions per second), 1232 <!-- SOURCE pdf-1368-b024 -->
+- **磁道** · tracks, 564 
+- **训练实例** · training instances, 541, 543, 546 <!-- SOURCE pdf-1368-b025 -->
+- **事务控制** · transaction control, 66 
+- **事务协调器** · transaction coordinators, 1099, 1104, 1106–1107 <!-- SOURCE pdf-1368-b026 -->
+- **事务标识符** · transaction identifiers, 913 
+- **事务管理器** · transaction managers, 18–21, 1098–1099 <!-- SOURCE pdf-1368-b027 -->
+- **事务处理性能委员会（TPC）** · Transaction Processing Performance Council (TPC), 1232–1234 <!-- SOURCE pdf-1368-b028 -->
+- **事务** · transactions, 799–828 
+    - 已中止事务 · aborted, 805–807, 819–820 <!-- SOURCE pdf-1368-b029 -->
+    - 崩溃后的动作 · actions following crashes, 923–925 <!-- SOURCE pdf-1368-b030 -->
+    - 活动事务 · active, 806 
+    - 交易聚合 · aggregation of, 1278 
+    - 其他事务处理模型 · alternative models of processing, 1108–1110 <!-- SOURCE pdf-1368-b031 -->
+    - 关联规则 · association rules and, 546–547 <!-- SOURCE pdf-1368-b032 -->
+    - 原子性 · atomicity of, 20–21, 144, 481, 800–807, 819–821 <!-- SOURCE pdf-1368-b033 -->
+    - begin/end 操作 · begin/end operations and, 799 <!-- SOURCE pdf-1368-b034 -->
+    - 区块链交易 · blockchain, 1261–1263, 1268–1271, 1273 <!-- SOURCE pdf-1368-b035 -->
+    - 无级联调度 · cascadeless schedules and, 820–821 <!-- SOURCE pdf-1368-b036 -->
+    - check 约束 · check constraints and, 800 
+    - 提交协议 · commit protocols and, 1100–1110 <!-- SOURCE pdf-1368-b037 -->
+    - 已提交事务；见已提交事务 · committed (see committed transactions) <!-- SOURCE pdf-1368-b038 -->
+    - commit work · commit work and, 143–145 
+    - 补偿事务 · compensating, 805 
+    - 概念 · concept of, 799–801 
+    - 并发控制；见并发控制 · concurrency control and (see concurrency control) <!-- SOURCE pdf-1368-b039 -->
+    - 并发事务 · concurrent, 1224–1227 
+    - 一致性 · consistency of, 20, 800, 802, 807–808, 821–823 <!-- SOURCE pdf-1368-b040 -->
+    - 崩溃 · crashes and, 800 
+    - 跨链交易 · cross-chain, 1273 
+    - 数据挖掘 · data mining, 540–549 
+    - 定义 · defined, 20, 799 
+    - 分布式事务 · distributed, 989–990, 1098–1100 <!-- SOURCE pdf-1368-b041 -->
+    - 双重支付交易 · double-spend, 1261–1262, 1264 <!-- SOURCE pdf-1368-b042 -->
+    - 持久性 · durability of, 20–21, 800–807 
+    - 事务失败 · failure of, 806, 907, 909, 1100 <!-- SOURCE pdf-1369-b001 -->
+    - 强制或非强制写回策略 · force/no-force policy and, 927 
+    - gas 概念 · gas concept for, 1270–1271 
+    - 全局事务 · global, 988, 1098, 1132 
+    - 未决事务 · in-doubt, 1105 
+    - 完整性约束违例 · integrity constraint violation and, 151–152 <!-- SOURCE pdf-1369-b002 -->
+    - 隔离性 · isolation of, 800–804, 807–812, 819–826 <!-- SOURCE pdf-1369-b003 -->
+    - 终止事务 · killing, 807 
+    - 本地事务 · local, 988, 1098, 1132 
+    - 锁；见锁 · locks and (see locks) 
+    - 日志；见日志记录 · log of (see log records) 
+    - 长事务 · long-duration, 890–891 
+    - 小批量事务 · minibatch, 1227 
+    - 多版本方案 · multiversion schemes and, 869–872, 1129–1131 <!-- SOURCE pdf-1369-b004 -->
+    - 可观察的外部写入 · observable external writes and, 807 <!-- SOURCE pdf-1369-b005 -->
+    - 链下交易 · off-chain, 1275 
+    - 联机事务 · online, 4, 521 
+    - 事务性能调优 · performance tuning of, 1224–1227 <!-- SOURCE pdf-1369-b006 -->
+    - 持久消息 · persistent messaging and, 990, 1016, 1108–1110, 1137 <!-- SOURCE pdf-1369-b007 -->
+    - 只读事务 · read-only, 871 
+    - 实时系统 · real-time systems, 894 
+    - 可恢复调度 · recoverable schedules and, 819–820 <!-- SOURCE pdf-1369-b008 -->
+    - 恢复系统 · recovery systems and, 21, 803, 805 <!-- SOURCE pdf-1369-b009 -->
+    - 远程备份系统 · remote backup systems and, 931–935 <!-- SOURCE pdf-1369-b010 -->
+    - 重新启动 · restarting, 807 
+    - 回滚 · rollback and, 143–145, 193, 196, 805–806, 922, 937–939, 945–946 <!-- SOURCE pdf-1369-b011 -->
+    - 可扩展性 · scalability and, 471 
+    - 可串行化性 · serializability and, 812–819, 821–826 <!-- SOURCE pdf-1369-b012 -->
+    - 影子副本方案 · shadow-copy scheme and, 914 
+    - 简单模型 · simple model for, 801–804 
+    - 由 SQL 语句组成的事务 · as SQL statements, 826–828 
+    - 饥饿事务 · starved, 841, 853 
+    - 事务状态 · states of, 805–807 
+    - 偷取或不偷取策略 · steal/no-steal policy and, 927 
+    - 存储结构 · storage structure and, 804–805 <!-- SOURCE pdf-1369-b013 -->
+    - 事务支持 · support for, 1028–1030 
+    - 已终止事务 · terminated, 806 
+    - 时间锁交易 · time-lock, 1273 <!-- SOURCE pdf-1369-b014 -->
+    - 时间戳 · timestamps and, 861–866 
+    - 两阶段提交协议 · two-phase commit protocol and, 989, 1016, 1276 <!-- SOURCE pdf-1369-b015 -->
+    - 作为程序执行单位 · as unit of program execution, 799 <!-- SOURCE pdf-1369-b016 -->
+    - 更新事务 · update, 871 
+    - 验证 · validation and, 866–869 
+    - 等待图 · wait-for graph and, 851–852, 1113–1114 <!-- SOURCE pdf-1369-b017 -->
+    - 先写日志规则 · write-ahead logging rule and, 926–929 <!-- SOURCE pdf-1369-b018 -->
+    - 写操作 · write operations and, 826 
+- **事务扩展比** · transaction scaleup, 973 
+- **事务一致快照** · transactions-consistent snapshot, 1136 <!-- SOURCE pdf-1369-b019 -->
+- **事务服务器系统** · transaction-server systems, 963–968 <!-- SOURCE pdf-1369-b020 -->
+- **每秒事务数（TPS）** · transactions per second (TPS), 1232 <!-- SOURCE pdf-1369-b021 -->
+- **事务时间** · transaction time, 347n10 
+- **TransactSQL** · TransactSQL, 199 
+- **控制权转移** · transfer of control, 932–933 
+- **变换** · transformations 
+    - 数据仓库 · data warehousing and, 523 <!-- SOURCE pdf-1369-b022 -->
+    - 等价规则 · equivalence rules and, 747–752 <!-- SOURCE pdf-1369-b023 -->
+    - 示例 · examples of, 752–754 
+    - 连接顺序 · join ordering and, 754–755 
+    - 查询优化 · query optimization and, 747–757 <!-- SOURCE pdf-1369-b024 -->
+    - 关系代数 · relational algebra and, 747–757 <!-- SOURCE pdf-1369-b025 -->
+- **过渡表** · transition tables, 210 
+- **过渡变量** · transition variables, 207 
+- **传递闭包** · transitive closure, 214–216 
+- **传递依赖** · transitive dependencies, 317n9, 356 <!-- SOURCE pdf-1369-b026 -->
+- **传递规则** · transitivity rule, 321 
+- **查询处理中的翻译** · translation, query processing and, 689–690 <!-- SOURCE pdf-1369-b027 -->
+- **转换表** · translation table, 568 
+- **树形服务器系统** · tree-like server systems, 977–978 
+- **树形拓扑** · tree-like topology, 977 
+- **树协议** · tree protocol, 846–848 
+- **树** · trees 
+    - B 树；见 B 树 · B (see B-trees) <!-- SOURCE pdf-1369-b028 -->
+    - B+ 树；见 B+ 树 · B+ (see B+-trees) 
+    - B-link 树 · B-link, 886 
+    - 决策树分类器 · decision-tree classifiers, 542 
+    - 目录信息树 · directory information, 1242, 1243 <!-- SOURCE pdf-1369-b029 --><!-- SOURCE pdf-1369-b030 -->
+    - 不相交子树 · disjoint subtrees, 847 
+    - 广义搜索树 · Generalized Search Tree, 670 
+    - k-d 树 · k-d, 673–674 
+    - k-d B 树 · k-d B, 674 
+    - 左深连接树 · left-deep join, 773 
+    - LSM 树 · LSM, 666–668, 1028, 1176–1182, 1215 <!-- SOURCE pdf-1369-b031 -->
+    - Merkle 树 · Merkle, 1143–1146, 1268, 1269 <!-- SOURCE pdf-1369-b032 -->
+    - Merkle-Patricia 树 · Merkle-Patricia, 1269, 1275 
+    - 多粒度 · multiple granularity and, 853–857 <!-- SOURCE pdf-1369-b033 -->
+    - 算子树 · operator, 724, 1040 
+    - 二次分裂启发式 · quadratic split heuristic and, 1189 <!-- SOURCE pdf-1369-b034 -->
+    - 四叉树 · quadtrees, 392, 674, 1186–1187 <!-- SOURCE pdf-1369-b035 -->
+    - R 树 · R, 663, 670, 674–676, 1187–1190 <!-- SOURCE pdf-1369-b036 -->
+- **树形拓扑** · tree topology, 977 
+- **三角不规则网（TIN）** · triangulated irregular network (TIN), 393 <!-- SOURCE pdf-1369-b037 -->
+- **三角剖分** · triangulation, 388, 393 
+- **触发器** · triggers 
+    - alter · alter, 210 <!-- SOURCE pdf-1369-b038 -->
+    - 定义 · defined, 206 
+    - disable · disable, 210 
+    - drop · drop, 210 
+    - 使用原因 · need for, 206–207 
+    - 非标准语法 · nonstandard syntax and, 212 
+    - 恢复 · recovery and, 212–213 
+    - SQL 中的触发器 · in SQL, 207–210 
+    - 过渡表 · transition tables and, 210 
+    - 不适合使用的情况 · when not to use, 210–213 
+- **trim** · trim, 82 
+- **三元组表示** · triple representation, 372–374 
+- **平凡函数依赖** · trivial functional dependencies, 311 <!-- SOURCE pdf-1369-b039 -->
+- **true 谓词** · true predicate, 76 
+- **真值** · true values, 96, 101 
+- **try-with-resources 结构** · try-with-resources construct, 187, 187n3 <!-- SOURCE pdf-1369-b040 -->
+- **滚动窗口** · tumbling window, 505 
+- **调优；见性能调优** · tuning. See performance tuning 
+- **调优向导** · tuning wizards, 1215 
+- **元组生成依赖** · tuple-generating dependencies, 337 <!-- SOURCE pdf-1369-b041 -->
+- **元组** · tuples 
+    - 聚合函数 · aggregate functions and, 91–96 <!-- SOURCE pdf-1370-b001 --><!-- SOURCE pdf-1370-b002 -->
+    - 笛卡尔积运算中的元组 · in Cartesian-product operation, 51, 52 <!-- SOURCE pdf-1370-b003 -->
+    - 定义 · defined, 39 
+    - 删除 · deletion and, 108–110, 613 
+    - 重复元组 · duplicate, 103 
+    - 主动生成 · eager generation of, 726, 727 
+    - 插入 · insertion and, 110–111 
+    - 连接运算；另见连接 · join operation for, 52–53 (see also joins) <!-- SOURCE pdf-1370-b004 -->
+    - 惰性生成 · lazy generation of, 727 
+    - 逻辑路由 · logical routing of, 506–507, 1071–1073 <!-- SOURCE pdf-1370-b005 -->
+    - 显示排序 · ordering display of, 83–84 
+    - 物理路由 · physical routing of, 1072–1073 <!-- SOURCE pdf-1370-b006 -->
+    - 流水线 · pipelining and, 691–692, 724–731 <!-- SOURCE pdf-1370-b007 -->
+    - 查询优化；见查询优化 · query optimization and (see query optimization) <!-- SOURCE pdf-1370-b008 -->
+    - 查询处理；见查询处理 · query processing and (see query processing) <!-- SOURCE pdf-1370-b009 -->
+    - 排名 · ranking and, 219–223 
+    - 重建成本 · reconstruction costs, 612–613 
+    - 关系代数 · relational algebra and, 747–757 <!-- SOURCE pdf-1370-b010 -->
+    - 关系模型中的元组 · in relational model, 39, 41, 43–46 <!-- SOURCE pdf-1370-b011 -->
+    - 选择运算 · select operation for, 49 
+    - 集合运算 · set operations and, 54–55, 85–89 <!-- SOURCE pdf-1370-b012 -->
+    - 流数据 · streaming data and, 501–503, 505–507, 1071–1073 <!-- SOURCE pdf-1370-b013 -->
+    - 时间戳 · timestamps and, 502, 503, 505 <!-- SOURCE pdf-1370-b014 -->
+    - 更新 · updates and, 111–114, 613 
+    - 视图 · views and, 137–143 
+    - 窗口 · windowing and, 223–226 
+- **元组变量** · tuple variables, 81 
+- **图灵完备语言** · Turing-complete languages, 1258, 1269, 1270 <!-- SOURCE pdf-1370-b015 -->
+- **双因素身份验证** · two-factor authentication, 441–442 <!-- SOURCE pdf-1370-b016 -->
+- **2NF（第二范式）** · 2NF (second normal form), 316n8, 341–342, 356 <!-- SOURCE pdf-1370-b017 -->
+- **两阶段提交（2PC）协议** · two-phase commit (2PC) protocol, 989, 1016, 1101–1107, 1161, 1276 <!-- SOURCE pdf-1370-b018 -->
+- **两阶段锁协议** · two-phase locking protocol, 841–844, 871–872, 1129–1131 <!-- SOURCE pdf-1370-b019 --><!-- SOURCE pdf-1370-b020 -->
+- **两层架构** · two-tier architecture, 23 
+- **类型继承** · type inheritance, 378–379 
+- **类型** · types 
+    - 二进制大对象 · blobs, 156, 193, 594, 652 <!-- SOURCE pdf-1370-b021 -->
+    - 字符大对象 · clobs, 156, 193, 594, 652 
+    - 复杂类型；见复杂数据类型 · complex (see complex data types) <!-- SOURCE pdf-1370-b022 -->
+    - 大对象类型 · large-object, 156, 158 
+    - 性能调优 · performance tuning and, 1226 
+    - 引用类型 · reference, 380–381 
+    - 用户定义类型 · user-defined, 158–160, 378 
+
+## U {#index-u}
+
+- **UML（统一建模语言）** · UML (Unified Modeling Language), 288–291 <!-- SOURCE pdf-1370-b023 --><!-- SOURCE pdf-1370-b024 -->
+- **一元运算** · unary operations, 48 
+- **撤销操作** · undo operation 
+    - 并发控制 · concurrency control and, 940–941 <!-- SOURCE pdf-1370-b025 --><!-- SOURCE pdf-1370-b026 -->
+    - 逻辑撤销 · logical, 936–941 
+    - 恢复系统 · recovery systems and, 915–919, 922–925 <!-- SOURCE pdf-1370-b027 -->
+    - 回滚 · rollback and, 916–919, 937–939 <!-- SOURCE pdf-1370-b028 -->
+- **撤销遍历** · undo pass, 944–946 
+- **撤销阶段** · undo phase, 923–925 
+- **统一建模语言（UML）** · Unified Modeling Language (UML), 288–291 <!-- SOURCE pdf-1370-b029 -->
+- **统一资源定位符（URL）** · uniform resource locators (URLs), 405–406 <!-- SOURCE pdf-1370-b030 -->
+- **union all** · union all, 86, 97, 217n8 
+- **集合并** · union of sets, 54, 750 
+- **并运算** · union operation, 53–54, 86–87, 228 <!-- SOURCE pdf-1370-b031 -->
+- **合并规则** · union rule, 321 
+- **unique 结构** · unique construct, 103, 147 
+- **唯一键值** · unique key values, 160–161 
+- **唯一角色假设** · unique-role assumption, 345 
+- **唯一化标识** · uniquifiers, 649–650 
+- **美国** · United States 
+    - 地址格式 · address format used in, 250n1 <!-- SOURCE pdf-1370-b032 -->
+    - 身份识别号码 · identification numbers in, 447 
+    - 主键 · primary keys in, 44–45 
+    - 隐私法律 · privacy laws in, 995 
+- **通用前端** · universal front end, 404 
+- **通用串行总线（USB）接口** · Universal Serial Bus (USB) slots, 560 <!-- SOURCE pdf-1370-b033 -->
+- **通用图灵机** · universal Turing machines, 16 
+- **大学数据库** · university databases <!-- SOURCE pdf-1370-b034 -->
+    - 抽象层次 · abstraction levels for, 11–12 <!-- SOURCE pdf-1370-b035 -->
+    - 应用设计 · application design and, 2–3, 5–7, 403–404, 431, 442–444 <!-- SOURCE pdf-1370-b036 -->
+    - 原子域 · atomic domains and, 343 
+    - 大数据 · Big Data and, 499–500 
+    - 区块链 · blockchain, 1277 
+    - 缓冲区替换策略 · buffer-replacement strategies and, 607–609 <!-- SOURCE pdf-1370-b037 -->
+    - 笛卡尔积 · Cartesian product and, 76–79 
+    - 模式合并 · combination of schemas and, 270–271 <!-- SOURCE pdf-1370-b038 -->
+    - 复杂属性 · complex attributes and, 249–252 <!-- SOURCE pdf-1370-b039 -->
+    - 并发控制 · concurrency control and, 879 
+    - 一致性约束 · consistency constraints for, 6, 13–15 <!-- SOURCE pdf-1370-b040 -->
+    - 分解 · decomposition and, 305–307, 310–312 <!-- SOURCE pdf-1370-b041 -->
+    - 删除请求 · deletion requests and, 109–110 <!-- SOURCE pdf-1370-b042 -->
+    - 设计问题 · design issues for, 346–347 
+    - 分布式大学数据库 · distributed, 988 
+    - 实体 · entities in, 243–246, 265–268, 281–283 <!-- SOURCE pdf-1370-b043 -->
+    - 实体—联系图 · entity-relationship diagram for, 263–264 <!-- SOURCE pdf-1370-b044 -->
+    - 完整模式 · full schema for, 1287–1288 
+    - 函数和过程 · functions and procedures for, 198–199 <!-- SOURCE pdf-1370-b045 -->
+    - 概化 · generalization and, 273–274 
+    - 散列函数 · hash functions and, 1190–1193 <!-- SOURCE pdf-1370-b046 -->
+    - 模型不完整性 · incompleteness of, 243–244 
+    - 索引 · indices and, 625–628, 664, 1017–1018 <!-- SOURCE pdf-1370-b047 -->
+    - 插入请求 · insertion requests and, 110–111 <!-- SOURCE pdf-1370-b048 -->
+    - 完整性约束 · integrity constraints for, 145–153 <!-- SOURCE pdf-1370-b049 -->
+    - 映射基数 · mapping cardinalities and, 253–256 <!-- SOURCE pdf-1370-b050 -->
+    - 多值依赖 · multivalued dependencies and, 336 <!-- SOURCE pdf-1370-b051 -->
+    - 查询优化 · query optimization and, 751–755, 775–778 <!-- SOURCE pdf-1370-b052 -->
+    - 查询处理 · query processing and, 690–691, 704, 723–724 <!-- SOURCE pdf-1370-b053 -->
+    - 递归查询 · recursive queries and, 213–214, 217–218 <!-- SOURCE pdf-1371-b001 --><!-- SOURCE pdf-1371-b002 -->
+    - 冗余 · redundancy in, 243, 261–264, 269–270 <!-- SOURCE pdf-1371-b003 -->
+    - 关系代数 · relational algebra for, 49–58 
+    - 关系模型 · relational model for, 9, 10, 37–47 <!-- SOURCE pdf-1371-b004 -->
+    - 关系模式 · relational schema for, 41–43, 303–305 <!-- SOURCE pdf-1371-b005 -->
+    - 联系集 · relationship sets and, 246–249, 268–269, 282–283 <!-- SOURCE pdf-1371-b006 -->
+    - 角色与授权 · roles and authorizations for, 167–169 <!-- SOURCE pdf-1371-b007 -->
+    - 示例数据 · sample data for, 1292–1298 
+    - 特化 · specialization and, 271–273 
+    - SQL 数据定义 · SQL data definition for, 69–71, 1288–1292 <!-- SOURCE pdf-1371-b008 -->
+    - SQL 查询 · SQL queries for, 16 
+    - 存储 · storage and, 589–591, 597–601 <!-- SOURCE pdf-1371-b009 -->
+    - 事务 · transactions and, 144, 826–827 <!-- SOURCE pdf-1371-b010 -->
+    - 触发器 · triggers and, 211–213 
+    - 三元组表示 · triple representation of, 373–374 <!-- SOURCE pdf-1371-b011 -->
+    - 唯一键值 · unique key values for, 160–161 
+    - 用户界面 · user interfaces for, 24 
+    - 视图 · views and, 141–143 
+- **加利福尼亚大学伯克利分校** · University of California, Berkeley, 26 <!-- SOURCE pdf-1371-b012 -->
+- **Unix** · Unix, 83, 914 
+- **未知值** · unknown values, 89–90, 96 
+- **未分区站点** · unpartitioned site, 1056 
+- **解除固定操作** · unpin operations, 605 
+- **可更新结果集** · updatable result sets, 193 
+- **任意位置更新复制** · update-anywhere replication, 1137 <!-- SOURCE pdf-1371-b013 -->
+- **更新热点** · update hot spots, 1225 
+- **更新** · updates 
+    - 授权 · authorization and, 14, 170, 171 <!-- SOURCE pdf-1371-b014 --><!-- SOURCE pdf-1371-b015 -->
+    - 批量更新 · batch, 1221 
+    - B+ 树更新 · on B+-trees, 641–649 
+    - 复杂度 · complexity of, 647–649 
+    - 数据库修改 · database modification and, 111–114 <!-- SOURCE pdf-1371-b016 -->
+    - 数据仓库 · data warehousing and, 523 
+    - 删除时间 · deletion time and, 641, 645–649 <!-- SOURCE pdf-1371-b017 -->
+    - EXEC SQL · EXEC SQL and, 197 <!-- SOURCE pdf-1371-b018 -->
+    - 散列 · hashing and, 624, 1197–1202 
+    - 不一致更新 · inconsistent, 1140–1142 
+    - 索引 · indices and, 630–632 
+    - 插入时间 · insertion time and, 641–645, 647, 649 <!-- SOURCE pdf-1371-b019 -->
+    - 延迟传播 · lazy propagation of, 1122, 1136 <!-- SOURCE pdf-1371-b020 -->
+    - 日志记录 · log records and, 913–914, 917–918 <!-- SOURCE pdf-1371-b021 -->
+    - 丢失更新 · lost, 874 
+    - LSM 树 · LSM trees and, 1178–1179 
+    - 性能调优 · performance tuning and, 1221–1223, 1225–1227 <!-- SOURCE pdf-1371-b022 -->
+    - 权限 · privileges and, 166–167 
+    - 查询优化 · query optimization and, 784–785 <!-- SOURCE pdf-1371-b023 -->
+    - 更新协调 · reconciliation of, 1142–1143 
+    - 复制 · replication and, 1015–1016 
+    - 向数据库发送 SQL 语句 · shipping SQL statements to database and, 187 <!-- SOURCE pdf-1371-b024 -->
+    - 快照隔离 · snapshot isolation and, 873–879 <!-- SOURCE pdf-1371-b025 -->
+    - 触发器 · triggers and, 208, 212 
+    - 元组 · tuples and, 111–114, 613 
+    - 视图更新 · of views, 140–143 
+- **更新事务** · update transactions, 871 
+- **锁升级** · upgrade, 843 
+- **URL（统一资源定位符）** · URLs (uniform resource locators), 405–406 <!-- SOURCE pdf-1371-b026 -->
+- **美国国家标准与技术研究院** · U.S. National Institute for Standards and Technology, 288 <!-- SOURCE pdf-1371-b027 -->
+- **USB（通用串行总线）接口** · USB (Universal Serial Bus) slots, 560 <!-- SOURCE pdf-1371-b028 -->
+- **用户定义类型** · user-defined types, 158–160, 378 
+- **用户界面层** · user-interface layer, 429 
+- **用户界面** · user interfaces 
+    - 应用架构 · application architectures and, 429–434 <!-- SOURCE pdf-1371-b029 --><!-- SOURCE pdf-1371-b030 -->
+    - 应用程序 · application programs and, 403–405 <!-- SOURCE pdf-1371-b031 -->
+    - 后端组件 · back-end component of, 404 
+    - 业务逻辑层 · business-logic layer and, 430, 431 <!-- SOURCE pdf-1371-b032 -->
+    - 客户端—服务器架构 · client-server architecture and, 404 <!-- SOURCE pdf-1371-b033 -->
+    - 客户端脚本 · client-side scripting and, 421–429 <!-- SOURCE pdf-1371-b034 -->
+    - 通用网关接口标准 · common gateway interface standard and, 409 <!-- SOURCE pdf-1371-b035 --><!-- SOURCE pdf-1371-b036 -->
+    - cookie · cookies and, 410–415, 411n2, 439–440 <!-- SOURCE pdf-1371-b037 -->
+    - 增删改查（CRUD） · CRUD, 419 
+    - 数据访问层 · data access layer and, 430–434 <!-- SOURCE pdf-1371-b038 -->
+    - 离线操作 · disconnected operation and, 427–428 <!-- SOURCE pdf-1371-b039 -->
+    - 前端组件 · front-end component of, 404 
+    - HTTP；见超文本传输协议 · HTTP (see HyperText Transfer Protocol) <!-- SOURCE pdf-1371-b040 -->
+    - 移动应用平台 · mobile application platforms and, 428–429 <!-- SOURCE pdf-1371-b041 -->
+    - 面向初级用户的界面 · for naïve users, 24 
+    - 表示层 · presentation layer and, 429 
+    - 响应式界面 · responsive, 423 
+    - 安全 · security and, 437–446 
+    - 面向熟练用户的界面 · for sophisticated users, 24 
+    - 存储 · storage and, 562–563 
+    - Web 服务；见万维网 · Web services (see World Wide Web) <!-- SOURCE pdf-1371-b042 -->
+    - Web 服务 · web services and, 426–429 
+- **数据库设计中的用户需求** · user requirements in database design, 17–18, 241–242, 274 <!-- SOURCE pdf-1371-b043 -->
+- **资源利用率** · utilization of resources, 808 
+
+## V {#index-v}
+
+- **验证** · validation <!-- SOURCE pdf-1371-b044 -->
+    - 并发控制 · concurrency control and, 866–869, 882 <!-- SOURCE pdf-1371-b045 --><!-- SOURCE pdf-1371-b046 -->
+    - 分布式验证 · distributed, 1119–1120 
+    - 先提交者获胜 · first committer wins and, 874 
+    - 先更新者获胜 · first updater wins and, 874–875 <!-- SOURCE pdf-1371-b047 -->
+    - 阶段 · phases of, 866 
+    - 恢复系统 · recovery systems and, 916 
+    - 快照隔离 · snapshot isolation and, 874–875 <!-- SOURCE pdf-1371-b048 -->
+    - 验证测试 · test for, 868 
+    - 视图可串行化性 · view serializability and, 867–868 <!-- SOURCE pdf-1371-b049 -->
+- **验证阶段** · validation phase, 866 
+- **有效区间** · valid interval, 870 
+- **有效时间** · valid time, 157, 347–350, 347n10 <!-- SOURCE pdf-1371-b050 -->
+- **实体集属性的值** · value for entity set attributes, 245 
+- **属性值集** · value set of attributes, 249 
+- **varchar 类型** · varchar, 67–68, 70 
+- **变长记录** · variable-length records, 592–594 
+- **数据多样性** · variety of data, 468 <!-- SOURCE pdf-1372-b001 -->
+- **VBScript** · VBScript, 417 
+- **矢量数据** · vector data, 392–393 
+- **向量处理** · vector processing, 612 
+- **Vectorwise** · Vectorwise, 615 
+- **数据速度** · velocity of data, 468 
+- **内容验证** · verification of contents, 1145 
+- **版本编号** · version numbering, 1141 
+- **versions period for** · versions period for, 157 
+- **版本向量方案** · version-vector scheme, 1141–1142 <!-- SOURCE pdf-1372-b002 -->
+- **Vertica** · Vertica, 615 
+- **垂直分区** · vertical partitioning, 1004 
+- **视图定义** · view definition, 66 
+- **视图等价** · view equivalence, 818, 818n4 
+- **视图抽象层** · view level of abstraction, 10–12 
+- **视图维护** · view maintenance, 140, 779–782, 1138–1140, 1215–1216 <!-- SOURCE pdf-1372-b003 -->
+- **视图** · views 
+    - 视图授权 · authorization on, 169–170 <!-- SOURCE pdf-1372-b004 -->
+    - with check option · with check option, 143 
+    - create view · create view, 138–143, 162, 169 <!-- SOURCE pdf-1372-b005 -->
+    - 延迟维护 · deferred maintenance and, 779, 1215–1216 <!-- SOURCE pdf-1372-b006 -->
+    - 定义 · defined, 137–138 
+    - 删除 · deletion and, 142 
+    - 即时维护 · immediate maintenance and, 779, 1215–1216 <!-- SOURCE pdf-1372-b007 -->
+    - 插入 · insertion and, 141–143 
+    - 物化视图；见物化视图 · materialized (see materialized views) <!-- SOURCE pdf-1372-b008 -->
+    - 性能调优 · performance tuning and, 1215–1216 <!-- SOURCE pdf-1372-b009 -->
+    - SQL 查询 · SQL queries and, 138–139 
+    - 更新 · update of, 140–143 
+- **视图可串行化性** · view serializability, 818–819, 867–868 <!-- SOURCE pdf-1372-b010 -->
+- **虚拟机（VM）** · virtual machines (VMs), 970, 991–994 <!-- SOURCE pdf-1372-b011 -->
+- **虚拟节点** · virtual nodes, 1009–1010 
+- **虚拟专用数据库（VPD）** · Virtual Private Database (VPD), 173, 444–445 <!-- SOURCE pdf-1372-b012 -->
+- **虚拟处理器方法** · virtual processor approach, 1010n3 <!-- SOURCE pdf-1372-b013 -->
+- **Visual Basic** · Visual Basic, 184, 206 
+- **可视化工具** · visualization tools, 538–540 
+- **VM（虚拟机）** · VMs (virtual machines), 970, 991–994 <!-- SOURCE pdf-1372-b014 -->
+- **易失性存储** · volatile storage, 560, 562, 804, 908 <!-- SOURCE pdf-1372-b015 --><!-- SOURCE pdf-1372-b016 -->
+- **数据量** · volume of data, 468 
+- **VPD（虚拟专用数据库）** · VPD (Virtual Private Database), 173, 444–445 <!-- SOURCE pdf-1372-b017 -->
+
+## W {#index-w}
+
+- **等待—死亡方案** · wait-die scheme, 850, 1112 <!-- SOURCE pdf-1372-b018 -->
+- **等待图** · wait-for graphs, 851–852, 1113–1114 <!-- SOURCE pdf-1372-b019 -->
+- **WAL（先写日志）** · WAL (write-ahead logging), 926–929, 934 <!-- SOURCE pdf-1372-b020 -->
+- **WAN（广域网）** · WANs (wide-area networks), 989 
+- **弱实体集** · weak entity sets, 259–260, 267–268 <!-- SOURCE pdf-1372-b021 -->
+- **磨损均衡** · wear leveling, 568 
+- **Web 应用框架** · web application frameworks, 418–419 <!-- SOURCE pdf-1372-b022 -->
+- **Web 服务中的数据库应用** · web-based services, database applications for, 3 <!-- SOURCE pdf-1372-b023 -->
+- **网络爬虫** · web crawlers, 383 
+- **Weblogic 应用服务器** · Weblogic Application Server, 416 
+- **WebObjects** · WebObjects, 419 
+- **Web 服务器** · web servers, 408–411 
+- **Web 服务** · web services, 423–429 
+    - 定义 · defined, 426 <!-- SOURCE pdf-1372-b024 -->
+    - 离线操作 · disconnected operation and, 427–428 <!-- SOURCE pdf-1372-b025 -->
+    - 接口调用 · interfacing with, 423–426 
+    - 移动应用平台 · mobile application platforms, 428–429 <!-- SOURCE pdf-1372-b026 -->
+- **Web 会话** · web sessions, 408–411 
+- **WebSphere 应用服务器** · WebSphere Application Server, 416 <!-- SOURCE pdf-1372-b027 -->
+- **when 子句** · when clause, 212 
+- **when 语句** · when statement, 208 
+- **where 子句** · where clause 
+    - 聚合函数 · aggregate functions and, 91–96 <!-- SOURCE pdf-1372-b028 --><!-- SOURCE pdf-1372-b029 -->
+    - 基本 SQL 查询 · basic SQL queries and, 71–79 
+    - between 比较 · between comparison, 84 
+    - 多关系查询 · on multiple relations, 74–79 
+    - 多重集关系代数 · in multiset relational algebra, 97 <!-- SOURCE pdf-1372-b030 -->
+    - not between 比较 · not between comparison, 84 
+    - 空值 · null values and, 89–90 
+    - 谓词 · predicates, 84–85 
+    - 查询优化 · query optimization and, 774–777 <!-- SOURCE pdf-1372-b031 -->
+    - 排名 · ranking and, 222 
+    - 更名运算 · rename operation and, 79, 81–82 <!-- SOURCE pdf-1372-b032 -->
+    - 安全 · security and, 445 <!-- SOURCE pdf-1372-b033 -->
+    - 集合运算 · set operations and, 85–89 
+    - 单关系查询 · on single relation, 71–74 
+    - 字符串操作 · string operations and, 82–83 
+    - 事务 · transactions and, 824, 826–827 <!-- SOURCE pdf-1372-b034 -->
+- **while 循环** · while loop, 196 
+- **while 语句** · while statements, 201 
+- **广域网（WAN）** · wide-area networks (WANs), 989 
+- **宽列数据表示** · wide column data representation, 366 <!-- SOURCE pdf-1372-b035 -->
+- **宽列存储** · wide-column stores, 1023 
+- **窗口与开窗** · windows and windowing, 223–226, 502–506 <!-- SOURCE pdf-1372-b036 -->
+- **WiredTiger** · WiredTiger, 1028 
+- **线框模型** · wireframe models, 390 
+- **with check option** · with check option, 143 
+- **with 子句** · with clause, 105–106, 217 
+- **with data 子句** · with data clause, 162 
+- **with grant option** · with grant option, 170–171 
+- **with recursive 子句** · with recursive clause, 217 
+- **with timezone 说明** · with timezone specification, 154 
+- **见证数据** · witness data, 1258 
+- **词频统计程序** · word count program, 483–486, 484n2, 490–492 <!-- SOURCE pdf-1372-b037 -->
+- **工作节点** · workers, 1051 
+- **工作流** · workflow 
+    - 业务逻辑层 · business-logic layer and, 431 <!-- SOURCE pdf-1372-b038 -->
+    - 数据库设计 · database design and, 291–292 
+    - 分布式事务处理 · distributed transaction processing and, 1110 <!-- SOURCE pdf-1372-b039 -->
+    - 工作流管理系统 · management systems for, 990 
+- **工作负载** · workload, 783, 1215, 1217 
+- **工作负载压缩** · workload compression, 1217 
+- **工作窃取** · work stealing, 1048, 1062 
+- **万维网** · World Wide Web 
+    - 应用设计 · application design and, 405–411 <!-- SOURCE pdf-1372-b040 --><!-- SOURCE pdf-1372-b041 -->
+    - cookie · cookies and, 410–415, 411n2, 439–440 <!-- SOURCE pdf-1372-b042 -->
+    - 加密 · encryption and, 447–453 
+    - 发展 · growth of, 467 
+    - HTML；见超文本标记语言 · HTML and (see HyperText Markup Language) <!-- SOURCE pdf-1372-b043 -->
+    - HTTP；见超文本传输协议 · HTTP and (see HyperText Transfer Protocol) <!-- SOURCE pdf-1372-b044 -->
+    - 对数据库系统的影响 · impact on database systems, 27 <!-- SOURCE pdf-1372-b045 -->
+    - 安全 · security and, 437–446 
+    - 服务器与会话 · servers and sessions, 408–411 
+    - URL · URLs and, 405–406 <!-- SOURCE pdf-1373-b001 -->
+- **一次写入、多次读取（WORM）磁盘** · WORM (write once, read-many) disks, 561, 1022 <!-- SOURCE pdf-1373-b002 -->
+- **伤害—等待方案** · wound-wait scheme, 850 
+- **包装器** · wrappers, 1077, 1236 
+- **先写日志（WAL）** · write-ahead logging (WAL), 926–929, 934 <!-- SOURCE pdf-1373-b003 -->
+- **写放大** · write amplification, 1180 
+- **一次写入、多次读取（WORM）磁盘** · write once, read-many (WORM) disks, 561, 1022 <!-- SOURCE pdf-1373-b004 -->
+- **写操作** · write operations, 826 
+- **写优化索引结构** · write-optimized index structures, 665–670 <!-- SOURCE pdf-1373-b005 -->
+- **写入阶段** · write phase, 866 
+- **写法定数** · write quorum, 1124 <!-- SOURCE pdf-1373-b006 -->
+- **写偏斜** · write skew, 876–877 
+- **写写争用** · write-write contention, 1225 
+- **写时间戳（W-timestamp）** · W-timestamp, 862, 865, 870 
+
+## X {#index-x}
+
+- **X.500 目录访问协议** · X.500 directory access protocol, 1241 <!-- SOURCE pdf-1373-b007 --><!-- SOURCE pdf-1373-b008 -->
+- **XML（可扩展标记语言）** · XML (Extensible Markup Language) <!-- SOURCE pdf-1373-b009 -->
+    - 出现 · emergence of, 27 
+    - 灵活性 · flexibility of, 367–368 
+    - 作为半结构化数据模型 · as semi-structured data model, 8, 27 <!-- SOURCE pdf-1373-b010 -->
+    - SQL 支持 · SQL in support of, 372 
+    - 标签 · tags and, 370–372 
+    - 数据传输 · for transferring data, 423 <!-- SOURCE pdf-1373-b011 -->
+- **X/Open XA 标准** · X/Open XA standards, 1239 
+- **异或运算** · XOR operation, 448 
+- **XPath** · XPath, 372 
+- **XQuery** · XQuery, 372 
+- **XSRF（跨站请求伪造）** · XSRF (cross-site request forgery), 439–440 <!-- SOURCE pdf-1373-b012 -->
+- **XSS（跨站脚本）** · XSS (cross-site scripting), 439–440 <!-- SOURCE pdf-1373-b013 -->
+
+## Y {#index-y}
+
+- **Yahoo Message Bus 服务** · Yahoo Message Bus service, 1137–1138 <!-- SOURCE pdf-1373-b014 --><!-- SOURCE pdf-1373-b015 -->
+
+## Z {#index-z}
+
+- **Zab 协议** · Zab protocol, 1152 <!-- SOURCE pdf-1373-b016 -->
+- **ZooKeeper** · ZooKeeper, 1150, 1152 

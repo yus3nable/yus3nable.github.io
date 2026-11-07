@@ -148,5 +148,27 @@
     "source_keys": [
       "isbn:978-1-7321022-0-0:edition:1.01"
     ]
+  },
+  {
+    "id": "database-system-concepts-7e",
+    "title": "数据库系统概念",
+    "subtitle": "Database System Concepts · Seventh Edition",
+    "kind": "书籍",
+    "detail": "Silberschatz · Korth · Sudarshan · 第7版 · 26章",
+    "description": "从关系模型与 SQL 出发，系统学习数据库设计、存储索引、查询优化、事务、分布式数据与区块链。",
+    "topics": [
+      "数据库",
+      "SQL",
+      "事务",
+      "分布式系统",
+      "索引"
+    ],
+    "url": "https://yus3nable.github.io/read/database-system-concepts-7e/",
+    "searchPath": "search.json",
+    "updated": "2026-11-07",
+    "cover": "database.svg",
+    "source_keys": [
+      "isbn:978-0-07-802215-9:edition:7"
+    ]
   }
 ]

@@ -36,6 +36,7 @@ def cover_svg(item):
         'ostep-zh-markdown': ('#e8e2d5', '#474b3e', ['操作系统', '导论'], 'OSTEP', 'THREE EASY PIECES'),
         'programmer-self-cultivation-reading': ('#343b34', '#f0eadc', ['程序员的', '自我修养'], 'C / C++', 'LINKING & LOADING'),
         'a-philosophy-of-software-design': ('#c7c5b5', '#3f493e', ['软件设计', '的哲学'], 'JOHN OUSTERHOUT', 'A PHILOSOPHY OF DESIGN'),
+        'database-system-concepts-7e': ('#d5c8b7', '#4e4439', ['数据库', '系统概念'], 'SEVENTH EDITION', 'DATABASE SYSTEM CONCEPTS'),
         'bv1a5sf6neqv': ('#d9d5c5', '#454a3e', ['数据治理', 'AI 落地'], '94 MIN', 'DATA & BUSINESS'),
         'bv1lsht6feaq': ('#e1d0bd', '#534638', ['Lauren Tan', 'AI 工作流'], '64 MIN', 'AGENTS & WORKFLOWS'),
     }

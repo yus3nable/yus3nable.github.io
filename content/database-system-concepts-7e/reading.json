@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "id": "database-system-concepts-7e",
+  "title": "数据库系统概念（第7版）",
+  "description": "从关系模型与 SQL 出发，系统学习数据库设计、存储与索引、查询优化、事务、并行与分布式数据库，以及区块链等高级专题。",
+  "kind": "书籍",
+  "format": "book",
+  "language": "en",
+  "source": {
+    "type": "pdf",
+    "title": "Database System Concepts",
+    "authors": [
+      "Abraham Silberschatz",
+      "Henry F. Korth",
+      "S. Sudarshan"
+    ],
+    "edition": "Seventh Edition, 2020",
+    "isbn": "978-0-07-802215-9",
+    "pdf_page_count": 1373
+  },
+  "pages": [
+    {
+      "id": "cover",
+      "unit_id": "cover",
+      "title": "数据库系统概念",
+      "markdown": "content/cover.md"
+    },
+    {
+      "id": "title-page",
+      "unit_id": "title-page",
+      "title": "扉页",
+      "markdown": "content/title-page.md"
+    },
+    {
+      "id": "copyright-page",
+      "unit_id": "copyright-page",
+      "title": "版权页",
+      "markdown": "content/copyright-page.md"
+    },
+    {
+      "id": "dedication",
+      "unit_id": "dedication",
+      "title": "献词",
+      "markdown": "content/dedication.md"
+    },
+    {
+      "id": "about-the-authors",
+      "unit_id": "about-the-authors",
+      "title": "作者简介",
+      "markdown": "content/about-the-authors.md"
+    },
+    {
+      "id": "contents",
+      "unit_id": "contents",
+      "title": "目录",
+      "markdown": "content/contents.md"
+    },
+    {
+      "id": "preface",
+      "unit_id": "preface",
+      "title": "前言",
+      "markdown": "content/preface.md"
+    },
+    {
+      "id": "acknowledgments",
+      "unit_id": "acknowledgments",
+      "title": "教学资源、联系作者与致谢",
+      "markdown": "content/acknowledgments.md"
+    },
+    {
+      "id": "ch01",
+      "unit_id": "ch01",
+      "title": "第1章 引言",
+      "markdown": "content/ch01.md"
+    },
+    {
+      "id": "part-one-relational-languages",
+      "unit_id": "part-one-relational-languages",
+      "title": "第一部分 关系语言",
+      "markdown": "content/part-one-relational-languages.md"
+    },
+    {
+      "id": "ch02",
+      "unit_id": "ch02",
+      "title": "第2章 关系模型导论",
+      "markdown": "content/ch02.md"
+    },
+    {
+      "id": "ch03",
+      "unit_id": "ch03",
+      "title": "第3章 SQL导论",
+      "markdown": "content/ch03.md"
+    },
+    {
+      "id": "ch04",
+      "unit_id": "ch04",
+      "title": "第4章 中级 SQL",
+      "markdown": "content/ch04.md"
+    },
+    {
+      "id": "ch05",
+      "unit_id": "ch05",
+      "title": "第5章 高级 SQL",
+      "markdown": "content/ch05.md"
+    },
+    {
+      "id": "part-two-database-design",
+      "unit_id": "part-two-database-design",
+      "title": "第二部分 数据库设计",
+      "markdown": "content/part-two-database-design.md"
+    },
+    {
+      "id": "ch06",
+      "unit_id": "ch06",
+      "title": "第6章 使用 E-R 模型设计数据库",
+      "markdown": "content/ch06.md"
+    },
+    {
+      "id": "ch07",
+      "unit_id": "ch07",
+      "title": "第7章 关系数据库设计",
+      "markdown": "content/ch07.md"
+    },
+    {
+      "id": "part-three-application-design-and-development",
+      "unit_id": "part-three-application-design-and-development",
+      "title": "第三部分 应用设计与开发",
+      "markdown": "content/part-three-application-design-and-development.md"
+    },
+    {
+      "id": "ch08",
+      "unit_id": "ch08",
+      "title": "第 8 章 复杂数据类型",
+      "markdown": "content/ch08.md"
+    },
+    {
+      "id": "ch09",
+      "unit_id": "ch09",
+      "title": "第9章 应用开发",
+      "markdown": "content/ch09.md"
+    },
+    {
+      "id": "part-four-big-data-analytics",
+      "unit_id": "part-four-big-data-analytics",
+      "title": "第四部分 大数据分析",
+      "markdown": "content/part-four-big-data-analytics.md"
+    },
+    {
+      "id": "ch10",
+      "unit_id": "ch10",
+      "title": "第10章 大数据",
+      "markdown": "content/ch10.md"
+    },
+    {
+      "id": "ch11",
+      "unit_id": "ch11",
+      "title": "第11章 数据分析",
+      "markdown": "content/ch11.md"
+    },
+    {
+      "id": "part-five-storage-management-and-indexing",
+      "unit_id": "part-five-storage-management-and-indexing",
+      "title": "第五部分 存储管理与索引",
+      "markdown": "content/part-five-storage-management-and-indexing.md"
+    },
+    {
+      "id": "ch12",
+      "unit_id": "ch12",
+      "title": "第12章 物理存储系统",
+      "markdown": "content/ch12.md"
+    },
+    {
+      "id": "ch13",
+      "unit_id": "ch13",
+      "title": "第13章 数据存储结构",
+      "markdown": "content/ch13.md"
+    },
+    {
+      "id": "ch14",
+      "unit_id": "ch14",
+      "title": "第14章 索引",
+      "markdown": "content/ch14.md"
+    },
+    {
+      "id": "part-six-query-processing-and-optimization",
+      "unit_id": "part-six-query-processing-and-optimization",
+      "title": "第六部分 查询处理与优化",
+      "markdown": "content/part-six-query-processing-and-optimization.md"
+    },
+    {
+      "id": "ch15",
+      "unit_id": "ch15",
+      "title": "第15章 查询处理",
+      "markdown": "content/ch15.md"
+    },
+    {
+      "id": "ch16",
+      "unit_id": "ch16",
+      "title": "第16章 查询优化",
+      "markdown": "content/ch16.md"
+    },
+    {
+      "id": "part-seven-transaction-management",
+      "unit_id": "part-seven-transaction-management",
+      "title": "第七部分 事务管理",
+      "markdown": "content/part-seven-transaction-management.md"
+    },
+    {
+      "id": "ch17",
+      "unit_id": "ch17",
+      "title": "第17章 事务",
+      "markdown": "content/ch17.md"
+    },
+    {
+      "id": "ch18",
+      "unit_id": "ch18",
+      "title": "第 18 章 并发控制",
+      "markdown": "content/ch18.md"
+    },
+    {
+      "id": "ch19",
+      "unit_id": "ch19",
+      "title": "第19章 恢复系统",
+      "markdown": "content/ch19.md"
+    },
+    {
+      "id": "part-eight-parallel-and-distributed-databases",
+      "unit_id": "part-eight-parallel-and-distributed-databases",
+      "title": "第八部分 并行与分布式数据库",
+      "markdown": "content/part-eight-parallel-and-distributed-databases.md"
+    },
+    {
+      "id": "ch20",
+      "unit_id": "ch20",
+      "title": "第20章 数据库系统体系结构",
+      "markdown": "content/ch20.md"
+    },
+    {
+      "id": "ch21",
+      "unit_id": "ch21",
+      "title": "第21章 并行与分布式存储",
+      "markdown": "content/ch21.md"
+    },
+    {
+      "id": "ch22",
+      "unit_id": "ch22",
+      "title": "第22章 并行与分布式查询处理",
+      "markdown": "content/ch22.md"
+    },
+    {
+      "id": "ch23",
+      "unit_id": "ch23",
+      "title": "第 23 章 并行与分布式事务处理",
+      "markdown": "content/ch23.md"
+    },
+    {
+      "id": "part-nine-advanced-topics",
+      "unit_id": "part-nine-advanced-topics",
+      "title": "第九部分 高级专题",
+      "markdown": "content/part-nine-advanced-topics.md"
+    },
+    {
+      "id": "ch24",
+      "unit_id": "ch24",
+      "title": "第 24 章 高级索引技术",
+      "markdown": "content/ch24.md"
+    },
+    {
+      "id": "ch25",
+      "unit_id": "ch25",
+      "title": "第 25 章 高级应用开发",
+      "markdown": "content/ch25.md"
+    },
+    {
+      "id": "ch26",
+      "unit_id": "ch26",
+      "title": "第 26 章 区块链数据库",
+      "markdown": "content/ch26.md"
+    },
+    {
+      "id": "part-ten-appendix-a",
+      "unit_id": "part-ten-appendix-a",
+      "title": "第十部分 附录 A",
+      "markdown": "content/part-ten-appendix-a.md"
+    },
+    {
+      "id": "appendix-a-detailed-university-schema",
+      "unit_id": "appendix-a-detailed-university-schema",
+      "title": "附录 A 大学数据库的完整模式",
+      "markdown": "content/appendix-a-detailed-university-schema.md"
+    },
+    {
+      "id": "index",
+      "unit_id": "index",
+      "title": "索引",
+      "markdown": "content/index.md"
+    }
+  ]
+}

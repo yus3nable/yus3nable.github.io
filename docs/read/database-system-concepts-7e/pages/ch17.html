@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>第17章 事务 · 阅读室</title>
+  <link rel="canonical" href="https://yus3nable.github.io/read/database-system-concepts-7e/pages/ch17.html">
+  <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#faf9f5">
+  <script src="../../../assets/theme.js?v=1793896190985616540"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1793896190985616540">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1793896190985616540">
+  <script defer src="../../../assets/reader.js?v=1793896190985616540"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="../../../">yus3nable · 阅读室</a>
+    <div class="reading-controls"><div class="tools">
+      <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
+      <div class="font-menu" id="font-menu" hidden>
+        <button data-font="-1">缩小</button>
+        <button data-font="reset">默认</button>
+        <button data-font="1">放大</button>
+      </div>
+    </div><button class="theme-toggle" type="button" aria-label="切换到夜间模式" aria-pressed="false" title="切换到夜间模式"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5a8.8 8.8 0 1 0 9.9 9.9Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <input type="search" class="search" aria-label="搜索正文" placeholder="搜索正文" data-index="../search.json?v=1794019171268901745" data-prefix="../">
+        <ul class="search-results" aria-live="polite"></ul>
+        <details class="outline" open>
+          <summary>目录</summary>
+          <details class="course-outline"><summary>全部章节</summary><ol><li><a href="../index.html">数据库系统概念</a></li><li><a href="title-page.html">扉页</a></li><li><a href="copyright-page.html">版权页</a></li><li><a href="dedication.html">献词</a></li><li><a href="about-the-authors.html">作者简介</a></li><li><a href="contents.html">目录</a></li><li><a href="preface.html">前言</a></li><li><a href="acknowledgments.html">教学资源、联系作者与致谢</a></li><li><a href="ch01.html">第1章 引言</a></li><li><a href="part-one-relational-languages.html">第一部分 关系语言</a></li><li><a href="ch02.html">第2章 关系模型导论</a></li><li><a href="ch03.html">第3章 SQL导论</a></li><li><a href="ch04.html">第4章 中级 SQL</a></li><li><a href="ch05.html">第5章 高级 SQL</a></li><li><a href="part-two-database-design.html">第二部分 数据库设计</a></li><li><a href="ch06.html">第6章 使用 E-R 模型设计数据库</a></li><li><a href="ch07.html">第7章 关系数据库设计</a></li><li><a href="part-three-application-design-and-development.html">第三部分 应用设计与开发</a></li><li><a href="ch08.html">第 8 章 复杂数据类型</a></li><li><a href="ch09.html">第9章 应用开发</a></li><li><a href="part-four-big-data-analytics.html">第四部分 大数据分析</a></li><li><a href="ch10.html">第10章 大数据</a></li><li><a href="ch11.html">第11章 数据分析</a></li><li><a href="part-five-storage-management-and-indexing.html">第五部分 存储管理与索引</a></li><li><a href="ch12.html">第12章 物理存储系统</a></li><li><a href="ch13.html">第13章 数据存储结构</a></li><li><a href="ch14.html">第14章 索引</a></li><li><a href="part-six-query-processing-and-optimization.html">第六部分 查询处理与优化</a></li><li><a href="ch15.html">第15章 查询处理</a></li><li><a href="ch16.html">第16章 查询优化</a></li><li><a href="part-seven-transaction-management.html">第七部分 事务管理</a></li><li><a href="ch17.html" aria-current="page">第17章 事务</a></li><li><a href="ch18.html">第 18 章 并发控制</a></li><li><a href="ch19.html">第19章 恢复系统</a></li><li><a href="part-eight-parallel-and-distributed-databases.html">第八部分 并行与分布式数据库</a></li><li><a href="ch20.html">第20章 数据库系统体系结构</a></li><li><a href="ch21.html">第21章 并行与分布式存储</a></li><li><a href="ch22.html">第22章 并行与分布式查询处理</a></li><li><a href="ch23.html">第 23 章 并行与分布式事务处理</a></li><li><a href="part-nine-advanced-topics.html">第九部分 高级专题</a></li><li><a href="ch24.html">第 24 章 高级索引技术</a></li><li><a href="ch25.html">第 25 章 高级应用开发</a></li><li><a href="ch26.html">第 26 章 区块链数据库</a></li><li><a href="part-ten-appendix-a.html">第十部分 附录 A</a></li><li><a href="appendix-a-detailed-university-schema.html">附录 A 大学数据库的完整模式</a></li><li><a href="index.html">索引</a></li></ol></details><div class="toc">
+<ul>
+<li><a href="#171">17.1 事务的概念</a></li>
+<li><a href="#172">17.2 一个简单的事务模型</a></li>
+<li><a href="#173">17.3 存储结构</a></li>
+<li><a href="#174">17.4 事务的原子性与持久性</a></li>
+<li><a href="#175">17.5 事务隔离</a><ul>
+<li><a href="#171_1">注17.1 并发的发展趋势</a></li>
+</ul>
+</li>
+<li><a href="#176">17.6 可串行化性</a></li>
+<li><a href="#177">17.7 事务隔离与原子性</a><ul>
+<li><a href="#1771">17.7.1 可恢复调度</a></li>
+<li><a href="#1772">17.7.2 无级联调度</a></li>
+</ul>
+</li>
+<li><a href="#178">17.8 事务隔离级别</a></li>
+<li><a href="#179">17.9 隔离级别的实现</a><ul>
+<li><a href="#1791">17.9.1 加锁</a></li>
+<li><a href="#172_1">注17.2 现实中的可串行化性</a></li>
+<li><a href="#1792">17.9.2 时间戳</a></li>
+<li><a href="#1793">17.9.3 多版本与快照隔离</a></li>
+</ul>
+</li>
+<li><a href="#1710-sql">17.10 以 SQL 语句表达事务</a></li>
+<li><a href="#1711">17.11 小结</a></li>
+<li><a href="#_1">复习术语</a></li>
+<li><a href="#_2">练习题</a></li>
+<li><a href="#_3">习题</a></li>
+<li><a href="#_4">延伸阅读</a></li>
+<li><a href="#_5">参考文献</a></li>
+<li><a href="#_6">图片来源</a></li>
+</ul>
+</div>
+
+        </details>
+      </nav>
+    </aside>
+    <main>
+      <p class="meta">书籍</p>
+      <article class="prose" data-material-id="database-system-concepts-7e" data-page-id="ch17"><!-- SOURCE pdf-0828-b004 -->
+<!-- SOURCE pdf-0828-b005 -->
+<h1 id="chapter-17">第17章 事务</h1>
+<p><img alt="帆船" src="../assets/ch17-opening.png" /></p>
+<!-- SOURCE pdf-0828-b006 -->
+<p>从数据库用户的角度看，对数据库执行的一组操作往往构成一个整体。例如，把钱从支票账户转入储蓄账户，对客户而言是一次操作，数据库系统内部却需要执行多个步骤。这些步骤必须全部完成；一旦失败，就必须全部不发生。支票账户已经扣款、储蓄账户却没有入账，是不可接受的。</p>
+<!-- SOURCE pdf-0828-b007 -->
+<p>构成单个逻辑工作单元的一组操作，称为<strong>事务</strong>。即使发生故障，数据库系统也必须保证事务正确执行：要么整个事务都执行，要么完全不执行。系统还必须管理多个事务的并发执行，避免产生不一致。以转账为例，另一个计算客户总余额的事务，可能读到扣款前的支票账户余额，却读到入账后的储蓄账户余额，结果就会算错。</p>
+<!-- SOURCE pdf-0828-b008 -->
+<p>本章介绍事务处理的基本概念。并发事务处理和故障恢复的细节，分别见第 18 章与第 19 章。</p>
+<!-- SOURCE pdf-0828-b009 -->
+<h2 id="171">17.1 事务的概念</h2>
+<!-- SOURCE pdf-0828-b010 -->
+<p>事务是访问、也可能更新多个数据项的一个程序执行单元。事务通常由用户程序发起：程序可以使用高级数据操纵语言（通常为 SQL），也可以使用 C++、Java 等编程语言，通过 JDBC 或 ODBC 嵌入数据库访问。事务以 <code>begin transaction</code> 和 <code>end transaction</code> 形式的语句或函数调用划定边界，两者之间执行的全部操作都属于该事务。</p>
+<!-- SOURCE pdf-0828-b011 -->
+<!-- SOURCE pdf-0829-b001 -->
+<p>这组步骤在用户看来必须是一个不可分割的整体，全部执行或完全不执行。事务开始后无论因何失败，都必须撤销它对数据库已经造成的改变。无论是事务自身出错（例如除以零）、操作系统崩溃，还是计算机停止运行，都必须满足这一要求。实现起来并不容易：有些修改可能还只保存在事务的主存变量中，另一些已经写入数据库并存到磁盘。这种“全有或全无”的性质称为<strong>原子性</strong>。</p>
+<!-- SOURCE pdf-0829-b002 -->
+<p>事务既然是一个整体，在外部看来，它的各个操作之间就不能插入不属于该事务的其他数据库操作。实现中却有许多独立步骤：即使一条 SQL 语句也可能多次访问数据库，一个事务还可能包含多条 SQL。数据库系统必须采取专门措施，使事务能正确运行，免受并发执行的其他数据库语句干扰。这种性质称为<strong>隔离性</strong>。</p>
+<!-- SOURCE pdf-0829-b003 -->
+<p>如果系统虽然保证了事务正确执行，却在随后崩溃时“忘掉”这个事务，那么正确执行的意义就很有限。事务产生的效果必须在崩溃后仍然保留，这称为<strong>持久性</strong>。</p>
+<!-- SOURCE pdf-0829-b004 -->
+<p>有了以上三种性质，事务就成为组织数据库交互的理想方式。事务自身还必须满足一项要求：保持数据库的一致性。如果数据库原先处于一致状态，事务以原子方式、隔离地执行，结束时数据库也必须处于一致状态。这一要求超出了前面讨论的主键、参照完整性、<code>check</code> 等数据完整性约束，还包括那些过于复杂、无法用 SQL 完整性结构表达的应用约束。如何维护这些约束，由编写事务的程序员负责。这种性质称为<strong>一致性</strong>。</p>
+<!-- SOURCE pdf-0829-b005 -->
+<p>概括这些要求，数据库系统需要维护事务的以下性质：</p>
+<!-- SOURCE pdf-0829-b006 -->
+<!-- SOURCE pdf-0830-b001 -->
+<ul>
+<li><strong>原子性（Atomicity）</strong>：事务中的全部操作都正确反映到数据库中，或者全部不反映。</li>
+<li><strong>一致性（Consistency）</strong>：事务单独执行、没有其他事务并发运行时，保持数据库的一致性。</li>
+<li><strong>隔离性（Isolation）</strong>：多个事务可以并发执行，但对于任意两个事务 Tᵢ、Tⱼ，在 Tᵢ 看来，Tⱼ 仿佛在 Tᵢ 开始前就已完成，或者在 Tᵢ 完成后才开始。每个事务都察觉不到系统中其他并发事务的存在。</li>
+<li><strong>持久性（Durability）</strong>：事务成功完成后，即使系统发生故障，它对数据库造成的改变也会保留。</li>
+</ul>
+<!-- SOURCE pdf-0830-b002 -->
+<p>这些性质通常称为 <strong>ACID 性质</strong>，名称来自四个英文词的首字母。</p>
+<!-- SOURCE pdf-0830-b003 -->
+<p>后面将看到，保证隔离性可能明显影响系统性能。为此，一些应用会放宽隔离要求。我们先讨论严格保证 ACID 的情况，再研究这些折中做法。</p>
+<!-- SOURCE pdf-0830-b004 -->
+<h2 id="172">17.2 一个简单的事务模型</h2>
+<!-- SOURCE pdf-0830-b005 -->
+<p>SQL 功能强大且复杂，因此先用一种简单的数据库语言研究事务，着眼于数据何时从磁盘进入主存、又何时从主存写回磁盘。暂时忽略 SQL 的 <code>insert</code> 和 <code>delete</code>，到 18.4 节再讨论；在这个简单语言里，实际的数据运算仅限算术运算。随后再回到操作更丰富的真实 SQL 环境。简化模型中的每个数据项只包含一个数据值，示例中为数值；每项都有名称，示例通常用 A、B、C 等单个字母。</p>
+<!-- SOURCE pdf-0830-b006 -->
+<p>我们用一个简单的银行应用说明事务概念。它包含若干账户，以及访问、更新这些账户的一组事务。事务通过两种操作访问数据：</p>
+<!-- SOURCE pdf-0830-b007 -->
+<ul>
+<li><code>read(X)</code>：把数据库中的数据项 X 传到执行此操作的事务所拥有的主存缓冲区中，放入同样名为 X 的变量。</li>
+<li><code>write(X)</code>：把执行此操作的事务主存缓冲区中变量 X 的值，传回数据库的数据项 X。</li>
+</ul>
+<!-- SOURCE pdf-0830-b008 -->
+<p>必须分清，数据项的修改是只存在于主存，还是已经写到磁盘数据库。真实数据库中的 <code>write</code> 不一定立即修改磁盘；写入可能暂存于其他位置，稍后再落盘。不过目前先假定 <code>write</code> 会立即更新数据库。17.3 节进一步讨论存储，第 19 章讨论主存中的数据库数据何时写回磁盘。</p>
+<!-- SOURCE pdf-0831-b001 -->
+<p>设事务 Tᵢ 将 50 美元从账户 A 转到账户 B，可以写成：</p>
+<!-- SOURCE pdf-0831-b002 -->
+<!-- SOURCE pdf-0831-b003 -->
+
+<pre><code class="language-text">Ti: read(A);
+    A := A − 50;
+    write(A);
+    read(B);
+    B := B + 50;
+    write(B).
+</code></pre>
+<!-- SOURCE pdf-0831-b004 -->
+<p>下面逐一考察 ACID 性质；为便于说明，顺序与缩写中的 A-C-I-D 略有不同。</p>
+<!-- SOURCE pdf-0831-b005 -->
+<p><strong>一致性。</strong> 本例要求事务执行前后 A 与 B 的总和不变。否则，事务就可能凭空创造或消灭货币。很容易验证，只要执行前数据库是一致的，执行后仍然一致。</p>
+<!-- SOURCE pdf-0831-b006 -->
+<p>确保单个事务的一致性，由编写它的应用程序员负责。4.4 节讨论的自动完整性约束检查，可以帮助完成这项工作。</p>
+<p><strong>原子性。</strong> 假设 Tᵢ 执行前，A 和 B 分别为 1000 美元和 2000 美元。若 Tᵢ 在执行 <code>write(A)</code> 之后、执行 <code>write(B)</code> 之前发生故障，无法正常完成，数据库中的余额就会变为 950 美元和 2000 美元。这次故障使 50 美元消失了，A + B 不再保持不变。</p>
+<!-- SOURCE pdf-0831-b007 -->
+<p>故障使系统状态无法再反映数据库应当记录的现实状态，这称为<strong>不一致状态</strong>。数据库系统必须保证这种不一致对外不可见。不过，执行过程中确实必须经过某个不一致状态。即使 Tᵢ 最终正常完成，中途仍有 A 为 950 美元、B 为 2000 美元的时刻；随后它才变成 A 为 950 美元、B 为 2050 美元的一致状态。只要事务从未开始，或者保证能够完成，这个中间的不一致就不会在事务执行之外被看到。这正是原子性要求的原因：事务的全部操作都反映到数据库中，或者全部不反映。</p>
+<!-- SOURCE pdf-0832-b001 -->
+<p>保证原子性的基本办法是：数据库在磁盘上记录事务将要写入的数据原值，保存到称为<strong>日志</strong>的文件。事务若未执行完，数据库就根据日志恢复旧值，使外界看来事务从未执行过。17.4 节继续讨论这一思路。保证原子性是数据库系统的职责，具体由<strong>恢复系统</strong>承担，第 19 章会详细介绍。</p>
+<p><strong>持久性。</strong> 一旦事务成功完成，并通知发起者转账已经完成，此后任何系统故障都不能导致这次转账的数据丢失。持久性保证成功事务对数据库的全部更新在后续故障中仍然保留。</p>
+<!-- SOURCE pdf-0832-b002 -->
+<p>目前先假定计算机故障可能丢失主存数据，但写到磁盘的数据不会丢失。磁盘数据丢失的防护见第 19 章。满足以下任一条件，就可以保证持久性：</p>
+<!-- SOURCE pdf-0832-b003 -->
+<!-- SOURCE pdf-0832-b004 -->
+<ol>
+<li>在事务完成之前，将事务的更新写入磁盘。</li>
+</ol>
+<!-- SOURCE pdf-0832-b005 -->
+<!-- SOURCE pdf-0832-b006 -->
+<ol start="2">
+<li>将更新信息写入磁盘，且这些信息足以让数据库在故障重启后重建相应更新。</li>
+</ol>
+<!-- SOURCE pdf-0832-b007 -->
+<p>第 19 章介绍的恢复系统同时负责保证原子性和持久性。</p>
+<p><strong>隔离性。</strong> 即使每个事务都满足一致性、原子性，多个事务并发执行时，操作仍可能以不恰当的方式交错，导致不一致。</p>
+<!-- SOURCE pdf-0832-b008 -->
+<p>例如，从 A 向 B 转账时，数据库曾短暂处于 A 已扣款、B 尚未入账的状态。另一个并发事务若在此时读取 A、B 并计算 A + B，就会得到不一致的结果。若它继续依据这些错误值更新 A、B，即使两个事务都执行完，数据库仍可能处于不一致状态。</p>
+<!-- SOURCE pdf-0832-b009 -->
+<!-- SOURCE pdf-0833-b001 -->
+<p>解决并发问题的一种办法，是让事务串行执行，即一个接一个运行。但 17.5 节将说明，并发执行能带来明显的性能收益。因此，人们设计了其他方案，允许多个事务并发运行。</p>
+<!-- SOURCE pdf-0833-b002 -->
+<p>17.5 节讨论并发事务引发的问题。隔离性要求并发执行所得到的系统状态，等价于这些事务按某个顺序逐一执行所得到的状态。17.6 节进一步讨论隔离原理。数据库中的<strong>并发控制系统</strong>负责保证隔离性，第 18 章将介绍它。</p>
+<!-- SOURCE pdf-0833-b003 -->
+<h2 id="173">17.3 存储结构</h2>
+<!-- SOURCE pdf-0833-b004 -->
+<p>要理解如何保证事务的原子性和持久性，必须先了解数据库中的数据项如何存储和访问。</p>
+<!-- SOURCE pdf-0833-b005 -->
+<p>第 12 章按速度、容量和抵抗故障的能力区分存储介质，并分为易失性存储与非易失性存储。下面重温这两个概念，再引入<strong>稳定存储</strong>。</p>
+<!-- SOURCE pdf-0833-b006 -->
+<ul>
+<li><strong>易失性存储。</strong> 其中的信息通常无法在系统崩溃后保留，例如主存和高速缓存。访问速度很快，既因为存储器本身速度快，也因为可以直接访问其中任意数据项。</li>
+<li><strong>非易失性存储。</strong> 其中的信息能在系统崩溃后保留。例子包括用于在线存储的磁盘、闪存等二级存储，以及用于归档的光学介质、磁带等三级存储。按现有技术，非易失性存储通常比易失性存储慢，随机访问时差距尤其明显。不过，二级和三级存储设备本身也可能故障，造成信息丢失。</li>
+<li><strong>稳定存储。</strong> 其中的信息永不丢失。这里的“永不”要有所保留，因为理论上无法保证绝对不丢失：虽然概率极低，黑洞仍可能吞没地球，永久毁掉全部数据！稳定存储在理论上无法实现，但可以用技术手段让丢失概率极低，从而逼近它。实现方法是在多个故障模式相互独立的非易失性介质上保存副本，通常使用磁盘。更新必须谨慎进行，防止更新期间的故障导致信息丢失。19.2.1 节讨论具体实现。</li>
+</ul>
+<!-- SOURCE pdf-0834-b001 -->
+<p>实际系统中，这几类存储的界限可能没有上述分类那么清楚。例如，某些 RAID 控制器配有备用电池，使部分主存数据能在系统崩溃、断电后继续保留。</p>
+<!-- SOURCE pdf-0834-b002 -->
+<p>要保证事务持久，修改必须写入稳定存储。同样，要保证原子性，必须先把日志记录写入稳定存储，再修改磁盘上的数据库。系统能在多大程度上保证这两种性质，取决于其稳定存储实现究竟有多可靠。有些场景认为磁盘上留一份副本即可；数据价值高、事务重要的应用则需要多份副本，更接近理想的稳定存储。</p>
+<!-- SOURCE pdf-0834-b003 -->
+<h2 id="174">17.4 事务的原子性与持久性</h2>
+<!-- SOURCE pdf-0834-b004 -->
+<p>事务有时无法成功执行完毕，这样的事务称为<strong>已中止事务</strong>。为了保证原子性，中止事务不能对数据库状态留下任何影响，必须撤销它已经造成的修改。修改全部撤销后，就称事务已经<strong>回滚</strong>。恢复机制负责处理中止，通常借助日志：事务每次修改数据库之前，先在日志中记录事务标识、数据项标识、修改前的旧值和修改后的新值，然后才修改数据库。日志既可用于重做修改，保证原子性和持久性，也可在事务执行期间发生故障时用于撤销修改，保证原子性。基于日志的恢复细节见第 19 章。</p>
+<!-- SOURCE pdf-0834-b005 -->
+<p>成功完成执行的事务称为<strong>已提交事务</strong>。执行过更新的事务提交后，数据库进入一个新的一致状态，即使发生系统故障，该状态也必须保留。</p>
+<!-- SOURCE pdf-0834-b006 -->
+<p>事务提交后，无法再通过中止来撤销其效果。要抵消已提交事务的影响，必须另行执行<strong>补偿事务</strong>。例如，原事务给账户增加了 20 美元，补偿事务就减去 20 美元。不过，并非总能构造出这样的补偿事务。因此，编写和执行补偿事务由用户负责，数据库系统不会代为处理。</p>
+<!-- SOURCE pdf-0834-b007 -->
+<p>“成功完成”还需要更精确的定义。为此，建立一个简单的抽象事务模型，规定事务必须处于以下状态之一：</p>
+<!-- SOURCE pdf-0835-b001 -->
+<ul>
+<li><strong>活动（active）</strong>：初始状态，事务执行期间一直处于此状态。</li>
+<li><strong>部分提交（partially committed）</strong>：最后一条语句已经执行。</li>
+<li><strong>失败（failed）</strong>：发现正常执行无法继续。</li>
+<li><strong>已中止（aborted）</strong>：事务已经回滚，数据库已恢复到事务开始前的状态。</li>
+<li><strong>已提交（committed）</strong>：事务成功完成。</li>
+</ul>
+<!-- SOURCE pdf-0835-b002 -->
+<p>图17.1 给出对应的状态图。事务进入已提交状态，才算提交；进入已中止状态，才算中止。提交或中止后，事务便称为<strong>已终止</strong>。</p>
+<!-- SOURCE pdf-0835-b003 -->
+<p>事务从活动状态开始，执行完最后一条语句后，进入部分提交状态。此时虽然程序已经执行完，事务仍可能中止，因为实际输出可能只暂存在主存中，硬件故障仍会阻止它成功完成。</p>
+<!-- SOURCE pdf-0835-b004 -->
+<p>随后，数据库系统向磁盘写入足够的信息，使故障后重启时能够重建事务所做的更新。最后一份必要信息写完，事务才进入已提交状态。</p>
+<!-- SOURCE pdf-0835-b005 -->
+<p>如前所述，目前仍假定故障不会丢失磁盘数据。第 19 章介绍磁盘数据丢失的处理技术。</p>
+<!-- SOURCE pdf-0835-b006 -->
+<p>系统一旦确认事务无法继续正常执行，例如出现硬件故障或逻辑错误，事务就进入失败状态。它必须回滚，然后进入已中止状态。此时系统有两个选择：</p>
+<!-- SOURCE pdf-0836-b001 -->
+<ul>
+<li><strong>重新启动事务。</strong> 仅适用于中止原因是硬件或软件错误，且错误并非来自事务内部逻辑的情况。重新启动的事务视为一个新事务。</li>
+<li><strong>终结事务。</strong> 通常因为存在只能通过重写应用才能纠正的内部逻辑错误，或者输入错误，或者数据库中找不到所需数据。</li>
+</ul>
+<!-- SOURCE pdf-0835-b007 -->
+<!-- SOURCE pdf-0835-b008 -->
+<!-- SOURCE pdf-0835-b009 -->
+<!-- SOURCE pdf-0835-b010 -->
+<!-- SOURCE pdf-0835-b011 -->
+<p><img alt="图17.1" src="../assets/ch17-figure-17-1.png" /></p>
+<p><strong>图17.1 事务状态图。active、partially committed、committed、failed、aborted 分别为活动、部分提交、已提交、失败、已中止。</strong></p>
+<!-- SOURCE pdf-0836-b002 -->
+<p>处理可被外界观察到的写入时，必须谨慎，例如向用户屏幕输出，或发送电子邮件。一旦写出，外界可能已经看到，就无法擦除。多数系统只允许事务进入已提交状态后再进行这些写入。一种实现方式是，先把相关值暂存到数据库中的特殊关系里，提交后再真正向外写出。若系统在提交之后、完成外部写入之前故障，重启后就利用非易失性存储中的数据继续执行外部写入。</p>
+<!-- SOURCE pdf-0836-b003 -->
+<p>有些外部写入更难处理。例如，ATM 准备吐出现金，系统恰在现金实际吐出前故障，且假定吐钞本身是原子的。重启后再吐钞毫无意义，因为用户可能已经离开。这时需要在重启后执行补偿事务，例如把金额存回用户账户。</p>
+<!-- SOURCE pdf-0836-b004 -->
+<p>再如用户通过网页预订。预订事务刚提交，数据库或应用服务器就可能崩溃，也可能是用户网络连接刚好断开。这两种情况下，事务虽然提交，外部输出却没有发生。应用必须允许用户再次连接时，查明此前的事务究竟是否成功。</p>
+<!-- SOURCE pdf-0836-b005 -->
+<p>某些应用希望事务仍处于活动状态时就向用户显示数据，特别是持续数分钟或数小时的长事务。不过，这种可观察输出需要以放宽事务原子性为代价。</p>
+<!-- SOURCE pdf-0836-b006 -->
+<h2 id="175">17.5 事务隔离</h2>
+<!-- SOURCE pdf-0836-b007 -->
+<!-- SOURCE pdf-0837-b005 -->
+<p>事务处理系统通常允许多个事务并发运行。前面已经看到，并发更新会给数据一致性带来许多问题。要在并发下保证一致性，需要额外工作；要求事务串行执行、等前一个完成再开始下一个，会容易得多。但允许并发有两个充分理由：</p>
+<!-- SOURCE pdf-0837-b006 -->
+<!-- SOURCE pdf-0838-b001 -->
+<ul>
+<li><strong>提高吞吐量和资源利用率。</strong> 一个事务包含许多步骤，有些进行 I/O，有些使用 CPU。CPU 与磁盘可以并行工作，因此可以让一个事务在某块磁盘上读写，另一个在 CPU 上执行，第三个在另一块磁盘上读写。这样能提高系统吞吐量，即单位时间内执行的事务数，也能提高处理器和磁盘的利用率，减少空闲、未做有用工作的时间。</li>
+<li><strong>缩短等待时间。</strong> 系统中可能同时存在长事务和短事务。若串行执行，短事务也得等前面的长事务完成，产生难以预测的延迟。如果它们访问数据库的不同部分，允许并发、共享 CPU 时间与磁盘访问会更好。并发能减少这种不可预测的延迟，也能降低平均响应时间，即事务从提交给系统到完成所需的平均时间。</li>
+</ul>
+<!-- SOURCE pdf-0837-b002 -->
+<h3 id="171_1">注17.1 并发的发展趋势</h3>
+<p>计算领域的若干发展趋势，让系统能够提供越来越多的并发。数据库系统利用这些能力提高整体性能时，并发运行的事务数也必然增加。</p>
+<!-- SOURCE pdf-0837-b003 -->
+<p>早期计算机只有一个处理器，没有真正的并发；操作系统在多个任务或进程之间分配处理器，形成表面上的并发。现代计算机通常包含多个处理器，每个处理器称为一个核；一块处理器芯片可以包含多个核，多块芯片又可连接成一个共享主存的系统。并行数据库还可能包含多个这样的系统。第 20 章介绍并行数据库架构。</p>
+<!-- SOURCE pdf-0837-b004 -->
+<p>多处理器、多核提供的并行能力有两类用途：一是并行执行一条长查询的不同部分，加快查询；二是同时执行大量查询，通常是较短的查询，例如支持大量并发用户。第 21～23 章介绍构建并行数据库的算法。</p>
+<!-- SOURCE pdf-0838-b002 -->
+<p>数据库采用并发执行的动机，与操作系统采用多道程序设计的动机基本相同。</p>
+<!-- SOURCE pdf-0838-b003 -->
+<p>多个事务并发运行时，即使各个事务单独执行都正确，也可能违反隔离性，破坏数据库一致性。本节引入<strong>调度</strong>概念，用来识别哪些执行方式能够保证隔离性，进而保证一致性。</p>
+<!-- SOURCE pdf-0838-b004 -->
+<p>数据库必须控制并发事务之间的相互影响，防止它们破坏一致性。这些机制统称为<strong>并发控制方案</strong>，第 18 章将详细讨论。现在先研究什么样的并发执行是正确的。</p>
+<!-- SOURCE pdf-0838-b005 -->
+<p>仍考虑 17.1 节的简化银行系统，其中有多个账户，以及访问、更新账户的一组事务。设 T₁、T₂ 都将资金从一个账户转到另一个账户。T₁ 从 A 向 B 转 50 美元：</p>
+<!-- SOURCE pdf-0838-b006 -->
+<!-- SOURCE pdf-0838-b007 -->
+
+<pre><code class="language-text">T1: read(A);
+    A := A − 50;
+    write(A);
+    read(B);
+    B := B + 50;
+    write(B).
+</code></pre>
+<!-- SOURCE pdf-0838-b008 -->
+<p>T₂ 把 A 余额的 10% 转到 B：</p>
+<!-- SOURCE pdf-0838-b009 -->
+<!-- SOURCE pdf-0838-b010 -->
+
+<pre><code class="language-text">T2: read(A);
+    temp := A * 0.1;
+    A := A − temp;
+    write(A);
+    read(B);
+    B := B + temp;
+    write(B).
+</code></pre>
+<!-- SOURCE pdf-0839-b005 -->
+<!-- SOURCE pdf-0839-b008 -->
+<!-- SOURCE pdf-0839-b011 -->
+<!-- SOURCE pdf-0839-b013 -->
+<!-- SOURCE pdf-0839-b015 -->
+<!-- SOURCE pdf-0839-b017 -->
+<!-- SOURCE pdf-0839-b019 -->
+<!-- SOURCE pdf-0839-b021 -->
+<!-- SOURCE pdf-0839-b023 -->
+<!-- SOURCE pdf-0839-b026 -->
+<!-- SOURCE pdf-0839-b028 -->
+<!-- SOURCE pdf-0839-b030 -->
+<!-- SOURCE pdf-0839-b032 -->
+<!-- SOURCE pdf-0839-b034 -->
+<!-- SOURCE pdf-0839-b036 -->
+<!-- SOURCE pdf-0839-b038 -->
+<!-- SOURCE pdf-0839-b040 -->
+<!-- SOURCE pdf-0839-b041 -->
+<p><img alt="图17.2" src="../assets/ch17-figure-17-2.png" /></p>
+<p><strong>图17.2 调度 1：先 T₁、后 T₂ 的串行调度。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0839-b042 -->
+<p>假设 A、B 现有余额分别为 1000 美元、2000 美元，两个事务按 T₁、T₂ 的顺序逐一执行，过程如图17.2。图中时间从上向下推进，左列为 T₁ 的指令，右列为 T₂ 的指令。执行后，A、B 分别为 855 美元、2145 美元，A + B 的总额保持不变。</p>
+<!-- SOURCE pdf-0839-b043 -->
+<p>若改为先 T₂、后 T₁，执行过程如图17.3。总额同样保持不变，最终 A 为 850 美元，B 为 2150 美元。</p>
+<!-- SOURCE pdf-0839-b044 -->
+<p>这些执行序列称为<strong>调度</strong>，表示系统执行指令的时间顺序。一组事务的调度必须包含这些事务的全部指令，并保持每个事务内部的指令顺序。例如，在 T₁ 的任何有效调度中，<code>write(A)</code> 都必须位于 <code>read(B)</code> 之前。调度中还列出 <code>commit</code>，表示事务进入已提交状态。以下把先 T₁ 后 T₂ 的序列称为调度 1，把先 T₂ 后 T₁ 的序列称为调度 2。</p>
+<!-- SOURCE pdf-0840-b005 -->
+<!-- SOURCE pdf-0840-b008 -->
+<!-- SOURCE pdf-0840-b012 -->
+<!-- SOURCE pdf-0840-b014 -->
+<!-- SOURCE pdf-0840-b016 -->
+<!-- SOURCE pdf-0840-b018 -->
+<!-- SOURCE pdf-0840-b020 -->
+<!-- SOURCE pdf-0840-b022 -->
+<!-- SOURCE pdf-0840-b024 -->
+<!-- SOURCE pdf-0840-b026 -->
+<!-- SOURCE pdf-0840-b028 -->
+<!-- SOURCE pdf-0840-b030 -->
+<!-- SOURCE pdf-0840-b032 -->
+<!-- SOURCE pdf-0840-b034 -->
+<!-- SOURCE pdf-0840-b036 -->
+<!-- SOURCE pdf-0840-b038 -->
+<!-- SOURCE pdf-0840-b040 -->
+<p><img alt="图17.3" src="../assets/ch17-figure-17-3.png" /></p>
+<p><strong>图17.3 调度 2：先 T₂、后 T₁ 的串行调度。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0840-b041 -->
+<p>这些调度都是<strong>串行调度</strong>：同一个事务的所有指令连续出现。根据组合数学中的一个常见公式，n 个事务共有 n 的阶乘，即 n! 种不同的有效串行调度。</p>
+<!-- SOURCE pdf-0840-b042 -->
+<p>数据库并发执行多个事务时，调度就无须保持串行。两个事务并发时，操作系统可以先让一个事务运行一会儿，再进行上下文切换，让另一个运行一会儿，之后再切回来。多个事务共享 CPU 时间。</p>
+<!-- SOURCE pdf-0840-b043 -->
+<p>两个事务的指令可以交错，因而产生多种执行序列。一般无法准确预知 CPU 切换到其他事务之前，当前事务会执行多少条指令。<sup id="fnref:ch17-1"><a class="footnote-ref" href="#fn:ch17-1">1</a></sup></p>
+<!-- SOURCE pdf-0840-b044 -->
+<p>回到刚才的例子，并发执行可能产生图17.4 的调度。执行后得到的状态，与先 T₁ 后 T₂ 串行执行相同，A + B 的总额保持不变。</p>
+<!-- SOURCE pdf-0840-b046 -->
+<!-- SOURCE pdf-0841-b005 -->
+<!-- SOURCE pdf-0841-b008 -->
+<!-- SOURCE pdf-0841-b011 -->
+<!-- SOURCE pdf-0841-b013 -->
+<!-- SOURCE pdf-0841-b015 -->
+<!-- SOURCE pdf-0841-b018 -->
+<!-- SOURCE pdf-0841-b020 -->
+<!-- SOURCE pdf-0841-b022 -->
+<!-- SOURCE pdf-0841-b024 -->
+<!-- SOURCE pdf-0841-b026 -->
+<!-- SOURCE pdf-0841-b028 -->
+<!-- SOURCE pdf-0841-b030 -->
+<!-- SOURCE pdf-0841-b033 -->
+<!-- SOURCE pdf-0841-b035 -->
+<!-- SOURCE pdf-0841-b037 -->
+<!-- SOURCE pdf-0841-b039 -->
+<!-- SOURCE pdf-0841-b040 -->
+<p><img alt="图17.4" src="../assets/ch17-figure-17-4.png" /></p>
+<p><strong>图17.4 调度 3：与调度 1 等价的并发调度。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0841-b041 -->
+<p>并非所有并发执行都会产生正确状态。图17.5 就是反例：执行后 A、B 分别为 950 美元、2100 美元，凭空多出了 50 美元。最终状态不一致，两个事务执行前后的 A + B 不相等。</p>
+<!-- SOURCE pdf-0841-b042 -->
+<p>若完全由操作系统控制并发，许多调度都有可能出现，包括上面这种会导致数据库不一致的调度。数据库必须保证实际执行的任何调度都使数据库保持一致，这项工作由并发控制组件承担。</p>
+<!-- SOURCE pdf-0841-b043 -->
+<p>要保证并发执行的一致性，可以要求实际调度的效果与某个完全没有并发的执行顺序相同，即在某种意义上等价于串行调度。这样的调度称为<strong>可串行化调度</strong>。</p>
+<!-- SOURCE pdf-0842-b005 -->
+<!-- SOURCE pdf-0842-b008 -->
+<!-- SOURCE pdf-0842-b011 -->
+<!-- SOURCE pdf-0842-b013 -->
+<!-- SOURCE pdf-0842-b016 -->
+<!-- SOURCE pdf-0842-b018 -->
+<!-- SOURCE pdf-0842-b020 -->
+<!-- SOURCE pdf-0842-b022 -->
+<!-- SOURCE pdf-0842-b024 -->
+<!-- SOURCE pdf-0842-b026 -->
+<!-- SOURCE pdf-0842-b028 -->
+<!-- SOURCE pdf-0842-b030 -->
+<!-- SOURCE pdf-0842-b032 -->
+<!-- SOURCE pdf-0842-b035 -->
+<!-- SOURCE pdf-0842-b037 -->
+<!-- SOURCE pdf-0842-b039 -->
+<!-- SOURCE pdf-0842-b040 -->
+<p><img alt="图17.5" src="../assets/ch17-figure-17-5.png" /></p>
+<p><strong>图17.5 调度 4：会导致不一致状态的并发调度。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0841-b044 -->
+<h2 id="176">17.6 可串行化性</h2>
+<!-- SOURCE pdf-0841-b045 -->
+<!-- SOURCE pdf-0842-b041 -->
+<p>讨论并发控制组件如何保证可串行化之前，先研究怎样判断一个调度是否可串行化。串行调度当然可串行化；多个事务的步骤交错后，判断就更困难。事务是程序，准确分析它做了哪些操作、不同事务的操作如何相互影响并不容易。因此，暂时只考虑 <code>read</code> 和 <code>write</code> 两种操作。对于数据项 Q，假定事务在 <code>read(Q)</code> 与 <code>write(Q)</code> 之间，可以对本地缓冲区中的 Q 副本执行任意运算。从调度角度看，模型中只有读写指令具有意义。提交操作虽然也有关，但留到 17.7 节再考虑。所以调度可以只显示读写指令，例如图17.6 中简化后的调度 3。</p>
+<!-- SOURCE pdf-0842-b042 -->
+<p>本节讨论不同形式的调度等价性，重点是<strong>冲突可串行化性</strong>。</p>
+<!-- SOURCE pdf-0842-b043 -->
+<p>考虑调度 S 中相邻的两条指令 I、J，分别属于事务 Tᵢ、Tⱼ，且 i ≠ j。若二者访问不同数据项，可以交换顺序，不影响调度中任何指令的结果；若访问同一数据项 Q，先后顺序就可能影响结果。只考虑读写时，共有四种情况：</p>
+<!-- SOURCE pdf-0842-b044 -->
+<!-- SOURCE pdf-0842-b045 -->
+<ol>
+<li>I = <code>read(Q)</code>，J = <code>read(Q)</code>。顺序无关紧要，Tᵢ、Tⱼ 读到的 Q 都相同。</li>
+</ol>
+<!-- SOURCE pdf-0843-b027 -->
+<!-- SOURCE pdf-0843-b028 -->
+<ol start="2">
+<li>I = <code>read(Q)</code>，J = <code>write(Q)</code>。I 先执行时，Tᵢ 读不到 Tⱼ 在 J 中写入的值；J 先执行时，Tᵢ 会读到那个值。因此顺序会影响结果。</li>
+</ol>
+<!-- SOURCE pdf-0843-b029 -->
+<!-- SOURCE pdf-0843-b030 -->
+<ol start="3">
+<li>I = <code>write(Q)</code>，J = <code>read(Q)</code>。与上一种情况类似，顺序会影响结果。</li>
+</ol>
+<!-- SOURCE pdf-0843-b031 -->
+<!-- SOURCE pdf-0843-b032 -->
+<ol start="4">
+<li>I = <code>write(Q)</code>，J = <code>write(Q)</code>。两条都是写指令，顺序不会影响 Tᵢ、Tⱼ 自身，但会影响 S 中下一条 <code>read(Q)</code> 取得的值，因为数据库只保留后一次写入的结果。若 S 中此后没有其他 <code>write(Q)</code>，二者的顺序就直接决定最终数据库中 Q 的值。</li>
+</ol>
+<!-- SOURCE pdf-0843-b033 -->
+<p>可见，只有 I、J 都是读指令时，相对执行顺序才不影响结果。</p>
+<!-- SOURCE pdf-0843-b034 -->
+<p>如果 I、J 来自不同事务，访问同一数据项，且至少一条是写指令，就称它们<strong>冲突</strong>。</p>
+<!-- SOURCE pdf-0843-b005 -->
+<!-- SOURCE pdf-0843-b008 -->
+<!-- SOURCE pdf-0843-b011 -->
+<!-- SOURCE pdf-0843-b013 -->
+<!-- SOURCE pdf-0843-b016 -->
+<!-- SOURCE pdf-0843-b018 -->
+<!-- SOURCE pdf-0843-b020 -->
+<!-- SOURCE pdf-0843-b023 -->
+<!-- SOURCE pdf-0843-b025 -->
+<!-- SOURCE pdf-0843-b026 -->
+<p><img alt="图17.6" src="../assets/ch17-figure-17-6.png" /></p>
+<p><strong>图17.6 调度 3：只显示读写指令。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0843-b035 -->
+<p>以图17.6 的调度 3 为例，T₁ 的 <code>write(A)</code> 与 T₂ 的 <code>read(A)</code> 冲突；T₂ 的 <code>write(A)</code> 与 T₁ 的 <code>read(B)</code> 则不冲突，因为访问的是不同数据项。</p>
+<!-- SOURCE pdf-0843-b036 -->
+<p>设 I、J 是调度 S 中相邻的两条指令。若来自不同事务且不冲突，交换二者就得到新调度 S′。S 与 S′ 等价，因为除 I、J 外，其余指令顺序完全相同，而 I、J 的顺序又不影响结果。</p>
+<!-- SOURCE pdf-0843-b037 -->
+<p>调度 3 中 T₂ 的 <code>write(A)</code> 与 T₁ 的 <code>read(B)</code> 不冲突，可以交换，得到图17.7 的调度 5。无论系统初始状态怎样，调度 3 和调度 5 都产生相同的最终状态。</p>
+<!-- SOURCE pdf-0844-b005 -->
+<!-- SOURCE pdf-0844-b008 -->
+<!-- SOURCE pdf-0844-b011 -->
+<!-- SOURCE pdf-0844-b013 -->
+<!-- SOURCE pdf-0844-b016 -->
+<!-- SOURCE pdf-0844-b019 -->
+<!-- SOURCE pdf-0844-b022 -->
+<!-- SOURCE pdf-0844-b024 -->
+<!-- SOURCE pdf-0844-b025 -->
+<p><img alt="图17.7" src="../assets/ch17-figure-17-7.png" /></p>
+<p><strong>图17.7 调度 5：交换调度 3 中一对指令后的结果。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0844-b026 -->
+<p>继续交换不冲突的指令：</p>
+<ul>
+<li>交换 T₁ 的 <code>read(B)</code> 与 T₂ 的 <code>read(A)</code>。</li>
+<li>交换 T₁ 的 <code>write(B)</code> 与 T₂ 的 <code>write(A)</code>。</li>
+<li>交换 T₁ 的 <code>write(B)</code> 与 T₂ 的 <code>read(A)</code>。</li>
+</ul>
+<!-- SOURCE pdf-0844-b027 -->
+<p>最终得到图17.8 的调度 6，它是串行调度，与调度 1 完全相同，只省略了读写之外的指令。这样就证明调度 3 等价于一个串行调度：无论初始状态是什么，调度 3 都与某个串行调度产生同样的最终状态。</p>
+<!-- SOURCE pdf-0844-b033 -->
+<!-- SOURCE pdf-0844-b036 -->
+<!-- SOURCE pdf-0844-b039 -->
+<!-- SOURCE pdf-0844-b041 -->
+<!-- SOURCE pdf-0844-b043 -->
+<!-- SOURCE pdf-0844-b045 -->
+<!-- SOURCE pdf-0844-b048 -->
+<!-- SOURCE pdf-0844-b050 -->
+<!-- SOURCE pdf-0844-b052 -->
+<!-- SOURCE pdf-0844-b054 -->
+<!-- SOURCE pdf-0844-b055 -->
+<p><img alt="图17.8" src="../assets/ch17-figure-17-8.png" /></p>
+<p><strong>图17.8 调度 6：与调度 3 等价的串行调度。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0844-b028 -->
+<p>如果调度 S 能通过一系列不冲突指令的交换变为 S′，就称 S 与 S′ <strong>冲突等价</strong>。<sup id="fnref:ch17-2"><a class="footnote-ref" href="#fn:ch17-2">2</a></sup></p>
+<!-- SOURCE pdf-0844-b057 -->
+<!-- SOURCE pdf-0845-b017 -->
+<p>串行调度之间也未必冲突等价。例如，调度 1 与调度 2 就不冲突等价。</p>
+<!-- SOURCE pdf-0845-b018 -->
+<p>由冲突等价可以定义冲突可串行化性：若调度 S 与某个串行调度冲突等价，就称 S <strong>冲突可串行化</strong>。调度 3 与串行调度 1 冲突等价，所以它冲突可串行化。</p>
+<!-- SOURCE pdf-0845-b005 -->
+<!-- SOURCE pdf-0845-b008 -->
+<!-- SOURCE pdf-0845-b011 -->
+<!-- SOURCE pdf-0845-b014 -->
+<!-- SOURCE pdf-0845-b016 -->
+<p><img alt="图17.9" src="../assets/ch17-figure-17-9.png" /></p>
+<p><strong>图17.9 调度 7。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0845-b019 -->
+<p>再看图17.9 的调度 7，其中只列出 T₃、T₄ 的重要操作，即读写。它既不与串行调度 ⟨T₃, T₄⟩ 冲突等价，也不与 ⟨T₄, T₃⟩ 冲突等价，因此不具有冲突可串行化性。</p>
+<!-- SOURCE pdf-0845-b020 -->
+<p>下面介绍一种简单高效的判定方法。从调度 S 构造一个称为<strong>优先图</strong>的有向图 G = (V, E)，其中 V 是顶点集合，E 是边集合。每个参与调度的事务对应一个顶点。对于不同事务 Tᵢ、Tⱼ，只要满足以下任一条件，就加入边 Tᵢ → Tⱼ：</p>
+<!-- SOURCE pdf-0845-b021 -->
+<ol>
+<li>Tᵢ 的 <code>write(Q)</code> 先于 Tⱼ 的 <code>read(Q)</code>。</li>
+</ol>
+<!-- SOURCE pdf-0845-b022 -->
+<ol start="2">
+<li>Tᵢ 的 <code>read(Q)</code> 先于 Tⱼ 的 <code>write(Q)</code>。</li>
+</ol>
+<!-- SOURCE pdf-0845-b023 -->
+<ol start="3">
+<li>Tᵢ 的 <code>write(Q)</code> 先于 Tⱼ 的 <code>write(Q)</code>。</li>
+</ol>
+<!-- SOURCE pdf-0845-b024 -->
+<p>优先图中若存在边 Tᵢ → Tⱼ，那么与 S 等价的任何串行调度 S′ 都必须把 Tᵢ 放在 Tⱼ 之前。</p>
+<!-- SOURCE pdf-0845-b025 -->
+<!-- SOURCE pdf-0846-b003 -->
+<p>例如，图17.10(a) 是调度 1 的优先图，只有一条 T₁ → T₂ 的边，因为 T₁ 的全部指令都在 T₂ 第一条指令之前执行。同理，图17.10(b) 是调度 2 的优先图，只有 T₂ → T₁，因为 T₂ 的全部指令先于 T₁。</p>
+<!-- SOURCE pdf-0845-b026 -->
+<!-- SOURCE pdf-0845-b027 -->
+<!-- SOURCE pdf-0845-b028 -->
+<p><img alt="图17.10" src="../assets/ch17-figure-17-10.png" /></p>
+<p><strong>图17.10 优先图：(a) 调度 1；(b) 调度 2。</strong></p>
+<!-- SOURCE pdf-0846-b004 -->
+<p>调度 4 的优先图见图17.11。T₁ 的 <code>read(A)</code> 先于 T₂ 的 <code>write(A)</code>，所以有边 T₁ → T₂；T₂ 的 <code>read(B)</code> 先于 T₁ 的 <code>write(B)</code>，所以也有边 T₂ → T₁。</p>
+<!-- SOURCE pdf-0846-b001 -->
+<!-- SOURCE pdf-0846-b002 -->
+<p><img alt="图17.11" src="../assets/ch17-figure-17-11.png" /></p>
+<p><strong>图17.11 调度 4 的优先图，两条方向相反的边构成环。</strong></p>
+<!-- SOURCE pdf-0846-b005 -->
+<p><strong>若优先图有环，调度 S 就不具有冲突可串行化性；若无环，S 就具有冲突可串行化性。</strong></p>
+<!-- SOURCE pdf-0846-b006 -->
+<p>寻找一个与优先图偏序一致的线性顺序，即可得到等价串行调度中的事务顺序，这一过程称为<strong>拓扑排序</strong>。拓扑排序通常可能产生多个线性顺序。例如，图17.12(a) 的图有两种可接受的线性顺序，分别见图17.12(b)、(c)。</p>
+<!-- SOURCE pdf-0847-b001 -->
+<!-- SOURCE pdf-0847-b002 -->
+<!-- SOURCE pdf-0847-b003 -->
+<!-- SOURCE pdf-0847-b004 -->
+<!-- SOURCE pdf-0847-b005 -->
+<!-- SOURCE pdf-0847-b006 -->
+<!-- SOURCE pdf-0847-b007 -->
+<!-- SOURCE pdf-0847-b008 -->
+<!-- SOURCE pdf-0847-b009 -->
+<!-- SOURCE pdf-0847-b010 -->
+<!-- SOURCE pdf-0847-b011 -->
+<!-- SOURCE pdf-0847-b012 -->
+<!-- SOURCE pdf-0847-b013 -->
+<!-- SOURCE pdf-0847-b014 -->
+<!-- SOURCE pdf-0847-b015 -->
+<p><img alt="图17.12" src="../assets/ch17-figure-17-12.png" /></p>
+<p><strong>图17.12 拓扑排序示例。(a) 是原优先图；(b) 为 Tᵢ、Tⱼ、Tₖ、Tₘ；(c) 为 Tᵢ、Tₖ、Tⱼ、Tₘ。</strong></p>
+<!-- SOURCE pdf-0846-b007 -->
+<p>要测试冲突可串行化性，只需构造优先图，再调用环检测算法。标准算法教材中介绍了这类算法，例如基于深度优先搜索的算法。以顶点数 n（即事务数）衡量，其操作次数为 n² 量级。<sup id="fnref:ch17-3"><a class="footnote-ref" href="#fn:ch17-3">3</a></sup></p>
+<!-- SOURCE pdf-0846-b008 -->
+<p>回看前面的例子，调度 1、2 的优先图（图17.10）确实无环；调度 4 的优先图（图17.11）则有环，表明它不具有冲突可串行化性。</p>
+<!-- SOURCE pdf-0846-b009 -->
+<p>两个调度可以产生相同结果，却不冲突等价。例如，T₅ 把 10 美元从 B 转到 A，图17.13 给出调度 8。它与串行调度 ⟨T₁, T₅⟩ 不冲突等价：T₅ 的 <code>write(B)</code> 与 T₁ 的 <code>read(B)</code> 冲突，产生边 T₅ → T₁；T₁ 的 <code>write(A)</code> 与 T₅ 的读操作冲突，产生边 T₁ → T₅。图中存在环，调度 8 不具有冲突可串行化性。不过，执行调度 8 或串行调度 ⟨T₁, T₅⟩ 后，A、B 的最终值都分别为 960 美元、2040 美元。</p>
+<!-- SOURCE pdf-0846-b011 -->
+<!-- SOURCE pdf-0848-b005 -->
+<!-- SOURCE pdf-0848-b008 -->
+<!-- SOURCE pdf-0848-b011 -->
+<!-- SOURCE pdf-0848-b013 -->
+<!-- SOURCE pdf-0848-b015 -->
+<!-- SOURCE pdf-0848-b018 -->
+<!-- SOURCE pdf-0848-b020 -->
+<!-- SOURCE pdf-0848-b022 -->
+<!-- SOURCE pdf-0848-b024 -->
+<!-- SOURCE pdf-0848-b026 -->
+<!-- SOURCE pdf-0848-b029 -->
+<!-- SOURCE pdf-0848-b031 -->
+<!-- SOURCE pdf-0848-b033 -->
+<!-- SOURCE pdf-0848-b034 -->
+<p><img alt="图17.13" src="../assets/ch17-figure-17-13.png" /></p>
+<p><strong>图17.13 调度 8。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0847-b016 -->
+<p>这个例子表明，还可以使用比冲突等价更宽松的调度等价定义。系统若想判断调度 8 与串行调度 ⟨T₁, T₅⟩ 产生相同结果，就必须分析 T₁、T₅ 的实际计算，不能只看读写。这样的分析一般难以实现，计算开销也大。本例中结果相同，是因为加、减常数的运算可以交换顺序。简单例子里这一点容易看出，但事务可能是一条复杂 SQL，也可能是包含 JDBC 调用的 Java 程序，一般情况就没有这么容易。</p>
+<!-- SOURCE pdf-0847-b017 -->
+<!-- SOURCE pdf-0848-b035 -->
+<p>不过，也存在完全基于读写操作的其他等价定义，其中一种称为<strong>视图等价</strong>，由此得到<strong>视图可串行化性</strong>。由于判断的计算复杂度很高，实际中不采用视图可串行化性。<sup id="fnref:ch17-4"><a class="footnote-ref" href="#fn:ch17-4">4</a></sup> 相关讨论留到第 18 章。这里补充一点：调度 8 也不具有视图可串行化性。</p>
+<!-- SOURCE pdf-0847-b019 -->
+<!-- SOURCE pdf-0848-b036 -->
+<h2 id="177">17.7 事务隔离与原子性</h2>
+<!-- SOURCE pdf-0848-b037 -->
+<p>此前研究调度时，隐含假定事务不会失败。现在讨论并发执行期间事务失败的影响。</p>
+<!-- SOURCE pdf-0848-b038 -->
+<p>无论 Tᵢ 因何失败，都需要撤销它的效果，以保证原子性。在允许并发的系统中，凡是依赖 Tᵢ 的事务 Tⱼ，即读过 Tᵢ 所写数据的事务，也必须中止。为此，需要限制系统允许产生的调度。</p>
+<!-- SOURCE pdf-0848-b039 -->
+<p>下面两节从事务故障恢复的角度说明哪些调度可以接受。第 18 章介绍如何保证系统只产生这样的调度。</p>
+<!-- SOURCE pdf-0848-b040 -->
+<h3 id="1771">17.7.1 可恢复调度</h3>
+<!-- SOURCE pdf-0848-b041 -->
+<!-- SOURCE pdf-0849-b021 -->
+<p>考虑图17.14 的部分调度 9。T₇ 只执行一条指令 <code>read(A)</code>。称它为部分调度，是因为尚未列出 T₆ 的提交或中止操作。T₇ 读完 A 就立即提交，此时 T₆ 仍处于活动状态。若随后 T₆ 在提交前失败，由于 T₇ 读过 T₆ 写入的 A，T₇ 依赖 T₆，必须跟着中止才能保证原子性。但 T₇ 已经提交，无法再中止，系统便无法从 T₆ 的失败中正确恢复。</p>
+<!-- SOURCE pdf-0849-b005 -->
+<!-- SOURCE pdf-0849-b008 -->
+<!-- SOURCE pdf-0849-b011 -->
+<!-- SOURCE pdf-0849-b013 -->
+<!-- SOURCE pdf-0849-b016 -->
+<!-- SOURCE pdf-0849-b018 -->
+<!-- SOURCE pdf-0849-b020 -->
+<p><img alt="图17.14" src="../assets/ch17-figure-17-14.png" /></p>
+<p><strong>图17.14 调度 9：不可恢复调度。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0849-b022 -->
+<p>调度 9 是<strong>不可恢复调度</strong>。<strong>可恢复调度</strong>要求：对于每一对事务 Tᵢ、Tⱼ，只要 Tⱼ 读取了 Tᵢ 先前写入的数据项，Tᵢ 的提交就必须先于 Tⱼ 的提交。要使调度 9 可恢复，必须让 T₇ 等到 T₆ 提交后再提交。</p>
+<!-- SOURCE pdf-0849-b023 -->
+<h3 id="1772">17.7.2 无级联调度</h3>
+<!-- SOURCE pdf-0849-b024 -->
+<p>即使调度可恢复，Tᵢ 失败后也可能需要回滚多个事务，因为其他事务可能已经读取了它写入的数据。例如图17.15：T₈ 写入的 A 被 T₉ 读取，T₉ 随后写入的 A 又被 T₁₀ 读取。若此时 T₈ 失败，T₈ 必须回滚；T₉ 依赖 T₈，也必须回滚；T₁₀ 依赖 T₉，同样必须回滚。一个事务失败引起一串事务回滚，称为<strong>级联回滚</strong>。</p>
+<!-- SOURCE pdf-0849-b031 -->
+<!-- SOURCE pdf-0849-b034 -->
+<!-- SOURCE pdf-0849-b037 -->
+<!-- SOURCE pdf-0849-b041 -->
+<!-- SOURCE pdf-0849-b044 -->
+<!-- SOURCE pdf-0849-b047 -->
+<!-- SOURCE pdf-0849-b051 -->
+<!-- SOURCE pdf-0849-b054 -->
+<!-- SOURCE pdf-0849-b058 -->
+<!-- SOURCE pdf-0849-b060 -->
+<p><img alt="图17.15" src="../assets/ch17-figure-17-15.png" /></p>
+<p><strong>图17.15 调度 10。</strong> 时间从上向下推进，分列表示不同事务；read 为读取，write 为写入，commit 为提交，abort 为中止。</p>
+<!-- SOURCE pdf-0850-b001 -->
+<p>级联回滚会撤销大量已经完成的工作，应尽量避免。把调度限制为不会发生级联回滚的形式，就得到<strong>无级联调度</strong>。其正式定义是：对于每一对事务 Tᵢ、Tⱼ，只要 Tⱼ 读取了 Tᵢ 先前写入的数据项，Tᵢ 的提交必须先于 Tⱼ 的读操作。很容易验证，每个无级联调度也都是可恢复调度。</p>
+<!-- SOURCE pdf-0850-b002 -->
+<h2 id="178">17.8 事务隔离级别</h2>
+<!-- SOURCE pdf-0850-b003 -->
+<p>可串行化性让程序员在编写事务时，可以暂不考虑并发问题。只要每个事务单独执行时都保持数据库一致，可串行化就能保证并发执行仍然一致。不过，对某些应用，保证可串行化所需的协议会过度限制并发，此时可能采用较弱的一致性级别。这会增加程序员保证数据库正确性的负担。</p>
+<!-- SOURCE pdf-0850-b004 -->
+<p>SQL 标准也允许事务指定一种执行方式，使其相对于其他事务未必可串行化。例如，<strong>读未提交</strong>隔离级别允许读取尚未提交事务写入的数据。SQL 提供这些功能，是为了照顾结果无须十分精确的长事务；如果要求它们可串行化，可能干扰其他事务，延迟其他事务的执行。</p>
+<!-- SOURCE pdf-0850-b005 -->
+<p>SQL 标准定义了以下隔离级别：</p>
+<!-- SOURCE pdf-0850-b006 -->
+<ul>
+<li><strong>可串行化（serializable）</strong>：通常保证可串行化执行。不过，某些数据库对这个级别的实现，在特定情况下仍可能允许不可串行化的执行，稍后会说明。</li>
+<li><strong>可重复读（repeatable read）</strong>：只允许读取已提交数据，并且一个事务两次读取同一数据项之间，不允许其他事务更新它。不过，事务仍未必相对于其他事务可串行化。例如，搜索满足某些条件的数据时，可能看见某个已提交事务插入的一部分数据，却看不见它插入的另一部分。</li>
+<li><strong>读已提交（read committed）</strong>：只允许读取已提交数据，但不要求可重复读。例如，两次读取同一数据项之间，另一事务可能已经更新并提交它。</li>
+<li><strong>读未提交（read uncommitted）</strong>：允许读取未提交数据，是 SQL 允许的最低隔离级别。</li>
+</ul>
+<!-- SOURCE pdf-0851-b001 -->
+<p>上述所有隔离级别还禁止<strong>脏写</strong>：如果某数据项已被另一个尚未提交、也尚未中止的事务写过，其他事务不能再写它。</p>
+<!-- SOURCE pdf-0851-b002 -->
+<p>许多数据库默认采用读已提交。SQL 允许显式设置隔离级别。例如：</p>
+<!-- SOURCE pdf-0851-b003 -->
+
+<pre><code class="language-sql">set transaction isolation level serializable
+</code></pre>
+<!-- SOURCE pdf-0851-b004 -->
+<p>将隔离级别设为可串行化，也可以指定其他级别。Oracle、PostgreSQL 和 SQL Server 支持上述语法。Oracle 还使用以下语法：</p>
+<!-- SOURCE pdf-0851-b005 -->
+<!-- SOURCE pdf-0851-b007 -->
+
+<pre><code class="language-sql">alter session set isolation_level = serializable
+</code></pre>
+<!-- SOURCE pdf-0851-b008 -->
+<p>DB2 则使用 <code>change isolation level</code>，并为隔离级别定义了自己的缩写。更改隔离级别必须作为事务的第一条语句执行。</p>
+<!-- SOURCE pdf-0851-b009 -->
+<p>大多数数据库默认在每条语句执行后立即提交。要把多条语句作为同一事务执行，必须关闭单条语句的自动提交。<code>start transaction</code> 表示，之后直到 <code>commit</code> 或 <code>rollback</code> 的 SQL 都属于一个事务；<code>commit</code> 提交此前的语句，<code>rollback</code> 回滚它们。原书说明 SQL Server 使用 <code>begin transaction</code> 代替 <code>start transaction</code>，并将 Oracle、PostgreSQL 的 <code>begin</code> 也列为同义形式。</p>
+<blockquote>
+<p>译注：原书关于 Oracle <code>begin</code> 的说明有误。Oracle 的事务由可执行 SQL 隐式开始，PL/SQL 的 <code>BEGIN</code> 用于开始程序块；不能将其直接视为 PostgreSQL 的事务开始命令。参见 <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/transactions.html">Oracle 事务文档</a>。</p>
+</blockquote>
+<!-- SOURCE pdf-0851-b010 -->
+<p>JDBC、ODBC 等 API 提供了关闭自动提交的函数。在 JDBC 中，5.1.1.8 节介绍的 <code>Connection.setAutoCommit</code> 可以通过 <code>setAutoCommit(false)</code> 关闭自动提交，通过 <code>setAutoCommit(true)</code> 开启。还可以调用 <code>Connection</code> 的 <code>setTransactionIsolation(int level)</code>，传入下列常量之一，设置相应隔离级别：</p>
+<!-- SOURCE pdf-0851-b011 -->
+<!-- SOURCE pdf-0851-b013 -->
+<!-- SOURCE pdf-0851-b015 -->
+<!-- SOURCE pdf-0851-b017 -->
+<!-- SOURCE pdf-0851-b019 -->
+<!-- SOURCE pdf-0851-b021 -->
+<!-- SOURCE pdf-0851-b023 -->
+<!-- SOURCE pdf-0851-b025 -->
+<!-- SOURCE pdf-0851-b026 -->
+
+<pre><code class="language-java">Connection.TRANSACTION_SERIALIZABLE
+Connection.TRANSACTION_REPEATABLE_READ
+Connection.TRANSACTION_READ_COMMITTED
+Connection.TRANSACTION_READ_UNCOMMITTED
+</code></pre>
+<!-- SOURCE pdf-0851-b027 -->
+<!-- SOURCE pdf-0852-b001 -->
+<p>应用设计者可能为了性能接受较弱的隔离级别。17.9 节和第 18 章将看到，保证可串行化可能迫使事务等待，甚至因无法纳入可串行化执行而中止。为了性能冒一致性风险似乎欠妥，但只要能确认可能发生的不一致与应用无关，这种取舍就有道理。</p>
+<!-- SOURCE pdf-0852-b002 -->
+<p>隔离级别有多种实现。只要实现保证可串行化，应用设计者和使用者通常无须知道其细节，性能问题除外。但有些数据库即使设置为可串行化，实际上也采用较弱的隔离，无法排除所有不可串行化执行；17.9 节会再次讨论。无论显式还是隐式采用较弱隔离，设计者都需要了解部分实现细节，才能避免或减少由不可串行化引发的不一致。</p>
+<!-- SOURCE pdf-0852-b003 -->
+<h2 id="179">17.9 隔离级别的实现</h2>
+<!-- SOURCE pdf-0852-b004 -->
+<p>前面已经说明，调度必须满足哪些性质，才能保持数据库一致，并安全处理事务失败。</p>
+<!-- SOURCE pdf-0852-b005 -->
+<p>各种并发控制策略都可以保证：即使多个事务并发执行，且操作系统在事务之间任意分配 CPU 等资源，系统也只产生可接受的调度。</p>
+<!-- SOURCE pdf-0852-b006 -->
+<p>一个最简单的策略是，事务开始前锁住整个数据库，提交后释放锁。持锁期间其他事务无法获得锁，只能等待。这样每次只有一个事务运行，产生的都是串行调度，自然可串行化，也容易验证其可恢复且无级联。</p>
+<!-- SOURCE pdf-0852-b007 -->
+<p>这种策略性能较差，后一个事务必须等待前一个结束，完全没有并发。17.5 节已经说明，并发执行能带来明显的性能收益。</p>
+<!-- SOURCE pdf-0852-b008 -->
+<p>并发控制的目标，是在保持较高并发度的同时，保证所有可能产生的调度都具有冲突可串行化性或视图可串行化性，并且可恢复、无级联。</p>
+<!-- SOURCE pdf-0852-b009 -->
+<p>下面概述几种主要机制，第 18 章再展开细节。</p>
+<!-- SOURCE pdf-0852-b010 -->
+<h3 id="1791">17.9.1 加锁</h3>
+<!-- SOURCE pdf-0852-b011 -->
+<!-- SOURCE pdf-0853-b006 -->
+<p>事务可以只锁住它访问的数据项。持锁时间要足以保证可串行化，又要尽量短，以免过度影响性能。如果 SQL 访问哪些数据由 <code>where</code> 条件决定，情况还会更复杂，见 17.10 节。第 18 章介绍一种简单且广泛采用的<strong>两阶段锁协议</strong>：事务分两个阶段，第一阶段只获取锁、不释放锁；第二阶段只释放锁、不获取新锁。实际中，通常等事务执行完成、提交或中止后才释放锁。</p>
+<!-- SOURCE pdf-0853-b002 -->
+<h3 id="172_1">注17.2 现实中的可串行化性</h3>
+<p>可串行化调度是保证一致性的理想方式，日常生活却未必提出如此严格的要求。购物网站可能显示某件商品有货，但用户选好商品、进入结账流程时，商品已经售罄。从数据库角度看，这就是不可重复读。</p>
+<!-- SOURCE pdf-0853-b003 -->
+<p>再看航空选座。假设旅客已经订好行程，正在为各段航班选座。许多网站允许用户依次选择各航班座位，最后确认。其他旅客可能同时为相同航班选座或改座，可用座位持续变化，但用户看到的只是开始选座时的一个快照。</p>
+<!-- SOURCE pdf-0853-b004 -->
+<p>两位旅客即使同时选座，也很可能选不同座位，此时没有实际冲突。不过，从调度角度看，这些事务仍不可串行化：每位旅客都读过随后被另一位更新的数据，优先图中形成环。如果确实选中同一个座位，其中一人无法获得所选座位，只需给他更新后的座位信息，请他重新选择，就可以解决。</p>
+<!-- SOURCE pdf-0853-b005 -->
+<p>让同一航班每次只允许一人选座，可以强制可串行化，但会造成明显延迟。其他旅客必须等待，有人迟迟不作决定时，影响尤其大。通常把这类过程分为需要用户交互的部分，以及完全在数据库中运行的部分。上例中的数据库事务只检查用户所选座位是否仍可用，若可用就更新记录。可串行化仅在这段不包含用户交互的数据库事务上保证。</p>
+<!-- SOURCE pdf-0854-b001 -->
+<p>使用<strong>共享锁</strong>与<strong>排他锁</strong>两种锁，可以进一步改善并发。读数据使用共享锁，写数据使用排他锁。多个事务可以同时持有同一数据项的共享锁；但要取得排他锁，必须没有其他事务持有该项的任何锁，无论共享还是排他。两种锁配合两阶段锁协议，允许并发读，同时保证可串行化。</p>
+<!-- SOURCE pdf-0854-b002 -->
+<h3 id="1792">17.9.2 时间戳</h3>
+<!-- SOURCE pdf-0854-b003 -->
+<p>另一类隔离实现通常在事务开始时，为它分配一个<strong>时间戳</strong>。系统还为每个数据项维护两个时间戳：<strong>读时间戳</strong>是所有读过该项的事务时间戳中的最大值，即最近者；<strong>写时间戳</strong>是写入当前值的事务的时间戳。对于冲突访问，系统利用时间戳保证各事务按时间戳顺序访问每个数据项。如果无法维持这一顺序，就中止违背顺序的事务，再用新时间戳重新启动。</p>
+<!-- SOURCE pdf-0854-b004 -->
+<h3 id="1793">17.9.3 多版本与快照隔离</h3>
+<!-- SOURCE pdf-0854-b005 -->
+<p>为数据项保留多个版本，就能让事务读取旧版本，避开尚未提交事务写入的新版本，或者避开在可串行化顺序中应排在后面的事务所写的版本。多版本并发控制有多种技术，其中<strong>快照隔离</strong>在实际中应用广泛。</p>
+<!-- SOURCE pdf-0854-b006 -->
+<p>在快照隔离中，可以想象每个事务开始时都得到自己的数据库版本，称为<strong>快照</strong>。<sup id="fnref:ch17-5"><a class="footnote-ref" href="#fn:ch17-5">5</a></sup> 事务从这个私有版本读数据，因而不受其他事务更新的影响。若它更新数据库，更新先只出现在自己的版本中；系统保存这些更新信息，待事务提交时再应用到“真实”数据库。</p>
+<!-- SOURCE pdf-0854-b007 -->
+<p>事务 T 进入部分提交状态后，只有当不存在其他并发事务修改过 T 想要更新的数据，才能继续提交。无法满足这一条件的事务会中止。</p>
+<!-- SOURCE pdf-0854-b008 -->
+<p>与加锁不同，快照隔离下读数据无须等待；只读事务不会因这种机制而中止，只有更新事务有少量中止风险。每个事务读自己的快照，所以读操作也不会阻塞其他事务随后发起的更新。多数事务是只读的，而多数更新事务也是读多写少，这通常是快照隔离比加锁性能更好的重要原因。</p>
+<!-- SOURCE pdf-0854-b010 -->
+<!-- SOURCE pdf-0855-b001 -->
+<p>快照隔离的问题看似矛盾：它隔离得过于彻底了。在可串行化执行中，T 与 T′ 必有一个排在另一个之后，所以至少有一个能看到另一个的全部更新。快照隔离下，却可能两者都看不见对方的更新，可串行化执行中不会出现这种情况。大多数时候，两个事务的数据访问互不冲突，没有问题。但若 T 读取了 T′ 更新的项，而 T′ 又读取了 T 更新的项，双方都可能错过对方的更新。第 18 章将说明，这可能使数据库进入任何串行化执行都不会产生的不一致状态。</p>
+<!-- SOURCE pdf-0855-b002 -->
+<p>Oracle、PostgreSQL 和 SQL Server 都提供快照隔离选项。Oracle，以及 PostgreSQL 9.1 之前的版本，用快照隔离实现名为 <code>serializable</code> 的级别，因而在少数情况下允许不可串行化执行。SQL Server 在标准隔离级别之外另加 <code>snapshot</code> 级别，提供快照隔离。PostgreSQL 9.1 及后续版本则采用<strong>可串行化快照隔离</strong>，在保留快照隔离优点的同时保证可串行化。</p>
+<blockquote>
+<p>译注：原文写“9.1 之后”，此处明确包含 9.1；该版本已经提供可串行化快照隔离，见 <a href="https://www.postgresql.org/docs/9.1/transaction-iso.html">PostgreSQL 9.1 文档</a>。</p>
+</blockquote>
+<!-- SOURCE pdf-0855-b003 -->
+<h2 id="1710-sql">17.10 以 SQL 语句表达事务</h2>
+<!-- SOURCE pdf-0855-b004 -->
+<p>4.3 节介绍了 SQL 中划定事务起止的语法。了解保证 ACID 时面临的问题后，现在可以讨论：事务由一系列 SQL 语句组成时，这些性质如何保证。前面的模型仅限简单读写。</p>
+<!-- SOURCE pdf-0855-b005 -->
+<p>简化模型假定数据项集合已经存在，只允许改变值，不能创建、删除数据项。SQL 的 <code>insert</code> 会创建数据，<code>delete</code> 会删除数据。两者都会修改数据库，所以也属于写操作，但它们与其他事务的交互有别于简单模型。例如，下面查询找出工资超过 90000 美元的全部教师，插入、删除会怎样与它冲突？</p>
+<!-- SOURCE pdf-0855-b006 -->
+
+<pre><code class="language-sql">select ID, name
+from instructor
+where salary &gt; 90000;
+</code></pre>
+<!-- SOURCE pdf-0855-b007 -->
+<p>按 A.3 节的 <code>instructor</code> 示例，只有 Einstein 和 Brandt 满足条件。假设查询执行前后，另一个用户插入名为 James、工资为 100000 美元的新教师：</p>
+<!-- SOURCE pdf-0856-b001 -->
+
+<pre><code class="language-sql">insert into instructor values ('11111', 'James', 'Marketing', 100000);
+</code></pre>
+<!-- SOURCE pdf-0856-b002 -->
+<p>结果取决于插入发生在查询之前还是之后。直觉上，两者并发执行会冲突，但简单模型可能捕捉不到这种冲突。这称为<strong>幻读现象</strong>，因为冲突发生在“幻影”数据上。</p>
+<!-- SOURCE pdf-0856-b003 -->
+<p>简单模型的每个操作都把具体数据项作为参数，从读写步骤就能知道访问了哪些项。SQL 中，具体访问的元组却可能由 <code>where</code> 谓词决定。数据库值在两次执行之间改变，同一事务每次访问的数据项就可能不同。本例中，只有插入先于查询时，查询才会访问 James 元组。令 T 为查询、T′ 为插入。若 T′ 先执行，优先图中存在 T′ → T；但若 T 先执行，图中没有两者之间的边，尽管对幻影数据的实际冲突要求 T 在串行化顺序中先于 T′。</p>
+<!-- SOURCE pdf-0856-b004 -->
+<p>这说明并发控制不能只考虑事务实际访问的元组，还必须考虑用于查找这些元组的信息。插入、删除可能修改这些信息；使用索引时，更新搜索码属性也可能修改它们。例如，采用锁进行并发控制时，需要适当地锁住跟踪关系元组的数据结构，以及相关索引结构。不过，这样加锁有时会降低并发度。18.4.3 节介绍索引加锁协议，在存在插入、删除和查询谓词的情况下，尽量提高并发，同时保证可串行化。</p>
+<!-- SOURCE pdf-0856-b005 -->
+<p>再考虑查询：</p>
+<!-- SOURCE pdf-0856-b006 -->
+
+<pre><code class="language-sql">select ID, name
+from instructor
+where salary &gt; 90000;
+</code></pre>
+<!-- SOURCE pdf-0856-b007 -->
+<p>以及以下更新：</p>
+<!-- SOURCE pdf-0856-b008 -->
+
+<pre><code class="language-sql">update instructor
+set salary = salary * 0.9
+where name = 'Wu';
+</code></pre>
+<!-- SOURCE pdf-0856-b009 -->
+<!-- SOURCE pdf-0857-b001 -->
+<p>判断查询是否与更新冲突，会遇到一种特殊情况。如果查询扫描整个 <code>instructor</code>，就会读到 Wu 的元组，与更新发生冲突；若有索引直接定位工资大于 90000 的元组，查询就完全不会访问 Wu，因为示例中 Wu 的原工资为 90000，更新后为 81000，始终不满足查询条件。</p>
+<!-- SOURCE pdf-0857-b002 -->
+<p>这样一来，是否冲突竟取决于系统底层的查询处理选择，与用户看到的两条 SQL 的含义无关。另一种并发控制办法，是看插入、删除或更新是否可能改变谓词选中的元组集合；若可能，就认定它与该谓词冲突。本例谓词为 <code>salary &gt; 90000</code>。把 Wu 的工资从 90000 调到更高，或把 Einstein 的工资从高于 90000 调到小于等于 90000，都会与该谓词冲突。按这一思想加锁，称为<strong>谓词锁</strong>，通常借助索引节点上的锁实现，见 18.4.3 节。</p>
+<!-- SOURCE pdf-0857-b003 -->
+<h2 id="1711">17.11 小结</h2>
+<!-- SOURCE pdf-0857-b004 -->
+<ul>
+<li><strong>事务</strong>是访问、也可能更新多个数据项的程序执行单元。理解事务，才能理解并实现可靠的数据库更新，使并发执行和各种故障都不会导致数据库不一致。</li>
+<li>事务需要满足 ACID：原子性、一致性、隔离性、持久性。</li>
+</ul>
+<!-- SOURCE pdf-0857-b005 -->
+<!-- SOURCE pdf-0857-b006 -->
+<p><strong>原子性</strong>保证事务的效果全部反映到数据库中，或全部不反映；故障不能把数据库留在只执行了一部分事务的状态。</p>
+<!-- SOURCE pdf-0857-b007 -->
+<!-- SOURCE pdf-0857-b008 -->
+<p><strong>一致性</strong>保证数据库初始一致时，事务单独执行后仍然一致。</p>
+<!-- SOURCE pdf-0857-b009 -->
+<!-- SOURCE pdf-0857-b010 -->
+<p><strong>隔离性</strong>保证并发事务彼此隔离，每个事务都觉得没有其他事务与自己并发执行。</p>
+<!-- SOURCE pdf-0857-b011 -->
+<!-- SOURCE pdf-0857-b012 -->
+<!-- SOURCE pdf-0858-b001 -->
+<p><strong>持久性</strong>保证事务提交后，其更新即使遇到系统故障也不会丢失。</p>
+<ul>
+<li>并发执行提高事务吞吐量和系统利用率，也缩短事务等待时间。</li>
+<li>存储分为易失性、非易失性和稳定存储。RAM 等易失性存储的数据会在计算机崩溃时丢失；磁盘等非易失性存储的数据不会因计算机崩溃而丢失，但可能因磁盘故障等偶发事件而丢失；理想稳定存储中的数据永不丢失。</li>
+<li>需要在线访问的稳定存储，可用镜像磁盘或其他提供数据冗余的 RAID 形式逼近。离线、归档稳定存储可以是在物理安全地点保存的多份磁带副本。</li>
+<li>多个事务并发执行时，数据一致性可能遭到破坏，系统必须控制它们之间的相互影响。</li>
+</ul>
+<!-- SOURCE pdf-0858-b002 -->
+<!-- SOURCE pdf-0858-b003 -->
+<p>事务本身是保持一致性的单元，所以串行执行能保证一致性。</p>
+<!-- SOURCE pdf-0858-b004 -->
+<!-- SOURCE pdf-0858-b005 -->
+<p><strong>调度</strong>保留事务中影响并发执行的主要操作，例如读写，同时抽去事务内部执行细节。</p>
+<!-- SOURCE pdf-0858-b006 -->
+<!-- SOURCE pdf-0858-b007 -->
+<p>一组事务并发处理所产生的任何调度，都应与这些事务按某个顺序串行执行的调度效果等价。</p>
+<!-- SOURCE pdf-0858-b008 -->
+<p>能保证这一点的系统，就保证了<strong>可串行化性</strong>。</p>
+<!-- SOURCE pdf-0858-b009 -->
+<!-- SOURCE pdf-0858-b010 -->
+<p>不同的等价定义，对应<strong>冲突可串行化性</strong>、<strong>视图可串行化性</strong>等概念。</p>
+<!-- SOURCE pdf-0858-b011 -->
+<ul>
+<li><strong>并发控制策略</strong>有多种，用于保证并发事务产生的调度可串行化。</li>
+<li>给定调度，可以构造<strong>优先图</strong>，检查是否有环，以判断冲突可串行化性。不过，为保证运行时的可串行化，还有更高效的并发控制策略。</li>
+<li>调度必须<strong>可恢复</strong>：若事务 a 看到了 b 的效果，而 b 随后中止，那么 a 也必须中止。</li>
+<li>调度最好<strong>无级联</strong>，避免一个事务中止导致其他事务接连中止。只允许事务读取已提交数据，就能保证无级联。</li>
+<li>数据库的并发控制管理组件负责落实策略，包括加锁、时间戳排序和快照隔离等技术。第 18 章进一步介绍。</li>
+</ul>
+<!-- SOURCE pdf-0859-b001 -->
+<ul>
+<li>数据库提供比可串行化更弱的隔离级别，减少对并发的限制，提高性能，同时引入某些应用可以接受的不一致风险。</li>
+<li>SQL 的 <code>update</code>、<code>insert</code>、<code>delete</code> 涉及幻读现象，要保证正确并发执行，还需要额外处理。</li>
+</ul>
+<!-- SOURCE pdf-0859-b002 -->
+<h2 id="_1">复习术语</h2>
+<!-- SOURCE pdf-0859-b003 -->
+<!-- SOURCE pdf-0859-b004 -->
+<!-- SOURCE pdf-0859-b005 -->
+<!-- SOURCE pdf-0859-b006 -->
+<!-- SOURCE pdf-0859-b007 -->
+<!-- SOURCE pdf-0859-b008 -->
+<!-- SOURCE pdf-0859-b009 -->
+<!-- SOURCE pdf-0859-b010 -->
+<p>事务；ACID 性质（原子性、一致性、隔离性、持久性）；不一致状态；存储类型（易失性存储、非易失性存储、稳定存储）；并发控制系统；恢复系统。</p>
+<!-- SOURCE pdf-0859-b011 -->
+<!-- SOURCE pdf-0859-b012 -->
+<!-- SOURCE pdf-0859-b013 -->
+<!-- SOURCE pdf-0859-b014 -->
+<!-- SOURCE pdf-0859-b015 -->
+<!-- SOURCE pdf-0859-b016 -->
+<!-- SOURCE pdf-0859-b017 -->
+<!-- SOURCE pdf-0859-b018 -->
+<p>事务状态（活动、部分提交、失败、已中止、已提交、已终止）；补偿事务；事务重新启动与终结。</p>
+<!-- SOURCE pdf-0859-b019 -->
+<!-- SOURCE pdf-0859-b020 -->
+<!-- SOURCE pdf-0859-b021 -->
+<!-- SOURCE pdf-0859-b022 -->
+<!-- SOURCE pdf-0859-b023 -->
+<p>可观察的外部写入；并发执行；串行执行；调度；操作冲突；冲突等价；冲突可串行化性；可串行化性测试；优先图；可串行化顺序；可恢复调度；级联回滚；无级联调度；隔离级别（可串行化、可重复读、读已提交、读未提交）。</p>
+<!-- SOURCE pdf-0859-b024 -->
+<p>脏写；自动提交；并发控制；加锁；时间戳排序；快照隔离；幻读现象；谓词锁。</p>
+<!-- SOURCE pdf-0860-b001 -->
+<h2 id="_2">练习题</h2>
+<!-- SOURCE pdf-0860-b002 -->
+<p><strong>17.1</strong> 假设有一个永不发生故障的数据库系统，它还需要恢复管理器吗？</p>
+<!-- SOURCE pdf-0860-b003 -->
+<p><strong>17.2</strong> 考虑一个文件系统，例如你常用操作系统中的文件系统。</p>
+<!-- SOURCE pdf-0860-b004 -->
+<p>a. 创建、删除文件，以及向文件写入数据，分别需要哪些步骤？</p>
+<!-- SOURCE pdf-0860-b005 -->
+<p>b. 解释这些操作与原子性、持久性有什么关系。</p>
+<!-- SOURCE pdf-0860-b006 -->
+<p><strong>17.3</strong> 数据库系统实现者对 ACID 的重视远超文件系统实现者，可能是什么原因？</p>
+<!-- SOURCE pdf-0860-b007 -->
+<p><strong>17.4</strong> 哪一类或哪几类存储可以用来保证持久性？为什么？</p>
+<!-- SOURCE pdf-0860-b008 -->
+<p><strong>17.5</strong> 每个冲突可串行化调度都具有视图可串行化性。为什么我们仍重点讨论冲突可串行化性？</p>
+<!-- SOURCE pdf-0860-b009 -->
+<p><strong>17.6</strong> 考虑图17.16 的优先图。对应调度是否冲突可串行化？解释理由。</p>
+<!-- SOURCE pdf-0860-b012 -->
+<!-- SOURCE pdf-0860-b013 -->
+<!-- SOURCE pdf-0860-b014 -->
+<!-- SOURCE pdf-0860-b015 -->
+<!-- SOURCE pdf-0860-b016 -->
+<!-- SOURCE pdf-0860-b017 -->
+<p><img alt="图17.16" src="../assets/ch17-figure-17-16.png" /></p>
+<p><strong>图17.16 练习题 17.6 的优先图。</strong></p>
+<!-- SOURCE pdf-0860-b010 -->
+<p><strong>17.7</strong> 什么是无级联调度？为什么希望调度无级联？是否存在允许非无级联调度更合适的情况？解释理由。</p>
+<!-- SOURCE pdf-0860-b011 -->
+<p><strong>17.8</strong> 若事务 Tⱼ 先读一个数据项，另一个事务 Tₖ 随后写入该项，可能依据它此前读到的值；之后 Tⱼ 又写入该项，且忽略 Tₖ 写入的值，就会使 Tₖ 的更新丢失。这称为<strong>丢失更新异常</strong>。</p>
+<!-- SOURCE pdf-0861-b001 -->
+<p>a. 给出一个发生丢失更新的调度。</p>
+<!-- SOURCE pdf-0861-b002 -->
+<p>b. 给出调度，说明读已提交级别仍可能发生丢失更新。</p>
+<!-- SOURCE pdf-0861-b003 -->
+<p>c. 解释为什么可重复读级别不可能发生丢失更新。</p>
+<!-- SOURCE pdf-0861-b004 -->
+<p><strong>17.9</strong> 某银行数据库采用快照隔离。描述一种具体情形，其中不可串行化执行会给银行带来问题。</p>
+<!-- SOURCE pdf-0861-b005 -->
+<p><strong>17.10</strong> 某航空公司数据库采用快照隔离。描述一种具体情形，其中虽然出现不可串行化执行，航空公司仍愿意为了整体性能而接受它。</p>
+<!-- SOURCE pdf-0861-b006 -->
+<!-- SOURCE pdf-0861-b007 -->
+<p><strong>17.11</strong> 调度的定义假定操作可以按时间形成全序。对于多处理器系统，不同处理器上的操作未必能确定精确先后，但同一数据项上的操作仍能形成全序。这会给冲突可串行化性的定义带来问题吗？解释理由。</p>
+<!-- SOURCE pdf-0861-b008 -->
+<h2 id="_3">习题</h2>
+<!-- SOURCE pdf-0861-b009 -->
+<p><strong>17.12</strong> 列出 ACID 四种性质，说明每一种的作用。</p>
+<!-- SOURCE pdf-0861-b010 -->
+<p><strong>17.13</strong> 事务执行时经过若干状态，最终提交或中止。列出所有可能的状态序列，解释每种状态转换为何发生。</p>
+<!-- SOURCE pdf-0861-b011 -->
+<p><strong>17.14</strong> 解释串行调度与可串行化调度的区别。</p>
+<!-- SOURCE pdf-0861-b012 -->
+<p><strong>17.15</strong> 考虑两个事务：</p>
+<!-- SOURCE pdf-0861-b013 -->
+<!-- SOURCE pdf-0861-b014 -->
+<!-- SOURCE pdf-0861-b015 -->
+
+<pre><code class="language-text">T13: read(A);
+     read(B);
+     if A = 0 then B := B + 1;
+     write(B).
+
+T14: read(B);
+     read(A);
+     if B = 0 then A := A + 1;
+     write(A).
+</code></pre>
+<!-- SOURCE pdf-0862-b001 -->
+<p>一致性要求为 A = 0 ∨ B = 0，初值为 A = B = 0。</p>
+<!-- SOURCE pdf-0862-b002 -->
+<p>a. 证明这两个事务的任何串行执行都保持数据库一致。</p>
+<!-- SOURCE pdf-0862-b003 -->
+<p>b. 给出 T₁₃、T₁₄ 的一种并发执行，使调度不可串行化。</p>
+<!-- SOURCE pdf-0862-b004 -->
+<p>c. 是否存在产生可串行化调度的并发执行？</p>
+<!-- SOURCE pdf-0862-b005 -->
+<p><strong>17.16</strong> 给出包含两个事务的可串行化调度，使它们的提交顺序与串行化顺序不同。</p>
+<!-- SOURCE pdf-0862-b006 -->
+<p><strong>17.17</strong> 什么是可恢复调度？为什么希望调度可恢复？是否存在允许不可恢复调度更合适的情况？解释理由。</p>
+<!-- SOURCE pdf-0862-b007 -->
+<p><strong>17.18</strong> 保证并发执行不出问题需要额外工作，数据库为什么仍支持并发事务？</p>
+<!-- SOURCE pdf-0862-b008 -->
+<p><strong>17.19</strong> 解释为什么读已提交隔离级别能保证调度无级联。</p>
+<!-- SOURCE pdf-0862-b009 -->
+<p><strong>17.20</strong> 对以下每个隔离级别，分别给出一个满足该级别、却不可串行化的调度：</p>
+<!-- SOURCE pdf-0862-b010 -->
+<p>a. 读未提交。</p>
+<!-- SOURCE pdf-0862-b011 -->
+<p>b. 读已提交。</p>
+<!-- SOURCE pdf-0862-b012 -->
+<p>c. 可重复读。</p>
+<!-- SOURCE pdf-0862-b013 -->
+<!-- SOURCE pdf-0862-b015 -->
+<p><strong>17.21</strong> 除 <code>read</code>、<code>write</code> 外，再允许操作 <code>pred_read(r, P)</code>，读取关系 r 中所有满足谓词 P 的元组。</p>
+<!-- SOURCE pdf-0862-b016 -->
+<!-- SOURCE pdf-0862-b018 -->
+<p>a. 给出一个使用 <code>pred_read</code> 的调度，展示幻读现象，并由此导致不可串行化。</p>
+<!-- SOURCE pdf-0862-b019 -->
+<!-- SOURCE pdf-0862-b021 -->
+<p>b. 给出一个调度，其中一个事务对关系 r 使用 <code>pred_read</code>，另一个并发事务从 r 删除一个元组，但不发生幻读冲突。需要给出 r 的模式，并展示被删元组的各属性值。</p>
+<!-- SOURCE pdf-0863-b001 -->
+<h2 id="_4">延伸阅读</h2>
+<!-- SOURCE pdf-0863-b002 -->
+<p>[Gray and Reuter (1993)] 以教材形式详细介绍事务处理的概念、技术和实现，包括并发控制与恢复。[Bernstein and Newcomer (2009)] 也系统介绍了事务处理的各个方面。</p>
+<!-- SOURCE pdf-0863-b003 -->
+<p>[Eswaran et al. (1976)] 在 System R 并发控制研究中，将可串行化概念形式化。</p>
+<!-- SOURCE pdf-0863-b004 -->
+<p>并发控制、恢复等具体主题的参考文献，分别列在第 18 章和第 19 章。</p>
+<!-- SOURCE pdf-0863-b005 -->
+<h2 id="_5">参考文献</h2>
+<!-- SOURCE pdf-0863-b006 -->
+<ul>
+<li>[Bernstein and Newcomer (2009)] P. A. Bernstein and E. Newcomer, <em>Principles of Transaction Processing</em>, 2nd edition, Morgan Kaufmann (2009).（《事务处理原理》第 2 版）</li>
+</ul>
+<!-- SOURCE pdf-0863-b007 -->
+<ul>
+<li>[Eswaran et al. (1976)] K. P. Eswaran, J. N. Gray, R. A. Lorie, and I. L. Traiger, “The Notions of Consistency and Predicate Locks in a Database System”, <em>Communications of the ACM</em>, Volume 19, Number 11 (1976), pages 624–633.（《数据库系统中的一致性与谓词锁概念》）</li>
+</ul>
+<!-- SOURCE pdf-0863-b008 -->
+<ul>
+<li>[Gray and Reuter (1993)] J. Gray and A. Reuter, <em>Transaction Processing: Concepts and Techniques</em>, Morgan Kaufmann (1993).（《事务处理：概念与技术》）</li>
+</ul>
+<!-- SOURCE pdf-0863-b009 -->
+<h2 id="_6">图片来源</h2>
+<!-- SOURCE pdf-0863-b010 -->
+<p>本章开头的帆船照片：© Pavel Nesvadba/Shutterstock。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ch17-1">
+<p>n 个事务可能产生的调度非常多。仅串行调度就有 n! 种；考虑事务步骤的全部交错方式后，总调度数远大于 n!。&#160;<a class="footnote-backref" href="#fnref:ch17-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch17-2">
+<p>使用“冲突等价”这一名称，是为了与本节稍后讨论的其他等价性定义相区分。&#160;<a class="footnote-backref" href="#fnref:ch17-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch17-3">
+<p>若改用边数衡量复杂度，边对应活动事务之间实际存在的冲突，基于深度优先搜索的环检测是线性的。&#160;<a class="footnote-backref" href="#fnref:ch17-3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch17-4">
+<p>判断视图可串行化性已被证明是 NP 完全问题，这意味着几乎可以肯定不存在高效的通用判定方法。&#160;<a class="footnote-backref" href="#fnref:ch17-4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch17-5">
+<p>实际上不会复制整个数据库，只对被修改的数据项保留多个版本。&#160;<a class="footnote-backref" href="#fnref:ch17-5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></article>
+      <nav class="page-nav"><a rel="prev" href="part-seven-transaction-management.html">← 第七部分 事务管理</a><a rel="next" href="ch18.html">第 18 章 并发控制 →</a></nav>
+    </main>
+  </div>
+</body>
+</html>

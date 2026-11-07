@@ -60,7 +60,7 @@ def build_readings(root, catalog):
             prefix = relative_url(route, '.') + '/'
             if prefix == './':
                 prefix = ''
-            converter = markdown.Markdown(extensions=['extra', 'toc'],
+            converter = markdown.Markdown(extensions=['extra', 'toc', 'sane_lists'],
                                          extension_configs={'toc': {'toc_depth': '2-3'}})
             body = converter.convert(source.read_text(encoding='utf-8').replace('[TOC]', ''))
 

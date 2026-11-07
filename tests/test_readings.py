@@ -63,6 +63,16 @@ class ReadingBuildTests(unittest.TestCase):
         self.assertIn('class="course-outline"', second)
         self.assertIn('aria-current="page"', second)
 
+    def test_numbered_steps_keep_their_numbers_across_source_comments(self):
+        self.manifest([{'id': '001', 'title': '协议步骤', 'markdown': 'content/001.md'}])
+        (self.material / 'content/001.md').write_text(
+            '# 协议步骤\n\n1. 发出请求。\n\n<!-- SOURCE page-2 -->\n\n'
+            '2. 接收回应。\n\n<!-- SOURCE page-3 -->\n\n3. 提交。')
+        build_readings(self.root, self.catalog)
+        html = (self.root / 'docs/read/example/index.html').read_text()
+        self.assertIn('<ol start="2">', html)
+        self.assertIn('<ol start="3">', html)
+
 
 if __name__ == '__main__':
     unittest.main()

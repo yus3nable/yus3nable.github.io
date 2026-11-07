@@ -1,0 +1,3209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>第3章 SQL导论 · 阅读室</title>
+  <link rel="canonical" href="https://yus3nable.github.io/read/database-system-concepts-7e/pages/ch03.html">
+  <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#faf9f5">
+  <script src="../../../assets/theme.js?v=1793896190985616540"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1793896190985616540">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1793896190985616540">
+  <script defer src="../../../assets/reader.js?v=1793896190985616540"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="../../../">yus3nable · 阅读室</a>
+    <div class="reading-controls"><div class="tools">
+      <button class="font-toggle" aria-expanded="false" aria-controls="font-menu" aria-label="调整字体大小">Aa</button>
+      <div class="font-menu" id="font-menu" hidden>
+        <button data-font="-1">缩小</button>
+        <button data-font="reset">默认</button>
+        <button data-font="1">放大</button>
+      </div>
+    </div><button class="theme-toggle" type="button" aria-label="切换到夜间模式" aria-pressed="false" title="切换到夜间模式"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5a8.8 8.8 0 1 0 9.9 9.9Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <input type="search" class="search" aria-label="搜索正文" placeholder="搜索正文" data-index="../search.json?v=1794019171268901745" data-prefix="../">
+        <ul class="search-results" aria-live="polite"></ul>
+        <details class="outline" open>
+          <summary>目录</summary>
+          <details class="course-outline"><summary>全部章节</summary><ol><li><a href="../index.html">数据库系统概念</a></li><li><a href="title-page.html">扉页</a></li><li><a href="copyright-page.html">版权页</a></li><li><a href="dedication.html">献词</a></li><li><a href="about-the-authors.html">作者简介</a></li><li><a href="contents.html">目录</a></li><li><a href="preface.html">前言</a></li><li><a href="acknowledgments.html">教学资源、联系作者与致谢</a></li><li><a href="ch01.html">第1章 引言</a></li><li><a href="part-one-relational-languages.html">第一部分 关系语言</a></li><li><a href="ch02.html">第2章 关系模型导论</a></li><li><a href="ch03.html" aria-current="page">第3章 SQL导论</a></li><li><a href="ch04.html">第4章 中级 SQL</a></li><li><a href="ch05.html">第5章 高级 SQL</a></li><li><a href="part-two-database-design.html">第二部分 数据库设计</a></li><li><a href="ch06.html">第6章 使用 E-R 模型设计数据库</a></li><li><a href="ch07.html">第7章 关系数据库设计</a></li><li><a href="part-three-application-design-and-development.html">第三部分 应用设计与开发</a></li><li><a href="ch08.html">第 8 章 复杂数据类型</a></li><li><a href="ch09.html">第9章 应用开发</a></li><li><a href="part-four-big-data-analytics.html">第四部分 大数据分析</a></li><li><a href="ch10.html">第10章 大数据</a></li><li><a href="ch11.html">第11章 数据分析</a></li><li><a href="part-five-storage-management-and-indexing.html">第五部分 存储管理与索引</a></li><li><a href="ch12.html">第12章 物理存储系统</a></li><li><a href="ch13.html">第13章 数据存储结构</a></li><li><a href="ch14.html">第14章 索引</a></li><li><a href="part-six-query-processing-and-optimization.html">第六部分 查询处理与优化</a></li><li><a href="ch15.html">第15章 查询处理</a></li><li><a href="ch16.html">第16章 查询优化</a></li><li><a href="part-seven-transaction-management.html">第七部分 事务管理</a></li><li><a href="ch17.html">第17章 事务</a></li><li><a href="ch18.html">第 18 章 并发控制</a></li><li><a href="ch19.html">第19章 恢复系统</a></li><li><a href="part-eight-parallel-and-distributed-databases.html">第八部分 并行与分布式数据库</a></li><li><a href="ch20.html">第20章 数据库系统体系结构</a></li><li><a href="ch21.html">第21章 并行与分布式存储</a></li><li><a href="ch22.html">第22章 并行与分布式查询处理</a></li><li><a href="ch23.html">第 23 章 并行与分布式事务处理</a></li><li><a href="part-nine-advanced-topics.html">第九部分 高级专题</a></li><li><a href="ch24.html">第 24 章 高级索引技术</a></li><li><a href="ch25.html">第 25 章 高级应用开发</a></li><li><a href="ch26.html">第 26 章 区块链数据库</a></li><li><a href="part-ten-appendix-a.html">第十部分 附录 A</a></li><li><a href="appendix-a-detailed-university-schema.html">附录 A 大学数据库的完整模式</a></li><li><a href="index.html">索引</a></li></ol></details><div class="toc">
+<ul>
+<li><a href="#31-sql">3.1 SQL 查询语言概述</a></li>
+<li><a href="#32-sql">3.2 SQL 数据定义</a><ul>
+<li><a href="#321">3.2.1 基本类型</a></li>
+<li><a href="#322">3.2.2 基本模式定义</a></li>
+</ul>
+</li>
+<li><a href="#33-sql">3.3 SQL 查询的基本结构</a><ul>
+<li><a href="#331">3.3.1 单关系查询</a></li>
+<li><a href="#332">3.3.2 多关系查询</a></li>
+</ul>
+</li>
+<li><a href="#34">3.4 其他基本运算</a><ul>
+<li><a href="#341">3.4.1 重命名运算</a></li>
+<li><a href="#342">3.4.2 字符串运算</a></li>
+<li><a href="#343-select">3.4.3 select 子句中的属性指定</a></li>
+<li><a href="#344">3.4.4 元组的显示顺序</a></li>
+<li><a href="#345-where">3.4.5 where 子句中的谓词</a></li>
+</ul>
+</li>
+<li><a href="#35">3.5 集合运算</a><ul>
+<li><a href="#351-union">3.5.1 union 运算</a></li>
+<li><a href="#352-intersect">3.5.2 intersect 运算</a></li>
+<li><a href="#353-except">3.5.3 except 运算</a></li>
+</ul>
+</li>
+<li><a href="#36">3.6 空值</a></li>
+<li><a href="#37">3.7 聚集函数</a><ul>
+<li><a href="#371">3.7.1 基本聚集</a></li>
+<li><a href="#372">3.7.2 分组聚集</a></li>
+<li><a href="#373-having">3.7.3 having 子句</a></li>
+<li><a href="#374">3.7.4 含空值和布尔值的聚集</a></li>
+</ul>
+</li>
+<li><a href="#38">3.8 嵌套子查询</a><ul>
+<li><a href="#381">3.8.1 集合成员资格</a></li>
+<li><a href="#382">3.8.2 集合比较</a></li>
+<li><a href="#383">3.8.3 空关系检验</a></li>
+<li><a href="#384">3.8.4 无重复元组检验</a></li>
+<li><a href="#385-from">3.8.5 from 子句中的子查询</a></li>
+<li><a href="#386-with">3.8.6 with 子句</a></li>
+<li><a href="#387">3.8.7 标量子查询</a></li>
+<li><a href="#388-from">3.8.8 不含 from 子句的标量表达式</a></li>
+</ul>
+</li>
+<li><a href="#39">3.9 数据库修改</a><ul>
+<li><a href="#391">3.9.1 删除</a></li>
+<li><a href="#392">3.9.2 插入</a></li>
+<li><a href="#393">3.9.3 更新</a></li>
+</ul>
+</li>
+<li><a href="#310">3.10 小结</a></li>
+<li><a href="#_1">复习术语</a></li>
+<li><a href="#_2">实践习题</a></li>
+<li><a href="#_3">习题</a></li>
+<li><a href="#_4">工具</a></li>
+<li><a href="#_5">进一步阅读</a></li>
+<li><a href="#_6">参考文献</a></li>
+<li><a href="#_7">图片来源</a></li>
+</ul>
+</div>
+
+        </details>
+      </nav>
+    </aside>
+    <main>
+      <p class="meta">书籍</p>
+      <article class="prose" data-material-id="database-system-concepts-7e" data-page-id="ch03"><!-- SOURCE pdf-0094-b004 -->
+<!-- SOURCE pdf-0094-b005 -->
+
+<h1 id="chapter-03">第3章 SQL导论</h1>
+<p><img alt="帆船" src="../assets/ch03-opening-sailboats.png" /></p>
+<!-- SOURCE pdf-0094-b006 -->
+
+<p>本章以及第4章、第5章介绍使用最广泛的数据库查询语言 SQL。</p>
+<!-- SOURCE pdf-0094-b007 -->
+
+<p>虽然 SQL 被称为“查询语言”，它的能力远不止查询数据库，还可以定义数据结构、修改数据库中的数据，以及指定安全约束。</p>
+<!-- SOURCE pdf-0094-b008 -->
+
+<p>本书介绍 SQL 的基本结构和概念，不打算提供完整的 SQL 用户指南。各个 SQL 实现在细节上可能有所不同，也可能只支持完整语言的一部分。</p>
+<!-- SOURCE pdf-0094-b009 -->
+
+<p>我们强烈建议读者在实际数据库上尝试本章的 SQL 查询。章末“工具”部分介绍可选的数据库系统，以及如何创建模式、加载示例数据和执行查询。</p>
+<!-- SOURCE pdf-0094-b010 -->
+
+<h2 id="31-sql">3.1 SQL 查询语言概述</h2>
+<!-- SOURCE pdf-0094-b011 -->
+
+<p>IBM 在20世纪70年代初的 System R 项目中开发了 SQL 的最初版本，当时称为 Sequel。此后语言不断演变，名称改为 SQL，即 Structured Query Language（结构化查询语言）。如今许多产品都支持 SQL，它已经确立了标准关系数据库语言的地位。</p>
+<!-- SOURCE pdf-0094-b012 -->
+
+<p>1986年，美国国家标准学会（ANSI）和国际标准化组织（ISO）发布了 SQL-86 标准。1989年，ANSI 发布扩展标准 SQL-89。随后依次出现 SQL-92、SQL:1999、SQL:2003、SQL:2006、SQL:2008、SQL:2011，以及最近的 SQL:2016。</p>
+<!-- SOURCE pdf-0094-b013 -->
+
+<p>SQL 语言包含以下部分：</p>
+<!-- SOURCE pdf-0094-b014 -->
+
+<ul>
+<li><strong>数据定义语言（DDL）</strong>：提供定义关系模式、删除关系和修改关系模式的命令。</li>
+</ul>
+<!-- SOURCE pdf-0095-b001 -->
+
+<ul>
+<li><strong>数据操纵语言（DML）</strong>：支持从数据库查询信息，以及插入、删除和修改元组。</li>
+<li><strong>完整性</strong>：SQL DDL 提供指定完整性约束的命令，数据库中的数据必须满足这些约束，不允许违反约束的更新。</li>
+<li><strong>视图定义</strong>：SQL DDL 提供定义视图的命令。</li>
+<li><strong>事务控制</strong>：SQL 提供指定事务起点和终点的命令。</li>
+<li><strong>嵌入式 SQL 与动态 SQL</strong>：规定如何将 SQL 语句嵌入 C、C++、Java 等通用编程语言。</li>
+<li><strong>授权</strong>：SQL DDL 提供指定关系和视图访问权限的命令。</li>
+</ul>
+<!-- SOURCE pdf-0095-b002 -->
+
+<p>本章概述 SQL 的基本 DML 与 DDL 功能。这里介绍的功能自 SQL-92 起就已纳入标准。</p>
+<!-- SOURCE pdf-0095-b003 -->
+
+<p>第4章更详细地讨论 SQL 查询语言，包括各种连接表达式、视图、事务、完整性约束、类型系统和授权。</p>
+<!-- SOURCE pdf-0095-b004 -->
+
+<p>第5章介绍更高级的 SQL 功能，包括从编程语言访问 SQL 的机制、SQL 函数与过程、触发器、递归查询、高级聚集，以及若干专门用于数据分析的功能。</p>
+<!-- SOURCE pdf-0095-b005 -->
+
+<p>虽然大多数 SQL 实现支持本书介绍的标准功能，不同实现仍有差异。多数实现增加了一些非标准功能，同时没有支持某些较新或较高级的功能。如果本书介绍的某项功能无法在所用数据库中运行，请查阅该系统的用户手册，确认它支持的具体功能。</p>
+<!-- SOURCE pdf-0095-b006 -->
+
+<h2 id="32-sql">3.2 SQL 数据定义</h2>
+<!-- SOURCE pdf-0095-b007 -->
+
+<p>数据库中的关系集合通过数据定义语言（DDL）指定。SQL DDL 除了指定关系集合，还能指定每个关系的相关信息，包括：</p>
+<!-- SOURCE pdf-0095-b008 -->
+<!-- SOURCE pdf-0096-b001 -->
+
+<ul>
+<li>每个关系的模式。</li>
+<li>每个属性的取值类型。</li>
+<li>完整性约束。</li>
+<li>每个关系需要维护的索引集合。</li>
+<li>每个关系的安全与授权信息。</li>
+<li>每个关系在磁盘上的物理存储结构。</li>
+</ul>
+<!-- SOURCE pdf-0096-b002 -->
+
+<p>本节介绍基本模式定义与基本类型，其他 SQL DDL 功能留到第4章和第5章讨论。</p>
+<!-- SOURCE pdf-0096-b003 -->
+
+<h3 id="321">3.2.1 基本类型</h3>
+<!-- SOURCE pdf-0096-b004 -->
+
+<p>SQL 标准支持多种内置类型，包括：</p>
+<!-- SOURCE pdf-0096-b005 -->
+
+<ul>
+<li><code>char(n)</code>：定长字符串，长度 n 由用户指定，也可以使用全称 <code>character</code>。</li>
+<li><code>varchar(n)</code>：变长字符串，最大长度 n 由用户指定，等价全称为 <code>character varying</code>。</li>
+<li><code>int</code>：整数，取值为与机器相关的整数有限子集，等价全称为 <code>integer</code>。</li>
+<li><code>smallint</code>：小整数，取值为整数类型中与机器相关的一个子集。</li>
+<li><code>numeric(p, d)</code>：用户指定精度的定点数，共有 p 位数字（另有符号），其中 d 位在小数点右边。例如，<code>numeric(3,1)</code> 可以精确存储44.5，但无法精确存储444.5或0.32。</li>
+<li><code>real</code>、<code>double precision</code>：浮点数与双精度浮点数，精度取决于机器。</li>
+<li><code>float(n)</code>：至少具有 n 位精度的浮点数。</li>
+</ul>
+<!-- SOURCE pdf-0096-b006 -->
+
+<p>4.5节介绍其他类型。</p>
+<!-- SOURCE pdf-0096-b007 -->
+
+<p>每种类型都可能包含特殊的空值。空值表示一个缺失值：它可能存在但未知，也可能根本不存在。某些情况下，我们希望禁止输入空值，稍后会介绍。</p>
+<!-- SOURCE pdf-0096-b008 -->
+
+<p><code>char</code> 保存定长字符串。例如，属性 A 的类型为 <code>char(10)</code>，存入字符串 <code>Avi</code> 时，系统在末尾补7个空格，使长度达到10。如果属性 B 为 <code>varchar(10)</code>，存入 <code>Avi</code> 时就不会补空格。比较两个长度不同的 <code>char</code> 值时，系统先向较短值末尾补空格，使长度相同，再进行比较。</p>
+<!-- SOURCE pdf-0096-b009 -->
+<!-- SOURCE pdf-0097-b001 -->
+
+<p>比较 <code>char</code> 与 <code>varchar</code> 时，人们可能预期系统也会给 <code>varchar</code> 补空格，再按相同长度比较；实际是否如此取决于数据库。因此，即使 A、B 都保存 <code>Avi</code>，<code>A=B</code> 也可能返回假。我们建议始终使用 <code>varchar</code>，避免 <code>char</code> 引起的这些问题。</p>
+<!-- SOURCE pdf-0097-b002 -->
+
+<p>SQL 还提供 <code>nvarchar</code>，以 Unicode 表示存储多语言数据。不过，许多数据库也允许在 <code>varchar</code> 中保存 UTF-8 表示的 Unicode 数据。</p>
+<!-- SOURCE pdf-0097-b003 -->
+
+<h3 id="322">3.2.2 基本模式定义</h3>
+<!-- SOURCE pdf-0097-b004 -->
+
+<p>使用 <code>create table</code> 命令定义 SQL 关系。下面的命令在数据库中创建 <code>department</code> 关系：</p>
+<!-- SOURCE pdf-0097-b005 -->
+<!-- SOURCE pdf-0097-b006 -->
+<!-- SOURCE pdf-0097-b008 -->
+<!-- SOURCE pdf-0097-b010 -->
+
+<pre><code class="language-sql">create table department
+    (dept_name varchar (20),
+     building varchar (15),
+     budget numeric (12,2),
+     primary key (dept_name));
+</code></pre>
+<!-- SOURCE pdf-0097-b011 -->
+<!-- SOURCE pdf-0097-b013 -->
+<!-- SOURCE pdf-0097-b015 -->
+
+<p>该关系有三个属性：<code>dept_name</code> 是最长20个字符的字符串；<code>building</code> 是最长15个字符的字符串；<code>budget</code> 共12位数字，其中2位在小数点后。命令还指定 <code>dept_name</code> 为 <code>department</code> 的主键。</p>
+<!-- SOURCE pdf-0097-b016 -->
+<!-- SOURCE pdf-0097-b017 -->
+<!-- SOURCE pdf-0097-b018 -->
+
+<p><code>create table</code> 的一般形式为：</p>
+<pre><code class="language-text">create table r
+    (A1 D1,
+     A2 D2,
+     ...,
+     An Dn,
+     ⟨integrity-constraint1⟩,
+     ...,
+     ⟨integrity-constraintk⟩);
+</code></pre>
+<!-- SOURCE pdf-0097-b019 -->
+
+<p>其中，r 是关系名，Aᵢ 是关系 r 模式中的属性名，Dᵢ 是属性 Aᵢ 的域。也就是说，Dᵢ 指定属性类型，还可以附带限制其允许取值范围的约束。</p>
+<!-- SOURCE pdf-0097-b020 -->
+
+<p>本章的 <code>create table</code> 及其他 SQL 语句末尾均写有分号；在许多 SQL 实现中，分号可以省略。</p>
+<!-- SOURCE pdf-0097-b021 -->
+
+<p>SQL 支持多种完整性约束，本节先介绍其中几种：</p>
+<!-- SOURCE pdf-0097-b022 -->
+<!-- SOURCE pdf-0098-b001 -->
+
+<ul>
+<li><code>primary key (Aj1, Aj2, …, Ajm)</code>：指定这些属性共同构成主键。主键属性必须非空，且其组合必须唯一。任何元组的主键属性都不能为空，任意两个元组也不能在全部主键属性上取相同值。虽然主键声明可选，通常仍应为每个关系指定主键。</li>
+<li><code>foreign key (Ak1, Ak2, …, Akn) references s</code>：指定关系中每个元组的这些属性值，必须对应关系 s 中某个元组的主键属性值。</li>
+</ul>
+<!-- SOURCE pdf-0098-b002 -->
+<!-- SOURCE pdf-0098-b004 -->
+<!-- SOURCE pdf-0098-b006 -->
+<!-- SOURCE pdf-0098-b008 -->
+<!-- SOURCE pdf-0098-b010 -->
+
+<p>图3.1给出本书大学数据库的部分 SQL DDL。<code>course</code> 的定义包含 <code>foreign key (dept_name) references department</code>，要求每个课程元组的系名都存在于 <code>department</code> 的主键属性 <code>dept_name</code> 中。缺少这个约束，课程可能指定一个不存在的系名。图3.1还给出 <code>section</code>、<code>instructor</code> 和 <code>teaches</code> 的外键约束。包括 MySQL 在内的某些数据库要求采用另一种语法：<code>foreign key (dept_name) references department(dept_name)</code>，显式列出被参照表的属性。</p>
+<ul>
+<li><code>not null</code>：禁止属性取空值，即从属性的域中排除空值。例如，图3.1中 <code>instructor.name</code> 的 <code>not null</code> 约束确保教师姓名不能为空。</li>
+</ul>
+<!-- SOURCE pdf-0098-b011 -->
+
+<p>4.4节将详细介绍外键约束，以及 <code>create table</code> 可以包含的其他完整性约束。</p>
+<!-- SOURCE pdf-0098-b012 -->
+<!-- SOURCE pdf-0098-b014 -->
+
+<p>SQL 会阻止任何违反完整性约束的更新。例如，新插入或修改的元组，只要某个主键属性为空，或其全部主键属性值与已有元组相同，SQL 就会报错并拒绝更新。同样，若插入的课程元组的 <code>dept_name</code> 不存在于 <code>department</code> 中，就会违反 <code>course</code> 的外键约束，SQL 会拒绝插入。</p>
+<!-- SOURCE pdf-0098-b015 -->
+
+<p>新建关系初始为空。插入、更新和删除元组使用 <code>insert</code>、<code>update</code>、<code>delete</code> 数据操纵语句，3.9节介绍这些语句。</p>
+<!-- SOURCE pdf-0099-b001 -->
+<!-- SOURCE pdf-0099-b002 -->
+<!-- SOURCE pdf-0099-b004 -->
+<!-- SOURCE pdf-0099-b006 -->
+<!-- SOURCE pdf-0099-b007 -->
+<!-- SOURCE pdf-0099-b008 -->
+<!-- SOURCE pdf-0099-b010 -->
+<!-- SOURCE pdf-0099-b012 -->
+<!-- SOURCE pdf-0099-b014 -->
+<!-- SOURCE pdf-0099-b016 -->
+<!-- SOURCE pdf-0099-b017 -->
+<!-- SOURCE pdf-0099-b018 -->
+<!-- SOURCE pdf-0099-b020 -->
+<!-- SOURCE pdf-0099-b022 -->
+<!-- SOURCE pdf-0099-b023 -->
+<!-- SOURCE pdf-0099-b024 -->
+<!-- SOURCE pdf-0099-b026 -->
+<!-- SOURCE pdf-0099-b028 -->
+<!-- SOURCE pdf-0099-b030 -->
+<!-- SOURCE pdf-0099-b032 -->
+<!-- SOURCE pdf-0099-b034 -->
+<!-- SOURCE pdf-0099-b036 -->
+<!-- SOURCE pdf-0099-b038 -->
+<!-- SOURCE pdf-0099-b040 -->
+<!-- SOURCE pdf-0099-b041 -->
+<!-- SOURCE pdf-0099-b042 -->
+<!-- SOURCE pdf-0099-b044 -->
+<!-- SOURCE pdf-0099-b046 -->
+<!-- SOURCE pdf-0099-b048 -->
+<!-- SOURCE pdf-0099-b050 -->
+<!-- SOURCE pdf-0099-b052 -->
+<!-- SOURCE pdf-0099-b054 -->
+<!-- SOURCE pdf-0099-b055 -->
+
+<pre><code class="language-sql">create table department
+    (dept_name varchar (20),
+     building varchar (15),
+     budget numeric (12,2),
+     primary key (dept_name));
+
+create table course
+    (course_id varchar (7),
+     title varchar (50),
+     dept_name varchar (20),
+     credits numeric (2,0),
+     primary key (course_id),
+     foreign key (dept_name) references department);
+
+create table instructor
+    (ID varchar (5),
+     name varchar (20) not null,
+     dept_name varchar (20),
+     salary numeric (8,2),
+     primary key (ID),
+     foreign key (dept_name) references department);
+
+create table section
+    (course_id varchar (8),
+     sec_id varchar (8),
+     semester varchar (6),
+     year numeric (4,0),
+     building varchar (15),
+     room_number varchar (7),
+     time_slot_id varchar (4),
+     primary key (course_id, sec_id, semester, year),
+     foreign key (course_id) references course);
+
+create table teaches
+    (ID varchar (5),
+     course_id varchar (8),
+     sec_id varchar (8),
+     semester varchar (6),
+     year numeric (4,0),
+     primary key (ID, course_id, sec_id, semester, year),
+     foreign key (course_id, sec_id, semester, year) references section,
+     foreign key (ID) references instructor);
+</code></pre>
+<p>图3.1 大学数据库部分关系的 SQL 数据定义。</p>
+<!-- SOURCE pdf-0098-b016 -->
+<!-- SOURCE pdf-0098-b017 -->
+<!-- SOURCE pdf-0098-b018 -->
+<!-- SOURCE pdf-0100-b001 -->
+<!-- SOURCE pdf-0100-b002 -->
+
+<p>从 SQL 数据库删除关系，使用 <code>drop table</code>。它会删除数据库中关于该关系的全部信息。例如：</p>
+<pre><code class="language-sql">drop table r;
+</code></pre>
+<p>相比之下，下面的命令影响较小：</p>
+<pre><code class="language-sql">delete from r;
+</code></pre>
+<p><code>delete</code> 保留关系 r，只删除其中所有元组；<code>drop table</code> 同时删除元组和模式。删除 r 后，必须先用 <code>create table</code> 重建，才能再次向它插入元组。</p>
+<!-- SOURCE pdf-0100-b003 -->
+<!-- SOURCE pdf-0100-b004 -->
+
+<p>使用 <code>alter table</code> 可以向已有关系添加属性。关系中所有元组的新属性都初始化为空值。命令形式为：</p>
+<pre><code class="language-sql">alter table r add A D;
+</code></pre>
+<!-- SOURCE pdf-0100-b005 -->
+<!-- SOURCE pdf-0100-b006 -->
+
+<p>r 是已有关系名，A 是待添加属性名，D 是该属性的类型。删除属性可以使用：</p>
+<pre><code class="language-sql">alter table r drop A;
+</code></pre>
+<!-- SOURCE pdf-0100-b007 -->
+
+<p>r 是已有关系名，A 是关系中的一个属性。许多数据库系统虽然允许删除整张表，却不支持删除属性。</p>
+<!-- SOURCE pdf-0100-b008 -->
+
+<h2 id="33-sql">3.3 SQL 查询的基本结构</h2>
+<!-- SOURCE pdf-0100-b009 -->
+
+<p>SQL 查询的基本结构由 <code>select</code>、<code>from</code> 和 <code>where</code> 三个子句组成。查询以 <code>from</code> 列出的关系为输入，按 <code>where</code> 与 <code>select</code> 的要求进行操作，生成一个关系作为结果。我们先通过示例介绍 SQL 语法，再说明查询的一般结构。</p>
+<!-- SOURCE pdf-0100-b010 -->
+
+<h3 id="331">3.3.1 单关系查询</h3>
+<!-- SOURCE pdf-0100-b011 -->
+<!-- SOURCE pdf-0100-b012 -->
+
+<p>考虑大学示例中的简单查询：“找出所有教师的姓名。”教师姓名保存在 <code>instructor</code> 关系中，因此把它放入 <code>from</code>；姓名对应 <code>name</code> 属性，因此把它放入 <code>select</code>：</p>
+<pre><code class="language-sql">select name
+from instructor;
+</code></pre>
+<!-- SOURCE pdf-0100-b013 -->
+
+<p>结果是只有一个属性的关系，列标题为 <code>name</code>。如果 <code>instructor</code> 如图2.1所示，结果就如图3.2所示。</p>
+<!-- SOURCE pdf-0101-b007 -->
+<!-- SOURCE pdf-0101-b014 -->
+<!-- SOURCE pdf-0101-b017 -->
+<!-- SOURCE pdf-0101-b020 -->
+<!-- SOURCE pdf-0101-b023 -->
+<!-- SOURCE pdf-0101-b026 -->
+<!-- SOURCE pdf-0101-b029 -->
+<!-- SOURCE pdf-0101-b032 -->
+<!-- SOURCE pdf-0101-b035 -->
+<!-- SOURCE pdf-0101-b038 -->
+<!-- SOURCE pdf-0101-b041 -->
+<!-- SOURCE pdf-0101-b044 -->
+<!-- SOURCE pdf-0101-b047 -->
+<!-- SOURCE pdf-0101-b050 -->
+
+<p><img alt="图 3.2 select name from instructor 的结果。" src="../assets/ch03-fig3-2.png" /></p>
+<p>图 3.2 select name from instructor 的结果。</p>
+<p>图中字段：name：姓名。</p>
+<!-- SOURCE pdf-0101-b051 -->
+<!-- SOURCE pdf-0101-b052 -->
+<!-- SOURCE pdf-0101-b054 -->
+
+<p>再考虑查询：“找出所有教师所属系的名称。”可写为：</p>
+<pre><code class="language-sql">select dept_name
+from instructor;
+</code></pre>
+<!-- SOURCE pdf-0101-b055 -->
+
+<p>一个系可能有多位教师，因此一个系名可能在 <code>instructor</code> 中出现多次。上述查询结果包含这些系名，如图3.3所示。</p>
+<!-- SOURCE pdf-0102-b007 -->
+<!-- SOURCE pdf-0102-b009 -->
+<!-- SOURCE pdf-0102-b016 -->
+<!-- SOURCE pdf-0102-b019 -->
+<!-- SOURCE pdf-0102-b022 -->
+<!-- SOURCE pdf-0102-b025 -->
+<!-- SOURCE pdf-0102-b028 -->
+<!-- SOURCE pdf-0102-b031 -->
+<!-- SOURCE pdf-0102-b034 -->
+<!-- SOURCE pdf-0102-b037 -->
+<!-- SOURCE pdf-0102-b040 -->
+<!-- SOURCE pdf-0102-b043 -->
+<!-- SOURCE pdf-0102-b046 -->
+<!-- SOURCE pdf-0102-b049 -->
+<!-- SOURCE pdf-0102-b052 -->
+<!-- SOURCE pdf-0102-b054 -->
+
+<p><img alt="图 3.3 select dept_name from instructor 的结果。" src="../assets/ch03-fig3-3.png" /></p>
+<p>图 3.3 select dept_name from instructor 的结果。</p>
+<p>图中字段：dept_name：系名。</p>
+<!-- SOURCE pdf-0101-b056 -->
+
+<p>在关系模型的正式数学定义中，关系是集合，不会包含重复元组。实际消除重复需要时间，因此 SQL 允许数据库关系和 SQL 表达式结果中存在重复。<sup id="fnref:ch3-1"><a class="footnote-ref" href="#fn:ch3-1">1</a></sup> 上述查询会针对 <code>instructor</code> 中的每个元组，输出一次其系名。</p>
+<!-- SOURCE pdf-0101-b057 -->
+<!-- SOURCE pdf-0101-b058 -->
+<!-- SOURCE pdf-0101-b060 -->
+<!-- SOURCE pdf-0101-b061 -->
+
+<p>如果需要强制消除重复，在 <code>select</code> 后加入 <code>distinct</code>。上面的查询可以改写为：</p>
+<pre><code class="language-sql">select distinct dept_name
+from instructor;
+</code></pre>
+<p>结果中每个系名最多出现一次。</p>
+<!-- SOURCE pdf-0101-b063 -->
+
+<!-- SOURCE pdf-0102-b055 -->
+<!-- SOURCE pdf-0102-b056 -->
+<!-- SOURCE pdf-0102-b058 -->
+
+<p>SQL 允许用 <code>all</code> 显式指定保留重复：</p>
+<pre><code class="language-sql">select all dept_name
+from instructor;
+</code></pre>
+<!-- SOURCE pdf-0102-b059 -->
+
+<p>保留重复是默认行为，因此本书示例通常不写 <code>all</code>。需要消除结果重复时，我们会使用 <code>distinct</code>。</p>
+<!-- SOURCE pdf-0102-b060 -->
+<!-- SOURCE pdf-0102-b061 -->
+<!-- SOURCE pdf-0102-b063 -->
+
+<p><code>select</code> 也可以包含算术表达式，用 +、−、*、/ 对常量或元组属性运算。例如：</p>
+<pre><code class="language-sql">select ID, name, dept_name, salary * 1.1
+from instructor;
+</code></pre>
+<!-- SOURCE pdf-0102-b064 -->
+
+<p>结果与 <code>instructor</code> 相同，但 <code>salary</code> 乘以1.1，展示每位教师加薪10%后的数值。注意，查询不会修改 <code>instructor</code> 关系。</p>
+<!-- SOURCE pdf-0102-b065 -->
+
+<p>SQL 还提供各种日期类型等特殊类型，并允许对这些类型使用若干算术函数。4.5.1节将进一步介绍。</p>
+<!-- SOURCE pdf-0102-b066 -->
+<!-- SOURCE pdf-0103-b022 -->
+<!-- SOURCE pdf-0103-b024 -->
+
+<p><code>where</code> 从 <code>from</code> 的结果关系中只保留满足指定谓词的行。例如：“找出计算机科学系中工资超过70,000美元的所有教师的姓名。”SQL 写法为：</p>
+<pre><code class="language-sql">select name
+from instructor
+where dept_name = 'Comp. Sci.' and salary &gt; 70000;
+</code></pre>
+<!-- SOURCE pdf-0103-b025 -->
+
+<p>如果 <code>instructor</code> 如图2.1所示，查询结果如图3.4所示。</p>
+<!-- SOURCE pdf-0103-b007 -->
+<!-- SOURCE pdf-0103-b014 -->
+<!-- SOURCE pdf-0103-b017 -->
+<!-- SOURCE pdf-0103-b020 -->
+<!-- SOURCE pdf-0103-b021 -->
+
+<p><img alt="图 3.4 计算机科学系工资超过 70000 美元的教师姓名。" src="../assets/ch03-fig3-4.png" /></p>
+<p>图 3.4 计算机科学系工资超过 70000 美元的教师姓名。</p>
+<p>图中字段：name：姓名。</p>
+<!-- SOURCE pdf-0103-b026 -->
+
+<p><code>where</code> 中可以使用逻辑连接词 <code>and</code>、<code>or</code> 和 <code>not</code>，其操作数可以是使用 <code>&lt;</code>、<code>&lt;=</code>、<code>&gt;</code>、<code>&gt;=</code>、<code>=</code>、<code>&lt;&gt;</code> 的比较表达式。SQL 允许比较字符串、算术表达式，以及日期等特殊类型。</p>
+<!-- SOURCE pdf-0103-b027 -->
+
+<p>本章后面还会介绍 <code>where</code> 谓词的其他功能。</p>
+<!-- SOURCE pdf-0103-b028 -->
+
+<h3 id="332">3.3.2 多关系查询</h3>
+<!-- SOURCE pdf-0103-b029 -->
+
+<p>前面的查询只涉及一个关系。查询经常需要访问多个关系的信息，现在介绍其写法。</p>
+<!-- SOURCE pdf-0103-b030 -->
+
+<p>例如，要“检索所有教师的姓名、所在系名，以及所在系的楼宇名称”。</p>
+<!-- SOURCE pdf-0103-b031 -->
+<!-- SOURCE pdf-0103-b033 -->
+<!-- SOURCE pdf-0103-b035 -->
+<!-- SOURCE pdf-0103-b037 -->
+
+<p>查看 <code>instructor</code> 模式可知，系名来自 <code>dept_name</code>，楼宇名称则在 <code>department</code> 的 <code>building</code> 属性中。因此，必须把每个 <code>instructor</code> 元组，与 <code>department</code> 中 <code>dept_name</code> 相同的元组匹配。SQL 中，在 <code>from</code> 列出需要访问的关系，在 <code>where</code> 指定匹配条件：</p>
+<!-- SOURCE pdf-0103-b038 -->
+<!-- SOURCE pdf-0103-b040 -->
+<!-- SOURCE pdf-0103-b042 -->
+<!-- SOURCE pdf-0103-b044 -->
+
+<pre><code class="language-sql">select name, instructor.dept_name, building
+from instructor, department
+where instructor.dept_name = department.dept_name;
+</code></pre>
+<!-- SOURCE pdf-0103-b045 -->
+
+<p>如果两个输入关系分别如图2.1和图2.5所示，查询结果就是图3.5。</p>
+<!-- SOURCE pdf-0104-b011 -->
+<!-- SOURCE pdf-0104-b014 -->
+<!-- SOURCE pdf-0104-b016 -->
+<!-- SOURCE pdf-0104-b019 -->
+<!-- SOURCE pdf-0104-b028 -->
+<!-- SOURCE pdf-0104-b030 -->
+<!-- SOURCE pdf-0104-b032 -->
+<!-- SOURCE pdf-0104-b035 -->
+<!-- SOURCE pdf-0104-b037 -->
+<!-- SOURCE pdf-0104-b039 -->
+<!-- SOURCE pdf-0104-b042 -->
+<!-- SOURCE pdf-0104-b044 -->
+<!-- SOURCE pdf-0104-b046 -->
+<!-- SOURCE pdf-0104-b049 -->
+<!-- SOURCE pdf-0104-b051 -->
+<!-- SOURCE pdf-0104-b053 -->
+<!-- SOURCE pdf-0104-b056 -->
+<!-- SOURCE pdf-0104-b058 -->
+<!-- SOURCE pdf-0104-b060 -->
+<!-- SOURCE pdf-0104-b063 -->
+<!-- SOURCE pdf-0104-b065 -->
+<!-- SOURCE pdf-0104-b067 -->
+<!-- SOURCE pdf-0104-b070 -->
+<!-- SOURCE pdf-0104-b072 -->
+<!-- SOURCE pdf-0104-b074 -->
+<!-- SOURCE pdf-0104-b077 -->
+<!-- SOURCE pdf-0104-b079 -->
+<!-- SOURCE pdf-0104-b081 -->
+<!-- SOURCE pdf-0104-b084 -->
+<!-- SOURCE pdf-0104-b086 -->
+<!-- SOURCE pdf-0104-b088 -->
+<!-- SOURCE pdf-0104-b091 -->
+<!-- SOURCE pdf-0104-b093 -->
+<!-- SOURCE pdf-0104-b095 -->
+<!-- SOURCE pdf-0104-b098 -->
+<!-- SOURCE pdf-0104-b100 -->
+<!-- SOURCE pdf-0104-b102 -->
+<!-- SOURCE pdf-0104-b105 -->
+<!-- SOURCE pdf-0104-b107 -->
+<!-- SOURCE pdf-0104-b109 -->
+<!-- SOURCE pdf-0104-b112 -->
+<!-- SOURCE pdf-0104-b113 -->
+
+<p><img alt="图 3.5 教师姓名、系名及所在楼宇。" src="../assets/ch03-fig3-5.png" /></p>
+<p>图 3.5 教师姓名、系名及所在楼宇。</p>
+<p>图中字段：name：姓名；dept_name：系名；building：楼宇。</p>
+<!-- SOURCE pdf-0103-b046 -->
+<!-- SOURCE pdf-0103-b048 -->
+<!-- SOURCE pdf-0103-b050 -->
+<!-- SOURCE pdf-0104-b114 -->
+<!-- SOURCE pdf-0104-b116 -->
+
+<p><code>dept_name</code> 同时出现在 <code>instructor</code> 和 <code>department</code> 中，需要用关系名前缀明确所指，即 <code>instructor.dept_name</code> 与 <code>department.dept_name</code>。<code>name</code> 和 <code>building</code> 各自只出现在一个关系中，所以无须加前缀。</p>
+<!-- SOURCE pdf-0104-b117 -->
+
+<p>这一命名规则要求 <code>from</code> 中的关系名称不同。某些情况下会产生问题，例如需要组合同一关系中两个不同元组的信息。3.4.1节将介绍如何用重命名解决。</p>
+<!-- SOURCE pdf-0104-b118 -->
+
+<p>下面考虑涉及多个关系的 SQL 查询的一般情况。查询可以包含三种子句，其作用如下：</p>
+<!-- SOURCE pdf-0104-b119 -->
+
+<ul>
+<li><code>select</code> 列出查询结果中需要的属性。</li>
+<li><code>from</code> 列出计算查询时需要访问的关系。</li>
+<li><code>where</code> 是涉及 <code>from</code> 中关系属性的谓词。</li>
+</ul>
+<!-- SOURCE pdf-0104-b120 -->
+<!-- SOURCE pdf-0104-b121 -->
+
+<p>典型查询形式为：</p>
+<pre><code class="language-text">select A1, A2, …, An
+from r1, r2, …, rm
+where P;
+</code></pre>
+<!-- SOURCE pdf-0105-b001 -->
+
+<p>Aᵢ 表示属性，rᵢ 表示关系，P 是谓词。省略 <code>where</code> 时，P 为真。</p>
+<!-- SOURCE pdf-0105-b002 -->
+
+<p>虽然书写顺序必须是 <code>select</code>、<code>from</code>、<code>where</code>，理解查询操作时，按先 <code>from</code>、再 <code>where</code>、最后 <code>select</code> 的顺序最容易。<sup id="fnref:ch3-2"><a class="footnote-ref" href="#fn:ch3-2">2</a></sup></p>
+<!-- SOURCE pdf-0105-b003 -->
+<!-- SOURCE pdf-0105-b004 -->
+<!-- SOURCE pdf-0105-b005 -->
+<!-- SOURCE pdf-0105-b006 -->
+<!-- SOURCE pdf-0105-b007 -->
+
+<p><code>from</code> 本身定义了所列关系的笛卡尔积。它可以用关系代数形式化定义，也可以理解为以下迭代过程，用来生成 <code>from</code> 的结果元组：</p>
+<pre><code class="language-text">for each tuple t1 in relation r1
+    for each tuple t2 in relation r2
+        …
+        for each tuple tm in relation rm
+            Concatenate t1, t2, …, tm into a single tuple t
+            Add t into the result relation
+</code></pre>
+<p>上述伪代码逐层遍历每个关系中的元组，把 t₁、t₂、…、tₘ 连接为一个元组 t，再加入结果关系。</p>
+<!-- SOURCE pdf-0105-b008 -->
+
+<p>结果关系包含 <code>from</code> 所列全部关系的全部属性。同一个属性名可能同时出现在 rᵢ 和 rⱼ 中，因此需要加上来源关系名作为前缀。</p>
+<!-- SOURCE pdf-0105-b009 -->
+<!-- SOURCE pdf-0105-b010 -->
+<!-- SOURCE pdf-0105-b012 -->
+<!-- SOURCE pdf-0105-b014 -->
+<!-- SOURCE pdf-0105-b016 -->
+
+<p>例如，<code>instructor</code> 与 <code>teaches</code> 笛卡尔积的模式为：</p>
+<pre><code class="language-text">(instructor.ID, instructor.name, instructor.dept_name, instructor.salary,
+ teaches.ID, teaches.course_id, teaches.sec_id, teaches.semester, teaches.year)
+</code></pre>
+<!-- SOURCE pdf-0105-b017 -->
+<!-- SOURCE pdf-0105-b018 -->
+<!-- SOURCE pdf-0105-b020 -->
+<!-- SOURCE pdf-0105-b022 -->
+<!-- SOURCE pdf-0105-b024 -->
+
+<p>这样可以区分 <code>instructor.ID</code> 与 <code>teaches.ID</code>。只出现在一个模式中的属性，通常省略关系名前缀，不会产生歧义。可简写为：</p>
+<pre><code class="language-text">(instructor.ID, name, dept_name, salary,
+ teaches.ID, course_id, sec_id, semester, year)
+</code></pre>
+<!-- SOURCE pdf-0105-b025 -->
+
+<p>图3.6展示图2.1的 <code>instructor</code> 与图2.7的 <code>teaches</code> 的笛卡尔积，只列出了全部结果中的一部分。</p>
+<!-- SOURCE pdf-0106-b023 -->
+<!-- SOURCE pdf-0106-b026 -->
+<!-- SOURCE pdf-0106-b029 -->
+<!-- SOURCE pdf-0106-b031 -->
+<!-- SOURCE pdf-0106-b034 -->
+<!-- SOURCE pdf-0106-b037 -->
+<!-- SOURCE pdf-0106-b040 -->
+<!-- SOURCE pdf-0106-b042 -->
+<!-- SOURCE pdf-0106-b045 -->
+<!-- SOURCE pdf-0106-b047 -->
+<!-- SOURCE pdf-0106-b050 -->
+<!-- SOURCE pdf-0106-b053 -->
+<!-- SOURCE pdf-0106-b068 -->
+<!-- SOURCE pdf-0106-b070 -->
+<!-- SOURCE pdf-0106-b072 -->
+<!-- SOURCE pdf-0106-b074 -->
+<!-- SOURCE pdf-0106-b076 -->
+<!-- SOURCE pdf-0106-b078 -->
+<!-- SOURCE pdf-0106-b080 -->
+<!-- SOURCE pdf-0106-b082 -->
+<!-- SOURCE pdf-0106-b084 -->
+<!-- SOURCE pdf-0106-b087 -->
+<!-- SOURCE pdf-0106-b089 -->
+<!-- SOURCE pdf-0106-b091 -->
+<!-- SOURCE pdf-0106-b093 -->
+<!-- SOURCE pdf-0106-b095 -->
+<!-- SOURCE pdf-0106-b097 -->
+<!-- SOURCE pdf-0106-b099 -->
+<!-- SOURCE pdf-0106-b101 -->
+<!-- SOURCE pdf-0106-b103 -->
+<!-- SOURCE pdf-0106-b106 -->
+<!-- SOURCE pdf-0106-b108 -->
+<!-- SOURCE pdf-0106-b110 -->
+<!-- SOURCE pdf-0106-b112 -->
+<!-- SOURCE pdf-0106-b114 -->
+<!-- SOURCE pdf-0106-b116 -->
+<!-- SOURCE pdf-0106-b118 -->
+<!-- SOURCE pdf-0106-b120 -->
+<!-- SOURCE pdf-0106-b122 -->
+<!-- SOURCE pdf-0106-b125 -->
+<!-- SOURCE pdf-0106-b127 -->
+<!-- SOURCE pdf-0106-b129 -->
+<!-- SOURCE pdf-0106-b131 -->
+<!-- SOURCE pdf-0106-b133 -->
+<!-- SOURCE pdf-0106-b135 -->
+<!-- SOURCE pdf-0106-b137 -->
+<!-- SOURCE pdf-0106-b139 -->
+<!-- SOURCE pdf-0106-b141 -->
+<!-- SOURCE pdf-0106-b144 -->
+<!-- SOURCE pdf-0106-b146 -->
+<!-- SOURCE pdf-0106-b148 -->
+<!-- SOURCE pdf-0106-b150 -->
+<!-- SOURCE pdf-0106-b152 -->
+<!-- SOURCE pdf-0106-b154 -->
+<!-- SOURCE pdf-0106-b156 -->
+<!-- SOURCE pdf-0106-b158 -->
+<!-- SOURCE pdf-0106-b160 -->
+<!-- SOURCE pdf-0106-b163 -->
+<!-- SOURCE pdf-0106-b165 -->
+<!-- SOURCE pdf-0106-b167 -->
+<!-- SOURCE pdf-0106-b169 -->
+<!-- SOURCE pdf-0106-b171 -->
+<!-- SOURCE pdf-0106-b173 -->
+<!-- SOURCE pdf-0106-b175 -->
+<!-- SOURCE pdf-0106-b177 -->
+<!-- SOURCE pdf-0106-b179 -->
+<!-- SOURCE pdf-0106-b182 -->
+<!-- SOURCE pdf-0106-b184 -->
+<!-- SOURCE pdf-0106-b186 -->
+<!-- SOURCE pdf-0106-b188 -->
+<!-- SOURCE pdf-0106-b190 -->
+<!-- SOURCE pdf-0106-b192 -->
+<!-- SOURCE pdf-0106-b194 -->
+<!-- SOURCE pdf-0106-b196 -->
+<!-- SOURCE pdf-0106-b198 -->
+<!-- SOURCE pdf-0106-b201 -->
+<!-- SOURCE pdf-0106-b203 -->
+<!-- SOURCE pdf-0106-b205 -->
+<!-- SOURCE pdf-0106-b207 -->
+<!-- SOURCE pdf-0106-b209 -->
+<!-- SOURCE pdf-0106-b211 -->
+<!-- SOURCE pdf-0106-b213 -->
+<!-- SOURCE pdf-0106-b215 -->
+<!-- SOURCE pdf-0106-b217 -->
+<!-- SOURCE pdf-0106-b220 -->
+<!-- SOURCE pdf-0106-b222 -->
+<!-- SOURCE pdf-0106-b224 -->
+<!-- SOURCE pdf-0106-b226 -->
+<!-- SOURCE pdf-0106-b228 -->
+<!-- SOURCE pdf-0106-b230 -->
+<!-- SOURCE pdf-0106-b232 -->
+<!-- SOURCE pdf-0106-b234 -->
+<!-- SOURCE pdf-0106-b236 -->
+<!-- SOURCE pdf-0106-b239 -->
+<!-- SOURCE pdf-0106-b241 -->
+<!-- SOURCE pdf-0106-b243 -->
+<!-- SOURCE pdf-0106-b245 -->
+<!-- SOURCE pdf-0106-b247 -->
+<!-- SOURCE pdf-0106-b249 -->
+<!-- SOURCE pdf-0106-b251 -->
+<!-- SOURCE pdf-0106-b253 -->
+<!-- SOURCE pdf-0106-b255 -->
+<!-- SOURCE pdf-0106-b258 -->
+<!-- SOURCE pdf-0106-b260 -->
+<!-- SOURCE pdf-0106-b262 -->
+<!-- SOURCE pdf-0106-b264 -->
+<!-- SOURCE pdf-0106-b266 -->
+<!-- SOURCE pdf-0106-b268 -->
+<!-- SOURCE pdf-0106-b270 -->
+<!-- SOURCE pdf-0106-b272 -->
+<!-- SOURCE pdf-0106-b274 -->
+<!-- SOURCE pdf-0106-b277 -->
+<!-- SOURCE pdf-0106-b279 -->
+<!-- SOURCE pdf-0106-b281 -->
+<!-- SOURCE pdf-0106-b283 -->
+<!-- SOURCE pdf-0106-b285 -->
+<!-- SOURCE pdf-0106-b287 -->
+<!-- SOURCE pdf-0106-b289 -->
+<!-- SOURCE pdf-0106-b291 -->
+<!-- SOURCE pdf-0106-b293 -->
+<!-- SOURCE pdf-0106-b296 -->
+<!-- SOURCE pdf-0106-b298 -->
+<!-- SOURCE pdf-0106-b300 -->
+<!-- SOURCE pdf-0106-b302 -->
+<!-- SOURCE pdf-0106-b304 -->
+<!-- SOURCE pdf-0106-b306 -->
+<!-- SOURCE pdf-0106-b308 -->
+<!-- SOURCE pdf-0106-b310 -->
+<!-- SOURCE pdf-0106-b312 -->
+<!-- SOURCE pdf-0106-b315 -->
+<!-- SOURCE pdf-0106-b317 -->
+<!-- SOURCE pdf-0106-b319 -->
+<!-- SOURCE pdf-0106-b321 -->
+<!-- SOURCE pdf-0106-b323 -->
+<!-- SOURCE pdf-0106-b325 -->
+<!-- SOURCE pdf-0106-b327 -->
+<!-- SOURCE pdf-0106-b329 -->
+<!-- SOURCE pdf-0106-b331 -->
+<!-- SOURCE pdf-0106-b334 -->
+<!-- SOURCE pdf-0106-b336 -->
+<!-- SOURCE pdf-0106-b338 -->
+<!-- SOURCE pdf-0106-b340 -->
+<!-- SOURCE pdf-0106-b342 -->
+<!-- SOURCE pdf-0106-b344 -->
+<!-- SOURCE pdf-0106-b346 -->
+<!-- SOURCE pdf-0106-b348 -->
+<!-- SOURCE pdf-0106-b350 -->
+<!-- SOURCE pdf-0106-b353 -->
+<!-- SOURCE pdf-0106-b355 -->
+<!-- SOURCE pdf-0106-b357 -->
+<!-- SOURCE pdf-0106-b359 -->
+<!-- SOURCE pdf-0106-b361 -->
+<!-- SOURCE pdf-0106-b363 -->
+<!-- SOURCE pdf-0106-b365 -->
+<!-- SOURCE pdf-0106-b367 -->
+<!-- SOURCE pdf-0106-b369 -->
+<!-- SOURCE pdf-0106-b372 -->
+<!-- SOURCE pdf-0106-b374 -->
+<!-- SOURCE pdf-0106-b376 -->
+<!-- SOURCE pdf-0106-b378 -->
+<!-- SOURCE pdf-0106-b380 -->
+<!-- SOURCE pdf-0106-b382 -->
+<!-- SOURCE pdf-0106-b384 -->
+<!-- SOURCE pdf-0106-b386 -->
+<!-- SOURCE pdf-0106-b388 -->
+<!-- SOURCE pdf-0106-b391 -->
+<!-- SOURCE pdf-0106-b393 -->
+<!-- SOURCE pdf-0106-b395 -->
+<!-- SOURCE pdf-0106-b397 -->
+<!-- SOURCE pdf-0106-b399 -->
+<!-- SOURCE pdf-0106-b401 -->
+<!-- SOURCE pdf-0106-b403 -->
+<!-- SOURCE pdf-0106-b405 -->
+<!-- SOURCE pdf-0106-b407 -->
+<!-- SOURCE pdf-0106-b410 -->
+<!-- SOURCE pdf-0106-b412 -->
+<!-- SOURCE pdf-0106-b414 -->
+<!-- SOURCE pdf-0106-b416 -->
+<!-- SOURCE pdf-0106-b418 -->
+<!-- SOURCE pdf-0106-b420 -->
+<!-- SOURCE pdf-0106-b422 -->
+<!-- SOURCE pdf-0106-b424 -->
+<!-- SOURCE pdf-0106-b426 -->
+<!-- SOURCE pdf-0106-b429 -->
+<!-- SOURCE pdf-0106-b431 -->
+<!-- SOURCE pdf-0106-b433 -->
+<!-- SOURCE pdf-0106-b435 -->
+<!-- SOURCE pdf-0106-b437 -->
+<!-- SOURCE pdf-0106-b439 -->
+<!-- SOURCE pdf-0106-b441 -->
+<!-- SOURCE pdf-0106-b443 -->
+<!-- SOURCE pdf-0106-b445 -->
+<!-- SOURCE pdf-0106-b448 -->
+<!-- SOURCE pdf-0106-b450 -->
+<!-- SOURCE pdf-0106-b452 -->
+<!-- SOURCE pdf-0106-b454 -->
+<!-- SOURCE pdf-0106-b456 -->
+<!-- SOURCE pdf-0106-b458 -->
+<!-- SOURCE pdf-0106-b460 -->
+<!-- SOURCE pdf-0106-b462 -->
+<!-- SOURCE pdf-0106-b464 -->
+<!-- SOURCE pdf-0106-b467 -->
+<!-- SOURCE pdf-0106-b469 -->
+<!-- SOURCE pdf-0106-b471 -->
+<!-- SOURCE pdf-0106-b473 -->
+<!-- SOURCE pdf-0106-b475 -->
+<!-- SOURCE pdf-0106-b477 -->
+<!-- SOURCE pdf-0106-b479 -->
+<!-- SOURCE pdf-0106-b481 -->
+<!-- SOURCE pdf-0106-b483 -->
+<!-- SOURCE pdf-0106-b486 -->
+<!-- SOURCE pdf-0106-b488 -->
+<!-- SOURCE pdf-0106-b490 -->
+<!-- SOURCE pdf-0106-b492 -->
+<!-- SOURCE pdf-0106-b494 -->
+<!-- SOURCE pdf-0106-b496 -->
+<!-- SOURCE pdf-0106-b498 -->
+<!-- SOURCE pdf-0106-b500 -->
+<!-- SOURCE pdf-0106-b502 -->
+<!-- SOURCE pdf-0106-b505 -->
+<!-- SOURCE pdf-0106-b507 -->
+<!-- SOURCE pdf-0106-b509 -->
+<!-- SOURCE pdf-0106-b511 -->
+<!-- SOURCE pdf-0106-b513 -->
+<!-- SOURCE pdf-0106-b515 -->
+<!-- SOURCE pdf-0106-b517 -->
+<!-- SOURCE pdf-0106-b519 -->
+<!-- SOURCE pdf-0106-b521 -->
+<!-- SOURCE pdf-0106-b524 -->
+<!-- SOURCE pdf-0106-b526 -->
+<!-- SOURCE pdf-0106-b528 -->
+<!-- SOURCE pdf-0106-b530 -->
+<!-- SOURCE pdf-0106-b532 -->
+<!-- SOURCE pdf-0106-b534 -->
+<!-- SOURCE pdf-0106-b536 -->
+<!-- SOURCE pdf-0106-b538 -->
+<!-- SOURCE pdf-0106-b540 -->
+<!-- SOURCE pdf-0106-b543 -->
+<!-- SOURCE pdf-0106-b545 -->
+<!-- SOURCE pdf-0106-b547 -->
+<!-- SOURCE pdf-0106-b549 -->
+<!-- SOURCE pdf-0106-b551 -->
+<!-- SOURCE pdf-0106-b553 -->
+<!-- SOURCE pdf-0106-b555 -->
+<!-- SOURCE pdf-0106-b557 -->
+<!-- SOURCE pdf-0106-b559 -->
+<!-- SOURCE pdf-0106-b562 -->
+<!-- SOURCE pdf-0106-b564 -->
+<!-- SOURCE pdf-0106-b566 -->
+<!-- SOURCE pdf-0106-b568 -->
+<!-- SOURCE pdf-0106-b570 -->
+<!-- SOURCE pdf-0106-b572 -->
+<!-- SOURCE pdf-0106-b574 -->
+<!-- SOURCE pdf-0106-b576 -->
+<!-- SOURCE pdf-0106-b578 -->
+<!-- SOURCE pdf-0106-b581 -->
+<!-- SOURCE pdf-0106-b583 -->
+<!-- SOURCE pdf-0106-b585 -->
+<!-- SOURCE pdf-0106-b587 -->
+<!-- SOURCE pdf-0106-b589 -->
+<!-- SOURCE pdf-0106-b591 -->
+<!-- SOURCE pdf-0106-b593 -->
+<!-- SOURCE pdf-0106-b595 -->
+<!-- SOURCE pdf-0106-b597 -->
+<!-- SOURCE pdf-0106-b600 -->
+<!-- SOURCE pdf-0106-b602 -->
+<!-- SOURCE pdf-0106-b604 -->
+<!-- SOURCE pdf-0106-b606 -->
+<!-- SOURCE pdf-0106-b608 -->
+<!-- SOURCE pdf-0106-b610 -->
+<!-- SOURCE pdf-0106-b612 -->
+<!-- SOURCE pdf-0106-b614 -->
+<!-- SOURCE pdf-0106-b616 -->
+<!-- SOURCE pdf-0106-b619 -->
+<!-- SOURCE pdf-0106-b621 -->
+<!-- SOURCE pdf-0106-b623 -->
+<!-- SOURCE pdf-0106-b625 -->
+<!-- SOURCE pdf-0106-b627 -->
+<!-- SOURCE pdf-0106-b629 -->
+<!-- SOURCE pdf-0106-b631 -->
+<!-- SOURCE pdf-0106-b633 -->
+<!-- SOURCE pdf-0106-b635 -->
+<!-- SOURCE pdf-0106-b638 -->
+<!-- SOURCE pdf-0106-b640 -->
+<!-- SOURCE pdf-0106-b642 -->
+<!-- SOURCE pdf-0106-b644 -->
+<!-- SOURCE pdf-0106-b646 -->
+<!-- SOURCE pdf-0106-b648 -->
+<!-- SOURCE pdf-0106-b650 -->
+<!-- SOURCE pdf-0106-b652 -->
+<!-- SOURCE pdf-0106-b654 -->
+<!-- SOURCE pdf-0106-b657 -->
+<!-- SOURCE pdf-0106-b659 -->
+<!-- SOURCE pdf-0106-b661 -->
+<!-- SOURCE pdf-0106-b663 -->
+<!-- SOURCE pdf-0106-b665 -->
+<!-- SOURCE pdf-0106-b667 -->
+<!-- SOURCE pdf-0106-b669 -->
+<!-- SOURCE pdf-0106-b671 -->
+<!-- SOURCE pdf-0106-b673 -->
+<!-- SOURCE pdf-0106-b676 -->
+
+<p><img alt="图 3.6 instructor 与 teaches 的笛卡儿积。" src="../assets/ch03-fig3-6.png" /></p>
+<p>图 3.6 instructor 与 teaches 的笛卡儿积。</p>
+<p>图中字段：ID：教师号；name：姓名；dept_name：系名；salary：工资；course_id：课程号；sec_id：教学班号；semester：学期；year：年份；省略号表示未展示的元组。</p>
+<!-- SOURCE pdf-0105-b026 -->
+
+<p>笛卡尔积会组合两个关系中彼此无关的元组。每个教师元组与全部授课元组组合，包括其他教师的授课记录。结果可能非常大，直接生成这样的笛卡尔积通常没有意义。</p>
+<!-- SOURCE pdf-0105-b028 -->
+
+<!-- SOURCE pdf-0106-b677 -->
+
+<p><code>where</code> 谓词用于限制笛卡尔积产生的组合，只保留对答案有意义的组合。在涉及 <code>instructor</code> 和 <code>teaches</code> 的查询中，通常希望某个教师元组只与同一教师的授课记录匹配，即二者 <code>ID</code> 相同。下面的查询保证这一条件，并输出匹配元组的教师姓名和课程编号：</p>
+<!-- SOURCE pdf-0106-b678 -->
+<!-- SOURCE pdf-0106-b680 -->
+
+<pre><code class="language-sql">select name, course_id
+from instructor, teaches
+where instructor.ID = teaches.ID;
+</code></pre>
+<!-- SOURCE pdf-0107-b009 -->
+<!-- SOURCE pdf-0107-b012 -->
+<!-- SOURCE pdf-0107-b014 -->
+<!-- SOURCE pdf-0107-b022 -->
+<!-- SOURCE pdf-0107-b024 -->
+<!-- SOURCE pdf-0107-b027 -->
+<!-- SOURCE pdf-0107-b029 -->
+<!-- SOURCE pdf-0107-b032 -->
+<!-- SOURCE pdf-0107-b034 -->
+<!-- SOURCE pdf-0107-b037 -->
+<!-- SOURCE pdf-0107-b039 -->
+<!-- SOURCE pdf-0107-b042 -->
+<!-- SOURCE pdf-0107-b044 -->
+<!-- SOURCE pdf-0107-b047 -->
+<!-- SOURCE pdf-0107-b049 -->
+<!-- SOURCE pdf-0107-b052 -->
+<!-- SOURCE pdf-0107-b054 -->
+<!-- SOURCE pdf-0107-b057 -->
+<!-- SOURCE pdf-0107-b059 -->
+<!-- SOURCE pdf-0107-b062 -->
+<!-- SOURCE pdf-0107-b064 -->
+<!-- SOURCE pdf-0107-b067 -->
+<!-- SOURCE pdf-0107-b069 -->
+<!-- SOURCE pdf-0107-b072 -->
+<!-- SOURCE pdf-0107-b074 -->
+<!-- SOURCE pdf-0107-b077 -->
+<!-- SOURCE pdf-0107-b079 -->
+<!-- SOURCE pdf-0107-b082 -->
+<!-- SOURCE pdf-0107-b084 -->
+<!-- SOURCE pdf-0107-b087 -->
+<!-- SOURCE pdf-0107-b089 -->
+<!-- SOURCE pdf-0107-b092 -->
+<!-- SOURCE pdf-0107-b094 -->
+<!-- SOURCE pdf-0107-b097 -->
+
+<p><img alt="图 3.7 授过课的教师姓名及其所授课程号。" src="../assets/ch03-fig3-7.png" /></p>
+<p>图 3.7 授过课的教师姓名及其所授课程号。</p>
+<p>图中字段：name：姓名；course_id：课程号。</p>
+<!-- SOURCE pdf-0107-b098 -->
+
+<p>查询只输出教过课程的教师，没有教过课的教师不会出现。如果希望保留这些元组，可以使用4.1.3节介绍的外连接运算。</p>
+<!-- SOURCE pdf-0107-b099 -->
+
+<p>如果两个输入关系分别如图2.1和图2.7所示，查询结果就是图3.7。没有教课的 Gold、Califieri 和 Singh 未出现在结果中。</p>
+<!-- SOURCE pdf-0107-b100 -->
+<!-- SOURCE pdf-0107-b101 -->
+<!-- SOURCE pdf-0107-b103 -->
+<!-- SOURCE pdf-0107-b105 -->
+
+<p>如果只需要计算机科学系教师的姓名与课程编号，可以在 <code>where</code> 中增加一个谓词：</p>
+<pre><code class="language-sql">select name, course_id
+from instructor, teaches
+where instructor.ID = teaches.ID and instructor.dept_name = 'Comp. Sci.';
+</code></pre>
+<!-- SOURCE pdf-0107-b106 -->
+<!-- SOURCE pdf-0107-b108 -->
+<!-- SOURCE pdf-0107-b110 -->
+<!-- SOURCE pdf-0107-b112 -->
+
+<p><code>dept_name</code> 仅出现在 <code>instructor</code> 中，因此也可以省略它的关系名前缀，直接写 <code>dept_name</code>。</p>
+<p>一般来说，SQL 查询的含义可以按以下步骤理解：</p>
+<!-- SOURCE pdf-0107-b113 -->
+<!-- SOURCE pdf-0107-b114 -->
+<!-- SOURCE pdf-0108-b001 -->
+<!-- SOURCE pdf-0108-b002 -->
+
+<ol>
+<li>生成 <code>from</code> 中各关系的笛卡尔积。</li>
+<li>对第一步的结果应用 <code>where</code> 谓词。</li>
+<li>对第二步保留的每个元组，输出 <code>select</code> 指定的属性或表达式结果。</li>
+</ol>
+<!-- SOURCE pdf-0108-b003 -->
+
+<p>这些步骤帮助确定查询应产生什么结果。实际 SQL 实现会优化计算，尽可能只生成满足 <code>where</code> 条件的组合，不会照此机械执行。第15章和第16章介绍这些实现技术。</p>
+<!-- SOURCE pdf-0108-b004 -->
+
+<p>编写查询时要包含合适的 <code>where</code> 条件。省略前面查询的条件会输出笛卡尔积，可能是一个巨大的关系。对于图2.1和图2.7的示例，笛卡儿积有12 × 13 = 156个元组，已多到无法在书中全部展示。再考虑更接近现实的200位教师，每人教3门课，<code>teaches</code> 就有600个元组，上述迭代会生成200 × 600 = 120,000个结果元组。</p>
+<blockquote>
+<p><strong>译注：</strong> 原书此处使用 13 个授课元组计算 156；本版图 2.7 实际列出 15 个元组，按图中数据计算应为 12 × 15 = 180。</p>
+</blockquote>
+<!-- SOURCE pdf-0108-b005 -->
+<!-- SOURCE pdf-0108-b006 -->
+
+<h2 id="34">3.4 其他基本运算</h2>
+<p>SQL 还支持若干其他基本运算。</p>
+<!-- SOURCE pdf-0108-b007 -->
+
+<h3 id="341">3.4.1 重命名运算</h3>
+<!-- SOURCE pdf-0108-b008 -->
+<!-- SOURCE pdf-0108-b009 -->
+<!-- SOURCE pdf-0108-b011 -->
+
+<p>再看前面使用过的查询：</p>
+<pre><code class="language-sql">select name, course_id
+from instructor, teaches
+where instructor.ID = teaches.ID;
+</code></pre>
+<!-- SOURCE pdf-0108-b012 -->
+<!-- SOURCE pdf-0108-b013 -->
+<!-- SOURCE pdf-0108-b015 -->
+<!-- SOURCE pdf-0108-b016 -->
+
+<p>结果关系的属性为 <code>name, course_id</code>，它们的名称来自 <code>from</code> 中各关系的属性名。</p>
+<!-- SOURCE pdf-0108-b017 -->
+<!-- SOURCE pdf-0110-b001 -->
+<!-- SOURCE pdf-0110-b002 -->
+
+<p>但并非总能这样确定名称。首先，<code>from</code> 中两个关系可能有同名属性，导致结果属性名重复；其次，<code>select</code> 中使用算术表达式时，结果属性没有名称；最后，即使能从基础关系取得名称，也可能希望修改结果中的属性名。因此，SQL 提供重命名结果属性的 <code>as</code> 子句，形式为：</p>
+<pre><code class="language-text">old-name as new-name
+</code></pre>
+<p><code>as</code> 可以出现在 <code>select</code> 和 <code>from</code> 中。<sup id="fnref:ch3-3"><a class="footnote-ref" href="#fn:ch3-3">3</a></sup></p>
+<!-- SOURCE pdf-0110-b003 -->
+<!-- SOURCE pdf-0110-b005 -->
+<!-- SOURCE pdf-0110-b006 -->
+<!-- SOURCE pdf-0110-b008 -->
+<!-- SOURCE pdf-0110-b010 -->
+
+<p>例如，要把结果属性 <code>name</code> 改名为 <code>instructor_name</code>，可改写为：</p>
+<pre><code class="language-sql">select name as instructor_name, course_id
+from instructor, teaches
+where instructor.ID = teaches.ID;
+</code></pre>
+<!-- SOURCE pdf-0110-b011 -->
+<!-- SOURCE pdf-0110-b012 -->
+<!-- SOURCE pdf-0110-b014 -->
+
+<p><code>as</code> 对关系重命名也很有用。一个用途是把较长关系名替换为简称，方便查询其他位置使用。例如，查询“找出大学中所有教过课程的教师姓名及其所教全部课程的编号”可以写为：</p>
+<pre><code class="language-sql">select T.name, S.course_id
+from instructor as T, teaches as S
+where T.ID = S.ID;
+</code></pre>
+<!-- SOURCE pdf-0110-b015 -->
+<!-- SOURCE pdf-0110-b016 -->
+<!-- SOURCE pdf-0110-b018 -->
+
+<p>另一个用途是比较同一关系中的不同元组。这需要关系与自身做笛卡尔积，如果没有重命名，就无法区分两次引用。假设要“找出工资高于 生物系至少一位教师的所有教师姓名”，可以写为：</p>
+<pre><code class="language-sql">select distinct T.name
+from instructor as T, instructor as S
+where T.salary &gt; S.salary and S.dept_name = 'Biology';
+</code></pre>
+<!-- SOURCE pdf-0110-b019 -->
+
+<p>这里不能使用 <code>instructor.salary</code>，因为无法确定引用的是哪一个 <code>instructor</code>。</p>
+<!-- SOURCE pdf-0110-b020 -->
+
+<p>可以把 T、S 理解为 <code>instructor</code> 的两个副本；更准确地说，它们声明为关系的<strong>别名</strong>，也就是另外的名称。SQL 标准把 T、S 这类用于重命名关系的标识符称为<strong>相关名</strong>，通常也称为<strong>表别名</strong>、<strong>相关变量</strong>或<strong>元组变量</strong>。</p>
+<!-- SOURCE pdf-0110-b022 -->
+
+<!-- SOURCE pdf-0111-b001 -->
+
+<p>前面的查询用自然语言更直观地表达，就是“找出工资高于 生物系最低薪教师的所有教师姓名”。原先的表述更贴近所写 SQL，后一种表述更容易理解，也能直接写成 SQL，3.8.2节将介绍。</p>
+<!-- SOURCE pdf-0109-b002 -->
+
+<h4 id="31-sql_1">注 3.1 SQL 与多重集关系代数：第一部分</h4>
+<!-- SOURCE pdf-0109-b003 -->
+
+<p>关系代数运算与 SQL 运算密切相关，一个重要区别是 SQL 允许重复。SQL 标准规定查询输出中每个元组出现多少个副本，这又取决于输入关系中元组副本的数量。</p>
+<!-- SOURCE pdf-0109-b004 -->
+
+<p>为了刻画这一行为，关系代数有一个作用于多重集的版本，称为<strong>多重集关系代数</strong>。多重集允许重复，其基本运算定义如下：</p>
+<!-- SOURCE pdf-0109-b005 -->
+<!-- SOURCE pdf-0109-b006 -->
+<!-- SOURCE pdf-0109-b007 -->
+<!-- SOURCE pdf-0109-b008 -->
+<!-- SOURCE pdf-0109-b009 -->
+<!-- SOURCE pdf-0109-b010 -->
+
+<ol>
+<li>如果 r₁ 中元组 t₁ 有 c₁ 个副本，且 t₁ 满足选择条件 θ，那么 σ<sub>θ</sub>(r₁) 中也有 c₁ 个 t₁ 副本。</li>
+<li>对 r₁ 中 t₁ 的每个副本，Π<sub>A</sub>(r₁) 中都有一个 Π<sub>A</sub>(t₁) 的副本，其中 Π<sub>A</sub>(t₁) 表示单个元组的投影。</li>
+<li>如果 r₁ 中 t₁ 有 c₁ 个副本，r₂ 中 t₂ 有 c₂ 个副本，那么 r₁ × r₂ 中元组 t₁.t₂ 有 c₁ × c₂ 个副本。</li>
+</ol>
+<!-- SOURCE pdf-0109-b011 -->
+<!-- SOURCE pdf-0109-b012 -->
+
+<p>例如，模式为 (A, B) 的 r₁ 和模式为 (C) 的 r₂ 分别是多重集 r₁ = {(1, a), (2, a)}、r₂ = {(2), (3), (3)}。那么 Π<sub>B</sub>(r₁) 为 {(a), (a)}，而 Π<sub>B</sub>(r₁) × r₂ 为：</p>
+<p>{(a, 2), (a, 2), (a, 3), (a, 3), (a, 3), (a, 3)}</p>
+<!-- SOURCE pdf-0109-b013 -->
+<!-- SOURCE pdf-0109-b014 -->
+
+<p>考虑基本 SQL 查询：</p>
+<pre><code class="language-text">select A1, A2, …, An
+from r1, r2, …, rm
+where P
+</code></pre>
+<!-- SOURCE pdf-0109-b015 -->
+<!-- SOURCE pdf-0109-b016 -->
+
+<p>Aᵢ 为属性，rᵢ 为关系，P 为谓词。省略 <code>where</code> 时 P 为真。该查询等价于多重集关系代数表达式：</p>
+<p>Π<sub>A₁, A₂, …, Aₙ</sub>(σ<sub>P</sub>(r₁ × r₂ × ⋯ × rₘ))</p>
+<!-- SOURCE pdf-0109-b017 -->
+
+<p>关系代数的选择运算对应 SQL 的 <code>where</code> 子句，SQL 的 <code>select</code> 则承担其他作用。这种同名异义是历史遗留问题。原书第97页注3.2将讨论更复杂 SQL 查询的表示。</p>
+<!-- SOURCE pdf-0109-b018 -->
+
+<p>用关系代数表示 SQL，有助于形式化定义 SQL 程序的含义。数据库系统通常还会把 SQL 查询转换为基于关系代数的底层表示，再利用它进行查询优化和执行。</p>
+<!-- SOURCE pdf-0111-b002 -->
+
+<h3 id="342">3.4.2 字符串运算</h3>
+<!-- SOURCE pdf-0111-b003 -->
+
+<p>SQL 用单引号包围字符串，例如 <code>'Computer'</code>。字符串内部的单引号写为两个连续单引号，例如 <code>It's right</code> 写为 <code>'It''s right'</code>。</p>
+<!-- SOURCE pdf-0111-b004 -->
+
+<p>SQL 标准规定字符串相等比较区分大小写，因此 <code>'comp. sci.' = 'Comp. Sci.'</code> 为假。但 MySQL、SQL Server 等某些数据库匹配字符串时默认不区分大小写，此表达式在这些系统上为真。可以在数据库层面或具体属性层面改变这一默认行为。</p>
+<!-- SOURCE pdf-0111-b005 -->
+
+<p>SQL 还支持多种字符串函数，例如用 <code>||</code> 连接字符串、提取子串、计算长度、用 <code>upper(s)</code> 转为大写、用 <code>lower(s)</code> 转为小写，以及用 <code>trim(s)</code> 去掉末尾空格等，其中 s 为字符串。不同数据库支持的具体函数有所不同，应查阅所用系统手册。</p>
+<!-- SOURCE pdf-0111-b006 -->
+<!-- SOURCE pdf-0111-b007 -->
+<!-- SOURCE pdf-0111-b009 -->
+<!-- SOURCE pdf-0111-b011 -->
+
+<p><code>like</code> 运算符支持字符串模式匹配，模式中使用两种特殊字符：</p>
+<ul>
+<li>百分号 <code>%</code>：匹配任意子串。</li>
+<li>下划线 <code>_</code>：匹配任意一个字符。</li>
+</ul>
+<!-- SOURCE pdf-0111-b012 -->
+<!-- SOURCE pdf-0111-b013 -->
+<!-- SOURCE pdf-0111-b017 -->
+<!-- SOURCE pdf-0111-b021 -->
+
+<p>模式区分大小写，<sup id="fnref:ch3-4"><a class="footnote-ref" href="#fn:ch3-4">4</a></sup> 大写字母不能匹配小写字母，反之亦然。例如：</p>
+<ul>
+<li><code>'Intro%'</code> 匹配所有以 Intro 开头的字符串。</li>
+<li><code>'%Comp%'</code> 匹配所有含 Comp 子串的字符串，例如 <code>'Intro. to Computer Science'</code> 和 <code>'Computational Biology'</code>。</li>
+<li><code>'___'</code> 匹配恰好3个字符的字符串。</li>
+<li><code>'___%'</code> 匹配至少3个字符的字符串。</li>
+</ul>
+<!-- SOURCE pdf-0111-b023 -->
+
+<!-- SOURCE pdf-0112-b001 -->
+<!-- SOURCE pdf-0112-b002 -->
+<!-- SOURCE pdf-0112-b004 -->
+
+<p>SQL 用 <code>like</code> 比较运算符表达模式。例如，“找出楼宇名称包含 Watson 子串的所有系名”可写为：</p>
+<pre><code class="language-sql">select dept_name
+from department
+where building like '%Watson%';
+</code></pre>
+<!-- SOURCE pdf-0112-b005 -->
+<!-- SOURCE pdf-0112-b007 -->
+<!-- SOURCE pdf-0112-b008 -->
+
+<p>如果需要在模式中包含 <code>%</code>、<code>_</code> 这些特殊字符本身，可以指定转义字符。转义字符紧接在特殊字符之前，表示将后者作为普通字符处理。用 <code>escape</code> 为一次 <code>like</code> 比较指定转义字符。例如，采用反斜杠 <code>\</code> 时：</p>
+<ul>
+<li><code>like 'ab\%cd%' escape '\'</code> 匹配所有以 <code>ab%cd</code> 开头的字符串。</li>
+<li><code>like 'ab\\cd%' escape '\'</code> 匹配所有以 <code>ab\cd</code> 开头的字符串。</li>
+</ul>
+<!-- SOURCE pdf-0112-b009 -->
+
+<p><code>not like</code> 用于查找不匹配的值。有些实现还提供不区分大小写的 <code>like</code> 变体。</p>
+<!-- SOURCE pdf-0112-b010 -->
+
+<p>PostgreSQL 等某些 SQL 实现提供 <code>similar to</code>，其模式匹配能力比 <code>like</code> 更强，语法类似 Unix 正则表达式。</p>
+<!-- SOURCE pdf-0112-b011 -->
+
+<h3 id="343-select">3.4.3 select 子句中的属性指定</h3>
+<!-- SOURCE pdf-0112-b012 -->
+<!-- SOURCE pdf-0112-b013 -->
+<!-- SOURCE pdf-0112-b014 -->
+
+<p>星号 <code>*</code> 在 <code>select</code> 中表示“所有属性”。例如：</p>
+<pre><code class="language-sql">select instructor.*
+from instructor, teaches
+where instructor.ID = teaches.ID;
+</code></pre>
+<p><code>instructor.*</code> 表示选择 <code>instructor</code> 的全部属性；<code>select *</code> 则表示选择 <code>from</code> 结果关系的全部属性。</p>
+<!-- SOURCE pdf-0112-b015 -->
+
+<h3 id="344">3.4.4 元组的显示顺序</h3>
+<!-- SOURCE pdf-0112-b016 -->
+<!-- SOURCE pdf-0113-b001 -->
+<!-- SOURCE pdf-0113-b003 -->
+
+<p>SQL 允许用户控制元组显示顺序，<code>order by</code> 使查询结果按指定次序排列。例如，按字母顺序列出 物理系所有教师姓名：</p>
+<pre><code class="language-sql">select name
+from instructor
+where dept_name = 'Physics'
+order by name;
+</code></pre>
+<!-- SOURCE pdf-0113-b004 -->
+<!-- SOURCE pdf-0113-b005 -->
+
+<p><code>order by</code> 默认升序排列。可以用 <code>desc</code> 指定降序，用 <code>asc</code> 指定升序，还可以按多个属性排序。假设希望按工资降序列出全部教师，同薪教师再按姓名升序排列，可写为：</p>
+<pre><code class="language-sql">select *
+from instructor
+order by salary desc, name asc;
+</code></pre>
+<!-- SOURCE pdf-0113-b006 -->
+
+<h3 id="345-where">3.4.5 where 子句中的谓词</h3>
+<!-- SOURCE pdf-0113-b007 -->
+<!-- SOURCE pdf-0113-b008 -->
+<!-- SOURCE pdf-0113-b009 -->
+<!-- SOURCE pdf-0113-b010 -->
+
+<p>SQL 的 <code>between</code> 比较运算符，简化了同时规定某值不小于下限、不大于上限的条件。例如，找出工资在90,000至100,000美元之间的教师姓名：</p>
+<pre><code class="language-sql">select name
+from instructor
+where salary between 90000 and 100000;
+</code></pre>
+<p>它等价于：</p>
+<pre><code class="language-sql">select name
+from instructor
+where salary &lt;= 100000 and salary &gt;= 90000;
+</code></pre>
+<!-- SOURCE pdf-0113-b011 -->
+
+<p>类似地，可以使用 <code>not between</code>。</p>
+<!-- SOURCE pdf-0113-b012 -->
+
+<p>SQL 允许用 (v₁, v₂, …, vₙ) 表示包含这些值的 n 元组，称为<strong>行构造器</strong>。比较运算符可以作用于元组，次序按字典序定义。例如，当 a₁ ≤ b₁ 且 a₂ ≤ b₂ 时，(a₁, a₂) ≤ (b₁, b₂) 为真；两个元组在所有属性都相等时相等。因此，下面的查询：</p>
+<blockquote>
+<p><strong>译注：</strong> 前述逐分量条件是字典序比较为真的充分条件，并非完整判定规则。在值均非空时，(a₁, a₂) ≤ (b₁, b₂) 的完整条件为 a₁ &lt; b₁，或 a₁ = b₁ 且 a₂ ≤ b₂。</p>
+</blockquote>
+<!-- SOURCE pdf-0113-b013 -->
+<!-- SOURCE pdf-0113-b015 -->
+<!-- SOURCE pdf-0113-b017 -->
+
+<pre><code class="language-sql">select name, course_id
+from instructor, teaches
+where instructor.ID = teaches.ID and dept_name = 'Biology';
+</code></pre>
+<!-- SOURCE pdf-0114-b026 -->
+<!-- SOURCE pdf-0114-b027 -->
+<!-- SOURCE pdf-0114-b029 -->
+<!-- SOURCE pdf-0114-b031 -->
+
+<p>可以改写为：<sup id="fnref:ch3-5"><a class="footnote-ref" href="#fn:ch3-5">5</a></sup></p>
+<pre><code class="language-sql">select name, course_id
+from instructor, teaches
+where (instructor.ID, dept_name) = (teaches.ID, 'Biology');
+</code></pre>
+<!-- SOURCE pdf-0114-b046 -->
+
+<!-- SOURCE pdf-0114-b032 -->
+
+<h2 id="35">3.5 集合运算</h2>
+<!-- SOURCE pdf-0114-b033 -->
+
+<p>SQL 的 <code>union</code>、<code>intersect</code> 和 <code>except</code> 作用于关系，分别对应数学中的集合并 ∪、交 ∩ 和差 −。下面围绕两个集合构造这些运算的查询。</p>
+<!-- SOURCE pdf-0114-b034 -->
+<!-- SOURCE pdf-0114-b035 -->
+<!-- SOURCE pdf-0114-b037 -->
+
+<p>2017年秋季学期开设的全部课程：</p>
+<pre><code class="language-sql">select course_id
+from section
+where semester = 'Fall' and year = 2017;
+</code></pre>
+<!-- SOURCE pdf-0114-b038 -->
+<!-- SOURCE pdf-0114-b039 -->
+<!-- SOURCE pdf-0114-b041 -->
+
+<p>2018年春季学期开设的全部课程：</p>
+<pre><code class="language-sql">select course_id
+from section
+where semester = 'Spring' and year = 2018;
+</code></pre>
+<!-- SOURCE pdf-0114-b042 -->
+<!-- SOURCE pdf-0114-b044 -->
+
+<p>下文将这两个查询的结果分别称为 c₁、c₂。以图2.6的 <code>section</code> 为输入，结果如图3.8和图3.9所示。c₂ 中 CS-319 出现两次，因为2018年春季开设了两个教学班。</p>
+<!-- SOURCE pdf-0114-b007 -->
+<!-- SOURCE pdf-0114-b009 -->
+<!-- SOURCE pdf-0114-b016 -->
+<!-- SOURCE pdf-0114-b019 -->
+<!-- SOURCE pdf-0114-b022 -->
+<!-- SOURCE pdf-0114-b025 -->
+
+<p><img alt="图 3.8 关系 c1：2017 年秋季开设的课程。" src="../assets/ch03-fig3-8.png" /></p>
+<p>图 3.8 关系 c1：2017 年秋季开设的课程。</p>
+<p>图中字段：course_id：课程号。</p>
+<!-- SOURCE pdf-0115-b004 -->
+<!-- SOURCE pdf-0115-b006 -->
+<!-- SOURCE pdf-0115-b011 -->
+<!-- SOURCE pdf-0115-b014 -->
+<!-- SOURCE pdf-0115-b017 -->
+<!-- SOURCE pdf-0115-b020 -->
+<!-- SOURCE pdf-0115-b023 -->
+<!-- SOURCE pdf-0115-b026 -->
+<!-- SOURCE pdf-0115-b029 -->
+<!-- SOURCE pdf-0115-b032 -->
+
+<p><img alt="图 3.9 关系 c2：2018 年春季开设的课程。" src="../assets/ch03-fig3-9.png" /></p>
+<p>图 3.9 关系 c2：2018 年春季开设的课程。</p>
+<p>图中字段：course_id：课程号。</p>
+<!-- SOURCE pdf-0115-b033 -->
+
+<h3 id="351-union">3.5.1 union 运算</h3>
+<!-- SOURCE pdf-0115-b034 -->
+<!-- SOURCE pdf-0115-b035 -->
+<!-- SOURCE pdf-0115-b037 -->
+<!-- SOURCE pdf-0115-b039 -->
+
+<p>要查找2017年秋季、2018年春季或两个学期都开设的全部课程，可写为下列查询。每个 <code>select-from-where</code> 表达式外的括号可以省略，但有助于阅读；有些数据库不允许这些括号，使用时可去掉。</p>
+<pre><code class="language-sql">(select course_id
+ from section
+ where semester = 'Fall' and year = 2017)
+union
+(select course_id
+ from section
+ where semester = 'Spring' and year = 2018);
+</code></pre>
+<!-- SOURCE pdf-0115-b040 -->
+
+<p><code>union</code> 自动消除重复，普通 <code>select</code> 则保留重复。图2.6中，CS-319 在2018年春季开设两个教学班，CS-101 在两个学期各开设一个，但结果中它们都只出现一次，如图3.10所示。</p>
+<!-- SOURCE pdf-0116-b007 -->
+<!-- SOURCE pdf-0116-b009 -->
+<!-- SOURCE pdf-0116-b016 -->
+<!-- SOURCE pdf-0116-b019 -->
+<!-- SOURCE pdf-0116-b022 -->
+<!-- SOURCE pdf-0116-b025 -->
+<!-- SOURCE pdf-0116-b028 -->
+<!-- SOURCE pdf-0116-b031 -->
+<!-- SOURCE pdf-0116-b034 -->
+<!-- SOURCE pdf-0116-b037 -->
+<!-- SOURCE pdf-0116-b040 -->
+
+<p><img alt="图 3.10 c1 union c2 的结果。" src="../assets/ch03-fig3-10.png" /></p>
+<p>图 3.10 c1 union c2 的结果。</p>
+<p>图中字段：course_id：课程号。</p>
+<!-- SOURCE pdf-0115-b041 -->
+<!-- SOURCE pdf-0115-b042 -->
+<!-- SOURCE pdf-0115-b044 -->
+<!-- SOURCE pdf-0115-b046 -->
+
+<p>要保留全部重复，使用 <code>union all</code>：</p>
+<pre><code class="language-sql">(select course_id
+ from section
+ where semester = 'Fall' and year = 2017)
+union all
+(select course_id
+ from section
+ where semester = 'Spring' and year = 2018);
+</code></pre>
+<!-- SOURCE pdf-0115-b047 -->
+<!-- SOURCE pdf-0116-b041 -->
+
+<p>结果中某元组的副本数，等于它在 c₁ 和 c₂ 中的副本数之和。因此，CS-319 与 CS-101 各出现两次。再如，若 ECE-101 在2017年秋季开设4个教学班、2018年春季开设2个，结果就包含6个 ECE-101 元组。</p>
+<!-- SOURCE pdf-0116-b042 -->
+
+<h3 id="352-intersect">3.5.2 intersect 运算</h3>
+<!-- SOURCE pdf-0116-b043 -->
+<!-- SOURCE pdf-0116-b044 -->
+<!-- SOURCE pdf-0116-b046 -->
+<!-- SOURCE pdf-0116-b048 -->
+
+<p>要查找2017年秋季和2018年春季都开设的课程，可写为：</p>
+<pre><code class="language-sql">(select course_id
+ from section
+ where semester = 'Fall' and year = 2017)
+intersect
+(select course_id
+ from section
+ where semester = 'Spring' and year = 2018);
+</code></pre>
+<!-- SOURCE pdf-0116-b049 -->
+
+<p>结果如图3.11所示，只包含一个 CS-101 元组。<code>intersect</code> 自动消除重复。<sup id="fnref:ch3-6"><a class="footnote-ref" href="#fn:ch3-6">6</a></sup> 例如，即使 ECE-101 在两个学期分别开设4个、2个教学班，结果中也只出现一次。</p>
+<!-- SOURCE pdf-0116-b056 -->
+<!-- SOURCE pdf-0116-b058 -->
+<!-- SOURCE pdf-0116-b065 -->
+<!-- SOURCE pdf-0116-b068 -->
+
+<p><img alt="图 3.11 c1 intersect c2 的结果。" src="../assets/ch03-fig3-11.png" /></p>
+<p>图 3.11 c1 intersect c2 的结果。</p>
+<p>图中字段：course_id：课程号。</p>
+<!-- SOURCE pdf-0116-b070 -->
+
+<!-- SOURCE pdf-0117-b023 -->
+<!-- SOURCE pdf-0117-b024 -->
+<!-- SOURCE pdf-0117-b026 -->
+<!-- SOURCE pdf-0117-b028 -->
+
+<p>要保留重复，使用 <code>intersect all</code>：</p>
+<pre><code class="language-sql">(select course_id
+ from section
+ where semester = 'Fall' and year = 2017)
+intersect all
+(select course_id
+ from section
+ where semester = 'Spring' and year = 2018);
+</code></pre>
+<!-- SOURCE pdf-0117-b029 -->
+
+<p>结果副本数等于该元组在 c₁、c₂ 中副本数的较小值。例如，ECE-101 两个学期分别有4个、2个教学班，则结果包含2个 ECE-101 元组。</p>
+<!-- SOURCE pdf-0117-b030 -->
+
+<h3 id="353-except">3.5.3 except 运算</h3>
+<!-- SOURCE pdf-0117-b031 -->
+<!-- SOURCE pdf-0117-b032 -->
+<!-- SOURCE pdf-0117-b034 -->
+<!-- SOURCE pdf-0117-b036 -->
+
+<p>要查找2017年秋季开设、但2018年春季未开设的课程，可写为：</p>
+<pre><code class="language-sql">(select course_id
+ from section
+ where semester = 'Fall' and year = 2017)
+except
+(select course_id
+ from section
+ where semester = 'Spring' and year = 2018);
+</code></pre>
+<!-- SOURCE pdf-0117-b037 -->
+<!-- SOURCE pdf-0117-b038 -->
+<!-- SOURCE pdf-0118-b001 -->
+
+<p>结果如图3.12所示，相当于从图3.8的 c₁ 中去掉 CS-101。<code>except</code><sup id="fnref:ch3-7"><a class="footnote-ref" href="#fn:ch3-7">7</a></sup> 输出存在于第一个输入、但不存在于第二个输入中的全部元组，即集合差。运算先消除输入重复，再计算差集。假设 ECE-101 两个学期分别有4个、2个教学班，结果中就没有 ECE-101。</p>
+<!-- SOURCE pdf-0117-b007 -->
+<!-- SOURCE pdf-0117-b009 -->
+<!-- SOURCE pdf-0117-b016 -->
+<!-- SOURCE pdf-0117-b019 -->
+<!-- SOURCE pdf-0117-b022 -->
+
+<p><img alt="图 3.12 c1 except c2 的结果。" src="../assets/ch03-fig3-12.png" /></p>
+<p>图 3.12 c1 except c2 的结果。</p>
+<p>图中字段：course_id：课程号。</p>
+<!-- SOURCE pdf-0117-b040 -->
+
+<!-- SOURCE pdf-0118-b002 -->
+<!-- SOURCE pdf-0118-b003 -->
+<!-- SOURCE pdf-0118-b005 -->
+<!-- SOURCE pdf-0118-b007 -->
+
+<p>要保留重复，使用 <code>except all</code>：</p>
+<pre><code class="language-sql">(select course_id
+ from section
+ where semester = 'Fall' and year = 2017)
+except all
+(select course_id
+ from section
+ where semester = 'Spring' and year = 2018);
+</code></pre>
+<!-- SOURCE pdf-0118-b008 -->
+
+<p>结果副本数等于 c₁ 中的副本数减去 c₂ 中的副本数，前提是差为正；否则没有该元组。ECE-101 在2017年秋季有4个教学班、2018年春季有2个，结果就出现2次。如果秋季只有2个或更少，春季有2个，结果就不包含 ECE-101。</p>
+<!-- SOURCE pdf-0118-b009 -->
+
+<h2 id="36">3.6 空值</h2>
+<!-- SOURCE pdf-0118-b010 -->
+
+<p>空值给关系运算带来特殊问题，包括算术运算、比较和集合运算。</p>
+<!-- SOURCE pdf-0118-b011 -->
+
+<p>算术表达式（例如包含 +、−、*、/）只要任一输入为空，结果就为空。例如，查询表达式 <code>r.A + 5</code> 中，某个元组的 <code>r.A</code> 为空，该元组的表达式结果也必须为空。</p>
+<!-- SOURCE pdf-0118-b012 -->
+
+<p>涉及空值的比较更麻烦。例如 <code>1 &lt; null</code>：无法判定为真，因为不知道空值代表什么；也不能判定为假，否则 <code>not (1 &lt; null)</code> 会为真，同样没有根据。因此，除本节后面介绍的 <code>is null</code>、<code>is not null</code> 外，SQL 把涉及空值的比较结果视为 <strong>unknown（未知）</strong>，形成真、假之外的第三个逻辑值。</p>
+<!-- SOURCE pdf-0118-b013 -->
+
+<p><code>where</code> 谓词可能对比较结果使用 <code>and</code>、<code>or</code>、<code>not</code>，所以必须扩展这些布尔运算的定义，以处理 unknown。</p>
+<!-- SOURCE pdf-0119-b001 -->
+
+<ul>
+<li><code>and</code>：<code>true and unknown</code> 为 unknown；<code>false and unknown</code> 为 false；<code>unknown and unknown</code> 为 unknown。</li>
+<li><code>or</code>：<code>true or unknown</code> 为 true；<code>false or unknown</code> 为 unknown；<code>unknown or unknown</code> 为 unknown。</li>
+<li><code>not</code>：<code>not unknown</code> 为 unknown。</li>
+</ul>
+<!-- SOURCE pdf-0119-b002 -->
+
+<p>可以验证，如果 <code>r.A</code> 为空，<code>1 &lt; r.A</code> 与 <code>not (1 &lt; r.A)</code> 都得到 unknown。</p>
+<!-- SOURCE pdf-0119-b003 -->
+
+<p>某个元组的 <code>where</code> 谓词为 false 或 unknown 时，该元组都不会加入结果。</p>
+<!-- SOURCE pdf-0119-b004 -->
+<!-- SOURCE pdf-0119-b005 -->
+
+<p>SQL 在谓词中用特殊关键字 <code>null</code> 检查空值。例如，找出 <code>instructor</code> 中工资为空的所有教师：</p>
+<pre><code class="language-sql">select name
+from instructor
+where salary is null;
+</code></pre>
+<!-- SOURCE pdf-0119-b006 -->
+
+<p>值非空时，<code>is not null</code> 谓词为真。</p>
+<!-- SOURCE pdf-0119-b007 -->
+<!-- SOURCE pdf-0119-b008 -->
+
+<p><code>is unknown</code>、<code>is not unknown</code> 可以检查比较结果是否为 unknown，以区别 true 和 false。<sup id="fnref:ch3-8"><a class="footnote-ref" href="#fn:ch3-8">8</a></sup> 例如：</p>
+<pre><code class="language-sql">select name
+from instructor
+where salary &gt; 10000 is unknown;
+</code></pre>
+<!-- SOURCE pdf-0119-b009 -->
+
+<p>使用 <code>select distinct</code> 时，需要消除重复元组。此时比较两个元组的对应属性，只要二者都非空且相等，或者二者都为空，就视为相同。因此，<code>{('A',null), ('A',null)}</code> 中的两个副本被视为相同，即使有属性为空，<code>distinct</code> 仍只保留一个副本。这里的规则不同于谓词比较：谓词 <code>null=null</code> 的结果是 unknown。</p>
+<!-- SOURCE pdf-0119-b010 -->
+
+<p><code>union</code>、交运算和 <code>except</code> 也采用同样的方法：所有属性对应相同的元组视为相同，其中允许某些对应值都为空。</p>
+<!-- SOURCE pdf-0119-b012 -->
+
+<!-- SOURCE pdf-0120-b001 -->
+<!-- SOURCE pdf-0120-b002 -->
+<!-- SOURCE pdf-0120-b003 -->
+<!-- SOURCE pdf-0120-b004 -->
+
+<h2 id="37">3.7 聚集函数</h2>
+<p>聚集函数（aggregate function）以一组值（集合或多重集）为输入，返回单个值。SQL 提供五种标准的内置聚集函数：<sup id="fnref:ch3-9"><a class="footnote-ref" href="#fn:ch3-9">9</a></sup></p>
+<ul>
+<li>平均值：<code>avg</code></li>
+<li>最小值：<code>min</code></li>
+<li>最大值：<code>max</code></li>
+<li>总和：<code>sum</code></li>
+<li>计数：<code>count</code></li>
+</ul>
+<p><code>sum</code> 和 <code>avg</code> 的输入必须是一组数值，其他运算也能处理字符串等非数值类型的值。</p>
+<!-- SOURCE pdf-0120-b019 -->
+
+<!-- SOURCE pdf-0120-b005 -->
+<!-- SOURCE pdf-0120-b006 -->
+<!-- SOURCE pdf-0120-b007 -->
+<!-- SOURCE pdf-0120-b009 -->
+
+<h3 id="371">3.7.1 基本聚集</h3>
+<p>考虑查询“找出计算机科学系教师的平均工资”。可写为：</p>
+<pre><code class="language-sql">select avg (salary)
+from instructor
+where dept_name = 'Comp. Sci.';
+</code></pre>
+<!-- SOURCE pdf-0120-b010 -->
+<!-- SOURCE pdf-0120-b011 -->
+<!-- SOURCE pdf-0120-b013 -->
+<!-- SOURCE pdf-0120-b015 -->
+
+<p>结果关系只有一个属性和一个元组，其中的数值就是计算机科学系教师的平均工资。数据库系统可能直接用表达式文本给聚集生成的结果属性命名，这样的名称可能不够清晰。可以用 <code>as</code> 子句赋予有意义的名称：</p>
+<pre><code class="language-sql">select avg (salary) as avg_salary
+from instructor
+where dept_name = 'Comp. Sci.';
+</code></pre>
+<!-- SOURCE pdf-0120-b016 -->
+
+<p>图 2.1 的 <code>instructor</code> 关系中，计算机科学系教师的工资分别为 75000、65000 和 92000 美元。平均工资为 232000 / 3 = 77333.33 美元。</p>
+<!-- SOURCE pdf-0120-b017 -->
+<!-- SOURCE pdf-0121-b001 -->
+
+<p>计算平均值时，保留重复值十分重要。假设计算机科学系又增加一名教师，其工资恰好也是 75000 美元。如果消除重复值，就会得到错误答案（232000 / 4 = 58000 美元），正确答案应为 76750 美元。</p>
+<blockquote>
+<p><strong>译注：</strong> 这里保留原书的 232000 / 4 算式，它表示仅从总和中去掉重复工资、仍按 4 人相除的错误算法。若实际执行 avg(distinct salary)，参与平均的不同值只有 3 个，结果为 232000 / 3，仍不等于四位教师的平均工资 76750。</p>
+</blockquote>
+<!-- SOURCE pdf-0121-b002 -->
+<!-- SOURCE pdf-0121-b003 -->
+<!-- SOURCE pdf-0121-b004 -->
+
+<p>有时必须先消除重复值，再计算聚集函数。这时在聚集表达式中使用关键字 <code>distinct</code>。例如，“找出在 2018 年春季学期授课的教师总人数”。无论教师教授多少个教学班，每位教师都只计一次。所需信息在 <code>teaches</code> 关系中，查询如下：</p>
+<pre><code class="language-sql">select count (distinct ID)
+from teaches
+where semester = 'Spring' and year = 2018;
+</code></pre>
+<p>由于 <code>ID</code> 前有关键字 <code>distinct</code>，即使一位教师教授多门课程，在结果中也只计一次。</p>
+<!-- SOURCE pdf-0121-b005 -->
+<!-- SOURCE pdf-0121-b006 -->
+<!-- SOURCE pdf-0121-b007 -->
+
+<p>经常用聚集函数 <code>count</code> 统计关系中的元组数，SQL 中的写法是 <code>count (*)</code>。例如，统计 <code>course</code> 关系中的元组数：</p>
+<pre><code class="language-sql">select count (*)
+from course;
+</code></pre>
+<p>SQL 不允许对 <code>count (*)</code> 使用 <code>distinct</code>。<code>max</code> 和 <code>min</code> 可以使用 <code>distinct</code>，不过结果不会改变。也可以用关键字 <code>all</code> 替代 <code>distinct</code>，明确要求保留重复值；但 <code>all</code> 是默认选项，无须显式指定。</p>
+<!-- SOURCE pdf-0121-b008 -->
+<!-- SOURCE pdf-0121-b009 -->
+<!-- SOURCE pdf-0121-b010 -->
+<!-- SOURCE pdf-0121-b011 -->
+<!-- SOURCE pdf-0121-b013 -->
+<!-- SOURCE pdf-0121-b015 -->
+<!-- SOURCE pdf-0121-b017 -->
+
+<h3 id="372">3.7.2 分组聚集</h3>
+<p>有时需要对若干组元组分别应用聚集函数。在 SQL 中，这由 <code>group by</code> 子句指定。该子句给出的一个或多个属性用于分组：这些属性上的值全部相同的元组归入同一组。</p>
+<p>例如，“找出每个系的平均工资”，可写为：</p>
+<pre><code class="language-sql">select dept_name, avg (salary) as avg_salary
+from instructor
+group by dept_name;
+</code></pre>
+<!-- SOURCE pdf-0122-b013 -->
+<!-- SOURCE pdf-0122-b016 -->
+<!-- SOURCE pdf-0122-b019 -->
+<!-- SOURCE pdf-0122-b021 -->
+<!-- SOURCE pdf-0122-b024 -->
+<!-- SOURCE pdf-0122-b034 -->
+<!-- SOURCE pdf-0122-b036 -->
+<!-- SOURCE pdf-0122-b038 -->
+<!-- SOURCE pdf-0122-b040 -->
+<!-- SOURCE pdf-0122-b044 -->
+<!-- SOURCE pdf-0122-b046 -->
+<!-- SOURCE pdf-0122-b048 -->
+<!-- SOURCE pdf-0122-b050 -->
+<!-- SOURCE pdf-0122-b053 -->
+<!-- SOURCE pdf-0122-b055 -->
+<!-- SOURCE pdf-0122-b057 -->
+<!-- SOURCE pdf-0122-b059 -->
+<!-- SOURCE pdf-0122-b062 -->
+<!-- SOURCE pdf-0122-b064 -->
+<!-- SOURCE pdf-0122-b066 -->
+<!-- SOURCE pdf-0122-b068 -->
+<!-- SOURCE pdf-0122-b072 -->
+<!-- SOURCE pdf-0122-b074 -->
+<!-- SOURCE pdf-0122-b076 -->
+<!-- SOURCE pdf-0122-b078 -->
+<!-- SOURCE pdf-0122-b082 -->
+<!-- SOURCE pdf-0122-b084 -->
+<!-- SOURCE pdf-0122-b086 -->
+<!-- SOURCE pdf-0122-b088 -->
+<!-- SOURCE pdf-0122-b091 -->
+<!-- SOURCE pdf-0122-b093 -->
+<!-- SOURCE pdf-0122-b095 -->
+<!-- SOURCE pdf-0122-b097 -->
+<!-- SOURCE pdf-0122-b101 -->
+<!-- SOURCE pdf-0122-b103 -->
+<!-- SOURCE pdf-0122-b105 -->
+<!-- SOURCE pdf-0122-b107 -->
+<!-- SOURCE pdf-0122-b110 -->
+<!-- SOURCE pdf-0122-b112 -->
+<!-- SOURCE pdf-0122-b114 -->
+<!-- SOURCE pdf-0122-b116 -->
+<!-- SOURCE pdf-0122-b120 -->
+<!-- SOURCE pdf-0122-b122 -->
+<!-- SOURCE pdf-0122-b124 -->
+<!-- SOURCE pdf-0122-b126 -->
+<!-- SOURCE pdf-0122-b130 -->
+<!-- SOURCE pdf-0122-b132 -->
+<!-- SOURCE pdf-0122-b134 -->
+<!-- SOURCE pdf-0122-b136 -->
+<!-- SOURCE pdf-0122-b139 -->
+<!-- SOURCE pdf-0122-b141 -->
+<!-- SOURCE pdf-0122-b143 -->
+<!-- SOURCE pdf-0122-b145 -->
+<!-- SOURCE pdf-0122-b148 -->
+<!-- SOURCE pdf-0122-b150 -->
+
+<p><img alt="图 3.13 按 dept_name 分组的 instructor 元组。" src="../assets/ch03-fig3-13.png" /></p>
+<p>图 3.13 按 dept_name 分组的 instructor 元组。</p>
+<p>图中字段：ID：教师号；name：姓名；dept_name：系名；salary：工资。</p>
+<!-- SOURCE pdf-0122-b151 -->
+<!-- SOURCE pdf-0122-b153 -->
+
+<p>图 3.13 展示了按 <code>dept_name</code> 属性分组后的 <code>instructor</code> 元组，这是计算查询结果的第一步。对每组计算指定的聚集函数，就得到图 3.14 中的查询结果。</p>
+<!-- SOURCE pdf-0122-b165 -->
+<!-- SOURCE pdf-0122-b167 -->
+<!-- SOURCE pdf-0122-b170 -->
+<!-- SOURCE pdf-0122-b172 -->
+<!-- SOURCE pdf-0122-b180 -->
+<!-- SOURCE pdf-0122-b182 -->
+<!-- SOURCE pdf-0122-b185 -->
+<!-- SOURCE pdf-0122-b187 -->
+<!-- SOURCE pdf-0122-b190 -->
+<!-- SOURCE pdf-0122-b192 -->
+<!-- SOURCE pdf-0122-b195 -->
+<!-- SOURCE pdf-0122-b197 -->
+<!-- SOURCE pdf-0122-b200 -->
+<!-- SOURCE pdf-0122-b202 -->
+<!-- SOURCE pdf-0122-b205 -->
+<!-- SOURCE pdf-0122-b207 -->
+<!-- SOURCE pdf-0122-b210 -->
+<!-- SOURCE pdf-0122-b212 -->
+<!-- SOURCE pdf-0122-b215 -->
+<!-- SOURCE pdf-0122-b216 -->
+
+<p><img alt="图 3.14 各系平均工资。" src="../assets/ch03-fig3-14.png" /></p>
+<p>图 3.14 各系平均工资。</p>
+<p>图中字段：dept_name：系名；avg_salary：平均工资。</p>
+<!-- SOURCE pdf-0122-b154 -->
+<!-- SOURCE pdf-0122-b155 -->
+<!-- SOURCE pdf-0122-b156 -->
+
+<p>再看查询“找出所有教师的平均工资”：</p>
+<pre><code class="language-sql">select avg (salary)
+from instructor;
+</code></pre>
+<p>这个查询省略了 <code>group by</code> 子句，整个关系被视为一个组。</p>
+<!-- SOURCE pdf-0123-b001 -->
+<!-- SOURCE pdf-0123-b002 -->
+<!-- SOURCE pdf-0123-b004 -->
+<!-- SOURCE pdf-0123-b006 -->
+<!-- SOURCE pdf-0123-b007 -->
+<!-- SOURCE pdf-0123-b009 -->
+<!-- SOURCE pdf-0123-b010 -->
+
+<p>另一个对元组分组后聚集的例子是：“找出每个系在 2018 年春季学期授课的教师人数。”<code>teaches</code> 关系保存了教师在哪个学期教授哪个教学班的信息。为了得到每位教师的系名，还要与 <code>instructor</code> 关系连接。查询如下：</p>
+<pre><code class="language-sql">select dept_name, count (distinct ID) as instr_count
+from instructor, teaches
+where instructor.ID = teaches.ID and
+      semester = 'Spring' and year = 2018
+group by dept_name;
+</code></pre>
+<p>结果见图 3.15。</p>
+<blockquote>
+<p><strong>译注：</strong> 原书代码中 ID 同时存在于 instructor 和 teaches，未限定的 count(distinct ID) 会产生列名歧义。执行时可写 count(distinct instructor.ID)。</p>
+</blockquote>
+<!-- SOURCE pdf-0123-b029 -->
+<!-- SOURCE pdf-0123-b031 -->
+<!-- SOURCE pdf-0123-b034 -->
+<!-- SOURCE pdf-0123-b036 -->
+<!-- SOURCE pdf-0123-b044 -->
+<!-- SOURCE pdf-0123-b046 -->
+<!-- SOURCE pdf-0123-b049 -->
+<!-- SOURCE pdf-0123-b051 -->
+<!-- SOURCE pdf-0123-b054 -->
+<!-- SOURCE pdf-0123-b056 -->
+<!-- SOURCE pdf-0123-b059 -->
+<!-- SOURCE pdf-0123-b061 -->
+<!-- SOURCE pdf-0123-b064 -->
+
+<p><img alt="图 3.15 各系在 2018 年春季授课的教师人数。" src="../assets/ch03-fig3-15.png" /></p>
+<p>图 3.15 各系在 2018 年春季授课的教师人数。</p>
+<p>图中字段：dept_name：系名；instr_count：教师人数。</p>
+<!-- SOURCE pdf-0123-b011 -->
+<!-- SOURCE pdf-0123-b012 -->
+<!-- SOURCE pdf-0123-b014 -->
+<!-- SOURCE pdf-0123-b016 -->
+
+<p>SQL 查询使用分组时，需要确保 <code>select</code> 中所有未参与聚集的属性都出现在 <code>group by</code> 子句中。换言之，不在 <code>group by</code> 中的属性，只能作为聚集函数的参数出现在 <code>select</code> 中，否则查询会被判为错误。例如，下面的查询有误：<code>ID</code> 没有出现在 <code>group by</code> 中，却未经聚集直接出现在 <code>select</code> 中。</p>
+<pre><code class="language-sql">/* erroneous query */
+select dept_name, ID, avg (salary)
+from instructor
+group by dept_name;
+</code></pre>
+<!-- SOURCE pdf-0123-b017 -->
+<!-- SOURCE pdf-0123-b019 -->
+<!-- SOURCE pdf-0123-b020 -->
+
+<p>同一组（由 <code>dept_name</code> 确定）中每位教师的 <code>ID</code> 可以不同，每组却只输出一个元组，因而无法唯一确定应该输出哪个 <code>ID</code>。SQL 不允许这种情况。</p>
+<p>这个查询还展示了 SQL 注释：把文本放在 <code>/* */</code> 之间。同样的注释也可以写作 <code>-- erroneous query</code>。这里的注释意为“错误查询”。</p>
+<!-- SOURCE pdf-0124-b055 -->
+<!-- SOURCE pdf-0124-b056 -->
+<!-- SOURCE pdf-0124-b057 -->
+<!-- SOURCE pdf-0124-b059 -->
+<!-- SOURCE pdf-0124-b061 -->
+<!-- SOURCE pdf-0124-b063 -->
+<!-- SOURCE pdf-0124-b064 -->
+
+<h3 id="373-having">3.7.3 having 子句</h3>
+<p>有时需要对组设置条件。例如，我们可能只关心教师平均工资超过 42000 美元的系。这个条件作用于 <code>group by</code> 构造出的每个组，无法用于判断单个元组。SQL 用 <code>having</code> 子句表达这样的查询。分组完成后才应用 <code>having</code> 中的谓词，因而其中可以使用聚集函数。查询如下：</p>
+<pre><code class="language-sql">select dept_name, avg (salary) as avg_salary
+from instructor
+group by dept_name
+having avg (salary) &gt; 42000;
+</code></pre>
+<p>结果见图 3.16。</p>
+<!-- SOURCE pdf-0124-b009 -->
+<!-- SOURCE pdf-0124-b011 -->
+<!-- SOURCE pdf-0124-b014 -->
+<!-- SOURCE pdf-0124-b016 -->
+<!-- SOURCE pdf-0124-b024 -->
+<!-- SOURCE pdf-0124-b026 -->
+<!-- SOURCE pdf-0124-b029 -->
+<!-- SOURCE pdf-0124-b031 -->
+<!-- SOURCE pdf-0124-b034 -->
+<!-- SOURCE pdf-0124-b036 -->
+<!-- SOURCE pdf-0124-b039 -->
+<!-- SOURCE pdf-0124-b041 -->
+<!-- SOURCE pdf-0124-b044 -->
+<!-- SOURCE pdf-0124-b046 -->
+<!-- SOURCE pdf-0124-b049 -->
+<!-- SOURCE pdf-0124-b051 -->
+<!-- SOURCE pdf-0124-b054 -->
+
+<p><img alt="图 3.16 平均工资超过 42000 美元的各系平均工资。" src="../assets/ch03-fig3-16.png" /></p>
+<p>图 3.16 平均工资超过 42000 美元的各系平均工资。</p>
+<p>图中字段：dept_name：系名；avg_salary：平均工资。</p>
+<!-- SOURCE pdf-0124-b065 -->
+
+<p>与 <code>select</code> 子句一样，<code>having</code> 中所有未参与聚集的属性都必须出现在 <code>group by</code> 中，否则查询有误。</p>
+<!-- SOURCE pdf-0124-b066 -->
+<!-- SOURCE pdf-0124-b067 -->
+<!-- SOURCE pdf-0124-b068 -->
+<!-- SOURCE pdf-0124-b069 -->
+<!-- SOURCE pdf-0124-b070 -->
+<!-- SOURCE pdf-0124-b071 -->
+<!-- SOURCE pdf-0124-b072 -->
+<!-- SOURCE pdf-0125-b001 -->
+<!-- SOURCE pdf-0125-b002 -->
+<!-- SOURCE pdf-0125-b003 -->
+<!-- SOURCE pdf-0125-b004 -->
+
+<p>包含聚集、<code>group by</code> 或 <code>having</code> 子句的查询，其含义由以下操作顺序定义：</p>
+<ol>
+<li>与不含聚集的查询一样，先计算 <code>from</code> 子句，得到一个关系。</li>
+<li>如果存在 <code>where</code> 子句，就对 <code>from</code> 的结果关系应用其中的谓词。</li>
+<li>如果存在 <code>group by</code> 子句，就把满足 <code>where</code> 谓词的元组分组；否则，所有满足 <code>where</code> 谓词的元组组成一个组。</li>
+<li>如果存在 <code>having</code> 子句，就对每个组应用其中的谓词，删除不满足条件的组。</li>
+<li><code>select</code> 子句用剩下的组生成查询结果：计算聚集函数，每组产生一个结果元组。</li>
+</ol>
+<!-- SOURCE pdf-0125-b005 -->
+<!-- SOURCE pdf-0125-b007 -->
+<!-- SOURCE pdf-0125-b008 -->
+<!-- SOURCE pdf-0125-b010 -->
+<!-- SOURCE pdf-0125-b012 -->
+<!-- SOURCE pdf-0125-b014 -->
+<!-- SOURCE pdf-0125-b016 -->
+<!-- SOURCE pdf-0125-b018 -->
+<!-- SOURCE pdf-0125-b019 -->
+
+<p>下面用一个查询说明如何同时使用 <code>having</code> 和 <code>where</code>：“对于 2017 年开设的每个教学班，如果选课学生至少有 2 人，就找出这些学生已修总学分（<code>tot_cred</code>）的平均值。”</p>
+<pre><code class="language-sql">select course_id, semester, year, sec_id, avg (tot_cred)
+from student, takes
+where student.ID = takes.ID and year = 2017
+group by course_id, semester, year, sec_id
+having count (ID) &gt;= 2;
+</code></pre>
+<p>这个查询所需的全部信息都可以从 <code>takes</code> 和 <code>student</code> 关系获得。虽然查询涉及教学班，但无须与 <code>section</code> 连接。</p>
+<blockquote>
+<p><strong>译注：</strong> 这条原书查询中的 ID 同时存在于 student 和 takes。执行时应将 having count(ID) 写成 having count(student.ID)，避免列名歧义。</p>
+</blockquote>
+<!-- SOURCE pdf-0125-b020 -->
+<!-- SOURCE pdf-0125-b021 -->
+<!-- SOURCE pdf-0125-b022 -->
+<!-- SOURCE pdf-0125-b023 -->
+
+<h3 id="374">3.7.4 含空值和布尔值的聚集</h3>
+<p>空值会使聚集运算的处理变得复杂。例如，假设 <code>instructor</code> 的某些元组中 <code>salary</code> 为空。考虑求工资总额的查询：</p>
+<pre><code class="language-sql">select sum (salary)
+from instructor;
+</code></pre>
+<p>由于假设有些元组的 <code>salary</code> 为空，参与求和的值中也就含有空值。SQL 标准规定，<code>sum</code> 忽略输入中的空值，整体求和结果不因此变成空值。</p>
+<!-- SOURCE pdf-0125-b024 -->
+
+<p>一般而言，聚集函数按以下规则处理空值：除 <code>count (*)</code> 外，所有聚集函数都忽略输入中的空值。忽略空值后，输入值的集合可能变成空集。对空集计数的结果定义为 0，其他所有聚集运算对空集都返回空值。空值对某些较复杂的 SQL 结构的影响可能很微妙。</p>
+<!-- SOURCE pdf-0125-b025 -->
+
+<p>SQL:1999 引入了可取 <code>true</code>、<code>false</code>、<code>unknown</code> 的布尔数据类型。聚集函数 <code>some</code> 和 <code>every</code> 可用于一组布尔值，分别计算这些值的析取（<code>or</code>）与合取（<code>and</code>）。</p>
+<!-- SOURCE pdf-0126-b002 -->
+<!-- SOURCE pdf-0126-b003 -->
+<!-- SOURCE pdf-0126-b004 -->
+
+<h4 id="32-sql_1">注 3.2 SQL 与多重集关系代数：第二部分</h4>
+<p>如原书第 80 页的注 3.1 所述，SQL 的 <code>select</code>、<code>from</code> 和 <code>where</code> 子句可以用多重集关系代数中的选择、投影和笛卡儿积运算表示。</p>
+<p>关系代数的并、交、差（∪、∩、−）也可以类似地扩展到多重集关系代数，定义分别对应 3.5 节的 SQL <code>union all</code>、<code>intersect all</code> 和 <code>except all</code>。SQL 的 <code>union</code>、<code>intersect</code> 和 <code>except</code> 则对应集合版本的 ∪、∩ 和 −。</p>
+<!-- SOURCE pdf-0126-b005 -->
+<!-- SOURCE pdf-0126-b006 -->
+<!-- SOURCE pdf-0126-b008 -->
+<!-- SOURCE pdf-0126-b010 -->
+<!-- SOURCE pdf-0126-b011 -->
+<!-- SOURCE pdf-0126-b013 -->
+<!-- SOURCE pdf-0126-b015 -->
+
+<p>扩展关系代数的聚集运算 γ 允许对关系属性使用聚集函数。（也有人用符号 𝒢 表示聚集运算，本书早期版本即采用这个符号。）运算</p>
+<p><sub>dept_name</sub>γ<sub>average(salary)</sub>(instructor)</p>
+<p>按 <code>dept_name</code> 对 <code>instructor</code> 分组，并计算各组的平均工资，正如 3.7.2 节所示。左下标可以省略，这时整个输入关系构成一个组。因此，γ<sub>average(salary)</sub>(instructor) 计算所有教师的平均工资。聚集产生的值没有属性名，可以用重命名运算 ρ 命名，也可以使用下面的简便写法：</p>
+<p><sub>dept_name</sub>γ<sub>average(salary) as avg_salary</sub>(instructor)</p>
+<!-- SOURCE pdf-0126-b016 -->
+<!-- SOURCE pdf-0126-b017 -->
+<!-- SOURCE pdf-0126-b018 -->
+<!-- SOURCE pdf-0126-b019 -->
+
+<p>更复杂的 SQL 查询也可以改写成关系代数。例如：</p>
+<pre><code class="language-sql">select A1, A2, sum(A3)
+from r1, r2, …, rm
+where P
+group by A1, A2 having count(A4) &gt; 2
+</code></pre>
+<p>等价于：</p>
+<p><code>t₁ ← σₚ(r₁ × r₂ × ⋯ × rₘ)</code></p>
+<p>Π<sub>A₁, A₂, SumA₃</sub>(σ<sub>countA₄ &gt; 2</sub>(<sub>A₁, A₂</sub>γ<sub>sum(A₃) as SumA₃, count(A₄) as countA₄</sub>(t₁)))</p>
+<!-- SOURCE pdf-0126-b020 -->
+
+<p><code>from</code> 子句中的连接表达式可以用关系代数中的等价连接表达式表示，细节留作练习。不过，<code>where</code> 或 <code>select</code> 子句中的子查询无法这样直接改写，因为关系代数中没有与子查询结构等价的运算。为此已有一些扩展关系代数的方案，但超出了本书的讨论范围。</p>
+<!-- SOURCE pdf-0127-b001 -->
+<!-- SOURCE pdf-0127-b002 -->
+
+<h2 id="38">3.8 嵌套子查询</h2>
+<p>SQL 提供了嵌套子查询的机制。子查询是嵌套在另一个查询中的 <code>select-from-where</code> 表达式。常见用法是在 <code>where</code> 子句中嵌套子查询，以检验集合成员资格、比较集合和确定集合基数。3.8.1 至 3.8.4 节讨论这些用法；3.8.5 节讨论在 <code>from</code> 子句中嵌套子查询；3.8.7 节说明一种称为标量子查询的子查询，它可以出现在任何允许使用返回单个值的表达式的位置。</p>
+<!-- SOURCE pdf-0127-b003 -->
+<!-- SOURCE pdf-0127-b004 -->
+<!-- SOURCE pdf-0127-b005 -->
+<!-- SOURCE pdf-0127-b006 -->
+<!-- SOURCE pdf-0127-b008 -->
+
+<h3 id="381">3.8.1 集合成员资格</h3>
+<p>SQL 允许检验一个元组是否属于某个关系。连接词 <code>in</code> 检验集合成员资格，其中的集合是 <code>select</code> 子句产生的一组值。<code>not in</code> 检验一个值是否不属于该集合。</p>
+<p>再考虑“找出在 2017 年秋季和 2018 年春季都开设的所有课程”。之前通过求两个集合的交集完成查询：2017 年秋季开设的课程集合与 2018 年春季开设的课程集合。另一种思路是，找出 2017 年秋季开设、同时又属于 2018 年春季课程集合的所有课程。结果相同，但这种表述引出了 SQL 的 <code>in</code> 连接词。先找出 2018 年春季开设的全部课程：</p>
+<pre><code class="language-sql">(select course_id
+ from section
+ where semester = 'Spring' and year = 2018)
+</code></pre>
+<!-- SOURCE pdf-0127-b009 -->
+<!-- SOURCE pdf-0127-b010 -->
+<!-- SOURCE pdf-0127-b012 -->
+<!-- SOURCE pdf-0127-b013 -->
+<!-- SOURCE pdf-0127-b015 -->
+<!-- SOURCE pdf-0127-b017 -->
+<!-- SOURCE pdf-0127-b018 -->
+
+<p>然后查找在 2017 年秋季开设、且出现在上述子查询结果集中的课程。把子查询嵌入外层查询的 <code>where</code> 子句即可：</p>
+<pre><code class="language-sql">select distinct course_id
+from section
+where semester = 'Fall' and year = 2017 and
+      course_id in (select course_id
+                    from section
+                    where semester = 'Spring' and year = 2018);
+</code></pre>
+<p>这里需要 <code>distinct</code>，因为前面使用的 <code>intersect</code> 默认消除重复值。</p>
+<!-- SOURCE pdf-0127-b019 -->
+<!-- SOURCE pdf-0128-b001 -->
+
+<p>这个例子说明，同一查询可以有多种 SQL 写法。这种灵活性使用户可以用自己觉得自然的方式思考查询。后面还会看到，SQL 中有相当多功能相互重叠的结构。</p>
+<!-- SOURCE pdf-0128-b002 -->
+<!-- SOURCE pdf-0128-b003 -->
+<!-- SOURCE pdf-0128-b005 -->
+<!-- SOURCE pdf-0128-b007 -->
+<!-- SOURCE pdf-0128-b009 -->
+
+<p><code>not in</code> 的用法与 <code>in</code> 类似。例如，找出在 2017 年秋季开设、但在 2018 年春季没有开设的全部课程。这个查询之前用 <code>except</code> 表达，现在可以写为：</p>
+<pre><code class="language-sql">select distinct course_id
+from section
+where semester = 'Fall' and year = 2017 and
+      course_id not in (select course_id
+                        from section
+                        where semester = 'Spring' and year = 2018);
+</code></pre>
+<!-- SOURCE pdf-0128-b010 -->
+<!-- SOURCE pdf-0128-b011 -->
+
+<p><code>in</code> 和 <code>not in</code> 也可以用于显式枚举的集合。下面查询找出姓名既非 Mozart 也非 Einstein 的教师姓名：</p>
+<pre><code class="language-sql">select distinct name
+from instructor
+where name not in ('Mozart', 'Einstein');
+</code></pre>
+<!-- SOURCE pdf-0128-b012 -->
+<!-- SOURCE pdf-0128-b013 -->
+<!-- SOURCE pdf-0128-b015 -->
+<!-- SOURCE pdf-0128-b017 -->
+<!-- SOURCE pdf-0128-b019 -->
+<!-- SOURCE pdf-0128-b021 -->
+
+<p>前面的例子检验的都是单属性关系中的成员资格。SQL 也能检验任意关系中的成员资格。例如，“找出选修过 ID 为 110011 的教师所教教学班的学生总人数（不重复）”，可写为：</p>
+<pre><code class="language-sql">select count (distinct ID)
+from takes
+where (course_id, sec_id, semester, year) in
+      (select course_id, sec_id, semester, year
+       from teaches
+       where teaches.ID = '10101');
+</code></pre>
+<!-- SOURCE pdf-0128-b022 -->
+<!-- SOURCE pdf-0128-b024 -->
+<!-- SOURCE pdf-0128-b026 -->
+
+<p>不过，一些 SQL 实现不支持上述行构造语法 <code>(course_id, sec_id, semester, year)</code>。3.8.3 节会给出该查询的其他写法。</p>
+<blockquote>
+<p><strong>译注：</strong> 原书此处正文写教师 ID 为 110011，SQL 中写的是 10101；3.8.3 节再次出现同样的不一致。这里分别保留，实际查询对象由 SQL 字面量决定。</p>
+</blockquote>
+<!-- SOURCE pdf-0128-b027 -->
+<!-- SOURCE pdf-0128-b028 -->
+<!-- SOURCE pdf-0129-b001 -->
+<!-- SOURCE pdf-0129-b003 -->
+
+<h3 id="382">3.8.2 集合比较</h3>
+<p>嵌套子查询可以用于集合比较。考虑“找出工资高于生物系至少一位教师的所有教师姓名”。3.4.1 节给出的写法是：</p>
+<pre><code class="language-sql">select distinct T.name
+from instructor as T, instructor as S
+where T.salary &gt; S.salary and S.dept_name = 'Biology';
+</code></pre>
+<!-- SOURCE pdf-0129-b004 -->
+<!-- SOURCE pdf-0129-b005 -->
+<!-- SOURCE pdf-0129-b006 -->
+<!-- SOURCE pdf-0129-b008 -->
+
+<p>SQL 还提供另一种写法。“比其中至少一个大”可以用 <code>&gt; some</code> 表达。借助这个结构，查询可以写得接近自然语言描述：</p>
+<pre><code class="language-sql">select name
+from instructor
+where salary &gt; some (select salary
+                     from instructor
+                     where dept_name = 'Biology');
+</code></pre>
+<!-- SOURCE pdf-0129-b009 -->
+<!-- SOURCE pdf-0129-b010 -->
+<!-- SOURCE pdf-0129-b011 -->
+<!-- SOURCE pdf-0129-b013 -->
+<!-- SOURCE pdf-0129-b014 -->
+<!-- SOURCE pdf-0129-b015 -->
+
+<p>子查询</p>
+<pre><code class="language-sql">(select salary
+ from instructor
+ where dept_name = 'Biology')
+</code></pre>
+<p>产生生物系所有教师的工资值集合。如果当前元组的工资高于这个集合中至少一个工资值，外层 <code>select</code> 的 <code>where</code> 子句中的 <code>&gt; some</code> 比较就为真。</p>
+<p>SQL 还允许 <code>&lt; some</code>、<code>&lt;= some</code>、<code>&gt;= some</code>、<code>= some</code> 和 <code>&lt;&gt; some</code>。请自行验证：<code>= some</code> 等价于 <code>in</code>，而 <code>&lt;&gt; some</code> 与 <code>not in</code> 不等价。<sup id="fnref:ch3-10"><a class="footnote-ref" href="#fn:ch3-10">10</a></sup></p>
+<!-- SOURCE pdf-0129-b023 -->
+
+<!-- SOURCE pdf-0129-b016 -->
+<!-- SOURCE pdf-0129-b017 -->
+<!-- SOURCE pdf-0129-b018 -->
+<!-- SOURCE pdf-0129-b020 -->
+<!-- SOURCE pdf-0129-b021 -->
+
+<p>稍微修改一下查询，找出工资高于生物系每一位教师的所有教师姓名。<code>&gt; all</code> 表示“大于所有值”，查询可写为：</p>
+<pre><code class="language-sql">select name
+from instructor
+where salary &gt; all (select salary
+                    from instructor
+                    where dept_name = 'Biology');
+</code></pre>
+<p>与 <code>some</code> 一样，SQL 还允许 <code>&lt; all</code>、<code>&lt;= all</code>、<code>&gt;= all</code>、<code>= all</code> 和 <code>&lt;&gt; all</code>。请自行验证：<code>&lt;&gt; all</code> 等价于 <code>not in</code>，而 <code>= all</code> 与 <code>in</code> 不等价。</p>
+<!-- SOURCE pdf-0130-b001 -->
+<!-- SOURCE pdf-0130-b002 -->
+<!-- SOURCE pdf-0130-b004 -->
+<!-- SOURCE pdf-0130-b006 -->
+<!-- SOURCE pdf-0130-b007 -->
+<!-- SOURCE pdf-0130-b009 -->
+
+<p>再看一个集合比较的例子：“找出平均工资最高的系。”先写出求各系平均工资的查询，再把它嵌入一个更大的查询，找出平均工资大于或等于所有系平均工资的系：</p>
+<pre><code class="language-sql">select dept_name
+from instructor
+group by dept_name
+having avg (salary) &gt;= all (select avg (salary)
+                           from instructor
+                           group by dept_name);
+</code></pre>
+<!-- SOURCE pdf-0130-b010 -->
+<!-- SOURCE pdf-0130-b011 -->
+<!-- SOURCE pdf-0130-b012 -->
+<!-- SOURCE pdf-0130-b014 -->
+<!-- SOURCE pdf-0130-b015 -->
+<!-- SOURCE pdf-0130-b016 -->
+<!-- SOURCE pdf-0130-b017 -->
+<!-- SOURCE pdf-0130-b019 -->
+<!-- SOURCE pdf-0130-b021 -->
+
+<h3 id="383">3.8.3 空关系检验</h3>
+<p>SQL 可以检验子查询结果中是否包含元组。如果作为参数的子查询非空，<code>exists</code> 返回 <code>true</code>。利用它，“找出在 2017 年秋季和 2018 年春季都开设的全部课程”还可以写成：</p>
+<pre><code class="language-sql">select course_id
+from section as S
+where semester = 'Fall' and year = 2017 and
+      exists (select *
+              from section as T
+              where semester = 'Spring' and year = 2018 and
+                    S.course_id = T.course_id);
+</code></pre>
+<!-- SOURCE pdf-0130-b022 -->
+<!-- SOURCE pdf-0130-b023 -->
+
+<p>这个查询还展示了 SQL 的一个特性：外层查询的相关名（这里的 <code>S</code>）可以用于 <code>where</code> 中的子查询。使用外层查询相关名的子查询称为<strong>相关子查询（correlated subquery）</strong>。</p>
+<p>包含子查询时，相关名遵循作用域规则：子查询只能使用自身定义的相关名，或包含它的任一外层查询中定义的相关名。如果一个相关名在子查询内有局部定义，在外层查询中又有全局定义，则采用局部定义。这与编程语言中常见的变量作用域规则类似。</p>
+<!-- SOURCE pdf-0130-b024 -->
+<!-- SOURCE pdf-0131-b001 -->
+<!-- SOURCE pdf-0131-b002 -->
+<!-- SOURCE pdf-0131-b004 -->
+<!-- SOURCE pdf-0131-b006 -->
+<!-- SOURCE pdf-0131-b008 -->
+
+<p><code>not exists</code> 可以检验子查询中是否不存在元组，还可以模拟集合包含（即超集）运算：“关系 A 包含关系 B”可写作 <code>not exists (B except A)</code>。（一些早期关系系统提供过 <code>contains</code> 运算，但当前 SQL 标准没有这个运算。）例如，“找出选修过生物系开设的全部课程的所有学生”，可结合 <code>except</code> 写为：</p>
+<pre><code class="language-sql">select S.ID, S.name
+from student as S
+where not exists ((select course_id
+                   from course
+                   where dept_name = 'Biology')
+                  except
+                  (select T.course_id
+                   from takes as T
+                   where S.ID = T.ID));
+</code></pre>
+<!-- SOURCE pdf-0131-b009 -->
+<!-- SOURCE pdf-0131-b010 -->
+<!-- SOURCE pdf-0131-b012 -->
+<!-- SOURCE pdf-0131-b014 -->
+<!-- SOURCE pdf-0131-b015 -->
+<!-- SOURCE pdf-0131-b016 -->
+<!-- SOURCE pdf-0131-b018 -->
+<!-- SOURCE pdf-0131-b019 -->
+
+<p>其中，子查询</p>
+<pre><code class="language-sql">(select course_id
+ from course
+ where dept_name = 'Biology')
+</code></pre>
+<p>找出生物系开设的全部课程，而子查询</p>
+<pre><code class="language-sql">(select T.course_id
+ from takes as T
+ where S.ID = T.ID)
+</code></pre>
+<p>找出学生 <code>S.ID</code> 选修的全部课程。外层 <code>select</code> 逐一检查每位学生，检验该生的选课集合是否包含生物系开设的全部课程。</p>
+<!-- SOURCE pdf-0131-b020 -->
+<!-- SOURCE pdf-0131-b021 -->
+<!-- SOURCE pdf-0131-b023 -->
+<!-- SOURCE pdf-0131-b025 -->
+<!-- SOURCE pdf-0131-b026 -->
+<!-- SOURCE pdf-0131-b028 -->
+<!-- SOURCE pdf-0131-b030 -->
+<!-- SOURCE pdf-0131-b032 -->
+<!-- SOURCE pdf-0131-b034 -->
+
+<p>3.8.1 节给出了“找出选修过 ID 为 110011 的教师所教教学班的学生总人数（不重复）”的 SQL 查询。那个写法使用元组构造语法，有些数据库不支持。用 <code>exists</code> 可以改写为：</p>
+<pre><code class="language-sql">select count (distinct ID)
+from takes
+where exists (select course_id, sec_id, semester, year
+              from teaches
+              where teaches.ID = '10101'
+                and takes.course_id = teaches.course_id
+                and takes.sec_id = teaches.sec_id
+                and takes.semester = teaches.semester
+                and takes.year = teaches.year
+             );
+</code></pre>
+<!-- SOURCE pdf-0132-b001 -->
+<!-- SOURCE pdf-0132-b002 -->
+<!-- SOURCE pdf-0132-b003 -->
+<!-- SOURCE pdf-0132-b005 -->
+<!-- SOURCE pdf-0132-b007 -->
+<!-- SOURCE pdf-0132-b009 -->
+<!-- SOURCE pdf-0132-b011 -->
+
+<h3 id="384">3.8.4 无重复元组检验</h3>
+<p>SQL 提供了检验子查询结果中是否有重复元组的布尔函数。如果参数子查询不含重复元组，<code>unique</code> 返回 <code>true</code>。<sup id="fnref:ch3-11"><a class="footnote-ref" href="#fn:ch3-11">11</a></sup> 用它可以查询“找出 2017 年至多开设过一次的所有课程”：</p>
+<pre><code class="language-sql">select T.course_id
+from course as T
+where unique (select R.course_id
+              from section as R
+              where T.course_id = R.course_id and
+                    R.year = 2017);
+</code></pre>
+<!-- SOURCE pdf-0132-b012 -->
+<!-- SOURCE pdf-0132-b013 -->
+<!-- SOURCE pdf-0132-b014 -->
+<!-- SOURCE pdf-0132-b016 -->
+<!-- SOURCE pdf-0132-b018 -->
+<!-- SOURCE pdf-0132-b020 -->
+<!-- SOURCE pdf-0132-b022 -->
+
+<p>如果某门课程在 2017 年没有开设，子查询返回空集；<code>unique</code> 对空集的求值结果为 <code>true</code>。</p>
+<p>不使用 <code>unique</code> 的等价写法如下：</p>
+<pre><code class="language-sql">select T.course_id
+from course as T
+where 1 &gt;= (select count(R.course_id)
+            from section as R
+            where T.course_id = R.course_id and
+                  R.year = 2017);
+</code></pre>
+<!-- SOURCE pdf-0132-b023 -->
+<!-- SOURCE pdf-0132-b024 -->
+<!-- SOURCE pdf-0132-b026 -->
+<!-- SOURCE pdf-0132-b028 -->
+<!-- SOURCE pdf-0132-b030 -->
+<!-- SOURCE pdf-0132-b032 -->
+
+<p>用 <code>not unique</code> 可以检验子查询中是否存在重复元组。例如，“找出 2017 年至少开设过两次的所有课程”：</p>
+<pre><code class="language-sql">select T.course_id
+from course as T
+where not unique (select R.course_id
+                  from section as R
+                  where T.course_id = R.course_id and
+                        R.year = 2017);
+</code></pre>
+<!-- SOURCE pdf-0132-b033 -->
+
+<p>形式上，当且仅当关系包含两个不同的元组 t₁ 和 t₂，且 t₁ = t₂ 时，<code>unique</code> 检验失败。如果 t₁ 或 t₂ 的任一字段为空，t₁ = t₂ 的检验就不会为真。因此，即使一个元组有多个副本，只要它至少有一个属性为空，<code>unique</code> 仍有可能为真。</p>
+<!-- SOURCE pdf-0132-b035 -->
+
+<!-- SOURCE pdf-0133-b001 -->
+<!-- SOURCE pdf-0133-b002 -->
+<!-- SOURCE pdf-0133-b003 -->
+<!-- SOURCE pdf-0133-b004 -->
+<!-- SOURCE pdf-0133-b006 -->
+<!-- SOURCE pdf-0133-b008 -->
+<!-- SOURCE pdf-0133-b010 -->
+<!-- SOURCE pdf-0133-b012 -->
+<!-- SOURCE pdf-0133-b014 -->
+<!-- SOURCE pdf-0133-b016 -->
+
+<h3 id="385-from">3.8.5 from 子句中的子查询</h3>
+<p>SQL 允许在 <code>from</code> 子句中使用子查询表达式。依据是：任何 <code>select-from-where</code> 表达式都返回一个关系，因此，在另一个 <code>select-from-where</code> 表达式中，凡是允许出现关系的位置，都可以放入这样的表达式。</p>
+<p>考虑“找出教师平均工资超过 42000 美元的各系的平均工资”。3.7 节使用 <code>having</code> 表达了这个查询。现在可以在 <code>from</code> 中使用子查询，写成不含 <code>having</code> 的形式：</p>
+<pre><code class="language-sql">select dept_name, avg_salary
+from (select dept_name, avg (salary) as avg_salary
+      from instructor
+      group by dept_name)
+where avg_salary &gt; 42000;
+</code></pre>
+<!-- SOURCE pdf-0133-b017 -->
+<!-- SOURCE pdf-0133-b018 -->
+
+<p>子查询生成的关系包含所有系的名称及其教师平均工资。如本例所示，外层查询可以使用子查询结果的属性。</p>
+<p>这里无须使用 <code>having</code>，因为 <code>from</code> 中的子查询已计算出平均工资，原先 <code>having</code> 中的谓词现在放在外层查询的 <code>where</code> 中。</p>
+<!-- SOURCE pdf-0133-b019 -->
+<!-- SOURCE pdf-0133-b020 -->
+<!-- SOURCE pdf-0133-b022 -->
+<!-- SOURCE pdf-0133-b024 -->
+<!-- SOURCE pdf-0133-b026 -->
+<!-- SOURCE pdf-0133-b028 -->
+<!-- SOURCE pdf-0133-b030 -->
+<!-- SOURCE pdf-0133-b032 -->
+<!-- SOURCE pdf-0133-b034 -->
+<!-- SOURCE pdf-0133-b036 -->
+<!-- SOURCE pdf-0133-b037 -->
+<!-- SOURCE pdf-0133-b039 -->
+<!-- SOURCE pdf-0133-b041 -->
+<!-- SOURCE pdf-0133-b043 -->
+
+<p>可以用 <code>as</code> 给子查询结果关系命名，并重命名其属性：</p>
+<pre><code class="language-sql">select dept_name, avg_salary
+from (select dept_name, avg (salary)
+      from instructor
+      group by dept_name)
+     as dept_avg (dept_name, avg_salary)
+where avg_salary &gt; 42000;
+</code></pre>
+<p>结果关系名为 <code>dept_avg</code>，属性为 <code>dept_name</code> 和 <code>avg_salary</code>。</p>
+<!-- SOURCE pdf-0133-b044 -->
+<!-- SOURCE pdf-0133-b045 -->
+<!-- SOURCE pdf-0133-b047 -->
+<!-- SOURCE pdf-0133-b049 -->
+<!-- SOURCE pdf-0134-b001 -->
+<!-- SOURCE pdf-0134-b002 -->
+<!-- SOURCE pdf-0134-b004 -->
+<!-- SOURCE pdf-0134-b006 -->
+<!-- SOURCE pdf-0134-b008 -->
+<!-- SOURCE pdf-0134-b009 -->
+<!-- SOURCE pdf-0134-b010 -->
+<!-- SOURCE pdf-0134-b012 -->
+
+<p>大多数 SQL 实现支持在 <code>from</code> 中嵌套子查询，但并非所有实现都支持。一些实现，主要是 MySQL 和 PostgreSQL，要求给 <code>from</code> 中的每个子查询关系命名，即使后面不会引用这个名称。Oracle 允许给子查询结果关系命名（省略关键字 <code>as</code>），但不允许通过这种方式重命名其属性。一个简单的处理办法是在子查询的 <code>select</code> 子句中给属性重命名：将上述子查询的 <code>select</code> 子句替换为</p>
+<pre><code class="language-sql">select dept_name, avg(salary) as avg_salary
+</code></pre>
+<p>再将 <code>as dept_avg (dept_name, avg_salary)</code> 替换为 <code>as dept_avg</code>。</p>
+<blockquote>
+<p><strong>译注：</strong> 原书给出的替换文本仍含 as，与前文所述 Oracle 的关系别名语法冲突。在 Oracle 中应写 dept_avg，省略 as。</p>
+</blockquote>
+<!-- SOURCE pdf-0134-b013 -->
+<!-- SOURCE pdf-0134-b014 -->
+<!-- SOURCE pdf-0134-b016 -->
+<!-- SOURCE pdf-0134-b018 -->
+<!-- SOURCE pdf-0134-b020 -->
+<!-- SOURCE pdf-0134-b022 -->
+<!-- SOURCE pdf-0134-b024 -->
+<!-- SOURCE pdf-0134-b026 -->
+
+<p>再看一个例子：先求每个系的教师工资总额，再找出各系总额中的最大值。<code>having</code> 无法直接帮助完成这个任务，但在 <code>from</code> 中使用子查询就很容易表达：</p>
+<pre><code class="language-sql">select max (tot_salary)
+from (select dept_name, sum(salary)
+      from instructor
+      group by dept_name) as dept_total (dept_name, tot_salary);
+</code></pre>
+<!-- SOURCE pdf-0134-b027 -->
+<!-- SOURCE pdf-0134-b028 -->
+<!-- SOURCE pdf-0134-b030 -->
+<!-- SOURCE pdf-0134-b032 -->
+<!-- SOURCE pdf-0134-b034 -->
+<!-- SOURCE pdf-0134-b036 -->
+<!-- SOURCE pdf-0134-b037 -->
+
+<p><code>from</code> 中的嵌套子查询不能引用同一 <code>from</code> 子句内其他关系的相关变量。不过，从 SQL:2003 开始，SQL 标准允许在这种子查询前加上关键字 <code>lateral</code>，使它能够访问同一 <code>from</code> 子句中位于其前面的表或子查询的属性。例如，要输出每位教师的姓名、工资及其所在系的平均工资，可以写为：</p>
+<pre><code class="language-sql">select name, salary, avg_salary
+from instructor I1, lateral (select avg(salary) as avg_salary
+                             from instructor I2
+                             where I2.dept_name = I1.dept_name);
+</code></pre>
+<p>没有 <code>lateral</code> 时，子查询不能访问外层查询的相关变量 <code>I1</code>。只有较新的 SQL 实现支持 <code>lateral</code> 子句。</p>
+<!-- SOURCE pdf-0134-b038 -->
+<!-- SOURCE pdf-0134-b039 -->
+<!-- SOURCE pdf-0134-b040 -->
+<!-- SOURCE pdf-0134-b042 -->
+<!-- SOURCE pdf-0134-b044 -->
+<!-- SOURCE pdf-0134-b046 -->
+
+<h3 id="386-with">3.8.6 with 子句</h3>
+<p><code>with</code> 子句可以定义一个临时关系，该定义只在包含这个 <code>with</code> 子句的查询中有效。考虑下面找出预算最高的系的查询：</p>
+<pre><code class="language-sql">with max_budget (value) as
+     (select max(budget)
+      from department)
+select budget
+from department, max_budget
+where department.budget = max_budget.value;
+</code></pre>
+<blockquote>
+<p><strong>译注：</strong> 原书将这个示例描述为“找出预算最高的系”，但 select 列表只有 budget，实际输出的是这些系的预算值。若要输出系名，可将 select budget 改为 select dept_name。</p>
+</blockquote>
+<!-- SOURCE pdf-0135-b001 -->
+<!-- SOURCE pdf-0135-b003 -->
+<!-- SOURCE pdf-0135-b004 -->
+
+<p><code>with</code> 定义了临时关系 <code>max_budget</code>，其内容是定义该关系的子查询的结果。这个关系只能用于同一查询中位于其定义之后的部分。<sup id="fnref:ch3-12"><a class="footnote-ref" href="#fn:ch3-12">12</a></sup> <code>with</code> 于 SQL:1999 引入，许多数据库系统支持它，但尚非全部。</p>
+<p>这个查询也可以用嵌套在 <code>from</code> 或 <code>where</code> 中的子查询表达，但那样可读性较差。<code>with</code> 使查询逻辑更清楚，也允许在同一查询的多处使用这个临时关系。</p>
+<!-- SOURCE pdf-0135-b049 -->
+
+<!-- SOURCE pdf-0135-b005 -->
+<!-- SOURCE pdf-0135-b006 -->
+<!-- SOURCE pdf-0135-b008 -->
+<!-- SOURCE pdf-0135-b010 -->
+<!-- SOURCE pdf-0135-b012 -->
+<!-- SOURCE pdf-0135-b014 -->
+<!-- SOURCE pdf-0135-b016 -->
+<!-- SOURCE pdf-0135-b018 -->
+<!-- SOURCE pdf-0135-b020 -->
+<!-- SOURCE pdf-0135-b022 -->
+<!-- SOURCE pdf-0135-b024 -->
+<!-- SOURCE pdf-0135-b026 -->
+<!-- SOURCE pdf-0135-b028 -->
+<!-- SOURCE pdf-0135-b030 -->
+<!-- SOURCE pdf-0135-b032 -->
+<!-- SOURCE pdf-0135-b034 -->
+<!-- SOURCE pdf-0135-b035 -->
+
+<p>例如，想找出工资总额高于所有系工资总额平均值的全部系，可以使用 <code>with</code>：</p>
+<pre><code class="language-sql">with dept_total (dept_name, value) as
+     (select dept_name, sum(salary)
+      from instructor
+      group by dept_name),
+     dept_total_avg(value) as
+     (select avg(value)
+      from dept_total)
+select dept_name
+from dept_total, dept_total_avg
+where dept_total.value &gt; dept_total_avg.value;
+</code></pre>
+<p>也可以不使用 <code>with</code> 写出等价查询，但会更复杂、更难理解。读者可以把这个改写留作练习。</p>
+<!-- SOURCE pdf-0135-b036 -->
+<!-- SOURCE pdf-0135-b037 -->
+<!-- SOURCE pdf-0135-b038 -->
+<!-- SOURCE pdf-0135-b040 -->
+<!-- SOURCE pdf-0135-b041 -->
+<!-- SOURCE pdf-0135-b043 -->
+<!-- SOURCE pdf-0135-b045 -->
+<!-- SOURCE pdf-0135-b047 -->
+
+<h3 id="387">3.8.7 标量子查询</h3>
+<p>凡是允许使用返回单个值的表达式的位置，SQL 都允许出现子查询，前提是子查询只返回一个仅含单个属性的元组。这类子查询称为<strong>标量子查询（scalar subquery）</strong>。例如，可以在 <code>select</code> 中使用子查询。下面列出所有系及各系的教师人数：</p>
+<pre><code class="language-sql">select dept_name,
+       (select count(*)
+        from instructor
+        where department.dept_name = instructor.dept_name)
+       as num_instructors
+from department;
+</code></pre>
+<!-- SOURCE pdf-0136-b001 -->
+<!-- SOURCE pdf-0136-b003 -->
+
+<p>这里的子查询使用 <code>count(*)</code> 聚集且没有 <code>group by</code>，保证只返回单个值。它还展示了相关变量的使用，即引用外层查询 <code>from</code> 中关系的属性，例如 <code>department.dept_name</code>。</p>
+<p>标量子查询可以出现在 <code>select</code>、<code>where</code> 和 <code>having</code> 中，也可以不使用聚集函数。编译时不一定能判断子查询会不会返回多个元组；如果执行时结果含有多个元组，就会出现运行时错误。</p>
+<!-- SOURCE pdf-0136-b004 -->
+
+<p>严格来说，即使只包含单个元组，标量子查询的结果类型仍是关系。不过，当表达式所需的是单个值时，SQL 会隐式提取这个关系中唯一元组的唯一属性值，并返回该值。</p>
+<!-- SOURCE pdf-0136-b005 -->
+<!-- SOURCE pdf-0136-b006 -->
+<!-- SOURCE pdf-0136-b007 -->
+<!-- SOURCE pdf-0136-b008 -->
+
+<h3 id="388-from">3.8.8 不含 from 子句的标量表达式</h3>
+<p>有些查询只需要计算，无须引用任何关系。有些查询的子查询包含 <code>from</code>，但最外层查询无须 <code>from</code>。</p>
+<p>例如，想求每位教师平均教授的教学班数，不考虑年份和学期；由多位教师共同教授的教学班，对每位教师各计一次。先统计 <code>teaches</code> 的元组数，得到授课教学班总次数，再统计 <code>instructor</code> 的元组数，得到教师人数，最后做除法即可。可能会写成：</p>
+<pre><code class="language-sql">(select count (*) from teaches) / (select count (*) from instructor);
+</code></pre>
+<blockquote>
+<p><strong>译注：</strong> 此处按原书保留标量表达式。把它作为独立查询在支持省略 from 的系统中执行时，还需在最前面加 select。</p>
+</blockquote>
+<!-- SOURCE pdf-0136-b009 -->
+<!-- SOURCE pdf-0136-b010 -->
+<!-- SOURCE pdf-0136-b011 -->
+
+<p>某些系统允许这种写法，其他系统会因为缺少 <code>from</code> 而报错。<sup id="fnref:ch3-13"><a class="footnote-ref" href="#fn:ch3-13">13</a></sup> 对于后者，可以创建一个只含一个元组的特殊虚拟关系，例如命名为 <code>dual</code>。这时查询可写为：</p>
+<pre><code class="language-sql">select (select count (*) from teaches) / (select count (*) from instructor)
+from dual;
+</code></pre>
+<p>Oracle 为这类用途预定义了一个只含一个元组的 <code>dual</code> 关系（该关系只有一个属性，其具体内容与这里的用途无关）。使用其他数据库时，可以自行创建等价关系。</p>
+<!-- SOURCE pdf-0136-b012 -->
+
+<p>上述查询将一个整数除以另一个整数，在多数数据库中结果仍为整数，会损失精度。如果希望得到浮点数结果，可以先把其中一个子查询的结果乘以 1.0，将其转为浮点数，再做除法。</p>
+<!-- SOURCE pdf-0136-b014 -->
+
+<!-- SOURCE pdf-0137-b002 -->
+<!-- SOURCE pdf-0137-b003 -->
+
+<h4 id="33-sql_1">注 3.3 SQL 与多重集关系代数：第三部分</h4>
+<p>本章前面介绍的 SQL 集合运算和聚集运算在关系代数中有直接对应的运算，SQL 子查询则没有。多数含子查询的 SQL 查询可以改写为不使用子查询的形式，因而也有等价的关系代数表达式。</p>
+<!-- SOURCE pdf-0137-b004 -->
+<!-- SOURCE pdf-0137-b006 -->
+<!-- SOURCE pdf-0137-b008 -->
+<!-- SOURCE pdf-0137-b010 -->
+
+<p>改写时可以借助两种扩展关系代数运算：半连接（semijoin），记作 ⋉；反连接（antijoin），记作 ⋉̅（上加横线），有时也用 ▷ 表示。许多数据库实现在内部支持它们。例如，给定关系 r 和 s，r ⋉<sub>r.A=s.B</sub> s 输出 r 中满足下列条件的所有元组：s 中至少有一个元组，其 s.B 属性值与该元组的 r.A 属性值相同。r ⋉̅<sub>r.A=s.B</sub> s 则输出 r 中没有这种匹配元组的所有元组。这些运算可用于改写许多包含 <code>exists</code> 和 <code>not exists</code> 的子查询。</p>
+<!-- SOURCE pdf-0137-b011 -->
+<!-- SOURCE pdf-0137-b012 -->
+
+<p>半连接和反连接都可以用其他关系代数运算表达，因此没有增加表达能力。不过，它们能够得到高效实现，在实践中很有用。</p>
+<p>一般来说，改写含子查询的 SQL 并不简单。因此，数据库系统实现会扩展关系代数，允许 σ 和 Π 运算在谓词和投影列表中调用子查询。</p>
+<!-- SOURCE pdf-0137-b013 -->
+<!-- SOURCE pdf-0137-b014 -->
+
+<h2 id="39">3.9 数据库修改</h2>
+<p>前面只讨论了如何从数据库中提取信息。下面介绍如何用 SQL 添加、删除和修改信息。</p>
+<!-- SOURCE pdf-0137-b015 -->
+<!-- SOURCE pdf-0137-b016 -->
+<!-- SOURCE pdf-0137-b017 -->
+<!-- SOURCE pdf-0137-b018 -->
+
+<h3 id="391">3.9.1 删除</h3>
+<p>删除请求的表达方式与查询相近。删除只能以整个元组为单位，不能只删除某些属性上的值。SQL 的删除语句为：</p>
+<pre><code class="language-sql">delete from r
+where P;
+</code></pre>
+<p>其中 P 表示谓词，r 表示关系。<code>delete</code> 先找出 r 中所有使 P(t) 为真的元组 t，再将它们从 r 中删除。可以省略 <code>where</code>，这时 r 中的全部元组都会被删除。</p>
+<!-- SOURCE pdf-0138-b001 -->
+<!-- SOURCE pdf-0138-b002 -->
+<!-- SOURCE pdf-0138-b003 -->
+
+<p>一条 <code>delete</code> 命令只作用于一个关系。若要删除多个关系中的元组，必须对每个关系各使用一条 <code>delete</code>。<code>where</code> 中的谓词可以与 <code>select</code> 的 <code>where</code> 一样复杂，也可以完全不写 <code>where</code>。例如：</p>
+<pre><code class="language-sql">delete from instructor;
+</code></pre>
+<p>这会删除 <code>instructor</code> 中的全部元组。关系本身仍然存在，但变成空关系。</p>
+<!-- SOURCE pdf-0138-b004 -->
+<!-- SOURCE pdf-0138-b005 -->
+<!-- SOURCE pdf-0138-b006 -->
+<!-- SOURCE pdf-0138-b008 -->
+
+<p>下面是一些 SQL 删除请求：</p>
+<p>删除 <code>instructor</code> 中金融系教师的全部元组：</p>
+<pre><code class="language-sql">delete from instructor
+where dept_name = 'Finance';
+</code></pre>
+<!-- SOURCE pdf-0138-b009 -->
+<!-- SOURCE pdf-0138-b010 -->
+
+<p>删除工资在 13000 至 15000 美元之间的所有教师：</p>
+<pre><code class="language-sql">delete from instructor
+where salary between 13000 and 15000;
+</code></pre>
+<!-- SOURCE pdf-0138-b011 -->
+<!-- SOURCE pdf-0138-b012 -->
+<!-- SOURCE pdf-0138-b014 -->
+<!-- SOURCE pdf-0138-b016 -->
+<!-- SOURCE pdf-0138-b017 -->
+
+<p>删除 <code>instructor</code> 中所属系位于 Watson 楼的全部教师元组：</p>
+<pre><code class="language-sql">delete from instructor
+where dept_name in (select dept_name
+                    from department
+                    where building = 'Watson');
+</code></pre>
+<p>这个请求先找出位于 Watson 楼的所有系，再删除属于这些系的全部教师元组。</p>
+<!-- SOURCE pdf-0138-b018 -->
+<!-- SOURCE pdf-0138-b019 -->
+<!-- SOURCE pdf-0138-b020 -->
+
+<p>虽然一次只能删除一个关系中的元组，但 <code>delete</code> 的 <code>where</code> 内嵌套的 <code>select-from-where</code> 可以引用任意多个关系。嵌套的 <code>select</code> 还可以引用正在删除元组的关系本身。例如，要删除工资低于全校平均工资的所有教师记录，可以写为：</p>
+<pre><code class="language-sql">delete from instructor
+where salary &lt; (select avg (salary)
+                from instructor);
+</code></pre>
+<!-- SOURCE pdf-0139-b001 -->
+
+<p>这条 <code>delete</code> 先检查 <code>instructor</code> 的每个元组，判断工资是否低于全校教师平均工资，然后删除所有满足条件的元组。必须先完成全部检验，再进行任何删除。如果一些元组被删除时，其他元组尚未检验，平均工资就可能改变，最终删除结果便会取决于元组的处理顺序！</p>
+<!-- SOURCE pdf-0139-b002 -->
+<!-- SOURCE pdf-0139-b003 -->
+<!-- SOURCE pdf-0139-b004 -->
+<!-- SOURCE pdf-0139-b005 -->
+<!-- SOURCE pdf-0139-b006 -->
+
+<h3 id="392">3.9.2 插入</h3>
+<p>向关系中插入数据时，可以直接指定待插入元组，也可以编写一个查询，将其结果中的元组插入。插入元组的各属性值必须属于对应属性的域，属性个数也必须正确。</p>
+<p>最简单的 <code>insert</code> 请求只插入一个元组。假设要添加一门计算机科学系的课程，课程号为 CS-437，课程名为 Database Systems，学分为 4，可写为：</p>
+<pre><code class="language-sql">insert into course
+    values ('CS-437', 'Database Systems', 'Comp. Sci.', 4);
+</code></pre>
+<!-- SOURCE pdf-0139-b007 -->
+<!-- SOURCE pdf-0139-b008 -->
+<!-- SOURCE pdf-0139-b010 -->
+<!-- SOURCE pdf-0139-b012 -->
+<!-- SOURCE pdf-0139-b013 -->
+<!-- SOURCE pdf-0139-b015 -->
+<!-- SOURCE pdf-0139-b017 -->
+
+<p>这里的值按照关系模式中的属性顺序给出。为了方便不记得属性顺序的用户，SQL 允许在 <code>insert</code> 中显式列出属性。例如，下面两条语句与上一条功能相同：</p>
+<pre><code class="language-sql">insert into course (course_id, title, dept_name, credits)
+    values ('CS-437', 'Database Systems', 'Comp. Sci.', 4);
+</code></pre>
+<pre><code class="language-sql">insert into course (title, course_id, credits, dept_name)
+    values ('Database Systems', 'CS-437', 4, 'Comp. Sci.');
+</code></pre>
+<!-- SOURCE pdf-0139-b018 -->
+<!-- SOURCE pdf-0139-b019 -->
+<!-- SOURCE pdf-0139-b020 -->
+<!-- SOURCE pdf-0139-b022 -->
+<!-- SOURCE pdf-0139-b024 -->
+<!-- SOURCE pdf-0139-b026 -->
+
+<p>更一般地，可以根据查询结果插入元组。假设希望把音乐系每位已修学分超过 144 的学生都添加为音乐系教师，工资为 18000 美元，可写为：</p>
+<pre><code class="language-sql">insert into instructor
+    select ID, name, dept_name, 18000
+    from student
+    where dept_name = 'Music' and tot_cred &gt; 144;
+</code></pre>
+<!-- SOURCE pdf-0140-b001 -->
+<!-- SOURCE pdf-0140-b003 -->
+
+<p>这里用 <code>select</code> 指定一组元组。SQL 先计算 <code>select</code> 得到元组集合，再将其插入 <code>instructor</code>。每个元组包含 ID、姓名、系名（Music）和 18000 美元的工资。</p>
+<!-- SOURCE pdf-0140-b004 -->
+<!-- SOURCE pdf-0140-b005 -->
+<!-- SOURCE pdf-0140-b006 -->
+<!-- SOURCE pdf-0140-b007 -->
+
+<p>系统必须先完整计算 <code>select</code>，再进行任何插入。假如计算 <code>select</code> 的过程中就开始插入，那么在 <code>student</code> 没有主键约束时，下面的请求可能插入无限多个元组：</p>
+<pre><code class="language-sql">insert into student
+    select *
+    from student;
+</code></pre>
+<p>没有主键约束时，它会再次插入 <code>student</code> 的第一个元组，生成第二份副本。第二份副本现在也属于 <code>student</code>，<code>select</code> 可能再次找到它并插入第三份，随后找到第三份并插入第四份，如此无限继续。先完整计算 <code>select</code> 再插入可以避免这个问题。因此，若关系没有主键约束，上述语句只会将 <code>student</code> 的每个元组复制一次。</p>
+<!-- SOURCE pdf-0140-b008 -->
+<!-- SOURCE pdf-0140-b009 -->
+<!-- SOURCE pdf-0140-b010 -->
+<!-- SOURCE pdf-0140-b011 -->
+<!-- SOURCE pdf-0140-b013 -->
+
+<p>此前的 <code>insert</code> 例子都给出了待插入元组每个属性的值。也可以只为部分属性提供值，其余属性赋予用 <code>null</code> 表示的空值。例如：</p>
+<pre><code class="language-sql">insert into student
+    values ('3003', 'Green', 'Finance', null);
+</code></pre>
+<p>插入的元组表明，ID 为 3003 的学生属于金融系，但其 <code>tot_cred</code> 未知。</p>
+<p>大多数关系数据库产品提供专门的“批量装载器（bulk loader）”，用于向关系中插入大量元组。这些工具可以读取具有规定格式的文本文件，执行速度可能远快于完成同样任务的一系列 <code>insert</code> 语句。</p>
+<!-- SOURCE pdf-0140-b014 -->
+<!-- SOURCE pdf-0140-b015 -->
+<!-- SOURCE pdf-0140-b016 -->
+<!-- SOURCE pdf-0141-b001 -->
+<!-- SOURCE pdf-0141-b002 -->
+
+<h3 id="393">3.9.3 更新</h3>
+<p>有时只想修改元组的部分属性值，可以使用 <code>update</code>。与 <code>insert</code> 和 <code>delete</code> 一样，可以通过查询选择待更新的元组。</p>
+<p>假设进行年度工资调整，所有教师的工资增加 5%，可写为：</p>
+<pre><code class="language-sql">update instructor
+set salary = salary * 1.05;
+</code></pre>
+<p>这条更新对 <code>instructor</code> 的每个元组应用一次。</p>
+<!-- SOURCE pdf-0141-b003 -->
+<!-- SOURCE pdf-0141-b004 -->
+
+<p>如果只给工资低于 70000 美元的教师加薪，可以写为：</p>
+<pre><code class="language-sql">update instructor
+set salary = salary * 1.05
+where salary &lt; 70000;
+</code></pre>
+<!-- SOURCE pdf-0141-b005 -->
+<!-- SOURCE pdf-0141-b006 -->
+<!-- SOURCE pdf-0141-b007 -->
+
+<p>一般而言，<code>select</code> 的 <code>where</code> 中合法的结构（包括嵌套 <code>select</code>）也都可以用于 <code>update</code> 的 <code>where</code>。与插入和删除一样，更新语句中的嵌套 <code>select</code> 可以引用正在更新的关系。SQL 先检查关系中的全部元组，确定哪些需要更新，然后才执行更新。例如，“给工资低于平均值的教师加薪 5%”可写为：</p>
+<pre><code class="language-sql">update instructor
+set salary = salary * 1.05
+where salary &lt; (select avg (salary)
+                from instructor);
+</code></pre>
+<!-- SOURCE pdf-0141-b008 -->
+<!-- SOURCE pdf-0141-b009 -->
+<!-- SOURCE pdf-0141-b010 -->
+<!-- SOURCE pdf-0141-b011 -->
+
+<p>现在假设工资超过 100000 美元的教师加薪 3%，其余教师加薪 5%。可以写两条更新语句：</p>
+<pre><code class="language-sql">update instructor
+set salary = salary * 1.03
+where salary &gt; 100000;
+</code></pre>
+<pre><code class="language-sql">update instructor
+set salary = salary * 1.05
+where salary &lt;= 100000;
+</code></pre>
+<p>这两条语句的顺序很重要。如果颠倒顺序，工资略低于 100000 美元的教师会获得超过 8% 的涨幅。</p>
+<!-- SOURCE pdf-0141-b012 -->
+<!-- SOURCE pdf-0142-b001 -->
+<!-- SOURCE pdf-0142-b002 -->
+
+<p>SQL 的 <code>case</code> 结构可以把这两种更新合并为一条 <code>update</code>，避免更新顺序带来的问题：</p>
+<pre><code class="language-sql">update instructor
+set salary = case
+                 when salary &lt;= 100000 then salary * 1.05
+                 else salary * 1.03
+             end
+</code></pre>
+<p><code>case</code> 的一般形式如下：</p>
+<!-- SOURCE pdf-0142-b003 -->
+<!-- SOURCE pdf-0142-b004 -->
+<!-- SOURCE pdf-0142-b005 -->
+
+<pre><code class="language-sql">case
+    when pred1 then result1
+    when pred2 then result2
+    …
+    when predn then resultn
+    else result0
+end
+</code></pre>
+<p>从 pred₁、pred₂、…、predₙ 中找出第一个满足的谓词 predᵢ，返回对应的 resultᵢ；若没有任何谓词满足，则返回 result₀。任何需要一个值的位置都可以使用 <code>case</code>。</p>
+<!-- SOURCE pdf-0142-b006 -->
+<!-- SOURCE pdf-0142-b008 -->
+<!-- SOURCE pdf-0142-b009 -->
+<!-- SOURCE pdf-0142-b011 -->
+<!-- SOURCE pdf-0142-b012 -->
+<!-- SOURCE pdf-0142-b014 -->
+<!-- SOURCE pdf-0142-b016 -->
+
+<p>标量子查询可以用于 <code>update</code> 的 <code>set</code> 子句。以第 2 章的 <code>student</code> 和 <code>takes</code> 为例：把每个学生元组的 <code>tot_cred</code> 更新为该生成功修完的课程的学分总和。假设成绩既非 <code>'F'</code> 也非空值，就表示成功修完课程。需要在 <code>set</code> 中使用子查询：</p>
+<pre><code class="language-sql">update student
+set tot_cred = (
+    select sum(credits)
+    from takes, course
+    where student.ID = takes.ID and
+          takes.course_id = course.course_id and
+          takes.grade &lt;&gt; 'F' and
+          takes.grade is not null);
+</code></pre>
+<!-- SOURCE pdf-0142-b017 -->
+<!-- SOURCE pdf-0142-b019 -->
+<!-- SOURCE pdf-0142-b020 -->
+<!-- SOURCE pdf-0142-b021 -->
+
+<p>如果学生没有成功修完任何课程，上述语句会把 <code>tot_cred</code> 设为空值。要设为 0，可以再用一条更新语句将空值替换为 0；较好的办法是用 <code>case</code> 表达式，将子查询的 <code>select sum(credits)</code> 替换为：</p>
+<pre><code class="language-sql">select case
+           when sum(credits) is not null then sum(credits)
+           else 0
+       end
+</code></pre>
+<!-- SOURCE pdf-0143-b001 -->
+
+<p>许多系统支持 <code>coalesce</code> 函数，可以简便地用其他值替换空值，4.5.2 节会详细介绍。在上例中，可以用 <code>coalesce(sum(credits), 0)</code> 替代 <code>case</code>：聚集结果 <code>sum(credits)</code> 非空时返回该结果，否则返回 0。</p>
+<!-- SOURCE pdf-0143-b002 -->
+<!-- SOURCE pdf-0143-b003 -->
+<!-- SOURCE pdf-0143-b004 -->
+<!-- SOURCE pdf-0143-b005 -->
+<!-- SOURCE pdf-0143-b006 -->
+<!-- SOURCE pdf-0143-b007 -->
+<!-- SOURCE pdf-0143-b008 -->
+
+<h2 id="310">3.10 小结</h2>
+<ul>
+<li>SQL 是商业关系查询语言中影响最广的一种。SQL 包含多个部分，其中数据定义语言（DDL）提供定义关系模式、删除关系及修改关系模式的命令；数据操纵语言（DML）包含查询语言，以及插入、删除和修改数据库元组的命令。</li>
+<li>SQL 数据定义语言用于创建具有指定模式的关系。除了指定属性名和类型，还可以声明主键约束、外键约束等完整性约束。</li>
+<li>SQL 提供多种数据库查询结构，包括 <code>select</code>、<code>from</code> 和 <code>where</code> 子句。</li>
+<li>SQL 可以重命名属性和关系，并按指定属性对查询结果排序。</li>
+<li>SQL 支持关系上的基本集合运算：<code>union</code>、<code>intersect</code> 和 <code>except</code>，分别对应数学中的 ∪、∩ 和 −。</li>
+<li>为了处理含空值关系的查询，SQL 在通常的 <code>true</code> 和 <code>false</code> 之外引入了 <code>unknown</code> 真值。</li>
+<li>SQL 支持聚集，可以把关系分组后分别聚集，也支持对组进行集合运算。</li>
+<li>SQL 支持在外层查询的 <code>where</code> 和 <code>from</code> 中嵌套子查询；任何允许返回单个值的表达式的位置，也都可以使用标量子查询。</li>
+<li>SQL 提供更新、插入和删除信息的结构。</li>
+</ul>
+<!-- SOURCE pdf-0144-b001 -->
+<!-- SOURCE pdf-0144-b002 -->
+<!-- SOURCE pdf-0144-b003 -->
+<!-- SOURCE pdf-0144-b004 -->
+<!-- SOURCE pdf-0144-b005 -->
+<!-- SOURCE pdf-0144-b006 -->
+<!-- SOURCE pdf-0144-b007 -->
+<!-- SOURCE pdf-0144-b008 -->
+<!-- SOURCE pdf-0144-b009 -->
+<!-- SOURCE pdf-0144-b010 -->
+<!-- SOURCE pdf-0144-b011 -->
+<!-- SOURCE pdf-0144-b012 -->
+<!-- SOURCE pdf-0144-b013 -->
+<!-- SOURCE pdf-0144-b014 -->
+<!-- SOURCE pdf-0144-b015 -->
+<!-- SOURCE pdf-0144-b016 -->
+<!-- SOURCE pdf-0144-b017 -->
+<!-- SOURCE pdf-0144-b018 -->
+<!-- SOURCE pdf-0144-b019 -->
+<!-- SOURCE pdf-0144-b020 -->
+
+<h2 id="_1">复习术语</h2>
+<ul>
+<li>数据定义语言；数据操纵语言。</li>
+<li>数据库模式；数据库实例；关系模式；关系实例。</li>
+<li>主键；外键；参照关系；被参照关系。</li>
+<li>空值；查询语言。</li>
+<li>SQL 查询结构：<code>select</code>、<code>from</code>、<code>where</code> 子句。</li>
+<li>多重集关系代数；<code>as</code> 子句；<code>order by</code> 子句。</li>
+<li>表别名；相关名（相关变量、元组变量）。</li>
+<li>集合运算：<code>union</code>、<code>intersect</code>、<code>except</code>。</li>
+<li>聚集函数：<code>avg</code>、<code>min</code>、<code>max</code>、<code>sum</code>、<code>count</code>；<code>group by</code>；<code>having</code>。</li>
+<li>嵌套子查询；集合比较：<code>{&lt;, &lt;=, &gt;, &gt;=} {some, all}</code>；<code>exists</code>；<code>unique</code>。</li>
+<li><code>lateral</code> 子句；<code>with</code> 子句；标量子查询。</li>
+<li>数据库修改：删除；插入；更新。</li>
+</ul>
+<!-- SOURCE pdf-0144-b021 -->
+<!-- SOURCE pdf-0144-b022 -->
+<!-- SOURCE pdf-0144-b023 -->
+<!-- SOURCE pdf-0144-b024 -->
+<!-- SOURCE pdf-0145-b001 -->
+<!-- SOURCE pdf-0145-b002 -->
+<!-- SOURCE pdf-0145-b003 -->
+<!-- SOURCE pdf-0145-b004 -->
+<!-- SOURCE pdf-0145-b005 -->
+
+<h2 id="_2">实践习题</h2>
+<p><strong>3.1</strong> 使用大学数据库模式，用 SQL 编写以下查询。（建议使用本书网站 <a href="https://db-book.com">db-book.com</a> 提供的示例数据，在数据库中实际执行。网站也提供了建立数据库和装载示例数据的说明。）</p>
+<p>a. 找出计算机科学系学分为 3 的课程名称。</p>
+<p>b. 找出所有曾由名为 Einstein 的教师授课的学生 ID，确保结果没有重复。</p>
+<p>c. 找出教师工资的最高值。</p>
+<p>d. 找出所有工资最高的教师（可能有多位工资相同的教师）。</p>
+<p>e. 找出 2017 年秋季每个教学班的选课人数。</p>
+<p>f. 找出 2017 年秋季所有教学班中的最大选课人数。</p>
+<p>g. 找出 2017 年秋季选课人数最多的教学班。</p>
+<!-- SOURCE pdf-0145-b006 -->
+<!-- SOURCE pdf-0145-b008 -->
+<!-- SOURCE pdf-0145-b010 -->
+<!-- SOURCE pdf-0145-b011 -->
+<!-- SOURCE pdf-0145-b012 -->
+<!-- SOURCE pdf-0145-b013 -->
+<!-- SOURCE pdf-0145-b014 -->
+<!-- SOURCE pdf-0145-b015 -->
+
+<p><strong>3.2</strong> 假设有关系 <code>grade_points(grade, points)</code>（grade 为主键），提供从 <code>takes</code> 中的字母成绩到数值分数的转换。例如，A 对应 4，A− 对应 3.7，B+ 对应 3.3，B 对应 3，依此类推。学生在某个教学班获得的成绩积分定义为该课程学分乘以学生成绩所对应的数值分数。</p>
+<p>使用上述关系和大学数据库模式，用 SQL 编写以下查询。为简便起见，先假设 <code>takes</code> 的所有元组中 <code>grade</code> 均非空。</p>
+<p>a. 找出 ID 为 <code>'12345'</code> 的学生在全部所修课程中获得的成绩积分总和。</p>
+<p>b. 找出该生的平均绩点（GPA），即成绩积分总和除以对应课程的总学分。</p>
+<p>c. 找出每位学生的 ID 和平均绩点。</p>
+<p>d. 现在假设有些成绩可能为空，重新考虑前面的答案。解释它们是否仍然有效；若无效，给出能正确处理空值的版本。</p>
+<!-- SOURCE pdf-0145-b016 -->
+<!-- SOURCE pdf-0145-b017 -->
+<!-- SOURCE pdf-0145-b018 -->
+<!-- SOURCE pdf-0145-b019 -->
+<!-- SOURCE pdf-0145-b021 -->
+
+<p><strong>3.3</strong> 使用大学数据库模式，用 SQL 编写以下插入、删除或更新操作。</p>
+<p>a. 将计算机科学系每位教师的工资提高 10%。</p>
+<p>b. 删除所有从未开设过的课程，即从未出现在 <code>section</code> 中的课程。</p>
+<p>c. 将每位 <code>tot_cred</code> 大于 100 的学生添加为同系教师，工资设为 10000 美元。</p>
+<!-- SOURCE pdf-0145-b022 -->
+<!-- SOURCE pdf-0145-b023 -->
+<!-- SOURCE pdf-0146-b037 -->
+
+<p><strong>3.4</strong> 考虑图 3.17 的保险数据库，带下划线的属性为主键。用 SQL 编写以下查询。</p>
+<p>a. 找出拥有在 2017 年发生过事故的汽车的人数。</p>
+<p>b. 删除 ID 为 <code>'12345'</code> 的人拥有的所有 2010 年汽车。</p>
+<!-- SOURCE pdf-0146-b002 -->
+<!-- SOURCE pdf-0146-b004 -->
+<!-- SOURCE pdf-0146-b006 -->
+<!-- SOURCE pdf-0146-b008 -->
+<!-- SOURCE pdf-0146-b010 -->
+<!-- SOURCE pdf-0146-b012 -->
+<!-- SOURCE pdf-0146-b014 -->
+<!-- SOURCE pdf-0146-b016 -->
+<!-- SOURCE pdf-0146-b018 -->
+<!-- SOURCE pdf-0146-b020 -->
+<!-- SOURCE pdf-0146-b022 -->
+<!-- SOURCE pdf-0146-b024 -->
+<!-- SOURCE pdf-0146-b026 -->
+<!-- SOURCE pdf-0146-b028 -->
+<!-- SOURCE pdf-0146-b030 -->
+<!-- SOURCE pdf-0146-b032 -->
+<!-- SOURCE pdf-0146-b034 -->
+<!-- SOURCE pdf-0146-b036 -->
+
+<p><img alt="图 3.17 保险数据库。" src="../assets/ch03-fig3-17.png" /></p>
+<p>图 3.17 保险数据库。</p>
+<p>图中字段：person：人员；car：汽车；accident：事故；owns：拥有；participated：事故参与记录。driver_id：驾驶员号；name：姓名；address：地址；license_plate：车牌号；model：车型；year：年份；report_number：报告号；location：地点；damage_amount：损失金额。下划线标明主键。</p>
+<!-- SOURCE pdf-0146-b038 -->
+<!-- SOURCE pdf-0146-b039 -->
+<!-- SOURCE pdf-0146-b040 -->
+
+<p><strong>3.5</strong> 假设有关系 <code>marks(ID, score)</code>，希望按分数为学生划分等级：<code>score &lt; 40</code> 为 F，<code>40 ≤ score &lt; 60</code> 为 C，<code>60 ≤ score &lt; 80</code> 为 B，<code>80 ≤ score</code> 为 A。用 SQL 完成以下查询。</p>
+<p>a. 根据 <code>marks</code> 显示每位学生的等级。</p>
+<p>b. 找出每个等级的学生人数。</p>
+<!-- SOURCE pdf-0146-b041 -->
+
+<p><strong>3.6</strong> 多数系统中的 SQL <code>like</code> 运算区分大小写，但可以利用字符串函数 <code>lower()</code> 进行不区分大小写的匹配。编写一个查询，找出名称包含子串 sci 的所有系，忽略大小写。</p>
+<!-- SOURCE pdf-0146-b042 -->
+<!-- SOURCE pdf-0146-b043 -->
+<!-- SOURCE pdf-0146-b044 -->
+
+<p><strong>3.7</strong> 考虑 SQL 查询：</p>
+<pre><code class="language-sql">select p.a1
+from p, r1, r2
+where p.a1 = r1.a1 or p.a1 = r2.a1
+</code></pre>
+<p>在什么条件下，该查询能选出存在于 r1 或 r2 中的所有 p.a1 值？仔细考虑 r1 或 r2 可能为空的情况。</p>
+<!-- SOURCE pdf-0146-b045 -->
+<!-- SOURCE pdf-0146-b046 -->
+<!-- SOURCE pdf-0146-b047 -->
+<!-- SOURCE pdf-0146-b048 -->
+
+<p><strong>3.8</strong> 考虑图 3.18 的银行数据库，带下划线的属性为主键。用 SQL 编写以下查询。</p>
+<p>a. 找出在该银行有账户但没有贷款的每位客户的 ID。</p>
+<p>b. 找出与客户 <code>'12345'</code> 居住在同一城市、同一街道的每位客户的 ID。</p>
+<p>c. 找出每个满足以下条件的支行名称：至少有一位在该支行开户的客户居住在 Harrison。</p>
+<!-- SOURCE pdf-0147-b002 -->
+<!-- SOURCE pdf-0147-b004 -->
+<!-- SOURCE pdf-0147-b006 -->
+<!-- SOURCE pdf-0147-b008 -->
+<!-- SOURCE pdf-0147-b010 -->
+<!-- SOURCE pdf-0147-b012 -->
+<!-- SOURCE pdf-0147-b014 -->
+<!-- SOURCE pdf-0147-b016 -->
+<!-- SOURCE pdf-0147-b018 -->
+<!-- SOURCE pdf-0147-b020 -->
+<!-- SOURCE pdf-0147-b022 -->
+<!-- SOURCE pdf-0147-b024 -->
+<!-- SOURCE pdf-0147-b026 -->
+<!-- SOURCE pdf-0147-b028 -->
+<!-- SOURCE pdf-0147-b030 -->
+<!-- SOURCE pdf-0147-b032 -->
+<!-- SOURCE pdf-0147-b034 -->
+<!-- SOURCE pdf-0147-b036 -->
+<!-- SOURCE pdf-0147-b038 -->
+<!-- SOURCE pdf-0147-b040 -->
+<!-- SOURCE pdf-0147-b042 -->
+
+<p><img alt="图 3.18 银行数据库。" src="../assets/ch03-fig3-18.png" /></p>
+<p>图 3.18 银行数据库。</p>
+<p>图中字段：branch：支行；customer：客户；loan：贷款；borrower：借款人；account：账户；depositor：存款人。branch_name：支行名；branch_city：支行城市；assets：资产；ID：客户号；customer_name：客户姓名；customer_street：客户街道；customer_city：客户城市；loan_number：贷款号；amount：金额；account_number：账户号；balance：余额。下划线标明主键。</p>
+<!-- SOURCE pdf-0147-b043 -->
+<!-- SOURCE pdf-0147-b044 -->
+<!-- SOURCE pdf-0147-b045 -->
+<!-- SOURCE pdf-0147-b046 -->
+<!-- SOURCE pdf-0147-b047 -->
+<!-- SOURCE pdf-0147-b048 -->
+<!-- SOURCE pdf-0147-b049 -->
+<!-- SOURCE pdf-0147-b050 -->
+
+<p><strong>3.9</strong> 考虑图 3.19 的关系数据库，带下划线的属性为主键。为以下查询编写 SQL 表达式。</p>
+<p>a. 找出在 First Bank Corporation 工作的每位员工的 ID、姓名和居住城市。</p>
+<p>b. 找出在 First Bank Corporation 工作且工资超过 10000 美元的每位员工的 ID、姓名和居住城市。</p>
+<p>c. 找出每位不在 First Bank Corporation 工作的员工的 ID。</p>
+<p>d. 找出工资高于 Small Bank Corporation 所有员工的每位员工的 ID。</p>
+<p>e. 假设一家公司可能位于多个城市。找出在 Small Bank Corporation 所在的每个城市都设有机构的公司名称。</p>
+<p>f. 找出员工人数最多的公司名称；若并列最多，列出所有这些公司。</p>
+<p>g. 找出员工平均工资高于 First Bank Corporation 平均工资的每家公司名称。</p>
+<!-- SOURCE pdf-0147-b052 -->
+<!-- SOURCE pdf-0147-b054 -->
+<!-- SOURCE pdf-0147-b056 -->
+<!-- SOURCE pdf-0147-b058 -->
+<!-- SOURCE pdf-0147-b060 -->
+<!-- SOURCE pdf-0147-b062 -->
+<!-- SOURCE pdf-0147-b064 -->
+<!-- SOURCE pdf-0147-b066 -->
+<!-- SOURCE pdf-0147-b068 -->
+<!-- SOURCE pdf-0147-b070 -->
+
+<p><img alt="图 3.19 员工数据库。" src="../assets/ch03-fig3-19.png" /></p>
+<p>图 3.19 员工数据库。</p>
+<p>图中字段：employee：员工；works：工作关系；company：公司；manages：管理关系。ID：员工号；person_name：姓名；street：街道；city：城市；company_name：公司名；salary：工资；manager_id：经理号。下划线标明主键。</p>
+<!-- SOURCE pdf-0148-b001 -->
+<!-- SOURCE pdf-0148-b002 -->
+<!-- SOURCE pdf-0148-b003 -->
+
+<p><strong>3.10</strong> 考虑图 3.19 的关系数据库，为下列操作编写 SQL 表达式。</p>
+<p>a. 修改数据库，将 ID 为 <code>'12345'</code> 的员工的居住城市改为 Newtown。</p>
+<p>b. 给 First Bank Corporation 的每位经理加薪 10%；若加薪后工资会超过 100000 美元，则只加薪 3%。</p>
+<!-- SOURCE pdf-0148-b004 -->
+<!-- SOURCE pdf-0148-b005 -->
+<!-- SOURCE pdf-0148-b006 -->
+<!-- SOURCE pdf-0148-b007 -->
+<!-- SOURCE pdf-0148-b008 -->
+<!-- SOURCE pdf-0148-b009 -->
+
+<h2 id="_3">习题</h2>
+<p><strong>3.11</strong> 使用大学数据库模式，用 SQL 编写以下查询。</p>
+<p>a. 找出至少选修过一门计算机科学系课程的每位学生的 ID 和姓名，确保结果中没有重复姓名。</p>
+<p>b. 找出没有选修过任何 2017 年以前开设的课程的每位学生的 ID 和姓名。</p>
+<p>c. 找出每个系教师工资的最高值，可以假设每个系至少有一位教师。</p>
+<p>d. 在上一问得到的各系最高工资中找出最低值。</p>
+<!-- SOURCE pdf-0148-b010 -->
+<!-- SOURCE pdf-0148-b011 -->
+<!-- SOURCE pdf-0148-b012 -->
+<!-- SOURCE pdf-0148-b014 -->
+<!-- SOURCE pdf-0148-b015 -->
+<!-- SOURCE pdf-0148-b016 -->
+<!-- SOURCE pdf-0148-b017 -->
+<!-- SOURCE pdf-0148-b018 -->
+
+<p><strong>3.12</strong> 使用大学数据库模式，编写 SQL 语句执行以下操作。</p>
+<p>a. 创建新课程 CS-001，名称为 Weekly Seminar，学分为 0。</p>
+<p>b. 为该课程在 2017 年秋季创建一个 <code>sec_id</code> 为 1 的教学班，授课地点暂未指定。</p>
+<p>c. 将计算机科学系的每位学生加入上述教学班。</p>
+<p>d. 删除 ID 为 12345 的学生对上述教学班的选课记录。</p>
+<p>e. 删除课程 CS-001。如果没有先删除该课程的开课记录（教学班），就执行该删除语句，会发生什么？</p>
+<p>f. 删除课程名称包含 advanced 一词的全部教学班对应的 <code>takes</code> 元组，匹配课程名称时忽略大小写。</p>
+<!-- SOURCE pdf-0148-b019 -->
+
+<p><strong>3.13</strong> 为图 3.17 的模式编写 SQL DDL。对数据类型作合理假设，并务必声明主键和外键。</p>
+<!-- SOURCE pdf-0149-b001 -->
+<!-- SOURCE pdf-0149-b002 -->
+<!-- SOURCE pdf-0149-b003 -->
+<!-- SOURCE pdf-0149-b005 -->
+
+<p><strong>3.14</strong> 考虑图 3.17 的保险数据库，带下划线的属性为主键。用 SQL 编写以下查询。</p>
+<p>a. 找出涉及名为 John Smith 的人所拥有汽车的事故次数。</p>
+<p>b. 将事故报告号为 AR2197 的事故中，车牌号为 AABB2000 的汽车的损失金额更新为 3000 美元。</p>
+<!-- SOURCE pdf-0149-b006 -->
+<!-- SOURCE pdf-0149-b007 -->
+<!-- SOURCE pdf-0149-b008 -->
+<!-- SOURCE pdf-0149-b009 -->
+
+<p><strong>3.15</strong> 考虑图 3.18 的银行数据库，带下划线的属性为主键。用 SQL 编写以下查询。</p>
+<p>a. 找出在 Brooklyn 的每个支行都开有账户的客户。</p>
+<p>b. 找出该银行全部贷款金额的总和。</p>
+<p>c. 找出资产额高于 Brooklyn 至少一个支行资产额的全部支行名称。</p>
+<!-- SOURCE pdf-0149-b010 -->
+<!-- SOURCE pdf-0149-b011 -->
+<!-- SOURCE pdf-0149-b012 -->
+<!-- SOURCE pdf-0149-b013 -->
+<!-- SOURCE pdf-0149-b014 -->
+
+<p><strong>3.16</strong> 考虑图 3.19 的员工数据库，带下划线的属性为主键。为下列查询编写 SQL 表达式。</p>
+<p>a. 找出居住城市与所工作公司所在城市相同的每位员工的 ID 和姓名。</p>
+<p>b. 找出与自己的经理居住在同一城市、同一街道的每位员工的 ID 和姓名。</p>
+<p>c. 找出工资高于所在公司全体员工平均工资的每位员工的 ID 和姓名。</p>
+<p>d. 找出工资总额最小的公司。</p>
+<!-- SOURCE pdf-0149-b015 -->
+<!-- SOURCE pdf-0149-b016 -->
+<!-- SOURCE pdf-0149-b017 -->
+<!-- SOURCE pdf-0149-b018 -->
+
+<p><strong>3.17</strong> 考虑图 3.19 的员工数据库，为下列操作编写 SQL 表达式。</p>
+<p>a. 给 First Bank Corporation 的所有员工加薪 10%。</p>
+<p>b. 给 First Bank Corporation 的所有经理加薪 10%。</p>
+<p>c. 删除 <code>works</code> 中 Small Bank Corporation 所有员工的元组。</p>
+<!-- SOURCE pdf-0149-b019 -->
+
+<p><strong>3.18</strong> 为图 3.19 的员工数据库编写 SQL 模式定义。为每个属性选择适当的域，为每个关系模式选择适当的主键，并加入适当的外键约束。</p>
+<!-- SOURCE pdf-0149-b020 -->
+
+<p><strong>3.19</strong> 列出数据库中可能引入空值的两个原因。</p>
+<!-- SOURCE pdf-0149-b021 -->
+
+<p><strong>3.20</strong> 证明 SQL 中的 <code>&lt;&gt; all</code> 等价于 <code>not in</code>。</p>
+<!-- SOURCE pdf-0150-b002 -->
+<!-- SOURCE pdf-0150-b004 -->
+<!-- SOURCE pdf-0150-b006 -->
+<!-- SOURCE pdf-0150-b008 -->
+<!-- SOURCE pdf-0150-b010 -->
+<!-- SOURCE pdf-0150-b012 -->
+<!-- SOURCE pdf-0150-b014 -->
+<!-- SOURCE pdf-0150-b016 -->
+
+<p><img alt="图 3.20 图书馆数据库。" src="../assets/ch03-fig3-20.png" /></p>
+<p>图 3.20 图书馆数据库。</p>
+<p>图中字段：member：会员；book：图书；borrowed：借阅记录。memb_no：会员号；name：姓名；isbn：国际标准书号；title：书名；authors：作者；publisher：出版社；date：日期。下划线标明主键。</p>
+<!-- SOURCE pdf-0150-b017 -->
+<!-- SOURCE pdf-0150-b018 -->
+<!-- SOURCE pdf-0150-b019 -->
+<!-- SOURCE pdf-0150-b020 -->
+<!-- SOURCE pdf-0150-b021 -->
+
+<p><strong>3.21</strong> 考虑图 3.20 的图书馆数据库，用 SQL 编写以下查询。</p>
+<p>a. 找出至少借阅过一本 McGraw-Hill 出版的图书的每位会员的会员号和姓名。</p>
+<p>b. 找出借阅过 McGraw-Hill 出版的每一本图书的每位会员的会员号和姓名。</p>
+<p>c. 对每个出版社，找出借阅过该社五本以上图书的每位会员的会员号和姓名。</p>
+<p>d. 找出每位会员的平均借书数。注意：未借过书的会员完全不会出现在 <code>borrowed</code> 中，但计算平均值时仍须计入这些会员。</p>
+<!-- SOURCE pdf-0150-b022 -->
+<!-- SOURCE pdf-0150-b023 -->
+<!-- SOURCE pdf-0150-b024 -->
+
+<p><strong>3.22</strong> 改写下面的 <code>where</code> 子句，不使用 <code>unique</code>。</p>
+<pre><code class="language-sql">where unique (select title from course)
+</code></pre>
+<!-- SOURCE pdf-0150-b025 -->
+<!-- SOURCE pdf-0150-b026 -->
+<!-- SOURCE pdf-0150-b028 -->
+<!-- SOURCE pdf-0150-b030 -->
+<!-- SOURCE pdf-0150-b032 -->
+<!-- SOURCE pdf-0150-b034 -->
+<!-- SOURCE pdf-0150-b036 -->
+<!-- SOURCE pdf-0150-b038 -->
+<!-- SOURCE pdf-0150-b040 -->
+<!-- SOURCE pdf-0150-b042 -->
+<!-- SOURCE pdf-0150-b044 -->
+<!-- SOURCE pdf-0150-b046 -->
+<!-- SOURCE pdf-0150-b048 -->
+<!-- SOURCE pdf-0150-b050 -->
+<!-- SOURCE pdf-0150-b052 -->
+<!-- SOURCE pdf-0150-b054 -->
+<!-- SOURCE pdf-0150-b055 -->
+
+<p><strong>3.23</strong> 考虑查询：</p>
+<pre><code class="language-sql">with dept_total (dept_name, value) as
+     (select dept_name, sum(salary)
+      from instructor
+      group by dept_name),
+     dept_total_avg(value) as
+     (select avg(value)
+      from dept_total)
+select dept_name
+from dept_total, dept_total_avg
+where dept_total.value &gt;= dept_total_avg.value;
+</code></pre>
+<p>不使用 <code>with</code>，改写该查询。</p>
+<!-- SOURCE pdf-0150-b056 -->
+
+<p><strong>3.24</strong> 使用大学数据库模式，用 SQL 找出由物理系教师指导的会计系学生的姓名和 ID。</p>
+<!-- SOURCE pdf-0151-b001 -->
+
+<p><strong>3.25</strong> 使用大学数据库模式，用 SQL 找出预算高于哲学系的各系名称，按字母顺序排列。</p>
+<!-- SOURCE pdf-0151-b002 -->
+
+<p><strong>3.26</strong> 使用大学数据库模式，用 SQL 完成以下查询：对于至少重修过某门课程两次（即总共选修过该课程至少三次）的学生，显示课程 ID 和学生 ID。结果按课程 ID 排序，不显示重复行。</p>
+<!-- SOURCE pdf-0151-b003 -->
+
+<p><strong>3.27</strong> 使用大学数据库模式，用 SQL 找出至少有三门不同课程各重修过至少一次（即每门课程至少选修过两次）的学生 ID。</p>
+<!-- SOURCE pdf-0151-b004 -->
+
+<p><strong>3.28</strong> 使用大学数据库模式，用 SQL 找出教授过所在系全部课程的教师的姓名和 ID，即 <code>course</code> 中系名与该教师系名相同的每门课程都教授过。结果按姓名排序。</p>
+<!-- SOURCE pdf-0151-b005 -->
+
+<p><strong>3.29</strong> 使用大学数据库模式，用 SQL 找出姓名以字母 D 开头、且选修的音乐系课程不足五门的每位历史系学生的姓名和 ID。</p>
+<!-- SOURCE pdf-0151-b006 -->
+<!-- SOURCE pdf-0151-b007 -->
+<!-- SOURCE pdf-0151-b008 -->
+
+<p><strong>3.30</strong> 考虑大学数据库模式上的 SQL 查询：</p>
+<pre><code class="language-sql">select avg(salary) - (sum(salary) / count(*))
+from instructor
+</code></pre>
+<p>一组数的平均值定义为数值总和除以个数，因此可能预期该查询返回 0。对图 2.1 的 <code>instructor</code> 示例关系，结果确实如此。但是，这个关系还可能有其他实例，使结果不为 0。给出一个这样的实例，并解释结果为何不为 0。</p>
+<!-- SOURCE pdf-0151-b009 -->
+
+<p><strong>3.31</strong> 使用大学数据库模式，用 SQL 找出在自己教过的任何课程中都从未给过 A 成绩的每位教师的 ID 和姓名。（从未教过课的教师自然满足这个条件。）</p>
+<!-- SOURCE pdf-0151-b010 -->
+
+<p><strong>3.32</strong> 改写上一题的查询，进一步确保只包括在某门课程中至少给过一次其他非空成绩的教师。</p>
+<!-- SOURCE pdf-0151-b011 -->
+
+<p><strong>3.33</strong> 使用大学数据库模式，用 SQL 找出计算机科学系中至少有一个教学班的授课时间涉及下午（即结束时间在 12:00 或之后）的每门课程的 ID 和名称。消除可能出现的重复结果。</p>
+<!-- SOURCE pdf-0151-b012 -->
+
+<p><strong>3.34</strong> 使用大学数据库模式，用 SQL 找出每个教学班的学生人数。结果列按 <code>courseid, secid, year, semester, num</code> 的顺序出现，无须输出学生人数为 0 的教学班。</p>
+<!-- SOURCE pdf-0152-b001 -->
+
+<p><strong>3.35</strong> 使用大学数据库模式，用 SQL 找出选课人数最多的教学班。结果列按 <code>courseid, secid, year, semester, num</code> 的顺序出现。（使用 <code>with</code> 可能更方便。）</p>
+<!-- SOURCE pdf-0152-b002 -->
+<!-- SOURCE pdf-0152-b003 -->
+
+<h2 id="_4">工具</h2>
+<p>商业关系数据库系统包括 IBM DB2、IBM Informix、Oracle、SAP Adaptive Server Enterprise（原名 Sybase）和 Microsoft SQL Server。此外，还可以免费下载和使用若干开源数据库系统，包括 PostgreSQL 和 MySQL（除某些商业用途外免费）。部分商业厂商也提供带有一定使用限制的免费版本，例如 Oracle Express Edition、Microsoft SQL Server Express 和 IBM DB2 Express-C。</p>
+<!-- SOURCE pdf-0152-b004 -->
+
+<p>sql.js 是嵌入式 SQL 数据库 SQLite 的一个版本，可以直接在浏览器中运行和执行 SQL 命令。全部数据都是临时的，关闭浏览器就会消失，但它仍可用于学习 SQL。需要留意，sql.js 和 SQLite 支持的 SQL 子集比其他数据库小得多。<a href="https://www.w3schools.com/sql">www.w3schools.com/sql</a> 提供了以 sql.js 为执行引擎的 SQL 教程。</p>
+<!-- SOURCE pdf-0152-b005 -->
+<!-- SOURCE pdf-0152-b006 -->
+
+<p>本书网站 <a href="https://db-book.com">db-book.com</a> 提供大量配套资料。通过网站的 Laboratory Material（实验资料）链接，可以获得：</p>
+<ul>
+<li>设置和访问常见数据库系统的说明，包括可在浏览器中运行的 sql.js，以及 MySQL、PostgreSQL。</li>
+<li>大学数据库模式的 SQL 定义。</li>
+<li>装载示例数据集的 SQL 脚本。</li>
+<li>使用印度理工学院孟买分校开发的 XData 系统的提示：在系统生成的多个数据集上执行查询，检验查询是否正确；也为教师提供用 XData 自动评判 SQL 查询的说明。</li>
+<li>不同数据库之间 SQL 差异的使用提示。</li>
+</ul>
+<!-- SOURCE pdf-0152-b007 -->
+
+<p>不同数据库对 SQL 特性的支持不同，多数数据库还支持一些非标准扩展。请阅读系统手册，了解所用数据库支持哪些具体特性。</p>
+<!-- SOURCE pdf-0152-b008 -->
+<!-- SOURCE pdf-0153-b001 -->
+
+<p>多数数据库系统提供用于提交 SQL 命令的命令行接口，也提供图形用户界面（GUI），以简化数据库浏览、查询的编写与提交，以及数据库管理。PostgreSQL 可使用 pgAdmin，MySQL 可使用 phpMyAdmin；Oracle 提供 Oracle SQL Developer，Microsoft SQL Server 则附带 SQL Server Management Studio。</p>
+<!-- SOURCE pdf-0153-b002 -->
+
+<p>NetBeans IDE 的 SQLEditor 提供可连接多种数据库系统的 GUI 前端，但功能有限。Eclipse IDE 通过 Data Tools Platform（DTP）提供类似功能。支持跨多种数据库平台访问 SQL 的商业 IDE 包括 Embarcadero 的 RAD Studio 和 Aqua Data Studio。</p>
+<!-- SOURCE pdf-0153-b003 -->
+<!-- SOURCE pdf-0153-b004 -->
+<!-- SOURCE pdf-0153-b005 -->
+<!-- SOURCE pdf-0153-b006 -->
+
+<h2 id="_5">进一步阅读</h2>
+<p>SQL 的前身 Sequel 语言见 [Chamberlin et al. (1976)]。</p>
+<p>最重要的 SQL 参考资料通常是所用数据库系统或其厂商提供的在线文档。这些文档会指出哪些特性偏离了本章介绍的 SQL 标准。下面列出一些常见数据库截至 2018 年的版本所对应的 SQL 参考手册：</p>
+<ul>
+<li>MySQL 8.0：<a href="https://dev.mysql.com/doc/refman/8.0/en/">dev.mysql.com/doc/refman/8.0/en/</a></li>
+<li>Oracle 12c：<a href="https://docs.oracle.com/database/121/SQLRF/">docs.oracle.com/database/121/SQLRF/</a></li>
+<li>PostgreSQL：<a href="https://www.postgresql.org/docs/current/static/sql.html">www.postgresql.org/docs/current/static/sql.html</a></li>
+<li>SQLite：<a href="https://www.sqlite.org/lang.html">www.sqlite.org/lang.html</a></li>
+<li>SQL Server：<a href="https://docs.microsoft.com/en-us/sql/t-sql">docs.microsoft.com/en-us/sql/t-sql</a></li>
+</ul>
+<!-- SOURCE pdf-0153-b007 -->
+<!-- SOURCE pdf-0153-b008 -->
+
+<h2 id="_6">参考文献</h2>
+<p>[Chamberlin et al. (1976)] D. D. Chamberlin, M. M. Astrahan, K. P. Eswaran, P. P. Griffiths, R. A. Lorie, J. W. Mehl, P. Reisner, and B. W. Wade, “SEQUEL 2: A Unified Approach to Data Definition, Manipulation, and Control”, <em>IBM Journal of Research and Development</em>, Volume 20, Number 6 (1976), pages 560–575。</p>
+<!-- SOURCE pdf-0153-b009 -->
+<!-- SOURCE pdf-0153-b010 -->
+
+<h2 id="_7">图片来源</h2>
+<p>章首帆船照片：©Pavel Nesvadba/Shutterstock。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ch3-1">
+<p>模式中声明了主键的数据库关系不能包含重复元组，因为重复会违反主键约束。&#160;<a class="footnote-backref" href="#fnref:ch3-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-2">
+<p>实际执行时，SQL 可以把表达式转换为更高效的等价形式。效率问题留到第15章和第16章讨论。&#160;<a class="footnote-backref" href="#fnref:ch3-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-3">
+<p>早期 SQL 没有 <code>as</code>，因此某些实现，特别是 Oracle，不允许在 <code>from</code> 中使用它。在 Oracle 的 <code>from</code> 中，应把 <code>old-name as new-name</code> 写为 <code>old-name new-name</code>；<code>select</code> 中重命名属性可以使用 <code>as</code>，也可以省略。&#160;<a class="footnote-backref" href="#fnref:ch3-3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-4">
+<p>MySQL 以及 PostgreSQL 的 <code>ilike</code> 运算符例外，它们进行不区分大小写的模式匹配。&#160;<a class="footnote-backref" href="#fnref:ch3-4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-5">
+<p>这一语法属于 SQL-92 标准，但某些 SQL 实现，特别是 Oracle，不支持它。&#160;<a class="footnote-backref" href="#fnref:ch3-5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-6">
+<p>MySQL 没有实现 <code>intersect</code>；可以用3.8.1节介绍的子查询绕过这一限制。&#160;<a class="footnote-backref" href="#fnref:ch3-6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-7">
+<p>某些实现，特别是 Oracle，用 <code>minus</code> 代替 <code>except</code>；Oracle 12c 用 <code>multiset except</code> 代替 <code>except all</code>。MySQL 完全没有实现这一运算，可以用3.8.1节的子查询绕过。&#160;<a class="footnote-backref" href="#fnref:ch3-7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-8">
+<p>一些数据库不支持 <code>is unknown</code> 和 <code>is not unknown</code>。&#160;<a class="footnote-backref" href="#fnref:ch3-8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-9">
+<p>大多数 SQL 实现还提供许多其他聚集函数。&#160;<a class="footnote-backref" href="#fnref:ch3-9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-10">
+<p>SQL 中的关键字 <code>any</code> 与 <code>some</code> 同义。早期版本只允许 <code>any</code>，后续版本加入 <code>some</code> 这个替代写法，以避免英语单词 any 的歧义。&#160;<a class="footnote-backref" href="#fnref:ch3-10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-11">
+<p>这个结构尚未得到广泛实现。&#160;<a class="footnote-backref" href="#fnref:ch3-11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-12">
+<p>SQL 求值引擎未必会实际创建这个关系。只要最终查询结果与创建该关系时相同，就可以采用其他方式计算整个查询。&#160;<a class="footnote-backref" href="#fnref:ch3-12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ch3-13">
+<p>例如，这种结构在 SQL Server 中合法，在 Oracle 中不合法。&#160;<a class="footnote-backref" href="#fnref:ch3-13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></article>
+      <nav class="page-nav"><a rel="prev" href="ch02.html">← 第2章 关系模型导论</a><a rel="next" href="ch04.html">第4章 中级 SQL →</a></nav>
+    </main>
+  </div>
+</body>
+</html>

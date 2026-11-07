@@ -1,6 +1,6 @@
 {
-  "collections": 8,
-  "search_documents": 1568,
+  "collections": 9,
+  "search_documents": 1614,
   "documents_by_collection": {
     "nju-os-reading": 942,
     "nju-gense-2026": 11,
@@ -9,6 +9,7 @@
     "bv1lsht6feaq": 1,
     "bv1a5sf6neqv": 1,
     "learning-compression-engineering": 1,
-    "a-philosophy-of-software-design": 29
+    "a-philosophy-of-software-design": 29,
+    "database-system-concepts-7e": 46
   }
 }
