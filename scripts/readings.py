@@ -22,6 +22,22 @@ def relative_url(source, target):
     return posixpath.relpath(str(target), str(Path(source).parent))
 
 
+def section_tree(tokens, route, target, current):
+    if not tokens:
+        return ''
+    rows = []
+    for token in tokens:
+        text = Text()
+        text.feed(token['name'])
+        anchor = token['id']
+        href = ('#' + anchor) if current else relative_url(route, target) + '#' + anchor
+        marker = f' data-section-id="{html.escape(anchor, quote=True)}"' if current else ''
+        rows.append(f'<li><a href="{html.escape(href, quote=True)}"{marker}>'
+                    + html.escape(''.join(text.parts)) + '</a>'
+                    + section_tree(token['children'], route, target, current) + '</li>')
+    return '<ul class="chapter-sections">' + ''.join(rows) + '</ul>'
+
+
 class Text(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -51,18 +67,34 @@ def build_readings(root, catalog):
         routes = ['index.html'] + [f'pages/{page["id"]}.html' for page in pages[1:]]
         sources = [local_file(material, page['markdown']) for page in pages]
         source_routes = dict(zip(sources, routes))
+        contents_ids = {'toc', 'contents'} if data.get('format') == 'book' else set()
+        reading_order = [i for i, page in enumerate(pages) if page['id'] not in contents_ids]
+        first_chapter = next((i for i in reading_order if re.fullmatch(r'ch\d+', pages[i]['id'])), reading_order[0])
+        rendered_pages = []
+        for source in sources:
+            converter = markdown.Markdown(extensions=['extra', 'toc', 'sane_lists'],
+                                         extension_configs={'toc': {'toc_depth': '2-3'}})
+            body = converter.convert(source.read_text(encoding='utf-8').replace('[TOC]', ''))
+            rendered_pages.append((body, converter.toc, converter.toc_tokens))
         output = root / 'docs/read' / item['id']
         output.mkdir(parents=True, exist_ok=True)
         content_version = str(max(path.stat().st_mtime_ns for path in [manifest, *sources]))
         documents = []
         for number, (page, source, route) in enumerate(zip(pages, sources, routes)):
+            if page['id'] in contents_ids:
+                target = html.escape(relative_url(route, routes[first_chapter]), quote=True)
+                destination = output / route
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8">'
+                                       + f'<meta http-equiv="refresh" content="0;url={target}">'
+                                       + f'<title>{html.escape(data["title"])}</title>'
+                                       + f'<a href="{target}">开始阅读</a></html>', encoding='utf-8')
+                continue
             public_route = './' if number == 0 else route
             prefix = relative_url(route, '.') + '/'
             if prefix == './':
                 prefix = ''
-            converter = markdown.Markdown(extensions=['extra', 'toc', 'sane_lists'],
-                                         extension_configs={'toc': {'toc_depth': '2-3'}})
-            body = converter.convert(source.read_text(encoding='utf-8').replace('[TOC]', ''))
+            body, page_toc, _ = rendered_pages[number]
 
             def reference(match):
                 attribute, quote, value = match[1], match[2], html.unescape(match[3])
@@ -94,19 +126,25 @@ def build_readings(root, catalog):
             body = re.sub(r'(\b(?:src|href)=)([\"\'])(.*?)\2', reference, body)
             if not re.search(r'<h1(?:\s|>)', body):
                 body = f'<h1>{html.escape(page["title"])}</h1>' + body
-            navigation = converter.toc
             if len(pages) > 1:
-                navigation = '<details class="course-outline"><summary>全部章节</summary><ol>' + ''.join(
-                    f'<li><a href="{html.escape(relative_url(route, target), quote=True)}"'
-                    + (' aria-current="page"' if index == number else '')
-                    + f'>{html.escape(row["title"])}</a></li>'
-                    for index, (row, target) in enumerate(zip(pages, routes))) + '</ol></details>' + converter.toc
+                entries = []
+                for index in reading_order:
+                    row, target = pages[index], routes[index]
+                    link = f'<a href="{html.escape(relative_url(route, target), quote=True)}"'
+                    link += (' aria-current="page"' if index == number else '')
+                    link += f'>{html.escape(row["title"])}</a>'
+                    sections = section_tree(rendered_pages[index][2], route, target, index == number)
+                    if sections:
+                        link = '<details class="chapter-outline"' + (' open' if index == number else '') + '><summary>' + link + '</summary>' + sections + '</details>'
+                    entries.append('<li>' + link + '</li>')
+                navigation = '<details class="course-outline" open><summary>全部章节</summary><ol>' + ''.join(entries) + '</ol></details>'
             else:
-                navigation = '<details class="outline" open><summary>目录</summary>' + converter.toc + '</details>'
-            prev = (f'<a rel="prev" href="{relative_url(route, routes[number-1])}">'
-                    f'← {html.escape(pages[number-1]["title"])}</a>') if number else '<span></span>'
-            nxt = (f'<a rel="next" href="{relative_url(route, routes[number+1])}">'
-                   f'{html.escape(pages[number+1]["title"])} →</a>') if number + 1 < len(pages) else '<span></span>'
+                navigation = '<details class="outline" open><summary>目录</summary>' + page_toc + '</details>'
+            position = reading_order.index(number)
+            prev = (f'<a rel="prev" href="{relative_url(route, routes[reading_order[position-1]])}">'
+                    f'← {html.escape(pages[reading_order[position-1]]["title"])}</a>') if position else '<span></span>'
+            nxt = (f'<a rel="next" href="{relative_url(route, routes[reading_order[position+1]])}">'
+                   f'{html.escape(pages[reading_order[position+1]]["title"])} →</a>') if position + 1 < len(reading_order) else '<span></span>'
             location = Path('read') / item['id'] / route
             assets_prefix = relative_url(location, 'assets') + '/'
             values = {'TITLE': html.escape(page['title']), 'KIND': html.escape(data['kind']),

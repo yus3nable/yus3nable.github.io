@@ -60,11 +60,34 @@ class ReadingBuildTests(unittest.TestCase):
         self.assertIn('rel="next" href="pages/002.html"', first)
         self.assertIn('rel="prev" href="../index.html"', second)
         self.assertIn('../../../assets/reader.css?', second)
-        self.assertIn('href="#second">本课重点</a>', second)
+        self.assertIn('href="#second" data-section-id="second">本课重点</a>', second)
         self.assertIn('class="course-outline"', second)
         self.assertNotIn('<summary>目录</summary>', second)
-        self.assertEqual(second.count('<details'), 1)
+        self.assertIn('<details class="chapter-outline" open>', second)
+        self.assertEqual(second.count('href="#second"'), 1)
+        self.assertIn('data-section-id="second"', second)
+        self.assertIn('href="pages/002.html#second"', first)
         self.assertIn('aria-current="page"', second)
+
+    def test_book_contents_redirects_and_is_skipped_in_navigation_and_search(self):
+        self.manifest([{'id': 'ch01', 'title': '第一章', 'markdown': 'content/ch01.md'},
+                       {'id': 'contents', 'title': '目录', 'markdown': 'content/contents.md'},
+                       {'id': 'ch02', 'title': '第二章', 'markdown': 'content/ch02.md'}], 'book')
+        (self.material / 'content/ch01.md').write_text('# 第一章\n\n## 基础 {#basics}\n\n内容')
+        (self.material / 'content/contents.md').write_text('# 目录\n\n重复目录条目')
+        (self.material / 'content/ch02.md').write_text('# 第二章\n\n## 应用 {#usage}\n\n内容')
+        indexes = build_readings(self.root, self.catalog)
+        output = self.root / 'docs/read/example'
+        first = (output / 'index.html').read_text()
+        second = (output / 'pages/ch02.html').read_text()
+        legacy = (output / 'pages/contents.html').read_text()
+        self.assertIn('http-equiv="refresh" content="0;url=../index.html"', legacy)
+        self.assertIn('rel="next" href="pages/ch02.html"', first)
+        self.assertIn('rel="prev" href="../index.html"', second)
+        self.assertNotIn('contents.html', first)
+        self.assertIn('href="../index.html#basics"', second)
+        self.assertNotIn('class="chapter-outline" open><summary><a href="../index.html"', second)
+        self.assertEqual(len(indexes['example']), 2)
 
     def test_numbered_steps_keep_their_numbers_across_source_comments(self):
         self.manifest([{'id': '001', 'title': '协议步骤', 'markdown': 'content/001.md'}])

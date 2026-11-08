@@ -11,4 +11,29 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape'){menu.hidden
 const search=document.querySelector('.search');let index=null;
 search.addEventListener('input',async()=>{const results=document.querySelector('.search-results');results.replaceChildren();const query=search.value.trim().toLowerCase();if(!query)return;try{if(!index)index=await fetch(search.dataset.index).then(response=>{if(!response.ok)throw new Error('搜索加载失败');return response.json();});const matches=index.filter(row=>(row.title+' '+row.text).toLowerCase().includes(query)).slice(0,12);for(const row of matches){const li=document.createElement('li');const a=document.createElement('a');a.href=search.dataset.prefix+row.route;a.textContent=row.title;li.append(a);results.append(li);}if(!matches.length)results.textContent='没有找到匹配内容';}catch(error){results.textContent=error.message;}});
 
-const outline=document.querySelector('.outline');if(outline)outline.open=window.matchMedia('(min-width:800px)').matches;
+const outline=document.querySelector('.course-outline, .outline');if(outline)outline.open=window.matchMedia('(min-width:800px)').matches;
+
+const sectionLinks = [...document.querySelectorAll('[data-section-id]')];
+const sections = sectionLinks.map(link => ({link, heading: document.getElementById(link.dataset.sectionId)}));
+function markCurrentSection() {
+  let current = null;
+  for (const section of sections) {
+    if (section.heading.getBoundingClientRect().top > window.innerHeight * .3) break;
+    current = section.link;
+  }
+  for (const {link} of sections) {
+    if (link === current) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  }
+}
+if (sections.length) {
+  let pending = false;
+  window.addEventListener('scroll', () => {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(() => { markCurrentSection(); pending = false; });
+  }, {passive: true});
+  window.addEventListener('load', markCurrentSection);
+  window.addEventListener('hashchange', markCurrentSection);
+  markCurrentSection();
+}
