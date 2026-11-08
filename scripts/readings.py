@@ -101,6 +101,8 @@ def build_readings(root, catalog):
                     + (' aria-current="page"' if index == number else '')
                     + f'>{html.escape(row["title"])}</a></li>'
                     for index, (row, target) in enumerate(zip(pages, routes))) + '</ol></details>' + converter.toc
+            else:
+                navigation = '<details class="outline" open><summary>目录</summary>' + converter.toc + '</details>'
             prev = (f'<a rel="prev" href="{relative_url(route, routes[number-1])}">'
                     f'← {html.escape(pages[number-1]["title"])}</a>') if number else '<span></span>'
             nxt = (f'<a rel="next" href="{relative_url(route, routes[number+1])}">'
