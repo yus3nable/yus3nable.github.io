@@ -37,3 +37,27 @@ if (sections.length) {
   window.addEventListener('hashchange', markCurrentSection);
   markCurrentSection();
 }
+
+const copyData = document.querySelectorAll('.section-copy-data')[0];
+if (copyData) {
+  const sectionText = JSON.parse(copyData.textContent);
+  const copyStatus = document.querySelector('.copy-status');
+  document.querySelectorAll('[data-copy-section]').forEach(button => {
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      copyStatus.textContent = '';
+      try {
+        await navigator.clipboard.writeText(sectionText[button.dataset.copySection]);
+        button.textContent = '已复制';
+        copyStatus.textContent = '本小节已复制';
+      } catch (error) {
+        button.textContent = '复制失败';
+        copyStatus.textContent = '复制失败，请重试或选中文字复制。';
+        console.error('小节复制失败', error);
+      } finally {
+        button.disabled = false;
+        setTimeout(() => { button.textContent = '复制本节'; }, 1800);
+      }
+    });
+  });
+}

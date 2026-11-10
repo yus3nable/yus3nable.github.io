@@ -47,6 +47,78 @@ class Text(HTMLParser):
         self.parts.append(value)
 
 
+def copy_sections(source_text, rendered_body, material, source, source_routes, base_url):
+    """Prepare full Markdown sections, using the same heading IDs as the reader."""
+    lines = source_text.splitlines(keepends=True)
+    headings = []
+    fence = None
+    for index, line in enumerate(lines):
+        marker = re.match(r'^ {0,3}(`{3,}|~{3,})', line)
+        if marker:
+            value = marker[1]
+            if fence is None:
+                fence = value
+            elif value[0] == fence[0] and len(value) >= len(fence) and not line[marker.end():].strip():
+                fence = None
+            continue
+        heading = re.match(r'^ {0,3}(#{1,6})\s+', line)
+        if heading and fence is None:
+            headings.append((index, len(heading[1])))
+    rendered = list(re.finditer(r'<h([2-6])\b[^>]*\bid="([^"]+)"[^>]*>(.*?)</h\1>', rendered_body, re.S))
+    sections = [(position, level) for position, level in headings if level >= 2]
+    if len(sections) != len(rendered):
+        raise ValueError(f'小节来源与页面标题不一致：{source}')
+
+    def absolute_link(match):
+        value = match[2]
+        parsed = urlsplit(value)
+        if parsed.scheme or parsed.netloc or not parsed.path or parsed.path.startswith('/'):
+            return match[0]
+        target = local_file(material, str(source.parent / unquote(parsed.path)))
+        path = source_routes.get(target, target.relative_to(material).as_posix())
+        url = urljoin(base_url, path)
+        if parsed.query:
+            url += '?' + parsed.query
+        if parsed.fragment:
+            url += '#' + parsed.fragment
+        return match[1] + url + match[3]
+
+    payload = {}
+    for (start, level), heading in zip(sections, rendered):
+        end = next((position for position, next_level in headings if position > start and next_level <= level), len(lines))
+        selected = []
+        in_code = None
+        for line in lines[start:end]:
+            marker = re.match(r'^ {0,3}(`{3,}|~{3,})', line)
+            if marker:
+                value = marker[1]
+                if in_code is None:
+                    in_code = value
+                elif value[0] == in_code[0] and len(value) >= len(in_code) and not line[marker.end():].strip():
+                    in_code = None
+                selected.append(line)
+            elif in_code:
+                selected.append(line)
+            elif not re.match(r'^\s*\{:\s.*\}\s*$', line):
+                line = re.sub(r'\s*\{#[^}]+\}(?=\s*$)', '', line).rstrip('\n') + '\n'
+                line = re.sub(r'<!-- SOURCE .*? -->\s*', '', line)
+                line = re.sub(r'(\]\()([^\s)]+)(\))', absolute_link, line)
+                selected.append(line)
+        text = ''.join(selected).strip()
+        payload[html.unescape(heading[2])] = text
+
+    def button(match):
+        title = Text()
+        title.feed(match[3])
+        label = html.escape('复制“' + ''.join(title.parts) + '”小节', quote=True)
+        return match[0].replace('</h' + match[1] + '>',
+            f'<button type="button" class="copy-section" data-copy-section="{match[2]}" aria-label="{label}">复制本节</button></h{match[1]}>')
+
+    body = re.sub(r'<h([2-6])\b[^>]*\bid="([^"]+)"[^>]*>(.*?)</h\1>', button, rendered_body, flags=re.S)
+    data = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+    return body + '<p class="copy-status" role="status" aria-live="polite"></p><script type="application/json" class="section-copy-data">' + data + '</script>'
+
+
 def build_readings(root, catalog):
     root = Path(root).resolve()
     indexes = {}
@@ -140,6 +212,9 @@ def build_readings(root, catalog):
                 navigation = '<details class="course-outline" open><summary>全部章节</summary><ol>' + ''.join(entries) + '</ol></details>'
             else:
                 navigation = '<details class="outline" open><summary>目录</summary>' + page_toc + '</details>'
+            search_body = body
+            if item['id'] == 'nju-gense-2026':
+                body = copy_sections(source.read_text(encoding='utf-8'), body, material, source, source_routes, item['url'])
             position = reading_order.index(number)
             prev = (f'<a rel="prev" href="{relative_url(route, routes[reading_order[position-1]])}">'
                     f'← {html.escape(pages[reading_order[position-1]]["title"])}</a>') if position else '<span></span>'
@@ -161,7 +236,7 @@ def build_readings(root, catalog):
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_text(rendered, encoding='utf-8')
             text = Text()
-            text.feed(body)
+            text.feed(search_body)
             documents.append({'route': public_route, 'title': page['title'],
                               'text': ' '.join(text.parts)})
         (output / 'search.json').write_text(json.dumps(documents, ensure_ascii=False), encoding='utf-8')

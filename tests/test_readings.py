@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 import shutil
 import sys
@@ -98,6 +99,40 @@ class ReadingBuildTests(unittest.TestCase):
         html = (self.root / 'docs/read/example/index.html').read_text()
         self.assertIn('<ol start="2">', html)
         self.assertIn('<ol start="3">', html)
+
+    def test_course_copy_includes_nested_sections_and_keeps_code_exact(self):
+        renamed = self.material.with_name('nju-gense-2026')
+        self.material.rename(renamed)
+        self.material = renamed
+        self.catalog = [{'id': 'nju-gense-2026', 'url': 'https://example.com/read/course/'}]
+        self.manifest([{'id': '04', 'title': '课程', 'markdown': 'content/04.md'}], 'course')
+        manifest = self.material / 'reading.json'
+        data = json.loads(manifest.read_text())
+        data['id'] = 'nju-gense-2026'
+        manifest.write_text(json.dumps(data))
+        (self.material / 'assets').mkdir()
+        (self.material / 'assets/figure.svg').write_text('<svg/>')
+        (self.material / 'content/04.md').write_text(
+            '# 本课\n\n## 会成长的个人助手 {#assistant}\n\n*原片 00:00–06:37*\n{: #time}\n\n'
+            '- 第一点\n\n![图](../assets/figure.svg)\n\n### 代码 {#code}\n\n'
+            '```html\n## 代码中的标题\n{: #literal}\n<!-- SOURCE literal -->\n</script>\n```\n\n'
+            '## 下一节 {#next}\n\n下一节正文。')
+        indexes = build_readings(self.root, self.catalog)
+        html = (self.root / 'docs/read/nju-gense-2026/index.html').read_text()
+        raw = re.search(r'class="section-copy-data">(.*?)</script>', html, re.S)[1]
+        payload = json.loads(raw)
+        self.assertEqual(set(payload), {'assistant', 'code', 'next'})
+        self.assertIn('## 会成长的个人助手\n', payload['assistant'])
+        self.assertIn('*原片 00:00–06:37*', payload['assistant'])
+        self.assertNotIn('{: #time}', payload['assistant'])
+        self.assertIn('https://example.com/read/course/assets/figure.svg', payload['assistant'])
+        self.assertIn('### 代码', payload['assistant'])
+        self.assertIn('## 代码中的标题\n{: #literal}\n<!-- SOURCE literal -->\n</script>', payload['code'])
+        self.assertNotIn('下一节正文', payload['assistant'])
+        self.assertNotIn('会成长', payload['code'])
+        self.assertNotIn('</script>', raw)
+        self.assertEqual(html.count('class="copy-section"'), 3)
+        self.assertNotIn('复制本节', indexes['nju-gense-2026'][0]['text'])
 
 
 if __name__ == '__main__':
