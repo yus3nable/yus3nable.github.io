@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "callback-mental-model",
+  "title": "理解回调 从调用方向到异步业务与 IO 线程",
+  "description": "从飞书事件通知出发，理解调用方向、Hook、同步与异步回调，以及 IO 线程和业务处理的分工。",
+  "kind": "文章",
+  "format": "text",
+  "language": "zh",
+  "source": {
+    "type": "text",
+    "identity": "gemini:c3edf405b66d8fef"
+  },
+  "pages": [
+    {
+      "id": "001",
+      "unit_id": "article",
+      "title": "理解回调 从调用方向到异步业务与 IO 线程",
+      "markdown": "content/001.md"
+    }
+  ]
+}

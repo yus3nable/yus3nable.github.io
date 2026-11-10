@@ -1,6 +1,6 @@
 {
-  "collections": 9,
-  "search_documents": 1612,
+  "collections": 10,
+  "search_documents": 1613,
   "documents_by_collection": {
     "nju-os-reading": 942,
     "nju-gense-2026": 11,
@@ -10,6 +10,7 @@
     "bv1a5sf6neqv": 1,
     "learning-compression-engineering": 1,
     "a-philosophy-of-software-design": 28,
-    "database-system-concepts-7e": 45
+    "database-system-concepts-7e": 45,
+    "callback-mental-model": 1
   }
 }
