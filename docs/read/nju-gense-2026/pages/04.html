@@ -8,10 +8,10 @@
   <link rel="canonical" href="https://yus3nable.github.io/read/nju-gense-2026/pages/04.html">
   <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
   <meta name="theme-color" content="#faf9f5">
-  <script src="../../../assets/theme.js?v=1794326744854481215"></script>
-  <link rel="stylesheet" href="../../../assets/reader.css?v=1794326744854481215">
-  <link rel="stylesheet" href="../../../assets/theme.css?v=1794326744854481215">
-  <script defer src="../../../assets/reader.js?v=1794326744854481215"></script>
+  <script src="../../../assets/theme.js?v=1794368222040350840"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1794368222040350840">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1794368222040350840">
+  <script defer src="../../../assets/reader.js?v=1794368222040350840"></script>
 </head>
 <body>
   <header class="top">
@@ -37,7 +37,7 @@
       <p class="meta">课程</p>
       <article class="prose" data-material-id="nju-gense-2026" data-page-id="04"><h1 id="04-2">04 · 软件仓库管理 (2)</h1>
 <p>南京大学 · 蒋炎岩 · 2026 · <a href="https://www.bilibili.com/video/BV1Q6en6NEUo/">原视频</a></p>
-<h2 id="l04-src-001">会成长的个人助手<button type="button" class="copy-section" data-copy-section="l04-src-001" aria-label="复制“会成长的个人助手”小节">复制本节</button></h2>
+<h2 id="l04-src-001">会成长的个人助手<button type="button" class="copy-section" data-copy-section="l04-src-001" aria-label="复制“会成长的个人助手”小节" title="复制“会成长的个人助手”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-002"><em>原片 00:00:00–00:06:37</em></p>
 <p id="l04-src-003">这周继续讲版本管理。我已经发布第一个作业，仍按此前约定自愿选做，最终会验收。若学校要求提交成绩，可能让大家提交作品链接，再由我的机器人辅助评分。</p>
 <p id="l04-src-004">第一个 lab 叫“会成长的个人助手”。实现方式不限，鼓励大家用 vibe coding 完成。今天也会留时间现场尝试，看看直接让模型开发会遇到什么问题。</p>
@@ -53,7 +53,7 @@
 <p id="l04-src-016"><em>图 3：01:15，课程页《实验 (1)：会成长的个人助手》的实验要求。五项是个人数据库、持续关联 smail、办理 ehall 事务、手机端联动、能力组合。</em></p>
 <p id="l04-src-017">这些任务看起来都在 AI 能力范围内，但直接把要求交给模型，它会自行作出许多设计决定。随着功能增加，维护可能越来越困难，最后陷入焦油坑：不断消耗 token 修补，直到决定重做或退回早期版本。让大家经历这种过程，也是实验的目的。</p>
 <p id="l04-src-019">下一个 lab 会紧密关联这次的助手：现有功能已经可用时，再加入一个与多处关联、甚至存在冲突的新需求。改动可能让原有设计的问题暴露出来。如果直接删掉重做，就错过了理解软件演化的机会。</p>
-<h2 id="l04-src-021">文件装得下什么<button type="button" class="copy-section" data-copy-section="l04-src-021" aria-label="复制“文件装得下什么”小节">复制本节</button></h2>
+<h2 id="l04-src-021">文件装得下什么<button type="button" class="copy-section" data-copy-section="l04-src-021" aria-label="复制“文件装得下什么”小节" title="复制“文件装得下什么”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-022"><em>原片 00:06:37–00:16:12</em></p>
 <p id="l04-src-023">回顾一下，项目是文件的集合，保存意图、设计和实现等内容。我不喜欢过长的 AI README；它应该清楚说明初衷、产品效果、少量截图和重要设计。</p>
 <p id="l04-src-024">假设你有一个创业想法，要说服技术伙伴加入，一份简明 README 可以先讲清最初的 intent。至于数据库、语言、项目结构、模块接口，以及用户从一到一亿时怎样扩展，可以由具备相应能力的人继续设计。这些逐渐形成 spec，再落实为代码。它们现在通常都存在同一个项目目录中。</p>
@@ -78,7 +78,7 @@
 <p id="l04-src-046">修改后，<code>repo.db</code> 从 v0 进入 v1，相关实现、测试和文档一同更新，从一个一致状态走向另一个一致状态。这是我设想的软件生产方式，人可能不再逐行查看代码。</p>
 <p id="l04-src-047">Cursor 等 IDE 已经朝 agent 交互移动。它默认打开类似聊天的 agent mode，我有时并不喜欢，因为仍习惯传统 IDE，想直接控制代码。但未来也许会更多采用这种方式。</p>
 <p id="l04-src-048">这种未来会让学生焦虑：既然系统可能很快改变，过去学的知识还有用吗？刚才的设计恰好借用了数据库视图、实体与关系，以及 Git 的增量演化经验。更强模型也许能一次完成巨大的变更，但如何做到还不清楚；至少初期，仍需要这些积累下来的概念与方法。</p>
-<h2 id="l04-src-049">同学说，rebase 用不上<button type="button" class="copy-section" data-copy-section="l04-src-049" aria-label="复制“同学说，rebase 用不上”小节">复制本节</button></h2>
+<h2 id="l04-src-049">同学说，rebase 用不上<button type="button" class="copy-section" data-copy-section="l04-src-049" aria-label="复制“同学说，rebase 用不上”小节" title="复制“同学说，rebase 用不上”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-050"><em>原片 00:16:12–00:22:55</em></p>
 <p id="l04-src-051">上节课提到面试者不了解 rebase，有位可能已经毕业的同学提出：学生主要独立做作业，很少协作，自然缺少 merge、rebase 的场景。这个解释合理，课程作业确实可能用不到。</p>
 <p id="l04-src-052"><a href="../assets/04-08.jpeg"><img alt="图 8" src="../assets/04-08.jpeg" /></a></p>
@@ -88,14 +88,14 @@
 <p id="l04-src-056"><a href="../assets/04-09.jpeg"><img alt="图 9" src="../assets/04-09.jpeg" /></a></p>
 <p id="l04-src-057"><em>图 9：22:26，《同学产生的疑问》。页上贴着关于 git rebase 0/10 的留言，以及讲者的回复：互联网、开发者社区铺天盖地都是文档。下面写着典型的“学生思维”，学习的目的是形成自己的理解。页码 6/6。</em></p>
 <p id="l04-src-058">我担心 AI 会使部分基础智力劳动失去市场价值。目前可能还未直接影响各位计算机专业学生，但很多从业者面临替代压力。我读过关于会计行业规模的报道，具体人数记不清，也许是千万级；行业顶端与基础岗位的处境并不一样。学习操作系统、编译器和软件工程里的经典知识，最终应形成自己的理解。</p>
-<h2 id="l04-src-060">我们想搬的是修改<button type="button" class="copy-section" data-copy-section="l04-src-060" aria-label="复制“我们想搬的是修改”小节">复制本节</button></h2>
+<h2 id="l04-src-060">我们想搬的是修改<button type="button" class="copy-section" data-copy-section="l04-src-060" aria-label="复制“我们想搬的是修改”小节" title="复制“我们想搬的是修改”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-061"><em>原片 00:22:55–00:29:10</em></p>
 <p id="l04-src-062">回到版本管理。Git 保存目录快照，两名开发者可以分别提交。合并两条路线时，可以创建一个带两个 parent 的 merge commit，保留两边的历史和合并结果。</p>
 <p id="l04-src-063">合并也会影响修改归属的理解。例如 A 合并 B 的代码，没有冲突的部分通常还能追溯原提交；冲突处理后新写出的结果，则由合并者负责。判断某段改动由谁作出，可能因此变得复杂。</p>
 <p id="l04-src-064">Rebase 尝试把一条路线上的修改依次移到新的起点。假设 A 改文档、加测试，B 加功能、加测试，可以先尝试把 B 的功能接到 A 之后，再重放 B 的测试。若修改兼容，就得到线性历史；若双方改了同一处，或测试与功能不兼容，就需要处理冲突。</p>
 <p id="l04-src-065">Rebase 过程中可能多次冲突，每次都要理解当前状态并解决，可以请 agent 解释。它还会产生新提交：原提交基于旧起点，新提交基于新起点，ID 随之改变。普通 merge 保留已有提交再新增合并点，rebase 则重写这段历史。</p>
 <p id="l04-src-066">我们常希望操作的是“修改”，把这项或那项修改移过去。Git 主要用 commit 与 parent 之间的差异来表达 change，没有独立的 change 对象。若把 change 也作为一等公民，会产生怎样的新设计？</p>
-<h2 id="l04-src-067">Change 是一等公民<button type="button" class="copy-section" data-copy-section="l04-src-067" aria-label="复制“Change 是一等公民”小节">复制本节</button></h2>
+<h2 id="l04-src-067">Change 是一等公民<button type="button" class="copy-section" data-copy-section="l04-src-067" aria-label="复制“Change 是一等公民”小节" title="复制“Change 是一等公民”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-068"><em>原片 00:29:10–00:36:51</em></p>
 <p id="l04-src-069">Jujutsu 可以使用 Git 后端，并引入稳定的 change 身份。Rebase 改变 commit ID 时，change ID 仍可保留；冲突也能被记录下来，让整个重放先继续完成，再统一解决。底层仍能与 Git 协作，但用户对修改的理解更连续。</p>
 <p id="l04-src-070"><a href="../assets/04-10.jpeg"><img alt="图 10" src="../assets/04-10.jpeg" /></a></p>
@@ -112,7 +112,7 @@
 <p id="l04-src-082"><em>图 13：34:54，《这就是为什么 AI Native 能淘汰老登》。已经形成的肌肉记忆很难再训一套。同学们的方向是反过来的：先理解正确的设计，再回望历史。页上还写着 Einstellung effect，2008 年的眼动实验。页码 4/8。</em></p>
 <p id="l04-src-083">可以先理解新工具试图解决的问题，再回头看历史。Git 解决了当时许多问题，持久化快照模型很有价值；后来 rebase 的使用范围扩大，又暴露了 change 身份等需求。Jujutsu 沿着这些需求继续设计。工具是否合适，要放回它面对的问题中判断。</p>
 <p id="l04-src-084">这门课还要再往前问：为 agent 设计版本系统，应该突破什么限制？Agent 已经很擅长操作 Git、处理 rebase，单纯改善人类操作体验，对它的帮助可能有限。</p>
-<h2 id="l04-src-085">人是单线程的，Agent 不是<button type="button" class="copy-section" data-copy-section="l04-src-085" aria-label="复制“人是单线程的，Agent 不是”小节">复制本节</button></h2>
+<h2 id="l04-src-085">人是单线程的，Agent 不是<button type="button" class="copy-section" data-copy-section="l04-src-085" aria-label="复制“人是单线程的，Agent 不是”小节" title="复制“人是单线程的，Agent 不是”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-086"><em>原片 00:36:51–00:51:09</em></p>
 <p id="l04-src-087">过去的版本系统主要面向人。讲并发时，我常把线程比作一个人：读取共享变量，再根据读到的值写入，是不同操作；要把读改写合为不可分割的一步，需要原子操作。</p>
 <p id="l04-src-088">可以想象一个人看清目标位置后，闭眼扔粉笔。观察与行动之间，目标可能已经移动。线程也可能在读取后被中断、切换出去，恢复时寄存器里仍是旧值。根据旧值写回，就可能出错。共享内存里的并发需要处理这种时间差。</p>
@@ -129,7 +129,7 @@
 <p id="l04-src-102">主仓库的 <code>.git</code> 通常是目录，包含 objects、logs 等内容；关联 worktree 里的 <code>.git</code> 则是文本文件，通过 gitdir 指向相应管理目录。每个工作树有自己的 HEAD、index、logs，又共享仓库对象。这样，提交在本地可以互相访问，不必像独立虚拟机中的仓库那样来回 push、pull。冲突仍需要合并处理，但工作环境更轻量。</p>
 <p id="l04-src-103"><a href="../assets/04-15.jpeg"><img alt="图 15" src="../assets/04-15.jpeg" /></a></p>
 <p id="l04-src-104"><em>图 15：48:29，现场终端。左边 slave-a 的说明写着分支 slave-a、主仓库在 /tmp/fancy-project，另有 worktree slave-b；一次提交写着 add 5000+ lines of generated filler。右边是 jyy 的目录，README.md 和 slop.py。底栏是 tmux。</em></p>
-<h2 id="l04-src-105">还要不要 blame，要不要先上锁<button type="button" class="copy-section" data-copy-section="l04-src-105" aria-label="复制“还要不要 blame，要不要先上锁”小节">复制本节</button></h2>
+<h2 id="l04-src-105">还要不要 blame，要不要先上锁<button type="button" class="copy-section" data-copy-section="l04-src-105" aria-label="复制“还要不要 blame，要不要先上锁”小节" title="复制“还要不要 blame，要不要先上锁”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-106"><em>原片 00:51:09–01:03:14</em></p>
 <p id="l04-src-107">进一步思考 agent team 时，要回到版本控制的动机。人的生产速度有限，沟通也有成本：即使双方都很聪明，也未必能迅速解释清楚一个数学问题。团队越大，协调越复杂，一百人的产出通常达不到十人团队的十倍，有两三倍也可能已经不错。</p>
 <p id="l04-src-108"><a href="../assets/04-16.jpeg"><img alt="图 16" src="../assets/04-16.jpeg" /></a></p>
@@ -151,7 +151,7 @@
 <p id="l04-src-124"><em>图 19：63:34，《学〈操作系统〉、〈数据库〉有用了吧》。锁保护的是一件事依赖的共享状态。约定是上锁、读最新状态、修改、验证并留下可恢复的快照、解锁。页上写着，这就是他喜欢上课的原因。页码 6/6。</em></p>
 <p id="l04-src-125">这也是我喜欢讲课的原因。备课迫使我重新检查熟悉的设计，并把上层思想用大家能理解的逻辑讲出来。我未必每次讲得好，也欢迎借助 AI 再核对和理解。</p>
 <p id="l04-src-126">关于版本管理，我们从历史动机讲到 Git，再讨论了未来可能的设计。</p>
-<h2 id="l04-src-127">斩杀线还没到团队管理<button type="button" class="copy-section" data-copy-section="l04-src-127" aria-label="复制“斩杀线还没到团队管理”小节">复制本节</button></h2>
+<h2 id="l04-src-127">斩杀线还没到团队管理<button type="button" class="copy-section" data-copy-section="l04-src-127" aria-label="复制“斩杀线还没到团队管理”小节" title="复制“斩杀线还没到团队管理”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-128"><em>原片 01:03:14–01:08:00</em></p>
 <p id="l04-src-129">版本控制只是工具，更难的是组织任务和管理进度。目前，一句话还难以直接生成微信那样的高质量产品。只要整体产品设计和团队管理仍需要人，软件工程就还有要解决的问题。</p>
 <p id="l04-src-130">模型可能继续变强、更小、更快，也许有一天会改变这个判断。但今天，把大产品分为可协作的任务仍很困难。人数增加，潜在沟通关系按平方级增长。能把百人团队组织为若干小组，并让各组成果最终拼成产品的负责人很稀缺，带好小团队也不容易。《人月神话》讨论的正是这些问题。</p>
@@ -164,7 +164,7 @@
 <p id="l04-src-137">版本控制凝结了长期工程经验，但工具本身不会替你完成管理。需要在使用中形成自己的判断。</p>
 <p id="l04-src-138"><a href="../assets/04-22.jpeg"><img alt="图 22" src="../assets/04-22.jpeg" /></a></p>
 <p id="l04-src-139"><em>图 22：67:19，《版本控制留给我们的启发》。项目可以不仅是当前状态。从共同起点分出探索 A 和探索 B，失败尝试也留下教训，再汇成整合版本。技术会过时，first principles 会留下。页码 3/5。</em></p>
-<h2 id="l04-src-140">小朋友的汉诺塔，也可以是一段历史<button type="button" class="copy-section" data-copy-section="l04-src-140" aria-label="复制“小朋友的汉诺塔，也可以是一段历史”小节">复制本节</button></h2>
+<h2 id="l04-src-140">小朋友的汉诺塔，也可以是一段历史<button type="button" class="copy-section" data-copy-section="l04-src-140" aria-label="复制“小朋友的汉诺塔，也可以是一段历史”小节" title="复制“小朋友的汉诺塔，也可以是一段历史”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-141"><em>原片 01:08:00–01:18:13</em></p>
 <p id="l04-src-142">再看一个看似无关的例子：只能沿规定方向移动的汉诺塔。普通解法中，大盘可能直接移到目标柱；加入单向约束后，这一步未必允许，必须安排中间移动。即使盘数不大，要输出完整方案或步数，也需要理解递归关系。</p>
 <p id="l04-src-143">思考时可以先看最大盘。为了让它沿允许方向逐步到达目标，要先把小盘移开，再移动最大盘，然后重新安排小盘。最大盘需要走的方向决定了中间几个子问题。</p>
@@ -183,7 +183,7 @@
 <p id="l04-src-157"><em>图 25：76:00，Pico Playground 里的 Tower of Hanoi。三个盘子还叠在 A，代码按单向规则走 next_of。</em></p>
 <p id="l04-src-158"><a href="../assets/04-26.jpeg"><img alt="图 26" src="../assets/04-26.jpeg" /></a></p>
 <p id="l04-src-159"><em>图 26：78:37，汉诺塔程序运行到违规步骤时显示红色叉号，下面的时间轴保留了函数调用和出错位置。</em></p>
-<h2 id="l04-src-160">你就是包工头，现在就开干<button type="button" class="copy-section" data-copy-section="l04-src-160" aria-label="复制“你就是包工头，现在就开干”小节">复制本节</button></h2>
+<h2 id="l04-src-160">你就是包工头，现在就开干<button type="button" class="copy-section" data-copy-section="l04-src-160" aria-label="复制“你就是包工头，现在就开干”小节" title="复制“你就是包工头，现在就开干”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-161"><em>原片 01:18:13–01:29:39</em></p>
 <p id="l04-src-162">现在现场开始做个人助手。项目早期，需求还没对齐，先与一个能力较强的 agent 多轮讨论更合适。我没有提前演练，直接打开课程作业，观察它怎样响应。</p>
 <p id="l04-src-163"><a href="../assets/04-27.jpeg"><img alt="图 27" src="../assets/04-27.jpeg" /></a></p>
@@ -198,7 +198,7 @@
 <p id="l04-src-172">这次演示消耗了一些 token。参与 DeepSeek Harness 内测获得的一千元额度还没用完，足够继续尝试。开始项目时仍应先建立仓库，再明确下一小步要验证什么，逐步推进。</p>
 <p id="l04-src-173">从零开始容易生成难以维护的东西，在成熟项目中完成局部任务却可能更顺利。设计架构时，我会问：当未来需求明显变化，这套方法能否承受？</p>
 <p id="l04-src-174">教学助手将来可能改成文字、图像或交互式指导，合作方式也可能变化。希望架构用尽量少的修改应对这些变化。理解现有操作系统、数据库为什么这样设计很重要，软件工程还要进一步考虑未来需求。</p>
-<h2 id="l04-src-175">记住现在，记住历史，记住教训<button type="button" class="copy-section" data-copy-section="l04-src-175" aria-label="复制“记住现在，记住历史，记住教训”小节">复制本节</button></h2>
+<h2 id="l04-src-175">记住现在，记住历史，记住教训<button type="button" class="copy-section" data-copy-section="l04-src-175" aria-label="复制“记住现在，记住历史，记住教训”小节" title="复制“记住现在，记住历史，记住教训”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l04-src-176"><em>原片 01:29:39–01:38:29</em></p>
 <p id="l04-src-177">版本管理要记住现在、历史和教训。仓库保存当前材料；历史让删掉或放弃的内容可以恢复；失败分支和后续选择说明项目为什么走到这里。这些经验能帮助我们决定下一步，而不只是保留最终代码。</p>
 <p id="l04-src-178">演示里的助手已经实现了不少条目，例如奖学金申请、退课，还生成一次提交。它报告了 HTTP 手机服务、Pi 集成和部分尚未接通的邮箱能力，并划分入口、编排、能力、数据等层。我没有继续逐项审查，但它已经很像一个具体业务系统，可能把早期方向锁得太死。</p>

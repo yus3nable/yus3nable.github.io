@@ -111,8 +111,14 @@ def copy_sections(source_text, rendered_body, material, source, source_routes, b
         title = Text()
         title.feed(match[3])
         label = html.escape('复制“' + ''.join(title.parts) + '”小节', quote=True)
+        icon = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
+                'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+                '<g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/>'
+                '<path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g>'
+                '<path class="copy-success" d="m5 12 4 4L19 6"/>'
+                '<path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg>')
         return match[0].replace('</h' + match[1] + '>',
-            f'<button type="button" class="copy-section" data-copy-section="{match[2]}" aria-label="{label}">复制本节</button></h{match[1]}>')
+            f'<button type="button" class="copy-section" data-copy-section="{match[2]}" aria-label="{label}" title="{label}">{icon}</button></h{match[1]}>')
 
     body = re.sub(r'<h([2-6])\b[^>]*\bid="([^"]+)"[^>]*>(.*?)</h\1>', button, rendered_body, flags=re.S)
     data = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')

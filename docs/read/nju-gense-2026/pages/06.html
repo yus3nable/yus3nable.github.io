@@ -8,10 +8,10 @@
   <link rel="canonical" href="https://yus3nable.github.io/read/nju-gense-2026/pages/06.html">
   <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
   <meta name="theme-color" content="#faf9f5">
-  <script src="../../../assets/theme.js?v=1794326744854481215"></script>
-  <link rel="stylesheet" href="../../../assets/reader.css?v=1794326744854481215">
-  <link rel="stylesheet" href="../../../assets/theme.css?v=1794326744854481215">
-  <script defer src="../../../assets/reader.js?v=1794326744854481215"></script>
+  <script src="../../../assets/theme.js?v=1794368222040350840"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1794368222040350840">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1794368222040350840">
+  <script defer src="../../../assets/reader.js?v=1794368222040350840"></script>
 </head>
 <body>
   <header class="top">
@@ -37,7 +37,7 @@
       <p class="meta">课程</p>
       <article class="prose" data-material-id="nju-gense-2026" data-page-id="06"><h1 id="06-1">06 · 需求和架构 (1)</h1>
 <p>南京大学 · 蒋炎岩 · 2026 · <a href="https://www.bilibili.com/video/BV1Rch76WEfQ/">原视频</a></p>
-<h2 id="l06-src-001">后面发现错了，会把前面染掉<button type="button" class="copy-section" data-copy-section="l06-src-001" aria-label="复制“后面发现错了，会把前面染掉”小节">复制本节</button></h2>
+<h2 id="l06-src-001">后面发现错了，会把前面染掉<button type="button" class="copy-section" data-copy-section="l06-src-001" aria-label="复制“后面发现错了，会把前面染掉”小节" title="复制“后面发现错了，会把前面染掉”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-002"><em>原片 00:00:00–00:03:58</em></p>
 <p id="l06-src-003">上一节回顾了软件工程的起源：软件危机让人们意识到，需要工程化的方法解决开发中的问题，也读了 Royce 的论文。从 intent 到 spec，再到 implementation，软件逐渐形成；实现以后还要维护，生命周期并未结束。这些阶段连接起来，就像一个向下流动的瀑布。</p>
 <p id="l06-src-004">需求阶段形成的认识逐渐进入 specification，建立起依赖；实现阶段又产生模块、函数、代码、测试等 artifact。它们与前面的产物存在直接或间接的 data dependency，交织成网。理解这张网，是理解软件工程的一个起点，Royce 批评的开发模式也与它有关。</p>
@@ -47,7 +47,7 @@
 <p id="l06-src-008"><em>图 2：00:02，《上一讲的三个关键词》：Intent-Spec-Impl Gap，瀑布模型，Data-Dependency Graph。需求分析、系统设计、代码实现各有方法和工具，UML 试图对齐全世界。</em></p>
 <p id="l06-src-009">如果到后期才发现问题，向前追溯，可能是需求或设计出了错。依赖它的下游部分也会被 taint，失去有效性，重做成本很高。软件工程研究各阶段怎样降低这种风险：需求与设计时使用什么方法，怎样用 checklist、怎样管理团队，编码时怎样测试、自动分析。这些内容展开，就是整个软件工程领域。</p>
 <p id="l06-src-010">pre-AI 时代有一个值得了解的尝试。人和人难以对齐，如果只留下代码、不写文档，出错后甚至不知道该追溯到哪一次决定，于是有了 traceability，可追踪性。理想情况下，每个测试、每段代码都能关联到设计，让人知道修改会影响谁、设计变化需要调整哪些测试。再用带明确语义的结构化语言表示这些关系，就有了 UML 这样的探索，希望对齐不同人的软件工程实践。</p>
-<h2 id="l06-src-012">椅背是软的，软件不是<button type="button" class="copy-section" data-copy-section="l06-src-012" aria-label="复制“椅背是软的，软件不是”小节">复制本节</button></h2>
+<h2 id="l06-src-012">椅背是软的，软件不是<button type="button" class="copy-section" data-copy-section="l06-src-012" aria-label="复制“椅背是软的，软件不是”小节" title="复制“椅背是软的，软件不是”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-013"><em>原片 00:03:58–00:08:40</em></p>
 <p id="l06-src-014">软件工程还有一个困难：软件“不软”。教室里的椅背有弹性，靠下去会变形，起来后弹回，下次还能坐。软件却是纯粹的逻辑制品，程序有形式语义，细微差错就可能破坏行为。写程序时，大家通常没有考虑过内存里的一个 bit 翻转以后，它还能不能正确运行。</p>
 <p id="l06-src-015">例如从 stdin 读入 n，再循环读取 n 个数组元素。输入原本是 n = 1，如果程序运行在卫星上，宇宙射线使这个 unsigned integer 的最高位变成 1，n 就突然成了很大的数。程序可能不停读输入，没有输入就等待、hang 住，也可能在读了 100 或 1000 个数以后发生 memory error。</p>
@@ -55,7 +55,7 @@
 <p id="l06-src-017"><a href="../assets/06-03.jpeg"><img alt="图 3" src="../assets/06-03.jpeg" /></a></p>
 <p id="l06-src-018"><em>图 3：04:30，《“软件工程”的基本观察：软件不软》。需求难对齐，方案难选择，实现与返工贵。客户只会自然语言；满足条件的方案很多，各有优劣；返工成本高，也影响团队士气。页码 2/4。</em></p>
 <p id="l06-src-019">计算机专业通常都要上软件工程课，但虽然这门学科覆盖整个生命周期，学习却被迫从编码开始。不理解代码，没有经历开发中的困难，很难判断一个产品能否实现、需要多少成本，也很难做好产品经理。过去往往先学基础、较老、仍有人使用的语言，再逐渐理解已有方案如何失败、新语言为什么出现，一点点往上走。</p>
-<h2 id="l06-src-021">几个字，MVP 就走向另一边<button type="button" class="copy-section" data-copy-section="l06-src-021" aria-label="复制“几个字，MVP 就走向另一边”小节">复制本节</button></h2>
+<h2 id="l06-src-021">几个字，MVP 就走向另一边<button type="button" class="copy-section" data-copy-section="l06-src-021" aria-label="复制“几个字，MVP 就走向另一边”小节" title="复制“几个字，MVP 就走向另一边”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-022"><em>原片 00:08:40–00:15:03</em></p>
 <p id="l06-src-023">今天的主题是需求、产品与架构，主要处于 intent 到 spec 的阶段，也是系统从零开始时重要的方向选择。前面先讲版本管理，因为做 lab 或新项目都要从空仓库出发。接下来要决定软件往哪里走，就像船先决定航向；最初的选择会深刻影响后续开发。</p>
 <p id="l06-src-024">需求、产品、架构很难定量研究，今天只能借例子来讲。教材常列出需求要做什么、产品要满足什么。南京大学有很多软件工程研究者，也号称软件工程世界第一；但若统计计算机软件方向的论文，大部分仍集中在编码与 implementation 相关问题上。</p>
@@ -68,7 +68,7 @@
 <p id="l06-src-030">我们通常都不愿花精力研究即将丢弃的东西，所以 MVP 应选择重要功能，先做出能运行的版本。但今天的 AI 未必主动从需求、产品设计和架构角度考虑，往往需要 prompt 明确指出。哪怕只多几个字，结果都会不同。同一个 coding agent 或 lab1 随身 agent，要求 client-server 架构，或要求 CLI，功能可能接近，实现方向却差很多。CLI 可能引入类似 Claude Code 使用的 JavaScript 命令行库；client-server 可能先设计存储、选数据库。一旦 db.ts 写出来，它就进入 agent 的上下文，后面的需求都会带着这段历史继续发展。</p>
 <p id="l06-src-031">这涉及 technical debt，技术债。做决定时就可能背上债务，而做 MVP 时未必知道这个决定好不好。决定来自需求：你想做学习助手，还是已经进科研组，需要帮助读论文，软件的走向会不同。产品设计也一样。最初只供自己使用的工具，可以贴合自己的知识和偏好；换一个人，可能就不习惯这套工作方式。</p>
 <p id="l06-src-032">还需要考虑软件以后会变成什么样，所以我会用两讲讨论需求和架构。刚才现场也出了故障：系统 UI 正常，OBS 仍在推流，但键盘、鼠标都失效，插入新鼠标也没用。我让 AI 查日志诊断，还不确定能否找到原因。这提醒我们，软件需要足够的日志。至少我观察到，如果不明确告诉 AI，它可能生成完全没有日志的系统，这也是留下的技术债。接下来回到需求工程。</p>
-<h2 id="l06-src-034">教务系统里的需求一层层叠上去<button type="button" class="copy-section" data-copy-section="l06-src-034" aria-label="复制“教务系统里的需求一层层叠上去”小节">复制本节</button></h2>
+<h2 id="l06-src-034">教务系统里的需求一层层叠上去<button type="button" class="copy-section" data-copy-section="l06-src-034" aria-label="复制“教务系统里的需求一层层叠上去”小节" title="复制“教务系统里的需求一层层叠上去”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-035"><em>原片 00:15:03–00:32:28</em></p>
 <p id="l06-src-036">需求工程过去很难讲。学生通常不会面对真实客户，从入门到毕业的能力增长，也未必足以独立承接完整系统。AI 之前，只有少量开发者经过几年开源社区积累，才成为有付费用户的独立开发者。现在独立开发者数量猛增，倒是付费用户开始瑟瑟发抖。</p>
 <p id="l06-src-037"><a href="../assets/06-06.jpeg"><img alt="图 6" src="../assets/06-06.jpeg" /></a></p>
@@ -95,7 +95,7 @@
 <p id="l06-src-059">接着，我让 GPT 开一个 subagent，不看任何其他教务系统，只凭需求说明书实现演示系统。做出的版本与刚才的教师端很像，让人突然有信心觉得，也许真能接下 20 万的合同。演示里可以返回教学任务、管理教材、修改记录并保存，也能查看学生名单。它生成的名字很文雅，有自己的偏好。缺课次数输入负数时被限制，但另一条超过总上课次数的记录仍保存了，这同样不合理。即使如此，当需求足够清楚时，AI 已能完成大量编码、追踪与测试工作，需求文档的价值就显现出来了。</p>
 <p id="l06-src-060"><a href="../assets/06-10.jpeg"><img alt="图 10" src="../assets/06-10.jpeg" /></a></p>
 <p id="l06-src-061"><em>图 10：30:31，演示教师工作台“南雍教学”（Faculty Workspace）。林知行是计算机学院的演示账号，概览列出本学期课程 02 门、授课学生 18 人、待审核 04 项、在办申请 01 项。</em></p>
-<h2 id="l06-src-063">需求一列出来，债就背上了<button type="button" class="copy-section" data-copy-section="l06-src-063" aria-label="复制“需求一列出来，债就背上了”小节">复制本节</button></h2>
+<h2 id="l06-src-063">需求一列出来，债就背上了<button type="button" class="copy-section" data-copy-section="l06-src-063" aria-label="复制“需求一列出来，债就背上了”小节" title="复制“需求一列出来，债就背上了”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-064"><em>原片 00:32:28–00:42:27</em></p>
 <p id="l06-src-065">完整教务系统覆盖从入学到毕业的流程，还涉及权限、规则版本、数据同步、操作留痕。需求工程要通过持续沟通，把客户想要的东西弄清楚，小到是否显示当前学期、哪里放修改按钮，都需要对齐。用户与开发者可能很不一样：不能因为自己是 geek，就假设所有人都会编程。比如一位 53 岁、再过两年退休的教务老师，她上大学时可能没用过电脑。系统要同时服务她、服务我，也服务年轻人，需要同理心。怎样获得完整需求表，是另一个值得专门讨论的问题；这门课更关心，当系统按刚才那样不断增长的功能列表建设时，已经开始陷入维护困境。</p>
 <p id="l06-src-066"><a href="../assets/06-11.jpeg"><img alt="图 11" src="../assets/06-11.jpeg" /></a></p>
@@ -114,7 +114,7 @@
 <p id="l06-src-080"><a href="../assets/06-14.jpeg"><img alt="图 14" src="../assets/06-14.jpeg" /></a></p>
 <p id="l06-src-081"><em>图 14：40:41，《勉强实现需求，然后进入焦油坑》。上课第一天，绕过前端校验，把一位同学的缺课次数改为 -1。结果是教务系统所有能选出这位同学选课记录的部分全部瘫痪。页码 6/8。</em></p>
 <p id="l06-src-082">需求与产品设计可以单独开一门课，这里先通过案例理解。Agentic AI 时代做 MVP 前所未有地容易，先实现重要功能，看见产品后也更容易发现设计问题，早期返工成本低。但连续修好三版，可能让人误以为已经完全掌控系统。真实系统运行足够久，遇到计算机系改成计算机学院等原设计未考虑的变化，麻烦才会暴露。这是整个软件工程领域共同面对的问题。</p>
-<h2 id="l06-src-084">银弹没有，最小的代码也有架构<button type="button" class="copy-section" data-copy-section="l06-src-084" aria-label="复制“银弹没有，最小的代码也有架构”小节">复制本节</button></h2>
+<h2 id="l06-src-084">银弹没有，最小的代码也有架构<button type="button" class="copy-section" data-copy-section="l06-src-084" aria-label="复制“银弹没有，最小的代码也有架构”小节" title="复制“银弹没有，最小的代码也有架构”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-085"><em>原片 00:42:27–00:50:52</em></p>
 <p id="l06-src-086">There is no silver bullet。传说中普通子弹杀不死狼人，银弹可以；软件工程却没有这样的万能解法。软件要持续生存、挣钱，早期决策会不断影响后续。课程项目可以清零重做，上线系统却已经与现实世界交互，必须带着技术债继续维护。早期考虑不够长远，维护成本就可能越来越高。</p>
 <p id="l06-src-087">架构是应对这些问题的一种方式。MVP 阶段尚未纳入全部需求，就应思考第一步怎样走，才有利于系统长期生存。刚才 AI 生成的教务系统已接近小型产品原型，维护可能很困难。我们需要考虑怎样构造最小的软件，使它在需求增长和改变时仍有一定韧性。</p>
@@ -133,7 +133,7 @@
 <p id="l06-src-100"><em>图 19：01:04:45，右边是 getopt 的 man page，能看见 getopt、getopt_long，以及 POSIX 的说明。左边终端停在讲义和二维码相关的目录上。</em></p>
 <p id="l06-src-101">从这个小例子可以学到 parser 的架构模式。好的代码通常都有设计，设计背后又对应需求。需求、specification、implementation 存在于任何软件工程活动中，模块也可以有需求、架构和优雅的表达，无需等到教务系统那么大才讨论。</p>
 <p id="l06-src-102">我不喜欢只讲语法细节的“语言律师”式教学。大模型出现前，曾和学院教师讨论 C++11、14、17 的特性及用途，对方说已经讲了，但所谓讲 lambda，只是演示接收 a、b，return a + b。没有解释应用场景，学习价值有限。看到好的 README、项目或 getopt，还应继续追问背后的模式：复杂字符串被转换成简单的 parsing state，后续程序只处理状态。argv 的形式可以变化，解析机制把变化隔开，这正是抵抗需求变化的一种办法。</p>
-<h2 id="l06-src-104">同一个汉诺塔，四种放复杂性的地方<button type="button" class="copy-section" data-copy-section="l06-src-104" aria-label="复制“同一个汉诺塔，四种放复杂性的地方”小节">复制本节</button></h2>
+<h2 id="l06-src-104">同一个汉诺塔，四种放复杂性的地方<button type="button" class="copy-section" data-copy-section="l06-src-104" aria-label="复制“同一个汉诺塔，四种放复杂性的地方”小节" title="复制“同一个汉诺塔，四种放复杂性的地方”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-105"><em>原片 00:50:52–00:57:49</em></p>
 <p id="l06-src-106">先从十来行代码看架构。为什么说模型的架构能力还不够好，或说架构涉及品位？因为架构与需求相连。没有需求，架构无从评价；面向未来变化的设计，更取决于你对需求理解到了什么程度。</p>
 <p id="l06-src-107">我喜欢用非递归 Tower of Hanoi 作例子。刚开始教课时，曾问保研研究生能否写非递归汉诺塔，大家摇头，于是把它变成课堂案例。短短十来行代码，就能追问：为什么大家写不出来，困难到底在哪里？</p>
@@ -153,7 +153,7 @@
 <p id="l06-src-121"><a href="../assets/06-23.jpeg"><img alt="图 23" src="../assets/06-23.jpeg" /></a></p>
 <p id="l06-src-122"><em>图 23：56:41，《同一个汉诺塔，四种表达》。GPT-6 把复杂性放在数学规律里，DeepSeek 放在任务栈里，绿导师放在抽象机器里，搜索截图那一格是展开成多个分支。底下问：改需求时，哪些知识还能保留。</em></p>
 <p id="l06-src-123">同一个汉诺塔，复杂性被放在四个不同位置。GPT-6 跳到数学规律，DeepSeek 使用任务栈，把语料中反复出现的“递归依靠栈”实现出来；我再往外看程序语言，用形式语义解释递归与非递归。搜索到的代码则把复杂性留在多个分支里。这说明架构与抽象有关，小到十来行代码，也能看出设计者怎样理解问题、控制复杂性。</p>
-<h2 id="l06-src-125">公式太长的时候，缺的是一层中间语言<button type="button" class="copy-section" data-copy-section="l06-src-125" aria-label="复制“公式太长的时候，缺的是一层中间语言”小节">复制本节</button></h2>
+<h2 id="l06-src-125">公式太长的时候，缺的是一层中间语言<button type="button" class="copy-section" data-copy-section="l06-src-125" aria-label="复制“公式太长的时候，缺的是一层中间语言”小节" title="复制“公式太长的时候，缺的是一层中间语言”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-126"><em>原片 00:57:49–01:12:29</em></p>
 <p id="l06-src-127">再看约 2000 行的项目。架构能力从哪里来？来自学过的好设计，以及学校和社会中的积累：代码之外有客户的规律，客户之外有社会规律，再往外还有自然规律。把这些经验压缩成原则，才能在新问题里推导方案。与教材、题目之外的人交流也很重要，才会知道即将退休的教务老师怎样看系统。你想要最好的数据库、最高性能，她可能只希望字大一点、按钮别挨得太近，免得点错。这需要共情。</p>
 <p id="l06-src-128"><a href="../assets/06-24.jpeg"><img alt="图 24" src="../assets/06-24.jpeg" /></a></p>
@@ -178,7 +178,7 @@
 <p id="l06-src-147">中间语言还可以承载优化。性能不好或生成代码太长时，可以定义改写规则，把程序变成等价而高效的形式。比如循环中反复计算、结果不变的表达式，可以移到循环外，编译器能做，人或模型也能做。还可以先测量瓶颈，再依据 profile 优化，这就用上了 profile-guided optimization 的思路。以后 Excel 版本改变，只需调整一些算子的实现。算法、验证与交付被分开后，变化就有了对应的位置。这与 AI infra 的一些工作也相通，不同领域中积累的好设计值得互相学习。</p>
 <p id="l06-src-148"><a href="../assets/06-27.jpeg"><img alt="图 27" src="../assets/06-27.jpeg" /></a></p>
 <p id="l06-src-149"><em>图 27：01:11:00，《让需求变更找到自己的位置》。算法只认识名为 text 的输入，输入绑定和布局才知道它在哪个单元格。兼容不同版本的 Excel，归到目标能力。移动二维码，归到布局。改变计算方式，归到算法构造和优化规则。增加一个输入单元格，归到输入绑定。页下引用 Parnas 1972 年的模块分解准则。页码 5/7。</em></p>
-<h2 id="l06-src-151">只留当前状态，历史就没了<button type="button" class="copy-section" data-copy-section="l06-src-151" aria-label="复制“只留当前状态，历史就没了”小节">复制本节</button></h2>
+<h2 id="l06-src-151">只留当前状态，历史就没了<button type="button" class="copy-section" data-copy-section="l06-src-151" aria-label="复制“只留当前状态，历史就没了”小节" title="复制“只留当前状态，历史就没了”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-152"><em>原片 01:12:29–01:26:27</em></p>
 <p id="l06-src-153">十行、2000 行的例子讲完，再看 50 万行规模的架构。说到架构师，大家常想到数据库、微服务、流式数据处理、应用框架，再用框图把它们连起来。但仍要先跳出眼前实现，理解教务系统的问题。</p>
 <p id="l06-src-154">先看 AI 实现的架构。生成过程中我看到了代码，还当场发了条小红书，说 GPT-6 像是“不做人了”：只要逻辑对，它可以用人很难读的方式写。后来它又用格式化工具整理了一遍，才更易读。演示系统仍是 monolithic，一个大约 83KB 的 TSX 文件、一个约 38KB 的 services 文件，但确实能工作。</p>
@@ -204,7 +204,7 @@
 <p id="l06-src-174"><a href="../assets/06-33.jpeg"><img alt="图 33" src="../assets/06-33.jpeg" /></a></p>
 <p id="l06-src-175"><em>图 33：01:26:26，《系统一旦跑起来，修改的代价极高》。代码可以重写，历史不能凭空补出来。同样一个“已毕业”，可能来自正常审核、人工特批，也可能只是某次救火。软件的设计、实现、维护都是手艺活。这也是 ERP 类系统的护城河。页码 8/10。</em></p>
 <p id="l06-src-176">这也是教务、ERP 等系统的设计、实现、维护长期依赖经验的原因。我刚才说它有做得好的一面，说错了，这里想说的是它确实有做得不好的地方。但回看厂商的处境：假设公司在 2000 年进入市场，当时参考企业架构做出了 CRUD 系统，随后就得背着这些早期决定，经历中国大学几十年的教育改革，持续承接变化。维护这种系统是一门手艺。</p>
-<h2 id="l06-src-178">先把发生过的事记下来<button type="button" class="copy-section" data-copy-section="l06-src-178" aria-label="复制“先把发生过的事记下来”小节">复制本节</button></h2>
+<h2 id="l06-src-178">先把发生过的事记下来<button type="button" class="copy-section" data-copy-section="l06-src-178" aria-label="复制“先把发生过的事记下来”小节" title="复制“先把发生过的事记下来”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l06-src-179"><em>原片 01:26:27–01:36:50</em></p>
 <p id="l06-src-180">读 PhD 时，我在软件所，隔壁软件工程组接过学校研究生院教务系统的订单，大约二三十万元。对学生似乎很大，对需要长期维护的定制软件却不算大。我室友参与其中，我们常讨论设计，我也批评它是典型 CRUD，预料会遇到许多问题。随后几年研究生大幅扩招，学生类型、培养类型增加，还有压力带来的各种调整，都超出最初需求预期。系统越来越难维护，后来被公司维护的统一系统替代。厂商至少积累了一些领域知识，知道怎样维持复杂系统运行。</p>
 <p id="l06-src-181">如果让我重做，会先警惕只留当前状态这个 single point of truth：一旦不一致，很难恢复来龙去脉。数据结构课中的 persistent data structure 提供了启发，它能保留多个历史版本。普通数据库像一个数据结构，操作后进入新状态；持久化数据结构还能保留操作之前的版本。</p>

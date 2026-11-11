@@ -8,7 +8,7 @@ const source = fs.readFileSync(path.join(__dirname, '../src/reader.js'), 'utf8')
 function setup(writeText) {
   const handlers = {}, timers = [], errors = [];
   const text = '## 会成长的个人助手\n\n正文。\n\n```js\nrun();\n```';
-  const button = {dataset: {copySection: 'assistant'}, textContent: '复制本节',
+  const button = {dataset: {copySection: 'assistant'},
     addEventListener(name, fn) { handlers[name] = fn; }};
   const status = {textContent: ''};
   const unused = {addEventListener() {}};
@@ -38,18 +38,18 @@ test('点击复制完整小节并显示成功反馈，随后恢复按钮', async
   assert.equal(state.button.disabled, true);
   await pending;
   assert.equal(copied, state.text);
-  assert.equal(state.button.textContent, '已复制');
+  assert.equal(state.button.dataset.copyState, 'copied');
   assert.equal(state.status.textContent, '本小节已复制');
   assert.equal(state.button.disabled, false);
   state.timers[0]();
-  assert.equal(state.button.textContent, '复制本节');
+  assert.equal(state.button.dataset.copyState, undefined);
 });
 
 test('剪贴板被拒绝时显示失败，保留错误并允许重试', async () => {
   const error = new Error('clipboard denied');
   const state = setup(async () => { throw error; });
   await state.handlers.click();
-  assert.equal(state.button.textContent, '复制失败');
+  assert.equal(state.button.dataset.copyState, 'error');
   assert.match(state.status.textContent, /复制失败/);
   assert.equal(state.button.disabled, false);
   assert.equal(state.errors[0][1], error);

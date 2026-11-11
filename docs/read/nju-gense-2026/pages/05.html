@@ -8,10 +8,10 @@
   <link rel="canonical" href="https://yus3nable.github.io/read/nju-gense-2026/pages/05.html">
   <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
   <meta name="theme-color" content="#faf9f5">
-  <script src="../../../assets/theme.js?v=1794326744854481215"></script>
-  <link rel="stylesheet" href="../../../assets/reader.css?v=1794326744854481215">
-  <link rel="stylesheet" href="../../../assets/theme.css?v=1794326744854481215">
-  <script defer src="../../../assets/reader.js?v=1794326744854481215"></script>
+  <script src="../../../assets/theme.js?v=1794368222040350840"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1794368222040350840">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1794368222040350840">
+  <script defer src="../../../assets/reader.js?v=1794368222040350840"></script>
 </head>
 <body>
   <header class="top">
@@ -37,7 +37,7 @@
       <p class="meta">课程</p>
       <article class="prose" data-material-id="nju-gense-2026" data-page-id="05"><h1 id="05">05 · 软件工程的来龙去脉</h1>
 <p>南京大学 · 蒋炎岩 · 2026 · <a href="https://www.bilibili.com/video/BV1Nyeq6qEt8/">原视频</a></p>
-<h2 id="l05-src-001">摧毁性的事情一直都在发生<button type="button" class="copy-section" data-copy-section="l05-src-001" aria-label="复制“摧毁性的事情一直都在发生”小节">复制本节</button></h2>
+<h2 id="l05-src-001">摧毁性的事情一直都在发生<button type="button" class="copy-section" data-copy-section="l05-src-001" aria-label="复制“摧毁性的事情一直都在发生”小节" title="复制“摧毁性的事情一直都在发生”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-002"><em>原片 00:00:00–00:10:05</em></p>
 <p id="l05-src-003">上一节课讲了版本管理，今天正式进入软件工程部分。当然，版本管理本身也是软件工程的一部分。</p>
 <p id="l05-src-004">上课前先分享最近一周的新闻。Typesafe AI 发布了一个能实时玩 Doom 的模型。我猜它是一个 prefill only 的 Transformer，只输出很少的 token，也可能用了别的架构。它把《毁灭战士》的状态作为 JSON 输入，再输出决策，大概能做到毫秒级或百毫秒级，接近人类实时反应。输出的 token 应该经过专门训练：它不说人话，却能做决策。可以把它看成一个通用神经网络，规模和能力介于大语言模型与过去很小的决策模型之间。</p>
@@ -53,7 +53,7 @@
 <p id="l05-src-016"><a href="../assets/05-03.jpeg"><img alt="图 3" src="../assets/05-03.jpeg" /></a></p>
 <p id="l05-src-017"><em>图 3：08:05，《工作性质在改变》。OpenAI Noam Brown 的访谈：如果 AI 能做一个人 90% 的工作，注意力会集中到剩下的 10%。Taste 是“对接下来该做什么”的直觉。他预计一两代模型之后，这块它也比他强。页码 2/8。</em></p>
 <p id="l05-src-018">我觉得，也没有根本性的理由说明，不能用更多合成数据教会模型想得更长远。生成时，前几个 token 就会影响它接下来做什么。Noam Brown 还提到可验证与不可验证的边界：品位看似不可验证，也许并没那么难；数学看似可验证，验证也未必容易。即使做了形式化，从自然语言问题到形式语言问题的 autoformalization 仍有 gap。前段时间有个笑话：有人声称证明了黎曼猜想，还是 P 等于 NP，后来发现形式化定义根本没有表达原来的问题，最后几千页证明所证明的东西，近似于“1 等于 1”。</p>
-<h2 id="l05-src-019">数据分布工程的飞轮<button type="button" class="copy-section" data-copy-section="l05-src-019" aria-label="复制“数据分布工程的飞轮”小节">复制本节</button></h2>
+<h2 id="l05-src-019">数据分布工程的飞轮<button type="button" class="copy-section" data-copy-section="l05-src-019" aria-label="复制“数据分布工程的飞轮”小节" title="复制“数据分布工程的飞轮”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-020"><em>原片 00:10:05–00:18:52</em></p>
 <p id="l05-src-021">这对我们有什么启发？比如 OpenAI 说要 all in RSI。回头看 The Bitter Lesson 和 scaling law，这条规律可能仍未停止。GPT-6 发布后，我最大的感受是，OpenAI 可能找到了一个门道。我暂且称它为“数据分布工程”。GPT-6 有惊人的空间推理能力，能理解图片里的空间关系，因而在画图、生成模型上表现很好。我认为这显然与训练时加入了这类数据有关：基模阶段可能已有空间数据，后训练和强化学习又通过更多数据与反馈，帮助它分辨空间任务中的好坏与对错。</p>
 <p id="l05-src-022"><a href="../assets/05-04.jpeg"><img alt="图 4" src="../assets/05-04.jpeg" /></a></p>
@@ -68,7 +68,7 @@
 <p id="l05-src-032">我也和 AI 讨论、整理过一些可供验证的小领域，例如训练系统架构上的品位，让它做出好的系统设计。也许到这个学期结束，下一版模型就加入了这类训练；到时我在课上常说的那些问题——生成的代码架构糟糕、一加需求就崩——可能就消失了。但课仍然要上，现在还不能完全依赖 AI。人类社会存在竞争，像生物进化里的 survival of the fittest，生存门槛会不断提高。每个人都得想怎样在门槛抬高时赶上机会。从人类整体看，Anthropic、OpenAI、DeepSeek 都希望 AI 推动人类进步，人类也不希望自己消亡；可这种竞争会让一些人觉得生活失去意义。努力成为更好的人，才能更有机会找到自己的意义。这是我们共同面对的处境，我也一样。</p>
 <p id="l05-src-033"><a href="../assets/05-06.jpeg"><img alt="图 6" src="../assets/05-06.jpeg" /></a></p>
 <p id="l05-src-034"><em>图 6：17:36，《增加可训练领域》。要把更多智力活动变成可以规模化训练的对象。页上列了空间变换、系统架构与并发、主动实验和需求澄清，以及对应的验证方式。页码 5/8。</em></p>
-<h2 id="l05-src-035">今天的答案是直接做一个 MVP<button type="button" class="copy-section" data-copy-section="l05-src-035" aria-label="复制“今天的答案是直接做一个 MVP”小节">复制本节</button></h2>
+<h2 id="l05-src-035">今天的答案是直接做一个 MVP<button type="button" class="copy-section" data-copy-section="l05-src-035" aria-label="复制“今天的答案是直接做一个 MVP”小节" title="复制“今天的答案是直接做一个 MVP”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-036"><em>原片 00:18:52–00:28:46</em></p>
 <p id="l05-src-037">回到技术。前面反复讲过，intent、specification、implementation 之间存在 gap，这使软件构造成为实质性的难题，也催生了软件工程。要从零构造系统，先需要管理软件，所以讲了版本控制。现在有了版本管理，下一步该怎样构造软件？</p>
 <p id="l05-src-038">今天的一个答案是直接做 minimum viable product，也就是 MVP，最小可行产品。做得多，出错的机会也多；先做一个尽量小、又接近最终产品的原型，收益可能更高，因为它能帮助我们发现 intent、specification、implementation 之间的偏差。AI 生成初版的成本很低，这份 implementation 随时可以扔掉。它的价值是让我看清意图哪里不对、规格和架构哪里还能改，再通过几个版本迭代完善。</p>
@@ -80,7 +80,7 @@
 <p id="l05-src-046">最近发布的豆包手机也体现了类似的软件工程思路：把 app 抽象成可调用的接口。Jev 这样接近实时的决策模型，与豆包手机很搭。我觉得他们走在前面，赌的是模型有一天能像人一样快地点手机；做产品时还达不到，但这一天可能很快到来。有了 computer use，点外卖、查询数据等应用就可以被看成服务接口。app 原本是给人用的，agent 只需 API。这样一来，许多 app 会不会消失？阿里也在把旗下服务整合到 agent 上，尝试用千问承接。我觉得千问有些推出得太早：模型和算力可能还不够，也缺少 Jev 这样兼顾速度和智力的模型，产品像未来的半成品。但未来仍会到来，相应的软件公司和外包产业链会受到巨大冲击。</p>
 <p id="l05-src-048">假设毕业后创业，发现每个单位都需要标签打印机，一台卖几百元，还有利润。中国成熟的供应链能提供硬件，难处在软件。过去不仅要做 Windows 驱动，还要做 Mac 驱动；Mac 用户越来越多，不支持就可能影响销量。今天这些工作可以让 AI 完成。现场这个打印界面我基本没管，AI 自己探测打印机参数、识别当前标签，生成了定制界面。以后生产软件和 intelligence 的成本足够低，就能按个人最合适的方式定制，通用性不再是每次都要追求的目标。</p>
 <p id="l05-src-049">这是我对未来的判断，而你们已经身处这种变化之中：传统软件的生存方式正在消失。</p>
-<h2 id="l05-src-050">软件还是新生事物的年代<button type="button" class="copy-section" data-copy-section="l05-src-050" aria-label="复制“软件还是新生事物的年代”小节">复制本节</button></h2>
+<h2 id="l05-src-050">软件还是新生事物的年代<button type="button" class="copy-section" data-copy-section="l05-src-050" aria-label="复制“软件还是新生事物的年代”小节" title="复制“软件还是新生事物的年代”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-051"><em>原片 00:28:46–00:39:38</em></p>
 <p id="l05-src-052">那为什么还要讲软件工程？可以先看它的历史。下一个实验尚未布置，我打算要求大家把第一个实验里的 assistant 与 physical device 连起来，驱动手表、宿舍里现有的设备，或者花 200 元买个小设备。设备可能非标，也可能没有 Linux 驱动，但你就是想让它工作。办公室里有一块电子墨水屏，配套 Android app 很难用。我可以通过豆包手机或 computer use 操作，也可以换条路：我把 APK 交给 Claude Opus 4.6，让它解包、逆向蓝牙协议。设备使用标准蓝牙，AI 根据代码弄清楚如何写入屏幕，也做出了同样的控制功能。大家可以借助手头模型做这类尝试。</p>
 <p id="l05-src-054">开发方式变了，软件工程积累的智慧仍然有用。从今天开始，我们回顾现有软件是怎样构造出来的，历史上发现、发明过哪些方法，再用这些理念理解与 agent 的协作，成为更好的 agent native 开发者。</p>
@@ -98,7 +98,7 @@
 <p id="l05-src-067">例如选课系统：名额是先到先得、抽签，还是按专业预留？不满足先修课时，老师能否特批？这些例子由 AI 补充，却确实容易出现在需求中。领导说“选操作系统之前必须先修计算机系统基础”，听上去明确，但这是硬限制还是软限制，谁有权 override？到了学生只差这门课就能毕业的时候，学校可能又要开放例外通道。软件连接社会规则、人的偏好与特殊情况，需求高度定制且复杂，难处就在这里。</p>
 <p id="l05-src-068"><a href="../assets/05-11.jpeg"><img alt="图 11" src="../assets/05-11.jpeg" /></a></p>
 <p id="l05-src-069"><em>图 11：36:16，《软件工程和其他工程的区别》。需求是高度定制化的。选课可以是名额先到先得、抽签，或按专业保留。不满足先修课时谁能特批，退课空出名额给候补还是重新抢，这些就是要构造的软件的一部分。</em></p>
-<h2 id="l05-src-070">进度、成本、质量一起失控<button type="button" class="copy-section" data-copy-section="l05-src-070" aria-label="复制“进度、成本、质量一起失控”小节">复制本节</button></h2>
+<h2 id="l05-src-070">进度、成本、质量一起失控<button type="button" class="copy-section" data-copy-section="l05-src-070" aria-label="复制“进度、成本、质量一起失控”小节" title="复制“进度、成本、质量一起失控”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-071"><em>原片 00:39:38–00:49:10</em></p>
 <p id="l05-src-072">当时人们发现，开发进度、成本、质量往往一起失控：进度无法预测，预算超支，交付延期。计算机科学家也观察到许多相关问题。Dijkstra 的 Go To Statement Considered Harmful 大家大概都听过，但 Linux 内核里仍有很多 goto。在 C 中，它有一种常见且合理的用法：统一跳到 release，逐个检查、释放函数中申请的资源。每新增一次资源申请，就在 release 处补上相应检查与释放；中途要退出时，一律 goto release。这样较容易保证资源被正确处理。</p>
 <p id="l05-src-073">Dijkstra 曾说，程序员的水平随 goto 密度上升而下降。这个说法有道理，但不能绝对化。大量随意的 goto 会使代码难以理解；如果把用法限制在清晰的机制里，例如统一释放资源，它就能解决 C 程序里申请后忘记释放的问题，也能纠正做 OJ 时留下的坏习惯。这篇文章关心的是如何写出人能读懂的代码。代码能读，才可能长期维护，软件实践才能持续运转。</p>
@@ -114,7 +114,7 @@
 <p id="l05-src-085"><em>图 14：47:11，《把软件当作工程：Apollo》。Margaret Hamilton 与她的团队。Apollo 11 登月下降时计算机过载，出现1201／1202 警报。软件的优先级与恢复机制让关键的下降控制任务得以继续。页码 6/7。</em></p>
 <p id="l05-src-086">软件工程就在这样的背景中诞生：在成本、时间和团队约束下，把人的意图、产品设计或客户要求，变成能工作、能维护、能随需求变化继续生存的软件。做 OJ 时，默认题目正确且有解；若反复强化这个假设，就容易 overfit。开放世界里的题目可能写错，条件随时可能改变，甚至整个问题都会变。怎样构造软件应对这些变化？OJ 训练的逻辑、算法和思维链能力仍有帮助，但还不够。IEEE 所说的 systematic、disciplined、quantifiable approach，就是把系统化、有纪律、可量化的方法用于开发、运行和维护，覆盖整个生命周期。我们希望项目减少对个人英雄的依赖，不能换一个负责人就失败。即使逐项满足 checklist 也无法保证成功，但应当能显著降低失败概率。</p>
 <p id="l05-src-087">在 AI 普及之前，这门学科已经从大量失败中积累经验，其中有些教训价值数亿美元，甚至涉及火箭事故。研究成功与失败的原因，逐渐形成了软件工程的智慧。</p>
-<h2 id="l05-src-088">那篇文章是在批评瀑布<button type="button" class="copy-section" data-copy-section="l05-src-088" aria-label="复制“那篇文章是在批评瀑布”小节">复制本节</button></h2>
+<h2 id="l05-src-088">那篇文章是在批评瀑布<button type="button" class="copy-section" data-copy-section="l05-src-088" aria-label="复制“那篇文章是在批评瀑布”小节" title="复制“那篇文章是在批评瀑布”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-089"><em>原片 00:49:10–01:08:18</em></p>
 <p id="l05-src-090">回到 pre-LLM 时代，人们同样清楚 intent、spec、implementation 之间有差距。接到任务后，负责人不能立刻让所有人各自开工。大家理解的部分不同，必须先分配职责。比如打印机和扫描仪接到电脑后，我开两个 agent 窗口，分别处理两台设备，也需要先划分任务，不能默认它们会自行组织好。</p>
 <p id="l05-src-091"><a href="../assets/05-15.jpeg"><img alt="图 15" src="../assets/05-15.jpeg" /></a></p>
@@ -134,7 +134,7 @@
 <p id="l05-src-107">用敏捷理解 do it twice，也不必把 pilot 看成单独的大阶段。敏捷可以理解为 do it infinite many times：第一个版本哪怕只有 Hello World，让各模块自报名称、先把流程串通，也有价值。随后不断试做、反馈、修正，使重要假设尽早遇到证据。原型与短迭代可以马上验证不确定之处，这个原则贯穿了多年的软件实践。</p>
 <p id="l05-src-109"><a href="../assets/05-17.jpeg"><img alt="图 17" src="../assets/05-17.jpeg" /></a></p>
 <p id="l05-src-110"><em>图 17：66:36，《Do It Twice》。用今天的 MVP 理解 Royce 的 pilot model。MVP 是先做一遍，从中学习，再完善产品。Pilot 重点验证技术与运行风险，MVP 更关注用最小投入验证用户与业务假设。敏捷是把试做、反馈、修正反复快速做。</em></p>
-<h2 id="l05-src-111">我把它看成数据依赖<button type="button" class="copy-section" data-copy-section="l05-src-111" aria-label="复制“我把它看成数据依赖”小节">复制本节</button></h2>
+<h2 id="l05-src-111">我把它看成数据依赖<button type="button" class="copy-section" data-copy-section="l05-src-111" aria-label="复制“我把它看成数据依赖”小节" title="复制“我把它看成数据依赖”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-112"><em>原片 01:08:18–01:16:23</em></p>
 <p id="l05-src-113">AI 能做越来越多的事，甚至可能从这些论文中学会品位，确实让人焦虑。人类现在仍希望理解它做了什么、判断它做得对不对。假如有一天 AI 的所有工作都远超人类、只有人会犯错，我们也许会放弃理解。但今天，能驾驭和理解 AI 的人仍更有机会适应变化。门槛不断提高，就更需要学会使用 AI，理解其中的软件工程经验。</p>
 <p id="l05-src-114">作为计算机科学背景的人，我把 Royce 的模型理解为 data dependency，并假定修改有成本。这是我的一种理解，可以继续与 AI 讨论。需求分析、系统设计、实现、测试、交付维护，每一步都可以看成一个程序，把人也看成处理信息的程序。至少我思考时，会在脑中用语言组织步骤：要怎么做，会有什么后果。人学会语言后，也能用类似 chain of thought 的方式思考。把这些过程及其产生的 artifact 连起来，就得到一个 data dependency graph，一张有向无环图。</p>
@@ -146,7 +146,7 @@
 <p id="l05-src-121"><em>图 19：73:25，《用 Data Dependency 理解开发过程》。瀑布是晚验证、长返工。MVP／Pilot 先做一个最小实现，验证高风险假设，再修订需求与设计。敏捷是小批量、短反馈。比较的是多晚才得到反馈，得到反馈时已经做了多少依赖它的工作。</em></p>
 <p id="l05-src-122">阅读经典著作能看到一个领域最早面对的根本问题，以及当时找到的出路。后人可以用新的概念重新理解、改进它。我喜欢 data dependency 这个视角，沿软件工程历史看下去，还能用它推导更多概念。</p>
 <p id="l05-src-123">这可以作为学习软件工程的起点。软件当然可以定义为代码和数据，但用依赖关系和产物演进的视角理解它，还能继续推导出后续方法。</p>
-<h2 id="l05-src-124">每个阶段都长出方法和工具<button type="button" class="copy-section" data-copy-section="l05-src-124" aria-label="复制“每个阶段都长出方法和工具”小节">复制本节</button></h2>
+<h2 id="l05-src-124">每个阶段都长出方法和工具<button type="button" class="copy-section" data-copy-section="l05-src-124" aria-label="复制“每个阶段都长出方法和工具”小节" title="复制“每个阶段都长出方法和工具”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-125"><em>原片 01:16:23–01:28:41</em></p>
 <p id="l05-src-126">经过几十年发展，软件工程为每个阶段建立了方法和工具，以减少返工。学软件工程时，老师可能要求写文档、填很长的 checklist，逐项确认是否满足要求、是否沟通过。习惯做 OJ 的同学容易觉得这些没意义。但例如最后一项“是否与客户确认”，真正完成沟通再打勾，便能降低 intent 不符合客户要求的概率。这就是方法，也是工具；它完全可以通过人的行动发挥作用，不需要代码。</p>
 <p id="l05-src-127"><a href="../assets/05-20.jpeg"><img alt="图 20" src="../assets/05-20.jpeg" /></a></p>
@@ -162,7 +162,7 @@
 <p id="l05-src-138">测试领域也有经典工作，例如 QuickCheck：由人描述性质，工具生成输入、寻找反例。其出发点是，任何从规格到代码的翻译都可能出错。程序不 crash、没有空指针错误、资源不泄漏，也是需要遵守的隐含规格。能否写下一个 property，让工具生成大量测试？全部通过以后，对代码就多一些信心。单写一份代码，很难知道它是否正确；独立做测试、观察结果、增加质量保障，能逐步提高信心。如果还能写出清晰的正确性证明，信心会进一步增加。这些都是软件工程研究的问题。</p>
 <p id="l05-src-139">再看需求追踪矩阵。前面讲过 traceability，它把 data dependency graph 中原本没有显式记录的关系补上。文件系统里，一个项目只是很多文件：docs 下的 Markdown、source 下的 TypeScript、README 等。这种组织受文件系统约束，成了我们承载软件的惯常办法。Traceability 要求通过链接或文档，把代码与需求点、需求与需求、需求与设计对应起来，使它们可以交叉检查。人的能力有限。学生可能觉得只要成为最强程序员，就能在企业里找到好工作；可项目组织者面对的是没有一个人能独自做完的任务，必须考虑成员水平、雇用人数、成本，以及最终怎样交付。</p>
 <p id="l05-src-140">今天每个人都可以尝试做产品经理，把第一门课变成调动开发能力做产品。DeepSeek 在我看来已相当于资深程序员，超过普通本科毕业生，而你马上就能拥有 2500 个并发的 DeepSeek。刚高考完的学生，过去不会想到自己能管理 2500 个“程序员”。这种工作方式要求我们改变 mindset。</p>
-<h2 id="l05-src-141">契约、UML，和还对不齐的自己<button type="button" class="copy-section" data-copy-section="l05-src-141" aria-label="复制“契约、UML，和还对不齐的自己”小节">复制本节</button></h2>
+<h2 id="l05-src-141">契约、UML，和还对不齐的自己<button type="button" class="copy-section" data-copy-section="l05-src-141" aria-label="复制“契约、UML，和还对不齐的自己”小节" title="复制“契约、UML，和还对不齐的自己”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l05-src-142"><em>原片 01:28:41–01:39:59</em></p>
 <p id="l05-src-143">其中还有 design by contract，契约编程。Bertrand Meyer 的 Eiffel 大约在 1986 年出现，把 Hoare 三元组直接写入代码。它的语法包括 function、is，赋值用冒号等于；函数先写文档，再写 require 前置条件、do 实现、ensure 后置条件。它鼓励先不写控制流，先把各模块的说明、precondition、postcondition 写清楚。比如账户取款，写契约时自然会问：余额不足怎么处理？第一个 MVP 可能直接 crash，或者把这种情况排除在规格之外；随着软件演进，这些 contract 就越来越重要。Eiffel 希望在语言中直接表达它们。</p>
 <p id="l05-src-144"><a href="../assets/05-22.jpeg"><img alt="图 22" src="../assets/05-22.jpeg" /></a></p>

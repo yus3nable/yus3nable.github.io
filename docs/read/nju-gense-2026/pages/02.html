@@ -8,10 +8,10 @@
   <link rel="canonical" href="https://yus3nable.github.io/read/nju-gense-2026/pages/02.html">
   <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
   <meta name="theme-color" content="#faf9f5">
-  <script src="../../../assets/theme.js?v=1794326744854481215"></script>
-  <link rel="stylesheet" href="../../../assets/reader.css?v=1794326744854481215">
-  <link rel="stylesheet" href="../../../assets/theme.css?v=1794326744854481215">
-  <script defer src="../../../assets/reader.js?v=1794326744854481215"></script>
+  <script src="../../../assets/theme.js?v=1794368222040350840"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1794368222040350840">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1794368222040350840">
+  <script defer src="../../../assets/reader.js?v=1794368222040350840"></script>
 </head>
 <body>
   <header class="top">
@@ -37,7 +37,7 @@
       <p class="meta">课程</p>
       <article class="prose" data-material-id="nju-gense-2026" data-page-id="02"><h1 id="02">02 · 提示词工程</h1>
 <p>南京大学 · 蒋炎岩 · 2026 · <a href="https://www.bilibili.com/video/BV1CQt365EzW/">原视频</a></p>
-<h2 id="l02-src-001">和机器沟通，就剩提示词这一条渠道<button type="button" class="copy-section" data-copy-section="l02-src-001" aria-label="复制“和机器沟通，就剩提示词这一条渠道”小节">复制本节</button></h2>
+<h2 id="l02-src-001">和机器沟通，就剩提示词这一条渠道<button type="button" class="copy-section" data-copy-section="l02-src-001" aria-label="复制“和机器沟通，就剩提示词这一条渠道”小节" title="复制“和机器沟通，就剩提示词这一条渠道”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-002"><em>原片 00:00:00–00:03:40</em></p>
 <p id="l02-src-003">今天讲提示词：我们用自然语言与 AI 沟通的接口，也是生成式软件工程中的重要工具。</p>
 <p id="l02-src-004"><a href="../assets/02-01.jpeg"><img alt="图 1" src="../assets/02-01.jpeg" /></a></p>
@@ -54,14 +54,14 @@
 <p id="l02-src-016">今天讨论提示词工程，往往需要考虑模型的整个上下文，也就是上下文工程。模型不断预测下一个 token，输出文字或发起工具调用，逐步推进任务。</p>
 <p id="l02-src-017"><a href="../assets/02-04.jpeg"><img alt="图 4" src="../assets/02-04.jpeg" /></a></p>
 <p id="l02-src-018"><em>图 4：01:24，《提示词不止在对话框》。Agent 看见的是一整个上下文：Harness 内部的 system prompt 和 goal、<code>AGENTS.md</code>、加载的 skills、你给的指令，以及工具和 skills 的调用与输出。页末写着 Pr[token | context]，并注明不是所有 context 都是指令。</em></p>
-<h2 id="l02-src-019">从提示词工程到上下文工程<button type="button" class="copy-section" data-copy-section="l02-src-019" aria-label="复制“从提示词工程到上下文工程”小节">复制本节</button></h2>
+<h2 id="l02-src-019">从提示词工程到上下文工程<button type="button" class="copy-section" data-copy-section="l02-src-019" aria-label="复制“从提示词工程到上下文工程”小节" title="复制“从提示词工程到上下文工程”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-020"><em>原片 00:03:40–00:04:50</em></p>
 <p id="l02-src-021">我的感觉是，到 Claude Opus 4.5 这一代，模型经过强化学习和后训练，指令遵循能力有了明显提升。即使上下文接近百万 token，在很靠后的位置，它仍能在一定程度上遵循前面的要求。</p>
 <p id="l02-src-022">有个常见的测试：在最初的提示词里要求每句话末尾加一个“喵”。工作一段时间后，如果“喵”消失了，就说明这条指令可能已经失效：也许上下文被截断或压缩了，也许模型不再遵循它。此时需要检查和调整。</p>
 <p id="l02-src-023">这类实践就是上下文工程的一部分。</p>
 <p id="l02-src-024"><a href="../assets/02-05.jpeg"><img alt="图 5" src="../assets/02-05.jpeg" /></a></p>
 <p id="l02-src-025"><em>图 5：03:44，《从提示词工程到上下文工程》。页上把“提示词工程”收成一句：上下文工程关心每次决策前，哪些token 以什么来源、顺序和作用域出现。目标是 working set 足够小、足够新、带来源、可验证。</em></p>
-<h2 id="l02-src-026">有一点麻烦，就立刻问<button type="button" class="copy-section" data-copy-section="l02-src-026" aria-label="复制“有一点麻烦，就立刻问”小节">复制本节</button></h2>
+<h2 id="l02-src-026">有一点麻烦，就立刻问<button type="button" class="copy-section" data-copy-section="l02-src-026" aria-label="复制“有一点麻烦，就立刻问”小节" title="复制“有一点麻烦，就立刻问”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-027"><em>原片 00:04:50–00:09:45</em></p>
 <p id="l02-src-028">我反复强调 token，是希望大家养成立即尝试的习惯：遇到一点麻烦，就开始行动。AI 可以成为一个耐心的老师。</p>
 <p id="l02-src-029">大学时，有些问题室友会、我不会，但开口请教有沟通成本，也担心暴露自己的不足。面对 AI，就少了这一层顾虑：它不会嫌弃问题简单，你还可以不断追问。</p>
@@ -77,7 +77,7 @@
 <p id="l02-src-039">上下文里还有 skills 索引。例如 make-slides 负责幻灯片生成和播放，按 F5 就能演示。模型起初只能看到 front matter 中的名称和简短描述；匹配到任务时，才读取完整的 <code>SKILL.md</code>。按课堂中这套机制的描述，用完一轮后，相应内容还会从上下文中移除，避免始终携带整份说明。</p>
 <p id="l02-src-040">工具定义、会话历史和运行环境也以文本进入上下文。执行时可能注入当前模型、时间等信息。与 DeepSeek Chat 对话时，也可以询问这些环境信息；课堂里将它们与系统提示词区分开来。</p>
 <p id="l02-src-041">上下文工程要安排好这条长序列里的内容。这个演示也展示了一种学习方法：遇到不明白的地方，直接问，再继续追问。接下来还可以交换角色。</p>
-<h2 id="l02-src-042">费曼学习法：让 AI 当听众<button type="button" class="copy-section" data-copy-section="l02-src-042" aria-label="复制“费曼学习法：让 AI 当听众”小节">复制本节</button></h2>
+<h2 id="l02-src-042">费曼学习法：让 AI 当听众<button type="button" class="copy-section" data-copy-section="l02-src-042" aria-label="复制“费曼学习法：让 AI 当听众”小节" title="复制“费曼学习法：让 AI 当听众”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-043"><em>原片 00:09:45–00:11:20</em></p>
 <p id="l02-src-044">费曼学习法用“讲给别人听”来检验理解。以前做学生，找听众也有成本：室友可能没兴趣、不愿听，或者已经太熟悉这个问题，无法扮演初学者。</p>
 <p id="l02-src-045">现在可以先向 AI 请教，等自己觉得理解了，再让它扮演学生。用自己的话把概念讲一遍，请它检查逻辑错误和遗漏。先学、再讲，通过这两个方向检查自己的理解。</p>
@@ -87,7 +87,7 @@
 <p id="l02-src-049">学习时，值得留意这些具体的小细节。</p>
 <p id="l02-src-050"><a href="../assets/02-10.jpeg"><img alt="图 10" src="../assets/02-10.jpeg" /></a></p>
 <p id="l02-src-051"><em>图 10：11:12，《立即行动：解剖当前上下文》。让 Agent 解释“谁在给它下指令”，按目标、权限、工具协议、持久规则、环境和证据分类。模型给出的是当前遵循计划，不是可信的内部状态 dump。</em></p>
-<h2 id="l02-src-052">“安全命令”是谁判的<button type="button" class="copy-section" data-copy-section="l02-src-052" aria-label="复制““安全命令”是谁判的”小节">复制本节</button></h2>
+<h2 id="l02-src-052">“安全命令”是谁判的<button type="button" class="copy-section" data-copy-section="l02-src-052" aria-label="复制““安全命令”是谁判的”小节" title="复制““安全命令”是谁判的”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-053"><em>原片 00:11:20–00:19:00</em></p>
 <p id="l02-src-054">使用 Codex 或其他 agent 时，遇到危险操作通常需要确认。课堂演示中的 Pi 默认采用 YOLO 模式，直接执行操作；提示词不合适，确实可能删掉文件，影响上课。可以通过沙箱限制权限，但这又有使用成本：agent 先在沙箱里尝试，失败后请求到外面重试，还要等待用户选择 yes 或 no。这里需要权衡。</p>
 <p id="l02-src-055">例如，吃饭前启动三个任务，回来才发现它只跑了一分钟，随后一直在等确认。这既耽误 agent，也耽误人。留意这些细节，会帮助你找到改进工具的机会。</p>
@@ -102,7 +102,7 @@
 <p id="l02-src-064">返回结果还提到 Untrusted Evidence 等内容，今天先不展开。这个例子是为了理解 agent 的上下文，以及怎样研究它的提示词设计。</p>
 <p id="l02-src-065"><a href="../assets/02-12.jpeg"><img alt="图 12" src="../assets/02-12.jpeg" /></a></p>
 <p id="l02-src-066"><em>图 12：11:57 起一直留着的课件《“安全命令”是谁判的？》。模型只生成“想运行什么”；sandbox 决定技术上能碰什么，approval policy 决定何时暂停询问。页上还写着早期 Codex 把 <code>rg</code> 当作只读安全命令，却漏掉 <code>--pre</code>、<code>-z</code> 等会触发外部程序的参数，并标了 CVE-2025-54558：安全性属于完整 invocation，不属于命令名。</em></p>
-<h2 id="l02-src-067">让模型知道什么叫完成<button type="button" class="copy-section" data-copy-section="l02-src-067" aria-label="复制“让模型知道什么叫完成”小节">复制本节</button></h2>
+<h2 id="l02-src-067">让模型知道什么叫完成<button type="button" class="copy-section" data-copy-section="l02-src-067" aria-label="复制“让模型知道什么叫完成”小节" title="复制“让模型知道什么叫完成”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-068"><em>原片 00:19:00–00:22:20</em></p>
 <p id="l02-src-069">接着讨论怎样写好提示词、组织好模型上下文。</p>
 <p id="l02-src-070">这里又会遇到软件工程的老问题：脑中一个“做国民级应用”的意图，落实成规格、架构、语言和实现时，有许多细节。每次让模型参与，都只是把大流程中的一部分交给它。刚才读 Codex 源码，可能同时读到设计原则、规格和具体实现；把它们对照起来，才能理解安全设计为什么存在、应该怎样工作。</p>
@@ -112,7 +112,7 @@
 <p id="l02-src-074"><em>图 13：19:56，《上下文工程：让模型知道“完成”是什么》。Context 里是一份复杂要求。约束可以是 intent，也可以是spec。页上写：Pr[token | context] 本身不是规划器；只有上下文里存在可识别的完成判据，继续干和可以交卷才不是两种高概率续写。</em></p>
 <p id="l02-src-075"><a href="../assets/02-14.jpeg"><img alt="图 14" src="../assets/02-14.jpeg" /></a></p>
 <p id="l02-src-076"><em>图 14：21:10，《可验证，才不会“提前交卷”》。旁观者只看产物和工具结果，如果不能判定通过或不通过，模型就没有稳定的 done。下面用 1714 年英国《经度法》作例子：不是悬赏“改善航海”，而是按经度误差分档，并规定驶往西印度群岛实测。</em></p>
-<h2 id="l02-src-077">一句话生成极品飞车<button type="button" class="copy-section" data-copy-section="l02-src-077" aria-label="复制“一句话生成极品飞车”小节">复制本节</button></h2>
+<h2 id="l02-src-077">一句话生成极品飞车<button type="button" class="copy-section" data-copy-section="l02-src-077" aria-label="复制“一句话生成极品飞车”小节" title="复制“一句话生成极品飞车”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-078"><em>原片 00:22:20–00:26:00</em></p>
 <p id="l02-src-079">判断生成的 CS:GO 是否符合要求，应该实际打开检查。这里展示 Kimi K3 一句话生成的赛车游戏。物理、碰撞都有，车顶的后视镜看起来也能工作，效果相当逼真。这类“一句话生成游戏”的评测很受欢迎。</p>
 <p id="l02-src-080"><a href="../assets/02-15.jpeg"><img alt="图 15" src="../assets/02-15.jpeg" /></a></p>
@@ -124,7 +124,7 @@
 <p id="l02-src-086"><a href="../assets/02-17.jpeg"><img alt="图 17" src="../assets/02-17.jpeg" /></a></p>
 <p id="l02-src-087"><em>图 17：24:55，《写清指令，承担“不明确”的后果》。Rule of thumb 写着：授权模型用默认值替你做产品决策，这样模型永远给你的是惊喜。1854 年轻骑兵冲锋被用来说明，命令里的“那些炮”由执行者自行补全，就会冲向错误的炮阵。下面要求：要么完成，要么显式失败。</em></p>
 <p id="l02-src-088">例如，课程结束时，我想让每个同学提交一份简历，中间会提供一些可选项目，再用 AI 辅助判断是否通过。第一课已经展示过不理想的简历。你们的简历应该有可打开的 GitHub 或个人主页链接，让人能看到实际作品。</p>
-<h2 id="l02-src-089">主页上的 AI 味<button type="button" class="copy-section" data-copy-section="l02-src-089" aria-label="复制“主页上的 AI 味”小节">复制本节</button></h2>
+<h2 id="l02-src-089">主页上的 AI 味<button type="button" class="copy-section" data-copy-section="l02-src-089" aria-label="复制“主页上的 AI 味”小节" title="复制“主页上的 AI 味”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-090"><em>原片 00:26:00–00:33:10</em></p>
 <p id="l02-src-091">我试过用一句话生成现代风格的主页。DeepSeek-V4-Flash 做出的视觉效果很专业，类似 pi.dev、Homebrew 那种页面，滚动和浮动也都能工作。它应该读过我原来的终端式主页。不过，看起来仍有明显的“AI 味”。它确实满足了“现代风格”，但再说一句“别那么 AI”，又很难形成可执行的要求。</p>
 <p id="l02-src-092">这位学生的主页很干净，但我仍觉得有一种难以描述的 AI 风格。AI 出现以前也有人这样设计，只是现在更难区分。再看我的主页：它是一个能运行管道的终端，文字渲染后还做了少量后处理，让字形略有不齐，像打字机留下的效果。我认为这种不规则减少了模板感，虽然代码同样全由 AI 完成。演示中它还捕获了键盘、无法正常关闭，可能有个小 bug。</p>
@@ -142,7 +142,7 @@
 <p id="l02-src-105"><em>图 21：31:08，《新分工：人定义问题，AI 搜索实现》。人定义目标 G 和验收器 V，AI 搜索实现 x，直到 V(x) = 1。Brooks 在 1986 年区分的 essence 与 accident 也在这一页：实现可以外包，验收标准和失败责任不能一起外包。</em></p>
 <p id="l02-src-106">理解技术选型后，也可以用同样的方法与 AI 讨论。例如教育系统的后端选 Python、Java 还是 TypeScript，各自上线后有什么问题、哪种更方便？先形成自己的判断，再让 AI 挑战理由，就像自己当老师、接受学生提问。</p>
 <p id="l02-src-107">接下来看看模型怎样遵循指令，以便更好地组织上下文。</p>
-<h2 id="l02-src-108">一步很浅，一串可以很深<button type="button" class="copy-section" data-copy-section="l02-src-108" aria-label="复制“一步很浅，一串可以很深”小节">复制本节</button></h2>
+<h2 id="l02-src-108">一步很浅，一串可以很深<button type="button" class="copy-section" data-copy-section="l02-src-108" aria-label="复制“一步很浅，一串可以很深”小节" title="复制“一步很浅，一串可以很深”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-109"><em>原片 00:33:10–00:38:40</em></p>
 <p id="l02-src-110">模型根据当前上下文预测下一个 token。这里有个值得注意的观察：即使参数规模很大，每生成一个 token，仍只是让被激活的部分执行一次有限计算。课上提到 3TB、1.5TB 这类规模，是为了强调总量很大，但单步计算依然有限。</p>
 <p id="l02-src-111">计算机专业会介绍图灵机和有限状态机。你可能听过图灵机计算能力的说法，却还不清楚其背景。有限状态机只有有限个状态，可以在这些状态之间循环；图灵机多了一条理论上无限长的纸带，可以记录中间结果，就像有了草稿纸和记忆。</p>
@@ -152,7 +152,7 @@
 <p id="l02-src-116">我把早期 ChatGPT 的一个问题理解为训练奖励造成的迎合：不回答会受惩罚，随便答却可能碰对，于是模型倾向于总给出答案，带来幻觉。经过强化学习的思维链模型更重视回答正确，会逐步尝试、逼近目标。这类在推理时投入更多计算的做法，就是 test-time scaling。</p>
 <p id="l02-src-117"><a href="../assets/02-22.jpeg"><img alt="图 22" src="../assets/02-22.jpeg" /></a></p>
 <p id="l02-src-118"><em>图 22：33:09，《一步很浅，一串可以很深》。Pr[token | context] 是深度非常有限的计算。模型学会利用上下文思考：不确定时先试，错了再输出 token 纠正。每个新 token 又成为下一步的 context，这就是 chain-of-thought。页上把它比成图灵机的纸带。</em></p>
-<h2 id="l02-src-119">藏头、十八个字、同一个音<button type="button" class="copy-section" data-copy-section="l02-src-119" aria-label="复制“藏头、十八个字、同一个音”小节">复制本节</button></h2>
+<h2 id="l02-src-119">藏头、十八个字、同一个音<button type="button" class="copy-section" data-copy-section="l02-src-119" aria-label="复制“藏头、十八个字、同一个音”小节" title="复制“藏头、十八个字、同一个音”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-120"><em>原片 00:38:40–00:44:50</em></p>
 <p id="l02-src-121">看几个特殊约束的例子。第一个任务是写中文押韵藏头诗，以“计算机学院真牛逼”为八句句首，还要讲动物故事，并让“二零二六九月一日”依次出现在八句中，位置不限。高考若出这样的题，人可能先抱怨，模型却会开始尝试。</p>
 <p id="l02-src-122">它先写一版，再检查是否满足条件，发现不对就修改；试不通时还会换韵脚重写。结果的文学品味未必好，但可以看到它逐项遵循、验证和修正的过程。</p>
@@ -164,14 +164,14 @@
 <p id="l02-src-128">十八字任务里，它写过“江河湖海波涛浪”，又因为重复、字数不足继续改。后面还有全用同一个读音写文言文的任务。演示中出现过“洪涝淹没江港”等带一点叙事意味的句子，也有很生硬的表达。我觉得人类流传下来的优秀句子仍更有创造力。可以进一步约束规格，让模型生成许多候选，再筛选、修改。主要在数学和编程上训练的思维链，确实带来了其他领域的能力。</p>
 <p id="l02-src-129"><a href="../assets/02-25.jpeg"><img alt="图 25" src="../assets/02-25.jpeg" /></a></p>
 <p id="l02-src-130"><em>图 25：42:21，同一屏上还留着后两个任务：十八个字、偏旁相同、要有故事；以及一段全部同一个音的文言文，不能抄《施氏食狮史》和《季姬击鸡记》。</em></p>
-<h2 id="l02-src-131">通过测试，不等于写得好<button type="button" class="copy-section" data-copy-section="l02-src-131" aria-label="复制“通过测试，不等于写得好”小节">复制本节</button></h2>
+<h2 id="l02-src-131">通过测试，不等于写得好<button type="button" class="copy-section" data-copy-section="l02-src-131" aria-label="复制“通过测试，不等于写得好”小节" title="复制“通过测试，不等于写得好”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-132"><em>原片 00:44:50–00:48:15</em></p>
 <p id="l02-src-133">这些例子强调了验证的重要性。字数、藏头、偏旁和读音，都有较明确的检查条件，配合强模型就能反复改进。数学和编程也常有这样的反馈；教学则难得多，因为“讲得好”很难验证。</p>
 <p id="l02-src-134">我把课程做成数字切片时，第二个切片一直做不好。旁白需要更平淡些，可能受语音模型限制，但课堂质量还有更多因素。讲大家可能已熟悉的事实时，我会加入现场演示，例如让 Pi 自己检查上下文，带来合乎逻辑又出乎意料的变化。课堂需要有起伏、有节奏，也要理解学生的经验。这些要求很难写成可验证的条件。作为从学生阶段走过来的老师，我对听众有自己的判断，但不能轻易把这种判断变成测试。</p>
 <p id="l02-src-135">目前，AI 更容易在有明确验证条件的部分发挥作用。我认为它在一些这样的任务上已经超过大多数人。我们可以与它协作，用它放大自己的能力。</p>
 <p id="l02-src-136"><a href="../assets/02-26.jpeg"><img alt="图 26" src="../assets/02-26.jpeg" /></a></p>
 <p id="l02-src-137"><em>图 26：44:51，《通过测试，不等于写得好》。Verifier 看得见的，包括藏头、嵌字顺序、字数、偏旁、拼音。页上提到乔治·佩雷克 1969 年的小说《消失》，全书避免法语字母 e。形式约束能逼出搜索，却不会自动带来好作品。Verifier看不见的是品位。</em></p>
-<h2 id="l02-src-138">注意力会抢，指令要放在它能看见的地方<button type="button" class="copy-section" data-copy-section="l02-src-138" aria-label="复制“注意力会抢，指令要放在它能看见的地方”小节">复制本节</button></h2>
+<h2 id="l02-src-138">注意力会抢，指令要放在它能看见的地方<button type="button" class="copy-section" data-copy-section="l02-src-138" aria-label="复制“注意力会抢，指令要放在它能看见的地方”小节" title="复制“注意力会抢，指令要放在它能看见的地方”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-139"><em>原片 00:48:15–00:55:00</em></p>
 <p id="l02-src-140">再看指令遵循背后的注意力机制。Transformer 由多层结构组成，生成一个 token 时，会对过去不同位置的信息给予不同程度的关注。</p>
 <p id="l02-src-141">例如，系统提示词要求用中文回答，用户同时要求实现赛车游戏。写代码时，模型会更多关注代码和功能需求，中文回答的要求暂时不那么突出。整个上下文很复杂，注意力机制从中提取当前计算所需的信息。</p>
@@ -184,7 +184,7 @@
 <p id="l02-src-148">可以用 <code>AGENTS.md</code> 或 skill 规定注释写法，但新增规则又会占用上下文。目前我认为没有通用规则能一次解决所有问题。网上的 skill 初用可能有效，继续用又发现不足，反复修改后可能陷入困境。此时最好回到具体任务，想清楚模型注意到了什么、为何得到这个结果，再写必要的指令。这只是经验性的解释和调整，后面还会继续看案例。</p>
 <p id="l02-src-149"><a href="../assets/02-27.jpeg"><img alt="图 27" src="../assets/02-27.jpeg" /></a></p>
 <p id="l02-src-150"><em>图 27：48:35 前后的课件《用好模型遵循指令的能力》。过去的上下文一直都在场。例子包括：全局 <code>AGENTS.md</code> 里要求用中文，这个“用中文”会一直保持一定注意力；全局的 git commit 不要写成 “Copiloted by Claude Code”。页上同时提醒Lost in the Middle：长上下文里的信息不会被同样可靠地利用。</em></p>
-<h2 id="l02-src-151">读论文时，别让作者带着走<button type="button" class="copy-section" data-copy-section="l02-src-151" aria-label="复制“读论文时，别让作者带着走”小节">复制本节</button></h2>
+<h2 id="l02-src-151">读论文时，别让作者带着走<button type="button" class="copy-section" data-copy-section="l02-src-151" aria-label="复制“读论文时，别让作者带着走”小节" title="复制“读论文时，别让作者带着走”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-152"><em>原片 00:55:00–01:12:40</em></p>
 <p id="l02-src-153">用读论文来举例。我把一份匿名化的论文 PDF 放进干净目录，避免原有 <code>AGENTS.md</code> 等规则干扰。它是我们最近一篇工作的期刊扩展版。</p>
 <p id="l02-src-154">最常见的请求大概是：“我想读 paper.pdf，请总结一下。”这种方法有什么问题？</p>
@@ -206,14 +206,14 @@
 <p id="l02-src-170"><em>图 29：69:46，《怎样构造一个好的 Reviewer？》。三条路线分开走：判据驱动、证据审计、反方复现。页上写：三条路线先各自形成判断，最后才汇合。否则“三个 reviewer”很容易只是同一个锚点的三次润色。</em></p>
 <p id="l02-src-171"><a href="../assets/02-30.jpeg"><img alt="图 30" src="../assets/02-30.jpeg" /></a></p>
 <p id="l02-src-172"><em>图 30：71:00，《不要被作者“带着走”》。短程任务靠方向和明确指令就够；方法论决定 AI 的上限。深读前先独立写下三件事：它声称解决什么，最强替代解释是什么，什么结果会推翻它。再把正文拆成 claim、evidence、assumption。</em></p>
-<h2 id="l02-src-173">对齐过去的自己<button type="button" class="copy-section" data-copy-section="l02-src-173" aria-label="复制“对齐过去的自己”小节">复制本节</button></h2>
+<h2 id="l02-src-173">对齐过去的自己<button type="button" class="copy-section" data-copy-section="l02-src-173" aria-label="复制“对齐过去的自己”小节" title="复制“对齐过去的自己”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-174"><em>原片 01:12:40–01:15:20</em></p>
 <p id="l02-src-175">这也引出我的学习方法：不断扩展自己理解的世界。读到有启发的论文、博客，哪怕来自几十年前或其他学科，我会追问：为什么以前不知道？缺少哪些前置知识，盲区在哪里？把这些与过去的理解接起来，就增加了一些能继续推理的事实。</p>
 <p id="l02-src-176">我做教师后读过不少计算机以外的论文，例如《自然》百年科学经典里收录的历史研究。生物谱系为什么能追溯共同祖先 LUCA，就是一个例子；线粒体的母系遗传和突变也为追溯关系提供线索。理解这些事实，再联系已有知识，认识的范围就会扩大。有 AI 协助，这个过程可以更快。</p>
 <p id="l02-src-177">只听我讲故事还不够，必须亲自实践。AI 解释很久仍听不懂，很正常；我也会要求它换个说法。经过几轮沟通，先同步双方理解，再把推理过程讲清楚，才能逐渐找到适合自己的学习方法。</p>
 <p id="l02-src-178">藏头诗这类短任务，验证条件容易写清；学习的验证条件则可能复杂得多：是否按我的思路重新组织了知识，是否扩展了理解边界？一本好书可能让原有事实建立新的联系，改变你看问题的方式。事实没变，组织方式变了，后面的思考也随之改变。</p>
 <p id="l02-src-179">这些成功和失败的经验，可以逐渐整理成适合自己的 skill。我自己的学习流程也是这样积累出来的。</p>
-<h2 id="l02-src-180">长程任务里，小演示容易，维护会翻车<button type="button" class="copy-section" data-copy-section="l02-src-180" aria-label="复制“长程任务里，小演示容易，维护会翻车”小节">复制本节</button></h2>
+<h2 id="l02-src-180">长程任务里，小演示容易，维护会翻车<button type="button" class="copy-section" data-copy-section="l02-src-180" aria-label="复制“长程任务里，小演示容易，维护会翻车”小节" title="复制“长程任务里，小演示容易，维护会翻车”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-181"><em>原片 01:15:20–01:24:40</em></p>
 <p id="l02-src-182">接着看长程任务。PA 作业这类有明确验收条件的任务，还不完全是我这里说的 long horizon。更困难的任务带着未知：大致有意图，但规格和实现都不清楚，最终还要交付高质量产品。此时需要先组织探索，不能只让 AI 接着上一句话往下做。</p>
 <p id="l02-src-183">强化学习的反馈让模型倾向于尽快通过验证、完成任务；规划过长，又可能耗尽上下文，令用户不满。当前模型因此很擅长“完成 PA2”这类边界清楚的要求。</p>
@@ -230,7 +230,7 @@
 <p id="l02-src-194"><em>图 31：75:53，《Long-Horizon 能力是怎么“练”出来的？》。只要有反馈，答对给奖励，答错了揍，后训练就会逼模型规划、思考。页上写：long-horizon 不是一次性想得特别深，而是闭环。反馈也可能教坏模型：如果测试只覆盖表面行为，“坚持”也可能变成 reward hacking。</em></p>
 <p id="l02-src-195"><a href="../assets/02-32.jpeg"><img alt="图 32" src="../assets/02-32.jpeg" /></a></p>
 <p id="l02-src-196"><em>图 32：80:58，《“放一个好项目给 AI 看”靠谱吗？》。讲者的猜测只成立一半：相近、精选、按需取用，比把整个仓库塞进去重要。整库输入还可能带来 negative transfer。</em></p>
-<h2 id="l02-src-197">Token 花完了，知识没有增加<button type="button" class="copy-section" data-copy-section="l02-src-197" aria-label="复制“Token 花完了，知识没有增加”小节">复制本节</button></h2>
+<h2 id="l02-src-197">Token 花完了，知识没有增加<button type="button" class="copy-section" data-copy-section="l02-src-197" aria-label="复制“Token 花完了，知识没有增加”小节" title="复制“Token 花完了，知识没有增加”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-198"><em>原片 01:24:40–01:29:00</em></p>
 <p id="l02-src-199">举一个研究失败的例子。我们想优化符号执行引擎：用程序分析另一个程序，自动验证某些性质或正确性。现有方法执行较慢，寻找有效优化，是适合学生开展的增量研究。</p>
 <p id="l02-src-200">一位同学拿到一个初步想法，觉得可能有效，GPT-5.6 Sol Ultra 也表示赞同，便投入大量 token 探索。但模型不断给出正面或负面反馈，他无法判断这些反馈是否可靠，也不知道遇到否定结果该怎样继续。</p>
@@ -239,7 +239,7 @@
 <p id="l02-src-203">如果不了解操作系统、编译器等已有知识，就很难提出合适的问题，也难以引导 AI 探索开放问题。</p>
 <p id="l02-src-204"><a href="../assets/02-33.jpeg"><img alt="图 33" src="../assets/02-33.jpeg" /></a></p>
 <p id="l02-src-205"><em>图 33：85:57，《Research Failure：Token 花完了，知识没有增加》。页上写一位博士生用 GPT-5.6 Sol Ultra 去优化符号执行引擎：benchmark 丢进去，想法丢进去，花了很多 token，没有结果。缺的不是 token，而是便宜、局部、可归因的反馈。Agent 被训练成“把任务做完”，研究却允许最好的结论是“原始 idea 不成立”。</em></p>
-<h2 id="l02-src-206">少盯着它改，把时间留在收益大的地方<button type="button" class="copy-section" data-copy-section="l02-src-206" aria-label="复制“少盯着它改，把时间留在收益大的地方”小节">复制本节</button></h2>
+<h2 id="l02-src-206">少盯着它改，把时间留在收益大的地方<button type="button" class="copy-section" data-copy-section="l02-src-206" aria-label="复制“少盯着它改，把时间留在收益大的地方”小节" title="复制“少盯着它改，把时间留在收益大的地方”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-207"><em>原片 01:29:00–01:32:00</em></p>
 <p id="l02-src-208">与 AI 合作时还有时间分配的取舍。我盯着 Codex，一旦跑偏就补充领域知识，单个任务通常能更快完成。但多给它一些时间和 token，它往往也能自己完成。人的精力有限，需要决定什么时候干预最值得。</p>
 <p id="l02-src-209">纠正 AI 会带来一种微妙的满足：它让我觉得自己仍比 AI 多一些判断力。但这种满足未必值得持续投入时间。对于 AI 能独立完成、自己也知道如何验收的任务，可以让它运行，回来检查结果。学生更应该把有限的时间用于理解未知，而不是反复盯着自己已经会做的事情。</p>
@@ -247,7 +247,7 @@
 <p id="l02-src-211">上下文变长后，指令遵循能力会下降，较早或中间位置的要求尤其容易被忽略。不过，模型通常仍能较好地遵循最近的短指令。因此，当最后一段上下文明确要求修复某个问题时，它往往还能把任务完成。</p>
 <p id="l02-src-212"><a href="../assets/02-34.jpeg"><img alt="图 34" src="../assets/02-34.jpeg" /></a></p>
 <p id="l02-src-213"><em>图 34：89:42，《少干预，反而做得更多》。讲者写：我对要解决的问题了解更多，所以我干预会完成得更快；但我越来越少干预了。AI 走弯路也能完成，那还不如切换到另一个任务。人类干预优化的是单个任务的 latency；放手让Agent 跑，优化的是一整天的 throughput。</em></p>
-<h2 id="l02-src-214">算力换智力<button type="button" class="copy-section" data-copy-section="l02-src-214" aria-label="复制“算力换智力”小节">复制本节</button></h2>
+<h2 id="l02-src-214">算力换智力<button type="button" class="copy-section" data-copy-section="l02-src-214" aria-label="复制“算力换智力”小节" title="复制“算力换智力”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-215"><em>原片 01:32:00–01:36:10</em></p>
 <p id="l02-src-216">对于充满不确定性的长期探索，只靠一条思维链未必足够。让模型“比较几个方案，选最好的”，得到的可能只是它有限搜索后认为可接受的方案。我认为，这也与尽快完成任务的奖励倾向有关。明确验证条件的任务，和探索未知方案，难点并不相同。</p>
 <p id="l02-src-217">可以用复杂性理论作类比。对 NP 问题，给定候选解后常能在多项式时间内验证，但寻找解可能很困难。验证一条路径是否为哈密顿路径较容易，寻找满足要求的路径却是 NP 完全问题。模型为了及时交付，也只能进行有限搜索，类似考场上即将交卷时，必须先写出一个答案。</p>
@@ -257,7 +257,7 @@
 <p id="l02-src-221">更系统的方法类似进入科研领域前做文献调研。名字的候选空间可以枚举：先选读音、排除不合适的音，再让不同 sub-agent 检查对应的字，也可以限定《诗经》等来源。把开放的大空间分成互不重叠、条件更清楚的部分，再分别搜索与验证，就能投入更多计算来扩大探索。代价是消耗更多 token；直接让一个模型给几个答案，则更容易受它自身偏好限制。</p>
 <p id="l02-src-222"><a href="../assets/02-36.jpeg"><img alt="图 36" src="../assets/02-36.jpeg" /></a></p>
 <p id="l02-src-223"><em>图 36：94:24，《算力换智力》。不要只问“给我几个名字”。例子是：给我小孩取一个蒋姓、好听、又有寄托的名字。直接让它给一些，AI 有自己的 bias，别人也会用，成为 AI 时代的子涵。页上把灵感改成搜索：先独立采样，再汇总，别让 sub-agent 一开始就互相抄答案。</em></p>
-<h2 id="l02-src-224">墙里面是超人，墙外面是动物世界<button type="button" class="copy-section" data-copy-section="l02-src-224" aria-label="复制“墙里面是超人，墙外面是动物世界”小节">复制本节</button></h2>
+<h2 id="l02-src-224">墙里面是超人，墙外面是动物世界<button type="button" class="copy-section" data-copy-section="l02-src-224" aria-label="复制“墙里面是超人，墙外面是动物世界”小节" title="复制“墙里面是超人，墙外面是动物世界”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l02-src-225"><em>原片 01:36:10–01:38:25</em></p>
 <p id="l02-src-226">这让我想到人类的差异。世界很大，个体能学到的很有限；Richard Sutton 的 Big World Hypothesis 讨论的就是这种限制。不同城市、教育和生活经历形成不同偏好，也让人们掌握不同知识。把这些差异组合起来，群体就有机会完成个体做不到的事。</p>
 <p id="l02-src-227">但如果有价值的长期问题越来越能通过计算资源解决，也可能出现新的鸿沟。少数人拥有大量算力，获得更快的认知和探索能力，把资源圈在一堵墙内；墙外的人即使努力，也追不上里面产生新知识的速度。我用“墙内是超人、墙外是动物世界”这个强烈比喻，提醒大家思考这种可能性。</p>

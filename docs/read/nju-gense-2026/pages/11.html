@@ -8,10 +8,10 @@
   <link rel="canonical" href="https://yus3nable.github.io/read/nju-gense-2026/pages/11.html">
   <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
   <meta name="theme-color" content="#faf9f5">
-  <script src="../../../assets/theme.js?v=1794326744854481215"></script>
-  <link rel="stylesheet" href="../../../assets/reader.css?v=1794326744854481215">
-  <link rel="stylesheet" href="../../../assets/theme.css?v=1794326744854481215">
-  <script defer src="../../../assets/reader.js?v=1794326744854481215"></script>
+  <script src="../../../assets/theme.js?v=1794368222040350840"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1794368222040350840">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1794368222040350840">
+  <script defer src="../../../assets/reader.js?v=1794368222040350840"></script>
 </head>
 <body>
   <header class="top">
@@ -37,7 +37,7 @@
       <p class="meta">课程</p>
       <article class="prose" data-material-id="nju-gense-2026" data-page-id="11"><h1 id="11-1">11 · 软件质量保障（1）</h1>
 <p>南京大学 · 蒋炎岩 · 2026 · <a href="https://www.bilibili.com/video/BV1ej4g6xESc/">原视频</a></p>
-<h2 id="l11-section-01">从软件演化回到质量保障<button type="button" class="copy-section" data-copy-section="l11-section-01" aria-label="复制“从软件演化回到质量保障”小节">复制本节</button></h2>
+<h2 id="l11-section-01">从软件演化回到质量保障<button type="button" class="copy-section" data-copy-section="l11-section-01" aria-label="复制“从软件演化回到质量保障”小节" title="复制“从软件演化回到质量保障”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=0">原片 00:00:00–00:08:00</a></em></p>
 <p id="l11-p001">今天讲软件质量保障。上一课用造航母来理解软件演化：站在一艘真正的航母上，很容易惊讶于人类怎样造出了如此复杂的系统。操作系统、编译器和应用服务器也一样。同学们都听说应该研究大型软件系统，可把 GitHub 上几十万行代码下载下来，读完 README，往往就不知道从哪里开始了。</p>
 <p id="l11-p002">能够在工业环境中使用的系统，常常已经是一艘“航母”。它在演化中不断加入新需求：飞机要能起降，系统要能容错，结构也随之复杂起来。回头看，最初可能只是一只能够浮在水上的独木舟。这是系统最简单的状态，可以类比 repository 的初始版本。</p>
@@ -55,7 +55,7 @@
 <p id="l11-p010">扩展能力往往要等到新需求到来，才会暴露。模型可能诚恳地道歉，说此前对架构的理解不充分，但道歉之后仍然修不好。只了解软件的外在表现，会让后续维护困难。</p>
 <p id="l11-p011">这门课仍然面向接受过计算机专业训练的同学。亲手写操作系统、编译器和数据库的经验，在这个时期仍然有价值，值得静下心来学习。即便人已经无法掌握 AI 生成的全部实现，也仍要对软件质量作出承诺。质量保障在 Agent 时代变得更加重要。</p>
 <p id="l11-p012">今天主要讲测试，以及调试的一项基础理论。这部分内容在计算机系统基础课中就会讨论，操作系统课有时也会讲，具体取决于课时安排。先问一个每天都在面对的问题：什么是 bug？如果软件是物理世界过程在信息世界中的投影，缺陷又意味着什么？</p>
-<h2 id="l11-section-02">人和 Agent 都会犯错<button type="button" class="copy-section" data-copy-section="l11-section-02" aria-label="复制“人和 Agent 都会犯错”小节">复制本节</button></h2>
+<h2 id="l11-section-02">人和 Agent 都会犯错<button type="button" class="copy-section" data-copy-section="l11-section-02" aria-label="复制“人和 Agent 都会犯错”小节" title="复制“人和 Agent 都会犯错”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=480">原片 00:08:00–00:12:00</a></em></p>
 <p id="l11-p013">先承认一个前提：程序员也会产生幻觉，不能因为代码是自己写的，就相信它正确。计算机系统基础课会强调“机器永远是对的，代码永远是错的”，目的是提醒大家先检查自己的程序。写过考试题、调过很久才调通的人，都知道人的判断同样不可靠。</p>
 <p id="l11-p014">相比传统开发，如今 Agent 的能力已经带来巨大变化。我们很快习惯了它，甚至会嫌回复慢、服务又降速。回想 GPT-3.5、GPT-4 的时期，模型已经掌握大量知识，但在软件维护任务上仍容易失败。给它一段代码，让它提供能修复问题的 patch，它会认真写出补丁，应用之后却修不好。</p>
@@ -67,7 +67,7 @@
 <p id="l11-p018">当然，人和模型的错误分布不同。接受过良好训练的人，在架构设计上可能更稳定；到了具体代码和命令，仍然会出现各种疏漏。</p>
 <p id="l11-img-004"><a href="../assets/11-04.jpg"><img alt="图 4：现场打开 Shell 错误修正工具 thefuck" src="../assets/11-04.jpg" /></a></p>
 <p><em>图 4：00:10:40，现场打开 Shell 错误修正工具 thefuck。</em></p>
-<h2 id="l11-section-03">Fault、Error 与 Failure<button type="button" class="copy-section" data-copy-section="l11-section-03" aria-label="复制“Fault、Error 与 Failure”小节">复制本节</button></h2>
+<h2 id="l11-section-03">Fault、Error 与 Failure<button type="button" class="copy-section" data-copy-section="l11-section-03" aria-label="复制“Fault、Error 与 Failure”小节" title="复制“Fault、Error 与 Failure”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=720">原片 00:12:00–00:20:00</a></em></p>
 <p id="l11-p019">即使只是从 1 数到 300，人也可能因为短时记忆出错。写循环时也类似：外层是 <code>for (i = 0; i &lt; n; i++)</code>，内层准备写 <code>j = 0</code>、<code>j &lt; n</code>，最后却把递增变量也写成了 <code>i++</code>。注意力被上一行吸引，就可能发生这种手滑。可以借用 self-attention 来类比这个现象，但人的错误并不限于这种情况。</p>
 <p id="l11-p020">这样的代码缺陷称为 fault，也常叫 bug。它可能是拼写或变量写错，可能遗漏一种情况，也可能整个算法就不正确。</p>
@@ -89,7 +89,7 @@
 <p id="l11-p030">循环运行几秒，<code>i</code> 已经变得很大，<code>j</code> 仍然是 0。此时人才察觉：这个测试本应很快结束，为什么还在运行？当错误变成可以观察到的失效，才称为 failure。</p>
 <p id="l11-img-008"><a href="../assets/11-08.jpg"><img alt="图 8：错误状态如何继续传播到可见失效" src="../assets/11-08.jpg" /></a></p>
 <p><em>图 8：00:18:40，错误状态如何继续传播到可见失效。</em></p>
-<h2 id="l11-section-04">缺陷的触发条件与火箭事故<button type="button" class="copy-section" data-copy-section="l11-section-04" aria-label="复制“缺陷的触发条件与火箭事故”小节">复制本节</button></h2>
+<h2 id="l11-section-04">缺陷的触发条件与火箭事故<button type="button" class="copy-section" data-copy-section="l11-section-04" aria-label="复制“缺陷的触发条件与火箭事故”小节" title="复制“缺陷的触发条件与火箭事故”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=1200">原片 00:20:00–00:24:00</a></em></p>
 <p id="l11-p031">缺陷有一条传播路径：程序员写入 fault，合适的执行触发 error，错误继续传播，才可能出现 failure。程序员通常已经尽力，却没有意识到自己写错了。</p>
 <p id="l11-p032">触发还需要条件。假如错误分支只有在一个随机值恰好等于特定数字时进入，测试很多次也未必覆盖。即便进入了错误状态，也未必影响可见结果。例如越界写覆盖了一块在这次执行中没有使用的栈内存，程序仍可能正常输出；没有专门检查工具，就很难发现。</p>
@@ -99,7 +99,7 @@
 <p id="l11-p036">规格本身也可能不完整。“程序不应崩溃”听起来明确，但哪些异常可能发生、每种异常该如何处理，必须进一步说明。团队努力维护规格与实现的一致性，仍可能遗漏这些情况。</p>
 <p id="l11-img-009"><a href="../assets/11-09.jpg"><img alt="图 9：Ariane 501：相同缺陷同时影响主备惯导" src="../assets/11-09.jpg" /></a></p>
 <p><em>图 9：00:22:00，Ariane 501：相同缺陷同时影响主备惯导。</em></p>
-<h2 id="l11-section-05">先用语言与架构减少缺陷<button type="button" class="copy-section" data-copy-section="l11-section-05" aria-label="复制“先用语言与架构减少缺陷”小节">复制本节</button></h2>
+<h2 id="l11-section-05">先用语言与架构减少缺陷<button type="button" class="copy-section" data-copy-section="l11-section-05" aria-label="复制“先用语言与架构减少缺陷”小节" title="复制“先用语言与架构减少缺陷”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=1440">原片 00:24:00–00:30:00</a></em></p>
 <p id="l11-p037">开放系统会与外界交互，传感器可能出错，异常也可能发生。不能只要求“不要有异常”，还要规定异常发生后该怎样处理。道理容易讲清，实现却很困难。</p>
 <p id="l11-p038">承认寻找 bug、测试和调试的困难之后，才有必要讨论系统化方法。但提高质量，首先仍应选择合适的架构、语言和编程方式：减少容易误用的机制，采用防御性编程。测试数量无法替代这些设计选择。即使为火箭开发软件、投入大量审查，团队仍可能遗漏缺陷。</p>
@@ -115,7 +115,7 @@
 <p id="l11-p046">课堂作业出错，通常只是扣分，甚至可能没被发现；为火箭写程序时，显然不能采用同样的质量标准。</p>
 <p id="l11-img-011"><a href="../assets/11-11.jpg"><img alt="图 11：通过语言机制减少内存安全问题" src="../assets/11-11.jpg" /></a></p>
 <p><em>图 11：00:30:00，通过语言机制减少内存安全问题。</em></p>
-<h2 id="l11-section-06">代码审查、测试与检查<button type="button" class="copy-section" data-copy-section="l11-section-06" aria-label="复制“代码审查、测试与检查”小节">复制本节</button></h2>
+<h2 id="l11-section-06">代码审查、测试与检查<button type="button" class="copy-section" data-copy-section="l11-section-06" aria-label="复制“代码审查、测试与检查”小节" title="复制“代码审查、测试与检查”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=1800">原片 00:30:00–00:36:00</a></em></p>
 <p id="l11-p047">如果每次解引用都要考虑内存是否仍然有效，认知负担就很大。编程规范也能帮助减少错误，例如 Linux 代码常把资源释放集中到清理路径，通过跳转统一处理。选择合适的技术路线同样重要：Safe Rust 的类型与借用规则，可以消除许多内存安全问题。</p>
 <p id="l11-p048">这些措施仍无法消除所有 bug。今天主要讨论测试，不过先介绍一种可以直接尝试的 Agent 用法：找一个成熟项目，再对照缺陷类型数据库，让模型检查某一类问题。例如明确要求审查 use-after-free，比笼统说“看看有没有问题”更有针对性。</p>
@@ -128,7 +128,7 @@
 <p id="l11-p055">动态规划题就容易遇到这个困难：样例能通过，随机测试数据也很好生成。例如输入一个 <code>n</code> 和 100 个整数，程序输出 1384。它没有崩溃，但这个数字究竟对不对？没有判断依据，单纯增加随机输入并不能解决问题。</p>
 <p id="l11-img-012"><a href="../assets/11-12.jpg"><img alt="图 12：测试触发错误，检查揭示失效" src="../assets/11-12.jpg" /></a></p>
 <p><em>图 12：00:34:40，测试触发错误，检查揭示失效。</em></p>
-<h2 id="l11-section-07">把测试接入开发流程<button type="button" class="copy-section" data-copy-section="l11-section-07" aria-label="复制“把测试接入开发流程”小节">复制本节</button></h2>
+<h2 id="l11-section-07">把测试接入开发流程<button type="button" class="copy-section" data-copy-section="l11-section-07" aria-label="复制“把测试接入开发流程”小节" title="复制“把测试接入开发流程”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=2160">原片 00:36:00–00:40:00</a></em></p>
 <p id="l11-p056">需要找到合适的检查方法，并决定在哪个位置检查。这里既有系统方法，也需要经验判断。之后会专门用一课讲检查，今天先讲测试。</p>
 <p id="l11-p057">运行样例，是大家最熟悉、成本也很低的质量保障方式。刚学编程时，常常运行程序、打开终端，再手动复制粘贴输入。重复很多次之后，才会意识到可以用管道、构建规则或 IDE 自动任务，把编译和运行测试连在一起。</p>
@@ -138,7 +138,7 @@
 <p id="l11-p059">顺着这个思路，就能理解 CI/CD 中持续集成的价值：编译后自动测试，通过时继续工作，失败时及时报告。需要参加编程机试的同学，也可以预先熟悉这种流程。花一点时间配置编译、运行，甚至保存后自动执行，能节省反复操作的时间。</p>
 <p id="l11-p060">真实系统的测试更复杂。算法题通常有比较明确的输入和输出要求；实际软件要在真实环境中运行，还要正确反映物理世界中的过程。</p>
 <p id="l11-p061">自己的环境与别人的环境可能不同。Windows 上能运行的代码，在 macOS、Linux 上是否也一样？过去写网络程序，还常常要面对机器字节序的差别：有的机器是大端，有的是小端。</p>
-<h2 id="l11-section-08">环境、字节序与非确定性<button type="button" class="copy-section" data-copy-section="l11-section-08" aria-label="复制“环境、字节序与非确定性”小节">复制本节</button></h2>
+<h2 id="l11-section-08">环境、字节序与非确定性<button type="button" class="copy-section" data-copy-section="l11-section-08" aria-label="复制“环境、字节序与非确定性”小节" title="复制“环境、字节序与非确定性”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=2400">原片 00:40:00–00:46:00</a></em></p>
 <p id="l11-p062">假设一个整数占四字节，值是 <code>0x12345678</code>。内存可以看作字节数组，那么从低地址向高地址排列时，大端顺序是 <code>12 34 56 78</code>，小端顺序是 <code>78 56 34 12</code>。</p>
 <p id="l11-p063">可移植性问题常来自对底层表示的假定。按数值取低八位，与直接读取内存中的第一个字节，是不同操作：对无符号整数使用 <code>% 256</code> 或 <code>&amp; 0xFF</code>，取的是数值低八位；直接读取第一个内存字节，才依赖字节序。网络程序经常需要在主机字节序和网络字节序之间转换。</p>
@@ -157,7 +157,7 @@
 <p><em>图 16：00:44:40，相同程序在不同执行条件下的表现。</em></p>
 <p id="l11-img-017"><a href="../assets/11-17.jpg"><img alt="图 17：课堂播放放射治疗设备事故相关片段" src="../assets/11-17.jpg" /></a></p>
 <p><em>图 17：00:45:10，课堂播放放射治疗设备事故相关片段。</em></p>
-<h2 id="l11-section-09">测试为什么仍然有用<button type="button" class="copy-section" data-copy-section="l11-section-09" aria-label="复制“测试为什么仍然有用”小节">复制本节</button></h2>
+<h2 id="l11-section-09">测试为什么仍然有用<button type="button" class="copy-section" data-copy-section="l11-section-09" aria-label="复制“测试为什么仍然有用”小节" title="复制“测试为什么仍然有用”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=2760">原片 00:46:00–00:52:00</a></em></p>
 <p id="l11-p071">此外还有非功能需求：不能崩溃、不能出现内存安全错误，性能和安全性要达到要求。产品还可能需要满足无障碍要求，让听障、视障等用户能够使用。不同环境和输入下，这些条件都需要考虑。</p>
 <p id="l11-p072">Dijkstra 在《The Humble Programmer》中强调，测试可以显示缺陷的存在，却无法据此证明缺陷不存在。前面的传播路径一旦走通，发现一个 failure，确实能帮助改善质量；但通过若干测试，不能等同于证明所有执行正确。</p>
@@ -174,7 +174,7 @@
 <p id="l11-p079">可以把这些信息理解成条件概率：已知程序有 fault，又看到特定的 test failure，就能更准确地猜测 fault 在哪里，排除与本次失败无关的部分。</p>
 <p id="l11-img-020"><a href="../assets/11-20.jpg"><img alt="图 20：通过测试对典型场景建立信心" src="../assets/11-20.jpg" /></a></p>
 <p><em>图 20：00:51:20，通过测试对典型场景建立信心。</em></p>
-<h2 id="l11-section-10">用失败反馈定位与修复问题<button type="button" class="copy-section" data-copy-section="l11-section-10" aria-label="复制“用失败反馈定位与修复问题”小节">复制本节</button></h2>
+<h2 id="l11-section-10">用失败反馈定位与修复问题<button type="button" class="copy-section" data-copy-section="l11-section-10" aria-label="复制“用失败反馈定位与修复问题”小节" title="复制“用失败反馈定位与修复问题”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=3120">原片 00:52:00–00:56:00</a></em></p>
 <p id="l11-p080">有了失败测试，就可以逐步检查执行过程中的状态。假设状态一旦出错，后续一直带着这个错误，那么可以对 trace 做二分：检查中间状态，正确就往后找，错误就往前找，直到找到第一次从正确状态转为错误状态的操作。程序不断进行状态迁移，引入这次错误的语句很可能与 bug 有关。</p>
 <p id="l11-p081">回到刚才的例子，代码把 i 从 0 变成了 1，而我的意图是把 j 从 0 变成 1。于是 i 的状态错了，修改 i 的这条语句就是 root cause，修正后问题也解决了。这种定位并非百分之百成功，但失败用例通常能提供很多有用信息。</p>
@@ -188,7 +188,7 @@
 <p><em>图 22：00:54:00，尝试次数与修复表现的实验结果。</em></p>
 <p id="l11-img-023"><a href="../assets/11-23.jpg"><img alt="图 23：单元、集成、系统与验收测试" src="../assets/11-23.jpg" /></a></p>
 <p><em>图 23：00:56:00，单元、集成、系统与验收测试。</em></p>
-<h2 id="l11-section-11">用例设计与覆盖率<button type="button" class="copy-section" data-copy-section="l11-section-11" aria-label="复制“用例设计与覆盖率”小节">复制本节</button></h2>
+<h2 id="l11-section-11">用例设计与覆盖率<button type="button" class="copy-section" data-copy-section="l11-section-11" aria-label="复制“用例设计与覆盖率”小节" title="复制“用例设计与覆盖率”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=3360">原片 00:56:00–01:02:00</a></em></p>
 <p id="l11-p086">局部测试能及时暴露小模块的问题。系统测试则主要检查模块连起来以后，协作机制是否正常。用一次昂贵的 system test 发现本可由 unit test 找到的小错，会浪费更多时间和钱。</p>
 <p id="l11-p087">人容易偷懒，想把系统整体跑一遍再看；模型也会这样。它有信心时，可能一次写出两三千行代码，不留单元测试，直接跑系统，甚至只截张图看一眼，就说完成了。但真正做工程，按层次测试通常成本更低。</p>
@@ -205,7 +205,7 @@
 <p id="l11-p094">一个经典笑话概括了这种困难：QA engineer 走进酒吧，先点一杯啤酒，再点零杯、99999999 杯、一只蜥蜴、负一杯，以及一些奇怪的东西。酒保都应对自如，测试工程师满意离开。随后，第一个真正的顾客走进来。</p>
 <p id="l11-img-026"><a href="../assets/11-26.jpg"><img alt="图 26：测试工程师走进酒吧的漫画" src="../assets/11-26.jpg" /></a></p>
 <p><em>图 26：01:01:20，测试工程师走进酒吧的漫画。</em></p>
-<h2 id="l11-section-12">测试金字塔、mock 与回归测试<button type="button" class="copy-section" data-copy-section="l11-section-12" aria-label="复制“测试金字塔、mock 与回归测试”小节">复制本节</button></h2>
+<h2 id="l11-section-12">测试金字塔、mock 与回归测试<button type="button" class="copy-section" data-copy-section="l11-section-12" aria-label="复制“测试金字塔、mock 与回归测试”小节" title="复制“测试金字塔、mock 与回归测试”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=3720">原片 01:02:00–01:06:00</a></em></p>
 <p id="l11-p095">顾客问：“洗手间在哪里？”酒吧却突然崩塌起火，程序 crash 了。</p>
 <p id="l11-p096">这位测试工程师并不敷衍，负数等边界确实可能让程序出错。但他的测试都围绕 order something，在一个功能上反复探测，没考虑另一个入口。程序的输入空间很大，未想到的场景仍会出问题。GPT 有时又会走到另一个极端，为每种非法输入分别写大量防御性检查；对某些任务，统一抛出一个异常可能已足够。</p>
@@ -215,7 +215,7 @@
 <p id="l11-p100">原则就是尽可能让每一份测试成本转化为对正确性的信心。还有 regression test，回归测试：一旦修改代码，原来测试对相关行为建立的信心需要重新检查，受修改影响的测试应当重跑，再从局部逐步走向整体。</p>
 <p id="l11-img-027"><a href="../assets/11-27.jpg"><img alt="图 27：测试金字塔、mock、回归测试与 CI" src="../assets/11-27.jpg" /></a></p>
 <p><em>图 27：01:04:40，测试金字塔、mock、回归测试与 CI。</em></p>
-<h2 id="l11-section-13">许愿做一个 CS 游戏<button type="button" class="copy-section" data-copy-section="l11-section-13" aria-label="复制“许愿做一个 CS 游戏”小节">复制本节</button></h2>
+<h2 id="l11-section-13">许愿做一个 CS 游戏<button type="button" class="copy-section" data-copy-section="l11-section-13" aria-label="复制“许愿做一个 CS 游戏”小节" title="复制“许愿做一个 CS 游戏”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=3960">原片 01:06:00–01:12:00</a></em></p>
 <p id="l11-p101">前面这些属于软件工程教材里的内容。这一节课件是我让 AI 根据要求生成的，包括那个我记得的酒吧笑话。但理解实际项目时，我更希望大家从前面的状态与反馈模型出发。</p>
 <p id="l11-p102">现在可以“许愿编程”。前两天我让 AI 仿照 Apple Watch 做了一个小界面，运行在 ESP32 这类设备上，有节拍器、to-do list，还有能与 AI 聊天的工具，是给小朋友做的。每天都可以尝试类似想法。</p>
@@ -243,7 +243,7 @@
 <p><em>图 35：01:10:35，第二次运行：栏杆与碰撞行为检查。</em></p>
 <p id="l11-img-036"><a href="../assets/11-36.jpg"><img alt="图 36：第二次运行：从高处观察场景与角色" src="../assets/11-36.jpg" /></a></p>
 <p><em>图 36：01:10:47，第二次运行：从高处观察场景与角色。</em></p>
-<h2 id="l11-section-14">架构决定质量<button type="button" class="copy-section" data-copy-section="l11-section-14" aria-label="复制“架构决定质量”小节">复制本节</button></h2>
+<h2 id="l11-section-14">架构决定质量<button type="button" class="copy-section" data-copy-section="l11-section-14" aria-label="复制“架构决定质量”小节" title="复制“架构决定质量”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=4320">原片 01:12:00–01:20:00</a></em></p>
 <p id="l11-p109">我的 prompt 大概只有一句：“实现一个相对精美的 CS。”没有详细设计，也几乎没有配置 skill，用的就是 Pi。它的完成度不错，却仍有很多 bug，交付质量显然不够。相比之下，前面那个 ESP32 项目可能更简单，交付质量也高一些。</p>
 <p id="l11-p110">系统越大，整合测试成本就越高，而有些问题必须让模块跨过接口边界协作，才可能暴露。对我来说，质量保障最重要的一点是架构决定质量：各部分应尽量能够独立验证。</p>
@@ -270,7 +270,7 @@
 <p id="l11-p121">本科阶段很重要的是试错。可以多做一些项目，观察代码如何越堆越难维护，最后回头理解架构为什么影响质量。重构由此成为改善代码质量的重要途径。</p>
 <p id="l11-img-042"><a href="../assets/11-42.jpg"><img alt="图 42：工程师、狗和基地占位的演示" src="../assets/11-42.jpg" /></a></p>
 <p><em>图 42：01:18:00，工程师、狗和基地占位的演示。</em></p>
-<h2 id="l11-section-15">纯函数与独立验证<button type="button" class="copy-section" data-copy-section="l11-section-15" aria-label="复制“纯函数与独立验证”小节">复制本节</button></h2>
+<h2 id="l11-section-15">纯函数与独立验证<button type="button" class="copy-section" data-copy-section="l11-section-15" aria-label="复制“纯函数与独立验证”小节" title="复制“纯函数与独立验证”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=4800">原片 01:20:00–01:24:00</a></em></p>
 <p id="l11-p122">为什么喜欢 functional design、函数式编程？纯函数比较容易验证。假设一个函数里先调用 global.get，过一会儿又调用一次，那么正确性就依赖全局状态：对所有可能状态、所有执行路径，都要考虑它能否工作。</p>
 <p id="l11-p123">如果放在 CS:GO 这样的系统里，测试前可能还要构造或 mock 整个相关环境。即使模型能帮忙，这仍有成本。还得考虑并发：两次读取之间是否有人修改状态？哪些全局状态可能发生，哪些不可能发生？这些都会增加思考与测试负担。</p>
@@ -282,7 +282,7 @@
 <p id="l11-p127">对我来说，优先原则仍是架构决定质量。架构清楚以后，许多常规测试工作可以按教材要求交给 agent。除此之外，质量保障与编程一样，还需要经验和灵感，也就是模型尚未完全学会的品位。</p>
 <p id="l11-img-044"><a href="../assets/11-44.jpg"><img alt="图 44：函数组合、接口与模块边界板书" src="../assets/11-44.jpg" /></a></p>
 <p><em>图 44：01:22:00，函数组合、接口与模块边界板书。</em></p>
-<h2 id="l11-section-16">从 NEMU 到差分测试<button type="button" class="copy-section" data-copy-section="l11-section-16" aria-label="复制“从 NEMU 到差分测试”小节">复制本节</button></h2>
+<h2 id="l11-section-16">从 NEMU 到差分测试<button type="button" class="copy-section" data-copy-section="l11-section-16" aria-label="复制“从 NEMU 到差分测试”小节" title="复制“从 NEMU 到差分测试”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=5040">原片 01:24:00–01:30:00</a></em></p>
 <p id="l11-p128">我相信模型会继续进步，只是好架构的反馈周期较长。快速堆代码，前期生产效率很高，需求增长到某一点却可能无法继续维护；好架构一开始搭结构、做验证，效率看似更低，要到后期才体现持续扩展的优势。强化学习完成眼前任务就能得到奖励，未必能及时获得长期架构的反馈，刚才 DeepSeek Flash 的选择也与此有关。</p>
 <p id="l11-p129">质量保障还可以从具体问题出发提出新办法。例如 Differential Testing。计算机和人工智能专业做过 NEMU 的同学，可能都经历过这个实验：实现 RISC-V 或 x86 全系统模拟器，带声音、图形和外设，构成完整计算机。</p>
@@ -303,7 +303,7 @@
 <p id="l11-p138">昨天看到一条朋友圈提到 DiffTest，还向包老师致敬。它让我想起，当年这个机制也是大家聊天时提出愿望，再逐步做出来的。</p>
 <p id="l11-img-048"><a href="../assets/11-48.jpg"><img alt="图 48：Differential Testing：让参照实现帮助定位错误" src="../assets/11-48.jpg" /></a></p>
 <p><em>图 48：01:29:30，Differential Testing：让参照实现帮助定位错误。</em></p>
-<h2 id="l11-section-17">用 fuzzing 自动探索输入<button type="button" class="copy-section" data-copy-section="l11-section-17" aria-label="复制“用 fuzzing 自动探索输入”小节">复制本节</button></h2>
+<h2 id="l11-section-17">用 fuzzing 自动探索输入<button type="button" class="copy-section" data-copy-section="l11-section-17" aria-label="复制“用 fuzzing 自动探索输入”小节" title="复制“用 fuzzing 自动探索输入”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=5400">原片 01:30:00–01:34:00</a></em></p>
 <p id="l11-p139">最早与 QEMU 对接的实现由子豪完成。原本的目标是帮助计算机系统基础实验，后来才用于龙芯杯等场景。2019 年第一期“一生一芯”也采用了这类机制，此后不断改进。今天还能借助 FPGA 等硬件加速比较过程：CPU 执行可以由软件模拟，也能由硬件模拟，从而更快地与参考实现对照。</p>
 <p id="l11-p140">再看另一条路。测试要探索输入空间，能否写程序自动探索？这就是搜索问题。假设 a.out 接收四个参数 S1、S2、S3、S4，还读取文件 a.txt，其中内容是 S5。若文件限制为 100 字节，四个参数各限制为 10 字节，就能把这次执行的输入编码成一个 140 字节序列。</p>
@@ -317,7 +317,7 @@
 <p id="l11-p144">开源生态还有 OSS-Fuzz 等持续测试服务。软件发布后，除了开发者自己的检查，第三方也会持续扫描、fuzz，帮助使用者判断版本质量。这类检查同样会增加供应链投毒被发现的机会，试图削弱检查本身就需要警惕。</p>
 <p id="l11-img-051"><a href="../assets/11-51.jpg"><img alt="图 51：输入编码、变异与搜索的板书" src="../assets/11-51.jpg" /></a></p>
 <p><em>图 51：01:33:20，输入编码、变异与搜索的板书。</em></p>
-<h2 id="l11-section-18">让真实硬件进入测试循环<button type="button" class="copy-section" data-copy-section="l11-section-18" aria-label="复制“让真实硬件进入测试循环”小节">复制本节</button></h2>
+<h2 id="l11-section-18">让真实硬件进入测试循环<button type="button" class="copy-section" data-copy-section="l11-section-18" aria-label="复制“让真实硬件进入测试循环”小节" title="复制“让真实硬件进入测试循环”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p><em><a href="https://www.bilibili.com/video/BV1ej4g6xESc/?t=5640">原片 01:34:00–01:37:05</a></em></p>
 <p id="l11-p145">持续 fuzz 一段时间、运行大量用例而未发现问题，可以作为发布时的一项信心来源，但覆盖范围仍然有限，检查也必须真实有效。</p>
 <p id="l11-p146">在生成式软件工程时代，大家需要的是架构知识、测试的基本原理，以及从多年软件实践中积累的经验，再把它们迁移到自己的项目。你的系统未必需要 Differential Testing 或 fuzzing，但这些例子可能启发你写一个更好的定制输入生成器，覆盖更大的测试空间。</p>

@@ -48,15 +48,15 @@ if (copyData) {
       copyStatus.textContent = '';
       try {
         await navigator.clipboard.writeText(sectionText[button.dataset.copySection]);
-        button.textContent = '已复制';
+        button.dataset.copyState = 'copied';
         copyStatus.textContent = '本小节已复制';
       } catch (error) {
-        button.textContent = '复制失败';
+        button.dataset.copyState = 'error';
         copyStatus.textContent = '复制失败，请重试或选中文字复制。';
         console.error('小节复制失败', error);
       } finally {
         button.disabled = false;
-        setTimeout(() => { button.textContent = '复制本节'; }, 1800);
+        setTimeout(() => { delete button.dataset.copyState; }, 1800);
       }
     });
   });

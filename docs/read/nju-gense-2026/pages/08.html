@@ -8,10 +8,10 @@
   <link rel="canonical" href="https://yus3nable.github.io/read/nju-gense-2026/pages/08.html">
   <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
   <meta name="theme-color" content="#faf9f5">
-  <script src="../../../assets/theme.js?v=1794326744854481215"></script>
-  <link rel="stylesheet" href="../../../assets/reader.css?v=1794326744854481215">
-  <link rel="stylesheet" href="../../../assets/theme.css?v=1794326744854481215">
-  <script defer src="../../../assets/reader.js?v=1794326744854481215"></script>
+  <script src="../../../assets/theme.js?v=1794368222040350840"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1794368222040350840">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1794368222040350840">
+  <script defer src="../../../assets/reader.js?v=1794368222040350840"></script>
 </head>
 <body>
   <header class="top">
@@ -37,7 +37,7 @@
       <p class="meta">课程</p>
       <article class="prose" data-material-id="nju-gense-2026" data-page-id="08"><h1 id="08-agent-native">08 · Agent-native 开发</h1>
 <p>南京大学 · 蒋炎岩 · 2026 · <a href="https://www.bilibili.com/video/BV11LWw6VEHW/">原视频</a></p>
-<h2 id="l08-src-001">没有额度，搜索就浅<button type="button" class="copy-section" data-copy-section="l08-src-001" aria-label="复制“没有额度，搜索就浅”小节">复制本节</button></h2>
+<h2 id="l08-src-001">没有额度，搜索就浅<button type="button" class="copy-section" data-copy-section="l08-src-001" aria-label="复制“没有额度，搜索就浅”小节" title="复制“没有额度，搜索就浅”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-002"><em>原片 00:00:00–00:05:08</em></p>
 <p id="l08-src-003">课程进行到一半左右，今天讨论 Agent-native 开发。今天早上有人宣布额度要重置，大家有没有提前安排长任务？我积攒了一些耗 token 的工作，例如不知道如何完成的复杂数学证明，可能会用掉一周额度。离开办公室前，我就让模型继续证明，等今天重置。</p>
 <p id="l08-src-004">第二个实验已经发布。第一个实验更像开发自己的 agent 产品，你可能发现类似产品已经出现了。Grok 这类机器人开课前就有，最近才流行起来。我把一些日常任务迁了过去，例如每天给小朋友生成开车时听的 podcast，后面调用 Claude Code 里表达比较自然的模型。</p>
@@ -45,7 +45,7 @@
 <p id="l08-src-006">我在一个讨论多 agent 协作的群里，看过大家投入大量 token 后的经验：让 GPT 和 Claude 相互 review、挑问题比较有效。不同模型有不同偏见，能拓展搜索方向；同一模型连续迭代，可能找到更好的解，也可能停滞。这有点像人的互补，但人也容易附和同伴。另一种办法是建设知识库。Deeper research 的数据库不能只有实验作业、奖学金申请和个人简历，还应收集论文、博客、GitHub 项目和书中片段。实验保留了框架，也允许自由扩展，可以做得简单。即使不做，课程也可能通过，但亲手实践、观察 agent 轨迹，才能形成自己的经验。</p>
 <p id="l08-src-007"><a href="../assets/08-01.jpeg"><img alt="图 1" src="../assets/08-01.jpeg" /></a></p>
 <p id="l08-src-008"><em>图 1：00:42，他打开自己的 wiki，停在《实验（2）：Deeper Research》。这一页写实验是建议性质，不记分，做不完可以逃课；它延续实验（1）的个人数据库，让 agent 更好地用这些资料。</em></p>
-<h2 id="l08-src-010">一条线走到黑，会差很远<button type="button" class="copy-section" data-copy-section="l08-src-010" aria-label="复制“一条线走到黑，会差很远”小节">复制本节</button></h2>
+<h2 id="l08-src-010">一条线走到黑，会差很远<button type="button" class="copy-section" data-copy-section="l08-src-010" aria-label="复制“一条线走到黑，会差很远”小节" title="复制“一条线走到黑，会差很远”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-011"><em>原片 00:05:08–00:11:09</em></p>
 <p id="l08-src-012">回到软件工程。Intent、specification、implementation 各自都是一个空间，彼此之间又是一对多关系。人的认知有限，小团队或个人往往只从中选取一个点。Reviewer 可以通过几轮讨论帮助达成共识，再推进下一步。需求阶段可以访谈、使用 checklist，与甲方确认意图；规格阶段可以请架构师讨论数据库或 event sourcing 等选择。最近 Pi 的开发者说，他们采用另一种 functional 设计来保留发生过的事，没有使用 event sourcing。</p>
 <p id="l08-src-013">讨论会产生多个方案，最终实现的可维护性、可观测性，可能与一开始选定方向后直接做到底相差很大。软件工程利用 UML 等工具，帮助团队早期形成共同理解。工具也从 IDE、VS Code，延伸到 Git worktree、Jujutsu 等版本管理工具。可以让 agent 每天推送 GitHub trending，选一个项目追问几分钟，看看不同技术栈中的设计，逐渐积累经验与判断力。这些是课程前半部分讨论的内容。</p>
@@ -53,7 +53,7 @@
 <p id="l08-src-015">在只有 intent 或 spec 的阶段，如果 AI 成本足够低，就可以先实现，用来预测架构面对真实用户、更多用户以及模块交互时会怎样。许多问题做出来才看得见。想法尚不完整，也可以先做原型，再用典型 use case 评审。要让 AI 做好这个原型，就需要 agent loop。</p>
 <p id="l08-src-016"><a href="../assets/08-02.jpeg"><img alt="图 2" src="../assets/08-02.jpeg" /></a></p>
 <p id="l08-src-017"><em>图 2：05:39，《Review &amp; Comments》。软件工程对着 intent、spec、implementation 的 gap。项目管理写着 Git、Jujutsu。需求和架构写着躲不开的 essential complexity，以及要应对的 accidental complexity。</em></p>
-<h2 id="l08-src-019">一百五十行的循环<button type="button" class="copy-section" data-copy-section="l08-src-019" aria-label="复制“一百五十行的循环”小节">复制本节</button></h2>
+<h2 id="l08-src-019">一百五十行的循环<button type="button" class="copy-section" data-copy-section="l08-src-019" aria-label="复制“一百五十行的循环”小节" title="复制“一百五十行的循环”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-020"><em>原片 00:11:09–00:22:34</em></p>
 <p id="l08-src-021">回顾产品演进，大家应该熟悉 ChatGPT。2023 年时，你们大概还在初高中，社交媒体已经在讨论模型的能力和幻觉：它很强，却不能完全相信。Devin 是较早的一批 coding agent，也宣称能解决数学问题。当时 GPT-4 幻觉明显，还没有后来带思维链的模型，大家对自主完成任务仍在观望。理论上，不知疲倦的系统可以反复尝试，直到找到较好的解；但模型训练中有很强的完成任务奖励，会影响它实际选择的路径。</p>
 <p id="l08-src-022">博士生也会遇到类似取舍：有人想在设计前读完所有文献，导师则会要求边做边学，看到什么、需要什么，再学什么。这是在平衡广度与深度。今天 ReAct 式 agent 自己调用工具，也承受尽快完成任务的压力，容易选择较短的路径。DeepSeek 的思维链中常出现“等一等，也许还有别的可能”，但一旦认定方向，就会继续往下。任务太难时，它也可能直接表示无法解决并停止；这些倾向与强化学习有关。</p>
@@ -70,7 +70,7 @@
 <p id="l08-src-033"><em>图 4：15:14，终端里用 eza 看仓库。可见 CLAUDE.md、README.md、AGENTS.md、Makefile、TODO.md，以及 p1到 p8。</em></p>
 <p id="l08-src-034"><a href="../assets/08-05.jpeg"><img alt="图 5" src="../assets/08-05.jpeg" /></a></p>
 <p id="l08-src-035"><em>图 5：20:42，它在浏览器里打开的简介页。深色卡片，底下嵌着一段终端。</em></p>
-<h2 id="l08-src-037">同一个 prompt，世界在变<button type="button" class="copy-section" data-copy-section="l08-src-037" aria-label="复制“同一个 prompt，世界在变”小节">复制本节</button></h2>
+<h2 id="l08-src-037">同一个 prompt，世界在变<button type="button" class="copy-section" data-copy-section="l08-src-037" aria-label="复制“同一个 prompt，世界在变”小节" title="复制“同一个 prompt，世界在变”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-038"><em>原片 00:22:34–00:27:33</em></p>
 <p id="l08-src-039">今天常见的一种 harness 机制叫 Ralph loop，实际实现可能远不止三行。Agent 也能产生 subagent。Claude 今年某个版本加入了类似能力：像调用 Bash 一样生成 TypeScript，在 <code>for</code> 循环中调用 agent，把循环变量或计算出的字符串填入自然语言任务。调用可以异步执行，再等待结果。我不记得具体语法，可能通过 <code>await</code> 等待某个 agent 完成。</p>
 <p id="l08-src-040">Ralph loop 的名字来自《辛普森一家》中的 Ralph：有点笨、有点可爱，却不放弃。最简单的循环不断把同一个 prompt 交给 <code>claude -p</code>，重复执行任务、检查和修改。模型给过一句贴切的概括：“The prompt stays the same, but the world changes.” 理想情况下，足够强的模型只需 Bash 就能探索方案；现实中的模型仍会偏离方向，也会受已有代码影响。它通常倾向于遵守指令、保留用户现有内容，即使这些内容质量很差。</p>
@@ -78,7 +78,7 @@
 <p id="l08-src-042">可以用 prompt、loop 等方式管理设计空间，要求模型兼顾广度研究与深入实现。Ralph loop 提供了一种线性推进方式。长任务容易超过上下文容量：Codex 原本进展顺利，突然开始 compact，需要等待、消耗额度，压缩后还可能暂时丢失重要信息，重新积累上下文后才恢复。最近上下文扩展到 500K，确实改善了这个问题，但长任务仍需要分阶段推进。我倾向于把它理解成状态机，物理世界也可以看作状态转移系统。</p>
 <p id="l08-src-043"><a href="../assets/08-06.jpeg"><img alt="图 6" src="../assets/08-06.jpeg" /></a></p>
 <p id="l08-src-044"><em>图 6：23:34，《Ralph Loop》。同一任务反复执行、检查与修改，每轮开启新对话，进展留在工作区文件里。示例命令为 <code>while true; do cat PROMPT.md | claude -p; done</code>。循环本身不会判断何时无法改进，停止条件需要另行约定。</em></p>
-<h2 id="l08-src-046">工作区是状态<button type="button" class="copy-section" data-copy-section="l08-src-046" aria-label="复制“工作区是状态”小节">复制本节</button></h2>
+<h2 id="l08-src-046">工作区是状态<button type="button" class="copy-section" data-copy-section="l08-src-046" aria-label="复制“工作区是状态”小节" title="复制“工作区是状态”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-047"><em>原片 00:27:33–00:33:24</em></p>
 <p id="l08-src-048">可以把 workspace 看作软件开发的完整状态。最初只有 <code>spec.md</code>，几乎没有实现；循环读取任务与 prompt，执行一轮后进入下一状态，可以做一次 git commit，再开始下一轮。Prompt 可以限制每次工作量，要求检查结果，或请另一个 agent review。这样把长任务分为许多可检查的小步，形成一个非确定的状态机。</p>
 <p id="l08-src-049">同一个状态上可以选择不同操作：让 GPT 开发、Claude review，或 DeepSeek 执行任务。也可以定期做架构检查，例如每周评估项目是否积累了 AI slop，再进入重构。重构 agent 可以先移除有问题的实现并提交，再由另一个 agent 用更合适的架构重做。可选操作形成搜索树，实际执行时则逐步选择路径，直到完成任务。每次开发都是一次状态迁移。</p>
@@ -86,14 +86,14 @@
 <p id="l08-src-051">我觉得，在导师已经想清研究方向的情况下，agent 已经能替代博士生承担一些执行工作。培养人仍然重要，从不会到会的过程有独立价值；但如果教授只看论文、研究成果和项目等指标，部分博士生的执行能力可能还不如经过 prompt 调整、配好 loop 的 agent，即使已经毕业也一样。</p>
 <p id="l08-src-052"><a href="../assets/08-07.jpeg"><img alt="图 7" src="../assets/08-07.jpeg" /></a></p>
 <p id="l08-src-053"><em>图 7：32:36，《Ralph Wiggum Loop》。Geoffrey Huntley 借用了《辛普森一家》里 Ralph Wiggum 的名字。他形容这个方法：有点笨、有点可爱，但从不放弃。</em></p>
-<h2 id="l08-src-055">同一句话，两次结果不一样<button type="button" class="copy-section" data-copy-section="l08-src-055" aria-label="复制“同一句话，两次结果不一样”小节">复制本节</button></h2>
+<h2 id="l08-src-055">同一句话，两次结果不一样<button type="button" class="copy-section" data-copy-section="l08-src-055" aria-label="复制“同一句话，两次结果不一样”小节" title="复制“同一句话，两次结果不一样”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-056"><em>原片 00:33:24–00:40:06</em></p>
 <p id="l08-src-057">我也实现了一个简单的 loop，由 prompt 驱动：每轮先检查当前状态，只推进明确步骤；未完成时把下一步写入文件，所有状态留在仓库中。只有确认整个任务完成，才输出 <code>RALPH_DONE</code>，外层循环看到这个标记就停止。这份 prompt 也可能由 AI 根据我的一两句话生成。</p>
 <p id="l08-src-058">可以用同一任务比较两个 agent：一个套 loop，一个直接生成名片。结果有随机性，不能据此断言哪种方式总是更好。直接生成的那张很花哨，有玻璃动效和 macOS 风格终端，也许受已有上下文影响，但邮箱和头衔都错了。Loop 生成的版本朴素，计算机学院副教授、邮箱和 GitHub 信息却是正确的。差异也与 loop 中的 prompt 有关。</p>
 <p id="l08-src-059">同一模型投入的算力和 prompt 不同，结果可能差很多。网上推荐的 prompt、skill 可以借鉴，但长期使用后，可能还是自己写的更符合需求。与模型反复磨合，才能判断哪些任务可以放手执行、哪些结果需要核对。</p>
 <p id="l08-src-060">那份“世界上最好的编程语言”调研还在运行，等它输出 <code>RALPH_DONE</code>。它由一百五十行 agent 和几行脚本驱动，已有结论是不存在绝对最好的语言，也整理了一些材料。我先移走已有 research，再用同样 prompt 跑一次，完成后比较结果。这些工具只有 Bash，模型在这种限制下仍能完成不少工作。</p>
 <p id="l08-src-061">Agent loop 没有公认的最佳设计。Codex、Claude Code、Pi 哪个更好，很难一概而论。Pi 本身没有 subagent，生态中已有多个相关插件，流行程度也不同。模型升级还可能改变原有 prompt 的效果。新版本发布时，可以先暂时移除已有 skill，用熟悉任务做对照：没有这些额外指令，模型也可能表现更好。当前工具仍在快速变化。眼前的调研结果中，loop 版本显得更保守，至少说明外层循环会明显影响输出。</p>
-<h2 id="l08-src-063">别信开发者<button type="button" class="copy-section" data-copy-section="l08-src-063" aria-label="复制“别信开发者”小节">复制本节</button></h2>
+<h2 id="l08-src-063">别信开发者<button type="button" class="copy-section" data-copy-section="l08-src-063" aria-label="复制“别信开发者”小节" title="复制“别信开发者”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-064"><em>原片 00:40:06–00:48:10</em></p>
 <p id="l08-src-065">Loop 中一条重要要求是：每轮检查当前状态，只推进一个明确步骤，然后验证和评估结果。模型训练和当前上下文都可能使它偏离目标，限制为小规模状态迁移，再停下来检查，可以挡住一部分问题。检查可以由另一个模型 review，也可以运行测试和脚本，以此确认项目正在改善。</p>
 <p id="l08-src-066">软件工程早就在处理开发者不可靠的问题。计算机系统基础课有两条提醒：机器按规则执行，先怀疑自己的代码。人天然会相信自己，觉得只改一句文档、把循环起点从 1 改为 0，或者单元测试已过，就应该没问题。做 OJ 时也会反复判断“能交了吗”。但这种自信可能漏掉影响，现实中确实有小小的 PR 导致生产系统故障。</p>
@@ -104,7 +104,7 @@
 <p id="l08-src-071"><em>图 8：40:20，《Everything Is a State Machine》。Workspace 等于 state，agent 等于 transition。需求、文档、当前实现、测试用例、运行结果、日志、待办，都在这个状态里。有了版本控制就可以并行，状态可以分叉，并行任务之间的依赖还是要协调。long-horizon task 可以比任何一次会话都长，前提是下一轮能从留下的状态继续。</em></p>
 <p id="l08-src-072"><a href="../assets/08-09.jpeg"><img alt="图 9" src="../assets/08-09.jpeg" /></a></p>
 <p id="l08-src-073"><em>图 9：42:14，《每次 Transition，都检查》。每轮都验证并评估结果。开发者是不可信的，自以为只改一点点不会有事。希望每个状态都是好的：能构建，旧功能没坏，符合项目约定。没问题就可以发布。</em></p>
-<h2 id="l08-src-075">检查要有约束力<button type="button" class="copy-section" data-copy-section="l08-src-075" aria-label="复制“检查要有约束力”小节">复制本节</button></h2>
+<h2 id="l08-src-075">检查要有约束力<button type="button" class="copy-section" data-copy-section="l08-src-075" aria-label="复制“检查要有约束力”小节" title="复制“检查要有约束力”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-076"><em>原片 00:48:10–00:59:32</em></p>
 <p id="l08-src-077"><code>.github</code> 中可能有许多 workflow。过去需要手写 YAML、嵌入仓库名、学习这类 DSL；今天可以先明确哪种状态迁移触发什么操作，再让模型实现。例如提交或合并时运行检查，本地 pre-commit 先编译、lint。</p>
 <p id="l08-src-078">Lint 泛指无需运行程序即可执行的静态检查，包括缩进、换行和空格等，例如 <code>a = 1</code> 这样的赋值表达式也应使用一致格式。初学者容易忽略格式，写久了就会发现，可读性规范是软件工程最基础的约束，连这些都不一致，后续更容易出问题。Pre-commit 适合快速检查，提交后 CI 可以在容器中运行更完整的任务。国内有免费容器服务，虽然排队长、速度慢；GitHub Actions 也提供额度，我记得每月大约 2000 分钟。还可以在上面运行 Claude Code 和 Ralph loop：push 一个任务，hook 启动 agent，修改并提交，再触发后续流程。要防止流程把自己破坏，可能需要分两段设计，订阅未必能直接使用，可能要走 API。前提是清楚什么时候运行 lint、单元测试、集成测试或长时间模糊测试，后面的课会继续讲。</p>
@@ -116,7 +116,7 @@
 <p id="l08-src-084"><em>图 10：48:21，《Hook-Based CI/CD》。Commit、push、pull request 等事件可以触发指定动作，例如 PR 新增提交后自动运行 lint 和测试。本地 pre-commit 反馈快，却能被 <code>--no-verify</code> 跳过；远程检查结合 required checks 与分支保护，才能在失败时阻止合并。</em></p>
 <p id="l08-src-085"><a href="../assets/08-11.jpeg"><img alt="图 11" src="../assets/08-11.jpeg" /></a></p>
 <p id="l08-src-086"><em>图 11：52:45，《CI 在 Agentic AI 时代的含金量》。第一条：开发者是不可信的。agent 会一写就是 20KB 文档，事无巨细，在细枝末节上过度反应，写出人无法阅读的代码。项目还要人一起维护，就必须强行阻止。页上写的是：正好，CI 阻止，agent 修正。可以类比丰田的 jidoka：发现异常就停线。负责改代码的 agent，不能单方面把过关标准放低。</em></p>
-<h2 id="l08-src-088">从空仓库开始<button type="button" class="copy-section" data-copy-section="l08-src-088" aria-label="复制“从空仓库开始”小节">复制本节</button></h2>
+<h2 id="l08-src-088">从空仓库开始<button type="button" class="copy-section" data-copy-section="l08-src-088" aria-label="复制“从空仓库开始”小节" title="复制“从空仓库开始”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-089"><em>原片 00:59:32–01:06:58</em></p>
 <p id="l08-src-090">Ralph loop 把 workspace 当作状态，借助 Git 逐步推进，并在 pre-commit、post-commit、pre-push、pre-merge 等位置设置检查。这就是 agent-native 开发的一部分。OpenAI 的文章 Harness engineering: leveraging Codex in an agent-first world 发布时引起过不少讨论。Codex、Claude Code 的团队都谈到减少人工写代码。我记得 Claude Code 曾出现 source map 泄露；在我看来，这应该通过门控检查公开产物中的明文内容。</p>
 <p id="l08-src-091">文章写道：“We started with an empty git repository.” 人从空仓库开始组织 agent 工作，仍然需要定义环境、约束、反馈和验证。例如 push 前检查明文和 API key 泄露。公开 Codex 仓库中的 CI 按 PR 做快速检查，进入 main 后做全量验证，发布时再检查一轮。可见内容包括 lint、Cargo 格式化，以及文件、函数过大等基础规则；main 阶段运行更多测试，发布阶段打标签。</p>
@@ -131,7 +131,7 @@
 <p id="l08-src-100"><em>图 14：01:03:52，《Stripe Minions：哪些步骤需要 Agent？》固定工序写进工作流。实现任务、修 CI 失败，由 agent 决定怎么做。跑 linter、推送分支，直接执行普通代码，不调模型。完整 CI 最多两轮。第二次推送之后，分支交回人来审。</em></p>
 <p id="l08-src-101"><a href="../assets/08-15.jpeg"><img alt="图 15" src="../assets/08-15.jpeg" /></a></p>
 <p id="l08-src-102"><em>图 15：01:06:57，左边是讲稿，右边是 <code>ralf-loop.sh</code>。循环里把任务交给 <code>agent.py</code>，输出里出现 <code>RALPH_DONE</code> 就停。</em></p>
-<h2 id="l08-src-104">中文和英文得是同一件事<button type="button" class="copy-section" data-copy-section="l08-src-104" aria-label="复制“中文和英文得是同一件事”小节">复制本节</button></h2>
+<h2 id="l08-src-104">中文和英文得是同一件事<button type="button" class="copy-section" data-copy-section="l08-src-104" aria-label="复制“中文和英文得是同一件事”小节" title="复制“中文和英文得是同一件事”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-105"><em>原片 01:06:58–01:18:01</em></p>
 <p id="l08-src-106">Clone DeepSeek harness 后，首先会发现它的项目组织与常见仓库不同。作为中文母语者，我读中文仍比英文快，可能快一倍，这有助于从整页文档中快速定位信息。但项目面向全球，又需要同时维护中文与英文。文档随时修改，数量一多，怎样持续保持双语一致？这种问题通常需要实践经验才能提前意识到。</p>
 <p id="l08-src-107">打开 docs 中的 architecture，能看到清楚的结构和大量交叉引用。我检查到的这些链接是有效的，文档之间也保持一致。它通过规范和门控维护双语：每篇文档与同目录中的另一语言版本、i18n YAML 文件形成配对。两种语言具有对等权威，本次先修改的一侧就是源，另一侧由 agent 翻译更新，要求两者表达同一件事。</p>
@@ -143,7 +143,7 @@
 <p id="l08-src-113"><em>图 16：01:07:00，《DeepSeek Harness》课程过渡页。</em></p>
 <p id="l08-src-114"><a href="../assets/08-17.jpeg"><img alt="图 17" src="../assets/08-17.jpeg" /></a></p>
 <p id="l08-src-115"><em>图 17：01:07:21，《真正的经验》。很难凭空想出。真实的负载、依赖和异常，会把原型里藏着的设计假设暴露出来。垃圾回收解决不了所有问题。持续清理技术债，也可能一直在维护一个已经失效的设计假设。失败让你看见架构该往哪边改。</em></p>
-<h2 id="l08-src-117">从空仓库长到今天<button type="button" class="copy-section" data-copy-section="l08-src-117" aria-label="复制“从空仓库长到今天”小节">复制本节</button></h2>
+<h2 id="l08-src-117">从空仓库长到今天<button type="button" class="copy-section" data-copy-section="l08-src-117" aria-label="复制“从空仓库长到今天”小节" title="复制“从空仓库长到今天”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-118"><em>原片 01:18:01–01:28:30</em></p>
 <p id="l08-src-119">仓库历史中，2026 年 6 月 10 日晚上 11 点有一次从零开始的提交。项目从空仓库发展到今天，过程都保留着。参与者包括 turtle、张子雅和崔天逸，他们也在我们讨论的群里。6 月 25 日先加入 terminology，当时还没有配对机制，只有术语约定，说明他们已经意识到文档的重要性。7 月开始加入配对与门控，7 月 3 日出现对等权威和 sidecar，并接入自动化流程。我不确定设计借鉴了哪个项目；pre-LLM 时代已有类似思想，例如 Python 的 Sphinx、Java 的 Javadoc，以及 C++ 的文档提取工具，用规定格式的注释生成 API 参考。Agent 时代把同步工作交给模型，配对机制就更有价值。项目很早就确定了这套方式，随后持续维护中英文版本。</p>
 <p id="l08-src-120">这也是项目第一眼就显得不同的原因。我很感谢 DeepSeek 和 DeepSeek harness 开源这些经验。相比之下，OpenAI 公开仓库展示的主要是基础 lint、测试和构建配置。我的判断是，它们内部还有更多维护机制，例如定期 agent review；博客提过早期每周做一次此类评审，但完整配置并未随可编译代码一起公开。</p>
@@ -153,12 +153,12 @@
 <p id="l08-src-124">我们把这个思路进一步用于带执行语义的代码块。通过轻量扩展 Markdown 围栏语法，可以声明代码块必须出现在某个位置，或按某种规则与其他内容保持关联，再由检查器验证。</p>
 <p id="l08-src-125">这些 skill 还处理事务与机制的分离，配合文档同步、静态检查、覆盖率、快照等机械门控。代价是每次代码提交前要运行许多检查，但人更多负责制定 plan，与 AI 明确做什么、做到什么程度，再交给它实现。我们的 plan 写在 logbook 中，只修改计划、没有改代码时，无须跑全部 CI。项目还有客户端界面、翻译配对、入口和 TypeScript 等检查，例如文档中粘贴的类型必须与源码等价。单条规则很小，合起来支撑了维护，再加上文档分层、任务到机制的路由，形成 agent-native 工作方式。</p>
 <p id="l08-src-126">从去年到今年，尤其是今年年初这半年，变化很快。项目从六月开始规划，在短时间里形成了不少可学习的经验。看见后会觉得合理，凭空却很难想全。只在教室里讨论语言规则，容易局限于当前上下文，看不到其他设计方向。这些开发者与我年龄相近，崔老和我是同龄人。他们经历过实践与失败，才形成这些办法。即使经验丰富，项目仍可能需要重构。我也会要求学生从新的空白实现开始，逐步迁回旧功能，保持清楚的架构。持续清理无法解决全部问题，必要时需要在模块或整个项目范围内重构。</p>
-<h2 id="l08-src-128">重构没赶上，人就走了<button type="button" class="copy-section" data-copy-section="l08-src-128" aria-label="复制“重构没赶上，人就走了”小节">复制本节</button></h2>
+<h2 id="l08-src-128">重构没赶上，人就走了<button type="button" class="copy-section" data-copy-section="l08-src-128" aria-label="复制“重构没赶上，人就走了”小节" title="复制“重构没赶上，人就走了”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-129"><em>原片 01:28:30–01:34:00</em></p>
 <p id="l08-src-130">历史上也有重构来不及的案例。早期社交网络 Friendster 很快吸引大量用户，架构却无法承担负载，出现延迟与宕机。那是 pre-LLM 时代，今天 agent 也许能提供更多帮助。这样的失败经验，同样启发了 agent-native 开发机制。</p>
 <p id="l08-src-131">我担心实践机会出现差距。没有多次尝试、失败和构建的经历，很难把系统做好。即使 intent 很好，缺少经验的团队也可能沿着一个方向积累大量 AI slop，最后被别人用更好的实现追上。有经验的团队更可能收敛到合适方案。开学时说“没有 token 的学生应该立即退学”是玩笑，但 token 少确实意味着尝试机会少。阅读优秀开源项目能帮助理解设计，仍然需要亲手试错。</p>
 <p id="l08-src-132">这可能形成就业门槛：如果毕业生的执行能力还不如 agent，用人单位可能选择给资深员工更多 token。培养新人需要四五年，企业未必等得起，而 agent 已经可用且持续进步。我最近在 Grok 的机器人中使用 Claude Code，20 美元订阅下的 Opus 额度对我还算够用，能力也强；本科生达到这样的执行水平并不容易。资深开发者再配合自己的 harness，差距可能继续扩大。如果这些经验一直只留在企业内部，后来者更难追上。DeepSeek 的开源在这方面有价值。这个社会问题也许只有大学有机会认真处理，因为大学的目标不应只剩盈利与 KPI。</p>
-<h2 id="l08-src-134">样板课换了执行的人<button type="button" class="copy-section" data-copy-section="l08-src-134" aria-label="复制“样板课换了执行的人”小节">复制本节</button></h2>
+<h2 id="l08-src-134">样板课换了执行的人<button type="button" class="copy-section" data-copy-section="l08-src-134" aria-label="复制“样板课换了执行的人”小节" title="复制“样板课换了执行的人”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l08-src-135"><em>原片 01:34:00–01:37:09</em></p>
 <p id="l08-src-136">但大学也有自己的考核结构。科研经费等指标、基金委与科技部项目、优青杰青等评价，形成了一套近似公司化运行的体系。我的激烈判断是：当学生与教师的工作方式都受到 agent 冲击，这套体系可能失效，大学肯定要崩溃。另一方面，培训机构可能形成新的学校形态：投入资金，请优秀的人设计样板课，其他教师执行；未来执行环节又可由教师与 AI 共同完成。它们能重新投资课程设计，现有大学却有较大惯性，仍需沿用当前授课方式。未来究竟怎样，我也不知道。</p>
 <p id="l08-src-137">我感谢开源社区，这些理解很大程度上来自阅读其中的优秀项目，也促成了这门课。大家可以从 DeepSeek harness 开始继续探索。它与今天演示的小循环共享基本思路：那份 <code>agent.py</code> 还不是完整的 Ralph loop，却可以看作 harness 的最小内核。成熟项目进一步把能力插件化，许多具体经验都放在插件中。</p>

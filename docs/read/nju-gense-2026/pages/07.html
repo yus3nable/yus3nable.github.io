@@ -8,10 +8,10 @@
   <link rel="canonical" href="https://yus3nable.github.io/read/nju-gense-2026/pages/07.html">
   <link rel="icon" href="../../../assets/mark.svg" type="image/svg+xml">
   <meta name="theme-color" content="#faf9f5">
-  <script src="../../../assets/theme.js?v=1794326744854481215"></script>
-  <link rel="stylesheet" href="../../../assets/reader.css?v=1794326744854481215">
-  <link rel="stylesheet" href="../../../assets/theme.css?v=1794326744854481215">
-  <script defer src="../../../assets/reader.js?v=1794326744854481215"></script>
+  <script src="../../../assets/theme.js?v=1794368222040350840"></script>
+  <link rel="stylesheet" href="../../../assets/reader.css?v=1794368222040350840">
+  <link rel="stylesheet" href="../../../assets/theme.css?v=1794368222040350840">
+  <script defer src="../../../assets/reader.js?v=1794368222040350840"></script>
 </head>
 <body>
   <header class="top">
@@ -37,7 +37,7 @@
       <p class="meta">课程</p>
       <article class="prose" data-material-id="nju-gense-2026" data-page-id="07"><h1 id="07-2">07 · 需求和架构 (2)</h1>
 <p>南京大学 · 蒋炎岩 · 2026 · <a href="https://www.bilibili.com/video/BV1JGap6LE74/">原视频</a></p>
-<h2 id="l07-src-001">选数据库的那一刻，债就背上了<button type="button" class="copy-section" data-copy-section="l07-src-001" aria-label="复制“选数据库的那一刻，债就背上了”小节">复制本节</button></h2>
+<h2 id="l07-src-001">选数据库的那一刻，债就背上了<button type="button" class="copy-section" data-copy-section="l07-src-001" aria-label="复制“选数据库的那一刻，债就背上了”小节" title="复制“选数据库的那一刻，债就背上了”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-002"><em>原片 00:00:00–00:04:03</em></p>
 <p id="l07-src-003">今天继续讲需求与架构。这两件事常常分不开：产品足够复杂时，intent、specification 和 implementation 之间就会出现 gap。瀑布模型提供了一种理解它的方式；沿着数据依赖构造 minimum viable product，则是在控制复杂性。</p>
 <p id="l07-src-004">上一节提到，代码之外有客户的规律，客户之外有社会的规律，社会之外有宇宙的规律。观察需求的位置不同，看到的内容也不同。我通过浏览器逆向了教务系统中与教师有关的需求，形成一份符合产品文档习惯的需求规格说明书。它只覆盖教师这一部分，还没有覆盖整套教务系统。</p>
@@ -48,7 +48,7 @@
 <p id="l07-src-009"><em>图 1：00:07，《Intent → Spec → Impl》。看似明确的需求，其实都有很多开放的空间。公平分配稀缺名额，可以落到同优先级抽签，也可以按紧要程度排序。让空余名额被利用，可以退课后候补递补，也可以到期释放预留。页底写着：未确认的假设可能使目标漂移，需要回溯原意。</em></p>
 <p id="l07-src-010"><a href="../assets/07-02.jpeg"><img alt="图 2" src="../assets/07-02.jpeg" /></a></p>
 <p id="l07-src-011"><em>图 2：00:37，《架构无处不在》。从 10 行到 500,000 行：Tower of Hanoi、QRGen、教务系统（今天继续）。“脑子一热”的可行架构往往还有改进的空间。</em></p>
-<h2 id="l07-src-013">选课这件事，复杂是消不掉的<button type="button" class="copy-section" data-copy-section="l07-src-013" aria-label="复制“选课这件事，复杂是消不掉的”小节">复制本节</button></h2>
+<h2 id="l07-src-013">选课这件事，复杂是消不掉的<button type="button" class="copy-section" data-copy-section="l07-src-013" aria-label="复制“选课这件事，复杂是消不掉的”小节" title="复制“选课这件事，复杂是消不掉的”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-014"><em>原片 00:04:03–00:14:17</em></p>
 <p id="l07-src-015">Brooks 说，软件工程要驾驭复杂性。需求规格说明书展开后，现实软件会显得十分复杂，其中一些复杂性无法消除。这就是问题领域中的 essential complexity：选课涉及容量、先修、时间冲突、排课、教室，系统还要支持师生借教室。物理世界的复杂性投影到信息世界后依然存在，只能用架构去管理。</p>
 <p id="l07-src-016">技术债涉及另一类复杂性。选择数据库或文件系统，都要作取舍。文件系统便于直接修改，也方便组合 Unix 工具，但性能和并发处理可能不如数据库。它通常不提供跨多次读写的原子事务，无法保证这些操作 all or nothing，像加了一把锁一样整体完成。也有人尝试在操作系统中实现文件系统级事务。数据库能提供事务，调试时却多了一层间接访问，无法像文件一样直接接上各种 Unix 工具。查询理论上也能与工具组合，但交给 agent 后又多一层转换。技术选型带来的这些负担，就是 accidental complexity。</p>
@@ -62,7 +62,7 @@
 <p id="l07-src-024">这些概念可能仍然抽象。我最近重读了一些老论文，发现软件工程诞生初期乃至更早，人们就已经思考程序应该怎样构造。接下来打开《结构化程序设计》的 PDF 看原文。</p>
 <p id="l07-src-025"><a href="../assets/07-03.jpeg"><img alt="图 3" src="../assets/07-03.jpeg" /></a></p>
 <p id="l07-src-026"><em>图 3：14:00，《需求工程：直面 Essential Complexity》。需求越完备，歧义越小。例子是“课程容量 100 人”：候补算不算，跨院预留名额能否借用。每个需求点都带来审计的代价。换到今天，是 token 开销，以及模型潜在的错误发挥。每补上一条约束，也多一条需要持续核对的承诺。</em></p>
-<h2 id="l07-src-028">人的脑袋很小<button type="button" class="copy-section" data-copy-section="l07-src-028" aria-label="复制“人的脑袋很小”小节">复制本节</button></h2>
+<h2 id="l07-src-028">人的脑袋很小<button type="button" class="copy-section" data-copy-section="l07-src-028" aria-label="复制“人的脑袋很小”小节" title="复制“人的脑袋很小”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-029"><em>原片 00:14:17–00:25:59</em></p>
 <p id="l07-src-030">书里讨论的程序规模与今天的软件工程不同。Dijkstra 还在画流程图，讨论顺序、选择、循环，以及是否需要 goto。当时关于“goto is harmful”的争论，有些只涉及一个小函数。他认为顺序、选择和循环足以表达程序逻辑。这些示例今天看起来简单，却已经体现出结构。书写得很好，今天也可以换一种方式来读。</p>
 <p id="l07-src-031">读书仍然必要，有了合适的 AI 工具，读书比以前容易了。前两天我给每位博士生的建议都是读经典。我研究操作系统、编程语言和软件工程；在我看来，1980—2010 年是这三个领域的黄金时期，后来研究逐渐变窄。当时许多系统尚不存在，人们提出大量设想，讨论怎样把它们建出来。</p>
@@ -81,7 +81,7 @@
 <p id="l07-src-044"><em>图 6：21:01，《Our Mental Aids》。Dijkstra 的 Part I 讨论枚举、归纳、抽象。案例在今天看来都是小程序，necklace（pearls）的比喻是在分解复杂性。每一颗 pearl 承载一项独立的设计决策。决定的先后，会改变其他层必须知道多少细节。过早把 image 解释成 lines，中间各层就都要理解 lines。原文指向 On What We Have Achieved。</em></p>
 <p id="l07-src-045"><a href="../assets/07-07.jpeg"><img alt="图 7" src="../assets/07-07.jpeg" /></a></p>
 <p id="l07-src-046"><em>图 7：25:33，《让 AI 带我们读第七章》。Part III §7 Concept Hierarchies，原文约第 208–220 页，任务是沿 TWLIST、MINISIM、Job Shop Model 读。问的是每层新增了什么概念，让使用者可以暂时忘掉什么细节。下面比较 Python 协程保留了什么，Go 不采用类型继承层次又舍弃了什么。</em></p>
-<h2 id="l07-src-048">层次一扔掉，动态规划就没法调<button type="button" class="copy-section" data-copy-section="l07-src-048" aria-label="复制“层次一扔掉，动态规划就没法调”小节">复制本节</button></h2>
+<h2 id="l07-src-048">层次一扔掉，动态规划就没法调<button type="button" class="copy-section" data-copy-section="l07-src-048" aria-label="复制“层次一扔掉，动态规划就没法调”小节" title="复制“层次一扔掉，动态规划就没法调”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-049"><em>原片 00:25:59–00:34:15</em></p>
 <p id="l07-src-050">我没有仔细读过这本书，可以让模型先面向本科生解释，再回到原文追问，也可以要求翻译或删去暂时不需要的部分。书中把数据与操作打包成概念，再通过前缀机制逐层构造，这就是抽象。无论模块叫 class 还是 method，都需要隔离内部复杂性。比如课程和教室怎样关联，先要建立合适的分类与概念。</p>
 <p id="l07-src-051">书中有个观察：学生程序质量差，常因为同时放在脑中的东西太多。OJ 中难调试的题，往往涉及数学性质，例如动态规划。一两百行代码只要结果错了，就很难定位；模拟题通常还能划分几个模块，封装成 class，单独测试，把中间状态映射到有物理含义的状态。两三百行动态规划若只剩数学表示，调试会很困难。</p>
@@ -91,7 +91,7 @@
 <p id="l07-src-055">一门课无法覆盖所有内容。来我这里读博士，需要读掉那一千篇 systems 文献中的相当一部分，有阅读方法后，这件事也许没那么困难。刚才读的是 1972 年的书。准备这节课时，我继续找 1980、1990 年代的材料，找到一场题为 Growing a Language 的演讲。演讲者参与设计了 Scheme，也是 The Java Language Specification 的合著者。读 Java 语言与虚拟机规范，可以了解语言和虚拟机的设计。他在 1998 年讨论面向对象编程语言的 OOPSLA '98 大会上作了 keynote；当时 Java 已经很流行。</p>
 <p id="l07-src-056"><a href="../assets/07-08.jpeg"><img alt="图 8" src="../assets/07-08.jpeg" /></a></p>
 <p id="l07-src-057"><em>图 8：32:03，第七章阅读笔记。沿并行、协程、模拟时间、SQS、hold/wait/activate 展开，并比较 prefix 与今天的 extends。</em></p>
-<h2 id="l07-src-059">语言要能长出来<button type="button" class="copy-section" data-copy-section="l07-src-059" aria-label="复制“语言要能长出来”小节">复制本节</button></h2>
+<h2 id="l07-src-059">语言要能长出来<button type="button" class="copy-section" data-copy-section="l07-src-059" aria-label="复制“语言要能长出来”小节" title="复制“语言要能长出来”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-060"><em>原片 00:34:15–00:47:01</em></p>
 <p id="l07-src-061">打开演讲 PDF，第一句是“Most of the time I do not read my talks.” 随手翻到十几页文字，很容易关掉，但值得停下来看看它的形式。这场演讲本身是一场表演：只使用单音节英文词，遇到多音节词就当场定义，类似带约束的文学创作。今天的 AI slop 很少有这样的设计，至少这种构想仍需要人的创造力。Language 在这里有双关含义：演讲通过受限的自然语言讨论编程语言如何使用。<code>woman</code>、<code>machine</code>、<code>vocabulary</code>、<code>programming</code>、<code>computer</code> 都需要定义，解释复杂事物便变得困难。我也想过，现在是否可以借助 AI 写一篇全用单音节词、却读起来顺畅的文章来挑战它。</p>
 <p id="l07-src-062">这个开场引出了编程语言的困境。相对于英语和用户需求，编程语言都很小，因为它必须具有可以在计算机上执行的形式语义。像 <code>woman</code> 这样的自然语言概念，很难直接赋予形式语义。但语言太小又难以使用，例如 Brainfuck 基本上只表达纸带上的左右移动、加法和判断，写一个 Hello World 都很费力。实用语言没有这么极端，C 却也因精简而有表达上的局限。它没有运算符重载，操作队列等结构不够方便；<code>qsort</code> 的比较函数接受 <code>const void *</code>，调用时还要提供 <code>nmemb</code> 和 <code>size</code>。C 缺少进一步构造语言抽象的能力，表达复杂概念时容易遇到困难。</p>
@@ -104,7 +104,7 @@
 <p id="l07-src-069"><em>图 9：34:15，《阅读经典（1990s）》。SICP 前言谈到命名如何帮助人唤起相关知识。Guy L. Steele Jr. 与 Gerald Jay Sussman 设计了 Scheme，著有 Common Lisp: The Language，并参与编写 The Java Language Specification。这里介绍的是他的 OOPSLA ’98 keynote：Growing a Language。</em></p>
 <p id="l07-src-070"><a href="../assets/07-10.jpeg"><img alt="图 10" src="../assets/07-10.jpeg" /></a></p>
 <p id="l07-src-071"><em>图 10：36:47，模型把这篇演讲收成笔记。可见的判断是：出路在于生长；bazaar 的精髓是计划随时能改；给 Java 的建议里有泛型、运算符重载和轻量的用户自定义类。</em></p>
-<h2 id="l07-src-074">经典埋着，品位被盖住了<button type="button" class="copy-section" data-copy-section="l07-src-074" aria-label="复制“经典埋着，品位被盖住了”小节">复制本节</button></h2>
+<h2 id="l07-src-074">经典埋着，品位被盖住了<button type="button" class="copy-section" data-copy-section="l07-src-074" aria-label="复制“经典埋着，品位被盖住了”小节" title="复制“经典埋着，品位被盖住了”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-075"><em>原片 00:47:01–00:49:21</em></p>
 <p id="l07-src-076">快速发展的时代里，许多经典被埋没了。学生进组后常常关注最新的 state of the art、师兄刚发表的论文，品位也容易受海量粗糙的人类内容和 AI slop 影响，例如 CSDN 上的低质量文章、难以自学的教材。今天只是随手举了两个例子，这样的经典还有成百上千。从本科高年级到博士毕业，我读了不少，也只覆盖其中一小部分，在此基础上形成了一些自己的想法。</p>
 <p id="l07-src-077">今天每个人都能更快接触作者原本想表达的思想。我期待一个“大学毁灭计划”：从大一第一门编程课起，重新组织知识点，利用 1970、1980、1990 年代的经典，为学生生成一套教材，不再局限于一本教科书，即使那本书由授课教师本人编写。</p>
@@ -113,7 +113,7 @@
 <p id="l07-src-080"><em>图 11：47:21，《好的架构：设计解空间》。固定协作规则，保留局部选择。接口契约与组合规则连接今天、变化中和未来的需求，使实现可以替换、组合和扩展。</em></p>
 <p id="l07-src-081"><a href="../assets/07-12.jpeg"><img alt="图 12" src="../assets/07-12.jpeg" /></a></p>
 <p id="l07-src-082"><em>图 12：47:25，《阅读经典，建立品味》。Comment 写着：有太多宝藏被埋在这个快速发展的时代了。海量人类产物和AI slop 在污染品位。他写自己很期待一个“大学毁灭计划”。下面问：拿自己的系统追问，作者把哪些判断交还给了使用者。</em></p>
-<h2 id="l07-src-084">像接水管一样接程序<button type="button" class="copy-section" data-copy-section="l07-src-084" aria-label="复制“像接水管一样接程序”小节">复制本节</button></h2>
+<h2 id="l07-src-084">像接水管一样接程序<button type="button" class="copy-section" data-copy-section="l07-src-084" aria-label="复制“像接水管一样接程序”小节" title="复制“像接水管一样接程序”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-085"><em>原片 00:49:21–00:57:38</em></p>
 <p id="l07-src-086">Unix Philosophy 有三条：每个工具 do one thing and do it well；write programs to work together；write programs to handle text streams。第三条用文本统一了人与程序、程序与程序的接口。二进制字节流对人不够友好；数据库虽然好用，每次查询都要经过 SQL，也会增加一层间接访问。人常常只想立即得到结果，对持续遵守额外规则并不擅长。模型则能接受类似“每句话后面加一个喵”的要求。McIlroy 在 1964 年就提出像连接花园水管一样连接程序。我记得管道到 1983 年前后才进入 Unix；动态链接等机制也深刻影响了今天的系统设计。</p>
 <p id="l07-src-087">Unix 建立了统一约定。The UNIX-HATERS Handbook 批评过它的许多设计，但命令行参数、输出格式和退出状态仍然构成了共同规则。<code>sed</code>、<code>awk</code> 奠定基础后，其他程序的输出逐渐兼顾这些工具与人的阅读。出错时，退出状态能把情况告诉下一个程序。这些约定加上管道，就形成了有效的组合机制。</p>
@@ -125,7 +125,7 @@
 <p id="l07-src-093"><em>图 14：52:33，《UNIX：使用者创造新的用途》。jq 把 JSON 收成文本，fzf 让人从候选项里选，xdotool 把窗口、键盘和鼠标变成命令。例子是书目 JSON 经 jq 抽出书名，再由人用 fzf 选；也可以用窗口 ID 组合出自己的窗口切换器。页底写着：设计者提供组合的规则，使用者可以创造设计者没有想到的用途。</em></p>
 <p id="l07-src-094"><a href="../assets/07-15.jpeg"><img alt="图 15" src="../assets/07-15.jpeg" /></a></p>
 <p id="l07-src-095"><em>图 15：53:55，他自己接上的打开文件菜单，停在 p6/jw-demo/index.html。列表里还有第一课的 index.md 和 qrgen.xlsx。</em></p>
-<h2 id="l07-src-097">表、包，和一座一直在改的城市<button type="button" class="copy-section" data-copy-section="l07-src-097" aria-label="复制“表、包，和一座一直在改的城市”小节">复制本节</button></h2>
+<h2 id="l07-src-097">表、包，和一座一直在改的城市<button type="button" class="copy-section" data-copy-section="l07-src-097" aria-label="复制“表、包，和一座一直在改的城市”小节" title="复制“表、包，和一座一直在改的城市”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-098"><em>原片 00:57:38–01:03:40</em></p>
 <p id="l07-src-099">第二个例子是关系数据库。文件系统提供原始接口，能复用 Unix 工具，却缺少统一管理。关系代数为数据建立了一个模型。我曾研究程序合成，发现只要涉及人类世界的数据，就很难绕开 E. F. Codd 1970 年的论文：用二维表以及表之间的操作描述世界，<code>join</code> 等操作能够完成大量数据管理任务。存储方式和可靠性则交给数据库实现。</p>
 <p id="l07-src-100">关系代数之上有了 SQL。Unix shell、Bash 和 SQL 都是语言；一个系统具备生长能力时，往往也会出现某种语言形式。SQL、查询优化器和事务让二维表表示当前世界的状态，一次 transaction 把它推进到下一状态。还可以用查询构造视图，表达对世界的某一种理解。实现层继续扩展规模，图书、学籍、财务、商城订单都可以用实体及其逻辑关系来表示。数据库规定表与操作，具体 schema 由应用决定，这种抽象隔离了复杂性，也保留了扩展空间。</p>
@@ -139,7 +139,7 @@
 <p id="l07-src-108"><em>图 17：58:12，《案例三：The Internet》。手机与数据中心的通信画成 TCP/IP 分层：应用 HTTP/TLS，传输 TCP，网络 IP，链路在手机一侧是 Wi-Fi，在数据中心一侧是以太网。路由器之间逐跳转发。示例是 HTTPS over TCP。</em></p>
 <p id="l07-src-109"><a href="../assets/07-18.jpeg"><img alt="图 18" src="../assets/07-18.jpeg" /></a></p>
 <p id="l07-src-110"><em>图 18：59:29，《Internet：在持续变化中演化》。RFC 1958（1996）说，技术变化在信息产业里是连续的。做好数据传输这一件事：Telnet 到 SSH，FTP、HTTP 到 HTTPS，SMTP 和 IMAP 一直用到今天。共同规则之上持续更换局部。城市的比喻是街道和建筑逐步更新，城市仍在运转。</em></p>
-<h2 id="l07-src-112">每个页面都是一次事务<button type="button" class="copy-section" data-copy-section="l07-src-112" aria-label="复制“每个页面都是一次事务”小节">复制本节</button></h2>
+<h2 id="l07-src-112">每个页面都是一次事务<button type="button" class="copy-section" data-copy-section="l07-src-112" aria-label="复制“每个页面都是一次事务”小节" title="复制“每个页面都是一次事务”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-113"><em>原片 01:03:40–01:12:22</em></p>
 <p id="l07-src-114">刚才的 systems 为通用应用提供抽象层，需要经受长期演化。经典例子包括 IBM System/360、Unix、面向对象编程语言、Internet、Android，以及云原生中的 Kubernetes。Android 后面可能会专门讲一次。接下来回到面向客户的软件架构。</p>
 <p id="l07-src-115">操作系统、数据库和 Internet 已经为业务系统提供了基础，教务、图书管理等应用可以在上面运行。回到 1998 或 2000 年，为学校或企业设计软件，一个直接的思路是把每个页面、每个功能做成一次 SQL transaction：数据库用表表示物理世界，通过事务改变状态。需求点对应事务，查询则提供当前状态的视图。例如查看选了生成式软件工程的学生，写一个 <code>select</code>，再把结果展示出来。当每个需求点都能对应一次事务或查询时，这就是合适的应用架构。</p>
@@ -153,7 +153,7 @@
 <p id="l07-src-123"><em>图 21：68:13，《Java Web：直接在 HTML 里写代码》。页面以“Write once, configure everywhere”调侃 Java 的配置负担，并介绍 Servlet 在 Java 中输出 HTML、JSP 1.0 在 HTML 中嵌入 Java。页面结构清楚后，仍须留意业务逻辑顺手进入页面的问题。</em></p>
 <p id="l07-src-124"><a href="../assets/07-22.jpeg"><img alt="图 22" src="../assets/07-22.jpeg" /></a></p>
 <p id="l07-src-125"><em>图 22：69:08，《JSP：从 Java 片段到表达式与标签》。同一张页面，上面是 scriptlet，下面用 JSTL 的 forEach 和 EL 输出 user.name。JSTL 1.0 是 2002，JSP 2.0 的 EL 是 2003。页底写着：换成标签，不会自动得到 MVC，业务规则仍需要独立的归属。</em></p>
-<h2 id="l07-src-127">看到的页面是状态的函数<button type="button" class="copy-section" data-copy-section="l07-src-127" aria-label="复制“看到的页面是状态的函数”小节">复制本节</button></h2>
+<h2 id="l07-src-127">看到的页面是状态的函数<button type="button" class="copy-section" data-copy-section="l07-src-127" aria-label="复制“看到的页面是状态的函数”小节" title="复制“看到的页面是状态的函数”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-128"><em>原片 01:12:22–01:19:04</em></p>
 <p id="l07-src-129">由此可以讨论 MVC，即 Model-View-Controller。我先说了 1972 年，更正一下，是 1979 年。这篇文章很短，大约两页。Models represent knowledge：谁选了什么课、有哪些订单，都是对当前世界的描述。View 是 model 的视觉表示，可以看作 state 的函数，而且希望它是纯函数。视图只负责展示，改变世界交给 controller。修改需求对应事务，展示需求对应状态的投影，各自职责清楚。</p>
 <p id="l07-src-130">MVC 很自然地成为信息系统的常见架构。教务系统中的 model 包括课程和选课记录，view 是页面，controller 接收按钮、输入框等产生的操作，再调用数据库事务。</p>
@@ -167,7 +167,7 @@
 <p id="l07-src-138"><em>图 24：72:50，《MVC：一次选课请求》。浏览器提交 POST /enroll。Controller 解析参数、确认身份、调用选课、选择模板。Model 检查先修、时间冲突和余量，在事务中验证并写回成功或失败。View 用模板把结果渲染成 HTML。选之前余量是 1，选之后余量是 0，按钮变成已选。</em></p>
 <p id="l07-src-139"><a href="../assets/07-25.jpeg"><img alt="图 25" src="../assets/07-25.jpeg" /></a></p>
 <p id="l07-src-140"><em>图 25：73:18，《把 ViewState 也当成 Model》。View 等于 render(Model, ViewState)。展开的菜单、hover 的元素，通常不进业务数据库。课程数据没变，只改筛选词，显示的列表就变了。页上引用 Fowler 2004 年的 Presentation Model：是否持久化，和是否值得建模，是两件事。</em></p>
-<h2 id="l07-src-142">一条长流程，一个 status 列装不下<button type="button" class="copy-section" data-copy-section="l07-src-142" aria-label="复制“一条长流程，一个 status 列装不下”小节">复制本节</button></h2>
+<h2 id="l07-src-142">一条长流程，一个 status 列装不下<button type="button" class="copy-section" data-copy-section="l07-src-142" aria-label="复制“一条长流程，一个 status 列装不下”小节" title="复制“一条长流程，一个 status 列装不下”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-143"><em>原片 01:19:04–01:24:32</em></p>
 <p id="l07-src-144">假设设计一个淘宝式系统，下单后要锁库存、算优惠、等待支付确认，再经过风控、发货、退款、售后和对账。二维表可以表示当前状态，但订单走到哪一步，需要进一步建模。最直接的方式是在 <code>order</code> 表里加 <code>status</code>，用 1 表示下单、2 表示库存环节、3 表示下一环节，或分别记录是否下单、锁库存、支付。流程一长，状态机就会复杂，风控失败还需要回退路径。这是业务的 essential complexity。教务系统也可能出现类似问题：某个学生在一些条件下能毕业，在另一些条件下又不能毕业。特批可能覆盖正常规则，让流程在“风控失败”之类的状态下继续前进，留下难以解释的不一致。我相信教务系统中也有许多手工修改造成的数据不一致，只要没有影响毕业，就暂时搁置了。</p>
 <p id="l07-src-145">长业务流程同时涉及过去、现在和未来。当前状态只是快照，它由过去的操作推演而来。如果丢掉形成过程，出现不一致时就很难追查。</p>
@@ -176,7 +176,7 @@
 <p id="l07-src-148"><em>图 26：83:06，《应对复杂性》。MVC 和 CRUD 解决了博客、社交网络、课程信息系统这类问题：业务对象比较稳定，一次请求完成一小段局部操作。长流程是下单、锁库存、优惠计算、支付、风控、发货、退款、售后、对账。强规则是修满学分、毕业设计、归还资产、特殊政策、毕业。会计账本写的是复式记账法。</em></p>
 <p id="l07-src-149"><a href="../assets/07-27.jpeg"><img alt="图 27" src="../assets/07-27.jpeg" /></a></p>
 <p id="l07-src-150"><em>图 27：84:24，《复式记账：同一笔业务，保持会计等式》。公司向银行借入 10,000 元，记在同一张凭证上：借银行存款 10,000，资产增加；贷短期借款 10,000，负债增加。合计借方等于合计贷方。资产等于负债加所有者权益，所有者权益保持不变。借和贷是记账方向，不等于收入和支出。</em></p>
-<h2 id="l07-src-152">不记现在，记发生过的事<button type="button" class="copy-section" data-copy-section="l07-src-152" aria-label="复制“不记现在，记发生过的事”小节">复制本节</button></h2>
+<h2 id="l07-src-152">不记现在，记发生过的事<button type="button" class="copy-section" data-copy-section="l07-src-152" aria-label="复制“不记现在，记发生过的事”小节" title="复制“不记现在，记发生过的事”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-153"><em>原片 01:24:32–01:35:47</em></p>
 <p id="l07-src-154">我采用了 event sourcing，记录状态如何迁移。像一棵树，既可以记录现在的样子，也可以记录生长过程。账本中保存今天收入 1000、明天支出 1000，以及各自原因。我没有先设计数据库，而是让 AI 做一个类似编译器的小系统，从最终报表的条目中提炼记账动作。例如支付营业成本时，货币资金、所有者权益、应付账款和现金流量表怎样变化。这张规则表由 AI 生成，我选择相信它，并依靠后续校验发现问题。</p>
 <p id="l07-src-155">总体架构是用 LLM 做编译器，把持久化、不可篡改的历史记录编译成小操作。发生什么就记录什么，连“特批某位不满足条件的学生毕业”也要留下事实。每个操作规定资产负债表、利润表和现金流量表怎样变化，再按顺序 reduce、replay，得到当前报表。实现中还有小规模的架构选择：原来的代码很长，我用 currying 合并重复部分。给 payroll 固定一部分参数后，剩下的就是可调用函数。这是函数式编程中常用的技巧。每笔银行收支对报表的影响都定义好后，按时间顺序执行即可生成当前报表。</p>
@@ -188,7 +188,7 @@
 <p id="l07-src-161"><em>图 28：84:36，《记账架构：Event Sourcing &amp; LLM as a Compiler》。原始凭证走到分录，再走到状态变化。借贷平衡是可检查的约束，不代表业务真实，分录仍要核对凭证。下面是 curry 过的 pay_payroll：按类别从 PAYROLL_FLOWS 取出流水，个人劳务单独记一笔，再支付净额。</em></p>
 <p id="l07-src-162"><a href="../assets/07-29.jpeg"><img alt="图 29" src="../assets/07-29.jpeg" /></a></p>
 <p id="l07-src-163"><em>图 29：86:27，屏幕上是模型生成的记账规则。左边是分录，右边分成资产负债表、利润表、现金流量表，每一行用正负号标账户怎么变。</em></p>
-<h2 id="l07-src-165">现在是过去算出来的<button type="button" class="copy-section" data-copy-section="l07-src-165" aria-label="复制“现在是过去算出来的”小节">复制本节</button></h2>
+<h2 id="l07-src-165">现在是过去算出来的<button type="button" class="copy-section" data-copy-section="l07-src-165" aria-label="复制“现在是过去算出来的”小节" title="复制“现在是过去算出来的”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p id="l07-src-166"><em>原片 01:35:47–01:39:41</em></p>
 <p id="l07-src-167">现在由过去推演而来。可查证、可追溯的计算过程，把 data dependency 显式建模了。普通数据库也可能存在表间依赖，但这些关系未必构成明确的计算图。例如通过 ICS 时，程序取出当时的课程学分加到总分里；课程学分后来可能变化。Event sourcing 保留事件发生时的事实及计算依据，能追查当时按几学分计算，减少各处派生结果不一致的问题。</p>
 <p id="l07-src-168">从这个角度看，我觉得 SQL 或关系代数也有一个“billion-dollar mistake”。这个说法来自 Tony Hoare 对自己引入空指针的调侃：空指针可能使程序崩溃，严重时甚至影响火箭。关系代数在当时提供了很好的可扩展架构，但没有把图灵可计算的依赖关系作为一等公民来管理。我也不能直接把它说成设计缺陷。比如学生表中为了快速查询而保存“能否毕业”的 0 或 1，其背后可能是复杂计算；关系代数很难把任意复杂计算表达成视图，这个派生字段就可能与其他数据不一致。</p>
