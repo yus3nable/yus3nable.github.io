@@ -29,27 +29,19 @@
         else range.setEnd(article, article.childNodes.length);
         const container = document.createElement('div');
         container.append(range.cloneContents());
-        container.querySelectorAll('button, .headerlink, .copy-status, script, style, .md-content__button').forEach(node => node.remove());
+        container.querySelectorAll('button, .headerlink, .copy-status, script, style, .md-content__button, .reader-actions, .reading-detail, .reading-mode').forEach(node => node.remove());
         container.querySelectorAll('[href], [src]').forEach(node => {
           for (const attribute of ['href', 'src']) {
             if (node.hasAttribute(attribute)) node.setAttribute(attribute, new URL(node.getAttribute(attribute), location.href).href);
           }
         });
-        const html = container.innerHTML;
         container.style.cssText = 'position:fixed;left:-10000px;top:0;width:800px;';
         document.body.append(container);
         container.querySelectorAll('img').forEach(image => image.replaceWith(document.createTextNode(`\n![${image.alt}](${image.src})\n`)));
         const text = container.innerText.trim();
         container.remove();
         try {
-          if (window.ClipboardItem && navigator.clipboard.write) {
-            await navigator.clipboard.write([new ClipboardItem({
-              'text/html': new Blob([html], {type: 'text/html'}),
-              'text/plain': new Blob([text], {type: 'text/plain'})
-            })]);
-          } else {
-            await navigator.clipboard.writeText(text);
-          }
+          await navigator.clipboard.writeText(text);
           button.dataset.copyState = 'copied';
           status.textContent = '本小节已复制';
         } catch (error) {
