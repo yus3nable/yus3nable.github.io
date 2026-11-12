@@ -1,7 +1,7 @@
-/* Section copying for the independently published MkDocs readers. */
+/* Section copying for independently published readers. */
 (() => {
   function installCopyControls() {
-    const article = document.querySelector('.md-content__inner');
+    const article = document.querySelector('.md-content__inner, .prose');
     if (!article) return;
     const headings = [...article.querySelectorAll('h1, h2, h3, h4, h5, h6')];
     const status = document.createElement('p');

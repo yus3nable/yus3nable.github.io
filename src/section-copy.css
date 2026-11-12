@@ -22,3 +22,4 @@
 .copy-section[data-copy-state="error"] .copy-error { display: inline; }
 .copy-section[data-copy-state="error"] { color: var(--accent); }
 .copy-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.prose .copy-section { color: inherit; border-color: #ded9ce; background: #f7f5ef; }

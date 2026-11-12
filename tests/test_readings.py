@@ -42,6 +42,7 @@ class ReadingBuildTests(unittest.TestCase):
         self.assertIn('../../assets/theme.js?', page.read_text())
         self.assertIn('class="theme-toggle"', page.read_text())
         self.assertIn('<summary>目录</summary>', page.read_text())
+        self.assertEqual(page.read_text().count('class="copy-section"'), 2)
 
     def test_multiple_pages_rewrite_markdown_links_images_and_prev_next(self):
         self.manifest([{'id': '001', 'title': '第一节', 'markdown': 'content/001.md'},
