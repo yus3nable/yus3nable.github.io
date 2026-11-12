@@ -219,8 +219,7 @@ def build_readings(root, catalog):
             else:
                 navigation = '<details class="outline" open><summary>目录</summary>' + page_toc + '</details>'
             search_body = body
-            if item['id'] == 'nju-gense-2026':
-                body = copy_sections(source.read_text(encoding='utf-8'), body, material, source, source_routes, item['url'])
+            body = copy_sections(source.read_text(encoding='utf-8'), body, material, source, source_routes, item['url'])
             position = reading_order.index(number)
             prev = (f'<a rel="prev" href="{relative_url(route, routes[reading_order[position-1]])}">'
                     f'← {html.escape(pages[reading_order[position-1]]["title"])}</a>') if position else '<span></span>'

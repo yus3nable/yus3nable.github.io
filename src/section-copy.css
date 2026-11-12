@@ -1,0 +1,24 @@
+.md-content__inner { --ink: var(--md-default-fg-color); --paper: var(--md-default-bg-color); --line: var(--md-default-fg-color--lightest); --accent: var(--md-accent-fg-color); }
+.copy-section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 2.8rem;
+  height: 2.25rem;
+  margin-inline-start: .65rem;
+  padding: .4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 4%, var(--paper));
+  color: var(--ink);
+}
+.copy-section svg { width: 1.35rem; height: 1.35rem; }
+.copy-section:hover { border-color: var(--accent); color: var(--accent); }
+.copy-section:disabled { cursor: wait; }
+.copy-success, .copy-error { display: none; }
+.copy-section[data-copy-state] .copy-symbol { display: none; }
+.copy-section[data-copy-state="copied"] .copy-success,
+.copy-section[data-copy-state="error"] .copy-error { display: inline; }
+.copy-section[data-copy-state="error"] { color: var(--accent); }
+.copy-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

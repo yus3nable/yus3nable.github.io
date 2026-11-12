@@ -56,7 +56,7 @@ def build(sync):
     output = ROOT/'docs'
     assets = output/'assets'
     assets.mkdir(parents=True, exist_ok=True)
-    for name in ['style.css', 'app.js', 'theme.css', 'theme.js']:
+    for name in ['style.css', 'app.js', 'theme.css', 'theme.js', 'section-copy.js', 'section-copy.css']:
         shutil.copy2(ROOT/'src'/name, assets/name)
     local_indexes = build_readings(ROOT, catalog)
     rows = []

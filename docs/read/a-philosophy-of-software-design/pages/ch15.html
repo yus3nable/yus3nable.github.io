@@ -48,7 +48,7 @@
 <p>很多开发者把文档拖到开发末尾，等编码和单元测试全部完成才写。这几乎注定会产出低质量文档。写注释的最佳时机是开发之初，与编写代码同步进行。先写注释，就能让文档成为设计过程的一部分。这既能改善文档，也能改善设计，还能让写文档变得更愉快。</p>
 <!-- SOURCE pdf-137-b004 -->
 <div id="pdf-137-b004" hidden></div>
-<h2 id="ch15-section-01">15.1 拖到最后的注释，质量往往不好</h2>
+<h2 id="ch15-section-01">15.1 拖到最后的注释，质量往往不好<button type="button" class="copy-section" data-copy-section="ch15-section-01" aria-label="复制“15.1 拖到最后的注释，质量往往不好”小节" title="复制“15.1 拖到最后的注释，质量往往不好”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-137-b005 -->
 <div id="pdf-137-b005" hidden></div>
 <p>我遇到的开发者几乎人人都会拖延写注释。问他们为什么不早点写文档，他们会说代码还在变：早写了，代码变化时还得重写，不如等代码稳定。但我怀疑还有一个原因：他们觉得写文档枯燥乏味，能拖多久就拖多久。</p>
@@ -60,7 +60,7 @@
 <p>即使真能自律地回头补注释——别骗自己，多半做不到——写出来也不会很好。到那时，注意力已经离开这部分工作。在心里，这段代码已经完工，自己正迫不及待地想做下一个项目。知道写注释是应该的，却毫无乐趣，只想尽快写完。于是匆匆扫一遍代码，补上一些看起来像样的注释。距离设计代码已经过去一阵子，对设计过程的记忆逐渐模糊。写注释时盯着代码，注释也就变成了复述代码。即使试着回想代码中看不出的设计思路，也会遗漏一些已经忘记的事情。注释便缺少了它最应该描述的一些重要内容。</p>
 <!-- SOURCE pdf-138-b001 -->
 <div id="pdf-138-b001" hidden></div>
-<h2 id="ch15-section-02">15.2 先写注释</h2>
+<h2 id="ch15-section-02">15.2 先写注释<button type="button" class="copy-section" data-copy-section="ch15-section-02" aria-label="复制“15.2 先写注释”小节" title="复制“15.2 先写注释”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-138-b002 -->
 <div id="pdf-138-b002" hidden></div>
 <p>我的做法有所不同：从一开始就写注释。</p>
@@ -82,7 +82,7 @@
 <p>先写注释有三个好处。首先，注释质量更高。在设计类时写注释，重要的设计问题还记得很清楚，容易记录下来。每个方法最好先写接口注释，再写方法体，这样就能专注于方法的抽象和接口，不受实现干扰。在编码和测试过程中，还会发现并修正注释中的问题。注释会随着开发逐步完善。</p>
 <!-- SOURCE pdf-139-b001 -->
 <div id="pdf-139-b001" hidden></div>
-<h2 id="ch15-section-03">15.3 注释是一种设计工具</h2>
+<h2 id="ch15-section-03">15.3 注释是一种设计工具<button type="button" class="copy-section" data-copy-section="ch15-section-03" aria-label="复制“15.3 注释是一种设计工具”小节" title="复制“15.3 注释是一种设计工具”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-139-b002 -->
 <div id="pdf-139-b002" hidden></div>
 <p>一开始就写注释的第二个好处，也是最重要的好处，是改善系统设计。注释是完整表达抽象的唯一方式，而好的抽象是良好系统设计的基础。如果一开始就用注释描述抽象，就能在编写实现代码之前审视和调整它们。要写出好注释，必须明确变量或代码的要义：它最重要的方面是什么？在设计早期完成这件事很重要，否则就只是在拼凑代码。</p>
@@ -91,7 +91,7 @@
 <p>注释能像矿井中的金丝雀一样，提前警示复杂性。如果一个方法或变量需要很长的注释，就是危险信号，说明抽象不够好。回想第4章：类应当是深的，最好的类以非常简单的接口实现强大功能。判断接口复杂性的最佳方式，就是看描述它的注释。如果方法的接口注释既提供使用所需的全部信息，又简短清楚，就说明接口简单。相反，如果必须写很长、很复杂的注释才能完整描述方法，就说明接口复杂。将接口注释与实现对照，也能感知方法的深度：若接口注释必须描述实现中的所有主要特征，方法就是浅的。同样，如果完整描述变量需要很长的注释，就可能意味着变量划分不合理。总体而言，写注释让人能及早评估设计决策，发现并修正问题。</p>
 <!-- SOURCE pdf-139-b005 -->
 <div id="pdf-139-b005" hidden></div>
-<h3 id="ch15-section-04">危险信号：难以描述</h3>
+<h3 id="ch15-section-04">危险信号：难以描述<button type="button" class="copy-section" data-copy-section="ch15-section-04" aria-label="复制“危险信号：难以描述”小节" title="复制“危险信号：难以描述”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h3>
 <!-- SOURCE pdf-139-b007 -->
 <div id="pdf-139-b007" hidden></div>
 <p>描述方法或变量的注释应当简单且完整。如果很难写出这样的注释，就说明所描述对象的设计可能有问题。</p>
@@ -100,13 +100,13 @@
 <p>当然，只有完整清晰的注释才能有效反映复杂性。若方法的接口注释没有提供调用所需的全部信息，或者写得晦涩难懂，就无法据此准确衡量方法的深度。</p>
 <!-- SOURCE pdf-140-b001 -->
 <div id="pdf-140-b001" hidden></div>
-<h2 id="ch15-section-05">15.4 早点写注释，写起来更愉快</h2>
+<h2 id="ch15-section-05">15.4 早点写注释，写起来更愉快<button type="button" class="copy-section" data-copy-section="ch15-section-05" aria-label="复制“15.4 早点写注释，写起来更愉快”小节" title="复制“15.4 早点写注释，写起来更愉快”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-140-b002 -->
 <div id="pdf-140-b002" hidden></div>
 <p>及早写注释的第三个、也是最后一个好处，是让这项工作更有乐趣。对我来说，编程最愉快的环节之一，就是新类的早期设计：逐步明确它的抽象和结构。我大多数注释都在这个阶段完成，用来记录设计决策并检验其质量。我寻找能够用最少文字完整、清楚表达的设计。注释越简单，我对设计越满意，所以写出简单的注释会让我自豪。如果采用战略式编程，把优秀设计作为首要目标，而不满足于代码能够运行，那么写注释就应该很愉快，因为它帮助你识别最好的设计。</p>
 <!-- SOURCE pdf-140-b003 -->
 <div id="pdf-140-b003" hidden></div>
-<h2 id="ch15-section-06">15.5 早点写注释，成本高吗？</h2>
+<h2 id="ch15-section-06">15.5 早点写注释，成本高吗？<button type="button" class="copy-section" data-copy-section="ch15-section-06" aria-label="复制“15.5 早点写注释，成本高吗？”小节" title="复制“15.5 早点写注释，成本高吗？”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-140-b004 -->
 <div id="pdf-140-b004" hidden></div>
 <p>再来看看推迟写注释的理由：避免代码演化时反复修改注释的成本。粗略算一下就知道，节省的时间并不多。首先，估计一下输入代码和注释，包括修改它们，合计占开发时间多少。这一比例大概不会超过10%。即使全部代码行中有一半是注释，写注释占总开发时间的比例可能也不超过5%。拖到最后再写，只能节省其中一部分，实际很有限。</p>
@@ -115,10 +115,10 @@
 <p>先写注释意味着开始编码前，抽象已经更稳定，这很可能节省编码时间。相较之下，先写代码时，抽象很可能在编码过程中继续变化，需要的代码修改也会更多。综合考虑这些因素，先写注释可能让整个开发过程更快。</p>
 <!-- SOURCE pdf-141-b000 -->
 <div id="pdf-141-b000" hidden></div>
-<h2 id="ch15-section-07">15.6 小结</h2>
+<h2 id="ch15-section-07">15.6 小结<button type="button" class="copy-section" data-copy-section="ch15-section-07" aria-label="复制“15.6 小结”小节" title="复制“15.6 小结”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-141-b001 -->
 <div id="pdf-141-b001" hidden></div>
-<p>如果还没试过先写注释，请试一试，并坚持足够长的时间，让自己习惯这种方式。然后想想，它对注释质量、设计质量以及软件开发的整体乐趣有什么影响。尝试一段时间后，请告诉我，你的体验是否与我相同，以及相同或不同的原因。</p></article>
+<p>如果还没试过先写注释，请试一试，并坚持足够长的时间，让自己习惯这种方式。然后想想，它对注释质量、设计质量以及软件开发的整体乐趣有什么影响。尝试一段时间后，请告诉我，你的体验是否与我相同，以及相同或不同的原因。</p><p class="copy-status" role="status" aria-live="polite"></p><script type="application/json" class="section-copy-data">{"ch15-section-01": "## 15.1 拖到最后的注释，质量往往不好\n\n\u003cdiv id=\"pdf-137-b005\" hidden\u003e\u003c/div\u003e\n我遇到的开发者几乎人人都会拖延写注释。问他们为什么不早点写文档，他们会说代码还在变：早写了，代码变化时还得重写，不如等代码稳定。但我怀疑还有一个原因：他们觉得写文档枯燥乏味，能拖多久就拖多久。\n\n\u003cdiv id=\"pdf-137-b006\" hidden\u003e\u003c/div\u003e\n遗憾的是，这种做法有几个负面后果。首先，推迟写文档往往意味着最终根本不会写。一旦开始拖延，再多拖一点也很容易；毕竟，再过几周代码会更稳定。等到代码确实稳定时，代码量已经很大，写文档的任务也随之变得庞大，更让人提不起兴趣。似乎永远没有方便的时机停下几天，补齐缺失的注释；而继续修 bug 或开发下一个功能，总能被解释为对项目更有利的选择。这样又会产生更多没有文档的代码。\n\n\u003cdiv id=\"pdf-138-b000\" hidden\u003e\u003c/div\u003e\n即使真能自律地回头补注释——别骗自己，多半做不到——写出来也不会很好。到那时，注意力已经离开这部分工作。在心里，这段代码已经完工，自己正迫不及待地想做下一个项目。知道写注释是应该的，却毫无乐趣，只想尽快写完。于是匆匆扫一遍代码，补上一些看起来像样的注释。距离设计代码已经过去一阵子，对设计过程的记忆逐渐模糊。写注释时盯着代码，注释也就变成了复述代码。即使试着回想代码中看不出的设计思路，也会遗漏一些已经忘记的事情。注释便缺少了它最应该描述的一些重要内容。\n\n\u003cdiv id=\"pdf-138-b001\" hidden\u003e\u003c/div\u003e", "ch15-section-02": "## 15.2 先写注释\n\n\u003cdiv id=\"pdf-138-b002\" hidden\u003e\u003c/div\u003e\n我的做法有所不同：从一开始就写注释。\n\n\u003cdiv id=\"pdf-138-b003\" hidden\u003e\u003c/div\u003e\n- 对于一个新类，先写类的接口注释。\n- 接着，为最重要的公有方法写接口注释和签名，方法体暂时留空。\n- 反复调整这些注释，直到基本结构感觉合适。\n- 然后，为类中最重要的实例变量写声明和注释。\n- 最后填充方法体，按需要加入实现注释。\n- 编写方法体时，通常会发现还需要其他方法和实例变量。对于每个新方法，先写接口注释，再写方法体；对于实例变量，则在写声明时同时补上注释。\n\n代码完成时，注释也已完成，从来不会积压没写的注释。\n\n\u003cdiv id=\"pdf-138-b004\" hidden\u003e\u003c/div\u003e\n\u003cdiv id=\"pdf-139-b000\" hidden\u003e\u003c/div\u003e\n先写注释有三个好处。首先，注释质量更高。在设计类时写注释，重要的设计问题还记得很清楚，容易记录下来。每个方法最好先写接口注释，再写方法体，这样就能专注于方法的抽象和接口，不受实现干扰。在编码和测试过程中，还会发现并修正注释中的问题。注释会随着开发逐步完善。\n\n\u003cdiv id=\"pdf-139-b001\" hidden\u003e\u003c/div\u003e", "ch15-section-03": "## 15.3 注释是一种设计工具\n\n\u003cdiv id=\"pdf-139-b002\" hidden\u003e\u003c/div\u003e\n一开始就写注释的第二个好处，也是最重要的好处，是改善系统设计。注释是完整表达抽象的唯一方式，而好的抽象是良好系统设计的基础。如果一开始就用注释描述抽象，就能在编写实现代码之前审视和调整它们。要写出好注释，必须明确变量或代码的要义：它最重要的方面是什么？在设计早期完成这件事很重要，否则就只是在拼凑代码。\n\n\u003cdiv id=\"pdf-139-b003\" hidden\u003e\u003c/div\u003e\n注释能像矿井中的金丝雀一样，提前警示复杂性。如果一个方法或变量需要很长的注释，就是危险信号，说明抽象不够好。回想第4章：类应当是深的，最好的类以非常简单的接口实现强大功能。判断接口复杂性的最佳方式，就是看描述它的注释。如果方法的接口注释既提供使用所需的全部信息，又简短清楚，就说明接口简单。相反，如果必须写很长、很复杂的注释才能完整描述方法，就说明接口复杂。将接口注释与实现对照，也能感知方法的深度：若接口注释必须描述实现中的所有主要特征，方法就是浅的。同样，如果完整描述变量需要很长的注释，就可能意味着变量划分不合理。总体而言，写注释让人能及早评估设计决策，发现并修正问题。\n\n\u003cdiv id=\"pdf-139-b005\" hidden\u003e\u003c/div\u003e\n### 危险信号：难以描述\n\n\u003cdiv id=\"pdf-139-b007\" hidden\u003e\u003c/div\u003e\n描述方法或变量的注释应当简单且完整。如果很难写出这样的注释，就说明所描述对象的设计可能有问题。\n\n\u003cdiv id=\"pdf-140-b000\" hidden\u003e\u003c/div\u003e\n当然，只有完整清晰的注释才能有效反映复杂性。若方法的接口注释没有提供调用所需的全部信息，或者写得晦涩难懂，就无法据此准确衡量方法的深度。\n\n\u003cdiv id=\"pdf-140-b001\" hidden\u003e\u003c/div\u003e", "ch15-section-04": "### 危险信号：难以描述\n\n\u003cdiv id=\"pdf-139-b007\" hidden\u003e\u003c/div\u003e\n描述方法或变量的注释应当简单且完整。如果很难写出这样的注释，就说明所描述对象的设计可能有问题。\n\n\u003cdiv id=\"pdf-140-b000\" hidden\u003e\u003c/div\u003e\n当然，只有完整清晰的注释才能有效反映复杂性。若方法的接口注释没有提供调用所需的全部信息，或者写得晦涩难懂，就无法据此准确衡量方法的深度。\n\n\u003cdiv id=\"pdf-140-b001\" hidden\u003e\u003c/div\u003e", "ch15-section-05": "## 15.4 早点写注释，写起来更愉快\n\n\u003cdiv id=\"pdf-140-b002\" hidden\u003e\u003c/div\u003e\n及早写注释的第三个、也是最后一个好处，是让这项工作更有乐趣。对我来说，编程最愉快的环节之一，就是新类的早期设计：逐步明确它的抽象和结构。我大多数注释都在这个阶段完成，用来记录设计决策并检验其质量。我寻找能够用最少文字完整、清楚表达的设计。注释越简单，我对设计越满意，所以写出简单的注释会让我自豪。如果采用战略式编程，把优秀设计作为首要目标，而不满足于代码能够运行，那么写注释就应该很愉快，因为它帮助你识别最好的设计。\n\n\u003cdiv id=\"pdf-140-b003\" hidden\u003e\u003c/div\u003e", "ch15-section-06": "## 15.5 早点写注释，成本高吗？\n\n\u003cdiv id=\"pdf-140-b004\" hidden\u003e\u003c/div\u003e\n再来看看推迟写注释的理由：避免代码演化时反复修改注释的成本。粗略算一下就知道，节省的时间并不多。首先，估计一下输入代码和注释，包括修改它们，合计占开发时间多少。这一比例大概不会超过10%。即使全部代码行中有一半是注释，写注释占总开发时间的比例可能也不超过5%。拖到最后再写，只能节省其中一部分，实际很有限。\n\n\u003cdiv id=\"pdf-140-b005\" hidden\u003e\u003c/div\u003e\n先写注释意味着开始编码前，抽象已经更稳定，这很可能节省编码时间。相较之下，先写代码时，抽象很可能在编码过程中继续变化，需要的代码修改也会更多。综合考虑这些因素，先写注释可能让整个开发过程更快。\n\n\u003cdiv id=\"pdf-141-b000\" hidden\u003e\u003c/div\u003e", "ch15-section-07": "## 15.6 小结\n\n\u003cdiv id=\"pdf-141-b001\" hidden\u003e\u003c/div\u003e\n如果还没试过先写注释，请试一试，并坚持足够长的时间，让自己习惯这种方式。然后想想，它对注释质量、设计质量以及软件开发的整体乐趣有什么影响。尝试一段时间后，请告诉我，你的体验是否与我相同，以及相同或不同的原因。"}</script></article>
       <nav class="page-nav"><a rel="prev" href="ch14.html">← 第14章 选择名称</a><a rel="next" href="ch16.html">第16章 修改现有代码 →</a></nav>
     </main>
   </div>

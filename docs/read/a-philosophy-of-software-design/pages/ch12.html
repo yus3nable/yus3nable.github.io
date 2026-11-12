@@ -65,7 +65,7 @@
 <p>下面逐一讨论。</p>
 <!-- SOURCE pdf-103-b001 -->
 <div id="pdf-103-b001" hidden></div>
-<h2 id="ch12-section-01">12.1 好代码能自我说明</h2>
+<h2 id="ch12-section-01">12.1 好代码能自我说明<button type="button" class="copy-section" data-copy-section="ch12-section-01" aria-label="复制“12.1 好代码能自我说明”小节" title="复制“12.1 好代码能自我说明”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-103-b002 -->
 <div id="pdf-103-b002" hidden></div>
 <p>有人相信，代码写得好就一目了然，无须注释。这是个诱人的神话，就像“冰激凌有益健康”的传闻，让人巴不得它是真的。遗憾的是，事实并非如此。写代码时，确实可以通过好的变量命名等方式减少注释需求，参见第14章。但仍有大量设计信息无法用代码表达。例如，类接口中只有很小一部分能在代码中正式声明，如方法签名。接口的非形式化部分，如每个方法做什么的高层描述、返回结果的含义，只能用注释表达。还有许多信息也无法通过代码说明，例如某项设计决定的理由，以及什么情况下适合调用某个方法。</p>
@@ -79,7 +79,7 @@
 <p>注释还是抽象的基础。回顾第4章，抽象的目标是隐藏复杂性：用简化视图保留必要信息，省去可以安全忽略的细节。如果使用方法之前必须读其代码，就没有抽象可言，方法的全部复杂性都暴露出来了。没有注释，方法唯一的抽象就是声明，只说明名称、参数与结果的名称和类型，缺少太多必要信息，独自无法形成有用的抽象。例如，提取子串的方法有 <code>start</code>、<code>end</code> 两个参数，表示提取的字符范围。仅凭声明，无法知道子串是否包含 <code>end</code> 指向的字符，或 <code>start &gt; end</code> 时会发生什么。注释补足调用者所需的信息，完善简化视图，同时隐藏实现细节。注释使用英语等自然语言也很重要：虽然没有代码精确，却更有表达力，可以给出简单、直观的描述。想通过抽象隐藏复杂性，注释必不可少。</p>
 <!-- SOURCE pdf-104-b001 -->
 <div id="pdf-104-b001" hidden></div>
-<h2 id="ch12-section-02">12.2 没时间写注释</h2>
+<h2 id="ch12-section-02">12.2 没时间写注释<button type="button" class="copy-section" data-copy-section="ch12-section-02" aria-label="复制“12.2 没时间写注释”小节" title="复制“12.2 没时间写注释”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-104-b002 -->
 <div id="pdf-104-b002" hidden></div>
 <p>注释很容易被排在其他开发任务之后。添加新功能与为现有功能写文档二选一时，选择新功能似乎合理。但软件项目几乎总有时间压力，总有看起来比写注释更紧急的事。允许文档不断降低优先级，最终就不会有文档。</p>
@@ -93,19 +93,19 @@
 <p>许多最重要的注释与抽象有关，例如类和方法的顶层文档。第15章会说明，应该把它们作为设计过程的一部分来写；编写文档本身就是重要的设计工具，可以改进整体设计。这些注释能立即带来回报。</p>
 <!-- SOURCE pdf-105-b001 -->
 <div id="pdf-105-b001" hidden></div>
-<h2 id="ch12-section-03">12.3 注释会过时，误导读者</h2>
+<h2 id="ch12-section-03">12.3 注释会过时，误导读者<button type="button" class="copy-section" data-copy-section="ch12-section-03" aria-label="复制“12.3 注释会过时，误导读者”小节" title="复制“12.3 注释会过时，误导读者”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-105-b002 -->
 <div id="pdf-105-b002" hidden></div>
 <p>注释有时确实过时，但实践中无须让它成为大问题。保持文档更新不需要巨大投入。只有代码大改，文档才需要大改，而改代码花的时间会更多。第16章讨论如何组织文档，让修改代码后尽可能容易更新文档，主要思路是避免重复文档，并让文档靠近相应代码。代码审查是发现、修正过时注释的好办法。</p>
 <!-- SOURCE pdf-105-b003 -->
 <div id="pdf-105-b003" hidden></div>
-<h2 id="ch12-section-04">12.4 见过的注释都没用</h2>
+<h2 id="ch12-section-04">12.4 见过的注释都没用<button type="button" class="copy-section" data-copy-section="ch12-section-04" aria-label="复制“12.4 见过的注释都没用”小节" title="复制“12.4 见过的注释都没用”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-105-b004 -->
 <div id="pdf-105-b004" hidden></div>
 <p>四种借口中，这个可能最有道理。每个开发者都见过没有提供有用信息的注释，现有文档多数最多只能说一般。好在这个问题可以解决：掌握方法之后，写好文档并不难。接下来几章会提供一套写好文档并持续维护它的思路。</p>
 <!-- SOURCE pdf-105-b005 -->
 <div id="pdf-105-b005" hidden></div>
-<h2 id="ch12-section-05">12.5 好注释的好处</h2>
+<h2 id="ch12-section-05">12.5 好注释的好处<button type="button" class="copy-section" data-copy-section="ch12-section-05" aria-label="复制“12.5 好注释的好处”小节" title="复制“12.5 好注释的好处”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <!-- SOURCE pdf-105-b006 -->
 <div id="pdf-105-b006" hidden></div>
 <!-- SOURCE pdf-106-b000 -->
@@ -127,7 +127,7 @@
 <p>第2章指出，复杂性的主要原因是依赖与晦涩性。好文档能澄清依赖，并填补信息空缺，消除晦涩性。</p>
 <!-- SOURCE pdf-106-b004 -->
 <div id="pdf-106-b004" hidden></div>
-<p>接下来几章介绍如何写好文档，以及如何把文档编写融入设计过程，改进软件设计。</p></article>
+<p>接下来几章介绍如何写好文档，以及如何把文档编写融入设计过程，改进软件设计。</p><p class="copy-status" role="status" aria-live="polite"></p><script type="application/json" class="section-copy-data">{"ch12-section-01": "## 12.1 好代码能自我说明\n\n\u003cdiv id=\"pdf-103-b002\" hidden\u003e\u003c/div\u003e\n有人相信，代码写得好就一目了然，无须注释。这是个诱人的神话，就像“冰激凌有益健康”的传闻，让人巴不得它是真的。遗憾的是，事实并非如此。写代码时，确实可以通过好的变量命名等方式减少注释需求，参见第14章。但仍有大量设计信息无法用代码表达。例如，类接口中只有很小一部分能在代码中正式声明，如方法签名。接口的非形式化部分，如每个方法做什么的高层描述、返回结果的含义，只能用注释表达。还有许多信息也无法通过代码说明，例如某项设计决定的理由，以及什么情况下适合调用某个方法。\n\n\u003cdiv id=\"pdf-103-b003\" hidden\u003e\u003c/div\u003e\n一些开发者认为，想知道方法做什么，直接读实现就行，比任何注释都准确。读者或许能从代码推导出抽象接口，但这既耗时又费力。另外，若预期使用者会阅读方法实现，就会尽可能让方法短小，以便阅读。一旦方法做的事情稍复杂，就会拆成几个小方法，产生大量浅方法。代码也不会因此更易读：为了理解顶层方法，读者可能仍须了解嵌套调用的方法的行为。对于大系统，靠阅读代码学习行为并不现实。\n\n\u003cdiv id=\"pdf-103-b004\" hidden\u003e\u003c/div\u003e\n\u003cdiv id=\"pdf-104-b000\" hidden\u003e\u003c/div\u003e\n注释还是抽象的基础。回顾第4章，抽象的目标是隐藏复杂性：用简化视图保留必要信息，省去可以安全忽略的细节。如果使用方法之前必须读其代码，就没有抽象可言，方法的全部复杂性都暴露出来了。没有注释，方法唯一的抽象就是声明，只说明名称、参数与结果的名称和类型，缺少太多必要信息，独自无法形成有用的抽象。例如，提取子串的方法有 `start`、`end` 两个参数，表示提取的字符范围。仅凭声明，无法知道子串是否包含 `end` 指向的字符，或 `start \u003e end` 时会发生什么。注释补足调用者所需的信息，完善简化视图，同时隐藏实现细节。注释使用英语等自然语言也很重要：虽然没有代码精确，却更有表达力，可以给出简单、直观的描述。想通过抽象隐藏复杂性，注释必不可少。\n\n\u003cdiv id=\"pdf-104-b001\" hidden\u003e\u003c/div\u003e", "ch12-section-02": "## 12.2 没时间写注释\n\n\u003cdiv id=\"pdf-104-b002\" hidden\u003e\u003c/div\u003e\n注释很容易被排在其他开发任务之后。添加新功能与为现有功能写文档二选一时，选择新功能似乎合理。但软件项目几乎总有时间压力，总有看起来比写注释更紧急的事。允许文档不断降低优先级，最终就不会有文档。\n\n\u003cdiv id=\"pdf-104-b003\" hidden\u003e\u003c/div\u003e\n对此的回应，是第15页讨论的投资心态。想拥有清晰的软件结构、长期高效工作，就必须前期多花些时间建立这种结构。好注释对可维护性帮助很大，投入很快就会回报。写注释也无须耗费很多时间。先不算注释，想想开发时间里实际敲代码占多少，与设计、编译、测试等时间相比，我怀疑不会超过10%。再假设敲注释花的时间与敲代码相同，这应该是个足够宽松的上限。如此算来，写好注释增加的开发时间不会超过约10%，良好文档的收益很快就能抵偿成本。\n\n\u003cdiv id=\"pdf-104-b004\" hidden\u003e\u003c/div\u003e\n\u003cdiv id=\"pdf-105-b000\" hidden\u003e\u003c/div\u003e\n许多最重要的注释与抽象有关，例如类和方法的顶层文档。第15章会说明，应该把它们作为设计过程的一部分来写；编写文档本身就是重要的设计工具，可以改进整体设计。这些注释能立即带来回报。\n\n\u003cdiv id=\"pdf-105-b001\" hidden\u003e\u003c/div\u003e", "ch12-section-03": "## 12.3 注释会过时，误导读者\n\n\u003cdiv id=\"pdf-105-b002\" hidden\u003e\u003c/div\u003e\n注释有时确实过时，但实践中无须让它成为大问题。保持文档更新不需要巨大投入。只有代码大改，文档才需要大改，而改代码花的时间会更多。第16章讨论如何组织文档，让修改代码后尽可能容易更新文档，主要思路是避免重复文档，并让文档靠近相应代码。代码审查是发现、修正过时注释的好办法。\n\n\u003cdiv id=\"pdf-105-b003\" hidden\u003e\u003c/div\u003e", "ch12-section-04": "## 12.4 见过的注释都没用\n\n\u003cdiv id=\"pdf-105-b004\" hidden\u003e\u003c/div\u003e\n四种借口中，这个可能最有道理。每个开发者都见过没有提供有用信息的注释，现有文档多数最多只能说一般。好在这个问题可以解决：掌握方法之后，写好文档并不难。接下来几章会提供一套写好文档并持续维护它的思路。\n\n\u003cdiv id=\"pdf-105-b005\" hidden\u003e\u003c/div\u003e", "ch12-section-05": "## 12.5 好注释的好处\n\n\u003cdiv id=\"pdf-105-b006\" hidden\u003e\u003c/div\u003e\n\u003cdiv id=\"pdf-106-b000\" hidden\u003e\u003c/div\u003e\n反对写注释的理由已经讨论过了，希望这些解释也已驳倒它们。接下来看看好注释的收益。注释的总体目的，是记录设计者脑中那些无法用代码表达的信息。小到促使某段代码采用特殊写法的硬件怪癖，大到为什么需要某个类，都在此列。后来其他开发者修改系统时，注释能让工作更快、更准确。没有文档，他们必须重新推导或猜测原作者掌握的知识，既耗费时间，也可能误解原设计意图，引入 bug。即使修改者就是原作者，注释也有价值：几周没有接触某段代码，许多设计细节就已经忘了。\n\n\u003cdiv id=\"pdf-106-b001\" hidden\u003e\u003c/div\u003e\n\u003cdiv id=\"pdf-106-b002\" hidden\u003e\u003c/div\u003e\n第2章介绍了软件系统中复杂性的三种表现：\n\n- 变更放大：看似简单的修改，需要改动许多位置。\n- 认知负担：完成修改前，开发者必须掌握大量信息。\n- 未知的未知：不清楚需要修改哪些代码，也不清楚修改时应考虑哪些信息。\n\n良好文档有助于解决后两种问题。文档提供修改所需的信息，也方便开发者忽略无关信息，从而降低认知负担。文档不足时，开发者可能要阅读大量代码，重建设计者的思路。文档也能说明系统结构，让人清楚某项修改涉及哪些信息和代码，减少未知的未知。\n\n\u003cdiv id=\"pdf-106-b003\" hidden\u003e\u003c/div\u003e\n第2章指出，复杂性的主要原因是依赖与晦涩性。好文档能澄清依赖，并填补信息空缺，消除晦涩性。\n\n\u003cdiv id=\"pdf-106-b004\" hidden\u003e\u003c/div\u003e\n接下来几章介绍如何写好文档，以及如何把文档编写融入设计过程，改进软件设计。"}</script></article>
       <nav class="page-nav"><a rel="prev" href="ch11.html">← 第11章 设计两次</a><a rel="next" href="ch13.html">第13章 注释应说明代码中看不出的信息 →</a></nav>
     </main>
   </div>

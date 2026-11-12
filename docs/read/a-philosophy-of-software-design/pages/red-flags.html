@@ -43,60 +43,60 @@
 <p>以下列出本书讨论的若干主要危险信号。系统中只要出现这些症状中的任何一种，就说明设计可能存在问题：</p>
 <!-- SOURCE pdf-186-b002 -->
 <div id="pdf-186-b002" hidden></div>
-<h2 id="red-flags-section-01">浅模块</h2>
+<h2 id="red-flags-section-01">浅模块<button type="button" class="copy-section" data-copy-section="red-flags-section-01" aria-label="复制“浅模块”小节" title="复制“浅模块”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>类或方法的接口，与其实现相比并没有简单多少（见原书第 25、110 页）。</p>
 <!-- SOURCE pdf-186-b003 -->
 <div id="pdf-186-b003" hidden></div>
-<h2 id="red-flags-section-02">信息泄漏</h2>
+<h2 id="red-flags-section-02">信息泄漏<button type="button" class="copy-section" data-copy-section="red-flags-section-02" aria-label="复制“信息泄漏”小节" title="复制“信息泄漏”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>同一个设计决策体现在多个模块中（见原书第 31 页）。</p>
 <!-- SOURCE pdf-186-b004 -->
 <div id="pdf-186-b004" hidden></div>
-<h2 id="red-flags-section-03">按时间顺序分解</h2>
+<h2 id="red-flags-section-03">按时间顺序分解<button type="button" class="copy-section" data-copy-section="red-flags-section-03" aria-label="复制“按时间顺序分解”小节" title="复制“按时间顺序分解”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>代码结构依据操作的执行顺序组织，未按信息隐藏的原则组织（见原书第 32 页）。</p>
 <!-- SOURCE pdf-186-b005 -->
 <div id="pdf-186-b005" hidden></div>
-<h2 id="red-flags-section-04">暴露过多细节</h2>
+<h2 id="red-flags-section-04">暴露过多细节<button type="button" class="copy-section" data-copy-section="red-flags-section-04" aria-label="复制“暴露过多细节”小节" title="复制“暴露过多细节”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>API 让调用者为了使用常见功能，不得不了解很少用到的功能（见原书第 36 页）。</p>
 <!-- SOURCE pdf-186-b006 -->
 <div id="pdf-186-b006" hidden></div>
-<h2 id="red-flags-section-05">透传方法</h2>
+<h2 id="red-flags-section-05">透传方法<button type="button" class="copy-section" data-copy-section="red-flags-section-05" aria-label="复制“透传方法”小节" title="复制“透传方法”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>一个方法几乎什么也不做，只把参数传给签名相似的另一个方法（见原书第 46 页）。</p>
 <!-- SOURCE pdf-186-b007 -->
 <div id="pdf-186-b007" hidden></div>
-<h2 id="red-flags-section-06">重复</h2>
+<h2 id="red-flags-section-06">重复<button type="button" class="copy-section" data-copy-section="red-flags-section-06" aria-label="复制“重复”小节" title="复制“重复”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>一段具有实质功能的代码反复出现（见原书第 62 页）。</p>
 <!-- SOURCE pdf-186-b008 -->
 <div id="pdf-186-b008" hidden></div>
-<h2 id="red-flags-section-07">专用与通用代码混杂</h2>
+<h2 id="red-flags-section-07">专用与通用代码混杂<button type="button" class="copy-section" data-copy-section="red-flags-section-07" aria-label="复制“专用与通用代码混杂”小节" title="复制“专用与通用代码混杂”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>专用代码没有与通用代码清楚分开（见原书第 65 页）。</p>
 <!-- SOURCE pdf-186-b009 -->
 <div id="pdf-186-b009" hidden></div>
-<h2 id="red-flags-section-08">相互纠缠的方法</h2>
+<h2 id="red-flags-section-08">相互纠缠的方法<button type="button" class="copy-section" data-copy-section="red-flags-section-08" aria-label="复制“相互纠缠的方法”小节" title="复制“相互纠缠的方法”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>两个方法之间依赖太多，理解其中一个的实现时，很难不去理解另一个的实现（见原书第 72 页）。</p>
 <!-- SOURCE pdf-186-b010 -->
 <div id="pdf-186-b010" hidden></div>
-<h2 id="red-flags-section-09">注释重复代码</h2>
+<h2 id="red-flags-section-09">注释重复代码<button type="button" class="copy-section" data-copy-section="red-flags-section-09" aria-label="复制“注释重复代码”小节" title="复制“注释重复代码”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>注释中的全部信息，都能从它旁边的代码中直接看出来（见原书第 104 页）。</p>
 <!-- SOURCE pdf-186-b011 -->
 <div id="pdf-186-b011" hidden></div>
-<h2 id="red-flags-section-10">实现文档侵入接口说明</h2>
+<h2 id="red-flags-section-10">实现文档侵入接口说明<button type="button" class="copy-section" data-copy-section="red-flags-section-10" aria-label="复制“实现文档侵入接口说明”小节" title="复制“实现文档侵入接口说明”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>接口注释描述了使用者无须了解的实现细节（见原书第 114 页）。</p>
 <!-- SOURCE pdf-186-b012 -->
 <div id="pdf-186-b012" hidden></div>
-<h2 id="red-flags-section-11">名称含糊</h2>
+<h2 id="red-flags-section-11">名称含糊<button type="button" class="copy-section" data-copy-section="red-flags-section-11" aria-label="复制“名称含糊”小节" title="复制“名称含糊”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>变量或方法的名称不够精确，传达不了多少有用信息（见原书第 123 页）。</p>
 <!-- SOURCE pdf-187-b000 -->
 <div id="pdf-187-b000" hidden></div>
-<h2 id="red-flags-section-12">难以命名</h2>
+<h2 id="red-flags-section-12">难以命名<button type="button" class="copy-section" data-copy-section="red-flags-section-12" aria-label="复制“难以命名”小节" title="复制“难以命名”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>很难为某个实体找到精确、直观的名称（见原书第 125 页）。</p>
 <!-- SOURCE pdf-187-b001 -->
 <div id="pdf-187-b001" hidden></div>
-<h2 id="red-flags-section-13">难以描述</h2>
+<h2 id="red-flags-section-13">难以描述<button type="button" class="copy-section" data-copy-section="red-flags-section-13" aria-label="复制“难以描述”小节" title="复制“难以描述”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
 <p>为了完整说明某个变量或方法，不得不写很长的文档（见原书第 131 页）。</p>
 <!-- SOURCE pdf-187-b002 -->
 <div id="pdf-187-b002" hidden></div>
-<h2 id="red-flags-section-14">代码含义不清楚</h2>
-<p>一段代码的行为或含义不容易理解（见原书第 148 页）。</p></article>
+<h2 id="red-flags-section-14">代码含义不清楚<button type="button" class="copy-section" data-copy-section="red-flags-section-14" aria-label="复制“代码含义不清楚”小节" title="复制“代码含义不清楚”小节"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="copy-symbol"><rect x="3" y="8" width="13" height="13" rx="3"/><path d="M8 8V6a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2"/></g><path class="copy-success" d="m5 12 4 4L19 6"/><path class="copy-error" d="m7 7 10 10M17 7 7 17"/></svg></button></h2>
+<p>一段代码的行为或含义不容易理解（见原书第 148 页）。</p><p class="copy-status" role="status" aria-live="polite"></p><script type="application/json" class="section-copy-data">{"red-flags-section-01": "## 浅模块\n\n类或方法的接口，与其实现相比并没有简单多少（见原书第 25、110 页）。\n\n\u003cdiv id=\"pdf-186-b003\" hidden\u003e\u003c/div\u003e", "red-flags-section-02": "## 信息泄漏\n\n同一个设计决策体现在多个模块中（见原书第 31 页）。\n\n\u003cdiv id=\"pdf-186-b004\" hidden\u003e\u003c/div\u003e", "red-flags-section-03": "## 按时间顺序分解\n\n代码结构依据操作的执行顺序组织，未按信息隐藏的原则组织（见原书第 32 页）。\n\n\u003cdiv id=\"pdf-186-b005\" hidden\u003e\u003c/div\u003e", "red-flags-section-04": "## 暴露过多细节\n\nAPI 让调用者为了使用常见功能，不得不了解很少用到的功能（见原书第 36 页）。\n\n\u003cdiv id=\"pdf-186-b006\" hidden\u003e\u003c/div\u003e", "red-flags-section-05": "## 透传方法\n\n一个方法几乎什么也不做，只把参数传给签名相似的另一个方法（见原书第 46 页）。\n\n\u003cdiv id=\"pdf-186-b007\" hidden\u003e\u003c/div\u003e", "red-flags-section-06": "## 重复\n\n一段具有实质功能的代码反复出现（见原书第 62 页）。\n\n\u003cdiv id=\"pdf-186-b008\" hidden\u003e\u003c/div\u003e", "red-flags-section-07": "## 专用与通用代码混杂\n\n专用代码没有与通用代码清楚分开（见原书第 65 页）。\n\n\u003cdiv id=\"pdf-186-b009\" hidden\u003e\u003c/div\u003e", "red-flags-section-08": "## 相互纠缠的方法\n\n两个方法之间依赖太多，理解其中一个的实现时，很难不去理解另一个的实现（见原书第 72 页）。\n\n\u003cdiv id=\"pdf-186-b010\" hidden\u003e\u003c/div\u003e", "red-flags-section-09": "## 注释重复代码\n\n注释中的全部信息，都能从它旁边的代码中直接看出来（见原书第 104 页）。\n\n\u003cdiv id=\"pdf-186-b011\" hidden\u003e\u003c/div\u003e", "red-flags-section-10": "## 实现文档侵入接口说明\n\n接口注释描述了使用者无须了解的实现细节（见原书第 114 页）。\n\n\u003cdiv id=\"pdf-186-b012\" hidden\u003e\u003c/div\u003e", "red-flags-section-11": "## 名称含糊\n\n变量或方法的名称不够精确，传达不了多少有用信息（见原书第 123 页）。\n\n\u003cdiv id=\"pdf-187-b000\" hidden\u003e\u003c/div\u003e", "red-flags-section-12": "## 难以命名\n\n很难为某个实体找到精确、直观的名称（见原书第 125 页）。\n\n\u003cdiv id=\"pdf-187-b001\" hidden\u003e\u003c/div\u003e", "red-flags-section-13": "## 难以描述\n\n为了完整说明某个变量或方法，不得不写很长的文档（见原书第 131 页）。\n\n\u003cdiv id=\"pdf-187-b002\" hidden\u003e\u003c/div\u003e", "red-flags-section-14": "## 代码含义不清楚\n\n一段代码的行为或含义不容易理解（见原书第 148 页）。"}</script></article>
       <nav class="page-nav"><a rel="prev" href="principles.html">← 设计原则汇总</a><a rel="next" href="author.html">关于作者 →</a></nav>
     </main>
   </div>
