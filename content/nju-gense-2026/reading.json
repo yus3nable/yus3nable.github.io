@@ -77,6 +77,17 @@
       "unit_id": "11",
       "title": "11 · 软件质量保障 (1)",
       "markdown": "content/11.md"
+    },
+    {
+      "id": "12",
+      "unit_id": "12",
+      "title": "12 · 软件质量保障 (2)",
+      "markdown": "content/12.md",
+      "source_span": {
+        "start_seconds": 0,
+        "end_seconds": 5710
+      },
+      "source_url": "https://www.bilibili.com/video/BV1LaW36WErp/"
     }
   ]
 }
