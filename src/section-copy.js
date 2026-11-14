@@ -29,7 +29,7 @@
         else range.setEnd(article, article.childNodes.length);
         const container = document.createElement('div');
         container.append(range.cloneContents());
-        container.querySelectorAll('button, .headerlink, .copy-status, script, style, .md-content__button, .reader-actions, .reading-detail, .reading-mode').forEach(node => node.remove());
+        container.querySelectorAll('button, [hidden], .headerlink, .copy-status, script, style, .md-content__button, .reader-actions, .reading-detail, .reading-mode').forEach(node => node.remove());
         container.querySelectorAll('[href], [src]').forEach(node => {
           for (const attribute of ['href', 'src']) {
             if (node.hasAttribute(attribute)) node.setAttribute(attribute, new URL(node.getAttribute(attribute), location.href).href);

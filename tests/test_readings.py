@@ -101,6 +101,35 @@ class ReadingBuildTests(unittest.TestCase):
         self.assertIn('<ol start="2">', html)
         self.assertIn('<ol start="3">', html)
 
+    def test_copy_excludes_hidden_anchors_and_keeps_html_examples(self):
+        self.manifest([{'id': 'ch03', 'title': '战略式编程', 'markdown': 'content/ch03.md'}], 'book')
+        (self.material / 'content/ch03.md').write_text(
+            '# 第3章\n\n## 3.2 战略式编程 {#strategy}\n\n'
+            '<!-- SOURCE pdf-026-b005 -->\n<div id="pdf-026-b005" hidden></div>\n'
+            '<span hidden="hidden" id="anchor-span"></span>\n'
+            '<a id="anchor-link" hidden></a>\n'
+            '成为优秀软件设计者的第一步。\n\n'
+            '<div class="example">可见内容</div>\n\n'
+            '行内 HTML 示例 `<div hidden></div>`。\n\n'
+            '```html\n<div id="code-hidden" hidden></div>\n<!-- SOURCE literal -->\n```\n\n'
+            '    <div id="indented-code" hidden></div>\n\n'
+            '## 下一节 {#next}\n\n下一节正文。')
+        build_readings(self.root, self.catalog)
+        page = (self.root / 'docs/read/example/index.html').read_text()
+        payload = json.loads(re.search(r'class="section-copy-data">(.*?)</script>', page, re.S)[1])
+        text = payload['strategy']
+        self.assertNotIn('pdf-026-b005', text)
+        self.assertNotIn('anchor-span', text)
+        self.assertNotIn('anchor-link', text)
+        self.assertIn('成为优秀软件设计者的第一步。', text)
+        self.assertIn('<div class="example">可见内容</div>', text)
+        self.assertIn('`<div hidden></div>`', text)
+        self.assertIn('<div id="code-hidden" hidden></div>', text)
+        self.assertIn('<!-- SOURCE literal -->', text)
+        self.assertIn('    <div id="indented-code" hidden></div>', text)
+        self.assertNotIn('下一节正文', text)
+        self.assertIn('<div id="pdf-026-b005" hidden></div>', page)
+
     def test_course_copy_includes_nested_sections_and_keeps_code_exact(self):
         renamed = self.material.with_name('nju-gense-2026')
         self.material.rename(renamed)

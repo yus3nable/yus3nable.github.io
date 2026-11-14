@@ -99,6 +99,8 @@ def copy_sections(source_text, rendered_body, material, source, source_routes, b
                 selected.append(line)
             elif in_code:
                 selected.append(line)
+            elif re.match(r'^ {0,3}<(div|span|a)\b(?=[^>]*\shidden(?:\s|=|>))[^>]*>\s*</\1>\s*$', line, re.I):
+                continue
             elif not re.match(r'^\s*\{:\s.*\}\s*$', line):
                 line = re.sub(r'\s*\{#[^}]+\}(?=\s*$)', '', line).rstrip('\n') + '\n'
                 line = re.sub(r'<!-- SOURCE .*? -->\s*', '', line)
